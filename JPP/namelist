@@ -379,9 +379,9 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 !-----------------------------------------------------------------------
 &nambdy        !  unstructured open boundaries                          ("key_bdy")
 !-----------------------------------------------------------------------
-    nb_bdy = 0                            !  number of open boundary sets
-    ln_coords_file = .true.               !  =T : read bdy coordinates from file
-    cn_coords_file = 'coordinates.bdy.nc' !  bdy coordinates files
+    nb_bdy = 1                            !  number of open boundary sets
+    ln_coords_file = .false.               !  =T : read bdy coordinates from file
+    cn_coords_file = ''                   !  bdy coordinates files
     ln_mask_file = .false.                !  =T : read mask from file
     cn_mask_file = ''                     !  name of mask file (if ln_mask_file=.TRUE.)
     nn_dyn2d      =  2                    !  boundary conditions for barotropic fields
@@ -398,6 +398,14 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
     nn_rimwidth  = 10                      !  width of the relaxation zone
     ln_vol     = .false.                  !  total volume correction (see nn_volctl parameter)
     nn_volctl  = 1                        !  = 0, the total water flux across open boundaries is zero
+/
+!-----------------------------------------------------------------------
+&nambdy_index ! open boundaries - definition ("key_bdy")
+!-----------------------------------------------------------------------
+    nbdysege = 0
+    nbdysegw = -1
+    nbdysegn = -1
+    nbdysegs = 0
 /
 !-----------------------------------------------------------------------
 &nambdy_dta      !  open boundaries - external data           ("key_bdy")
@@ -417,7 +425,7 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 !-----------------------------------------------------------------------
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide      = 'tide_'         !  file name root of tidal forcing files
+   filtide      = 'JPP_bdytide_'         !  file name root of tidal forcing files
     tide_cpt(1)   ='M2'  !  names of tidal components used
     tide_speed(1)   = 28.984106 !  phase speeds of tidal components (deg/hour)
     ln_tide_date = .true.               !  adjust tidal harmonics for start date of run
