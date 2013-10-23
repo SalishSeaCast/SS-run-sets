@@ -425,7 +425,7 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 !-----------------------------------------------------------------------
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide      = 'JPP_bdytide_'         !  file name root of tidal forcing files
+   filtide      = 'bdydta/JPP_bdytide_'         !  file name root of tidal forcing files
     tide_cpt(1)   ='M2'  !  names of tidal components used
     tide_speed(1)   = 28.984106 !  phase speeds of tidal components (deg/hour)
     ln_tide_date = .true.               !  adjust tidal harmonics for start date of run
