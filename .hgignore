@@ -3,4 +3,11 @@ syntax: glob
 *.nc.bz2
 *.nc.gz
 *.nc.xz
+date.file
+layout.dat
+nam_rebuild
+ocean.output
 opa
+solver.stat
+time.step
+timing.output
