@@ -831,7 +831,7 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 !-----------------------------------------------------------------------
 &nam_diaharm   !   Harmonic analysis of tidal constituents ('key_diaharm')
 !-----------------------------------------------------------------------
-    nit000_han = 2878        ! First time step used for harmonic analysis
+    nit000_han = 2879        ! First time step used for harmonic analysis
     nitend_han = 4318        ! Last time step used for harmonic analysis
     nstep_han  =   15        ! Time step frequency for harmonic analysis
     tname(1)   = 'M2'      ! Name of tidal constituents
