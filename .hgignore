@@ -1,2 +1,5 @@
 syntax: glob
 *.nc
+*.nc.bz2
+*.nc.gz
+*.nc.xz
