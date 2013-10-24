@@ -26,7 +26,7 @@
    nn_no       =       0   !  job number (no more used...)
    cn_exp      =    "JPP"  !  experience name
    nn_it000    =       1   !  first time step
-   nn_itend    =    4320   !  last  time step (std 1 day = 576)
+   nn_itend    =    4320   !  last  time step (std 1 day = 1440)
    nn_date0    =  20020102 !  date at nit_0000 (format yyyymmdd) used if ln_rstart=F or (ln_rstart=T and nn_rstctl=0 or 1)
    nn_leapy    =       1   !  Leap year calendar (1) or not (0)
    ln_rstart   =  .false.  !  start from rest (F) or from a restart file (T)
@@ -831,8 +831,8 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 !-----------------------------------------------------------------------
 &nam_diaharm   !   Harmonic analysis of tidal constituents ('key_diaharm')
 !-----------------------------------------------------------------------
-    nit000_han =    1        ! First time step used for harmonic analysis
-    nitend_han = 4320        ! Last time step used for harmonic analysis
+    nit000_han = 2878        ! First time step used for harmonic analysis
+    nitend_han = 4318        ! Last time step used for harmonic analysis
     nstep_han  =   15        ! Time step frequency for harmonic analysis
     tname(1)   = 'M2'      ! Name of tidal constituents
 /
