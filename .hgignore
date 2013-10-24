@@ -3,3 +3,4 @@ syntax: glob
 *.nc.bz2
 *.nc.gz
 *.nc.xz
+opa
