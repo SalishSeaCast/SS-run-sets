@@ -39,9 +39,9 @@
    nn_istate   =       0   !  output the initial state (1) or not (0)
    nn_stock    =    4320   !  frequency of creation of a restart file (modulo referenced to 1)
    nn_write    =      60   !  frequency of write in the output file   (modulo referenced to nit000)
-   ln_dimgnnn  = .true.   !  DIMG file format: 1 file for all processors (F) or by processor (T)
+   ln_dimgnnn  = .true.    !  DIMG file format: 1 file for all processors (F) or by processor (T)
    ln_mskland  = .false.   !  mask land points in NetCDF outputs (costly: + ~15%)
-   ln_clobber  = .false.   !  clobber (overwrite) an existing file
+   ln_clobber  = .true.   !  clobber (overwrite) an existing file
    nn_chunksz  =       0   !  chunksize (bytes) for NetCDF file (works only with iom_nf90 routines)
 /
 
@@ -83,7 +83,7 @@
    rn_e3zps_min=    5.     !  partial step thickness is set larger than the minimum of
    rn_e3zps_rat=    0.2    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
                            !
-   rn_rdt      =  60.     !  time step for the dynamics (and tracer if nn_acc=0)
+   rn_rdt      =   60.     !  time step for the dynamics (and tracer if nn_acc=0)
    nn_baro     =   30      !  number of barotropic time step            ("key_dynspg_ts")
    rn_atfp     =    0.1    !  asselin time filter parameter
    nn_acc      =    0      !  acceleration of convergence : =1      used, rdt < rdttra(k)
@@ -831,9 +831,9 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 !-----------------------------------------------------------------------
 &nam_diaharm   !   Harmonic analysis of tidal constituents ('key_diaharm')
 !-----------------------------------------------------------------------
-    nit000_han = 1441         ! First time step used for harmonic analysis
+    nit000_han =    1        ! First time step used for harmonic analysis
     nitend_han = 4320        ! Last time step used for harmonic analysis
-    nstep_han  = 4        ! Time step frequency for harmonic analysis
+    nstep_han  =   15        ! Time step frequency for harmonic analysis
     tname(1)   = 'M2'      ! Name of tidal constituents
 /
 !-----------------------------------------------------------------------
