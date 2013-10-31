@@ -324,48 +324,18 @@
       </group>
 
       <group id="1d" output_freq="86400"  output_level="10" enabled=".TRUE.">                      <!-- 1d files -->
-
-        <!--
-............................................................................................................
-           example of 3 types of 1d files
-............................................................................................................
-        -->
-        <!-- automatic definition of the name based on id="1d_grid_T"
-         => this name is used as the radical for all file names of this group
-         => add a suffix to be sure that all files names of this group are different   -->
-        <group id="1d_grid_T" name="auto" description="ocean T grid variables" >
-          <!-- mooring: automatic definition of the file name suffix based on id="0n180wT"  -->
-          <file id="0n180wT" name_suffix="auto" >
-            <group id="0n180wT" zoom_ref="0n180wT" >    <!-- group of variables sharing the same zoom -->
-              <field ref="toce" name="votemper"  />
-              <field ref="uoce" name="vozocrtx"  />     <!-- include a U-grid variable in the list => switch to T-grid -->
-            </group>
-          </file>
-          <!-- Equatorial section: automatic definition of the file name suffix based on id="EqT" -->
-          <file id="EqT" name_suffix="auto" >
-            <group id="EqT" zoom_ref="EqT" >
-              <field ref="toce" name="votemper"  />
-            </group>
-          </file>
-          <!-- global file with different operations on data   -->
-          <file id="global" >
-            <field ref="sst"    name="sst_1d_ave"                       />     <!-- mean -->
-            <field ref="sst"    name="sst_1d_max"  operation="t_max(X)" />     <!-- max -->
-                  <field ref="M2x"     name="M2_x_elev"  />
-                  <field ref="M2y"     name="M2_y_elev"  />
-          </file>
-        </group>
-
-          <!-- variables available with key_float, instantaneous fields -->
-          <file id="floats"  description="floats variables">
-              <field ref="traj_lon"   name="floats_longitude"   freq_op="86400" />
-              <field ref="traj_lat"   name="floats_latitude"    freq_op="86400" />
-              <field ref="traj_dep"   name="floats_depth"       freq_op="86400" />
-              <field ref="traj_temp"  name="floats_temperature" freq_op="86400" />
-              <field ref="traj_salt"  name="floats_salinity"    freq_op="86400" />
-              <field ref="traj_dens"  name="floats_density"     freq_op="86400" />
-              <field ref="traj_group" name="floats_group"       freq_op="86400" />
-          </file>
+        <file id="1d_grid_T" name="auto" description="ocean T grid variables">
+          <field ref="M2x"     name="M2_x_elev"  />
+          <field ref="M2y"     name="M2_y_elev"  />
+        </file>
+        <file id="1d_grid_U" name="auto" description="ocean U grid variables">
+          <field ref="M2x_u"     name="M2_x_u_velocity"  />
+          <field ref="M2y_u"     name="M2_y_u_velocity"  />
+        </file>
+        <file id="1d_grid_V" name="auto" description="ocean V grid variables">
+          <field ref="M2x_v"     name="M2_x_v_velocity"  />
+          <field ref="M2y_v"     name="M2_y_v_velocity"  />
+        </file>
       </group>
 
 
