@@ -324,6 +324,9 @@
       </group>
 
       <group id="1d" output_freq="86400"  output_level="10" enabled=".TRUE.">                      <!-- 1d files -->
+      </group>
+
+      <group id="3d" output_freq="259200" output_level="10" enabled=".TRUE.">                      <!-- 3d files -->
         <file id="1d_grid_T" name="auto" description="ocean T grid variables">
           <field ref="M2x"     name="M2_x_elev"  />
           <field ref="M2y"     name="M2_y_elev"  />
@@ -336,10 +339,6 @@
           <field ref="M2x_v"     name="M2_x_v_velocity"  />
           <field ref="M2y_v"     name="M2_y_v_velocity"  />
         </file>
-      </group>
-
-
-      <group id="3d" output_freq="259200" output_level="10" enabled=".TRUE.">                      <!-- 3d files -->
       </group>
 
       <group id="5d" output_freq="432000" output_level="10" enabled=".TRUE.">                      <!-- 5d files -->
