@@ -327,15 +327,15 @@
       </group>
 
       <group id="3d" output_freq="259200" output_level="10" enabled=".TRUE.">                      <!-- 3d files -->
-        <file id="1d_grid_T" name="auto" description="ocean T grid variables">
+        <file id="3d_grid_T" name="auto" description="ocean T grid variables">
           <field ref="M2x"     name="M2_x_elev"  />
           <field ref="M2y"     name="M2_y_elev"  />
         </file>
-        <file id="1d_grid_U" name="auto" description="ocean U grid variables">
+        <file id="3d_grid_U" name="auto" description="ocean U grid variables">
           <field ref="M2x_u"     name="M2_x_u_velocity"  />
           <field ref="M2y_u"     name="M2_y_u_velocity"  />
         </file>
-        <file id="1d_grid_V" name="auto" description="ocean V grid variables">
+        <file id="3d_grid_V" name="auto" description="ocean V grid variables">
           <field ref="M2x_v"     name="M2_x_v_velocity"  />
           <field ref="M2y_v"     name="M2_y_v_velocity"  />
         </file>
