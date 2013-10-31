@@ -8,6 +8,7 @@ layout.dat
 nam_rebuild
 ocean.output
 opa
+server.exe
 solver.stat
 time.step
 timing.output
