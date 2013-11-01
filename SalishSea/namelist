@@ -97,8 +97,8 @@
 !-----------------------------------------------------------------------
 !          ! file name ! frequency (hours)    ! variable ! time interp. ! clim  !'yearly' or ! weights  ! rotation !
 !          !           !  (if <0  months)     !   name   !  (logical)   ! (T/F) ! 'monthly'  ! filename ! pairing  !
-   sn_tem  = '../../nemo-forcing/initial_strat/SoG0318_1y_temperature_nomask', -12,'votemper',  .false.  , .true., 'yearly'   , ' '      , ' '
-   sn_sal  = '../../nemo-forcing/initial_strat/SoG0318_1y_salinity_nomask'   , -12,'vosaline',  .false.  , .true., 'yearly'   , ''       , ' '
+   sn_tem  = '../../nemo-forcing/initial_strat/SS_SoG0318_1y_temperature_nomask', -12,'votemper',  .false.  , .true., 'yearly'   , ' '      , ' '
+   sn_sal  = '../../nemo-forcing/initial_strat/SS_SoG0318_1y_salinity_nomask'   , -12,'vosaline',  .false.  , .true., 'yearly'   , ''       , ' '
    !
    cn_dir        = './'     !  root directory for the location of the runoff files
    ln_tsd_init   = .true.   !  Initialisation of ocean T & S with T &S input data (T) or not (F)
