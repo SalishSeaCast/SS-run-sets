@@ -1,0 +1,11 @@
+# salishsea command processor run description for Salish Sea case
+#
+# Salish Sea full domain with:
+#   * unstructured west open boundary
+#   * NEMO calculated boundary coordinates
+#   * M2 tidal forcing
+
+config_name: SalishSea
+
+paths:
+  NEMO-code: ../../NEMO-code
