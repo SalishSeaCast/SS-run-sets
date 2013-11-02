@@ -389,7 +389,7 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 &nambdy        !  unstructured open boundaries                          ("key_bdy")
 !-----------------------------------------------------------------------
     nb_bdy = 1                            !  number of open boundary sets
-    ln_coords_file = .false.               !  =T : read bdy coordinates from file
+    ln_coords_file = .false.              !  =T : read bdy coordinates from file
     cn_coords_file = ''                   !  bdy coordinates files
     ln_mask_file = .false.                !  =T : read mask from file
     cn_mask_file = ''                     !  name of mask file (if ln_mask_file=.TRUE.)
@@ -400,11 +400,11 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
                                           !  = 3, use external data AND tidal harmonic forcing
     nn_dyn3d      =  0                    !  boundary conditions for baroclinic velocities
     nn_dyn3d_dta  =  0                    !  = 0, bdy data are equal to the initial state
-                           !  = 1, bdy data are read in 'bdydata   .nc' files
+                                          !  = 1, bdy data are read in 'bdydata   .nc' files
     nn_tra        =  1                    !  boundary conditions for T and S
     nn_tra_dta    =  0                    !  = 0, bdy data are equal to the initial state
-                           !  = 1, bdy data are read in 'bdydata   .nc' files
-    nn_rimwidth  = 10                      !  width of the relaxation zone
+                                          !  = 1, bdy data are read in 'bdydata   .nc' files
+    nn_rimwidth  = 10                     !  width of the relaxation zone
     ln_vol     = .false.                  !  total volume correction (see nn_volctl parameter)
     nn_volctl  = 1                        !  = 0, the total water flux across open boundaries is zero
 /
@@ -412,10 +412,10 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 &nambdy_index ! open boundaries - definition ("key_bdy")
 !-----------------------------------------------------------------------
     nbdysege = 0
-    nbdysegw = -1
-    jpiwob = 0
-    jpjwdt = 199
-    jpjwft = 898
+    nbdysegw = 1
+    jpiwob = 2
+    jpjwdt = 385
+    jpjwft = 471
     nbdysegn = 0
     nbdysegs = 0
 /
