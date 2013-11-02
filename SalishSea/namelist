@@ -146,7 +146,7 @@
                            !  =1 use observed ice-cover      ,
                            !  =2 ice-model used                         ("key_lim3" or "key_lim2)
    ln_dm2dc    = .false.   !  daily mean to diurnal cycle on short wave
-   ln_rnf      = .false.    !  runoffs                                   (T => fill namsbc_rnf)
+   ln_rnf      = .true.    !  runoffs                                   (T => fill namsbc_rnf)
    ln_ssr      = .false.   !  Sea Surface Restoring on T and/or S       (T => fill namsbc_ssr)
    nn_fwb      = 0         !  FreshWater Budget: =0 unchecked
                            !     =1 global mean of e-p-r set to zero at each time step
@@ -271,21 +271,21 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 !-----------------------------------------------------------------------
 !              !  file name           ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
 !              !                      !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
-   sn_rnf      = 'amm12_rivers'       ,        24         , 'rorunoff',   .false.    , .true. , 'yearly'  , ''       , ''
+   sn_rnf      = 'rivers_Fraser_only_const'       ,        -12         , 'rorunoff',   .false.    , .true. , 'yearly'  , ''       , ''
    sn_cnf      = 'runoff_1m_nomask'   ,         0         , 'socoefr0',   .false.    , .true. , 'yearly'  , ''       , ''
    sn_s_rnf    = 'amm12_rivers'       ,        24         , 'rosaline',   .false.    , .true. , 'yearly'  , ''       , ''
    sn_t_rnf    = 'amm12_rivers'       ,        24         , 'rotemper',   .false.    , .true. , 'yearly'  , ''       , ''
-   sn_dep_rnf  = 'amm12_rivers'       ,        24         , 'rodepth' ,   .false.    , .true. , 'yearly'  , ''       , ''
+   sn_dep_rnf  = 'rivers_Fraser_only_const'       ,        -12         , 'rodepth' ,   .false.    , .true. , 'yearly'  , ''       , ''
 
-   cn_dir       = './'      !  root directory for the location of the runoff files
+   cn_dir       = 'rivers/'      !  root directory for the location of the runoff files
    ln_rnf_emp   = .false.   !  runoffs included into precipitation field (T) or into a file (F)
    ln_rnf_mouth = .false.   !  specific treatment at rivers mouths
    rn_hrnf      =  15.e0    !  depth over which enhanced vertical mixing is used
    rn_avt_rnf   =   1.e-3   !  value of the additional vertical mixing coef. [m2/s]
    rn_rfact     =   1.e0    !  multiplicative factor for runoff
    ln_rnf_depth = .true.    !  read in depth information for runoff
-   ln_rnf_tem   = .true.    !  read in temperature information for runoff
-   ln_rnf_sal   = .true.    !  read in salinity information for runoff
+   ln_rnf_tem   = .false.    !  read in temperature information for runoff
+   ln_rnf_sal   = .false.    !  read in salinity information for runoff
 /
 !-----------------------------------------------------------------------
 &namsbc_apr    !   Atmospheric pressure used as ocean forcing or in bulk
