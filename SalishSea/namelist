@@ -1,3 +1,12 @@
+!! Salish Sea
+!! 4x4 processors
+!! S4-1 uniform initial T and S
+!! Open western boundary across Strait of Juan de Fuca
+!!   Tidal forcing
+!!   Preliminary temperature and salinity forcing
+!! Preliminary Fraser River forcing/run-off
+
+
 !!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 !! NEMO/OPA  :  1 - run manager      (namrun)
 !! namelists    2 - Domain           (namzgr, namzgr_sco, namdom, namtsd)
@@ -560,8 +569,8 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 !-----------------------------------------------------------------------
 &namdyn_vor    !   option of physics/algorithm (not control by CPP keys)
 !-----------------------------------------------------------------------
-   ln_dynvor_ene = .false. !  energy    conserving scheme  
-   ln_dynvor_ens = .false. !  enstrophy conserving scheme    
+   ln_dynvor_ene = .false. !  energy    conserving scheme
+   ln_dynvor_ens = .false. !  enstrophy conserving scheme
    ln_dynvor_mix = .false. !  mixed scheme
    ln_dynvor_een = .true.  !  energy & enstrophy scheme
 /
