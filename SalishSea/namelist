@@ -402,7 +402,7 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
     nn_dyn3d_dta  =  0                    !  = 0, bdy data are equal to the initial state
                                           !  = 1, bdy data are read in 'bdydata   .nc' files
     nn_tra        =  1                    !  boundary conditions for T and S
-    nn_tra_dta    =  0                    !  = 0, bdy data are equal to the initial state
+    nn_tra_dta    =  1                    !  = 0, bdy data are equal to the initial state
                                           !  = 1, bdy data are read in 'bdydata   .nc' files
     nn_rimwidth  = 10                     !  width of the relaxation zone
     ln_vol     = .false.                  !  total volume correction (see nn_volctl parameter)
@@ -429,9 +429,9 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
    bn_v2d =     'amm12_bdyV_u2d' ,         24        , 'vobtcrty' ,     .true.     , .false. ,  'daily'  ,    ''    ,   ''
    bn_u3d  =    'amm12_bdyU_u3d' ,         24        , 'vozocrtx' ,     .true.     , .false. ,  'daily'  ,    ''    ,   ''
    bn_v3d  =    'amm12_bdyV_u3d' ,         24        , 'vomecrty' ,     .true.     , .false. ,  'daily'  ,    ''    ,   ''
-   bn_tem  =    'amm12_bdyT_tra' ,         24        , 'votemper' ,     .true.     , .false. ,  'daily'  ,    ''    ,   ''
-   bn_sal  =    'amm12_bdyT_tra' ,         24        , 'vosaline' ,     .true.     , .false. ,  'daily'  ,    ''    ,   ''
-   cn_dir  =    'bdydta/'
+   bn_tem  =    'SalishSea_bdyT_tra' ,    -12        , 'votemper' ,     .false.    , .true.  ,  'yearly' ,    ''    ,   ''
+   bn_sal  =    'SalishSea_bdyT_tra' ,    -12        , 'vosaline' ,     .false.    , .true.  ,  'yearly' ,    ''    ,   ''
+   cn_dir  =    'open_boundaries/west/'
    ln_full_vel = .false.
 /
 !-----------------------------------------------------------------------
