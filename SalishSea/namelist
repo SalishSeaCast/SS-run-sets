@@ -32,26 +32,26 @@
 !-----------------------------------------------------------------------
 &namrun        !   parameters of the run
 !-----------------------------------------------------------------------
-   nn_no       =       0   !  job number (no more used...)
+   nn_no       =       0      !  job number (no more used...)
    cn_exp      = "SalishSea"  !  experience name
-   nn_it000    =       1   !  first time step
-   nn_itend    =    4320   !  last  time step (std 1 day = 1440)
-   nn_date0    =  20020102 !  date at nit_0000 (format yyyymmdd) used if ln_rstart=F or (ln_rstart=T and nn_rstctl=0 or 1)
-   nn_leapy    =       1   !  Leap year calendar (1) or not (0)
-   ln_rstart   =  .false.  !  start from rest (F) or from a restart file (T)
-   nn_rstctl   =       0   !  restart control => activated only if ln_rstart = T
-                           !    = 0 nn_date0 read in namelist ; nn_it000 : read in namelist
-                           !    = 1 nn_date0 read in namelist ; nn_it000 : check consistancy between namelist and restart
-                           !    = 2 nn_date0 read in restart  ; nn_it000 : check consistancy between namelist and restart
-   cn_ocerst_in  = "restart"   !  suffix of ocean restart name (input)
-   cn_ocerst_out = "restart"   !  suffix of ocean restart name (output)
-   nn_istate   =       0   !  output the initial state (1) or not (0)
-   nn_stock    =    4320   !  frequency of creation of a restart file (modulo referenced to 1)
-   nn_write    =      60   !  frequency of write in the output file   (modulo referenced to nit000)
-   ln_dimgnnn  = .true.    !  DIMG file format: 1 file for all processors (F) or by processor (T)
-   ln_mskland  = .false.   !  mask land points in NetCDF outputs (costly: + ~15%)
-   ln_clobber  = .true.   !  clobber (overwrite) an existing file
-   nn_chunksz  =       0   !  chunksize (bytes) for NetCDF file (works only with iom_nf90 routines)
+   nn_it000    =       1      !  first time step
+   nn_itend    =    4320      !  last  time step (std 1 day = 1440)
+   nn_date0    =  20020102    !  date at nit_0000 (format yyyymmdd) used if ln_rstart=F or (ln_rstart=T and nn_rstctl=0 or 1)
+   nn_leapy    =       1      !  Leap year calendar (1) or not (0)
+   ln_rstart   =  .false.     !  start from rest (F) or from a restart file (T)
+   nn_rstctl   =       0      !  restart control => activated only if ln_rstart = T
+                              !    = 0 nn_date0 read in namelist ; nn_it000 : read in namelist
+                              !    = 1 nn_date0 read in namelist ; nn_it000 : check consistancy between namelist and restart
+                              !    = 2 nn_date0 read in restart  ; nn_it000 : check consistancy between namelist and restart
+   cn_ocerst_in  = "restart"  !  suffix of ocean restart name (input)
+   cn_ocerst_out = "restart"  !  suffix of ocean restart name (output)
+   nn_istate   =       0      !  output the initial state (1) or not (0)
+   nn_stock    =    4320      !  frequency of creation of a restart file (modulo referenced to 1)
+   nn_write    =      60      !  frequency of write in the output file   (modulo referenced to nit000)
+   ln_dimgnnn  = .true.       !  DIMG file format: 1 file for all processors (F) or by processor (T)
+   ln_mskland  = .false.      !  mask land points in NetCDF outputs (costly: + ~15%)
+   ln_clobber  = .true.       !  clobber (overwrite) an existing file
+   nn_chunksz  =       0      !  chunksize (bytes) for NetCDF file (works only with iom_nf90 routines)
 /
 
 !!======================================================================
@@ -67,8 +67,8 @@
 &namzgr        !   vertical coordinate
 !-----------------------------------------------------------------------
    ln_zco      = .false.   !  z-coordinate - full    steps   (T/F)      ("key_zco" may also be defined)
-   ln_zps      = .true.   !  z-coordinate - partial steps   (T/F)
-   ln_sco      = .false.    !  s- or hybrid z-s-coordinate    (T/F)
+   ln_zps      = .true.    !  z-coordinate - partial steps   (T/F)
+   ln_sco      = .false.   !  s- or hybrid z-s-coordinate    (T/F)
 /
 !-----------------------------------------------------------------------
 &namzgr_sco    !   s-coordinate or hybrid z-s-coordinate
