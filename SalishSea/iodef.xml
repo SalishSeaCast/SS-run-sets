@@ -3,6 +3,138 @@
 
   <context id="nemo">
 
+    <!--
+============================================================================================================
+=                                           output files definition                                        =
+=                                            Define your own files                                         =
+=                                         put the variables you want...                                    =
+============================================================================================================
+    -->
+
+    <file_definition >
+
+      <group id="1h" output_freq="3600"   output_level="10" enabled=".false.">                      <!-- 1h files -->
+        <file id="1h_grid_T" name="auto" description="ocean T grid variables" >
+          <field ref="ssh"          name="sossheig"  />
+          <field ref="toce"         name="votemper"  />
+          <field ref="soce"         name="vosaline"  />
+        </file>
+        <file id="1h_grid_U" name="auto" description="ocean U grid variables" >
+          <field ref="uoce"         name="vozocrtx"  />
+        </file>
+        <file id="1h_grid_V" name="auto" description="ocean V grid variables" >
+          <field ref="voce"         name="vomecrty"  />
+        </file>
+        <file id="Tidal_Harmonics_eta">
+          <field ref="M2x"     name="M2_x_elev"  />
+          <field ref="M2y"     name="M2_y_elev"  />
+        </file>
+        <file id="Tidal_Harmonics_U">
+          <field ref="M2x_u"     name="M2_x_u_velocity"  />
+          <field ref="M2y_u"     name="M2_y_u_velocity"  />
+        </file>
+        <file id="Tidal_Harmonics_V">
+          <field ref="M2x_v"     name="M2_x_v_velocity"  />
+          <field ref="M2y_v"     name="M2_y_v_velocity"  />
+        </file>
+      </group>
+
+      <group id="2h" output_freq="7200"   output_level="10" enabled=".false.">                      <!-- 2h files -->
+        <file id="2h_grid_T" name="auto" description="ocean T grid variables" >
+          <field ref="ssh"          name="sossheig"  />
+          <field ref="toce"         name="votemper"  />
+          <field ref="soce"         name="vosaline"  />
+        </file>
+        <file id="2h_grid_U" name="auto" description="ocean U grid variables" >
+          <field ref="uoce"         name="vozocrtx"  />
+        </file>
+        <file id="2h_grid_V" name="auto" description="ocean V grid variables" >
+          <field ref="voce"         name="vomecrty"  />
+        </file>
+        <file id="Tidal_Harmonics_eta">
+          <field ref="M2x"     name="M2_x_elev"  />
+          <field ref="M2y"     name="M2_y_elev"  />
+        </file>
+        <file id="Tidal_Harmonics_U">
+          <field ref="M2x_u"     name="M2_x_u_velocity"  />
+          <field ref="M2y_u"     name="M2_y_u_velocity"  />
+        </file>
+        <file id="Tidal_Harmonics_V">
+          <field ref="M2x_v"     name="M2_x_v_velocity"  />
+          <field ref="M2y_v"     name="M2_y_v_velocity"  />
+        </file>
+      </group>
+
+      <group id="3h" output_freq="10800"  output_level="10" enabled=".TRUE.">                      <!-- 3h files -->
+      </group>
+
+      <group id="4h" output_freq="14400"  output_level="10" enabled=".TRUE.">                      <!-- 4h files -->
+        <file id="4h_grid_T" name="auto" description="ocean T grid variables" >
+          <field ref="ssh"          name="sossheig"  />
+          <field ref="toce"         name="votemper"  />
+          <field ref="soce"         name="vosaline"  />
+        </file>
+        <file id="4h_grid_U" name="auto" description="ocean U grid variables" >
+          <field ref="uoce"         name="vozocrtx"  />
+        </file>
+        <file id="4h_grid_V" name="auto" description="ocean V grid variables" >
+          <field ref="voce"         name="vomecrty"  />
+        </file>
+        <file id="Tidal_Harmonics_eta">
+          <field ref="M2x"     name="M2_x_elev"  />
+          <field ref="M2y"     name="M2_y_elev"  />
+        </file>
+        <file id="Tidal_Harmonics_U">
+          <field ref="M2x_u"     name="M2_x_u_velocity"  />
+          <field ref="M2y_u"     name="M2_y_u_velocity"  />
+        </file>
+        <file id="Tidal_Harmonics_V">
+          <field ref="M2x_v"     name="M2_x_v_velocity"  />
+          <field ref="M2y_v"     name="M2_y_v_velocity"  />
+        </file>
+      </group>
+
+      <group id="6h" output_freq="21600"  output_level="10" enabled=".TRUE.">                      <!-- 6h files -->
+      </group>
+
+      <group id="1d" output_freq="86400"  output_level="10" enabled=".TRUE.">                      <!-- 1d files -->
+      </group>
+
+      <group id="3d" output_freq="259200" output_level="10" enabled=".TRUE.">                      <!-- 3d files -->
+      </group>
+
+      <group id="5d" output_freq="432000" output_level="10" enabled=".TRUE.">                      <!-- 5d files -->
+      </group>
+
+      <group id="1m" output_freq="-1"     output_level="10" enabled=".TRUE.">                      <!-- real monthly files -->
+      </group>
+
+      <group id="2m" output_freq="-2"     output_level="10" enabled=".TRUE.">                      <!-- real 2m files -->
+      </group>
+
+      <group id="3m" output_freq="-3"     output_level="10" enabled=".TRUE.">                      <!-- real 3m files -->
+      </group>
+
+      <group id="4m" output_freq="-4"     output_level="10" enabled=".TRUE.">                      <!-- real 4m files -->
+      </group>
+
+      <group id="6m" output_freq="-6"     output_level="10" enabled=".TRUE.">                      <!-- real 6m files -->
+      </group>
+
+      <group id="1y" output_freq="-12"    output_level="10" enabled=".TRUE.">                      <!-- real yearly files -->
+      </group>
+
+      <group id="2y"  output_freq="-24"   output_level="10" enabled=".TRUE.">                      <!-- real 2y files -->
+      </group>
+
+      <group id="5y"  output_freq="-60"   output_level="10" enabled=".TRUE.">                      <!-- real 5y files -->
+      </group>
+
+      <group id="10y" output_freq="-120"  output_level="10" enabled=".TRUE.">                      <!-- real 10y files -->
+      </group>
+
+    </file_definition>
+
   <!--
 ============================================================================================================
 =                                  definition of all existing variables                                    =
@@ -286,92 +418,6 @@
       </group>
 
     </field_definition>
-
-    <!--
-============================================================================================================
-=                                           output files definition                                        =
-=                                            Define your own files                                         =
-=                                         put the variables you want...                                    =
-============================================================================================================
-    -->
-
-    <file_definition >
-
-      <group id="1h" output_freq="3600"   output_level="10" enabled=".TRUE.">                      <!-- 1h files -->
-        <file id="1h_grid_T" name="auto" description="ocean T grid variables" >
-          <field ref="ssh"          name="sossheig"  />
-          <field ref="toce"         name="votemper"  />
-          <field ref="soce"         name="vosaline"  />
-        </file>
-        <file id="1h_grid_U" name="auto" description="ocean U grid variables" >
-          <field ref="uoce"         name="vozocrtx"  />
-        </file>
-        <file id="1h_grid_V" name="auto" description="ocean V grid variables" >
-          <field ref="voce"         name="vomecrty"  />
-        </file>
-        <file id="Tidal_Harmonics_eta">
-          <field ref="M2x"     name="M2_x_elev"  />
-          <field ref="M2y"     name="M2_y_elev"  />
-        </file>
-        <file id="Tidal_Harmonics_U">
-          <field ref="M2x_u"     name="M2_x_u_velocity"  />
-          <field ref="M2y_u"     name="M2_y_u_velocity"  />
-        </file>
-        <file id="Tidal_Harmonics_V">
-          <field ref="M2x_v"     name="M2_x_v_velocity"  />
-          <field ref="M2y_v"     name="M2_y_v_velocity"  />
-        </file>
-      </group>
-
-      <group id="2h" output_freq="7200"   output_level="10" enabled=".TRUE.">                      <!-- 2h files -->
-      </group>
-
-      <group id="3h" output_freq="10800"  output_level="10" enabled=".TRUE.">                      <!-- 3h files -->
-      </group>
-
-      <group id="4h" output_freq="14400"  output_level="10" enabled=".TRUE.">                      <!-- 4h files -->
-      </group>
-
-      <group id="6h" output_freq="21600"  output_level="10" enabled=".TRUE.">                      <!-- 6h files -->
-      </group>
-
-      <group id="1d" output_freq="86400"  output_level="10" enabled=".TRUE.">                      <!-- 1d files -->
-      </group>
-
-      <group id="3d" output_freq="259200" output_level="10" enabled=".TRUE.">                      <!-- 3d files -->
-      </group>
-
-      <group id="5d" output_freq="432000" output_level="10" enabled=".TRUE.">                      <!-- 5d files -->
-      </group>
-
-      <group id="1m" output_freq="-1"     output_level="10" enabled=".TRUE.">                      <!-- real monthly files -->
-      </group>
-
-      <group id="2m" output_freq="-2"     output_level="10" enabled=".TRUE.">                      <!-- real 2m files -->
-      </group>
-
-      <group id="3m" output_freq="-3"     output_level="10" enabled=".TRUE.">                      <!-- real 3m files -->
-      </group>
-
-      <group id="4m" output_freq="-4"     output_level="10" enabled=".TRUE.">                      <!-- real 4m files -->
-      </group>
-
-      <group id="6m" output_freq="-6"     output_level="10" enabled=".TRUE.">                      <!-- real 6m files -->
-      </group>
-
-      <group id="1y" output_freq="-12"    output_level="10" enabled=".TRUE.">                      <!-- real yearly files -->
-      </group>
-
-      <group id="2y"  output_freq="-24"   output_level="10" enabled=".TRUE.">                      <!-- real 2y files -->
-      </group>
-
-      <group id="5y"  output_freq="-60"   output_level="10" enabled=".TRUE.">                      <!-- real 5y files -->
-      </group>
-
-      <group id="10y" output_freq="-120"  output_level="10" enabled=".TRUE.">                      <!-- real 10y files -->
-      </group>
-
-    </file_definition>
 
     <!--
 ============================================================================================================
