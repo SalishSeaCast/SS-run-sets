@@ -32,10 +32,9 @@
 !-----------------------------------------------------------------------
 &namrun        !   parameters of the run
 !-----------------------------------------------------------------------
-   nn_no       =       0      !  job number (no more used...)
    cn_exp      = "SalishSea"  !  experience name
    nn_it000    =       1      !  first time step
-   nn_itend    =    4320      !  last  time step (std 1 day = 1440)
+   nn_itend    =     240      !  last  time step (std 1 day = 1440)
    nn_date0    =  20020102    !  date at nit_0000 (format yyyymmdd) used if ln_rstart=F or (ln_rstart=T and nn_rstctl=0 or 1)
    nn_leapy    =       1      !  Leap year calendar (1) or not (0)
    ln_rstart   =  .false.     !  start from rest (F) or from a restart file (T)
@@ -43,15 +42,9 @@
                               !    = 0 nn_date0 read in namelist ; nn_it000 : read in namelist
                               !    = 1 nn_date0 read in namelist ; nn_it000 : check consistancy between namelist and restart
                               !    = 2 nn_date0 read in restart  ; nn_it000 : check consistancy between namelist and restart
-   cn_ocerst_in  = "restart"  !  suffix of ocean restart name (input)
-   cn_ocerst_out = "restart"  !  suffix of ocean restart name (output)
    nn_istate   =       0      !  output the initial state (1) or not (0)
    nn_stock    =    4320      !  frequency of creation of a restart file (modulo referenced to 1)
-   nn_write    =      60      !  frequency of write in the output file   (modulo referenced to nit000)
-   ln_dimgnnn  = .true.       !  DIMG file format: 1 file for all processors (F) or by processor (T)
-   ln_mskland  = .false.      !  mask land points in NetCDF outputs (costly: + ~15%)
    ln_clobber  = .true.       !  clobber (overwrite) an existing file
-   nn_chunksz  =       0      !  chunksize (bytes) for NetCDF file (works only with iom_nf90 routines)
 /
 
 !!======================================================================
@@ -784,13 +777,7 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 !-----------------------------------------------------------------------
 &namnc4        !   netcdf4 chunking and compression settings            ("key_netcdf4")
 !-----------------------------------------------------------------------
-   nn_nchunks_i=   4       !  number of chunks in i-dimension
-   nn_nchunks_j=   4       !  number of chunks in j-dimension
-   nn_nchunks_k=   40      !  number of chunks in k-dimension
-                           !  setting nn_nchunks_k = jpk will give a chunk size of 1 in the vertical which
-                           !  is optimal for postprocessing which works exclusively with horizontal slabs
-   ln_nc4zip   = .true.    !  (T) use netcdf4 chunking and compression
-                           !  (F) ignore chunking information and produce netcdf3-compatible files
+!!! Use defaults defined in in_out_manager.F90
 /
 !-----------------------------------------------------------------------
 &namtrd        !   diagnostics on dynamics and/or tracer trends         ("key_trddyn" and/or "key_trdtra")
@@ -843,10 +830,10 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 !-----------------------------------------------------------------------
 &nam_diaharm   !   Harmonic analysis of tidal constituents ('key_diaharm')
 !-----------------------------------------------------------------------
-    nit000_han = 2879        ! First time step used for harmonic analysis
-    nitend_han = 4318        ! Last time step used for harmonic analysis
+    nit000_han =    1        ! First time step used for harmonic analysis
+    nitend_han =  240        ! Last time step used for harmonic analysis
     nstep_han  =   15        ! Time step frequency for harmonic analysis
-    tname(1)   = 'M2'      ! Name of tidal constituents
+    tname(1)   = 'M2'        ! Name of tidal constituents
 /
 !-----------------------------------------------------------------------
 &namdct        ! transports through sections
