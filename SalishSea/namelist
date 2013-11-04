@@ -34,7 +34,7 @@
 !-----------------------------------------------------------------------
    cn_exp      = "SalishSea"  !  experience name
    nn_it000    =       1      !  first time step
-   nn_itend    =     240      !  last  time step (std 1 day = 1440)
+   nn_itend    =     960      !  last  time step (std 1 day = 1440)
    nn_date0    =  20020102    !  date at nit_0000 (format yyyymmdd) used if ln_rstart=F or (ln_rstart=T and nn_rstctl=0 or 1)
    nn_leapy    =       1      !  Leap year calendar (1) or not (0)
    ln_rstart   =  .false.     !  start from rest (F) or from a restart file (T)
@@ -264,11 +264,11 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 !-----------------------------------------------------------------------
 !              !  file name           ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
 !              !                      !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
-   sn_rnf      = 'rivers_Fraser_only_const'       ,        -12         , 'rorunoff',   .false.    , .true. , 'yearly'  , ''       , ''
+   sn_rnf      = 'rivers_Fraser_only_cnst'       ,        -12         , 'rorunoff',   .false.    , .true. , 'yearly'  , ''       , ''
    sn_cnf      = 'runoff_1m_nomask'   ,         0         , 'socoefr0',   .false.    , .true. , 'yearly'  , ''       , ''
    sn_s_rnf    = 'amm12_rivers'       ,        24         , 'rosaline',   .false.    , .true. , 'yearly'  , ''       , ''
    sn_t_rnf    = 'amm12_rivers'       ,        24         , 'rotemper',   .false.    , .true. , 'yearly'  , ''       , ''
-   sn_dep_rnf  = 'rivers_Fraser_only_const'       ,        -12         , 'rodepth' ,   .false.    , .true. , 'yearly'  , ''       , ''
+   sn_dep_rnf  = 'rivers_Fraser_only_cnst'       ,        -12         , 'rodepth' ,   .false.    , .true. , 'yearly'  , ''       , ''
 
    cn_dir       = 'rivers/'      !  root directory for the location of the runoff files
    ln_rnf_emp   = .false.   !  runoffs included into precipitation field (T) or into a file (F)
@@ -830,8 +830,8 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 !-----------------------------------------------------------------------
 &nam_diaharm   !   Harmonic analysis of tidal constituents ('key_diaharm')
 !-----------------------------------------------------------------------
-    nit000_han =    1        ! First time step used for harmonic analysis
-    nitend_han =  240        ! Last time step used for harmonic analysis
+    nit000_han =  481        ! First time step used for harmonic analysis
+    nitend_han =  960        ! Last time step used for harmonic analysis
     nstep_han  =   15        ! Time step frequency for harmonic analysis
     tname(1)   = 'M2'        ! Name of tidal constituents
 /
