@@ -61,10 +61,10 @@
 !-----------------------------------------------------------------------
    ln_zco      = .false.   !  z-coordinate - full    steps   (T/F)      ("key_zco" may also be defined)
    ln_zps      = .true.    !  z-coordinate - partial steps   (T/F)
-   ln_sco      = .false.   !  s- or hybrid z-s-coordinate    (T/F)
+   ln_sco      = .false.   !  s- or hybrid z-s-coordinate    (T/F)      DEFAULT
 /
 !-----------------------------------------------------------------------
-&namzgr_sco    !   s-coordinate or hybrid z-s-coordinate
+&namzgr_sco    !   s-coordinate or hybrid z-s-coordinate                DEFAULTS
 !-----------------------------------------------------------------------
    rn_sbot_min =   10.     !  minimum depth of s-bottom surface (>0) (m)
    rn_sbot_max = 7000.     !  maximum depth of s-bottom surface (= ocean depth) (>0) (m)
@@ -79,9 +79,9 @@
 &namdom        !   space and time domain (bathymetry, mesh, timestep)
 !-----------------------------------------------------------------------
    nn_bathy    =    1      !  compute (=0) or read (=1) the bathymetry file
-   nn_closea    =   0      !  remove (=0) or keep (=1) closed seas and lakes (ORCA)
+   nn_closea    =   0      !  remove (=0) or keep (=1) closed seas and lakes (ORCA)             DEFAULT
    nn_msh      =    0      !  create (=1) a mesh file or not (=0)
-   rn_hmin     =    3.     !  min depth of the ocean (>0) or min number of ocean level (<0)
+   rn_hmin     =    3.     !  min depth of the ocean (>0) or min number of ocean level (<0)     Change to 4.
    rn_e3zps_min=    5.     !  partial step thickness is set larger than the minimum of
    rn_e3zps_rat=    0.2    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
                            !
@@ -102,7 +102,7 @@
    sn_tem  = 'initial_strat/SS_SoG0318_1y_temperature_nomask', -12,'votemper',  .false.  , .true., 'yearly'   , ' '      , ' '
    sn_sal  = 'initial_strat/SS_SoG0318_1y_salinity_nomask'   , -12,'vosaline',  .false.  , .true., 'yearly'   , ''       , ' '
    !
-   cn_dir        = './'     !  root directory for the location of the runoff files
+   cn_dir        = './'     !  root directory for the location of the runoff fields                 bad comment; could use for initial_strat/
    ln_tsd_init   = .true.   !  Initialisation of ocean T & S with T &S input data (T) or not (F)
    ln_tsd_tradmp = .false.   !  damping of ocean T & S toward T &S input data (T) or not (F)
 /
@@ -430,10 +430,10 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 !-----------------------------------------------------------------------
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide      = 'open_boundaries/west/tides/SalishSea_west_tide_'         !  file name root of tidal forcing files
-    tide_cpt(1)   ='M2'  !  names of tidal components used
-    tide_speed(1)   = 28.984106 !  phase speeds of tidal components (deg/hour)
-    ln_tide_date = .true.               !  adjust tidal harmonics for start date of run
+   filtide       = 'open_boundaries/west/tides/SalishSea_west_sea_tide_'  !  file name root of tidal forcing files
+   tide_cpt(1)   = 'M2'       !  names of tidal components used
+   tide_speed(1) = 28.984106  !  phase speeds of tidal components (deg/hour)
+   ln_tide_date  = .true.     !  adjust tidal harmonics for start date of run
 /
 !!======================================================================
 !!                 ***  Bottom boundary condition  ***
