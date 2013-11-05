@@ -12,7 +12,7 @@
   server_id    = 'ionemo'
 /
 
-! global_mpi_buffer_size: size in Mo of the MPI buffer used by the io_server
+! global_mpi_buffer_size: size in Mb of the MPI buffer used by the io_server
 &mpi_param
   global_mpi_buffer_size = 512
 /  
@@ -24,9 +24,9 @@
 &namnc4         !  netcdf4 chunking and compression settings
                 !  (benign if "key_netcdf4" is not used)
 !-----------------------------------------------------------------------
-   nn_nchunks_i   =   4       !  number of chunks in i-dimension
-   nn_nchunks_j   =   4       !  number of chunks in j-dimension
-   nn_nchunks_k   =   40      !  number of chunks in k-dimension
+   nn_nchunks_i   =   1       !  number of chunks in i-dimension
+   nn_nchunks_j   =   1       !  number of chunks in j-dimension
+   nn_nchunks_k   =   1       !  number of chunks in k-dimension
                               !  setting nn_nchunks_k = jpk will give a chunk size of 1 in the vertical which
                               !  is optimal for postprocessing which works exclusively with horizontal slabs
    ln_nc4zip      =   .TRUE.  !  (T) use netcdf4 chunking and compression
