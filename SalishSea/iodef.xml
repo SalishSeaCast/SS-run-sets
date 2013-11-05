@@ -25,15 +25,15 @@
         <file id="1h_grid_V" name="auto" description="ocean V grid variables" enabled=".false.">
           <field ref="voce"         name="vomecrty"  />
         </file>
-        <file id="Tidal_Harmonics_eta" enabled=".true.">
+        <file id="Tidal_Harmonics_eta">
           <field ref="M2x"     name="M2_x_elev"  />
           <field ref="M2y"     name="M2_y_elev"  />
         </file>
-        <file id="Tidal_Harmonics_U" enabled=".true.">
+        <file id="Tidal_Harmonics_U">
           <field ref="M2x_u"     name="M2_x_u_velocity"  />
           <field ref="M2y_u"     name="M2_y_u_velocity"  />
         </file>
-        <file id="Tidal_Harmonics_V" enabled=".true.">
+        <file id="Tidal_Harmonics_V">
           <field ref="M2x_v"     name="M2_x_v_velocity"  />
           <field ref="M2y_v"     name="M2_y_v_velocity"  />
         </file>
@@ -51,21 +51,9 @@
         <file id="2h_grid_V" name="auto" description="ocean V grid variables" >
           <field ref="voce"         name="vomecrty"  />
         </file>
-        <file id="Tidal_Harmonics_eta">
-          <field ref="M2x"     name="M2_x_elev"  />
-          <field ref="M2y"     name="M2_y_elev"  />
-        </file>
-        <file id="Tidal_Harmonics_U">
-          <field ref="M2x_u"     name="M2_x_u_velocity"  />
-          <field ref="M2y_u"     name="M2_y_u_velocity"  />
-        </file>
-        <file id="Tidal_Harmonics_V">
-          <field ref="M2x_v"     name="M2_x_v_velocity"  />
-          <field ref="M2y_v"     name="M2_y_v_velocity"  />
-        </file>
       </group>
 
-      <group id="3h" output_freq="10800"  output_level="10" enabled=".TRUE.">                      <!-- 3h files -->
+      <group id="3h" output_freq="10800"  output_level="10" enabled=".false.">                      <!-- 3h files -->
       </group>
 
       <group id="4h" output_freq="14400"  output_level="10" enabled=".true.">                      <!-- 4h files -->
@@ -96,40 +84,40 @@
         </file>
       </group>
 
-      <group id="1d" output_freq="86400"  output_level="10" enabled=".TRUE.">                      <!-- 1d files -->
+      <group id="1d" output_freq="86400"  output_level="10" enabled=".false.">                      <!-- 1d files -->
       </group>
 
-      <group id="3d" output_freq="259200" output_level="10" enabled=".TRUE.">                      <!-- 3d files -->
+      <group id="3d" output_freq="259200" output_level="10" enabled=".false.">                      <!-- 3d files -->
       </group>
 
-      <group id="5d" output_freq="432000" output_level="10" enabled=".TRUE.">                      <!-- 5d files -->
+      <group id="5d" output_freq="432000" output_level="10" enabled=".false.">                      <!-- 5d files -->
       </group>
 
-      <group id="1m" output_freq="-1"     output_level="10" enabled=".TRUE.">                      <!-- real monthly files -->
+      <group id="1m" output_freq="-1"     output_level="10" enabled=".false.">                      <!-- real monthly files -->
       </group>
 
-      <group id="2m" output_freq="-2"     output_level="10" enabled=".TRUE.">                      <!-- real 2m files -->
+      <group id="2m" output_freq="-2"     output_level="10" enabled=".false.">                      <!-- real 2m files -->
       </group>
 
-      <group id="3m" output_freq="-3"     output_level="10" enabled=".TRUE.">                      <!-- real 3m files -->
+      <group id="3m" output_freq="-3"     output_level="10" enabled=".false.">                      <!-- real 3m files -->
       </group>
 
-      <group id="4m" output_freq="-4"     output_level="10" enabled=".TRUE.">                      <!-- real 4m files -->
+      <group id="4m" output_freq="-4"     output_level="10" enabled=".false.">                      <!-- real 4m files -->
       </group>
 
-      <group id="6m" output_freq="-6"     output_level="10" enabled=".TRUE.">                      <!-- real 6m files -->
+      <group id="6m" output_freq="-6"     output_level="10" enabled=".false.">                      <!-- real 6m files -->
       </group>
 
-      <group id="1y" output_freq="-12"    output_level="10" enabled=".TRUE.">                      <!-- real yearly files -->
+      <group id="1y" output_freq="-12"    output_level="10" enabled=".false.">                      <!-- real yearly files -->
       </group>
 
-      <group id="2y"  output_freq="-24"   output_level="10" enabled=".TRUE.">                      <!-- real 2y files -->
+      <group id="2y"  output_freq="-24"   output_level="10" enabled=".false.">                      <!-- real 2y files -->
       </group>
 
-      <group id="5y"  output_freq="-60"   output_level="10" enabled=".TRUE.">                      <!-- real 5y files -->
+      <group id="5y"  output_freq="-60"   output_level="10" enabled=".false.">                      <!-- real 5y files -->
       </group>
 
-      <group id="10y" output_freq="-120"  output_level="10" enabled=".TRUE.">                      <!-- real 10y files -->
+      <group id="10y" output_freq="-120"  output_level="10" enabled=".false.">                      <!-- real 10y files -->
       </group>
 
     </file_definition>
