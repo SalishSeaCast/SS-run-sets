@@ -8,13 +8,16 @@
 #   Preliminary Fraser River run-off forcing
 #   Atmospheric forcing with CGRF products
 #     Constrained to no solid precipitation
+#
+# Test 4x8 domain decomposition and qsub
+
 
 config_name: SalishSea
 
 paths:
-  NEMO-code: ../../NEMO-code/
-  forcing: ../../NEMO-forcing/
-  runs directory: ../../SalishSea/
+  NEMO-code: ../../../NEMO-code/
+  forcing: ../../../NEMO-forcing/
+  runs directory: ../../../SalishSea/
 
 grid:
   coordinates: coordinates_seagrid_SalishSea.nc
@@ -27,11 +30,11 @@ forcing:
   rivers: rivers/
 
 namelists:
-  - namelist.time
-  - namelist.domain
-  - namelist.surface
-  - namelist.lateral
-  - namelist.bottom
-  - namelist.tracers
-  - namelist.dynamics
-  - namelist.compute
+  - namelist.time.1h_profile
+  - ../namelist.domain
+  - ../namelist.surface
+  - ../namelist.lateral
+  - ../namelist.bottom
+  - ../namelist.tracers
+  - ../namelist.dynamics
+  - namelist.compute.4x8
