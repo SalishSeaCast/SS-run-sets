@@ -14,7 +14,7 @@
 
 ! global_mpi_buffer_size: size in Mb of the MPI buffer used by the io_server
 &mpi_param
-  global_mpi_buffer_size = 512
+  global_mpi_buffer_size = 1024
 /  
 
 !!======================================================================
