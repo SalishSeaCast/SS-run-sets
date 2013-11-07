@@ -264,11 +264,11 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 !-----------------------------------------------------------------------
 !              !  file name           ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
 !              !                      !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
-   sn_rnf      = 'rivers_Fraser_only_cnst'       ,        -12         , 'rorunoff',   .false.    , .true. , 'yearly'  , ''       , ''
+   sn_rnf      = 'rivers_Fraserplus_cnst'       ,        -12         , 'rorunoff',   .false.    , .true. , 'yearly'  , ''       , ''
    sn_cnf      = 'runoff_1m_nomask'   ,         0         , 'socoefr0',   .false.    , .true. , 'yearly'  , ''       , ''
    sn_s_rnf    = 'amm12_rivers'       ,        24         , 'rosaline',   .false.    , .true. , 'yearly'  , ''       , ''
    sn_t_rnf    = 'amm12_rivers'       ,        24         , 'rotemper',   .false.    , .true. , 'yearly'  , ''       , ''
-   sn_dep_rnf  = 'rivers_Fraser_only_cnst'       ,        -12         , 'rodepth' ,   .false.    , .true. , 'yearly'  , ''       , ''
+   sn_dep_rnf  = 'rivers_Fraserplus_cnst'       ,        -12         , 'rodepth' ,   .false.    , .true. , 'yearly'  , ''       , ''
 
    cn_dir       = 'rivers/'      !  root directory for the location of the runoff files
    ln_rnf_emp   = .false.   !  runoffs included into precipitation field (T) or into a file (F)
