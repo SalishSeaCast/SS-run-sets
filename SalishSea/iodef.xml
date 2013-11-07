@@ -26,16 +26,22 @@
           <field ref="voce"         name="vomecrty"  />
         </file>
         <file id="Tidal_Harmonics_eta">
-          <field ref="M2x"     name="M2_x_elev"  />
-          <field ref="M2y"     name="M2_y_elev"  />
+          <field ref="K1x" name="K1_eta_real"/>
+          <field ref="K1y" name="K1_eta_imag"/>
+          <field ref="M2x" name="M2_eta_real"/>
+          <field ref="M2y" name="M2_eta_imag"/>
         </file>
         <file id="Tidal_Harmonics_U">
-          <field ref="M2x_u"     name="M2_x_u_velocity"  />
-          <field ref="M2y_u"     name="M2_y_u_velocity"  />
+          <field ref="K1x_u" name="K1_u_real"/>
+          <field ref="K1y_u" name="K1_u_imag"/>
+          <field ref="M2x_u" name="M2_u_real"/>
+          <field ref="M2y_u" name="M2_u_imag"/>
         </file>
         <file id="Tidal_Harmonics_V">
-          <field ref="M2x_v"     name="M2_x_v_velocity"  />
-          <field ref="M2y_v"     name="M2_y_v_velocity"  />
+          <field ref="K1x_v" name="K1_v_real"/>
+          <field ref="K1y_v" name="K1_v_imag"/>
+          <field ref="M2x_v" name="M2_v_real"/>
+          <field ref="M2y_v" name="M2_v_imag"/>
         </file>
       </group>
 
