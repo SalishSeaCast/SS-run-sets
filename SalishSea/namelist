@@ -2,7 +2,7 @@
 !! 4x4 processors
 !! S4-1 uniform initial T and S
 !! Open western boundary across Strait of Juan de Fuca
-!!   Tidal forcing
+!!   Tidal forcing (8 components)
 !!   Preliminary temperature and salinity forcing
 !! Preliminary Fraser River forcing/run-off
 
@@ -27,6 +27,7 @@
 !!                   ***  Run management namelists  ***
 !!======================================================================
 !!   namrun        parameters of the run
+!!   nam_diaharm   Harmonic analysis of tidal constituents ('key_diaharm')
 !!======================================================================
 !
 !-----------------------------------------------------------------------
@@ -34,7 +35,7 @@
 !-----------------------------------------------------------------------
    cn_exp      = "SalishSea"  !  experience name
    nn_it000    =       1      !  first time step
-   nn_itend    =     960      !  last  time step (std 1 day = 1440)
+   nn_itend    =    1440      !  last  time step (std 1 day = 1440)
    nn_date0    =  20020102    !  date at nit_0000 (format yyyymmdd) used if ln_rstart=F or (ln_rstart=T and nn_rstctl=0 or 1)
    nn_leapy    =       1      !  Leap year calendar (1) or not (0)
    ln_rstart   =  .false.     !  start from rest (F) or from a restart file (T)
@@ -45,6 +46,17 @@
    nn_istate   =       0      !  output the initial state (1) or not (0)
    nn_stock    =    4320      !  frequency of creation of a restart file (modulo referenced to 1)
    ln_clobber  = .true.       !  clobber (overwrite) an existing file
+/
+
+!-----------------------------------------------------------------------
+&nam_diaharm   !   Harmonic analysis of tidal constituents ('key_diaharm')
+!-----------------------------------------------------------------------
+    nit000_han =  721        ! First time step used for harmonic analysis
+    nitend_han = 1440        ! Last time step used for harmonic analysis
+    nstep_han  =   15        ! Time step frequency for harmonic analysis
+    !! Names of tidal constituents
+    tname(1)   = 'K1'
+    tname(2)   = 'M2'
 /
 
 !!======================================================================
@@ -430,10 +442,28 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 !-----------------------------------------------------------------------
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide       = 'open_boundaries/west/tides/SalishSea_west_sea_tide_'  !  file name root of tidal forcing files
-   tide_cpt(1)   = 'M2'       !  names of tidal components used
-   tide_speed(1) = 28.984106  !  phase speeds of tidal components (deg/hour)
-   ln_tide_date  = .true.     !  adjust tidal harmonics for start date of run
+   !!  file name root of tidal forcing files
+   filtide       = 'open_boundaries/west/tides/SalishSea_west_tide_'
+   !!  names of tidal components used
+   tide_cpt(1) = 'Q1'
+   tide_cpt(2) = 'O1'
+   tide_cpt(3) = 'P1'
+   tide_cpt(4) = 'K1'
+   tide_cpt(5) = 'N2'
+   tide_cpt(6) = 'M2'
+   tide_cpt(7) = 'S2'
+   tide_cpt(8) = 'K2'
+   !!  phase speeds of tidal components (deg/hour)
+   tide_speed(1) = 13.398661
+   tide_speed(2) = 13.943036
+   tide_speed(3) = 14.958932
+   tide_speed(4) = 15.041069
+   tide_speed(5) = 28.439730
+   tide_speed(6) = 28.984106
+   tide_speed(7) = 30.000002
+   tide_speed(8) = 30.082138
+   !!  adjust tidal harmonics for start date of run
+   ln_tide_date  = .true.
 /
 !!======================================================================
 !!                 ***  Bottom boundary condition  ***
@@ -826,14 +856,6 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
 &namhsb       !  Heat and salt budgets
 !-----------------------------------------------------------------------
    ln_diahsb  = .false.    !  check the heat and salt budgets (T) or not (F)
-/
-!-----------------------------------------------------------------------
-&nam_diaharm   !   Harmonic analysis of tidal constituents ('key_diaharm')
-!-----------------------------------------------------------------------
-    nit000_han =  481        ! First time step used for harmonic analysis
-    nitend_han =  960        ! Last time step used for harmonic analysis
-    nstep_han  =   15        ! Time step frequency for harmonic analysis
-    tname(1)   = 'M2'        ! Name of tidal constituents
 /
 !-----------------------------------------------------------------------
 &namdct        ! transports through sections
