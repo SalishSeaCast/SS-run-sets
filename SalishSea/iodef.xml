@@ -378,42 +378,41 @@
 
 
     <!--
-============================================================================================================
-=                                           grid definition                                                =
-=                                            DO NOT CHANGE                                                 =
-============================================================================================================
+    ==========================================================================
+    =                            grid definition                             =
+    =                             DO NOT CHANGE                              =
+    ==========================================================================
     -->
-
     <axis_definition>
-      <axis id="deptht" description="Vertical T levels" unit="m"       positive=".false." />
-      <axis id="depthu" description="Vertical U levels" unit="m"       positive=".false." />
-      <axis id="depthv" description="Vertical V levels" unit="m"       positive=".false." />
-      <axis id="depthw" description="Vertical W levels" unit="m"       positive=".false." />
-      <axis id="nfloat" description="Number of float"   unit="no unit" positive=".false." />
-      <axis id="none" description="axe non defini" unit="none" size="1" />
+      <axis id="deptht" description="Vertical T levels" unit="m" positive=".false."/>
+      <axis id="depthu" description="Vertical U levels" unit="m" positive=".false."/>
+      <axis id="depthv" description="Vertical V levels" unit="m" positive=".false."/>
+      <axis id="depthw" description="Vertical W levels" unit="m" positive=".false."/>
+      <axis id="nfloat" description="Number of float"   unit="no unit" positive=".false."/>
+      <axis id="none" description="axe non defini" unit="none" size="1"/>
     </axis_definition>
 
     <grid_definition>
       <grid id="grid_T" description="grid T" >
-          <!--   Eq section   -->
+        <!--   Eq section   -->
         <zoom id="EqT" ibegin="1" jbegin="0000" ni="0000" nj="1" />
-          <!--   TAO   -->
-            <!--   137e   -->
+        <!--   TAO   -->
+          <!--   137e   -->
         <zoom id="2n137eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5n137eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="8n137eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   147e   -->
+          <!--   147e   -->
         <zoom id="0n147eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="2n147eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5n147eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   156e   -->
+          <!--   156e   -->
         <zoom id="5s156eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="2s156eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="0n156eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="2n156eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5n156eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="8n156eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   165e   -->
+          <!--   165e   -->
         <zoom id="8s165eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5s165eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="2s165eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
@@ -421,7 +420,7 @@
         <zoom id="2n165eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5n165eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="8n165eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   180w   -->
+          <!--   180w   -->
         <zoom id="8s180wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5s180wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="2s180wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
@@ -429,7 +428,7 @@
         <zoom id="2n180wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5n180wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="8n180wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   170w   -->
+          <!--   170w   -->
         <zoom id="8s170wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5s170wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="2s170wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
@@ -437,7 +436,7 @@
         <zoom id="2n170wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5n170wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="8n170wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   155w   -->
+          <!--   155w   -->
         <zoom id="8s155wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5s155wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="2s155wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
@@ -445,7 +444,7 @@
         <zoom id="2n155wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5n155wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="8n155wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   140w   -->
+          <!--   140w   -->
         <zoom id="8s140wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5s140wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="2s140wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
@@ -453,7 +452,7 @@
         <zoom id="2n140wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5n140wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="8n140wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   125w   -->
+          <!--   125w   -->
         <zoom id="8s125wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5s125wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="2s125wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
@@ -461,7 +460,7 @@
         <zoom id="2n125wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5n125wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="8n125wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   110w   -->
+          <!--   110w   -->
         <zoom id="8s110wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5s110wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="2s110wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
@@ -469,7 +468,7 @@
         <zoom id="2n110wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5n110wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="8n110wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   95w   -->
+          <!--   95w   -->
         <zoom id="8s95wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5s95wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="2s95wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
@@ -477,8 +476,9 @@
         <zoom id="2n95wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5n95wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="8n95wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
-          <!--   RAMA   -->
-            <!--   55e   -->
+
+        <!--   RAMA   -->
+          <!--   55e   -->
         <zoom id="16s55eT"    ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="12s55eT"    ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="8s55eT"     ibegin="0000" jbegin="0000" ni="1" nj="1" />
@@ -487,9 +487,9 @@
         <zoom id="0n55eT"     ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="1.5n55eT"   ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="4n55eT"     ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   65e   -->
+          <!--   65e   -->
         <zoom id="15n65eT"    ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   67e   -->
+          <!--   67e   -->
         <zoom id="16s67eT"    ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="12s67eT"    ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="8s67eT"     ibegin="0000" jbegin="0000" ni="1" nj="1" />
@@ -499,7 +499,7 @@
         <zoom id="1.5n67eT"   ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="4n67eT"     ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="8n67eT"     ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   80.5e   -->
+          <!--   80.5e   -->
         <zoom id="16s80.5eT"  ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="12s80.5eT"  ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="8s80.5eT"   ibegin="0000" jbegin="0000" ni="1" nj="1" />
@@ -508,7 +508,7 @@
         <zoom id="0n80.5eT"   ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="1.5n80.5eT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="4n80.5eT"   ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   90e   -->
+          <!--   90e   -->
         <zoom id="1.5s90eT"   ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="0n90eT"     ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="1.5n90eT"   ibegin="0000" jbegin="0000" ni="1" nj="1" />
@@ -516,13 +516,14 @@
         <zoom id="8n90eT"     ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="12n90eT"    ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="15n90eT"    ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   95e   -->
+          <!--   95e   -->
         <zoom id="16s95eT"    ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="12s95eT"    ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="8s95eT"     ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="5s95eT"     ibegin="0000" jbegin="0000" ni="1" nj="1" />
-          <!--   PIRATA   -->
-            <!--   38w-30w   -->
+
+        <!--   PIRATA   -->
+          <!--   38w-30w   -->
         <zoom id="19s34wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="14s32wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="8s30wT"  ibegin="0000" jbegin="0000" ni="1" nj="1" />
@@ -532,21 +533,21 @@
         <zoom id="12n38wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="15n38wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="20n38wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   23w   -->
+          <!--   23w   -->
         <zoom id="0n23wT"  ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="4n23wT"  ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="12n23wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="21n23wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   10w   -->
+          <!--   10w   -->
         <zoom id="10s10wT" ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="6s10wT"  ibegin="0000" jbegin="0000" ni="1" nj="1" />
         <zoom id="0n10wT"  ibegin="0000" jbegin="0000" ni="1" nj="1" />
-            <!--   0e   -->
+          <!--   0e   -->
         <zoom id="0n0eT"   ibegin="0000" jbegin="0000" ni="1" nj="1" />
       </grid>
 
       <grid id="grid_U" description="grid U" >
-          <!--   Eq section   -->
+        <!--   Eq section   -->
         <zoom id="EqU" ibegin="1" jbegin="0000" ni="0000" nj="1" />
       </grid>
 
@@ -554,7 +555,7 @@
       </grid>
 
       <grid id="grid_W" description="grid W" >
-          <!--   Eq section   -->
+        <!--   Eq section   -->
         <zoom id="EqW" ibegin="1" jbegin="0000" ni="0000" nj="1" />
       </grid>
 
@@ -562,7 +563,5 @@
         <zoom id="1point" ibegin="1" jbegin="1" ni="1" nj="1" />
       </grid>
     </grid_definition>
-
   </context>
-
 </simulation>
