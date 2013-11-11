@@ -19,6 +19,7 @@ grid:
   bathymetry: bathy_meter_SalishSea.nc
 
 forcing:
+  atmospheric: /ocean/dlatorne/MEOPAR/CGRF/NEMO-atmos/
   initial conditions: initial_strat/
   open boundaries: open_boundaries/
   rivers: rivers/
