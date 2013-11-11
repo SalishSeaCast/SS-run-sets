@@ -231,26 +231,26 @@
         <!-- tidal components -->
         <field id="M2x"          description="M2 Elevation harmonic real part "                             unit="m"        />
         <field id="M2y"          description="M2 Elevation harmonic imaginary part"                         unit="m"        />
-        <field id="S2x"          description="M2 Elevation harmonic real part "                             unit="m"        />
-        <field id="S2y"          description="M2 Elevation harmonic imaginary part"                         unit="m"        />
-        <field id="N2x"          description="M2 Elevation harmonic real part "                             unit="m"        />
-        <field id="N2y"          description="M2 Elevation harmonic imaginary part"                         unit="m"        />
-        <field id="K1x"          description="M2 Elevation harmonic real part "                             unit="m"        />
-        <field id="K1y"          description="M2 Elevation harmonic imaginary part"                         unit="m"        />
-        <field id="O1x"          description="M2 Elevation harmonic real part "                             unit="m"        />
-        <field id="O1y"          description="M2 Elevation harmonic imaginary part"                         unit="m"        />
-        <field id="Q1x"          description="M2 Elevation harmonic real part "                             unit="m"        />
-        <field id="Q1y"          description="M2 Elevation harmonic imaginary part"                         unit="m"        />
-        <field id="M4x"          description="M2 Elevation harmonic real part "                             unit="m"        />
-        <field id="M4y"          description="M2 Elevation harmonic imaginary part"                         unit="m"        />
-        <field id="K2x"          description="M2 Elevation harmonic real part "                             unit="m"        />
-        <field id="K2y"          description="M2 Elevation harmonic imaginary part"                         unit="m"        />
-        <field id="P1x"          description="M2 Elevation harmonic real part "                             unit="m"        />
-        <field id="P1y"          description="M2 Elevation harmonic imaginary part"                         unit="m"        />
-        <field id="Mfx"          description="M2 Elevation harmonic real part "                             unit="m"        />
-        <field id="Mfy"          description="M2 Elevation harmonic imaginary part"                         unit="m"        />
-        <field id="Mmx"          description="M2 Elevation harmonic real part "                             unit="m"        />
-        <field id="Mmy"          description="M2 Elevation harmonic imaginary part"                         unit="m"        />
+        <field id="S2x"          description="S2 Elevation harmonic real part "                             unit="m"        />
+        <field id="S2y"          description="S2 Elevation harmonic imaginary part"                         unit="m"        />
+        <field id="N2x"          description="N2 Elevation harmonic real part "                             unit="m"        />
+        <field id="N2y"          description="N2 Elevation harmonic imaginary part"                         unit="m"        />
+        <field id="K1x"          description="K1 Elevation harmonic real part "                             unit="m"        />
+        <field id="K1y"          description="K1 Elevation harmonic imaginary part"                         unit="m"        />
+        <field id="O1x"          description="O1 Elevation harmonic real part "                             unit="m"        />
+        <field id="O1y"          description="O1 Elevation harmonic imaginary part"                         unit="m"        />
+        <field id="Q1x"          description="Q1 Elevation harmonic real part "                             unit="m"        />
+        <field id="Q1y"          description="Q1 Elevation harmonic imaginary part"                         unit="m"        />
+        <field id="M4x"          description="M4 Elevation harmonic real part "                             unit="m"        />
+        <field id="M4y"          description="M4 Elevation harmonic imaginary part"                         unit="m"        />
+        <field id="K2x"          description="K2 Elevation harmonic real part "                             unit="m"        />
+        <field id="K2y"          description="K2 Elevation harmonic imaginary part"                         unit="m"        />
+        <field id="P1x"          description="P1 Elevation harmonic real part "                             unit="m"        />
+        <field id="P1y"          description="P1 Elevation harmonic imaginary part"                         unit="m"        />
+        <field id="Mfx"          description="Mf Elevation harmonic real part "                             unit="m"        />
+        <field id="Mfy"          description="Mf Elevation harmonic imaginary part"                         unit="m"        />
+        <field id="Mmx"          description="Mm Elevation harmonic real part "                             unit="m"        />
+        <field id="Mmy"          description="Mm Elevation harmonic imaginary part"                         unit="m"        />
         <field id="M2x_u"        description="M2 current barotrope along i-axis harmonic real part "      unit="m/s"        />
         <field id="M2y_u"        description="M2 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
         <field id="S2x_u"        description="S2 current barotrope along i-axis harmonic real part "      unit="m/s"        />
