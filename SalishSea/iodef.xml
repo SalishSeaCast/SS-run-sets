@@ -123,17 +123,14 @@
       </group>
     </file_definition>
 
-  <!--
-============================================================================================================
-=                                  definition of all existing variables                                    =
-=                                            DO NOT CHANGE                                                 =
-============================================================================================================
-  -->
 
+    <!--
+    ==========================================================================
+    =                    definition of all existing variables                =
+    =                              DO NOT CHANGE                             =
+    ==========================================================================
+    -->
     <field_definition level="1" prec="4" operation="ave(X)" enabled=".TRUE."> <!-- time step automaticaly defined -->
-
-      <!-- T grid -->
-
       <group id="grid_T" axis_ref="none" grid_ref="grid_T">
         <field id="toce"         description="temperature"                               unit="degC" axis_ref="deptht"   />
         <field id="soce"         description="salinity"                                  unit="psu"  axis_ref="deptht"   />
@@ -167,15 +164,11 @@
         <field id="cellthc"      description="Cell thickness"                            unit="m"     axis_ref="deptht"  />
       </group>
 
-      <!-- SBC -->
-
       <group id="SBC" axis_ref="none" grid_ref="grid_T" > <!-- time step automaticaly defined based on nn_fsbc -->
-
         <field id="empmr"        description="Net Upward Water Flux"                                        unit="kg/m2/s"  />
         <field id="empsmr"       description="concentration/dilution water flux"                            unit="kg/m2/s"  />
         <field id="snowpre"      description="Snow precipitation"                                           unit="kg/m2/s"  />
         <field id="runoffs"      description="River Runoffs"                                                unit="Kg/m2/s"  />
-
         <field id="qt"           description="Net Downward Heat Flux"                                       unit="W/m2"     />
         <field id="qns"          description="non solar Downward Heat Flux"                                 unit="W/m2"     />
         <field id="qsr"          description="Shortwave Radiation"                                          unit="W/m2"     />
@@ -184,43 +177,33 @@
         <field id="erp"          description="Surface Water Flux: Damping"                                  unit="Kg/m2/s"  />
         <field id="taum"         description="wind stress module"                                           unit="N/m2"     />
         <field id="wspd"         description="Wind speed module at 10 m"                                    unit="m/s"      />
-
         <!-- * variable relative to atmospheric pressure forcing : available with ln_apr_dyn -->
         <field id="ssh_ib"       description="Inverse barometer sea surface height"                         unit="m"        />
-
         <!-- *_oce variables available with ln_blk_clio or ln_blk_core -->
         <field id="qns_oce"      description="Non solar Downward Heat Flux over open ocean"                 unit="W/m2"     />
         <field id="qlw_oce"      description="Longwave Downward Heat Flux over open ocean"                  unit="W/m2"     />
         <field id="qsb_oce"      description="Sensible Downward Heat Flux over open ocean"                  unit="W/m2"     />
         <field id="qla_oce"      description="Latent Downward Heat Flux over open ocean"                    unit="W/m2"     />
         <field id="taum_oce"     description="wind stress module over open ocean"                           unit="N/m2"     />
-
         <field id="ice_cover"    description="Ice fraction"                                                 unit="1"        />
-
         <field id="ioceflxb"     description="Oceanic flux at the ice base"                                 unit="W/m2"     />
         <field id="qsr_ai_cea"   description="Air-Ice downward solar heat flux (cell average)"              unit="W/m2"     />
         <field id="qns_ai_cea"   description="Air-Ice downward non-solar heat flux (cell average)"          unit="W/m2"     />
         <field id="qla_ai_cea"   description="Air-Ice downward Latent heat flux (cell average)"             unit="W/m2"     />
-
         <field id="qsr_io_cea"   description="Ice-Oce downward solar heat flux (cell average)"              unit="W/m2"     />
         <field id="qns_io_cea"   description="Ice-Oce downward non-solar heat flux (cell average)"          unit="W/m2"     />
-
         <field id="snowthic_cea" description="Snow thickness (cell average)"                                unit="m"        />
         <field id="icethic_cea"  description="Ice thickness (cell average)"                                 unit="m"        />
         <field id="iceprod_cea"  description="Ice production (cell average)"                                unit="m/s"      />
-
         <field id="ice_pres"     description="Ice presence"                                                 unit="-"        />
         <field id="ist_cea"      description="Ice surface temperature (cell average)"                       unit="degC"     />
         <field id="ist_ipa"      description="Ice surface temperature (ice presence average)"               unit="degC"     />
         <field id="uice_ipa"     description="Ice velocity along i-axis at I-point (ice presence average)"  unit="m/s"      />
         <field id="vice_ipa"     description="Ice velocity along j-axis at I-point (ice presence average)"  unit="m/s"      />
-
         <field id="utau_ice"     description="Wind stress along i-axis over the ice at i-point"             unit="N/m2"     />
         <field id="vtau_ice"     description="Wind stress along j-axis over the ice at i-point"             unit="N/m2"     />
-
         <field id="u_imasstr"    description="Sea-ice mass transport along i-axis"                          unit="kg/s"     />
         <field id="v_imasstr"    description="Sea-ice mass transport along j-axis"                          unit="kg/s"     />
-
         <!-- available key_coupled -->
         <field id="snow_ao_cea"  description="Snow over ice-free ocean (cell average)"                      unit="kg/m2/s"  />
         <field id="snow_ai_cea"  description="Snow over sea-ice (cell average)"                             unit="kg/m2/s"  />
@@ -240,14 +223,12 @@
         <field id="hflx_ice_cea"  description="heat flux due to ice thermodynamics"                         unit="W/m2"     />
         <field id="hflx_rnf_cea"  description="heat flux due to runoffs"                                    unit="W/m2"     />
         <field id="hflx_cal_cea"  description="heat flux due to calving"                                    unit="W/m2"     />
-        <field id="bicemel_cea"  description="Rate of Melt at Sea Ice Base (cell average)"                  unit="kg/m2/s"  />
-        <field id="licepro_cea"  description="Lateral Sea Ice Growth Rate (cell average)"                   unit="kg/m2/s"  />
-        <field id="snowmel_cea"  description="Snow Melt Rate (cell average)"                                unit="kg/m2/s"  />
-        <field id="sntoice_cea"  description="Snow-Ice Formation Rate (cell average)"                       unit="kg/m2/s"  />
-        <field id="ticemel_cea"  description="Rate of Melt at Upper Surface of Sea Ice (cell average)"      unit="kg/m2/s"  />
-
-
-        <!-- tidal composante -->
+        <field id="bicemel_cea"   description="Rate of Melt at Sea Ice Base (cell average)"                 unit="kg/m2/s"  />
+        <field id="licepro_cea"   description="Lateral Sea Ice Growth Rate (cell average)"                  unit="kg/m2/s"  />
+        <field id="snowmel_cea"   description="Snow Melt Rate (cell average)"                               unit="kg/m2/s"  />
+        <field id="sntoice_cea"   description="Snow-Ice Formation Rate (cell average)"                      unit="kg/m2/s"  />
+        <field id="ticemel_cea"   description="Rate of Melt at Upper Surface of Sea Ice (cell average)"     unit="kg/m2/s"  />
+        <!-- tidal components -->
         <field id="M2x"          description="M2 Elevation harmonic real part "                             unit="m"        />
         <field id="M2y"          description="M2 Elevation harmonic imaginary part"                         unit="m"        />
         <field id="S2x"          description="M2 Elevation harmonic real part "                             unit="m"        />
@@ -270,60 +251,56 @@
         <field id="Mfy"          description="M2 Elevation harmonic imaginary part"                         unit="m"        />
         <field id="Mmx"          description="M2 Elevation harmonic real part "                             unit="m"        />
         <field id="Mmy"          description="M2 Elevation harmonic imaginary part"                         unit="m"        />
-
-        <field id="M2x_u"          description="M2 current barotrope along i-axis harmonic real part "      unit="m/s"        />
-        <field id="M2y_u"          description="M2 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
-        <field id="S2x_u"          description="S2 current barotrope along i-axis harmonic real part "      unit="m/s"        />
-        <field id="S2y_u"          description="S2 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
-        <field id="N2x_u"          description="N2 current barotrope along i-axis harmonic real part "      unit="m/s"        />
-        <field id="N2y_u"          description="N2 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
-        <field id="K1x_u"          description="K1 current barotrope along i-axis harmonic real part "      unit="m/s"        />
-        <field id="K1y_u"          description="K1 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
-        <field id="O1x_u"          description="O1 current barotrope along i-axis harmonic real part "      unit="m/s"        />
-        <field id="O1y_u"          description="O1 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
-        <field id="Q1x_u"          description="Q1 current barotrope along i-axis harmonic real part "      unit="m/s"        />
-        <field id="Q1y_u"          description="Q1 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
-        <field id="M4x_u"          description="M4 current barotrope along i-axis harmonic real part "      unit="m/s"        />
-        <field id="M4y_u"          description="M4 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
-        <field id="K2x_u"          description="K2 current barotrope along i-axis harmonic real part "      unit="m/s"        />
-        <field id="K2y_u"          description="K2 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
-        <field id="P1x_u"          description="P1 current barotrope along i-axis harmonic real part "      unit="m/s"        />
-        <field id="P1y_u"          description="P1 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
-        <field id="Mfx_u"          description="Mf current barotrope along i-axis harmonic real part "      unit="m/s"        />
-        <field id="Mfy_u"          description="Mf current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
-        <field id="Mmx_u"          description="Mm current barotrope along i-axis harmonic real part "      unit="m/s"        />
-        <field id="Mmy_u"          description="Mm current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
-
-        <field id="M2x_v"          description="M2 current barotrope along j-axis harmonic real part "      unit="m/s"        />
-        <field id="M2y_v"          description="M2 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
-        <field id="S2x_v"          description="S2 current barotrope along j-axis harmonic real part "      unit="m/s"        />
-        <field id="S2y_v"          description="S2 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
-        <field id="N2x_v"          description="N2 current barotrope along j-axis harmonic real part "      unit="m/s"        />
-        <field id="N2y_v"          description="N2 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
-        <field id="K1x_v"          description="K1 current barotrope along j-axis harmonic real part "      unit="m/s"        />
-        <field id="K1y_v"          description="K1 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
-        <field id="O1x_v"          description="O1 current barotrope along j-axis harmonic real part "      unit="m/s"        />
-        <field id="O1y_v"          description="O1 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
-        <field id="Q1x_v"          description="Q1 current barotrope along j-axis harmonic real part "      unit="m/s"        />
-        <field id="Q1y_v"          description="Q1 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
-        <field id="M4x_v"          description="M4 current barotrope along j-axis harmonic real part "      unit="m/s"        />
-        <field id="M4y_v"          description="M4 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
-        <field id="K2x_v"          description="K2 current barotrope along j-axis harmonic real part "      unit="m/s"        />
-        <field id="K2y_v"          description="K2 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
-        <field id="P1x_v"          description="P1 current barotrope along j-axis harmonic real part "      unit="m/s"        />
-        <field id="P1y_v"          description="P1 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
-        <field id="Mfx_v"          description="Mf current barotrope along j-axis harmonic real part "      unit="m/s"        />
-        <field id="Mfy_v"          description="Mf current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
-        <field id="Mmx_v"          description="Mm current barotrope along j-axis harmonic real part "      unit="m/s"        />
-        <field id="Mmy_v"          description="Mm current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
+        <field id="M2x_u"        description="M2 current barotrope along i-axis harmonic real part "      unit="m/s"        />
+        <field id="M2y_u"        description="M2 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
+        <field id="S2x_u"        description="S2 current barotrope along i-axis harmonic real part "      unit="m/s"        />
+        <field id="S2y_u"        description="S2 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
+        <field id="N2x_u"        description="N2 current barotrope along i-axis harmonic real part "      unit="m/s"        />
+        <field id="N2y_u"        description="N2 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
+        <field id="K1x_u"        description="K1 current barotrope along i-axis harmonic real part "      unit="m/s"        />
+        <field id="K1y_u"        description="K1 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
+        <field id="O1x_u"        description="O1 current barotrope along i-axis harmonic real part "      unit="m/s"        />
+        <field id="O1y_u"        description="O1 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
+        <field id="Q1x_u"        description="Q1 current barotrope along i-axis harmonic real part "      unit="m/s"        />
+        <field id="Q1y_u"        description="Q1 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
+        <field id="M4x_u"        description="M4 current barotrope along i-axis harmonic real part "      unit="m/s"        />
+        <field id="M4y_u"        description="M4 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
+        <field id="K2x_u"        description="K2 current barotrope along i-axis harmonic real part "      unit="m/s"        />
+        <field id="K2y_u"        description="K2 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
+        <field id="P1x_u"        description="P1 current barotrope along i-axis harmonic real part "      unit="m/s"        />
+        <field id="P1y_u"        description="P1 current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
+        <field id="Mfx_u"        description="Mf current barotrope along i-axis harmonic real part "      unit="m/s"        />
+        <field id="Mfy_u"        description="Mf current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
+        <field id="Mmx_u"        description="Mm current barotrope along i-axis harmonic real part "      unit="m/s"        />
+        <field id="Mmy_u"        description="Mm current barotrope along i-axis harmonic imaginary part " unit="m/s"        />
+        <field id="M2x_v"        description="M2 current barotrope along j-axis harmonic real part "      unit="m/s"        />
+        <field id="M2y_v"        description="M2 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
+        <field id="S2x_v"        description="S2 current barotrope along j-axis harmonic real part "      unit="m/s"        />
+        <field id="S2y_v"        description="S2 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
+        <field id="N2x_v"        description="N2 current barotrope along j-axis harmonic real part "      unit="m/s"        />
+        <field id="N2y_v"        description="N2 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
+        <field id="K1x_v"        description="K1 current barotrope along j-axis harmonic real part "      unit="m/s"        />
+        <field id="K1y_v"        description="K1 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
+        <field id="O1x_v"        description="O1 current barotrope along j-axis harmonic real part "      unit="m/s"        />
+        <field id="O1y_v"        description="O1 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
+        <field id="Q1x_v"        description="Q1 current barotrope along j-axis harmonic real part "      unit="m/s"        />
+        <field id="Q1y_v"        description="Q1 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
+        <field id="M4x_v"        description="M4 current barotrope along j-axis harmonic real part "      unit="m/s"        />
+        <field id="M4y_v"        description="M4 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
+        <field id="K2x_v"        description="K2 current barotrope along j-axis harmonic real part "      unit="m/s"        />
+        <field id="K2y_v"        description="K2 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
+        <field id="P1x_v"        description="P1 current barotrope along j-axis harmonic real part "      unit="m/s"        />
+        <field id="P1y_v"        description="P1 current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
+        <field id="Mfx_v"        description="Mf current barotrope along j-axis harmonic real part "      unit="m/s"        />
+        <field id="Mfy_v"        description="Mf current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
+        <field id="Mmx_v"        description="Mm current barotrope along j-axis harmonic real part "      unit="m/s"        />
+        <field id="Mmy_v"        description="Mm current barotrope along j-axis harmonic imaginary part " unit="m/s"        />
       </group>
-
-      <!-- U grid -->
 
       <group id="grid_U"  axis_ref="depthu" grid_ref="grid_U">
         <field id="utau"         description="Wind Stress along i-axis"                    unit="N/m2" axis_ref="none" />
         <field id="uoce"         description="ocean current along i-axis"                  unit="m/s"                  />
-        <field id="uocetr_eff"   description="Effective ocean transport along i-axis"      unit="m3/s"                  />
+        <field id="uocetr_eff"   description="Effective ocean transport along i-axis"      unit="m3/s"                 />
         <!-- uoce_eiv: available with key_traldf_eiv and key_diaeiv -->
         <field id="uoce_eiv"     description="EIV ocean current along i-axis"              unit="m/s"                  />
         <!-- uoce_eiv: available with key_trabbl -->
@@ -336,12 +313,10 @@
         <field id="udiff_heattr" description="ocean diffusion heat transport along i-axis" unit="W"    axis_ref="none" />
       </group>
 
-      <!-- V grid -->
-
       <group id="grid_V"  axis_ref="depthv" grid_ref="grid_V">
         <field id="vtau"         description="Wind Stress along j-axis"                    unit="N/m2" axis_ref="none" />
         <field id="voce"         description="ocean current along j-axis"                  unit="m/s"                  />
-        <field id="vocetr_eff"   description="Effective ocean transport along j-axis"      unit="m3/s"                  />
+        <field id="vocetr_eff"   description="Effective ocean transport along j-axis"      unit="m3/s"                 />
         <!-- voce_eiv: available with key_traldf_eiv and key_diaeiv -->
         <field id="voce_eiv"     description="EIV ocean current along j-axis"              unit="m/s"                  />
         <!-- voce_eiv: available with key_trabbl -->
@@ -353,8 +328,6 @@
         <field id="veiv_heattr"  description="ocean bolus heat transport along j-axis"     unit="W"    axis_ref="none" />
         <field id="vdiff_heattr" description="ocean diffusion heat transport along j-axis" unit="W"    axis_ref="none" />
       </group>
-
-      <!-- W grid -->
 
       <group id="grid_W"  axis_ref="depthw" grid_ref="grid_W">
         <field id="woce"         description="ocean vertical velocity"                     unit="m/s"                  />
@@ -379,8 +352,6 @@
         <field id="w_masstr2"    description="square of vertical mass trasport"            unit="kg2/s2"               />
       </group>
 
-      <!-- scalar -->
-
       <!-- variables available with key_diaar5 -->
       <group id="scalar" axis_ref="none" grid_ref="scalarpoint" zoom_ref="1point" >
         <field id="voltot"     description="global mean volume"                         unit="m3"   />
@@ -393,19 +364,18 @@
         <field id="fram_trans" description="Sea Ice Mass Transport Through Fram Strait" unit="kg/s" />
       </group>
 
-
       <!-- variables available with key_float -->
       <group id="floatvar" axis_ref="nfloat" grid_ref="scalarpoint" zoom_ref="1point">
         <field id="traj_lon"   description="floats longitude"   unit="deg"   operation="inst(X)" />
-        <field id="traj_lat"   description="floats latitude"    unit="deg"   operation="inst(X)"  />
-        <field id="traj_dep"   description="floats depth"       unit="m"     operation="inst(X)"  />
-        <field id="traj_temp"  description="floats temperature" unit="degC"  operation="inst(X)"  />
-        <field id="traj_salt"  description="floats salinity"    unit="psu"   operation="inst(X)"  />
-        <field id="traj_dens"  description="floats density"     unit="kg/m3" operation="inst(X)"  />
-        <field id="traj_group" description="floats group"       unit="none"  operation="inst(X)"  />
+        <field id="traj_lat"   description="floats latitude"    unit="deg"   operation="inst(X)" />
+        <field id="traj_dep"   description="floats depth"       unit="m"     operation="inst(X)" />
+        <field id="traj_temp"  description="floats temperature" unit="degC"  operation="inst(X)" />
+        <field id="traj_salt"  description="floats salinity"    unit="psu"   operation="inst(X)" />
+        <field id="traj_dens"  description="floats density"     unit="kg/m3" operation="inst(X)" />
+        <field id="traj_group" description="floats group"       unit="none"  operation="inst(X)" />
       </group>
-
     </field_definition>
+
 
     <!--
 ============================================================================================================
