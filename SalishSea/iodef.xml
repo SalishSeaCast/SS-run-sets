@@ -17,9 +17,11 @@
         </file>
         <file id="1h_grid_U" name="auto" enabled=".false.">
           <field ref="uoce" name="vozocrtx"/>
+          <field ref="utau" name="u_wind_stress"/>
         </file>
         <file id="1h_grid_V" name="auto" enabled=".false.">
           <field ref="voce" name="vomecrty"/>
+          <field ref="vtau" name="v_wind_stress"/>
         </file>
         <file id="Tidal_Harmonics_eta">
           <field ref="K1x" name="K1_eta_real"/>
@@ -49,9 +51,11 @@
         </file>
         <file id="2h_grid_U" name="auto">
           <field ref="uoce" name="vozocrtx"/>
+          <field ref="utau" name="u_wind_stress"/>
         </file>
         <file id="2h_grid_V" name="auto">
           <field ref="voce" name="vomecrty"/>
+          <field ref="vtau" name="v_wind_stress"/>
         </file>
       </group>
 
@@ -66,9 +70,11 @@
         </file>
         <file id="4h_grid_U" name="auto">
           <field ref="uoce" name="vozocrtx"/>
+          <field ref="utau" name="u_wind_stress"/>
         </file>
         <file id="4h_grid_V" name="auto">
           <field ref="voce" name="vomecrty"/>
+          <field ref="vtau" name="v_wind_stress"/>
         </file>
       </group>
 
@@ -80,9 +86,11 @@
         </file>
         <file id="6h_grid_U" name="auto">
           <field ref="uoce" name="vozocrtx"/>
+          <field ref="utau" name="u_wind_stress"/>
         </file>
         <file id="6h_grid_V" name="auto">
           <field ref="voce" name="vomecrty"/>
+          <field ref="vtau" name="v_wind_stress"/>
         </file>
       </group>
 
