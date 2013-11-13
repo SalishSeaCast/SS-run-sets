@@ -5,7 +5,7 @@
 !!   Tidal forcing (8 components)
 !!   Preliminary temperature and salinity forcing
 !! Preliminary majors rivers run-off forcing
-!! Preliminary atmospheric forcing with CGRF products
+!! Atmospheric forcing with CGRF products
 !!   Constrained to no solid precipitation
 
 
