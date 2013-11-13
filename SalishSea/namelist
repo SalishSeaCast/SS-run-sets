@@ -148,7 +148,7 @@
    ln_blk_core = .true.    !  CORE bulk formulation                     (T => fill namsbc_core)
    ln_blk_mfs  = .false.   !  MFS bulk formulation                      (T => fill namsbc_mfs )
    ln_cpl      = .false.   !  Coupled formulation                       (T => fill namsbc_cpl )
-   ln_apr_dyn  = .false.   !  Patm gradient added in ocean & ice Eqs.   (T => fill namsbc_apr )
+   ln_apr_dyn  = .true.    !  Patm gradient added in ocean & ice Eqs.   (T => fill namsbc_apr )
    nn_ice      = 0         !  =0 no ice boundary condition   ,
                            !  =1 use observed ice-cover      ,
                            !  =2 ice-model used                         ("key_lim3" or "key_lim2)
@@ -165,7 +165,7 @@
 &namsbc_core   !   namsbc_core  CORE bulk formulae
 !-----------------------------------------------------------------------
 !         !  file name  ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights            ! rotation !
-!         !             ! (<0 == mo) !   name    ! tinerp !  (T/F) !         ! filename           ! pairing  !
+!         !             ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename           ! pairing  !
    sn_wndi = 'u10',       1,          'u_wind',    .true., .false., 'daily',  'met_gem_weight.nc', 'u_wind'
    sn_wndj = 'v10',       1,          'v_wind',    .true., .false., 'daily',  'met_gem_weight.nc', 'v_wind'
    sn_qsr  = 'qsw',       1,          'solar',     .true., .false., 'daily',  'met_gem_weight.nc', ''
@@ -179,6 +179,15 @@
    ln_2m       = .true.         ! air temperature and humidity referenced at 2m (T) instead 10m (F)
 /
 !-----------------------------------------------------------------------
+&namsbc_apr    !   Atmospheric pressure used as ocean forcing or in bulk
+!-----------------------------------------------------------------------
+!         ! file name ! freq (hr)  ! variable !  time  !  clim  ! period ! weights            ! rotation !
+!         !           ! (<0 == mo) !   name   ! interp !  (T/F) !        ! filename           ! pairing  !
+   sn_apr = 'slp',     1,           'atmpres',  .true., .false., 'daily', 'met_gem_weight.nc', ''
+
+   cn_dir      = 'NEMO-atmos/'  ! root directory for the location of the bulk files
+   ln_apr_obc  = .true.         ! inverse barometer added to OBC ssh data
+/!-----------------------------------------------------------------------
 &namsbc_ana    !   analytical surface boundary condition
 !-----------------------------------------------------------------------
    nn_tau000   =   0       !  gently increase the stress over the first ntau_rst time-steps
@@ -290,18 +299,6 @@ sn_rcv_co2    =       'coupled'              ,    'no'    ,     ''      ,       
    ln_rnf_depth = .true.    !  read in depth information for runoff
    ln_rnf_tem   = .false.    !  read in temperature information for runoff
    ln_rnf_sal   = .false.    !  read in salinity information for runoff
-/
-!-----------------------------------------------------------------------
-&namsbc_apr    !   Atmospheric pressure used as ocean forcing or in bulk
-!-----------------------------------------------------------------------
-!              ! file name ! frequency (hours) ! variable ! time interpol. !  clim   ! 'yearly'/ ! weights  ! rotation !
-!              !           !  (if <0  months)  !   name   !    (logical)   !  (T/F)  ! 'monthly' ! filename ! pairing  !
-   sn_apr      = 'patm'    ,         -1        ,'somslpre',    .true.      , .true.  , 'yearly'  ,  ''      ,   ''
-
-   cn_dir      = './'       !  root directory for the location of the bulk files
-   rn_pref     = 101000._wp !  reference atmospheric pressure   [N/m2]/
-   ln_ref_apr  = .false.    !  ref. pressure: global mean Patm (T) or a constant (F)
-   ln_apr_obc  = .false.    !  inverse barometer added to OBC ssh data
 /
 !-----------------------------------------------------------------------
 &namsbc_ssr    !   surface boundary condition : sea surface restoring
