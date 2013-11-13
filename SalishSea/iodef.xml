@@ -15,7 +15,7 @@
           <field ref="toce" name="votemper"/>
           <field ref="soce" name="vosaline"/>
           <field ref="rain" name="rain_rate"/>
-          <field ref="snow" name="snow_rate"/>
+          <field ref="snowpre" name="snow_rate"/>
         </file>
         <file id="1h_grid_U" name="auto" enabled=".false.">
           <field ref="uoce" name="vozocrtx"/>
@@ -51,7 +51,7 @@
           <field ref="toce" name="votemper"/>
           <field ref="soce" name="vosaline"/>
           <field ref="rain" name="rain_rate"/>
-          <field ref="snow" name="snow_rate"/>
+          <field ref="snowpre" name="snow_rate"/>
         </file>
         <file id="2h_grid_U" name="auto">
           <field ref="uoce" name="vozocrtx"/>
@@ -72,7 +72,7 @@
           <field ref="toce" name="votemper"/>
           <field ref="soce" name="vosaline"/>
           <field ref="rain" name="rain_rate"/>
-          <field ref="snow" name="snow_rate"/>
+          <field ref="snowpre" name="snow_rate"/>
         </file>
         <file id="4h_grid_U" name="auto">
           <field ref="uoce" name="vozocrtx"/>
@@ -90,7 +90,7 @@
           <field ref="toce" name="votemper"/>
           <field ref="soce" name="vosaline"/>
           <field ref="rain" name="rain_rate"/>
-          <field ref="snow" name="snow_rate"/>
+          <field ref="snowpre" name="snow_rate"/>
         </file>
         <file id="6h_grid_U" name="auto">
           <field ref="uoce" name="vozocrtx"/>
