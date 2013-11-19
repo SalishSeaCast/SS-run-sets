@@ -25,3 +25,13 @@ forcing:
   initial conditions: initial_strat/
   open boundaries: open_boundaries/
   rivers: rivers/
+
+namelists:
+  - namelist.time
+  - namelist.domain
+  - namelist.surface
+  - namelist.lateral
+  - namelist.bottom
+  - namelist.tracers
+  - namelist.dynamics
+  - namelist.compute
