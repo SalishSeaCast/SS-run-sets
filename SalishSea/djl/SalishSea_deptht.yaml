@@ -31,7 +31,7 @@ forcing:
 
 namelists:
   - namelist.time.1step
-  - namelist.domain.428m
+  - ../namelist.domain
   - ../namelist.surface
   - ../namelist.lateral
   - ../namelist.bottom
