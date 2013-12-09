@@ -41,14 +41,14 @@
                               ! = 1, bdy data are read in 'bdydata   .nc' files
                               ! = 2, use tidal harmonic forcing data from files
                               ! = 3, use external data AND tidal harmonic forcing
-    nn_dyn3d       =  0       ! boundary conditions for baroclinic velocities
+    nn_dyn3d       =  3       ! boundary conditions for baroclinic velocities
     nn_dyn3d_dta   =  0       ! = 0, bdy data are equal to the initial state
                               ! = 1, bdy data are read in 'bdydata   .nc' files
     nn_tra         =  1       ! boundary conditions for T and S
     nn_tra_dta     =  1       ! = 0, bdy data are equal to the initial state
                               ! = 1, bdy data are read in 'bdydata   .nc' files
     nn_rimwidth    = 10       ! width of the relaxation zone
-    ln_vol         = .false.  ! total volume correction (see nn_volctl parameter)
+    ln_vol         = .true.  ! total volume correction (see nn_volctl parameter)
     nn_volctl      = 1        ! = 0, the total water flux across open boundaries is zero
 &end
 
@@ -72,8 +72,8 @@
    bn_v2d = '' ,                   24,         'vobtcrty', .true.,  .false., 'daily',  '',        ''
    bn_u3d = '' ,                   24,         'vozocrtx', .true.,  .false., 'daily',  '',        ''
    bn_v3d = '' ,                   24,         'vomecrty', .true.,  .false., 'daily',  '',        ''
-   bn_tem = 'SalishSea_bdyT_tra', -12,         'votemper', .false., .true.,  'yearly', '',        ''
-   bn_sal = 'SalishSea_bdyT_tra', -12,         'vosaline', .false., .true.,  'yearly', '',        ''
+   bn_tem = 'SalishSea_Soft_tra', -1,         'votemper', .true., .true.,  'yearly', '',        ''
+   bn_sal = 'SalishSea_Soft_tra', -1,         'vosaline', .true., .true.,  'yearly', '',        ''
 
    cn_dir = 'open_boundaries/west/'
    ln_full_vel = .false.
