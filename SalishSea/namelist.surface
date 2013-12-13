@@ -55,11 +55,11 @@
 !-----------------------------------------------------------------------
 !              !  file name               ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
 !              !                          ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
-   sn_rnf      = 'rivers_cnst', -12,         'rorunoff', .false., .true.,  'yearly', '',        ''
+   sn_rnf      = 'rivers_month', -1,         'rorunoff', .true., .true.,  'yearly', '',        ''
    sn_cnf      = 'runoff_1m_nomask',         0,         'socoefr0', .false., .true.,  'yearly', '',        ''
    sn_s_rnf    = '',                        24,         'rosaline', .false., .true.,  'yearly', '',        ''
    sn_t_rnf    = '',                        24,         'rotemper', .false., .true.,  'yearly', '',        ''
-   sn_dep_rnf  = 'rivers_cnst', -12,         'rodepth' , .false., .true.,  'yearly', '',        ''
+   sn_dep_rnf  = 'rivers_month', -1,         'rodepth' , .true., .true.,  'yearly', '',        ''
 
    cn_dir       = 'rivers/'  ! directory containing rivers run-off forcing files
    ln_rnf_emp   = .false.    ! runoffs included into precipitation field (T) or into a file (F)
