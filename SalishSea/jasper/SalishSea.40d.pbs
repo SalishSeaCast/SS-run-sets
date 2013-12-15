@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#PBS -N SalishSea.40d
+#PBS -S /bin/bash
+#PBS -l procs=84
+# memory per processor
+#PBS -l pmem=2gb
+#PBS -l walltime=24:00:00
+# email when the job [b]egins and [e]nds, or is [a]borted
+#PBS -m bea
+#PBS -M dlatornell@eos.ubc.ca
+#PBS -o stdout
+#PBS -e stderr
+
+
+RESULTS_DIR=40d
+
+cd $PBS_O_WORKDIR
+echo working dir: $(pwd)
+
+module load application/python/2.7.3
+module load library/netcdf/4.1.3
+module load library/szip/2.1
+
+echo "Starting run at $(date)"
+mpirun ./nemo.exe
+echo "Ended run at $(date)"
+
+$PBS_O_HOME/.local/bin/salishsea gather --no-compress SalishSea*.yaml ../results/$RESULTS_DIR
+echo "Results gathering ended at $(date)"
