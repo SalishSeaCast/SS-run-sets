@@ -45,7 +45,65 @@
         </file>
       </group>
 
-      <group id="2h" output_freq="7200" output_level="10" enabled=".false.">
+   <group id="1h_freq" output_freq="3600" output_level="10" enabled=".false." >
+        <file id="1h_PointAtkinson" name="1h_PointAtkinson" enabled=".false." description="Point Atkinson 1h outputs">
+        <group id="1h_PointAtkinson" zoom_ref="PointAtkinson" > 
+          <field ref="ssh" name="sossheig"/>
+          <field ref="toce" name="votemper"/>
+          <field ref="soce" name="vosaline"/>
+          <field ref="rain" name="rain_rate"/>
+          <field ref="snowpre" name="snow_rate"/>    
+          <field ref="uoce" name="vozocrtx"/>
+          <field ref="utau" name="u_wind_stress"/>
+          <field ref="voce" name="vomecrty"/>
+          <field ref="vtau" name="v_wind_stress"/>
+	</group>
+</file>
+   
+       <file id="1h_Victoria" name="1h_Victoria" enabled=".false." description="Victoria 1h outputs">
+       <group id="1h_Victoria" zoom_ref="Victoria" > 
+       <field ref="ssh" name="sossheig"/>
+          <field ref="toce" name="votemper"/>
+          <field ref="soce" name="vosaline"/>
+          <field ref="rain" name="rain_rate"/>
+          <field ref="snowpre" name="snow_rate"/>    
+          <field ref="uoce" name="vozocrtx"/>
+          <field ref="utau" name="u_wind_stress"/>
+          <field ref="voce" name="vomecrty"/>
+          <field ref="vtau" name="v_wind_stress"/>
+       </group>
+</file>
+
+        <file id="1h_PatriciaBay" name="1h_PatriciaBay" enabled=".false." description="Patricia Bay 1h outputs">
+        <group id="1h_PatriciaBay" zoom_ref="PatriciaBay" > 
+       <field ref="ssh" name="sossheig"/>
+          <field ref="toce" name="votemper"/>
+          <field ref="soce" name="vosaline"/>
+          <field ref="rain" name="rain_rate"/>
+          <field ref="snowpre" name="snow_rate"/>    
+          <field ref="uoce" name="vozocrtx"/>
+          <field ref="utau" name="u_wind_stress"/>
+          <field ref="voce" name="vomecrty"/>
+          <field ref="vtau" name="v_wind_stress"/>
+	</group>
+</file>
+
+        <file id="1h_CampbellRiver" name="1h_CampbellRiver" enabled=".false." description="Campbell River 1h outputs">
+        <group id="1h_CampbellRiver" zoom_ref="CampbellRiver" > 
+          <field ref="ssh" name="sossheig"/>
+          <field ref="toce" name="votemper"/>
+          <field ref="soce" name="vosaline"/>
+          <field ref="rain" name="rain_rate"/>
+          <field ref="snowpre" name="snow_rate"/>    
+          <field ref="uoce" name="vozocrtx"/>
+          <field ref="utau" name="u_wind_stress"/>
+          <field ref="voce" name="vomecrty"/>
+          <field ref="vtau" name="v_wind_stress"/>
+        </group>
+</file>
+</group>   
+
+  <group id="2h" output_freq="7200" output_level="10" enabled=".false.">
         <file id="2h_grid_T" name="auto">
           <field ref="ssh" name="sossheig"/>
           <field ref="toce" name="votemper"/>
@@ -560,7 +618,12 @@
         <zoom id="0n10wT"  ibegin="0000" jbegin="0000" ni="1" nj="1" />
           <!--   0e   -->
         <zoom id="0n0eT"   ibegin="0000" jbegin="0000" ni="1" nj="1" />
-      </grid>
+	  <!--   Storm Surge Points -->
+        <zoom id="PointAtkinson"  ibegin="329" jbegin="469" ni="1" nj="1" />
+	<zoom id="Victoria"  ibegin="196" jbegin="299" ni="1" nj="1" />
+	<zoom id="PatriciaBay"  ibegin="214" jbegin="352" ni="1" nj="1" />
+	<zoom id="CampbellRiver"  ibegin="124" jbegin="748" ni="1" nj="1" />
+ </grid>
 
       <grid id="grid_U" description="grid U" >
         <!--   Eq section   -->
