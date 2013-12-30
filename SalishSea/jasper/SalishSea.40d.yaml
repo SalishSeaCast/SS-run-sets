@@ -5,7 +5,6 @@
 #   Open, unstructured western boundary across Strait of Juan de Fuca
 #     Tidal forcing
 #     Preliminary temperature and salinity forcing
-#     Zero-gradient baroclinic velocity components
 #   Monthly climatology river run-off forcing
 
 config_name: SalishSea
@@ -29,7 +28,7 @@ namelists:
   - namelist.time.40d
   - ../namelist.domain
   - namelist.surface.no_atmos
-  - ../namelist.lateral
+  - namelist.lateral.no_zgbc
   - ../namelist.bottom
   - ../namelist.tracers
   - ../namelist.dynamics
