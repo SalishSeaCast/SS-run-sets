@@ -12,9 +12,9 @@
 config_name: SalishSea
 
 paths:
-  NEMO-code: ../../NEMO-code/
-  forcing: ../../NEMO-forcing/
-  runs directory: ../../SalishSea/
+  NEMO-code: ../../../NEMO-code/
+  forcing: ../../../NEMO-forcing/
+  runs directory: ../../../SalishSea/
 
 grid:
   coordinates: coordinates_seagrid_SalishSea.nc
@@ -27,11 +27,11 @@ forcing:
   rivers: rivers/
 
 namelists:
-  - mynamelist.time
+  - mynamelist_15m.time
   - mynamelist.domain
   - mynamelist.surface
   - mynamelist.lateral
-  - namelist.bottom
-  - namelist.tracers
-  - namelist.dynamics
-  - namelist.compute
+  - ../namelist.bottom
+  - ../namelist.tracers
+  - ../namelist.dynamics
+  - ../namelist.compute
