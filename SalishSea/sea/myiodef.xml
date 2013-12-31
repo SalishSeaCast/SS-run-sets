@@ -28,7 +28,7 @@
       </group>
 
 
-      <group id="15mn" output_freq="900" output_level="10" enabled=".false.">
+      <group id="15mn" output_freq="900" output_level="10" enabled=".true.">
         <file id="15mn_grid_T" name="15mn_grid_T" description="ocean T grid variables" enabled=".true.">
 	  <field ref="ssh" name="sossheig"/>
           <field ref="toce" name="votemper"/>
