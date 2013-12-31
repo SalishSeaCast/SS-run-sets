@@ -34,5 +34,5 @@ namelists:
   - ../namelist.lateral
   - ../namelist.bottom
   - ../namelist.tracers
-  - ../namelist.dynamics
+  - BIGnamelist.dynamics
   - ../namelist.compute
