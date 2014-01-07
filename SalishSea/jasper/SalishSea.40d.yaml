@@ -1,11 +1,13 @@
 # salishsea command processor run description for Salish Sea case
 #
 # Salish Sea full domain with:
+#   Bathymetry smoothed at Strait of Juan de Fuca boundary
 #   S4-1 uniform initial T and S
 #   Open, unstructured western boundary across Strait of Juan de Fuca
 #     Tidal forcing
 #     Preliminary temperature and salinity forcing
 #   Monthly climatology river run-off forcing
+#   No atmospheric forcing
 
 config_name: SalishSea
 
@@ -16,7 +18,7 @@ paths:
 
 grid:
   coordinates: coordinates_seagrid_SalishSea.nc
-  bathymetry: bathy_meter_SalishSea.nc
+  bathymetry: bathy_meter_SalishSea2.nc
 
 forcing:
   atmospheric: ../../../MEOPAR/CGRF/NEMO-atmos/
@@ -26,10 +28,10 @@ forcing:
 
 namelists:
   - namelist.time.40d
-  - ../namelist.domain
+  - namelist.domain.smooth_west_bdy
   - namelist.surface.no_atmos
-  - namelist.lateral.no_zgbc
+  - namelist.lateral.smooth_west_bdy
   - ../namelist.bottom
   - ../namelist.tracers
-  - ../namelist.dynamics
-  - namelist.compute.6x14
+  - namelist.dynamics.nu60evd100
+  - ../namelist.compute.6x14
