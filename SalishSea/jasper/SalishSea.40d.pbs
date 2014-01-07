@@ -5,12 +5,12 @@
 #PBS -l procs=84
 # memory per processor
 #PBS -l pmem=2gb
-#PBS -l walltime=24:00:00
+#PBS -l walltime=16:00:00
 # email when the job [b]egins and [e]nds, or is [a]borted
 #PBS -m bea
 #PBS -M dlatornell@eos.ubc.ca
-#PBS -o stdout
-#PBS -e stderr
+#PBS -o ../results/40d/stdout
+#PBS -e ../results/40d/stderr
 
 
 RESULTS_DIR=40d
