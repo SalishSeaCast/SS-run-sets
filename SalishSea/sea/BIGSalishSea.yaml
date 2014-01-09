@@ -1,6 +1,7 @@
 # salishsea command processor run description for Salish Sea case
 #
 # Salish Sea full domain with:
+#   Smoothed JdF mouth bathymetry
 #   S4-1 uniform initial T and S
 #   Open, unstructured western boundary across Strait of Juan de Fuca
 #     Tidal forcing
@@ -19,7 +20,7 @@ paths:
 
 grid:
   coordinates: coordinates_seagrid_SalishSea.nc
-  bathymetry: bathy_meter_SalishSea.nc
+  bathymetry: bathy_meter_SalishSea2.nc
 
 forcing:
   atmospheric: /ocean/dlatorne/MEOPAR/CGRF/NEMO-atmos/
@@ -28,11 +29,11 @@ forcing:
   rivers: rivers/
 
 namelists:
-  - BIGnamelist.time
-  - ../namelist.domain
-  - BIGnamelist.surface
-  - ../namelist.lateral
+  - mynamelist.time                # start on Sep 21, run 2.5 hour
+  - BIGnamelist.domain              # new TS initial conditions
+  - ../namelist.surface
+  - BIGnamelist.lateral             # new OBC Masson TS files, Tide files, nnvolctl=1, no interp on TS
   - ../namelist.bottom
-  - ../namelist.tracers
-  - BIGnamelist.dynamics
+  - ../namelist.tracers             
+  - BIGnamelist.dynamics            # lateral vis 60, vertical upto 100
   - ../namelist.compute

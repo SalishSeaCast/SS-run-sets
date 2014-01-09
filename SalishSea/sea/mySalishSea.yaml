@@ -1,15 +1,15 @@
 # salishsea command processor run description for Salish Sea case
 #
 # Salish Sea full domain with:
+#   Smoothed JdF mouth bathymetry
 #   S4-1 uniform initial T and S
 #   Open, unstructured western boundary across Strait of Juan de Fuca
 #     Tidal forcing
-#     Preliminary temperature and salinity forcing
-#   Preliminary Fraser River run-off forcing
-#   Atmospheric forcing with CGRF products
-#     Constrained to no solid precipitation
+#     Preliminary temperature and salinity forcing, Soft Start
+#  All River Monthly run-off forcing
+#   no Atmospheric forcing 
 
-config_name: SalishSea
+config_name: SalishSea_sea
 
 paths:
   NEMO-code: ../../../NEMO-code/
@@ -18,7 +18,7 @@ paths:
 
 grid:
   coordinates: coordinates_seagrid_SalishSea.nc
-  bathymetry: bathy_meter_SalishSea.nc
+  bathymetry: bathy_meter_SalishSea2.nc
 
 forcing:
   atmospheric: /ocean/dlatorne/MEOPAR/CGRF/NEMO-atmos/
@@ -27,11 +27,11 @@ forcing:
   rivers: rivers/
 
 namelists:
-  - mynamelist_15m.time
-  - mynamelist.domain
-  - mynamelist.surface
-  - mynamelist.lateral
+  - mynamelist.time               # start on Sep 16, run 2.5 hours
+  - BIGnamelist.domain            # new TS initial conditions
+  - mynamelist.surface            # no atmos
+  - mynamelist.lateral            # barotropic BC, new BC
   - ../namelist.bottom
   - ../namelist.tracers
-  - ../namelist.dynamics
+  - BIGnamelist.dynamics          # 60/100
   - ../namelist.compute

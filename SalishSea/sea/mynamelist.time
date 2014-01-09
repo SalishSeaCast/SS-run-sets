@@ -8,7 +8,7 @@
    cn_exp      = "SalishSea"  !  experience name
    nn_it000    =       1      !  first time step
    nn_itend    =     180      !  last time step (std 1 day = 1728 re: rn_rdt in &namdom)
-   nn_date0    =  20020916    !  date at nit_0000 (format yyyymmdd) used if ln_rstart=F or (ln_rstart=T and nn_rstctl=0 or 1)
+   nn_date0    =  20020921    !  date at nit_0000 (format yyyymmdd) used if ln_rstart=F or (ln_rstart=T and nn_rstctl=0 or 1)
    nn_leapy    =       1      !  Leap year calendar (1) or not (0)
    ln_rstart   =  .false.     !  start from rest (F) or from a restart file (T)
    nn_rstctl   =       0      !  restart control => activated only if ln_rstart = T
