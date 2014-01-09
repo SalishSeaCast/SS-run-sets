@@ -51,8 +51,8 @@
    bn_v2d = '' ,                   24,         'vobtcrty', .true.,  .false., 'daily',  '',        ''
    bn_u3d = '' ,                   24,         'vozocrtx', .true.,  .false., 'daily',  '',        ''
    bn_v3d = '' ,                   24,         'vomecrty', .true.,  .false., 'daily',  '',        ''
-   bn_tem = 'SalishSea_Soft_tra', -1,         'votemper', .true., .true.,  'yearly', '',        ''
-   bn_sal = 'SalishSea_Soft_tra', -1,         'vosaline', .true., .true.,  'yearly', '',        ''
+   bn_tem = 'SalishSea2_Soft_tra', -1,         'votemper', .true., .true.,  'yearly', '',        ''
+   bn_sal = 'SalishSea2_Soft_tra', -1,         'vosaline', .true., .true.,  'yearly', '',        ''
 
    cn_dir = 'open_boundaries/west/'
    ln_full_vel = .false.
@@ -61,7 +61,7 @@
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
    !!  file name root of tidal forcing files
-   filtide       = 'open_boundaries/west/tides/SalishSea_west_tide_'
+   filtide       = 'open_boundaries/west/tides/SalishSea2_west_tide_'
    !!  names of tidal components used
    tide_cpt(1) = 'Q1'
    tide_cpt(2) = 'O1'
