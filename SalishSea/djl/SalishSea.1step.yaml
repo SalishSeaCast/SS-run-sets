@@ -34,4 +34,4 @@ namelists:
   - ../namelist.bottom
   - ../namelist.tracers
   - ../namelist.dynamics
-  - ../namelist.compute
+  - ../namelist.compute.1core
