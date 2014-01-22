@@ -51,12 +51,8 @@
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
-            <field ref="rain" name="rain_rate"/>
-            <field ref="snowpre" name="snow_rate"/>
             <field ref="uoce" name="vozocrtx"/>
-            <field ref="utau" name="u_wind_stress"/>
             <field ref="voce" name="vomecrty"/>
-            <field ref="vtau" name="v_wind_stress"/>
         	</group>
         </file>
 
@@ -65,12 +61,8 @@
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
-            <field ref="rain" name="rain_rate"/>
-            <field ref="snowpre" name="snow_rate"/>
             <field ref="uoce" name="vozocrtx"/>
-            <field ref="utau" name="u_wind_stress"/>
             <field ref="voce" name="vomecrty"/>
-            <field ref="vtau" name="v_wind_stress"/>
          </group>
         </file>
 
@@ -79,12 +71,8 @@
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
-            <field ref="rain" name="rain_rate"/>
-            <field ref="snowpre" name="snow_rate"/>
             <field ref="uoce" name="vozocrtx"/>
-            <field ref="utau" name="u_wind_stress"/>
             <field ref="voce" name="vomecrty"/>
-            <field ref="vtau" name="v_wind_stress"/>
         	</group>
         </file>
 
@@ -93,12 +81,74 @@
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
-            <field ref="rain" name="rain_rate"/>
-            <field ref="snowpre" name="snow_rate"/>
             <field ref="uoce" name="vozocrtx"/>
-            <field ref="utau" name="u_wind_stress"/>
             <field ref="voce" name="vomecrty"/>
-            <field ref="vtau" name="v_wind_stress"/>
+          </group>
+        </file>
+
+       <file id="1h_Thalweg1" name="1h_Thalweg1" enabled=".false." description="Select thalweg points 1h outputs">
+          <group id="1h_Thalweg1" zoom_ref="thalweg1" >
+            <field ref="ssh" name="sossheig"/>
+            <field ref="toce" name="votemper"/>
+            <field ref="soce" name="vosaline"/>
+            <field ref="uoce" name="vozocrtx"/>
+            <field ref="voce" name="vomecrty"/>
+          </group>
+       </file>  
+
+      <file id="1h_Thalweg2" name="1h_Thalweg2" enabled=".false." description="Select thalweg points 1h outputs">
+          <group id="1h_Thalweg2" zoom_ref="thalweg2" >
+            <field ref="ssh" name="sossheig"/>
+            <field ref="toce" name="votemper"/>
+            <field ref="soce" name="vosaline"/>
+            <field ref="uoce" name="vozocrtx"/>
+            <field ref="voce" name="vomecrty"/>
+          </group>
+      </file>
+      <file id="1h_Thalweg3" name="1h_Thalweg3" enabled=".false." description="Select thalweg points 1h outputs">
+          <group id="1h_Thalweg3" zoom_ref="thalweg3" >
+            <field ref="ssh" name="sossheig"/>
+            <field ref="toce" name="votemper"/>
+            <field ref="soce" name="vosaline"/>
+            <field ref="uoce" name="vozocrtx"/>
+            <field ref="voce" name="vomecrty"/>
+          </group>
+      </file>
+      <file id="1h_Thalweg4" name="1h_Thalweg4" enabled=".false." description="Select thalweg points 1h outputs">
+          <group id="1h_Thalweg4" zoom_ref="thalweg4" >
+            <field ref="ssh" name="sossheig"/>
+            <field ref="toce" name="votemper"/>
+            <field ref="soce" name="vosaline"/>
+            <field ref="uoce" name="vozocrtx"/>
+            <field ref="voce" name="vomecrty"/>
+          </group>
+      </file>
+      <file id="1h_Thalweg5" name="1h_Thalweg5" enabled=".false." description="Select thalweg points 1h outputs">
+	  <group id="1h_Thalweg5" zoom_ref="thalweg5" >
+            <field ref="ssh" name="sossheig"/>
+            <field ref="toce" name="votemper"/>
+            <field ref="soce" name="vosaline"/>
+            <field ref="uoce" name="vozocrtx"/>
+            <field ref="voce" name="vomecrty"/>
+          </group>
+      </file>
+      <file id="1h_Thalweg6" name="1h_Thalweg6" enabled=".false." description="Select thalweg points 1h outputs">
+          <group id="1h_Thalweg6" zoom_ref="thalweg6" >
+            <field ref="ssh" name="sossheig"/>
+            <field ref="toce" name="votemper"/>
+            <field ref="soce" name="vosaline"/>
+            <field ref="uoce" name="vozocrtx"/>
+            <field ref="voce" name="vomecrty"/>
+          </group>
+      </file>
+
+       <file id="1h_Plume" name="1h_Plume" enabled=".false." description="Select plume points 1h outputs">
+          <group id="1h_Plume" zoom_ref="plume" >
+            <field ref="ssh" name="sossheig"/>
+            <field ref="toce" name="votemper"/>
+            <field ref="soce" name="vosaline"/>
+            <field ref="uoce" name="vozocrtx"/>
+            <field ref="voce" name="vomecrty"/>
           </group>
         </file>
       </group>
@@ -623,6 +673,15 @@
 	<zoom id="Victoria"  ibegin="196" jbegin="299" ni="1" nj="1" />
 	<zoom id="PatriciaBay"  ibegin="214" jbegin="352" ni="1" nj="1" />
 	<zoom id="CampbellRiver"  ibegin="124" jbegin="748" ni="1" nj="1" />
+          <!-- Thalweg Points -->
+        <zoom id="thalweg1"  ibegin="103" jbegin="321" ni="1" nj="1" />
+	<zoom id="thalweg2"  ibegin="203" jbegin="251" ni="1" nj="1" />
+	<zoom id="thalweg3"  ibegin="240" jbegin="330" ni="1" nj="1" />
+	<zoom id="thalweg4"  ibegin="273" jbegin="385" ni="1" nj="1" />
+	<zoom id="thalweg5"  ibegin="247" jbegin="483" ni="1" nj="1" />
+	<zoom id="thalweg6"  ibegin="162" jbegin="583" ni="1" nj="1" />
+	  <!-- Plume Points -->
+        <zoom id="plume"  ibegin="290" jbegin="440" ni="1" nj="1" />
  </grid>
 
       <grid id="grid_U" description="grid U" >
