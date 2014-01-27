@@ -50,7 +50,7 @@
    nn_havtb    =    0     !  horizontal shape for avtb (=1) or not (=0)
    ln_zdfevd   = .true.   !  enhanced vertical diffusion (evd) (T) or not (F)
    nn_evdm     =    1     !  evd apply on tracer (=0) or on tracer and momentum (=1)
-   rn_avevd    =  10.     !  evd mixing coefficient [m2/s]
+   rn_avevd    =  100.     !  evd mixing coefficient [m2/s]
    ln_zdfnpc   = .false.  !  Non-Penetrative Convective algorithm (T) or not (F)
    nn_npc      =    1     !  frequency of application of npc
    nn_npcp     =  365     !  npc control print frequency
