@@ -15,8 +15,8 @@
     cn_coords_file = ''       ! bdy coordinates files
     ln_mask_file   = .false.  ! =T : read mask from file
     cn_mask_file   = ''       ! name of mask file (if ln_mask_file=.TRUE.)
-    nn_dyn2d       =  3       ! boundary conditions for barotropic fields
-    nn_dyn2d_dta   =  0       ! = 0, bdy data are equal to the initial state
+    nn_dyn2d       =  2       ! boundary conditions for barotropic fields
+    nn_dyn2d_dta   =  3       ! = 0, bdy data are equal to the initial state
                               ! = 1, bdy data are read in 'bdydata   .nc' files
                               ! = 2, use tidal harmonic forcing data from files
                               ! = 3, use external data AND tidal harmonic forcing
@@ -46,13 +46,13 @@
 !-----------------------------------------------------------------------
 !         !  file name           ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
 !         !                      ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
-   bn_ssh = '' ,                   24,         'sossheig', .true.,  .false., 'daily',  '',        ''
-   bn_u2d = '' ,                   24,         'vobtcrtx', .true.,  .false., 'daily',  '',        ''
-   bn_v2d = '' ,                   24,         'vobtcrty', .true.,  .false., 'daily',  '',        ''
+   bn_ssh = 'SS2_SSH_climatology' ,                   -1,         'sossheig', .true.,  .true., 'yearly',  '',        ''
+   bn_u2d = 'SS2_SSH_climatology' ,                   -1,         'vobtcrtx', .true.,  .true., 'yearly',  '',        ''
+   bn_v2d = 'SS2_SSH_climatology' ,                   -1,         'vobtcrty', .true.,  .true., 'yearly',  '',        ''
    bn_u3d = '' ,                   24,         'vozocrtx', .true.,  .false., 'daily',  '',        ''
    bn_v3d = '' ,                   24,         'vomecrty', .true.,  .false., 'daily',  '',        ''
-   bn_tem = 'SalishSea2_Soft_tra', -1,         'votemper', .true., .true.,  'yearly', '',        ''
-   bn_sal = 'SalishSea2_Soft_tra', -1,         'vosaline', .true., .true.,  'yearly', '',        ''
+   bn_tem = 'SalishSea2_Masson_DC', 168,         'votemper', .true., .true.,  'yearly', '',        ''
+   bn_sal = 'SalishSea2_Masson_DC', 168,         'vosaline', .true., .true.,  'yearly', '',        ''
 
    cn_dir = 'open_boundaries/west/'
    ln_full_vel = .false.
