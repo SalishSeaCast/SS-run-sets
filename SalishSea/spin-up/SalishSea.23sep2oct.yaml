@@ -37,4 +37,4 @@ namelists:
   - namelist.bottom.bfeb2_1e-4  # 23sep2oct run only
   - ../namelist.tracers
   - ../namelist.dynamics
-  - ../namelist.compute.4x4
+  - ../namelist.compute.6x14
