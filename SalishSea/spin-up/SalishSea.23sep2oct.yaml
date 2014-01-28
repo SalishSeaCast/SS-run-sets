@@ -1,0 +1,40 @@
+# salishsea command processor run description for Salish Sea case
+#
+# Spin-up run
+#
+# Salish Sea full domain with:
+#   Smoothed JdF mouth bathymetry
+#   S4-1 uniform initial T and S, depth corrected
+#   Open, unstructured western boundary across Strait of Juan de Fuca
+#     Tidal forcing
+#     Masson model, depth corrected, T, S, U & V
+#   Monthly climatology river run-off forcing, all rivers
+#   Atmospheric forcing from CGRF dataset
+#     Atmospheric pressure as inverse sea surface height effect enabled
+
+config_name: SalishSea
+
+paths:
+  NEMO-code: ../../../NEMO-code-spin-up/
+  forcing: ../../../NEMO-forcing/
+  runs directory: ../../../SalishSea/
+
+grid:
+  coordinates: coordinates_seagrid_SalishSea.nc
+  bathymetry: bathy_meter_SalishSea2.nc
+
+forcing:
+  atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos/
+  initial conditions: /home/dlatorne/MEOPAR/SalishSea/results/spin-up/SalishSea_00012096_restart.nc
+  open boundaries: open_boundaries/
+  rivers: rivers/
+
+namelists:
+  - namelist.time.23sep2oct
+  - ../namelist.domain
+  - ../namelist.surface
+  - ../namelist.lateral
+  - namelist.bottom.bfeb2_1e-4  # 23sep2oct run only
+  - ../namelist.tracers
+  - ../namelist.dynamics
+  - ../namelist.compute.4x4
