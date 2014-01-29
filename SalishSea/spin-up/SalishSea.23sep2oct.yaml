@@ -33,8 +33,8 @@ namelists:
   - namelist.time.23sep2oct
   - ../namelist.domain
   - ../namelist.surface
-  - ../namelist.lateral
-  - namelist.bottom.bfeb2_1e-4  # 23sep2oct run only
+  - namelist.lateral.no_ext_barotropic_bc  # isolate suspected memory leak
+  - namelist.bottom.bfeb2_1e-4             # 23sep2oct run only
   - ../namelist.tracers
   - ../namelist.dynamics
   - ../namelist.compute.6x14
