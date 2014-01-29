@@ -4,7 +4,7 @@
 #PBS -S /bin/bash
 #PBS -l procs=84
 # memory per processor
-#PBS -l pmem=4gb
+#PBS -l pmem=2gb
 #PBS -l walltime=6:00:00
 # email when the job [b]egins and [e]nds, or is [a]borted
 #PBS -m bea
