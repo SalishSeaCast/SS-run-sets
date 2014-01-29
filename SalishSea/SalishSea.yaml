@@ -1,11 +1,12 @@
 # salishsea command processor run description for Salish Sea case
 #
 # Salish Sea full domain with:
-#   S4-1 uniform initial T and S
+#   Smoothed JdF mouth bathymetry
+#   S4-1 uniform initial T and S, depth corrected
 #   Open, unstructured western boundary across Strait of Juan de Fuca
-#     Tidal forcing
-#     Preliminary temperature and salinity forcing
-#   Preliminary Fraser River run-off forcing
+#     Tidal forcing at mouth JdF
+#     Masson, depth corrected, open boundaries
+#  All River Monthly run-off forcing
 #   Atmospheric forcing with CGRF products
 #     Constrained to no solid precipitation
 
@@ -18,7 +19,7 @@ paths:
 
 grid:
   coordinates: coordinates_seagrid_SalishSea.nc
-  bathymetry: bathy_meter_SalishSea.nc
+  bathymetry: bathy_meter_SalishSea2.nc
 
 forcing:
   atmospheric: /ocean/dlatorne/MEOPAR/CGRF/NEMO-atmos/
@@ -34,4 +35,4 @@ namelists:
   - namelist.bottom
   - namelist.tracers
   - namelist.dynamics
-  - namelist.compute
+  - namelist.compute4x4
