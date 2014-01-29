@@ -24,7 +24,7 @@ grid:
   bathymetry: bathy_meter_SalishSea2.nc
 
 forcing:
-  atmospheric: ../../../CGRF/NEMO-atmos/
+  atmospheric: ../CGRF/NEMO-atmos/
   initial conditions: ../../../SalishSea/results/spin-up/22sep/SalishSea_00012096_restart.nc
   open boundaries: open_boundaries/
   rivers: rivers/
