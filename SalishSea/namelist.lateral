@@ -83,3 +83,24 @@
    !!  adjust tidal harmonics for start date of run
    ln_tide_date  = .true.
 &end
+
+&namobc        !   open boundaries parameters                           ("key_obc")
+!-----------------------------------------------------------------------
+   ln_obc_clim = .true.    ! climatological obc data files (T) or not (F)
+   ln_vol_cst  = .false.   ! impose the total volume conservation (T) or not (F)
+   ln_obc_fla  = .false.   ! Flather open boundary condition
+   nn_obcdta   =    0      ! = 0 the obc data are equal to the initial state
+                           ! = 1 the obc data are read in 'obc.dta' files
+   cn_obcdta   = 'annual'  ! set to annual if obc datafile hold 1 year of data
+                           ! set to monthly if obc datafile hold 1 month of data
+   rn_dpein    =    1.     ! damping time scale for inflow at east  open boundary
+   rn_dpwin    =    1.     !    -           -         -       west    -      -
+   rn_dpnin    =    1.     !    -           -         -       north   -      -
+   rn_dpsin    =    1.     !    -           -         -       south   -      -
+   rn_dpeob    =    0.2    ! time relaxation (days) for the east  open boundary
+   rn_dpwob    =   0.2     !    -           -         -     west    -      -
+   rn_dpnob    =   0.2     !    -           -         -     north   -      -
+   rn_dpsob    =   0.2     !    -           -         -     south   -      -
+   rn_volemp   =    1.     ! = 0 the total volume change with the surface flux (E-P-R)
+                           ! = 1 the total volume remains constant
+&end
