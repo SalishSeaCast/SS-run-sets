@@ -4,7 +4,7 @@
 !-----------------------------------------------------------------------
    nn_fsbc     = 1         !  frequency of surface boundary condition computation
                            !     (also = the frequency of sea-ice model call)
-   ln_ana      = .false.   !  analytical formulation (T => fill namsbc_ana )
+   ln_ana      = .true.    !  analytical formulation (T => fill namsbc_ana )
    ln_flx      = .false.   !  flux formulation       (T => fill namsbc_flx )
    ln_blk_clio = .false.   !  CLIO bulk formulation                     (T => fill namsbc_clio)
    ln_blk_core = .false.   !  CORE bulk formulation                     (T => fill namsbc_core)
