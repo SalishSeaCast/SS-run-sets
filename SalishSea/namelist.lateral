@@ -44,15 +44,15 @@
 
 &nambdy_dta      !  open boundaries - external data           ("key_bdy")
 !-----------------------------------------------------------------------
-!         !  file name           ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
-!         !                      ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
-   bn_ssh = 'SS2_SSH_climatology' ,                   -1,         'sossheig', .true.,  .true., 'yearly',  '',        ''
-   bn_u2d = 'SS2_SSH_climatology' ,                   -1,         'vobtcrtx', .true.,  .true., 'yearly',  '',        ''
-   bn_v2d = 'SS2_SSH_climatology' ,                   -1,         'vobtcrty', .true.,  .true., 'yearly',  '',        ''
-   bn_u3d = '' ,                   24,         'vozocrtx', .true.,  .false., 'daily',  '',        ''
-   bn_v3d = '' ,                   24,         'vomecrty', .true.,  .false., 'daily',  '',        ''
-   bn_tem = 'SalishSea2_Masson_DC', 168,         'votemper', .true., .true.,  'yearly', '',        ''
-   bn_sal = 'SalishSea2_Masson_DC', 168,         'vosaline', .true., .true.,  'yearly', '',        ''
+!         !  file name            ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
+!         !                       ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
+   bn_ssh = 'SS2_SSH_climatology',   -1,        'sossheig', .true.,  .true.,  'yearly',  '',        ''
+   bn_u2d = 'SS2_SSH_climatology',   -1,        'vobtcrtx', .true.,  .true.,  'yearly',  '',        ''
+   bn_v2d = 'SS2_SSH_climatology',   -1,        'vobtcrty', .true.,  .true.,  'yearly',  '',        ''
+   bn_u3d = '',                      24,        'vozocrtx', .true.,  .false., 'daily',   '',        ''
+   bn_v3d = '',                      24,        'vomecrty', .true.,  .false., 'daily',   '',        ''
+   bn_tem = 'SalishSea2_Masson_DC', 168,        'votemper', .true.,  .true.,  'yearly',  '',        ''
+   bn_sal = 'SalishSea2_Masson_DC', 168,        'vosaline', .true.,  .true.,  'yearly',  '',        ''
 
    cn_dir = 'open_boundaries/west/'
    ln_full_vel = .false.
