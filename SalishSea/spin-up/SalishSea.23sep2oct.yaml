@@ -32,7 +32,7 @@ forcing:
 namelists:
   - namelist.time.23sep2oct
   - ../namelist.domain
-  - namelist.surface.no-atmos   # isolate suspected memory leak
+  - ../namelist.surface
   - ../namelist.lateral
   - namelist.bottom.bfeb2_1e-4  # 23sep2oct run only
   - ../namelist.tracers
