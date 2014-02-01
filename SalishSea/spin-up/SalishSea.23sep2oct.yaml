@@ -36,7 +36,7 @@ namelists:
   - ../namelist.domain
   - ../namelist.surface
   - ../namelist.lateral
-  - namelist.bottom.bfeb2_1e-4  # 23sep2oct run only
+  - namelist.bottom.bfeb2_1e-4    # 23sep2oct run only
   - ../namelist.tracers
-  - ../namelist.dynamics
+  - namelist.dynamics.nu80evd100  # 23sep2oct run only
   - ../namelist.compute.6x14
