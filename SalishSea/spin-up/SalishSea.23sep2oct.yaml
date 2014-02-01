@@ -15,15 +15,17 @@
 config_name: SalishSea
 
 paths:
-  NEMO-code: ../../../NEMO-code-spin-up/
+  NEMO-code: ../../../NEMO-code/
   forcing: ../../../NEMO-forcing/
   runs directory: ../../../SalishSea/
 
 grid:
+  # If relative, paths are taken from forcing path above
   coordinates: coordinates_seagrid_SalishSea.nc
   bathymetry: bathy_meter_SalishSea2.nc
 
 forcing:
+  # If relative, paths are taken from forcing path above
   atmospheric: ../CGRF/NEMO-atmos/
   initial conditions: ../../../SalishSea/results/spin-up/22sep/SalishSea_00012096_restart.nc
   open boundaries: open_boundaries/
