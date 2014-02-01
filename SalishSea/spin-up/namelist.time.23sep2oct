@@ -33,7 +33,3 @@
     tname(1)   = 'K1'
     tname(2)   = 'M2'
 &end
-
-&namctl
-    nn_timing = 1  ! Enable profiling
-&end
