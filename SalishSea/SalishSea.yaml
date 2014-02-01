@@ -13,21 +13,25 @@
 config_name: SalishSea
 
 paths:
+  # If relative, paths are taken from current directory
   NEMO-code: ../../NEMO-code/
   forcing: ../../NEMO-forcing/
   runs directory: ../../SalishSea/
 
 grid:
+  # If relative, paths are taken from forcing path above
   coordinates: coordinates_seagrid_SalishSea.nc
   bathymetry: bathy_meter_SalishSea2.nc
 
 forcing:
+  # If relative, paths are taken from forcing path above
   atmospheric: /ocean/dlatorne/MEOPAR/CGRF/NEMO-atmos/
   initial conditions: initial_strat/
   open boundaries: open_boundaries/
   rivers: rivers/
 
 namelists:
+  # If relative, paths are taken from current directory
   - namelist.time
   - namelist.domain
   - namelist.surface
