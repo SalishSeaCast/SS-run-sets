@@ -4,10 +4,11 @@
 #   Smoothed JdF mouth bathymetry
 #   S4-1 uniform initial T and S, depth corrected
 #   Open, unstructured western boundary across Strait of Juan de Fuca
-#     Tidal forcing
+#     Tidal forcing at mouth JdF
 #     Masson, depth corrected, open boundaries
 #  All River Monthly run-off forcing
-#  Atmospheric forcing 
+#  Atmospheric forcing with CGRF products
+#    Constrained to no solid precipitation
 
 config_name: SalishSea
 
@@ -27,11 +28,11 @@ forcing:
   rivers: rivers/
 
 namelists:
-  - BIGnamelist_r6.time              # restart on Sep 21, 1 day
-  - BIGnamelist.domain            # new TS initial conditions
-  - BIGnamelist.surface           # CGRF, atmos pressure
-  - mynamelist.lateral            # FLA, tides files, ssh files, clim TS,DC
+  - BIGnamelist_r6.time            # start on Sep 22, 1 day (tides oriented)
+  - ../namelist.domain            # new TS initial conditions
+  - ../namelist.surface           # CGRF, atmos pressure
+  - ../namelist.lateral            # FLA, tides files, ssh files, clim TS,DC
   - ../namelist.bottom
   - ../namelist.tracers
-  - BIGnamelist_50.dynamics          # 50/100
+  - BIGnamelist_55.dynamics          # 55/100
   - ../namelist.compute.4x4
