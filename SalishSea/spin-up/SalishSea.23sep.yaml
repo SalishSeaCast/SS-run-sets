@@ -27,7 +27,7 @@ grid:
 forcing:
   # If relative, paths are taken from forcing path above
   atmospheric: /ocean/dlatorne/MEOPAR/CGRF/NEMO-atmos/
-  initial conditions: /ocean/dlatorne/MEOPAR/results/spin-up/22sep/SalishSea_00012096_restart.nc
+  initial conditions: /ocean/dlatorne/MEOPAR/SalishSea/results/spin-up/22sep/SalishSea_00012096_restart.nc
   open boundaries: open_boundaries/
   rivers: rivers/
 
@@ -38,5 +38,5 @@ namelists:
   - ../namelist.lateral
   - ../namelist.bottom
   - ../namelist.tracers
-  - namelist.dynamics.nu50evd100  
+  - namelist.dynamics.nu55evd100  
   - ../namelist.compute.4x4
