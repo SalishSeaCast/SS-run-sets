@@ -32,11 +32,11 @@ forcing:
   rivers: rivers/
 
 namelists:
-  - namelist.time.23sep2oct
+  - namelist.time.23sep24sep
   - ../namelist.domain
   - ../namelist.surface
   - ../namelist.lateral
   - ../namelist.bottom
   - ../namelist.tracers
-  - namelist.dynamics.nu55evd100  # 23sep2oct run only
+  - namelist.dynamics.nu55evd100  # 23sep24sep run only
   - ../namelist.compute.6x14
