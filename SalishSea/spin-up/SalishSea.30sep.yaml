@@ -38,5 +38,5 @@ namelists:
   - ../namelist.lateral
   - ../namelist.bottom
   - ../namelist.tracers
-  - namelist.dynamics.nu20evd100  
+  - namelist.dynamics.nu25evd100  
   - ../namelist.compute.4x4
