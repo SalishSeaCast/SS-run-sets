@@ -672,7 +672,7 @@
         <zoom id="PointAtkinson"  ibegin="329" jbegin="469" ni="1" nj="1" />
 	<zoom id="Victoria"  ibegin="196" jbegin="299" ni="1" nj="1" />
 	<zoom id="PatriciaBay"  ibegin="214" jbegin="352" ni="1" nj="1" />
-	<zoom id="CampbellRiver"  ibegin="124" jbegin="748" ni="1" nj="1" />
+	<zoom id="CampbellRiver"  ibegin="125" jbegin="748" ni="1" nj="1" />
           <!-- Thalweg Points -->
         <zoom id="thalweg1"  ibegin="103" jbegin="321" ni="1" nj="1" />
 	<zoom id="thalweg2"  ibegin="203" jbegin="251" ni="1" nj="1" />
