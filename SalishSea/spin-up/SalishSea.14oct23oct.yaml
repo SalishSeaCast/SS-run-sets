@@ -27,12 +27,12 @@ grid:
 forcing:
   # If relative, paths are taken from forcing path above
   atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos/
-  initial conditions: /home/sallen/MEOPAR/SalishSea/SpinUp23t24/SalishSea_00041472_restart.nc
+  initial conditions: /home/sallen/MEOPAR/SalishSea/SpinUp10oct13oct/SalishSea_00048384_restart.nc
   open boundaries: open_boundaries/
   rivers: rivers/
 
 namelists:
-  - namelist.time.10oct13oct
+  - namelist.time.14oct23oct
   - ../namelist.domain
   - ../namelist.surface
   - ../namelist.lateral
