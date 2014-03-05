@@ -25,6 +25,9 @@
           <field ref="voce" name="vomecrty"/>
           <field ref="vtau" name="v_wind_stress"/>
         </file>
+        <file id="1h_grid_W" name="auto">
+          <field ref="woce" name="vovecrtz"/>
+        </file>
         <file id="Tidal_Harmonics_eta">
           <field ref="K1x" name="K1_eta_real"/>
           <field ref="K1y" name="K1_eta_imag"/>
@@ -53,7 +56,8 @@
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
-        	</group>
+            <field ref="woce" name="vovecrtz"/>
+        </group>
         </file>
 
         <file id="1h_Victoria" name="1h_Victoria" enabled=".false." description="Victoria 1h outputs">
@@ -63,6 +67,7 @@
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
+            <field ref="woce" name="vovecrtz"/>
          </group>
         </file>
 
@@ -73,6 +78,7 @@
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
+            <field ref="woce" name="vovecrtz"/>
         	</group>
         </file>
 
@@ -83,6 +89,7 @@
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
+            <field ref="woce" name="vovecrtz"/>
           </group>
         </file>
 
@@ -93,6 +100,7 @@
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
+            <field ref="woce" name="vovecrtz"/>
           </group>
        </file>  
 
@@ -103,6 +111,7 @@
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
+            <field ref="woce" name="vovecrtz"/>
           </group>
       </file>
       <file id="1h_Thalweg3" name="1h_Thalweg3" enabled=".false." description="Select thalweg points 1h outputs">
@@ -112,6 +121,7 @@
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
+            <field ref="woce" name="vovecrtz"/>
           </group>
       </file>
       <file id="1h_Thalweg4" name="1h_Thalweg4" enabled=".false." description="Select thalweg points 1h outputs">
@@ -121,6 +131,7 @@
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
+            <field ref="woce" name="vovecrtz"/>
           </group>
       </file>
       <file id="1h_Thalweg5" name="1h_Thalweg5" enabled=".false." description="Select thalweg points 1h outputs">
@@ -130,6 +141,7 @@
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
+            <field ref="woce" name="vovecrtz"/>
           </group>
       </file>
       <file id="1h_Thalweg6" name="1h_Thalweg6" enabled=".false." description="Select thalweg points 1h outputs">
@@ -139,6 +151,7 @@
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
+            <field ref="woce" name="vovecrtz"/>
           </group>
       </file>
 
@@ -149,6 +162,7 @@
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
+            <field ref="woce" name="vovecrtz"/>
           </group>
         </file>
       </group>
@@ -168,6 +182,9 @@
         <file id="2h_grid_V" name="auto">
           <field ref="voce" name="vomecrty"/>
           <field ref="vtau" name="v_wind_stress"/>
+        </file>
+        <file id="2h_grid_W" name="auto">
+          <field ref="woce" name="vovecrtz"/>
         </file>
       </group>
 
@@ -190,6 +207,9 @@
           <field ref="voce" name="vomecrty"/>
           <field ref="vtau" name="v_wind_stress"/>
         </file>
+        <file id="4h_grid_W" name="auto">
+          <field ref="woce" name="vovecrtz"/>
+        </file>
       </group>
 
       <group id="6h" output_freq="21600" output_level="10" enabled=".false.">
@@ -207,6 +227,9 @@
         <file id="6h_grid_V" name="auto">
           <field ref="voce" name="vomecrty"/>
           <field ref="vtau" name="v_wind_stress"/>
+        </file>
+        <file id="6h_grid_W" name="auto">
+          <field ref="woce" name="vovecrtz"/>
         </file>
       </group>
 
