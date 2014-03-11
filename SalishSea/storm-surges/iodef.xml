@@ -25,9 +25,6 @@
           <field ref="voce" name="vomecrty"/>
           <field ref="vtau" name="v_wind_stress"/>
         </file>
-        <file id="1h_grid_W" name="auto">
-          <field ref="woce" name="vovecrtz"/>
-        </file>
         <file id="Tidal_Harmonics_eta">
           <field ref="K1x" name="K1_eta_real"/>
           <field ref="K1y" name="K1_eta_imag"/>
@@ -48,121 +45,110 @@
         </file>
       </group>
 
-      <group id="1h_freq" output_freq="3600" output_level="10" enabled=".false." >
-        <file id="1h_PointAtkinson" name="1h_PointAtkinson" enabled=".false." description="Point Atkinson 1h outputs">
+      <group id="1h_freq" output_freq="3600" output_level="10" enabled=".true." >
+        <file id="1h_PointAtkinson" name="1h_PointAtkinson" enabled=".true." description="Point Atkinson 1h outputs">
           <group id="1h_PointAtkinson" zoom_ref="PointAtkinson" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
-            <field ref="woce" name="vovecrtz"/>
-        </group>
+        	</group>
         </file>
 
-        <file id="1h_Victoria" name="1h_Victoria" enabled=".false." description="Victoria 1h outputs">
+        <file id="1h_Victoria" name="1h_Victoria" enabled=".true." description="Victoria 1h outputs">
          <group id="1h_Victoria" zoom_ref="Victoria" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
-            <field ref="woce" name="vovecrtz"/>
          </group>
         </file>
 
-        <file id="1h_PatriciaBay" name="1h_PatriciaBay" enabled=".false." description="Patricia Bay 1h outputs">
+        <file id="1h_PatriciaBay" name="1h_PatriciaBay" enabled=".true." description="Patricia Bay 1h outputs">
           <group id="1h_PatriciaBay" zoom_ref="PatriciaBay" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
-            <field ref="woce" name="vovecrtz"/>
         	</group>
         </file>
 
-        <file id="1h_CampbellRiver" name="1h_CampbellRiver" enabled=".false." description="Campbell River 1h outputs">
+        <file id="1h_CampbellRiver" name="1h_CampbellRiver" enabled=".true." description="Campbell River 1h outputs">
           <group id="1h_CampbellRiver" zoom_ref="CampbellRiver" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
-            <field ref="woce" name="vovecrtz"/>
           </group>
         </file>
 
-       <file id="1h_Thalweg1" name="1h_Thalweg1" enabled=".false." description="Select thalweg points 1h outputs">
+       <file id="1h_Thalweg1" name="1h_Thalweg1" enabled=".true." description="Select thalweg points 1h outputs">
           <group id="1h_Thalweg1" zoom_ref="thalweg1" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
-            <field ref="woce" name="vovecrtz"/>
           </group>
        </file>  
 
-      <file id="1h_Thalweg2" name="1h_Thalweg2" enabled=".false." description="Select thalweg points 1h outputs">
+      <file id="1h_Thalweg2" name="1h_Thalweg2" enabled=".true." description="Select thalweg points 1h outputs">
           <group id="1h_Thalweg2" zoom_ref="thalweg2" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
-            <field ref="woce" name="vovecrtz"/>
           </group>
       </file>
-      <file id="1h_Thalweg3" name="1h_Thalweg3" enabled=".false." description="Select thalweg points 1h outputs">
+      <file id="1h_Thalweg3" name="1h_Thalweg3" enabled=".true." description="Select thalweg points 1h outputs">
           <group id="1h_Thalweg3" zoom_ref="thalweg3" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
-            <field ref="woce" name="vovecrtz"/>
           </group>
       </file>
-      <file id="1h_Thalweg4" name="1h_Thalweg4" enabled=".false." description="Select thalweg points 1h outputs">
+      <file id="1h_Thalweg4" name="1h_Thalweg4" enabled=".true." description="Select thalweg points 1h outputs">
           <group id="1h_Thalweg4" zoom_ref="thalweg4" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
-            <field ref="woce" name="vovecrtz"/>
           </group>
       </file>
-      <file id="1h_Thalweg5" name="1h_Thalweg5" enabled=".false." description="Select thalweg points 1h outputs">
+      <file id="1h_Thalweg5" name="1h_Thalweg5" enabled=".true." description="Select thalweg points 1h outputs">
 	  <group id="1h_Thalweg5" zoom_ref="thalweg5" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
-            <field ref="woce" name="vovecrtz"/>
           </group>
       </file>
-      <file id="1h_Thalweg6" name="1h_Thalweg6" enabled=".false." description="Select thalweg points 1h outputs">
+      <file id="1h_Thalweg6" name="1h_Thalweg6" enabled=".true." description="Select thalweg points 1h outputs">
           <group id="1h_Thalweg6" zoom_ref="thalweg6" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
-            <field ref="woce" name="vovecrtz"/>
           </group>
       </file>
 
-       <file id="1h_Plume" name="1h_Plume" enabled=".false." description="Select plume points 1h outputs">
+       <file id="1h_Plume" name="1h_Plume" enabled=".true." description="Select plume points 1h outputs">
           <group id="1h_Plume" zoom_ref="plume" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
-            <field ref="woce" name="vovecrtz"/>
           </group>
         </file>
       </group>
@@ -182,9 +168,6 @@
         <file id="2h_grid_V" name="auto">
           <field ref="voce" name="vomecrty"/>
           <field ref="vtau" name="v_wind_stress"/>
-        </file>
-        <file id="2h_grid_W" name="auto">
-          <field ref="woce" name="vovecrtz"/>
         </file>
       </group>
 
@@ -207,9 +190,6 @@
           <field ref="voce" name="vomecrty"/>
           <field ref="vtau" name="v_wind_stress"/>
         </file>
-        <file id="4h_grid_W" name="auto">
-          <field ref="woce" name="vovecrtz"/>
-        </file>
       </group>
 
       <group id="6h" output_freq="21600" output_level="10" enabled=".false.">
@@ -227,9 +207,6 @@
         <file id="6h_grid_V" name="auto">
           <field ref="voce" name="vomecrty"/>
           <field ref="vtau" name="v_wind_stress"/>
-        </file>
-        <file id="6h_grid_W" name="auto">
-          <field ref="woce" name="vovecrtz"/>
         </file>
       </group>
 
