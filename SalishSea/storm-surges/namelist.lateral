@@ -20,7 +20,7 @@
                               ! = 1, bdy data are read in 'bdydata   .nc' files
                               ! = 2, use tidal harmonic forcing data from files
                               ! = 3, use external data AND tidal harmonic forcing
-    nn_dyn3d       =  0       ! boundary conditions for baroclinic velocities
+    nn_dyn3d       =  3       ! boundary conditions for baroclinic velocities
     nn_dyn3d_dta   =  0       ! = 0, bdy data are equal to the initial state
                               ! = 1, bdy data are read in 'bdydata   .nc' files
     nn_tra         =  1       ! boundary conditions for T and S
@@ -46,9 +46,9 @@
 !-----------------------------------------------------------------------
 !         !  file name            ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
 !         !                       ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
-   bn_ssh = 'SS2_SSH_climatology',                   -1,        'sossheig', .true.,  .true.,  'yearly',  '',        ''
-   bn_u2d = 'SS2_SSH_climatology',                   -1,        'vobtcrtx', .true.,  .true.,  'yearly',  '',        ''
-   bn_v2d = 'SS2_SSH_climatology',                   -1,        'vobtcrty', .true.,  .true.,  'yearly',  '',        ''
+   bn_ssh = 'ssh/ssh',                   1,        'sossheig', .true.,  .false.,  'monthly',  '',        ''
+   bn_u2d = 'ssh/ssh',                   1,        'vobtcrtx', .true.,  .false.,  'monthly',  '',        ''
+   bn_v2d = 'ssh/ssh',                   1,        'vobtcrty', .true.,  .false.,  'monthly',  '',        ''
    bn_u3d = '',                      24,        'vozocrtx', .true.,  .false., 'daily',   '',        ''
    bn_v3d = '',                      24,        'vomecrty', .true.,  .false., 'daily',   '',        ''
    bn_tem = 'SalishSea2_Masson_DC', 168,        'votemper', .true.,  .true.,  'yearly',  '',        ''

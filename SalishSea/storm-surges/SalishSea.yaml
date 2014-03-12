@@ -27,7 +27,7 @@ grid:
 forcing:
   # If relative, paths are taken from forcing path above
   atmospheric: /ocean/dlatorne/MEOPAR/CGRF/NEMO-atmos/
-  initial conditions: initial_strat/
+  initial conditions: /ocean/dlatorne/MEOPAR/SalishSea/results/spin-up/18oct25oct
   open boundaries: open_boundaries/
   rivers: rivers/
 
