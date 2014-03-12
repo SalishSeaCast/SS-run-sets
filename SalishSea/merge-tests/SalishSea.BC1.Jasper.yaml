@@ -9,6 +9,7 @@
 #  All River Monthly run-off forcing
 #   Atmospheric forcing with CGRF products
 #     Constrained to no solid precipitation
+# Using relaxation for baroclinic BCs. 
 
 config_name: SalishSea
 
@@ -35,7 +36,7 @@ namelists:
   - namelist.time
   - namelist.domain
   - namelist.surface
-  - namelist.lateral.no_BC
+  - namelist.lateral.BC1
   - namelist.bottom
   - namelist.tracers
   - namelist.dynamics
