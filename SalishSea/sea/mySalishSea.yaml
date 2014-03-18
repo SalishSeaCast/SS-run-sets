@@ -28,10 +28,10 @@ forcing:
   rivers: rivers/
 
 namelists:
-  - mynamelist.time            # start on Oct 18, 1 day 
+  - mynamelist.time            # start on Oct 18, 4 hours 
   - mynamelist.domain          # TS initial conditions from restart file
   - ../namelist.surface           # CGRF, atmos pressure
-  - ../namelist.lateral            # FLA, tides files, ssh files, clim TS,DC
+  - mynamelist.lateral            # W:Tides,ssh files,clim TS,ZG N:clim TS
   - ../namelist.bottom
   - ../namelist.tracers
   - mynamelist.dynamics          # 20/20
