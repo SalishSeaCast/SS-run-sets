@@ -49,7 +49,7 @@
     nbdysegn = 1    ! north boundary segments (0=closed)
     jpjnob   = 897  ! j-index for segment
     jpindt   =  33  ! i-index for segment start
-    jpinft   =  63  ! i-index for segment end
+    jpinft   =  62  ! i-index for segment end
     nbdysegs = 0    ! south boundary segments (0=closed)
 &end
 
