@@ -12,11 +12,11 @@
 !-----------------------------------------------------------------------
     nb_bdy         = 2        ! number of open boundary sets
     ln_coords_file = .false.,.false.  ! =T : read bdy coordinates from file
-    cn_coords_file = ''       ! bdy coordinates files
+    cn_coords_file = '',''    ! bdy coordinates files
     ln_mask_file   = .false.  ! =T : read mask from file
     cn_mask_file   = ''       ! name of mask file (if ln_mask_file=.TRUE.)
-    nn_dyn2d       =  2, 0    ! boundary conditions for barotropic fields
-    nn_dyn2d_dta   =  3, 0    ! = 0, bdy data are equal to the initial state
+    nn_dyn2d       =  2, 2    ! boundary conditions for barotropic fields
+    nn_dyn2d_dta   =  3, 2    ! = 0, bdy data are equal to the initial state
                               ! = 1, bdy data are read in 'bdydata   .nc' files
                               ! = 2, use tidal harmonic forcing data from files
                               ! = 3, use external data AND tidal harmonic forcing
@@ -87,6 +87,32 @@
 !-----------------------------------------------------------------------
    !!  file name root of tidal forcing files
    filtide       = 'open_boundaries/west/tides/SalishSea2_west_tide_'
+   !!  names of tidal components used
+   tide_cpt(1) = 'Q1'
+   tide_cpt(2) = 'O1'
+   tide_cpt(3) = 'P1'
+   tide_cpt(4) = 'K1'
+   tide_cpt(5) = 'N2'
+   tide_cpt(6) = 'M2'
+   tide_cpt(7) = 'S2'
+   tide_cpt(8) = 'K2'
+   !!  phase speeds of tidal components (deg/hour)
+   tide_speed(1) = 13.398661
+   tide_speed(2) = 13.943036
+   tide_speed(3) = 14.958932
+   tide_speed(4) = 15.041069
+   tide_speed(5) = 28.439730
+   tide_speed(6) = 28.984106
+   tide_speed(7) = 30.000002
+   tide_speed(8) = 30.082138
+   !!  adjust tidal harmonics for start date of run
+   ln_tide_date  = .true.
+&end
+
+&nambdy_tide     ! tidal forcing at open boundaries
+!-----------------------------------------------------------------------
+   !!  file name root of tidal forcing files
+   filtide       = 'open_boundaries/north/tides/SalishSea2_North_tide_'
    !!  names of tidal components used
    tide_cpt(1) = 'Q1'
    tide_cpt(2) = 'O1'
