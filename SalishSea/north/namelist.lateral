@@ -24,7 +24,7 @@
     nn_dyn3d_dta   =  0, 0    ! = 0, bdy data are equal to the initial state
                               ! = 1, bdy data are read in 'bdydata   .nc' files
     nn_tra         =  1, 1    ! boundary conditions for T and S
-    nn_tra_dta     =  1, 0    ! = 0, bdy data are equal to the initial state
+    nn_tra_dta     =  1, 1    ! = 0, bdy data are equal to the initial state
                               ! = 1, bdy data are read in 'bdydata   .nc' files
     nn_rimwidth    = 10, 10    ! width of the relaxation zone
     ln_vol         = .false.  ! total volume correction (see nn_volctl parameter)
@@ -50,7 +50,7 @@
     nbdysegn = 1    ! north boundary segments (0=closed)
     jpjnob   = 897  ! j-index for segment
     jpindt   =  33  ! i-index for segment start
-    jpinft   =  63  ! i-index for segment end
+    jpinft   =  62  ! i-index for segment end
     nbdysegs = 0    ! south boundary segments (0=closed)
 &end
 
