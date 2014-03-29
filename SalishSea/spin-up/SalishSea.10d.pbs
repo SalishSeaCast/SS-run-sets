@@ -1,19 +1,19 @@
 #!/bin/bash
 
-#PBS -N SpinUp26oct4nov
+#PBS -N SpinUp10dec19dec
 #PBS -S /bin/bash
 #PBS -l procs=84
 # memory per processor
 #PBS -l pmem=2gb
-#PBS -l walltime=10:00:00
+#PBS -l walltime=15:00:00
 # email when the job [b]egins and [e]nds, or is [a]borted
 #PBS -m bea
-#PBS -M sallen@eos.ubc.ca
-#PBS -o ../SpinUp26oct4nov/stdout
-#PBS -e ../SpinUp26oct4nov/stderr
+#PBS -M dlatornell@eos.ubc.ca
+#PBS -o ../results/spin-up/10dec19dec/stdout
+#PBS -e ../results/spin-up/10dec19dec/stderr
 
 
-RESULTS_DIR=../SpinUp26oct4nov
+RESULTS_DIR=../results/spin-up/10dec19dec
 
 cd $PBS_O_WORKDIR
 echo working dir: $(pwd)
