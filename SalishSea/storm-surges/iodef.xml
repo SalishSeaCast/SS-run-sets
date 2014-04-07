@@ -86,6 +86,16 @@
           </group>
         </file>
 
+        <file id="1h_BoundaryBay" name="1h_BoundaryBay" enabled=".true." description="Bounary Bay 1h outputs">
+          <group id="1h_BoundaryBay" zoom_ref="BoundaryBay" >
+            <field ref="ssh" name="sossheig"/>
+            <field ref="toce" name="votemper"/>
+            <field ref="soce" name="vosaline"/>
+            <field ref="uoce" name="vozocrtx"/>
+            <field ref="voce" name="vomecrty"/>
+          </group>
+        </file>
+
        <file id="1h_Thalweg1" name="1h_Thalweg1" enabled=".true." description="Select thalweg points 1h outputs">
           <group id="1h_Thalweg1" zoom_ref="thalweg1" >
             <field ref="ssh" name="sossheig"/>
@@ -673,6 +683,7 @@
 	<zoom id="Victoria"  ibegin="196" jbegin="299" ni="1" nj="1" />
 	<zoom id="PatriciaBay"  ibegin="214" jbegin="352" ni="1" nj="1" />
 	<zoom id="CampbellRiver"  ibegin="125" jbegin="748" ni="1" nj="1" />
+	<zoom id="BoundaryBay"  ibegin="323" jbegin="393" ni="1" nj="1" />
           <!-- Thalweg Points -->
         <zoom id="thalweg1"  ibegin="103" jbegin="321" ni="1" nj="1" />
 	<zoom id="thalweg2"  ibegin="203" jbegin="251" ni="1" nj="1" />
