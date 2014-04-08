@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -N SpinUp1jan5jan
+#PBS -N SpinUp6jan10jan
 #PBS -S /bin/bash
 #PBS -l procs=84
 # memory per processor
@@ -9,11 +9,11 @@
 # email when the job [b]egins and [e]nds, or is [a]borted
 #PBS -m bea
 #PBS -M dlatornell@eos.ubc.ca
-#PBS -o ../results/spin-up/1jan5jan/stdout
-#PBS -e ../results/spin-up/1jan5jan/stderr
+#PBS -o ../results/spin-up/6jan10jan/stdout
+#PBS -e ../results/spin-up/6jan10jan/stderr
 
 
-RESULTS_DIR=../results/spin-up/1jan5jan
+RESULTS_DIR=../results/spin-up/6jan10jan
 
 cd $PBS_O_WORKDIR
 echo working dir: $(pwd)
@@ -28,11 +28,11 @@ mpirun ./nemo.exe
 echo "Ended run at $(date)"
 
 echo "Results gathering started at $(date)"
-$PBS_O_HOME/.local/bin/salishsea gather SalishSea*.yaml $RESULTS_DIR
+$PBS_O_HOME/.local/bin/salishsea gather --compress-restart SalishSea*.yaml $RESULTS_DIR
 chmod go+rx $RESULTS_DIR
 chmod go+r  $RESULTS_DIR/*
 echo "Results gathering ended at $(date)"
 
 echo "Scheduling cleanup of run directory"
-echo rmdir $PBS_O_WORKDIR > /tmp/1jan5jan_cleanup
-at now + 1 minutes -f /tmp/1jan5jan_cleanup 2>&1
+echo rmdir $PBS_O_WORKDIR > /tmp/6jan10jan_cleanup
+at now + 1 minutes -f /tmp/6jan10jan_cleanup 2>&1
