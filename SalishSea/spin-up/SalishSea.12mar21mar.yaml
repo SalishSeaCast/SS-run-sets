@@ -26,12 +26,12 @@ grid:
 
 forcing:
   atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos/
-  initial conditions: /home/dlatorne/MEOPAR/SalishSea/spin-up/20feb1mar/SalishSea_01097280_restart.nc
+  initial conditions: /home/dlatorne/MEOPAR/SalishSea/spin-up/2mar11mar/SalishSea_01183680_restart.nc
   open boundaries: open_boundaries/
   rivers: rivers/
 
 namelists:
-  - namelist.time.2mar11mar      # start on Mar 2, 10 days
+  - namelist.time.12mar21mar     # start on Mar 12, 10 days
   - ../namelist.domain           # dt=10s, 5 barotropic time steps per dt
   - ../namelist.surface          # CGRF, atmos pressure
   - ../namelist.lateral          # West:FLA,Tides,ssh,ZG,TS, North:FLA,Tides,TS
