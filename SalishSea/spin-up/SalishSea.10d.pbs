@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -N SpinUp22mar31mar
+#PBS -N SpinUp1apr10apr
 #PBS -S /bin/bash
 #PBS -l procs=84
 # memory per processor
@@ -10,11 +10,11 @@
 # email when the job [b]egins and [e]nds, or is [a]borted
 #PBS -m bea
 #PBS -M dlatornell@eos.ubc.ca
-#PBS -o ../results/spin-up/22mar31mar/stdout
-#PBS -e ../results/spin-up/22mar31mar/stderr
+#PBS -o ../results/spin-up/1apr10apr/stdout
+#PBS -e ../results/spin-up/1apr10apr/stderr
 
 
-RESULTS_DIR=../results/spin-up/22mar31mar
+RESULTS_DIR=../results/spin-up/1apr10apr
 
 cd $PBS_O_WORKDIR
 echo working dir: $(pwd)
@@ -35,5 +35,5 @@ chmod go+r  $RESULTS_DIR/*
 echo "Results gathering ended at $(date)"
 
 echo "Scheduling cleanup of run directory"
-echo rmdir $PBS_O_WORKDIR > /tmp/22mar31mar_cleanup
-at now + 1 minutes -f /tmp/22mar31mar_cleanup 2>&1
+echo rmdir $PBS_O_WORKDIR > /tmp/1apr10apr_cleanup
+at now + 1 minutes -f /tmp/1apr10apr_cleanup 2>&1
