@@ -23,16 +23,16 @@ grid:
 
 forcing:
   atmospheric: /ocean/dlatorne/MEOPAR/CGRF/NEMO-atmos/
-  initial conditions: /data/sallen/MEOPAR/SalishSea/SpinUp14oct17oct/
+  initial conditions: /data/sallen/MEOPAR/SalishSea/SpinUp10dec19dec/SalishSea_00475200_restart.nc
   open boundaries: open_boundaries/
   rivers: rivers/
 
 namelists:
-  - mynamelist.time            # start on Oct 18, 4 hours 
-  - mynamelist.domain          # TS initial conditions from restart file
-  - ../namelist.surface           # CGRF, atmos pressure
-  - mynamelist.lateral            # W:Tides,ssh files,clim TS,ZG N:clim TS
+  - mynamelist20dec1min.time            # start on Jan 21, 1 min 
+  - ../namelist.domain          
+  - ../namelist.surface           
+  - mynamelist.lateral_notides            
   - ../namelist.bottom
   - ../namelist.tracers
-  - mynamelist.dynamics          # 20/20
-  - ../namelist.compute.4x4
+  - ../namelist.dynamics          # 20/20
+  - ../namelist.compute.1core
