@@ -2,13 +2,13 @@
 #
 # Salish Sea full domain with:
 #   Smoothed JdF mouth bathymetry
-#   S4-1 uniform initial T and S, depth corrected
+#   restart from spin-up
 #   Open, unstructured western boundary across Strait of Juan de Fuca
 #     Tidal forcing at mouth JdF
 #     Masson, depth corrected, open boundaries
 #  All River Monthly run-off forcing
-#  Atmospheric forcing with CGRF products
-#    Constrained to no solid precipitation
+#  Atmospheric forcing turned off
+#    M2 tides only
 
 config_name: SalishSea
 
@@ -23,16 +23,16 @@ grid:
 
 forcing:
   atmospheric: /ocean/dlatorne/MEOPAR/CGRF/NEMO-atmos/
-  initial conditions: /data/sallen/MEOPAR/SalishSea/SpinUp10dec19dec/SalishSea_00475200_restart.nc
+  initial conditions: /data/dlatorne/MEOPAR/SalishSea/results/spin-up/11apr20apr/SalishSea_01529280_restart.nc
   open boundaries: open_boundaries/
   rivers: rivers/
 
 namelists:
-  - mynamelist20dec1min.time            # start on Jan 21, 1 min 
+  - mynamelist21apr22apr.time            # start on Apr 21, 2 days 
   - ../namelist.domain          
-  - ../namelist.surface           
-  - mynamelist.lateral_notides            
+  - mynamelist.surface           
+  - mynamelist.lateral_M2only            
   - ../namelist.bottom
   - ../namelist.tracers
   - ../namelist.dynamics          # 20/20
-  - ../namelist.compute.1core
+  - ../namelist.compute.4x4
