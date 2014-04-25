@@ -22,8 +22,8 @@ grid:
   bathymetry: bathy_meter_SalishSea2.nc
 
 forcing:
-  atmospheric: /ocean/dlatorne/MEOPAR/CGRF/NEMO-atmos/
-  initial conditions: /data/dlatorne/MEOPAR/SalishSea/results/spin-up/11apr20apr/SalishSea_01529280_restart.nc
+  atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos/
+  initial conditions: /home/dlatorne/MEOPAR/SalishSea/results/spin-up/11apr20apr/SalishSea_01529280_restart.nc
   open boundaries: open_boundaries/
   rivers: rivers/
 
