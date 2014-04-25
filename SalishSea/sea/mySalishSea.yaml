@@ -35,4 +35,4 @@ namelists:
   - ../namelist.bottom
   - ../namelist.tracers
   - ../namelist.dynamics          # 20/20
-  - ../namelist.compute.4x4
+  - ../namelist.compute.6x14
