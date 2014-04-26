@@ -1,7 +1,7 @@
 # salishsea command processor run description for Salish Sea case
 #
 # Salish Sea full domain with:
-#   Stratification from dec 9 spin up file
+#   Stratification from nov spin up file
 #   Open, unstructured western boundary across Strait of Juan de Fuca
 #     Tidal forcing at north and west
 #     SSH forcing at north and west
@@ -23,13 +23,13 @@ grid:
 
 forcing:
   atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos
-  initial conditions: /home/dlatorne/MEOPAR/SalishSea/results/spin-up/30nov9dec/
+  initial conditions: /home/dlatorne/MEOPAR/SalishSea/spin-up/5nov14nov/
   open boundaries: open_boundaries/
   rivers: rivers/
 
 namelists:
-  - namelist.dec2006.time
-  - namelist.dec2006.domain
+  - namelist.nov2009.time
+  - namelist.nov2009.domain
   - namelist.surface
   - namelist.lateral
   - namelist.bottom
