@@ -28,8 +28,8 @@
 !-----------------------------------------------------------------------
 !          ! file name                          ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
 !          !                                    ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
-   sn_tem  = 'SalishSea_00388800_restart.nc', -12,            'tb', .false., .true.,  'yearly', '',        ''
-   sn_sal  = 'SalishSea_00388800_restart.nc'   , -12,         'sb', .false., .true.,  'yearly', '',        ''
+   sn_tem  = 'SalishSea_00924480_restart.nc', -12,            'tb', .false., .true.,  'yearly', '',        ''
+   sn_sal  = 'SalishSea_00924480_restart.nc'   , -12,         'sb', .false., .true.,  'yearly', '',        ''
 
    cn_dir        = 'initial_strat/'  ! directory containing initial condition files
    ln_tsd_init   = .true.            ! Initialisation of ocean T & S with T &S input data (T) or not (F)
