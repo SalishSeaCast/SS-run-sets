@@ -29,7 +29,7 @@ mpirun ./nemo.exe
 echo "Ended run at $(date)"
 
 echo "Results gathering started at $(date)"
-$PBS_O_HOME/.local/bin/salishsea gather SalishSea*.yaml $RESULTS_DIR
+$PBS_O_HOME/.local/bin/salishsea gather mySalishSea*.yaml $RESULTS_DIR
 chmod go+rx $RESULTS_DIR
 chmod go+r  $RESULTS_DIR/*
 echo "Results gathering ended at $(date)"
