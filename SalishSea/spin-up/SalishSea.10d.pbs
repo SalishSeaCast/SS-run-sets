@@ -14,7 +14,8 @@
 #PBS -e ../results/spin-up/30jun9jul/stderr
 
 
-RESULTS_DIR=../results/spin-up/30jun9jul
+RUN_ID=30jun9jul
+RESULTS_DIR=../results/spin-up/$RUN_ID
 
 cd $PBS_O_WORKDIR
 echo working dir: $(pwd)
@@ -31,10 +32,10 @@ echo "Ended run at $(date)"
 echo "Results gathering started at $(date)"
 $PBS_O_HOME/.local/bin/salishsea gather SalishSea*.yaml $RESULTS_DIR
 chmod go+rx $RESULTS_DIR
-chmod g+rw  $RESULTS_DIR/*
-chmod o+r  $RESULTS_DIR/*
+chmod g+rw $RESULTS_DIR/*
+chmod o+r $RESULTS_DIR/*
 echo "Results gathering ended at $(date)"
 
 echo "Scheduling cleanup of run directory"
-echo rmdir $PBS_O_WORKDIR > /tmp/30jun9jul_cleanup
-at now + 1 minutes -f /tmp/30jun9jul_cleanup 2>&1
+echo rmdir $PWD > /tmp/${RUN_ID}_cleanup
+at now + 1 minutes -f /tmp/${RUN_ID}_cleanup 2>&1
