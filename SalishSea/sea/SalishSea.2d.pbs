@@ -14,7 +14,8 @@
 #PBS -e ../M2only/stderr
 
 
-RESULTS_DIR=../M2only
+RUN_ID=M2only
+RESULTS_DIR=../$RUN_ID
 
 cd $PBS_O_WORKDIR
 echo working dir: $(pwd)
@@ -31,9 +32,10 @@ echo "Ended run at $(date)"
 echo "Results gathering started at $(date)"
 $PBS_O_HOME/.local/bin/salishsea gather mySalishSea*.yaml $RESULTS_DIR
 chmod go+rx $RESULTS_DIR
-chmod go+r  $RESULTS_DIR/*
+chmod g+rw $RESULTS_DIR/*
+chmod o+r $RESULTS_DIR/*
 echo "Results gathering ended at $(date)"
 
 echo "Scheduling cleanup of run directory"
-echo rmdir $PBS_O_WORKDIR > /tmp/M2only_cleanup
-at now + 1 minutes -f /tmp/M2only_cleanup 2>&1
+echo rmdir $PWD > /tmp/${RUN_ID}_cleanup
+at now + 1 minutes -f /tmp/${RUN_ID}_cleanup 2>&1

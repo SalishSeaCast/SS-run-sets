@@ -5,7 +5,8 @@
 #PBS -l procs=84
 # memory per processor
 #PBS -l pmem=2gb
-#PBS -l walltime=20:00:00
+#PBS -l walltime=12:00:00
+#PBS -l feature=X5675
 # email when the job [b]egins and [e]nds, or is [a]borted
 #PBS -m bea
 #PBS -M sallen@eos.ubc.ca
@@ -13,7 +14,8 @@
 #PBS -e ../SpinUp27oct30oct/stderr
 
 
-RESULTS_DIR=../SpinUp27oct30oct
+RUN_ID=SpinUp27oct30oct
+RESULTS_DIR=../$RUN_ID
 
 cd $PBS_O_WORKDIR
 echo working dir: $(pwd)
@@ -30,7 +32,8 @@ echo "Ended run at $(date)"
 echo "Results gathering started at $(date)"
 $PBS_O_HOME/.local/bin/salishsea gather --no-compress SalishSea*.yaml $RESULTS_DIR
 chmod go+rx $RESULTS_DIR
-chmod go+r  $RESULTS_DIR/*
+chmod go+r $RESULTS_DIR/*
+chmod o+r $RESULTS_DIR/*
 echo "Results gathering ended at $(date)"
 
 echo "Scheduling cleanup of run directory"
