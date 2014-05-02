@@ -349,7 +349,7 @@
       <group id="3h" output_freq="10800" output_level="10" enabled=".false.">
       </group>
 
-      <group id="4h" output_freq="14400" output_level="10" enabled=".true.">
+      <group id="4h" output_freq="14400" output_level="10" enabled=".false.">
         <file id="4h_grid_T" name="auto">
           <field ref="ssh" name="sossheig"/>
           <field ref="toce" name="votemper"/>
@@ -370,7 +370,7 @@
         </file>
       </group>
 
-      <group id="6h" output_freq="21600" output_level="10" enabled=".false.">
+      <group id="6h" output_freq="21600" output_level="10" enabled=".true.">
         <file id="6h_grid_T" name="auto">
           <field ref="ssh" name="sossheig"/>
           <field ref="toce" name="votemper"/>
