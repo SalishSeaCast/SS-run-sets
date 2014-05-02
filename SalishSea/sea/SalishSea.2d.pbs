@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -N M2only
+#PBS -N K1only
 #PBS -S /bin/bash
 #PBS -l procs=84
 # memory per processor
@@ -10,11 +10,11 @@
 # email when the job [b]egins and [e]nds, or is [a]borted
 #PBS -m bea
 #PBS -M sallen@eos.ubc.ca
-#PBS -o ../M2only/stdout
-#PBS -e ../M2only/stderr
+#PBS -o ../K1only/stdout
+#PBS -e ../K1only/stderr
 
 
-RUN_ID=M2only
+RUN_ID=K1only
 RESULTS_DIR=../$RUN_ID
 
 cd $PBS_O_WORKDIR
@@ -39,3 +39,4 @@ echo "Results gathering ended at $(date)"
 echo "Scheduling cleanup of run directory"
 echo rmdir $PWD > /tmp/${RUN_ID}_cleanup
 at now + 1 minutes -f /tmp/${RUN_ID}_cleanup 2>&1
+
