@@ -12,157 +12,157 @@
       <group id="15m_tides" output_freq="900" output_level="10" enable=".true.">
         <file id="PortRenfrew" name="PortRenfrew" enabled=".true." description="Port Renfrew 15m tides">
           <group id="PortRenfrew" zoom_ref="PortRenfrew">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="SheringhamPoint" name="SheringhamPoint" enabled=".true." description="15min interval SSH for tides">
           <group id="SheringhamPoint" zoom_ref="SheringhamPoint">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="Sooke" name="Sooke" enabled=".true." description="15min interval SSH for tides">
           <group id="Sooke" zoom_ref="Sooke">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="PedderBay" name="PedderBay" enabled=".true." description="15min interval SSH for tides">
           <group id="PedderBay" zoom_ref="PedderBay">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="Esquimalt" name="Esquimalt" enabled=".true." description="15min interval SSH for tides">
           <group id="Esquimalt" zoom_ref="Esquimalt">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="Victoria" name="Victoria" enabled=".true." description="15min interval SSH for tides">
           <group id="Victoria" zoom_ref="Victoria">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="CloverPoint" name="CloverPoint" enabled=".true." description="15min interval SSH for tides">
           <group id="CloverPoint" zoom_ref="CloverPoint">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="FinnertyCove" name="FinnertyCove" enabled=".true." description="15min interval SSH for tides">
           <group id="FinnertyCove" zoom_ref="FinnertyCove">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="PortTownsend" name="PortTownsend" enabled=".true." description="15min interval SSH for tides">
           <group id="PortTownsend" zoom_ref="PortTownsend">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="FulfordHarbour" name="FulfordHarbour" enabled=".true." description="15min interval SSH for tides">
           <group id="FulfordHarbour" zoom_ref="FulfordHarbour">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="PatosIsland" name="PatosIsland" enabled=".true." description="15min interval SSH for tides">
           <group id="PatosIsland" zoom_ref="PatosIsland">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="TumboChannel" name="TumboChannel" enabled=".true." description="15min interval SSH for tides">
           <group id="TumboChannel" zoom_ref="TumboChannel">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="WhalerBay" name="WhalerBay" enabled=".true." description="15min interval SSH for tides">
           <group id="WhalerBay" zoom_ref="WhalerBay">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="Tsawwassen" name="Tsawwassen" enabled=".true." description="15min interval SSH for tides">
           <group id="Tsawwassen" zoom_ref="Tsawwassen">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="Sandheads" name="Sandheads" enabled=".true." description="15min interval SSH for tides">
           <group id="Sandheads" zoom_ref="Sandheads">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="PointGrey" name="PointGrey" enabled=".true." description="15min interval SSH for tides">
           <group id="PointGrey" zoom_ref="PointGrey">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="PointAtkinson" name="PointAtkinson" enabled=".true." description="15min interval SSH for tides">
           <group id="PointAtkinson" zoom_ref="PointAtkinson">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="GibsonsLanding" name="GibsonsLanding" enabled=".true." description="15min interval SSH for tides">
           <group id="GibsonsLanding" zoom_ref="GibsonsLanding">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="HalfmoonBay" name="HalfmoonBay" enabled=".true." description="15min interval SSH for tides">
           <group id="HalfmoonBay" zoom_ref="HalfmoonBay">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="IrvinesLanding" name="IrvinesLanding" enabled=".true." description="15min interval SSH for tides">
           <group id="IrvinesLanding" zoom_ref="IrvinesLanding">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="PowellRiver" name="PowellRiver" enabled=".true." description="15min interval SSH for tides">
           <group id="PowellRiver" zoom_ref="PowellRiver">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="Lund" name="Lund" enabled=".true." description="15min interval SSH for tides">
           <group id="Lund" zoom_ref="Lund">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="TwinIslets" name="TwinIslets" enabled=".true." description="15min interval SSH for tides">
           <group id="TwinIslets" zoom_ref="TwinIslets">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="CampbellRiver" name="CampbellRiver" enabled=".true." description="15min interval SSH for tides">
           <group id="CampbellRiver" zoom_ref="CampbellRiver">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="MaudeIslandE" name="MaudeIslandE" enabled=".true." description="15min interval SSH for tides">
           <group id="MaudeIslandE" zoom_ref="MaudeIslandE">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="NympheCove" name="NympheCove" enabled=".true." description="15min interval SSH for tides">
           <group id="NympheCove" zoom_ref="NympheCove">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="SeymourNarrows" name="SeymourNarrows" enabled=".true." description="15min interval SSH for tides">
           <group id="SeymourNarrows" zoom_ref="SeymourNarrows">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="BrownBay" name="BrownBay" enabled=".true." description="15min interval SSH for tides">
           <group id="BrownBay" zoom_ref="BrownBay">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="ChathamPoint" name="ChathamPoint" enabled=".true." description="15min interval SSH for tides">
           <group id="ChathamPoint" zoom_ref="ChathamPoint">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="KelseyBay" name="KelseyBay" enabled=".true." description="15min interval SSH for tides">
           <group id="KelseyBay" zoom_ref="KelseyBay">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
         <file id="YorkeIsland" name="YorkeIsland" enabled=".true." description="15min interval SSH for tides">
           <group id="YorkeIsland" zoom_ref="YorkeIsland">
-             <field ref="ssh" name=sossheig"/>
+             <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
       </group>
