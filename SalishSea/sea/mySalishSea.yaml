@@ -8,7 +8,7 @@
 #     Masson, depth corrected, open boundaries
 #  All River Monthly run-off forcing
 #  Atmospheric forcing turned off
-#    M2 tides only
+#    K1 tides only
 
 config_name: SalishSea
 
@@ -31,7 +31,7 @@ namelists:
   - mynamelist21apr22apr.time            # start on Apr 21, 2 days 
   - ../namelist.domain          
   - mynamelist.surface           
-  - mynamelist.lateral_M2only            
+  - mynamelist.lateral_K1only            
   - ../namelist.bottom
   - ../namelist.tracers
   - ../namelist.dynamics          # 20/20
