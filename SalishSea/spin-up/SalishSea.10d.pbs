@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -N SpinUp29aug7sep
+#PBS -N SpinUp8sep17sep
 #PBS -S /bin/bash
 #PBS -l procs=84
 # memory per processor
@@ -10,11 +10,11 @@
 # email when the job [b]egins and [e]nds, or is [a]borted
 #PBS -m bea
 #PBS -M dlatornell@eos.ubc.ca
-#PBS -o ../results/spin-up/29aug7sep/stdout
-#PBS -e ../results/spin-up/29aug7sep/stderr
+#PBS -o ../results/spin-up/8sep17sep/stdout
+#PBS -e ../results/spin-up/8sep17sep/stderr
 
 
-RUN_ID=29aug7sep
+RUN_ID=8sep17sep
 RESULTS_DIR=../results/spin-up/$RUN_ID
 
 cd $PBS_O_WORKDIR
