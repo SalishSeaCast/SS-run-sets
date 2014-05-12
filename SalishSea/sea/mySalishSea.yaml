@@ -2,13 +2,20 @@
 #
 # Salish Sea full domain with:
 #   Smoothed JdF mouth bathymetry
-#   restart from spin-up
+#   S4-1 uniform initial T and S, depth corrected
 #   Open, unstructured western boundary across Strait of Juan de Fuca
 #     Tidal forcing at mouth JdF
 #     Masson, depth corrected, open boundaries
 #  All River Monthly run-off forcing
+<<<<<<< variant A
 #  Atmospheric forcing turned off
 #    M2/K1 tides only
+>>>>>>> variant B
+#  Atmospheric forcing with CGRF products
+#    Constrained to no solid precipitation
+####### Ancestor
+#  Atmospheric forcing turned off
+#    M2 tides on======= end
 
 config_name: SalishSea
 
@@ -22,17 +29,37 @@ grid:
   bathymetry: bathy_meter_SalishSea2.nc
 
 forcing:
-  atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos/
-  initial conditions: /home/dlatorne/MEOPAR/SalishSea/results/spin-up/11apr20apr/SalishSea_01529280_restart.nc
+  atmospheric: /ocean/dlatorne/MEOPAR/CGRF/NEMO-atmos/
+  initial conditions: /data/sallen/MEOPAR/SalishSea/SpinUp10dec19dec/SalishSea_00475200_restart.nc
   open boundaries: open_boundaries/
   rivers: rivers/
 
 namelists:
+<<<<<<< variant A
   - mynamelist21apr25apr.time            # start on Apr 21, 5 days 
+>>>>>>> variant B
+  - mynamelist20dec1min_resettides.time            # start on Dec 20, 1 min 
+####### Ancestor
+  - mynamelist21apr22apr.time            # start on Apr 21, 2 days 
+======= end
   - ../namelist.domain          
+<<<<<<< variant A
   - mynamelist.surface           
   - mynamelist.lateral_M2K1only            
+>>>>>>> variant B
+  - ../namelist.surface           
+  - ../namelist.lateral            
+####### Ancestor
+  - mynamelist.surface           
+  - mynamelist.lateral_M2only            
+======= end
   - ../namelist.bottom
   - ../namelist.tracers
   - ../namelist.dynamics          # 20/20
+<<<<<<< variant A
   - ../namelist.compute.6x14
+>>>>>>> variant B
+  - ../namelist.compute.1core
+####### Ancestor
+  - ../namelist.compute.4x4
+======= end
