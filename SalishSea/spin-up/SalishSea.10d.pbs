@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -N SpinUp8oct17oct
+#PBS -N SpinUp18oct27oct
 #PBS -S /bin/bash
 #PBS -l procs=84
 # memory per processor
@@ -10,11 +10,11 @@
 # email when the job [b]egins and [e]nds, or is [a]borted
 #PBS -m bea
 #PBS -M dlatornell@eos.ubc.ca
-#PBS -o ../results/spin-up/8oct17oct/stdout
-#PBS -e ../results/spin-up/8oct17oct/stderr
+#PBS -o ../results/spin-up/18oct27oct/stdout
+#PBS -e ../results/spin-up/18oct27oct/stderr
 
 
-RUN_ID=8oct17oct
+RUN_ID=18oct27oct
 RESULTS_DIR=../results/spin-up/$RUN_ID
 
 cd $PBS_O_WORKDIR
@@ -30,7 +30,7 @@ mpirun ./nemo.exe
 echo "Ended run at $(date)"
 
 echo "Results gathering started at $(date)"
-$PBS_O_HOME/.local/bin/salishsea gather SalishSea*.yaml $RESULTS_DIR
+$PBS_O_HOME/.local/bin/salishsea gather --no-compress SalishSea*.yaml $RESULTS_DIR
 chmod go+rx $RESULTS_DIR
 chmod g+rw $RESULTS_DIR/*
 chmod o+r $RESULTS_DIR/*
