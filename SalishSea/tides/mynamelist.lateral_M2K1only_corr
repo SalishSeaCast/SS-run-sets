@@ -83,7 +83,7 @@
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
    !!  file name root of tidal forcing files
-   filtide       = 'open_boundaries/west/tides/SalishSea2_west_tide_'
+   filtide       = 'open_boundaries/west/tides/SalishSea2_corr_west_tide_'
    !!  names of tidal components used
    tide_cpt(1) = 'K1'
    tide_cpt(2) = 'M2'

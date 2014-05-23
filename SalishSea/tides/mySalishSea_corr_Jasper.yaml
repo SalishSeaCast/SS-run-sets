@@ -32,7 +32,7 @@ namelists:
   - ../namelist.domain          
   - mynamelist.surface           
   - mynamelist.lateral_M2K1only_corr           
-  - ../namelist.bottom
+  - namelist.bottom_reduce
   - ../namelist.tracers
-  - namelist.dynamics_nu15          # 20/20
+  - ../namelist.dynamics          # 20/20
   - ../namelist.compute.6x14
