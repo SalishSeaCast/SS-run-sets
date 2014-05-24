@@ -3,7 +3,7 @@
 # Salish Sea full domain with:
 #   Stratification from nov spin up file
 #   Open, unstructured western boundary across Strait of Juan de Fuca
-#     Tidal forcing at north and west
+#     Tidal forcing at north and west, flux corrected and phase shifted
 #     SSH forcing at north and west
 #     No temperature and salinity forcing
 #   Monthly river run-off
@@ -23,16 +23,16 @@ grid:
 
 forcing:
   atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos
-  initial conditions: /home/dlatorne/MEOPAR/SalishSea/spin-up/5nov14nov/
+  initial conditions: /home/dlatorne/MEOPAR/SalishSea/spin-up/31jan9feb/
   open boundaries: open_boundaries/
   rivers: rivers/
 
 namelists:
-  - namelist.nov2009.time
-  - namelist.nov2009.domain
+  - namelist.feb2006.time
+  - namelist.feb2006.domain
   - namelist.surface
-  - namelist.lateral
-  - namelist.bottom
+  - namelist.lateral.corr_tides #new northern and western tides
+  - namelist.bottom_reduce #bf=1e-3
   - namelist.tracers
   - namelist.dynamics
   - namelist.compute.6x14
