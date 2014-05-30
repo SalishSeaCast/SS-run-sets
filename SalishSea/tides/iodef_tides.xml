@@ -165,6 +165,14 @@
              <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
+	<file id="CODAR" name="CODAR" enabled=".true." description="15min interval SSH/U/V for tides">
+          <group id="CODAR" zoom_ref="CODAR">
+            <field ref="ssh" name="sossheig"/>
+            <field ref="soce" name="vosaline"/>
+            <field ref="uoce" name="vozocrtx"/>
+            <field ref="voce" name="vomecrty"/>
+          </group>
+        </file> 
       </group>
 
       <group id="1h" output_freq="3600" output_level="10" enabled=".false.">
@@ -895,6 +903,8 @@
 	<zoom id="ChathamPoint" jbegin="818" ibegin="131"  ni="1" nj="1" />
 	<zoom id="KelseyBay" jbegin="867" ibegin="65"  ni="1" nj="1" />
 	<zoom id="YorkeIsland" jbegin="878" ibegin="67"  ni="1" nj="1" />
+          <!-- Tide Regions -->
+        <zoom id="CODAR" jbegin="381" ibegin="241" ni="80" nj="80" /> 
 </grid>
 
       <grid id="grid_U" description="grid U" >
