@@ -48,7 +48,7 @@
    sn_apr = 'slp',     1,           'atmpres', .true.,  .false., 'daily', 'weights-CGRF.nc', ''
 
    cn_dir      = 'NEMO-atmos/'  ! directory containing atmospheric forcing files
-   ln_apr_obc  = .true.         ! inverse barometer added to OBC ssh data
+   ln_apr_obc  = .false.         ! inverse barometer added to OBC ssh data
 &end
 
 &namsbc_rnf    !   runoffs namelist surface boundary condition
