@@ -34,5 +34,5 @@ namelists:
   - mynamelist.lateral_M2K1only_corr           
   - namelist.bottom_reduce
   - ../namelist.tracers
-  - mynamelist.dynamics2010          # 20/10=EVD
+  - mynamelist.dynamics20N          # 20/No EVD
   - ../namelist.compute.6x14
