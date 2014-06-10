@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -N TidesM2PhaseEVD10
+#PBS -N TidesEVDN
 #PBS -S /bin/bash
 #PBS -l procs=84
 # memory per processor
@@ -10,11 +10,11 @@
 # email when the job [b]egins and [e]nds, or is [a]borted
 #PBS -m bea
 #PBS -M sallen@eos.ubc.ca
-#PBS -o ../TidesM2PhaseEVD10/stdout
-#PBS -e ../TidesM2PhaseEVD10/stderr
+#PBS -o ../TidesEVDN/stdout
+#PBS -e ../TidesEVDN/stderr
 
 
-RUN_ID=TidesM2PhaseEVD10
+RUN_ID=TidesEVDN
 RESULTS_DIR=../$RUN_ID
 
 cd $PBS_O_WORKDIR
@@ -30,7 +30,7 @@ mpirun ./nemo.exe
 echo "Ended run at $(date)"
 
 echo "Results gathering started at $(date)"
-$PBS_O_HOME/.local/bin/salishsea gather --compress-restart SalishSea*.yaml $RESULTS_DIR
+$PBS_O_HOME/.local/bin/salishsea gather --compress-restart mySalishSea*.yaml $RESULTS_DIR
 chmod go+rx $RESULTS_DIR
 chmod go+r $RESULTS_DIR/*
 chmod o+r $RESULTS_DIR/*
