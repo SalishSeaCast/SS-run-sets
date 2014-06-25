@@ -12,6 +12,9 @@
 
 config_name: SalishSea
 
+run_id: feb2006
+walltime: 10:00:00
+
 paths:
   NEMO-code: ../../../NEMO-code/
   forcing: ../../../NEMO-forcing/
