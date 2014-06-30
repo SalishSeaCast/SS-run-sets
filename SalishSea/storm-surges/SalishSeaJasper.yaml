@@ -14,6 +14,7 @@ config_name: SalishSea
 
 run_id: feb2006
 walltime: 10:00:00
+email: nsoontie@eos.ubc.ca
 
 paths:
   NEMO-code: ../../../NEMO-code/
