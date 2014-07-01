@@ -117,7 +117,47 @@
         </file>
 
         <file id="1h_NeahBay" name="1h_NeahBay" enabled=".true." description="Neah Bay 1h outputs">
-          <group id="1h_NeahBay" zoom_ref="Neah Bay" >
+          <group id="1h_NeahBay" zoom_ref="NeahBay" >
+            <field ref="ssh" name="sossheig"/>
+            <field ref="toce" name="votemper"/>
+            <field ref="soce" name="vosaline"/>
+            <field ref="uoce" name="vozocrtx"/>
+            <field ref="voce" name="vomecrty"/>
+          </group>
+        </file>
+
+        <file id="1h_PortTownsend" name="1h_PortTownsend" enabled=".true." description="Port Townsend 1h outputs">
+          <group id="1h_PortTownsend" zoom_ref="PortTownsend" >
+            <field ref="ssh" name="sossheig"/>
+            <field ref="toce" name="votemper"/>
+            <field ref="soce" name="vosaline"/>
+            <field ref="uoce" name="vozocrtx"/>
+            <field ref="voce" name="vomecrty"/>
+          </group>
+        </file>
+
+        <file id="1h_CherryPoint" name="1h_CherryPoint" enabled=".true." description="Cherry Point 1h outputs">
+          <group id="1h_CherryPoint" zoom_ref="CherryPoint" >
+            <field ref="ssh" name="sossheig"/>
+            <field ref="toce" name="votemper"/>
+            <field ref="soce" name="vosaline"/>
+            <field ref="uoce" name="vozocrtx"/>
+            <field ref="voce" name="vomecrty"/>
+          </group>
+        </file>
+
+        <file id="1h_FridayHarbor" name="1h_FridayHarbor" enabled=".true." description="Friday Harbor 1h outputs">
+          <group id="1h_FridayHarbor" zoom_ref="FridayHarbor" >
+            <field ref="ssh" name="sossheig"/>
+            <field ref="toce" name="votemper"/>
+            <field ref="soce" name="vosaline"/>
+            <field ref="uoce" name="vozocrtx"/>
+            <field ref="voce" name="vomecrty"/>
+          </group>
+        </file>
+
+        <file id="1h_PortAngeles" name="1h_PortAngeles" enabled=".true." description="Port Angeles 1h outputs">
+          <group id="1h_PortAngeles" zoom_ref="PortAngeles" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
@@ -717,6 +757,10 @@
 	<zoom id="WhiteRock"  ibegin="354" jbegin="375" ni="1" nj="1" />
 	<zoom id="CrescentBeach"  ibegin="345" jbegin="385" ni="1" nj="1" />
 	<zoom id="NeahBay"  ibegin="12" jbegin="381" ni="1" nj="1" />
+	<zoom id="PortTownsend" jbegin="204" ibegin="255"  ni="1" nj="1" />
+	<zoom id="CherryPoint"  ibegin="344" jbegin="343" ni="1" nj="1" />
+	<zoom id="FridayHarbor"  ibegin="268" jbegin="299" ni="1" nj="1" />
+	<zoom id="PortAngeles"  ibegin="156" jbegin="249" ni="1" nj="1" />
           <!-- Thalweg Points -->
         <zoom id="thalweg1"  ibegin="103" jbegin="321" ni="1" nj="1" />
 	<zoom id="thalweg2"  ibegin="203" jbegin="251" ni="1" nj="1" />
