@@ -34,8 +34,8 @@ forcing:
 namelists:
   - namelist.feb2006.time
   - namelist.feb2006.domain
-  - namelist.surface
-  - namelist.lateral.surgeonly #new northern and western tides
+  - namelist.surface.riversonly
+  - namelist.lateral.riversonly #new northern and western tides
   - namelist.bottom_reduce #bf=1e-3
   - namelist.tracers
   - namelist.dynamics
