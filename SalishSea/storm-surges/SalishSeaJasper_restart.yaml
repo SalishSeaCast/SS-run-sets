@@ -12,7 +12,7 @@
 
 config_name: SalishSea
 
-run_id: feb2006
+run_id: dec2006
 walltime: 10:00:00
 email: nsoontie@eos.ubc.ca
 
@@ -27,12 +27,12 @@ grid:
 
 forcing:
   atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos
-  initial conditions: /home/dlatorne/MEOPAR/SalishSea/spin-up/7dec16dec/
+  initial conditions: /home/nksoonti/MEOPAR/SalishSea/results/storm_surge/tide_fix/dec2006/all_forcing/SalishSea_00025920_restart.nc
   open boundaries: open_boundaries/
   rivers: rivers/
 
 namelists:
-  - namelist.dec2006.time
+  - namelist.dec2006.rtime
   - namelist.dec2006.domain
   - namelist.surface
   - namelist.lateral.corr_tides #new northern and western tides
