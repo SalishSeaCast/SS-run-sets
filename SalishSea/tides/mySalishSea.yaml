@@ -12,6 +12,11 @@
 
 config_name: SalishSea
 
+# qsub/PBS/TORQUE commands
+run_id: Cd10
+walltime: 2:30:00
+email: sallen@eos.ubc.ca
+
 paths:
   NEMO-code: ../../../NEMO-code/
   forcing: ../../../NEMO-forcing/
@@ -23,7 +28,7 @@ grid:
 
 forcing:
   atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos/
-  initial conditions: /home/dlatorne/MEOPAR/SalishSea/results/spin-up/11apr20apr/SalishSea_01529280_restart.nc
+  initial conditions: /home/dlatorne/MEOPAR/SalishSea/spin-up/11apr20apr/SalishSea_01529280_restart.nc
   open boundaries: open_boundaries/
   rivers: rivers/
 
@@ -31,8 +36,8 @@ namelists:
   - mynamelist21apr25apr.time            # start on Apr 21, 5 days 
   - ../namelist.domain          
   - mynamelist.surface           
-  - mynamelist.lateral_M2K1only            
+  - Vary_M2_velocity_phase/mynamelist.lateral.Cd10
   - ../namelist.bottom
   - ../namelist.tracers
-  - ../namelist.dynamics          # 20/20
-  - ../namelist.compute.6x14
+  - mynamelist.dynamics15N          # 15/0
+  - ../namelist.compute.12x27
