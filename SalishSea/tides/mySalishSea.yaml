@@ -13,7 +13,7 @@
 config_name: SalishSea
 
 # qsub/PBS/TORQUE commands
-run_id: Cu30
+run_id: RC_amp
 walltime: 2:30:00
 email: sallen@eos.ubc.ca
 
@@ -36,7 +36,7 @@ namelists:
   - mynamelist21apr25apr.time            # start on Apr 21, 5 days 
   - ../namelist.domain          
   - mynamelist.surface           
-  - Vary_M2_velocity_phase/mynamelist.lateral.Cu30
+  - Recenter_M2_amp_phase/mynamelist.lateral.RC_amp
   - ../namelist.bottom
   - ../namelist.tracers
   - mynamelist.dynamics15N          # 15/0
