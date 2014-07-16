@@ -14,7 +14,7 @@ config_name: SalishSea
 
 # qsub/PBS/TORQUE commands
 run_id: CBase_FTK1
-walltime: 2:30:00
+walltime: 3:00:00
 email: sallen@eos.ubc.ca
 
 paths:
