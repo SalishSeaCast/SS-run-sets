@@ -16,9 +16,9 @@ run_id: TidesM2PhaseEVD3
 walltime: 1:00:00
 
 paths:
-  NEMO-code: ../../../NEMO-code/
-  forcing: ../../../NEMO-forcing/
-  runs directory: ../../../SalishSea/
+  NEMO-code: /home/dlatorne/MEOPAR/NEMO-code/
+  forcing: /home/dlatorne/MEOPAR/NEMO-forcing/
+  runs directory: /home/dlatorne/MEOPAR/SalishSea/
 
 grid:
   coordinates: coordinates_seagrid_SalishSea.nc
@@ -32,10 +32,10 @@ forcing:
 
 namelists:
   - namelist.time.21apr-6h         # start on Apr 21, 6h
-  - ../namelist.domain
+  - ../../namelist.domain
   - namelist.surface.no_atmos
   - namelist.lateral.M2K1only_corr
   - namelist.bottom.bfri2.1e-3
-  - ../namelist.tracers
+  - ../../namelist.tracers
   - namelist.dynamics.evd3          # evd = 3
-  - ../namelist.compute.12x27
+  - ../../namelist.compute.12x27
