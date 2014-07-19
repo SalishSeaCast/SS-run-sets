@@ -407,16 +407,12 @@
           <field ref="ssh" name="sossheig"/>
           <field ref="toce" name="votemper"/>
           <field ref="soce" name="vosaline"/>
-          <field ref="rain" name="rain_rate"/>
-          <field ref="snowpre" name="snow_rate"/>
         </file>
         <file id="2d_grid_U" name="auto">
           <field ref="uoce" name="vozocrtx"/>
-          <field ref="utau" name="u_wind_stress"/>
         </file>
         <file id="2d_grid_V" name="auto">
           <field ref="voce" name="vomecrty"/>
-          <field ref="vtau" name="v_wind_stress"/>
         </file>
         <file id="2d_grid_W" name="auto">
           <field ref="woce" name="vovecrtz"/>
