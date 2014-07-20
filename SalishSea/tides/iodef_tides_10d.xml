@@ -403,18 +403,18 @@
       </group>
 
       <group id="2d" output_freq="172800" output_level="10" enabled=".true.">
-        <file id="2d_grid_T" name="auto">
+        <file id="2d_grid_T" name="2d_grid_T">
           <field ref="ssh" name="sossheig"/>
           <field ref="toce" name="votemper"/>
           <field ref="soce" name="vosaline"/>
         </file>
-        <file id="2d_grid_U" name="auto">
+        <file id="2d_grid_U" name="2d_grid_U">
           <field ref="uoce" name="vozocrtx"/>
         </file>
-        <file id="2d_grid_V" name="auto">
+        <file id="2d_grid_V" name="2d_grid_V">
           <field ref="voce" name="vomecrty"/>
         </file>
-        <file id="2d_grid_W" name="auto">
+        <file id="2d_grid_W" name="2d_grid_W">
           <field ref="woce" name="vovecrtz"/>
         </file>
       </group>
