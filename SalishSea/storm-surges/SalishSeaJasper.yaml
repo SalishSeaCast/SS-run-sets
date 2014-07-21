@@ -36,7 +36,7 @@ namelists:
   - namelist.nov2009.domain
   - namelist.surface
   - namelist.lateral.corr_tides #new northern and western tides
-  - namelist.bottom_reduce #bf=1e-3
+  - namelist.bottom.3 #bf=3e-3
   - namelist.tracers
   - namelist.dynamics
   - namelist.compute.12x27
