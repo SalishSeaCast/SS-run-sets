@@ -13,7 +13,7 @@
 config_name: SalishSea
 
 # qsub/PBS/TORQUE commands
-run_id: CBase_RC_wO1
+run_id: Flux_RC3_wO1
 walltime: 6:00:00
 email: sallen@eos.ubc.ca
 
@@ -36,7 +36,7 @@ namelists:
   - mynamelist21apr30apr.time            # start on Apr 21, 5 days 
   - ../namelist.domain          
   - mynamelist.surface           
-  - CBase_RC/mynamelist.lateral_CBase_RC_wO1
+  - M2_Flux/mynamelist.lateral_Flux_RC3_wO1
   - ../namelist.bottom
   - ../namelist.tracers
   - mynamelist.dynamics15N          # 15/0
