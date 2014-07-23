@@ -38,5 +38,5 @@ namelists:
   - namelist.lateral.corr_tides #new northern and western tides
   - namelist.bottom_reduce #bf=3e-3
   - namelist.tracers
-  - namelist.dynamics.nu50
+  - namelist.dynamics
   - namelist.compute.6x14
