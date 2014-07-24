@@ -100,6 +100,11 @@
              <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
+        <file id="WinchelseaIs" name="WinchelseaIs" enabled=".true." description="15min interval SSH for tides">
+          <group id="WinchelseaIs" zoom_ref="WinchelseaIs">
+             <field ref="ssh" name="sossheig"/>
+          </group>
+	</file>
         <file id="HalfmoonBay" name="HalfmoonBay" enabled=".true." description="15min interval SSH for tides">
           <group id="HalfmoonBay" zoom_ref="HalfmoonBay">
              <field ref="ssh" name="sossheig"/>
@@ -112,6 +117,11 @@
 	</file>
         <file id="PowellRiver" name="PowellRiver" enabled=".true." description="15min interval SSH for tides">
           <group id="PowellRiver" zoom_ref="PowellRiver">
+             <field ref="ssh" name="sossheig"/>
+          </group>
+	</file>
+        <file id="LittleRiver" name="LittleRiver" enabled=".true." description="15min interval SSH for tides">
+          <group id="LittleRiver" zoom_ref="LittleRiver">
              <field ref="ssh" name="sossheig"/>
           </group>
 	</file>
@@ -908,9 +918,11 @@
 	<zoom id="PointGrey" jbegin="454" ibegin="317"  ni="1" nj="1" />
 	<zoom id="PointAtkinson" jbegin="469" ibegin="330"  ni="1" nj="1" />
 	<zoom id="GibsonsLanding" jbegin="499" ibegin="301"  ni="1" nj="1" />
+        <zoom id="WinchelseaIs" jbegin="522" ibegin="203" ni="1" nj="1" />
 	<zoom id="HalfmoonBay" jbegin="551" ibegin="254"  ni="1" nj="1" />
 	<zoom id="IrvinesLanding" jbegin="584" ibegin="249"  ni="1" nj="1" />
 	<zoom id="PowellRiver" jbegin="664" ibegin="205"  ni="1" nj="1" />
+        <zoom id="LittleRiver" jbegin="673" ibegin="140" ni="1" nj="1" />
 	<zoom id="Lund" jbegin="701" ibegin="187"  ni="1" nj="1" />
 	<zoom id="TwinIslets" jbegin="723" ibegin="168"  ni="1" nj="1" />
 	<zoom id="CampbellRiver" jbegin="748" ibegin="126"  ni="1" nj="1" />
