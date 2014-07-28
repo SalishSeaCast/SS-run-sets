@@ -13,7 +13,7 @@
 config_name: SalishSea
 
 run_id: nov2009
-walltime: 10:00:00
+walltime: 5:00:00
 email: nsoontie@eos.ubc.ca
 
 paths:
@@ -34,9 +34,9 @@ forcing:
 namelists:
   - namelist.nov2009.time
   - namelist.nov2009.domain
-  - namelist.surface
-  - namelist.lateral.corr_tides #new northern and western tides
+  - namelist.surface.nosurge
+  - namelist.lateral.tidesonly #new northern and western tides
   - namelist.bottom_reduce #bf=3e-3
   - namelist.tracers
   - namelist.dynamics
-  - namelist.compute.6x14
+  - namelist.compute.12x27
