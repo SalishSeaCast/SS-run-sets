@@ -13,7 +13,7 @@
 config_name: SalishSea
 
 run_id: feb2006
-walltime: 5:00:00
+walltime: 10:00:00
 email: nsoontie@eos.ubc.ca
 
 paths:
@@ -34,8 +34,8 @@ forcing:
 namelists:
   - namelist.feb2006.time
   - namelist.feb2006.domain
-  - namelist.surface
-  - namelist.lateral.RC6 #RC6 tides
+  - namelist.surface.nosurge
+  - namelist.lateral.tidesonly #RC6 tides
   - namelist.bottom
   - namelist.tracers
   - namelist.dynamics15N
