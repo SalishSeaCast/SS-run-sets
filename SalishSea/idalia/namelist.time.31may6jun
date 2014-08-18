@@ -6,13 +6,13 @@
 &namrun        !   Parameters of the run
 !-----------------------------------------------------------------------
    cn_exp      = "SalishSea"  ! experience name
-   nn_it000    =  01874881    ! first time step
+   nn_it000    =   1874881    ! first time step
    nn_itend    =   1900800    ! last time step (std 1 day = 1728 re: rn_rdt in &namdom)
    nn_date0    =  20020915    ! date at nit_0000 = 1 (format yyyymmdd)
                               ! used to adjust tides to run date (regardless of restart control)
    nn_leapy    =       1      ! Leap year calendar (1) or not (0)
    ln_rstart   =  .true.     ! start from rest (F) or from a restart file (T)
-   nn_rstctl   =       0      ! restart control => activated only if ln_rstart = T
+   nn_rstctl   =       2      ! restart control => activated only if ln_rstart = T
                               !   = 0 nn_date0 read in namelist
                               !       nn_it000 read in namelist
                               !   = 1 nn_date0 read in namelist
@@ -26,7 +26,7 @@
 
 &nam_diaharm   !   Harmonic analysis of tidal constituents ('key_diaharm')
 !-----------------------------------------------------------------------
-    nit000_han = 01874881    ! First time step used for harmonic analysis
+    nit000_han =  1874881    ! First time step used for harmonic analysis
     nitend_han =  1900800    ! Last time step used for harmonic analysis
     nstep_han  =    9        ! Time step frequency for harmonic analysis
     !! Names of tidal constituents
