@@ -17,7 +17,7 @@ config_name: SalishSea
 
 # For runs on systems that use qsub/PBS/TORQUE; e.g. Westgrid
 run_id: example
-walltime: 5:00:00
+walltime: 21:00:00
 
 paths:
   # If relative, paths are taken from current directory
@@ -48,4 +48,4 @@ namelists:
   - namelist.bottom
   - namelist.tracers
   - namelist.dynamics
-  - namelist.compute.12x27
+  - namelist.compute.6x14
