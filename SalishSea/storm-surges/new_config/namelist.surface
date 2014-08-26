@@ -47,7 +47,7 @@
 !         !           ! (<0 == mo) !   name   ! interp !  (T/F) !        ! filename         ! pairing  !
    sn_apr = 'slp_corr',     1,       'atmpres', .true.,  .false., 'daily', 'weights-CGRF.nc', ''
 
-   cn_dir      = '/home/nsoontie/MEOPAR/CGRF/NEMO-atmos'  ! directory containing atmospheric forcing files
+   cn_dir      = '/home/nksoonti/MEOPAR/CGRF/NEMO-atmos/'  ! directory containing atmospheric forcing files
    ln_apr_obc  = .true.         ! inverse barometer added to OBC ssh data
 &end
 
