@@ -27,7 +27,7 @@ grid:
 
 forcing:
   atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos
-  initial conditions: /home/dlatorne/MEOPAR/SalishSea/spin-up/31janfeb9/
+  initial conditions: /home/dlatorne/MEOPAR/SalishSea/spin-up/31jan9feb/
   open boundaries: open_boundaries/
   rivers: rivers/
 
