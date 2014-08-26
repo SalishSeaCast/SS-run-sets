@@ -13,7 +13,7 @@
 config_name: SalishSea
 
 run_id: feb2006
-walltime: 5:00:00
+walltime: 21:00:00
 email: nsoontie@eos.ubc.ca
 
 paths:
@@ -39,4 +39,4 @@ namelists:
   - namelist.bottom
   - namelist.tracers
   - namelist.dynamics
-  - namelist.compute.12x27
+  - namelist.compute.6x14
