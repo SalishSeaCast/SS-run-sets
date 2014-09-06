@@ -17,6 +17,8 @@ def main():
  
  
 def do_run(run_id, run_desc, tide_id, surface_id):
+    run_desc['nodes']=7
+    run_desc['processors_per_node']=12
     run_desc['run_id'] = run_id
     run_desc['namelists'][3] = (
         'namelist.{}'.format(tide_id))
@@ -40,18 +42,18 @@ def base_run_description():
             '/home/dlatorne/MEOPAR/SalishSea/spin-up/31jan9feb'),
         )
     run_desc['email'] = 'nsoontie@eos.ubc.ca'
-# Relative paths to namelist section files
-run_desc['namelists'] = [
-'namelist.feb2006.time',
-'namelist.feb2006.domain',
-'namelist.surface',
-'namelist.lateral',
-'namelist.bottom',
-'namelist.tracers',
-'namelist.dynamics',
-'namelist.compute.12x27',
-]
-return run_desc
+    # Relative paths to namelist section files
+    run_desc['namelists'] = [
+        'namelist.feb2006.time',
+        'namelist.feb2006.domain',
+        'namelist.surface',
+        'namelist.lateral',
+        'namelist.bottom',
+        'namelist.tracers',
+        'namelist.dynamics',
+        'namelist.compute.6x14',
+        ]
+    return run_desc
  
  
 if __name__ == '__main__':
