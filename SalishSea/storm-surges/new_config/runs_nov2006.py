@@ -9,9 +9,9 @@ import salishsea_cmd.api
  
 def main():
     run_desc = base_run_description()
-    runs = ('all_forcing', 'tidesonly', 'surgeonly')
-    tides= ('lateral', 'lateral.tidesonly','lateral')
-    surface=('surface','surface.nosurge','surface.nosurge')
+    runs = ('all_forcing', 'tidesonly')
+    tides= ('lateral', 'lateral.tidesonly')
+    surface=('surface','surface.nosurge')
     for run_id,tide_id,surface_id in zip(runs,tides,surface):
         do_run(run_id, run_desc, tide_id, surface_id)
  
@@ -26,7 +26,7 @@ def do_run(run_id, run_desc, tide_id, surface_id):
         run_id,
         run_desc,
         'iodef.xml',
-        os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/storm_surges/final/dec2006/', run_id))
+        os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/storm_surges/final/nov2006/', run_id))
  
  
 def base_run_description():
@@ -37,13 +37,13 @@ def base_run_description():
         forcing='../../../../NEMO-forcing/',
         runs_dir='../../../../SalishSea/',
         init_conditions=(
-            '/home/nksoonti/MEOPAR/SalishSea/results/spin-up/7dec16dec'),
+            '/home/dlatorne/MEOPAR/SalishSea/spin-up/7nov16nov'),
         )
     run_desc['email'] = 'nsoontie@eos.ubc.ca'
     # Relative paths to namelist section files
     run_desc['namelists'] = [
-        'namelist.dec2006.time',
-        'namelist.dec2006.domain',
+        'namelist.nov2006.time',
+        'namelist.nov2006.domain',
         'namelist.surface',
         'namelist.lateral',
         'namelist.bottom',
