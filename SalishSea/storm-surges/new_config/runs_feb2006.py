@@ -37,7 +37,7 @@ def base_run_description():
         forcing='../../../../NEMO-forcing/',
         runs_dir='../../../../SalishSea/',
         init_conditions=(
-            '/home/dlatorne/MEOPAR/SalishSea/spin-up/31jan9feb'),
+            '/home/nksoonti/MEOPAR/SalishSea/results/spin-up/31jan9feb'),
         )
     run_desc['email'] = 'nsoontie@eos.ubc.ca'
     # Relative paths to namelist section files
