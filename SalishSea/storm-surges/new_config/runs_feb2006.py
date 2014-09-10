@@ -17,8 +17,6 @@ def main():
  
  
 def do_run(run_id, run_desc, tide_id, surface_id):
-    run_desc['nodes']=7
-    run_desc['processors_per_node']=12
     run_desc['run_id'] = run_id
     run_desc['namelists'][3] = (
         'namelist.{}'.format(tide_id))
@@ -32,7 +30,7 @@ def do_run(run_id, run_desc, tide_id, surface_id):
  
  
 def base_run_description():
-# Relative paths from SS-run-sets/SalishSea/tides/Recenter_M2_amp_phase/
+# Relative paths from SS-run-sets/SalishSea/storm_surges/new_config
     run_desc = salishsea_cmd.api.run_description(
         walltime='7:00:00',
         NEMO_code='../../../../NEMO-code/',
@@ -51,7 +49,7 @@ def base_run_description():
         'namelist.bottom',
         'namelist.tracers',
         'namelist.dynamics',
-        'namelist.compute.6x14',
+        'namelist.compute.12x27',
         ]
     return run_desc
  
