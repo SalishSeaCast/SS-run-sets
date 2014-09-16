@@ -32,7 +32,7 @@ def do_run(run_id, run_desc, tide_id, surface_id):
 def base_run_description():
 # Relative paths from SS-run-sets/SalishSea/storm_surges/new_config
     run_desc = salishsea_cmd.api.run_description(
-        walltime='7:00:00',
+        walltime='20:00:00',
         NEMO_code='../../../../NEMO-code/',
         forcing='../../../../NEMO-forcing/',
         runs_dir='../../../../SalishSea/',
@@ -49,7 +49,7 @@ def base_run_description():
         'namelist.bottom',
         'namelist.tracers',
         'namelist.dynamics',
-        'namelist.compute.12x27',
+        'namelist.compute.6x14',
         ]
     return run_desc
  
