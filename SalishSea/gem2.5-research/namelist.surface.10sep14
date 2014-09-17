@@ -28,13 +28,13 @@
 !-----------------------------------------------------------------------
 !         !  file name ! freq (hr)  ! variablev  !  time  !  clim  ! period  ! weights              ! rotation !
 !         !            ! (<0 == mo) !   name     ! interp !  (T/F) !         ! filename             ! pairing  !
-   sn_wndi = '',        1,           'u_wind',    .true.,  .false., 'daily',  'weights-2.5kmGEM.nc', 'Uwnd'
-   sn_wndj = '',        1,           'v_wind',    .true.,  .false., 'daily',  'weights-2.5kmGEM.nc', 'Vwnd'
-   sn_qsr  = '',        1,           'solar',     .true.,  .false., 'daily',  'weights-2.5kmGEM.nc', ''
-   sn_qlw  = '',        1,           'therm_rad', .true.,  .false., 'daily',  'weights-2.5kmGEM.nc', ''
-   sn_tair = '',        1,           'tair',      .true.,  .false., 'daily',  'weights-2.5kmGEM.nc', ''
-   sn_humi = '',        1,           'qair',      .true.,  .false., 'daily',  'weights-2.5kmGEM.nc', ''
-   sn_prec = '',        1,           'precip',    .true.,  .false., 'daily',  'weights-2.5kmGEM.nc', ''
+   sn_wndi = 'res',     1,           'u_wind',    .true.,  .false., 'daily',  'weights-2.5kmGEM.nc', 'Uwnd'
+   sn_wndj = 'res',     1,           'v_wind',    .true.,  .false., 'daily',  'weights-2.5kmGEM.nc', 'Vwnd'
+   sn_qsr  = 'res',     1,           'solar',     .true.,  .false., 'daily',  'weights-2.5kmGEM.nc', ''
+   sn_qlw  = 'res',     1,           'therm_rad', .true.,  .false., 'daily',  'weights-2.5kmGEM.nc', ''
+   sn_tair = 'res',     1,           'tair',      .true.,  .false., 'daily',  'weights-2.5kmGEM.nc', ''
+   sn_humi = 'res',     1,           'qair',      .true.,  .false., 'daily',  'weights-2.5kmGEM.nc', ''
+   sn_prec = 'res',     1,           'precip',    .true.,  .false., 'daily',  'weights-2.5kmGEM.nc', ''
    sn_snow = 'no_snow', -12,         'snow',      .false., .true.,  'yearly', 'weights-2.5kmGEM.nc', ''
 
    cn_dir      = 'NEMO-atmos/'  ! directory containing atmospheric forcing files
@@ -45,7 +45,7 @@
 !-----------------------------------------------------------------------
 !         ! file name ! freq (hr)  ! variable !  time  !  clim  ! period ! weights              ! rotation !
 !         !           ! (<0 == mo) !   name   ! interp !  (T/F) !        ! filename             ! pairing  !
-   sn_apr = '',        1,           'atmpres', .true.,  .false., 'daily', 'weights-2.5kmGEM.nc', ''
+   sn_apr = 'res',     1,           'atmpres', .true.,  .false., 'daily', 'weights-2.5kmGEM.nc', ''
 
    cn_dir      = 'NEMO-atmos/'  ! directory containing atmospheric forcing files
    ln_apr_obc  = .true.         ! inverse barometer added to OBC ssh data
