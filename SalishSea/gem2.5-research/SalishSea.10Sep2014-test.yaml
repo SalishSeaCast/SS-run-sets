@@ -23,9 +23,9 @@ walltime: 10:00:00
 
 paths:
   # If relative, paths are taken from current directory
-  NEMO-code: ../../NEMO-code/
-  forcing: ../../NEMO-forcing/
-  runs directory: ../../SalishSea/
+  NEMO-code: ../../../NEMO-code/
+  forcing: ../../../NEMO-forcing/
+  runs directory: ../../../SalishSea/
 
 grid:
   # If relative, paths are taken from forcing path above
