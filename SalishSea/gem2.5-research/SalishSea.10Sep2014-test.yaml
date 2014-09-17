@@ -42,9 +42,9 @@ forcing:
 
 namelists:
   # If relative, paths are taken from current directory
-  - namelist.time.10sep2014
+  - namelist.time.10sep14
   - namelist.domain.7sepTS
-  - namelist.surface.
+  - namelist.surface.10sep14
   - ../namelist.lateral
   - ../namelist.bottom
   - ../namelist.tracers
