@@ -18,7 +18,7 @@
 config_name: SalishSea
 
 run_id: salish-2d
-walltime: 10:00:00  # irrelevant on salish
+walltime: 20:00:00
 
 paths:
   NEMO-code: ../../../../NEMO-code/
@@ -38,7 +38,7 @@ forcing:
 namelists:
   - namelist.time                # init from 16Nov2003 restart, run 2 days starting 17Nov2009
   - namelist.domain.26oct        # T and S from 26Oct2003 dt=10s restart file
-  - ../../namelist.surface          # CGRF, atmos pressure
+  - ../../namelist.surface       # CGRF, atmos pressure
   - namelist.lateral             # West:FLA,Tides,ssh,ZG,TS, North:FLA,Tides,TS
   - ../../namelist.bottom
   - ../../namelist.tracers
