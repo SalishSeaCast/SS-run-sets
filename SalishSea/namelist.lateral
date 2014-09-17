@@ -83,24 +83,24 @@
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
    !!  file name root of tidal forcing files
-   filtide       = 'open_boundaries/west/tides/SalishSea2_west_tide_'
+   filtide       = 'open_boundaries/west/tides/SalishSea2_Flux_RC13_west_tide_'
    !!  names of tidal components used
-   tide_cpt(1) = 'Q1'
-   tide_cpt(2) = 'O1'
-   tide_cpt(3) = 'P1'
-   tide_cpt(4) = 'K1'
-   tide_cpt(5) = 'N2'
-   tide_cpt(6) = 'M2'
-   tide_cpt(7) = 'S2'
+   tide_cpt(1) = 'K1'
+   tide_cpt(2) = 'M2'
+   tide_cpt(3) = 'O1'
+   tide_cpt(4) = 'S2'
+   tide_cpt(5) = 'P1'
+   tide_cpt(6) = 'N2'
+   tide_cpt(7) = 'Q1'
    tide_cpt(8) = 'K2'
    !!  phase speeds of tidal components (deg/hour)
-   tide_speed(1) = 13.398661
-   tide_speed(2) = 13.943036
-   tide_speed(3) = 14.958932
-   tide_speed(4) = 15.041069
-   tide_speed(5) = 28.439730
-   tide_speed(6) = 28.984106
-   tide_speed(7) = 30.000002
+   tide_speed(1) = 15.041069
+   tide_speed(2) = 28.984106
+   tide_speed(3) = 13.943036
+   tide_speed(4) = 30.000002
+   tide_speed(5) = 14.958932
+   tide_speed(6) = 28.439730
+   tide_speed(7) = 13.398661
    tide_speed(8) = 30.082138
    !!  adjust tidal harmonics for start date of run
    ln_tide_date  = .true.
@@ -109,24 +109,24 @@
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
    !!  file name root of tidal forcing files
-   filtide       = 'open_boundaries/north/tides/SalishSea2_corr_North_tide_'
+   filtide       = 'open_boundaries/north/tides/SalishSea2_corr15_North_tide_'
    !!  names of tidal components used
-   tide_cpt(1) = 'Q1'
-   tide_cpt(2) = 'O1'
-   tide_cpt(3) = 'P1'
-   tide_cpt(4) = 'K1'
-   tide_cpt(5) = 'N2'
-   tide_cpt(6) = 'M2'
-   tide_cpt(7) = 'S2'
+   tide_cpt(1) = 'K1'
+   tide_cpt(2) = 'M2'
+   tide_cpt(3) = 'O1'
+   tide_cpt(4) = 'S2'
+   tide_cpt(5) = 'P1'
+   tide_cpt(6) = 'N2'
+   tide_cpt(7) = 'Q1'
    tide_cpt(8) = 'K2'
    !!  phase speeds of tidal components (deg/hour)
-   tide_speed(1) = 13.398661
-   tide_speed(2) = 13.943036
-   tide_speed(3) = 14.958932
-   tide_speed(4) = 15.041069
-   tide_speed(5) = 28.439730
-   tide_speed(6) = 28.984106
-   tide_speed(7) = 30.000002
+   tide_speed(1) = 15.041069
+   tide_speed(2) = 28.984106
+   tide_speed(3) = 13.943036
+   tide_speed(4) = 30.000002
+   tide_speed(5) = 14.958932
+   tide_speed(6) = 28.439730
+   tide_speed(7) = 13.398661
    tide_speed(8) = 30.082138
    !!  adjust tidal harmonics for start date of run
    ln_tide_date  = .true.
