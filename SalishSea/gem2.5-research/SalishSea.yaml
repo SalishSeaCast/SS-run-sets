@@ -18,7 +18,7 @@
 config_name: SalishSea
 
 # For runs on systems that use qsub/PBS/TORQUE; e.g. Westgrid
-run_id: 16sep14GEMres
+run_id: 15sep14GEMres
 walltime: 10:00:00
 
 paths:
@@ -36,7 +36,7 @@ forcing:
   # If relative, paths are taken from forcing path above
   atmospheric: /ocean/dlatorne/MEOPAR/GEM2.5/NEMO-atmos/
   # The path and name of a restart file may be used as initial conditions
-  initial conditions: /data/dlatorne/MEOPAR/SalishSea/results/gem-res-15sep14/SalishSea_00051840_restart.nc
+  initial conditions: /data/dlatorne/MEOPAR/SalishSea/results/gem-res-14sep14/SalishSea_00043200_restart.nc
   open boundaries: open_boundaries/
   rivers: rivers/
 
