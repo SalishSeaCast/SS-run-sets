@@ -9,32 +9,50 @@
     =========================================================================
     -->
     <file_definition >
-      <group id="30min" output_freq="1800" output_level="10" enabled=".true.">
-        <file id="30min_grid_T" name="auto" enabled=".true.">
+      <group id="30m" output_freq="1800" output_level="10" enabled=".true.">
+        <file id="30m_grid_T" name="30m_grid_T" enabled=".true.">
           <field ref="ssh" name="sossheig"/>
           <field ref="toce" name="votemper"/>
           <field ref="soce" name="vosaline"/>
         </file>
-        <file id="30min_grid_U" name="auto" enabled=".true.">
+        <file id="30m_grid_U" name="30m_grid_U" enabled=".true.">
           <field ref="uoce" name="vozocrtx"/>
         </file>
-        <file id="30min_grid_V" name="auto" enabled=".true.">
+        <file id="30m_grid_V" name="30m_grid_V" enabled=".true.">
           <field ref="voce" name="vomecrty"/>
+        </file>
+        <file id="Tidal_Harmonics_eta">
+          <field ref="K1x" name="K1_eta_real"/>
+          <field ref="K1y" name="K1_eta_imag"/>
+          <field ref="M2x" name="M2_eta_real"/>
+          <field ref="M2y" name="M2_eta_imag"/>
+        </file>
+        <file id="Tidal_Harmonics_U">
+          <field ref="K1x_u" name="K1_u_real"/>
+          <field ref="K1y_u" name="K1_u_imag"/>
+          <field ref="M2x_u" name="M2_u_real"/>
+          <field ref="M2y_u" name="M2_u_imag"/>
+        </file>
+        <file id="Tidal_Harmonics_V">
+          <field ref="K1x_v" name="K1_v_real"/>
+          <field ref="K1y_v" name="K1_v_imag"/>
+          <field ref="M2x_v" name="M2_v_real"/>
+          <field ref="M2y_v" name="M2_v_imag"/>
         </file>
       </group>
 
       <group id="1h_freq" output_freq="3600" output_level="10" enabled=".false." >
-        <file id="1h_PointAtkinson" name="1h_PointAtkinson" enabled=".true." description="Point Atkinson 1h outputs">
+        <file id="1h_PointAtkinson" name="1h_PointAtkinson" enabled=".false." description="Point Atkinson 1h outputs">
           <group id="1h_PointAtkinson" zoom_ref="PointAtkinson" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
-        	</group>
+           </group>
         </file>
 
-        <file id="1h_Victoria" name="1h_Victoria" enabled=".true." description="Victoria 1h outputs">
+        <file id="1h_Victoria" name="1h_Victoria" enabled=".false." description="Victoria 1h outputs">
          <group id="1h_Victoria" zoom_ref="Victoria" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
@@ -44,17 +62,17 @@
          </group>
         </file>
 
-        <file id="1h_PatriciaBay" name="1h_PatriciaBay" enabled=".true." description="Patricia Bay 1h outputs">
+        <file id="1h_PatriciaBay" name="1h_PatriciaBay" enabled=".false." description="Patricia Bay 1h outputs">
           <group id="1h_PatriciaBay" zoom_ref="PatriciaBay" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
             <field ref="soce" name="vosaline"/>
             <field ref="uoce" name="vozocrtx"/>
             <field ref="voce" name="vomecrty"/>
-        	</group>
+          </group>
         </file>
 
-        <file id="1h_CampbellRiver" name="1h_CampbellRiver" enabled=".true." description="Campbell River 1h outputs">
+        <file id="1h_CampbellRiver" name="1h_CampbellRiver" enabled=".false." description="Campbell River 1h outputs">
           <group id="1h_CampbellRiver" zoom_ref="CampbellRiver" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
@@ -64,7 +82,7 @@
           </group>
         </file>
 
-        <file id="1h_BoundaryBay" name="1h_BoundaryBay" enabled=".true." description="Boundary Bay 1h outputs">
+        <file id="1h_BoundaryBay" name="1h_BoundaryBay" enabled=".false." description="Boundary Bay 1h outputs">
           <group id="1h_BoundaryBay" zoom_ref="BoundaryBay" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
@@ -74,7 +92,7 @@
           </group>
         </file>
 
-        <file id="1h_WhiteRock" name="1h_WhiteRock" enabled=".true." description="White Rock 1h outputs">
+        <file id="1h_WhiteRock" name="1h_WhiteRock" enabled=".false." description="White Rock 1h outputs">
           <group id="1h_WhiteRock" zoom_ref="WhiteRock" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
@@ -84,7 +102,7 @@
           </group>
         </file>
 
-        <file id="1h_CrescentBeach" name="1h_CrescentBeach" enabled=".true." description="Crescent Beach 1h outputs">
+        <file id="1h_CrescentBeach" name="1h_CrescentBeach" enabled=".false." description="Crescent Beach 1h outputs">
           <group id="1h_CrescentBeach" zoom_ref="CrescentBeach" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
@@ -94,7 +112,7 @@
           </group>
         </file>
 
-        <file id="1h_NeahBay" name="1h_NeahBay" enabled=".true." description="Neah Bay 1h outputs">
+        <file id="1h_NeahBay" name="1h_NeahBay" enabled=".false." description="Neah Bay 1h outputs">
           <group id="1h_NeahBay" zoom_ref="NeahBay" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
@@ -104,7 +122,7 @@
           </group>
         </file>
 
-        <file id="1h_PortTownsend" name="1h_PortTownsend" enabled=".true." description="Port Townsend 1h outputs">
+        <file id="1h_PortTownsend" name="1h_PortTownsend" enabled=".false." description="Port Townsend 1h outputs">
           <group id="1h_PortTownsend" zoom_ref="PortTownsend" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
@@ -114,7 +132,7 @@
           </group>
         </file>
 
-        <file id="1h_CherryPoint" name="1h_CherryPoint" enabled=".true." description="Cherry Point 1h outputs">
+        <file id="1h_CherryPoint" name="1h_CherryPoint" enabled=".false." description="Cherry Point 1h outputs">
           <group id="1h_CherryPoint" zoom_ref="CherryPoint" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
@@ -124,7 +142,7 @@
           </group>
         </file>
 
-        <file id="1h_FridayHarbor" name="1h_FridayHarbor" enabled=".true." description="Friday Harbor 1h outputs">
+        <file id="1h_FridayHarbor" name="1h_FridayHarbor" enabled=".false." description="Friday Harbor 1h outputs">
           <group id="1h_FridayHarbor" zoom_ref="FridayHarbor" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
@@ -134,7 +152,7 @@
           </group>
         </file>
 
-        <file id="1h_PortAngeles" name="1h_PortAngeles" enabled=".true." description="Port Angeles 1h outputs">
+        <file id="1h_PortAngeles" name="1h_PortAngeles" enabled=".false." description="Port Angeles 1h outputs">
           <group id="1h_PortAngeles" zoom_ref="PortAngeles" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
@@ -144,7 +162,7 @@
           </group>
         </file>
 
-       <file id="1h_Thalweg1" name="1h_Thalweg1" enabled=".true." description="Select thalweg points 1h outputs">
+       <file id="1h_Thalweg1" name="1h_Thalweg1" enabled=".false." description="Select thalweg points 1h outputs">
           <group id="1h_Thalweg1" zoom_ref="thalweg1" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
@@ -154,7 +172,7 @@
           </group>
        </file>  
 
-      <file id="1h_Thalweg2" name="1h_Thalweg2" enabled=".true." description="Select thalweg points 1h outputs">
+      <file id="1h_Thalweg2" name="1h_Thalweg2" enabled=".false." description="Select thalweg points 1h outputs">
           <group id="1h_Thalweg2" zoom_ref="thalweg2" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
@@ -163,7 +181,7 @@
             <field ref="voce" name="vomecrty"/>
           </group>
       </file>
-      <file id="1h_Thalweg3" name="1h_Thalweg3" enabled=".true." description="Select thalweg points 1h outputs">
+      <file id="1h_Thalweg3" name="1h_Thalweg3" enabled=".false." description="Select thalweg points 1h outputs">
           <group id="1h_Thalweg3" zoom_ref="thalweg3" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
@@ -172,7 +190,7 @@
             <field ref="voce" name="vomecrty"/>
           </group>
       </file>
-      <file id="1h_Thalweg4" name="1h_Thalweg4" enabled=".true." description="Select thalweg points 1h outputs">
+      <file id="1h_Thalweg4" name="1h_Thalweg4" enabled=".false." description="Select thalweg points 1h outputs">
           <group id="1h_Thalweg4" zoom_ref="thalweg4" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
@@ -181,7 +199,7 @@
             <field ref="voce" name="vomecrty"/>
           </group>
       </file>
-      <file id="1h_Thalweg5" name="1h_Thalweg5" enabled=".true." description="Select thalweg points 1h outputs">
+      <file id="1h_Thalweg5" name="1h_Thalweg5" enabled=".false." description="Select thalweg points 1h outputs">
 	  <group id="1h_Thalweg5" zoom_ref="thalweg5" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
@@ -190,7 +208,7 @@
             <field ref="voce" name="vomecrty"/>
           </group>
       </file>
-      <file id="1h_Thalweg6" name="1h_Thalweg6" enabled=".true." description="Select thalweg points 1h outputs">
+      <file id="1h_Thalweg6" name="1h_Thalweg6" enabled=".false." description="Select thalweg points 1h outputs">
           <group id="1h_Thalweg6" zoom_ref="thalweg6" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
@@ -200,7 +218,7 @@
           </group>
       </file>
 
-       <file id="1h_Plume" name="1h_Plume" enabled=".true." description="Select plume points 1h outputs">
+       <file id="1h_Plume" name="1h_Plume" enabled=".false." description="Select plume points 1h outputs">
           <group id="1h_Plume" zoom_ref="plume" >
             <field ref="ssh" name="sossheig"/>
             <field ref="toce" name="votemper"/>
