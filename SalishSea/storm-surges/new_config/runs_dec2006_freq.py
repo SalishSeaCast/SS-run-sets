@@ -8,11 +8,10 @@ import salishsea_cmd.api
  
  
 def main():
-    runs = ('30min','4hour')
-    iodefs= ('iodef_30min.xml','iodef.xml')
-    for run_id,iodefid in zip(runs,iodefs):
-        run_desc = base_run_description(run_id)
-        do_run(run_id, run_desc, iodefid)
+    run_id = '30min'
+    iodefs= 'iodef_30min.xml'
+    run_desc = base_run_description(run_id)
+    do_run(run_id, run_desc, iodefs)
        
  
 def do_run(run_id, run_desc, iodefid):
