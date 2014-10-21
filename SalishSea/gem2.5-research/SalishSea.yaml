@@ -12,13 +12,13 @@
 #  All rivers run-off forcing
 #     Fraser is based on actual daily average gauge data at Hope
 #     All other rivers are monthly climatologies
-#  Atmospheric forcing with 2.5km EC GEM research model products
+#  Atmospheric forcing with 2.5km EC GEM operational model products
 #    Constrained to no solid precipitation
 
 config_name: SalishSea
 
 # For runs on systems that use qsub/PBS/TORQUE; e.g. Westgrid
-run_id: 24-26sep14GEMres
+run_id: 24-26sep14GEMops
 walltime: 6:00:00
 
 paths:
