@@ -19,7 +19,7 @@ config_name: SalishSea
 
 # For runs on systems that use qsub/PBS/TORQUE; e.g. Westgrid
 run_id: 27sep3oct14GEMops
-walltime: 18:00:00
+walltime: 00:05:00
 nodes: 7
 processors_per_node: 12
 
@@ -44,7 +44,7 @@ forcing:
 
 namelists:
   # If relative, paths are taken from current directory
-  - namelist.time
+  - namelist.time.short
   - ../namelist.domain
   - namelist.surface.realtime-ops
   - ../namelist.lateral
