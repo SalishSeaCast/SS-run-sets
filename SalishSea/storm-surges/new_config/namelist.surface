@@ -37,9 +37,7 @@
    sn_prec = 'precip',    1,          'precip',    .true., .false., 'daily',  'weights-CGRF.nc',   ''
    sn_snow = 'no_snow', -12,          'snow',      .true., .true.,  'yearly', 'weights-CGRF.nc',   ''
 
-!   cn_dir      = '/home/nksoonti/MEOPAR/CGRF/NEMO-atmos/'  ! directory contain
-ing atmospheric forcing files
-   cn_dir = 'NEMO-atmos'
+   cn_dir      = '/home/dlatorne/MEOPAR/CGRF/NEMO-atmos/'  ! directory containing atmospheric forcing files
    ln_2m       = .true.         ! air temperature and humidity referenced at 2m (T) instead 10m (F)
 &end
 
@@ -49,8 +47,7 @@ ing atmospheric forcing files
 !         !           ! (<0 == mo) !   name   ! interp !  (T/F) !        ! filename         ! pairing  !
    sn_apr = 'slp_corr',     1,       'atmpres', .true.,  .false., 'daily', 'weights-CGRF.nc', ''
 
-!   cn_dir      = '/home/nksoonti/MEOPAR/CGRF/NEMO-atmos/'  ! directory containing atmospheric forcing files
-    cn_dir = 'NEMO-atmos'
+   cn_dir      = '/home/dlatorne/MEOPAR/CGRF/NEMO-atmos/'  ! directory containing atmospheric forcing files
     ln_apr_obc  = .true.         ! inverse barometer added to OBC ssh data
 &end
 
