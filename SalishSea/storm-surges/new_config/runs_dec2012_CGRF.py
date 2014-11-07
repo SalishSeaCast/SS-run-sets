@@ -9,9 +9,9 @@ import salishsea_cmd.api
  
 def main():
     run_desc = base_run_description()
-    runs = ('all_forcing', 'tidesonly')
-    tides= ('lateral', 'lateral.tidesonly')
-    surface=('surface','surface.nosurge')
+    runs = ('all_forcing',)
+    tides= ('lateral',)
+    surface=('surface',)
     for run_id,tide_id,surface_id in zip(runs,tides,surface):
         do_run(run_id, run_desc, tide_id, surface_id)
  
@@ -39,7 +39,6 @@ def base_run_description():
         init_conditions=(
             '/home/nksoonti/MEOPAR/SalishSea/results/spin-up/7dec16dec'),
         )
-    run_desc['atmospheric']='/home/dlatorne/MEOPAR/CGRF/NEMO-atmos/'
     run_desc['email'] = 'nsoontie@eos.ubc.ca'
     # Relative paths to namelist section files
     run_desc['namelists'] = [
