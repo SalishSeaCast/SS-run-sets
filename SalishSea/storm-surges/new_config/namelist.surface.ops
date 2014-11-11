@@ -35,7 +35,7 @@
    sn_tair = 'ops',       1,          'tair',      .true., .false., 'daily',  'weights-gem2.5-ops.nc',   ''
    sn_humi = 'ops',       1,          'qair',      .true., .false., 'daily',  'weights-gem2.5-ops.nc,   ''
    sn_prec = 'ops',       1,          'precip',    .true., .false., 'daily',  'weights-gem2.5-ops.nc',   ''
-   sn_snow = 'no_snow', -12,          'snow',      .true., .true.,  'yearly', 'weights-gem2.5-ops.nc',   ''
+   sn_snow = 'no_snow', -12,          'snow',      .false., .true.,  'yearly', 'weights-gem2.5-ops.nc',   ''
 
    cn_dir      = '/home/nksoonti/MEOPAR/GEM2.5/ops/NEMO-atmos/'  ! directory containing atmospheric forcing files
    ln_2m       = .true.         ! air temperature and humidity referenced at 2m (T) instead 10m (F)
