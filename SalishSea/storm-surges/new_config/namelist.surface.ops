@@ -33,9 +33,9 @@
    sn_qsr  = 'ops',       1,          'solar',     .true., .false., 'daily',  'weights-gem2.5-ops.nc',   ''
    sn_qlw  = 'ops',       1,          'therm_rad', .true., .false., 'daily',  'weights-gem2.5-ops.nc',   ''
    sn_tair = 'ops',       1,          'tair',      .true., .false., 'daily',  'weights-gem2.5-ops.nc',   ''
-   sn_humi = 'ops',       1,          'qair',      .true., .false., 'daily',  'weights-gem2.5-ops.nc,   ''
+   sn_humi = 'ops',       1,          'qair',      .true., .false., 'daily',  'weights-gem2.5-ops.nc',   ''
    sn_prec = 'ops',       1,          'precip',    .true., .false., 'daily',  'weights-gem2.5-ops.nc',   ''
-   sn_snow = 'no_snow', -12,          'snow',      .false., .true.,  'yearly', 'weights-gem2.5-ops.nc',   ''
+   sn_snow = 'no_snow', -12,          'snow',      .true., .true.,  'yearly', 'weights-gem2.5-ops.nc',   ''
 
    cn_dir      = '/home/nksoonti/MEOPAR/GEM2.5/ops/NEMO-atmos/'  ! directory containing atmospheric forcing files
    ln_2m       = .true.         ! air temperature and humidity referenced at 2m (T) instead 10m (F)
@@ -45,7 +45,7 @@
 !-----------------------------------------------------------------------
 !         ! file name ! freq (hr)  ! variable !  time  !  clim  ! period ! weights          ! rotation !
 !         !           ! (<0 == mo) !   name   ! interp !  (T/F) !        ! filename         ! pairing  !
-   sn_apr = 'slp_corr_ops',          1,       'atmpres', .true.,  .false., 'daily', 'weights-gem2.5-ops.nc', ''
+   sn_apr ='slp_corr_ops',          1,       'atmpres', .true.,  .false., 'daily', 'weights-gem2.5-ops.nc', ''
 
    cn_dir      = '/home/nksoonti/MEOPAR/GEM2.5/ops/NEMO-atmos/'  ! directory containing atmospheric forcing files
    ln_apr_obc  = .true.         ! inverse barometer added to OBC ssh data
