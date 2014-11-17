@@ -9,9 +9,9 @@ import salishsea_cmd.api
  
 def main():
     run_desc = base_run_description()
-    runs = ('all_forcing','weather_only',)
-    tides= ('lateral','lateral.tidesonly',)
-    surface=('surface.ops','surface.ops',)
+    runs = ('all_forcing','weather_only','no_pressure',)
+    tides= ('lateral','lateral.tidesonly','lateral.tidesonly',)
+    surface=('surface.ops','surface.ops','surface.nopressure.ops',)
     for run_id,tide_id,surface_id in zip(runs,tides,surface):
         do_run(run_id, run_desc, tide_id, surface_id)
  
