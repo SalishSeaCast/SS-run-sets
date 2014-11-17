@@ -8,13 +8,20 @@ import salishsea_cmd.api
  
  
 def main():
-    run_id = 'rivers2m'
-    run_desc = base_run_description(run_id)
-    do_run(run_id, run_desc)
+    runs = ('all_forcing', 'tidesonly','ssh_only')
+    tides= ('lateral', 'lateral.tidesonly','lateral')
+    surface=('surface','surface.nosurge','surface.nosurge')
+    for run_id,tide_id,surface_id in zip(runs,tides,surface):
+        run_desc = base_run_description(run_id)
+        do_run(run_id, run_desc, tide_id, surface_id)
        
  
-def do_run(run_id, run_desc):
+def do_run(run_id, run_desc, tide_id, surface_id):
     run_desc['run_id'] = run_id
+    run_desc['namelists'][3] = (
+        'namelist.{}'.format(tide_id))
+    run_desc['namelists'][2] = (
+        'namelist.{}'.format(surface_id))        
     salishsea_cmd.api.run_in_subprocess(
         run_id,
         run_desc,
@@ -37,7 +44,7 @@ def base_run_description(run_id):
     run_desc['namelists'] = [
         'namelist.dec2006.rtime',
         'namelist.dec2006.domain',
-        'namelist.surface.rivers2m',
+        'namelist.surface',
         'namelist.lateral',
         'namelist.bottom',
         'namelist.tracers',
