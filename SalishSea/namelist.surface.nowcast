@@ -58,7 +58,7 @@
    sn_rnf      = 'RFraserCElse',     24,          'rorunoff', .true.,  .false., 'daily',  '',        ''
    sn_cnf      = 'runoff_1m_nomask',  0,          'socoefr0', .false., .true.,  'yearly', '',        ''
    sn_s_rnf    = '',                 24,          'rosaline', .false., .true.,  'yearly', '',        ''
-   sn_t_rnf    = '',                 24,          'rotemper', .false., .true.,  'yearly', '',        ''
+   sn_t_rnf    = 'rivers_month',     -1,          'rotemper', .true.,  .true.,  'yearly', '',        ''
    sn_dep_rnf  = 'rivers_month',     -1,          'rodepth' , .true.,  .true.,  'yearly', '',        ''
 
    cn_dir       = 'rivers/'  ! directory containing rivers run-off forcing files
@@ -68,6 +68,6 @@
    rn_avt_rnf   =   1.e-3    ! value of the additional vertical mixing coef. [m2/s]
    rn_rfact     =   1.e0     ! multiplicative factor for runoff
    ln_rnf_depth = .true.     ! read in depth information for runoff
-   ln_rnf_tem   = .false.    ! read in temperature information for runoff
+   ln_rnf_tem   = .true.     ! read in temperature information for runoff
    ln_rnf_sal   = .false.    ! read in salinity information for runoff
 &end
