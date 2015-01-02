@@ -3,18 +3,18 @@ All use the same RC4, corr4 files but include different numbers of tidal
 constituents
 """
 from __future__ import absolute_import
- 
+
 import os
- 
+
 import salishsea_cmd.api
- 
- 
+
+
 def main():
     run_desc = base_run_description()
     run_id = 'corr15'
     do_run(run_id, run_desc)
- 
- 
+
+
 def do_run(run_id, run_desc):
     run_desc['run_id'] = run_id
     run_desc['namelists'][3] = (
@@ -24,8 +24,8 @@ def do_run(run_id, run_desc):
         run_desc,
         'iodef_tides_10d.xml',
         os.path.join('/home/sallen/MEOPAR/SalishSea/', run_id))
- 
- 
+
+
 def base_run_description():
     # Relative paths from SS-run-sets/SalishSea/tides/
     run_desc = salishsea_cmd.api.run_description(
