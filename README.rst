@@ -9,7 +9,7 @@ This is a collection of namelists and run description files for various sets of 
 License
 =======
 
-The Salish Sea MEOPAR run-sets are copyright 2013-2014 by the `Salish Sea MEOPAR Project Contributors`_ and The University of British Columbia.
+The Salish Sea MEOPAR run-sets are copyright 2013-2015 by the `Salish Sea MEOPAR Project Contributors`_ and The University of British Columbia.
 
 They are licensed under the Apache License, Version 2.0.
 http://www.apache.org/licenses/LICENSE-2.0
