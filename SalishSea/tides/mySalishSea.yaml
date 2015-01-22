@@ -13,8 +13,8 @@
 config_name: SalishSea
 
 # qsub/PBS/TORQUE commands
-run_id: topog
-walltime: 15:30:00
+run_id: topog1
+walltime: 21:00:00
 email: sallen@eos.ubc.ca
 
 paths:
@@ -27,17 +27,17 @@ grid:
   bathymetry: smoothto033.nc
 
 forcing:
-  atmospheric: /ocean/dlatorne/MEOPAR/CGRF/NEMO-atmos/
+  atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos/
   initial conditions: initial_strat/
   open boundaries: open_boundaries/
   rivers: rivers/
 
 namelists:
-  - mynamelist21apr.time            # start on Apr 21, 60 time steps
+  - mynamelist21apr30mayI.time          
   - topog_change/mynamelist.domain  # new TS for smooth topography
   - mynamelist.surface           # no atmos forcing
   - ../namelist.lateral
   - ../namelist.bottom
   - ../namelist.tracers
   - ../namelist.dynamics
-  - ../namelist.compute.4x4
+  - ../namelist.compute.12x27
