@@ -36,7 +36,7 @@ def base_run_description():
         runs_dir='../../../SalishSea/',
         init_conditions=(
             '/home/dlatorne/MEOPAR/SalishSea/spin-up/'
-            '9aug18aug/SalishSea_02566080_restart.nc'),
+            '9aug18aug/'),
         )
     run_desc['email'] = 'nsoontie@eos.ubc.ca'
     # Relative paths to namelist section files

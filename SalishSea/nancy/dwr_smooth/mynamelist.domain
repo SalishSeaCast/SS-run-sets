@@ -28,10 +28,10 @@
 !-----------------------------------------------------------------------
 !          ! file name                          ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
 !          !                                    ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
-   sn_tem  = 'TSforsmoothto033', -12,         'votemper', .false., .true.,  'yearly', '',        ''
-   sn_sal  = 'TSforsmoothto033'   , -12,         'vosaline', .false., .true.,  'yearly', '',        ''
+   sn_tem  = 'TSforsmoothto033_Aug192003', -12,         'votemper', .false., .true.,  'yearly', '',        ''
+   sn_sal  = 'TSforsmoothto033_Aug192003'   , -12,         'vosaline', .false., .true.,  'yearly', '',        ''
 
-   cn_dir        = 'initial_strat/'  ! directory containing initial condition files
+   cn_dir        = '/home/nksoonti/MEOPAR/newTS/'  ! directory containing initial condition files
    ln_tsd_init   = .true.            ! Initialisation of ocean T & S with T &S input data (T) or not (F)
    ln_tsd_tradmp = .false.           ! damping of ocean T & S toward T &S input data (T) or not (F)
 &end
