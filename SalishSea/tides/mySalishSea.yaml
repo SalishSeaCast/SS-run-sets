@@ -13,7 +13,7 @@
 config_name: SalishSea
 
 # qsub/PBS/TORQUE commands
-run_id: bottom1em2
+run_id: bottomNOadv
 walltime: 21:00:00
 email: sallen@eos.ubc.ca
 
@@ -37,7 +37,7 @@ namelists:
   - ../namelist.domain  
   - mynamelist.surface           # no atmos forcing
   - ../namelist.lateral
-  - More_tides/mynamelist.bottom  # bottom friction 1e-2
+  - More_tides/mynamelistadv.bottom  # bottom friction 1e-2
   - ../namelist.tracers
   - ../namelist.dynamics
   - ../namelist.compute.12x27
