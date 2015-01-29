@@ -13,7 +13,7 @@
 config_name: SalishSea
 
 # qsub/PBS/TORQUE commands
-run_id: bottom1em2B
+run_id: incrnshlat2
 walltime: 21:00:00
 email: sallen@eos.ubc.ca
 
@@ -28,7 +28,7 @@ grid:
 
 forcing:
   atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos/
-  initial conditions: initial_strat/
+  initial conditions: /home/dlatorne/MEOPAR/SalishSea/spin-up/11apr20apr/
   open boundaries: open_boundaries/
   rivers: rivers/
 
@@ -36,8 +36,8 @@ namelists:
   - mynamelist21apr30mayI.time          
   - topog_change/mynamelist.olddomain  
   - mynamelist.surface           # no atmos forcing
-  - ../namelist.lateral  
-  - More_tides/mynamelist.bottom # inc bottom friction 
+  - More_tides/mynamelist.lateral  # inc rn_shlat to 1
+  - ../namelist.bottom 
   - ../namelist.tracers
   - ../namelist.dynamics
   - ../namelist.compute.12x27
