@@ -11,7 +11,7 @@ import salishsea_cmd.api
 
 def main():
     run_desc = base_run_description()
-    run_ids = ['dwr_smooth','dwr_notsmooth']
+    run_ids = ['dwr_notsmooth',]
     for run_id in run_ids:
         do_run(run_id, run_desc)
 
@@ -24,7 +24,7 @@ def do_run(run_id, run_desc):
         run_id,
         run_desc,
         'iodef.eddy.1d.xml',
-        os.path.join('/home/nsoontie/MEOPAR/SalishSea/results/', run_id))
+        os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/', run_id))
 
 
 def base_run_description():
