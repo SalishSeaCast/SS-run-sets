@@ -1,0 +1,43 @@
+# salishsea command processor run description for Salish Sea case
+#
+# Salish Sea full domain with:
+#   standard topography
+#   start from spin-up TS
+#   Open, unstructured western boundary across Strait of Juan de Fuca
+#     Tidal forcing at mouth JdF
+#     Masson, depth corrected, open boundaries
+#  All River Monthly run-off forcing
+#  Atmospheric forcing turned off
+#    All tides only
+
+config_name: SalishSea
+
+# qsub/PBS/TORQUE commands
+run_id: oldtopog_c2d
+walltime: 21:00:00
+email: sallen@eos.ubc.ca
+
+paths:
+  NEMO-code: ../../../NEMO-code/
+  forcing: ../../../NEMO-forcing/
+  runs directory: ../../../SalishSea/
+
+grid:
+  coordinates: coordinates_seagrid_SalishSea.nc
+  bathymetry: bathy_meter_SalishSea2.nc
+
+forcing:
+  atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos/
+  initial conditions: /home/dlatorne/MEOPAR/SalishSea/spin-up/11apr20apr/
+  open boundaries: open_boundaries/
+  rivers: rivers/
+
+namelists:
+  - mynamelist21apr30mayI.time          
+  - topog_change/mynamelist.olddomain  
+  - mynamelist.surface           # no atmos forcing
+  - ../namelist.lateral
+  - ../namelist.bottom
+  - ../namelist.tracers
+  - ../namelist.dynamics
+  - ../namelist.compute.12x27
