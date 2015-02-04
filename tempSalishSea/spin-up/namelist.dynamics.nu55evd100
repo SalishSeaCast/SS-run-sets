@@ -1,0 +1,77 @@
+!! Dynamics configuration
+!!
+&namdyn_adv    !   formulation of the momentum advection
+!-----------------------------------------------------------------------
+   ln_dynadv_vec = .true.  !  vector form (T) or flux form (F)
+   ln_dynadv_cen2= .false. !  flux form - 2nd order centered scheme
+   ln_dynadv_ubs = .false. !  flux form - 3rd order UBS      scheme
+&end
+
+&namdyn_vor    !   option of physics/algorithm (not control by CPP keys)
+!-----------------------------------------------------------------------
+   ln_dynvor_ene = .false. !  energy    conserving scheme
+   ln_dynvor_ens = .false. !  enstrophy conserving scheme
+   ln_dynvor_mix = .false. !  mixed scheme
+   ln_dynvor_een = .true.  !  energy & enstrophy scheme
+&end
+
+&namdyn_hpg    !   Hydrostatic pressure gradient option
+!-----------------------------------------------------------------------
+   ln_hpg_zco  = .false.    ! z-coordinate - full steps
+   ln_hpg_zps  = .false.    ! z-coordinate - partial steps (interpolation)
+   ln_hpg_sco  = .false.    ! s-coordinate (standard jacobian formulation)
+   ln_hpg_djc  = .false.    ! s-coordinate (Density Jacobian with Cubic polynomial)
+   ln_hpg_prj  = .true.     ! s-coordinate (Pressure Jacobian scheme)
+   ln_dynhpg_imp = .false.  ! time stepping: semi-implicit time scheme  (T)
+                            !                centered      time scheme  (F)
+&end
+
+!-----------------------------------------------------------------------
+&namdyn_ldf    !   lateral diffusion on momentum
+!-----------------------------------------------------------------------
+   !!  Type of the operator:
+   ln_dynldf_lap    = .true.    !  laplacian operator
+   ln_dynldf_bilap  = .false.   !  bilaplacian operator
+   !!  Direction of action:
+   ln_dynldf_level  = .false.   !  iso-level
+   ln_dynldf_hor    = .true.    !  horizontal (geopotential) (requires "key_ldfslp" in s-coord.)
+   ln_dynldf_iso    = .false.   !  iso-neutral (requires "key_ldfslp")
+   !!  Coefficients:
+   rn_ahm_0_lap     = 55.0      !  horizontal laplacian eddy viscosity   [m2/s]
+   rn_ahmb_0        =  0.0      !  background eddy viscosity for ldf_iso [m2/s]
+   rn_ahm_0_blp     = -1.0e+10  !  horizontal bilaplacian eddy viscosity [m4/s]
+&end
+
+&namzdf        !   vertical physics
+!-----------------------------------------------------------------------
+   rn_avm0     =   1.e-4  !  vertical eddy viscosity   [m2/s]          (background Kz if not "key_zdfcst")
+   rn_avt0     =   1.e-5  !  vertical eddy diffusivity [m2/s]          (background Kz if not "key_zdfcst")
+   nn_avb      =    0     !  profile for background avt & avm (=1) or not (=0)
+   nn_havtb    =    0     !  horizontal shape for avtb (=1) or not (=0)
+   ln_zdfevd   = .true.   !  enhanced vertical diffusion (evd) (T) or not (F)
+   nn_evdm     =    1     !  evd apply on tracer (=0) or on tracer and momentum (=1)
+   rn_avevd    =  100.     !  evd mixing coefficient [m2/s]
+   ln_zdfnpc   = .false.  !  Non-Penetrative Convective algorithm (T) or not (F)
+   nn_npc      =    1     !  frequency of application of npc
+   nn_npcp     =  365     !  npc control print frequency
+   ln_zdfexp   = .false.  !  time-stepping: split-explicit (T) or implicit (F) time stepping
+   nn_zdfexp   =    3     !  number of sub-timestep for ln_zdfexp=T
+&end
+
+&namzdf_gls                !   GLS vertical diffusion                   ("key_zdfgls")
+!-----------------------------------------------------------------------
+   rn_emin       = 1.e-6   !  minimum value of e   [m2/s2]
+   rn_epsmin     = 1.e-12  !  minimum value of eps [m2/s3]
+   ln_length_lim = .true.  !  limit on the dissipation rate under stable stratification (Galperin et al., 1988)
+   rn_clim_galp  = 0.53    !  galperin limit
+   ln_crban      = .true.  !  Use Craig & Banner (1994) surface wave mixing parametrisation
+   ln_sigpsi     = .true.  !  Activate or not Burchard 2001 mods on psi schmidt number in the wb case
+   rn_crban      = 100.    !  Craig and Banner 1994 constant for wb tke flux
+   rn_charn =  100000.     !  Charnock constant for wb induced roughness length
+   nn_tkebc_surf =   1     !  surface tke condition (0/1/2=Dir/Neum/Dir Mellor-Blumberg)
+   nn_tkebc_bot  =   1     !  bottom tke condition (0/1=Dir/Neum)
+   nn_psibc_surf =   1     !  surface psi condition (0/1/2=Dir/Neum/Dir Mellor-Blumberg)
+   nn_psibc_bot  =   1     !  bottom psi condition (0/1=Dir/Neum)
+   nn_stab_func  =   2     !  stability function (0=Galp, 1= KC94, 2=CanutoA, 3=CanutoB)
+   nn_clos       =   1     !  predefined closure type (0=MY82, 1=k-eps, 2=k-w, 3=Gen)
+&end
