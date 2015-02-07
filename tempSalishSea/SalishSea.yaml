@@ -47,4 +47,4 @@ namelists:
   - namelist.bottom
   - namelist.tracers
   - namelist.dynamics
-  - namelist.compute.4x4
+  - namelist.compute.2x4
