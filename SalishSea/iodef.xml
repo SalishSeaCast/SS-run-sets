@@ -28,6 +28,9 @@
         <file id="1h_grid_W" name="auto">
           <field ref="woce" name="vovecrtz"/>
         </file>
+      </group>
+
+     <group id="Tides" output_freq="3600" output_level="10" enabled=".false.">
         <file id="Tidal_Harmonics_eta">
           <field ref="K1x" name="K1_eta_real"/>
           <field ref="K1y" name="K1_eta_imag"/>
@@ -191,7 +194,7 @@
       <group id="3h" output_freq="10800" output_level="10" enabled=".false.">
       </group>
 
-      <group id="4h" output_freq="14400" output_level="10" enabled=".true.">
+      <group id="4h" output_freq="14400" output_level="10" enabled=".false.">
         <file id="4h_grid_T" name="auto">
           <field ref="ssh" name="sossheig"/>
           <field ref="toce" name="votemper"/>
