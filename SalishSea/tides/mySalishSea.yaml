@@ -13,7 +13,7 @@
 config_name: SalishSea
 
 # qsub/PBS/TORQUE commands
-run_id: topogbottfric
+run_id: smoothkappa10
 walltime: 21:00:00
 email: sallen@eos.ubc.ca
 
@@ -37,7 +37,7 @@ namelists:
   - topog_change/mynamelist.domain  #new TS for smooth topography  
   - mynamelist.surface           # no atmos forcing
   - ../namelist.lateral 
-  - More_tides/mynamelist.bottom #inc bottom friction 
-  - ../namelist.tracers
+  - ../namelist.bottom
+  - ../More_tides/mynamelist.tracers  # decrease kappa to 10
   - ../namelist.dynamics
   - ../namelist.compute.12x27
