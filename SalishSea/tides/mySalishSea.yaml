@@ -1,7 +1,7 @@
 # salishsea command processor run description for Salish Sea case
 #
 # Salish Sea full domain with:
-#   standard topography
+#   extra smoothed topography
 #   start from spin-up TS
 #   Open, unstructured western boundary across Strait of Juan de Fuca
 #     Tidal forcing at mouth JdF
@@ -13,7 +13,7 @@
 config_name: SalishSea
 
 # qsub/PBS/TORQUE commands
-run_id: incrnshlat2
+run_id: topogbottfric
 walltime: 21:00:00
 email: sallen@eos.ubc.ca
 
@@ -24,20 +24,20 @@ paths:
 
 grid:
   coordinates: coordinates_seagrid_SalishSea.nc
-  bathymetry: bathy_meter_SalishSea2.nc
+  bathymetry: smoothto033.nc
 
 forcing:
   atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos/
-  initial conditions: /home/dlatorne/MEOPAR/SalishSea/spin-up/11apr20apr/
+  initial conditions: initial_strat/
   open boundaries: open_boundaries/
   rivers: rivers/
 
 namelists:
   - mynamelist21apr30mayI.time          
-  - topog_change/mynamelist.olddomain  
+  - topog_change/mynamelist.domain  #new TS for smooth topography  
   - mynamelist.surface           # no atmos forcing
-  - More_tides/mynamelist.lateral  # inc rn_shlat to 1
-  - ../namelist.bottom 
+  - ../namelist.lateral 
+  - More_tides/mynamelist.bottom #inc bottom friction 
   - ../namelist.tracers
   - ../namelist.dynamics
   - ../namelist.compute.12x27
