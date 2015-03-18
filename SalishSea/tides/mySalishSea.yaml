@@ -38,6 +38,6 @@ namelists:
   - mynamelist.surface           # no atmos forcing
   - ../namelist.lateral 
   - ../namelist.bottom
-  - ../More_tides/mynamelist.tracers  # decrease kappa to 10
+  - More_tides/mynamelist.tracers  # decrease kappa to 10
   - ../namelist.dynamics
   - ../namelist.compute.12x27
