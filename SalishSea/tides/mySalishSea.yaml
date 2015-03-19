@@ -13,7 +13,7 @@
 config_name: SalishSea
 
 # qsub/PBS/TORQUE commands
-run_id: kappa10
+run_id: oldtopog_c2d
 walltime: 21:00:00
 email: sallen@eos.ubc.ca
 
@@ -38,6 +38,6 @@ namelists:
   - mynamelist.surface           # no atmos forcing
   - ../namelist.lateral
   - ../namelist.bottom
-  - More_tides/mynamelist.tracers  # decrease kappa to 10 
+  - ../namelist.tracers
   - ../namelist.dynamics
   - ../namelist.compute.12x27
