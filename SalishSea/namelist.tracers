@@ -39,7 +39,7 @@
    ! Value rn_aeiv_0 is ignored unless = 0 with Held-Larichev spatially varying aeiv
    !                                  (key_traldf_c2d & key_traldf_eiv & key_orca_r2, _r1 or _r05)
    rn_aeiv_0        =     0.    !  eddy induced velocity coefficient [m2/s]
-   rn_aht_0         =    20.5    !  horizontal eddy diffusivity for tracers [m2/s]
+   rn_aht_0         =    10.    !  horizontal eddy diffusivity for tracers [m2/s]
    rn_ahtb_0        =     0.    !  background eddy diffusivity for ldf_iso [m2/s]
    !                                           (normally=0; not used with Griffies)
 &end
