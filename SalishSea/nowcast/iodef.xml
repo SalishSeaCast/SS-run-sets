@@ -741,7 +741,7 @@
 	  <!-- Plume Points -->
         <zoom id="plume"  ibegin="290" jbegin="440" ni="1" nj="1" />
       <!-- VENUS -->
-        <zoom id="VENUs_east"  ibegin="284" jbegin="417" ni="1" nj="1" />
+        <zoom id="VENUS_east"  ibegin="284" jbegin="417" ni="1" nj="1" />
         <zoom id="VENUS_central"  ibegin="267" jbegin="425" ni="1" nj="1" />
  </grid>
 
