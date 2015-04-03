@@ -1,0 +1,40 @@
+!! Domain configuration
+!!
+&namcfg     !   parameters of the configuration
+!-----------------------------------------------------------------------
+   cp_cfg      =  "SalishSea"          !  name of the configuration
+   jp_cfg      =     120               !  resolution of the configuration [1/degrees]
+   jpidta      =     398               !  1st lateral dimension ( >= jpi )
+   jpjdta      =     898               !  2nd    "         "    ( >= jpj )
+   jpkdta      =      40               !  number of levels      ( >= jpk )
+   jperio      =       0               !  lateral cond. type (between 0 and 6)
+                                       !  = 0 closed                 ;   = 1 cyclic East-West
+                                       !  = 2 equatorial symmetric   ;   = 3 North fold T-point pivot
+                                       !  = 4 cyclic East-West AND North fold T-point pivot
+                                       !  = 5 North fold F-point pivot
+                                       !  = 6 cyclic East-West AND North fold F-point pivot
+&end
+
+&namzgr        !   vertical coordinates
+!-----------------------------------------------------------------------
+   ln_zco      = .false.   !  z-coordinate - full    steps   (T/F)      ("key_zco" may also be defined)
+   ln_zps      = .true.    !  z-coordinate - partial steps   (T/F)
+&end
+
+&namdom        !   space and time domain (bathymetry, mesh, timestep)
+!-----------------------------------------------------------------------
+   nn_bathy    =    1      !  compute (=0) or read (=1) the bathymetry file
+   nn_msh      =    0      !  create (=1) a mesh file or not (=0)
+   rn_hmin     =    3.     !  min depth of the ocean (>0) or min number of ocean level (<0)
+   rn_e3zps_min=    5.     !  partial step thickness is set larger than the minimum of
+   rn_e3zps_rat=    0.2    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
+                           !
+   rn_rdt      =   50.     !  time step for the dynamics (and tracer if nn_acc=0)
+   nn_baro     =   30      !  number of barotropic time step            ("key_dynspg_ts")
+   rn_atfp     =    0.1    !  asselin time filter parameter
+   nn_acc      =    0      !  acceleration of convergence : =1      used, rdt < rdttra(k)
+                           !                                =0, not used, rdt = rdttra
+   rn_rdtmin   =   300.    !  minimum time step on tracers (used if nn_acc=1)
+   rn_rdtmax   =   300.    !  maximum time step on tracers (used if nn_acc=1)
+   rn_rdth     =   300.    !  depth variation of tracer time step  (used if nn_acc=1)
+&end
