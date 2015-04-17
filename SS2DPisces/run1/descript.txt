@@ -1,0 +1,3 @@
+copied run0
+run 4 days
+record initial condition

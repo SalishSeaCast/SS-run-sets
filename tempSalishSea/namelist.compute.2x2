@@ -20,6 +20,6 @@
    nn_buffer   =   0       !  size in bytes of exported buffer ('B' case), 0 no exportation
    ln_nnogather=  .false.  !  activate code to avoid mpi_allgather use at the northfold
    jpni        =   2       !  jpni   number of processors following i (set automatically if < 1)
-   jpnj        =   4       !  jpnj   number of processors following j (set automatically if < 1)
-   jpnij       =  8       !  jpnij  number of local domains (set automatically if < 1)
+   jpnj        =   2       !  jpnj   number of processors following j (set automatically if < 1)
+   jpnij       =  4       !  jpnij  number of local domains (set automatically if < 1)
 /
