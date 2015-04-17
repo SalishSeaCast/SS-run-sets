@@ -1,5 +1,5 @@
-based on run2
+based on run6
 closed domain
 no tides
 2 day run
-altered namelist from run3 to try to enable RGB penetrative solar radiation. Not sure if this affects bio model. 
+uses version of nemo compiled without key_bdy. still has weird boundary issue.
