@@ -9,9 +9,9 @@ import salishsea_cmd.api
  
 def main():
     run_desc = base_run_description()
-    runs = ('all_forcing', 'tidesonly', 'ssh_only')
-    tides= ('lateral', 'lateral.tidesonly','lateral')
-    surface=('surface','surface.nosurge','surface.nosurge')
+    runs = ('all_forcing',  'ssh_only')
+    tides= ('lateral', 'lateral')
+    surface=('surface','surface.nosurge')
     for run_id,tide_id,surface_id in zip(runs,tides,surface):
         do_run(run_id, run_desc, tide_id, surface_id)
  
@@ -26,7 +26,7 @@ def do_run(run_id, run_desc, tide_id, surface_id):
         run_id,
         run_desc,
         'iodef.xml',
-        os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/storm_surges/final/dec2006/', run_id))
+        os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/storm_surges/revisions/dec2006/', run_id))
  
  
 def base_run_description():
