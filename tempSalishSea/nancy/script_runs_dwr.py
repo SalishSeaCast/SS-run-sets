@@ -11,7 +11,7 @@ import salishsea_cmd.api
 
 def main():
     run_desc = base_run_description()
-    run_ids = ['dwr_notsmooth',]
+    run_ids = ['dwr_k10_smooth',]
     for run_id in run_ids:
         do_run(run_id, run_desc)
 
@@ -20,6 +20,8 @@ def do_run(run_id, run_desc):
     run_desc['run_id'] = run_id
     run_desc['namelists'][1] = (
            os.path.join(run_id,'mynamelist.domain' ))
+    run_desc['namelists'][5] = (
+           os.path.join(run_id,'namelist.tracers'))
     salishsea_cmd.api.run_in_subprocess(
         run_id,
         run_desc,
