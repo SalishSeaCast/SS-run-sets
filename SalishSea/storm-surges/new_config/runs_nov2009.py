@@ -9,9 +9,9 @@ import salishsea_cmd.api
  
 def main():
     run_desc = base_run_description()
-    runs = ('all_forcing', 'tidesonly')
-    tides= ('lateral', 'lateral.tidesonly')
-    surface=('surface','surface.nosurge')
+    runs = ('all_forcing',)
+    tides= ('lateral',)
+    surface=('surface.nov2009',)
     for run_id,tide_id,surface_id in zip(runs,tides,surface):
         do_run(run_id, run_desc, tide_id, surface_id)
  
@@ -22,11 +22,12 @@ def do_run(run_id, run_desc, tide_id, surface_id):
         'namelist.{}'.format(tide_id))
     run_desc['namelists'][2] = (
         'namelist.{}'.format(surface_id))
+    run_desc['forcing']['atmospheric']=('/home/nksoonti/MEOPAR/CGRF/NEMO-atmos/')
     salishsea_cmd.api.run_in_subprocess(
         run_id,
         run_desc,
         'iodef.xml',
-        os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/storm_surges/final/nov2009/', run_id))
+        os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/storm_surges/revisions/nov2009/', run_id))
  
  
 def base_run_description():

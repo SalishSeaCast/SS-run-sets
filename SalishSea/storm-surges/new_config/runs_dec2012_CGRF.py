@@ -9,8 +9,8 @@ import salishsea_cmd.api
  
 def main():
     run_desc = base_run_description()
-    runs = ('all_forcing','tidesonly','weather_only','no_pressure',)
-    tides= ('lateral','lateral.tidesonly','lateral.tidesonly','lateral.tidesonly',)
+    runs = ('all_forcing',)
+    tides= ('lateral',)
     surface=('surface','surface.nosurge','surface','surface.nopressure',)
     for run_id,tide_id,surface_id in zip(runs,tides,surface):
         do_run(run_id, run_desc, tide_id, surface_id)
@@ -26,7 +26,7 @@ def do_run(run_id, run_desc, tide_id, surface_id):
         run_id,
         run_desc,
         'iodef.xml',
-        os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/storm_surges/final/dec2012/CGRF/', run_id))
+        os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/storm_surges/revisions/dec2012/CGRF/', run_id))
  
  
 def base_run_description():
