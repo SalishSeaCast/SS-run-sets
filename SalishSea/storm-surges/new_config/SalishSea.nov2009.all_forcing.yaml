@@ -26,7 +26,7 @@ grid:
   bathymetry: bathy_meter_SalishSea2.nc
 
 forcing:
-  atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos
+  atmospheric: /home/nksoonti/MEOPAR/CGRF/NEMO-atmos
   initial conditions: /home/dlatorne/MEOPAR/SalishSea/spin-up/7nov16nov/
   open boundaries: open_boundaries/
   rivers: rivers/
@@ -34,7 +34,7 @@ forcing:
 namelists:
   - namelist.nov2009.time
   - namelist.nov2009.domain
-  - namelist.surface #corrected atmospheric pressure
+  - namelist.surface.nov2009 #corrected atmospheric pressure
   - namelist.lateral #RC13 northern and western tides
   - namelist.bottom
   - namelist.tracers
