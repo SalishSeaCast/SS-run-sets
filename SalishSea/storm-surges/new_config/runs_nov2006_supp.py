@@ -9,9 +9,9 @@ import salishsea_cmd.api
  
 def main():
     run_desc = base_run_description()
-    runs = ('uniform_strat','no_north')
-    tides= ('lateral','lateral.no_north_ssh')
-    domain = ('nov2006_uniform.domain','nov2006.domain')
+    runs = ('no_north',)
+    tides= ('lateral.no_north_ssh',)
+    domain = ('nov2006.domain',)
     for run_id,tide_id,domain_id in zip(runs,tides,domain):
         do_run(run_id, run_desc, tide_id, domain_id)
  
@@ -37,7 +37,7 @@ def base_run_description():
         forcing='../../../../NEMO-forcing/',
         runs_dir='../../../../SalishSea/',
         init_conditions=(
-            'initial_strat'),
+            '/home/dlatorne/MEOPAR/SalishSea/spin-up/7nov16nov'),
         )
     run_desc['email'] = 'nsoontie@eos.ubc.ca'
     # Relative paths to namelist section files
