@@ -18,12 +18,30 @@
              <field ref="voce" name="vomecrty"/>
           </group>
 	    </file>
+       <file id="VENUS_central_gridded" name="VENUS_central_gridded" enabled=".true." description="VENUS central 15 minutes, 2x2 grid to unstagger velocities ">
+          <group id="VENUS_central_gridded" zoom_ref="VENUS_central_gridded">
+             <field ref="toce" name="votemper"/>
+             <field ref="soce" name="vosaline"/>
+             <field ref="uoce" name="vozocrtx"/>
+             <field ref="voce" name="vomecrty"/>
+             <field ref="woce" name="vovecrtz"/>
+          </group>
+       </file>
         <file id="VENUS_east" name="VENUS_east" enabled=".true." description="VENUS east 15 minutes">
           <group id="VENUS_east" zoom_ref="VENUS_east">
              <field ref="toce" name="votemper"/>
              <field ref="soce" name="vosaline"/>
              <field ref="uoce" name="vozocrtx"/>
              <field ref="voce" name="vomecrty"/>
+          </group>
+	    </file>
+        <file id="VENUS_east_gridded" name="VENUS_east_gridded" enabled=".true." description="VENUS east 15 minutes, 2x2 grid to unstagger velocities ">
+          <group id="VENUS_east_gridded" zoom_ref="VENUS_east_gridded">
+             <field ref="toce" name="votemper"/>
+             <field ref="soce" name="vosaline"/>
+             <field ref="uoce" name="vozocrtx"/>
+             <field ref="voce" name="vomecrty"/>
+             <field ref="woce" name="vovecrtz"/>
           </group>
 	    </file>
         <file id="PointAtkinson" name="PointAtkinson" enabled=".true." description="Point Atkinson tides">
@@ -743,6 +761,8 @@
       <!-- VENUS -->
         <zoom id="VENUS_east"  ibegin="284" jbegin="417" ni="1" nj="1" />
         <zoom id="VENUS_central"  ibegin="267" jbegin="425" ni="1" nj="1" />
+        <zoom id="VENUS_east_gridded"  ibegin="283" jbegin="416" ni="2" nj="2" />
+        <zoom id="VENUS_central_gridded"  ibegin="266" jbegin="424" ni="2" nj="2" />
  </grid>
 
       <grid id="grid_U" description="grid U" >
