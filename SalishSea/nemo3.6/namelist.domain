@@ -36,6 +36,17 @@
    rn_rdtmin   =   300.    !  minimum time step on tracers (used if nn_acc=1)
    rn_rdtmax   =   300.    !  maximum time step on tracers (used if nn_acc=1)
    rn_rdth     =   300.    !  depth variation of tracer time step  (used if nn_acc=1)
+
+! grid information (was in par file)
+   ppsur       = 999999.
+   ppa0        = 999999.
+   ppa1        = 999999.
+   ppkth       = 25.
+   ppacr       =  3.
+   ppdzmin     =  1.
+   pphmax      = 428.
+   ldbletanh   = .FALSE.   ! do not use double tanh
+
 &end
 
 &namsplit      !   time splitting parameters                            ("key_dynspg_ts")
