@@ -7,6 +7,8 @@
    jpidta      =     398               !  1st lateral dimension ( >= jpi )
    jpjdta      =     898               !  2nd    "         "    ( >= jpj )
    jpkdta      =      40               !  number of levels      ( >= jpk )
+   jpiglo      =     398               !  1st dimension of global domain --> i =jpidta
+   jpjglo      =     898               !  2nd    -                  -    --> j =jpjdta
    jperio      =       0               !  lateral cond. type (between 0 and 6)
                                        !  = 0 closed                 ;   = 1 cyclic East-West
                                        !  = 2 equatorial symmetric   ;   = 3 North fold T-point pivot
@@ -57,10 +59,10 @@
                                        !  a user defined maximum courant number (rn_bt_cmax)
    nn_baro       =     5               !  Number of iterations of barotropic mode
                                        !  during rn_rdt seconds. Only used if ln_bt_nn_auto=F
-   rn_bt_cmax    =    0.8              !  Maximum courant number allowed if ln_bt_nn_auto=T 
+   rn_bt_cmax    =    0.8              !  Maximum courant number allowed if ln_bt_nn_auto=T
    nn_bt_flt     =    0                !  Time filter choice
                                        !  = 0 None
                                        !  = 1 Boxcar over   nn_baro barotropic steps
-                                       !  = 2 Boxcar over 2*nn_baro     "        "  
+                                       !  = 2 Boxcar over 2*nn_baro     "        "
 
 &end
