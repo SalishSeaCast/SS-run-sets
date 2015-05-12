@@ -43,13 +43,10 @@
 
 &nambdy_index ! open boundaries - definition ("key_bdy")
 !-----------------------------------------------------------------------
-    nbdysege = 0    ! east boundary segments (0=closed)
-    nbdysegw = 1    ! west boundary segments
-    jpiwob   = 2    ! i-index for segment
-    jpjwdt   = 385  ! j-index for segment beginning
-    jpjwft   = 471  ! j-index for segment end
-    nbdysegn = 0    ! north boundary segments (0=closed)
-    nbdysegs = 0    ! south boundary segments (0=closed)
+    ctypebdy = 'W'
+    nbdyind   = 2    ! i-index for segment
+    nbdybeg   = 385  ! j-index for segment beginning
+    nbdyend   = 471  ! j-index for segment end
 &end
 
 
