@@ -1,0 +1,3 @@
+&namnc4        !   netcdf4 chunking and compression settings            ("key_netcdf4")
+! use defaults until Doug has chance to look
+&end
