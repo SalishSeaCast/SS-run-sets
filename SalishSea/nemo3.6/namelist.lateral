@@ -22,3 +22,24 @@
    clname(7)     =   'K2'
    clname(8)     =   'P1'
 &end
+
+&nambdy        !  unstructured open boundaries                          ("key_bdy")
+!-----------------------------------------------------------------------
+    nb_bdy         = 1                   !  number of open boundary sets According to merge namelist, only 1
+    ln_coords_file = .false.              !  =T : read bdy coordinates from file
+    cn_dyn2d       = 'flather'            !
+    nn_dyn2d_dta   =  3                   !  = 0, bdy data are equal to the initial state
+                                          !  = 1, bdy data are read in 'bdydata   .nc' files
+                                          !  = 2, use tidal harmonic forcing data from files
+                                          !  = 3, use external data AND tidal harmonic forcing
+    cn_dyn3d      =  'none'
+    nn_dyn3d_dta  =  0                    !  = 0, bdy data are equal to the initial state
+                                          !  = 1, bdy data are read in 'bdydata   .nc' files
+    cn_tra        =  'frs'                !
+    nn_tra_dta    =  1                    !  = 0, bdy data are equal to the initial state
+                                          !  = 1, bdy data are read in 'bdydata   .nc' files
+    nn_rimwidth   = 10
+&end
+
+
+
