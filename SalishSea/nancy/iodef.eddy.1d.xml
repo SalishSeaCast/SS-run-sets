@@ -30,24 +30,6 @@
 	  <field ref="avt" name="ve_eddy_diff"/>
 	  <field ref="avm" name="ve_eddy_visc"/>
         </file>
-        <file id="Tidal_Harmonics_eta">
-          <field ref="K1x" name="K1_eta_real"/>
-          <field ref="K1y" name="K1_eta_imag"/>
-          <field ref="M2x" name="M2_eta_real"/>
-          <field ref="M2y" name="M2_eta_imag"/>
-        </file>
-        <file id="Tidal_Harmonics_U">
-          <field ref="K1x_u" name="K1_u_real"/>
-          <field ref="K1y_u" name="K1_u_imag"/>
-          <field ref="M2x_u" name="M2_u_real"/>
-          <field ref="M2y_u" name="M2_u_imag"/>
-        </file>
-        <file id="Tidal_Harmonics_V">
-          <field ref="K1x_v" name="K1_v_real"/>
-          <field ref="K1y_v" name="K1_v_imag"/>
-          <field ref="M2x_v" name="M2_v_real"/>
-          <field ref="M2y_v" name="M2_v_imag"/>
-        </file>
       </group>
 
       <group id="1h_freq" output_freq="3600" output_level="10" enabled=".false." >
