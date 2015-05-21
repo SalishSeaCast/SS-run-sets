@@ -13,7 +13,7 @@
 config_name: SalishSea
 
 # qsub/PBS/TORQUE commands
-run_id: oldtopog_c2d
+run_id: oldtopog_c2dB
 walltime: 21:00:00
 email: sallen@eos.ubc.ca
 
