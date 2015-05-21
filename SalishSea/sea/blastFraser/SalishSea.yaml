@@ -7,7 +7,7 @@ config_name: SalishSea
 
 # For runs on systems that use qsub/PBS/TORQUE; e.g. Westgrid
 run_id: blastFraser_11may15
-walltime: 2:00:00
+walltime: 2:30:00
 
 paths:
   # If relative, paths are taken from current directory
@@ -24,7 +24,7 @@ forcing:
   # If relative, paths are taken from forcing path above
   atmospheric: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos/
   # The path and name of a restart file may be used as initial conditions
-  initial conditions: /home/sallen/MEOPAR/SalishSea/nowcast/10may15/
+  initial conditions: initial_strat/
   open boundaries: /home/sallen/MEOPAR/likenowcast/open_boundaries/
   rivers: /home/sallen/MEOPAR/rivers/
 
