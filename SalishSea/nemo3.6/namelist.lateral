@@ -35,7 +35,7 @@
     cn_dyn3d      =  'none', 'none'
     nn_dyn3d_dta  =  0, 0                    !  = 0, bdy data are equal to the initial state
                                           !  = 1, bdy data are read in 'bdydata   .nc' files
-    cn_tra        =  'frs'                !
+    cn_tra        =  'frs','frs'                !
     nn_tra_dta    =  1, 1                    !  = 0, bdy data are equal to the initial state
                                           !  = 1, bdy data are read in 'bdydata   .nc' files
     nn_rimwidth   = 10, 10
@@ -43,19 +43,19 @@
 
 &nambdy_index ! open boundaries - definition ("key_bdy")
 !-----------------------------------------------------------------------
-    ctypebdy = 'W', 'N'
-    nbdyind   = 2, 897    ! i-index for segment
-    nbdybeg   = 385, 33  ! j-index for segment beginning
-    nbdyend   = 471, 62  ! j-index for segment end
+    ctypebdy = 'W'
+    nbdyind   = 2     ! i-index for segment
+    nbdybeg   = 385   ! j-index for segment beginning
+    nbdyend   = 471   ! j-index for segment end
 &end
 
 &nambdy_dta      !  open boundaries - external data           ("key_bdy")
 !-----------------------------------------------------------------------
 !              !  file name      ! frequency (hours) ! variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !              !                 !  (if <0  months)  !   name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
-   bn_ssh = 'ssh/ssh',   -1,        'sossheig', .true.,  .false.,  'monthly',  '',        ''
-   bn_u2d = 'ssh/ssh',   -1,        'vobtcrtx', .true.,  .false.,  'monthly',  '',        ''
-   bn_v2d = 'ssh/ssh',   -1,        'vobtcrty', .true.,  .false.,  'monthly',  '',        ''
+   bn_ssh = 'ssh/ssh',   1,        'sossheig', .true.,  .false.,  'monthly',  '',        ''
+   bn_u2d = 'ssh/ssh',   1,        'vobtcrtx', .true.,  .false.,  'monthly',  '',        ''
+   bn_v2d = 'ssh/ssh',   1,        'vobtcrty', .true.,  .false.,  'monthly',  '',        ''
    bn_u3d = '',                      24,        'vozocrtx', .true.,  .false., 'daily',   '',        ''
    bn_v3d = '',                      24,        'vomecrty', .true.,  .false., 'daily',   '',        ''
    bn_tem = 'SalishSea2_Masson_DC', 168,        'votemper', .true.,  .true.,  'yearly',  '',        ''
@@ -67,6 +67,14 @@
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
    filtide       = 'open_boundaries/west/tides/SalishSea2_Flux_RC13_west_tide_'
+&end
+
+&nambdy_index ! open boundaries - definition ("key_bdy")
+!-----------------------------------------------------------------------
+    ctypebdy = 'N'
+    nbdyind   = 896    ! i-index for segment
+    nbdybeg   = 33  ! j-index for segment beginning
+    nbdyend   = 62  ! j-index for segment end
 &end
 
 &nambdy_dta      !  open boundaries - external data           ("key_bdy")
