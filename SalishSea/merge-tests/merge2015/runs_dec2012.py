@@ -9,7 +9,7 @@ import salishsea_cmd.api
  
 def main():
     run_desc = base_run_description()
-    runs = ('all_forcing',)
+    runs = ('initial',)
     tides= ('lateral',)
     surface=('surface.ops',)
     for run_id,tide_id,surface_id in zip(runs,tides,surface):
@@ -26,18 +26,18 @@ def do_run(run_id, run_desc, tide_id, surface_id):
         run_id,
         run_desc,
         'iodef.xml',
-        os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/storm_surges/revisions/dec2012/ops/', run_id))
+        os.path.join('/data/nsontie/MEOPAR/SalishSea/results/merge-tests/merg2015/', run_id))
  
  
 def base_run_description():
 # Relative paths from SS-run-sets/SalishSea/storm_surges/new_config
     run_desc = salishsea_cmd.api.run_description(
-        walltime='15:00:00',
+        walltime='20:00:00',
         NEMO_code='../../../../NEMO-code/',
         forcing='../../../../NEMO-forcing/',
         runs_dir='../../../../SalishSea/',
         init_conditions=(
-            '/home/nksoonti/MEOPAR/SalishSea/results/spin-up/7dec16dec'),
+            '/ocean/dlatorne/MEOPAR/SalishSea/results/spin-up/7dec16dec'),
         )
     run_desc['email'] = 'nsoontie@eos.ubc.ca'
     # Relative paths to namelist section files
@@ -49,7 +49,7 @@ def base_run_description():
         'namelist.bottom',
         'namelist.tracers',
         'namelist.dynamics',
-        'namelist.compute.6x14',
+        'namelist.compute.4x4',
         ]
     return run_desc
  
