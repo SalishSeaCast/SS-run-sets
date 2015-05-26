@@ -22,11 +22,12 @@ def do_run(run_id, run_desc, tide_id, surface_id):
         'namelist.{}'.format(tide_id))
     run_desc['namelists'][2] = (
         'namelist.{}'.format(surface_id))
+    run_desc['forcing']['atmospheric']='/ocean/nsoontie/MEOPAR/GEM2.5/ops/'   
     salishsea_cmd.api.run_in_subprocess(
         run_id,
         run_desc,
         'iodef.xml',
-        os.path.join('/data/nsontie/MEOPAR/SalishSea/results/merge-tests/merg2015/', run_id))
+        os.path.join('/data/nsoontie/MEOPAR/SalishSea/results/merge-tests/merge2015/', run_id))
  
  
 def base_run_description():
