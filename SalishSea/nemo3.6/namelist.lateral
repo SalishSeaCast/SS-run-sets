@@ -67,6 +67,7 @@
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
    filtide       = 'open_boundaries/west/tides/SalishSea2_Flux_RC13_west_tide_'
+   ln_bdytide_conj  = .true.
 &end
 
 &nambdy_index ! open boundaries - definition ("key_bdy")
@@ -96,4 +97,5 @@
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
    filtide       = 'open_boundaries/north/tides/SalishSea2_corr15_North_tide_'
+   ln_bdytide_conj  = .true.
 &end
