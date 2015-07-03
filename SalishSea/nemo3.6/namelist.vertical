@@ -39,7 +39,7 @@
    ln_sigpsi     = .true.  !  Activate or not Burchard 2001 mods on psi schmidt number in the wb case
    rn_crban      = 100.    !  Craig and Banner 1994 constant for wb tke flux
    rn_charn      = 100000. !  Charnock constant for wb induced roughness length
-   rn_hsro       =  0.03   !  Minimum surface roughness
+   rn_hsro       =  0.003   !  Minimum surface roughness
    nn_bc_surf =      1     !  surface tke condition (0/1/2=Dir/Neum/Dir Mellor-Blumberg)
    nn_bc_bot  =      1     !  bottom tke condition (0/1=Dir/Neum)
    nn_stab_func  =   2     !  stability function (0=Galp, 1= KC94, 2=CanutoA, 3=CanutoB)
