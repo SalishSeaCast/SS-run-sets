@@ -9,9 +9,9 @@ import salishsea_cmd.api
  
 def main():
     run_desc = base_run_description()
-    runs = ('spring', 'spring_tides')
-    tides= ('lateral.spring', 'lateral.tidesonly')
-    time=('spring.time','spring.time')
+    runs = ('neap', 'neap_tides')
+    tides= ('lateral.neap', 'lateral.tidesonly')
+    time=('neap.time','neap.time')
     for run_id,tide_id,time_id in zip(runs,tides,time):
         do_run(run_id, run_desc, tide_id, time_id)
  
