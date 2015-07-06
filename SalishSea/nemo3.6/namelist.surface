@@ -53,16 +53,16 @@
 !-----------------------------------------------------------------------
 !        !  file name ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights          ! rotation ! land/sea mask !
 !              !      !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename         ! pairing  ! filename      !
-   sn_wndi     = 'u10',       1,          'u_wind',    .true.,         .false., 'daily',  'weights-CGRF.nc',   'Uwnd'
-   sn_wndj     = 'v10',       1,          'v_wind',    .true.,         .false., 'daily',  'weights-CGRF.nc',   'Vwnd'
-   sn_qsr      = 'qsw',       1,          'solar',     .true., .false., 'daily',  'weights-CGRF.nc',   ''
-   sn_qlw      = 'qlw',       1,          'therm_rad', .true., .false., 'daily',  'weights-CGRF.nc',   ''
-   sn_tair     = 't2',        1,          'tair',      .true., .false., 'daily',  'weights-CGRF.nc',   ''
-   sn_humi     = 'q2',        1,          'qair',      .true., .false., 'daily',  'weights-CGRF.nc',   ''
-   sn_prec     = 'precip',    1,          'precip',    .true., .false., 'daily',  'weights-CGRF.nc',   ''
-   sn_snow     = 'no_snow', -12,          'snow',      .true., .true.,  'yearly', 'weights-CGRF.nc',   ''
+   sn_wndi     = 'ops',       1,          'u_wind',    .true.,         .false., 'daily',  'weights-gem2.5-ops.nc',   'Uwnd'
+   sn_wndj     = 'ops',       1,          'v_wind',    .true.,         .false., 'daily',  'weights-gem2.5-ops.nc',   'Vwnd'
+   sn_qsr      = 'ops',       1,          'solar',     .true., .false., 'daily',  'weights-gem2.5-ops.nc',   ''
+   sn_qlw      = 'ops',       1,          'therm_rad', .true., .false., 'daily',  'weights-gem2.5-ops.nc',   ''
+   sn_tair     = 'ops',        1,          'tair',      .true., .false., 'daily',  'weights-gem2.5-ops.nc',   ''
+   sn_humi     = 'ops',        1,          'qair',      .true., .false., 'daily',  'weights-gem2.5-ops.nc',   ''
+   sn_prec     = 'ops',    1,          'precip',    .true., .false., 'daily',  'weights-gem2.5-ops.nc',   ''
+   sn_snow     = 'no_snow', -12,          'snow',      .true., .true.,  'yearly', 'weights-gem2.5-ops.nc',   ''
 
-   cn_dir      = 'NEMO-atmos/'    !  root directory for the location of the bulk files
+   cn_dir      = '/ocean/sallen/allen/research/MEOPAR/Operational/'    !  root directory for the location of the bulk files
    rn_zqt      = 2.               !  Air temperature and humidity reference height (m)
    rn_vfac     = 0.   !  new feature, lets use (0. for comparison, then switch to 1)
                                 !  multiplicative factor for ocean/ice velocity
@@ -90,16 +90,16 @@
    ln_rnf_depth = .true.     !  read in depth information for runoff
    ln_rnf_tem   = .false.   !  read in temperature information for runoff
    ln_rnf_sal   = .false.   !  read in salinity information for runoff
-/
+&end
+
 !-----------------------------------------------------------------------
 &namsbc_apr    !   Atmospheric pressure used as ocean forcing or in bulk
 !-----------------------------------------------------------------------
 !          !  file name  ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !          !             !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
-   sn_apr      = 'slp',     1,                 'atmpres',     .true.,     .false., 'daily', 'weights-CGRF.nc', ''
-   cn_dir      = 'NEMO-atmos/'      !  root directory for the location of the bulk files 
+   sn_apr      = 'slp_corr_ops',     1,                 'atmpres',     .true.,     .false., 'daily', 'weights-gem2.5-ops.nc', ''
+   cn_dir      = '/ocean/nsoontie/MEOPAR/GEM2.5/ops/'      !  root directory for the location of the bulk files 
    ln_apr_obc  = .true. !  inverse barometer added to OBC ssh data
-/
 &end
 
 &namberg
