@@ -31,7 +31,7 @@
    rn_e3zps_min=    5.     !  partial step thickness is set larger than the minimum of
    rn_e3zps_rat=    0.2    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
                            !
-   rn_rdt      =   50.     !  time step for the dynamics (and tracer if nn_acc=0)
+   rn_rdt      =   10.     !  time step for the dynamics (and tracer if nn_acc=0)
    rn_atfp     =    0.1    !  asselin time filter parameter
    nn_acc      =    0      !  acceleration of convergence : =1      used, rdt < rdttra(k)
                            !                                =0, not used, rdt = rdttra
@@ -57,10 +57,10 @@
    ln_bt_av      =    .TRUE.           !  Time filtering of barotropic variables
    ln_bt_nn_auto =    .FALSE.           !  Set nn_baro automatically to be just below
                                        !  a user defined maximum courant number (rn_bt_cmax)
-   nn_baro       =     30               !  Number of iterations of barotropic mode
+   nn_baro       =     5               !  Number of iterations of barotropic mode
                                        !  during rn_rdt seconds. Only used if ln_bt_nn_auto=F
    rn_bt_cmax    =    0.8              !  Maximum courant number allowed if ln_bt_nn_auto=T
-   nn_bt_flt     =    0                !  Time filter choice
+   nn_bt_flt     =    1                !  Time filter choice
                                        !  = 0 None
                                        !  = 1 Boxcar over   nn_baro barotropic steps
                                        !  = 2 Boxcar over 2*nn_baro     "        "
@@ -71,8 +71,8 @@
 !-----------------------------------------------------------------------
 !          ! file name                          ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
 !          !                                    ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
-   sn_tem  = 'SS2_SoG0318_1y_temperature_nomask', -12,         'votemper', .false., .true.,  'yearly', '',        ''
-   sn_sal  = 'SS2_SoG0318_1y_salinity_nomask'   , -12,         'vosaline', .false., .true.,  'yearly', '',        ''
+   sn_tem  = 'SalishSea_03585600_restart.nc', -12,         'tb', .false., .true.,  'yearly', '',        ''
+   sn_sal  = 'SalishSea_03585600_restart.nc'   , -12,         'sb', .false., .true.,  'yearly', '',        ''
 
    cn_dir        = 'initial_strat/'  ! directory containing initial condition files
    ln_tsd_init   = .true.            ! Initialisation of ocean T & S with T &S input data (T) or not (F)
