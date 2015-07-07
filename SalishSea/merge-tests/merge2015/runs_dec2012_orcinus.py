@@ -9,7 +9,7 @@ import salishsea_cmd.api
  
 def main():
     run_desc = base_run_description()
-    runs = ('no_river',)
+    runs = ('pressure_gradient',)
     tides= ('lateral',)
     surface=('surface.orcinus',)
     for run_id,tide_id,surface_id in zip(runs,tides,surface):
