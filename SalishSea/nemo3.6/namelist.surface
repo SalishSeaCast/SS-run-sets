@@ -37,7 +37,7 @@
    nn_ice      = 0        !  =0 no ice boundary condition   ,
                            !  =1 use observed ice-cover      ,
                            !  =2 ice-model used                         ("key_lim3" or "key_lim2")
-   ln_rnf      = .true.    !  runoffs                                   (T   => fill namsbc_rnf)
+   ln_rnf      = .false.    !  runoffs                                   (T   => fill namsbc_rnf)
    ln_ssr      = .false. !  Sea Surface Restoring on T and/or S       (T => fill namsbc_ssr)
    nn_fwb      = 0      !  FreshWater Budget: =0 unchecked
                         !     =1 global mean of e-p-r set to zero at each time step
