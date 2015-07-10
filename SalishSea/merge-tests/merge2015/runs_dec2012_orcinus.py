@@ -9,19 +9,22 @@ import salishsea_cmd.api
  
 def main():
     run_desc = base_run_description()
-    runs = ('pressure_gradient',)
+    runs = ('constant_diff',)
     tides= ('lateral',)
     surface=('surface.orcinus',)
-    for run_id,tide_id,surface_id in zip(runs,tides,surface):
-        do_run(run_id, run_desc, tide_id, surface_id)
+    dynamics=('dynamics.constant',)
+    for run_id,tide_id,surface_id,dynamics_id in zip(runs,tides,surface,dynamics):
+        do_run(run_id, run_desc, tide_id, surface_id,dynamics_id)
  
  
-def do_run(run_id, run_desc, tide_id, surface_id):
+def do_run(run_id, run_desc, tide_id, surface_id,dynamics_id):
     run_desc['run_id'] = run_id
     run_desc['namelists'][3] = (
         'namelist.{}'.format(tide_id))
     run_desc['namelists'][2] = (
         'namelist.{}'.format(surface_id))
+    run_desc['namelists'][6]=( 
+        'namelist.{}'.format(dynamics_id))
     run_desc['forcing']['atmospheric']='/home/nksoonti/MEOPAR/GEM2.5/ops/NEMO-atmos/'   
     salishsea_cmd.api.run_in_subprocess(
         run_id,
