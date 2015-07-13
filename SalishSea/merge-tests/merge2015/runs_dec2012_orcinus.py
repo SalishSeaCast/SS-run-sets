@@ -9,7 +9,7 @@ import salishsea_cmd.api
  
 def main():
     run_desc = base_run_description()
-    runs = ('constant_diff',)
+    runs = ('constant_diff_rivers',)
     tides= ('lateral',)
     surface=('surface.orcinus',)
     dynamics=('dynamics.constant',)
