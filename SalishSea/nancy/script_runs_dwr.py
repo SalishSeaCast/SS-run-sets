@@ -11,7 +11,7 @@ import salishsea_cmd.api
 
 def main():
     run_desc = base_run_description()
-    run_ids = ['dwr_notsmooth_kappa10_winds',]
+    run_ids = ['dwr_notracerbc',]
     for run_id in run_ids:
         do_run(run_id, run_desc)
 
@@ -22,10 +22,8 @@ def do_run(run_id, run_desc):
            os.path.join(run_id,'mynamelist.domain' ))
     run_desc['namelists'][5] = (
            os.path.join(run_id,'namelist.tracers'))
-    run_desc['namelists'][6] = (
-           os.path.join(run_id,'namelist.dynamics'))
-    run_desc['namelists'][2] = (
-           os.path.join(run_id,'namelist.surface'))
+    run_desc['namelists'][3] = (
+           os.path.join(run_id,'namelist.lateral'))
     salishsea_cmd.api.run_in_subprocess(
         run_id,
         run_desc,
