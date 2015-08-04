@@ -29,7 +29,9 @@
 
 &namtra_adv    !   advection scheme for tracer
 !-----------------------------------------------------------------------
-! TVD scheme with sub timestepping for vertical advection tracer available here
+!
+    ln_traadv_tvd = .false.
+    ln_traadv_tvd_zts = .true. ! TVD scheme with sub timestepping for vertical tracer advection
 &end
 
 &namtra_adv_mle !   mixed layer eddy parametrisation (Fox-Kemper param) this is all new
