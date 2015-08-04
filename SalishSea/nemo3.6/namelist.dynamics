@@ -15,7 +15,7 @@
    ln_dynadv_vec = .true.  !  vector form (T) or flux form (F)
    ln_dynadv_cen2= .false. !  flux form - 2nd order centered scheme
    ln_dynadv_ubs = .false. !  flux form - 3rd order UBS      scheme
-   ln_dynzad_zts = .false. !  Use (T) sub timestepping for vertical momentum advection
+   ln_dynzad_zts = .true. !  Use (T) sub timestepping for vertical momentum advection
 /
 !-----------------------------------------------------------------------
 &nam_vvl    !   vertical coordinate options
