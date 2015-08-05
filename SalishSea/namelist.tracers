@@ -27,8 +27,8 @@
    ln_traldf_bilap  =  .false.  !  bilaplacian operator
    !                       !  Direction of action:
    ln_traldf_level  =  .false.  !  iso-level
-   ln_traldf_hor    =  .true.   !  horizontal (geopotential)   (needs "key_ldfslp" when ln_sco=T)
-   ln_traldf_iso    =  .false.  !  iso-neutral                 (needs "key_ldfslp")
+   ln_traldf_hor    =  .false.   !  horizontal (geopotential)   (needs "key_ldfslp" when ln_sco=T)
+   ln_traldf_iso    =  .true.  !  iso-neutral                 (needs "key_ldfslp")
    !                   !  Griffies parameters              (all need "key_ldfslp")
    ln_traldf_grif   =  .false.  !  use griffies triads
    ln_traldf_gdia   =  .false.  !  output griffies eddy velocities
