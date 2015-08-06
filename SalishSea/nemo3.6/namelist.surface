@@ -98,7 +98,7 @@
 !          !  file name  ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !          !             !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
    sn_apr      = 'slp_corr_ops',     1,                 'atmpres',     .true.,     .false., 'daily', 'weights-gem2.5-ops.nc', ''
-   cn_dir      = '/ocean/nsoontie/MEOPAR/GEM2.5/ops/'      !  root directory for the location of the bulk files 
+   cn_dir      = '/ocean/nsoontie/MEOPAR/GEM2.5/ops/'      !  root directory for the location of the bulk files
    ln_apr_obc  = .true. !  inverse barometer added to OBC ssh data
 &end
 
