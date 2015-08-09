@@ -34,11 +34,7 @@
 !-----------------------------------------------------------------------
 &namdyn_vor    !   option of physics/algorithm (not control by CPP keys)
 !-----------------------------------------------------------------------
-   ln_dynvor_ene = .false. !  enstrophy conserving scheme
-   ln_dynvor_ens = .false. !  energy conserving scheme
-   ln_dynvor_mix = .false. !  mixed scheme
-   ln_dynvor_een = .false. !  energy & enstrophy scheme
-   ln_dynvor_een_old = .true. !  energy & enstrophy scheme - original formulation
+! use defaults from namelist_ref : ln_dynvor_een (new 3.6 scheme)
 /
 !-----------------------------------------------------------------------
 &namdyn_hpg    !   Hydrostatic pressure gradient option
