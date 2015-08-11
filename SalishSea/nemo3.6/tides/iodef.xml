@@ -26,162 +26,162 @@
 
       <file_group id="15min" output_freq="900" output_level="10" enabled=".TRUE."> <!-- 15 minute files -->
         <file id="PortRenfrew" name_suffix="PortRenfrew" description="Port Renfrew 15m tides">
-           <field_group id="PortRenfrew" zoom_ref="PortRenfrew">
+           <field_group id="PortRenfrew" domain_ref="PortRenfrew">
               <field field_ref="ssh" name="sossheig"/>
            </field_group>
         </file>
         <file id="SheringhamPoint" name_suffix="SheringhamPoint" description="15min interval SSH for tides">
-          <field_group id="SheringhamPoint" zoom_ref="SheringhamPoint">
+          <field_group id="SheringhamPoint" domain_ref="SheringhamPoint">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="Sooke" name_suffix="Sooke" description="15min interval SSH for tides">
-          <field_group id="Sooke" zoom_ref="Sooke">
+          <field_group id="Sooke" domain_ref="Sooke">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="PedderBay" name_suffix="PedderBay" description="15min interval SSH for tides">
-          <field_group id="PedderBay" zoom_ref="PedderBay">
+          <field_group id="PedderBay" domain_ref="PedderBay">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="Esquimalt" name_suffix="Esquimalt" description="15min interval SSH for tides">
-          <field_group id="Esquimalt" zoom_ref="Esquimalt">
+          <field_group id="Esquimalt" domain_ref="Esquimalt">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="Victoria" name_suffix="Victoria" description="15min interval SSH for tides">
-          <field_group id="Victoria" zoom_ref="Victoria">
+          <field_group id="Victoria" domain_ref="Victoria">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="CloverPoint" name_suffix="CloverPoint" description="15min interval SSH for tides">
-          <field_group id="CloverPoint" zoom_ref="CloverPoint">
+          <field_group id="CloverPoint" domain_ref="CloverPoint">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="FinnertyCove" name_suffix="FinnertyCove" description="15min interval SSH for tides">
-          <field_group id="FinnertyCove" zoom_ref="FinnertyCove">
+          <field_group id="FinnertyCove" domain_ref="FinnertyCove">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="PortTownsend" name_suffix="PortTownsend" description="15min interval SSH for tides">
-          <field_group id="PortTownsend" zoom_ref="PortTownsend">
+          <field_group id="PortTownsend" domain_ref="PortTownsend">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="FulfordHarbour" name_suffix="FulfordHarbour" description="15min interval SSH for tides">
-          <field_group id="FulfordHarbour" zoom_ref="FulfordHarbour">
+          <field_group id="FulfordHarbour" domain_ref="FulfordHarbour">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="PatosIsland" name_suffix="PatosIsland" description="15min interval SSH for tides">
-          <field_group id="PatosIsland" zoom_ref="PatosIsland">
+          <field_group id="PatosIsland" domain_ref="PatosIsland">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="TumboChannel" name_suffix="TumboChannel" description="15min interval SSH for tides">
-          <field_group id="TumboChannel" zoom_ref="TumboChannel">
+          <field_group id="TumboChannel" domain_ref="TumboChannel">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="WhalerBay" name_suffix="WhalerBay" description="15min interval SSH for tides">
-          <field_group id="WhalerBay" zoom_ref="WhalerBay">
+          <field_group id="WhalerBay" domain_ref="WhalerBay">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="Tsawwassen" name_suffix="Tsawwassen" description="15min interval SSH for tides">
-          <field_group id="Tsawwassen" zoom_ref="Tsawwassen">
+          <field_group id="Tsawwassen" domain_ref="Tsawwassen">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="Sandheads" name_suffix="Sandheads" description="15min interval SSH for tides">
-          <field_group id="Sandheads" zoom_ref="Sandheads">
+          <field_group id="Sandheads" domain_ref="Sandheads">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="PointGrey" name_suffix="PointGrey" description="15min interval SSH for tides">
-          <field_group id="PointGrey" zoom_ref="PointGrey">
+          <field_group id="PointGrey" domain_ref="PointGrey">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="PointAtkinson" name_suffix="PointAtkinson" description="15min interval SSH for tides">
-          <field_group id="PointAtkinson" zoom_ref="PointAtkinson">
+          <field_group id="PointAtkinson" domain_ref="PointAtkinson">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="GibsonsLanding" name_suffix="GibsonsLanding" description="15min interval SSH for tides">
-          <field_group id="GibsonsLanding" zoom_ref="GibsonsLanding">
+          <field_group id="GibsonsLanding" domain_ref="GibsonsLanding">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="HalfmoonBay" name_suffix="HalfmoonBay" description="15min interval SSH for tides">
-          <field_group id="HalfmoonBay" zoom_ref="HalfmoonBay">
+          <field_group id="HalfmoonBay" domain_ref="HalfmoonBay">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="IrvinesLanding" name_suffix="IrvinesLanding" description="15min interval SSH for tides">
-          <field_group id="IrvinesLanding" zoom_ref="IrvinesLanding">
+          <field_group id="IrvinesLanding" domain_ref="IrvinesLanding">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="PowellRiver" name_suffix="PowellRiver" description="15min interval SSH for tides">
-          <field_group id="PowellRiver" zoom_ref="PowellRiver">
+          <field_group id="PowellRiver" domain_ref="PowellRiver">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="Lund" name_suffix="Lund" description="15min interval SSH for tides">
-          <field_group id="Lund" zoom_ref="Lund">
+          <field_group id="Lund" domain_ref="Lund">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="TwinIslets" name_suffix="TwinIslets" description="15min interval SSH for tides">
-          <field_group id="TwinIslets" zoom_ref="TwinIslets">
+          <field_group id="TwinIslets" domain_ref="TwinIslets">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="CampbellRiver" name_suffix="CampbellRiver" description="15min interval SSH for tides">
-          <field_group id="CampbellRiver" zoom_ref="CampbellRiver">
+          <field_group id="CampbellRiver" domain_ref="CampbellRiver">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="MaudeIslandE" name_suffix="MaudeIslandE" description="15min interval SSH for tides">
-          <field_group id="MaudeIslandE" zoom_ref="MaudeIslandE">
+          <field_group id="MaudeIslandE" domain_ref="MaudeIslandE">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="NympheCove" name_suffix="NympheCove" description="15min interval SSH for tides">
-          <field_group id="NympheCove" zoom_ref="NympheCove">
+          <field_group id="NympheCove" domain_ref="NympheCove">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="SeymourNarrows" name_suffix="SeymourNarrows" description="15min interval SSH for tides">
-          <field_group id="SeymourNarrows" zoom_ref="SeymourNarrows">
+          <field_group id="SeymourNarrows" domain_ref="SeymourNarrows">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="BrownBay" name_suffix="BrownBay" description="15min interval SSH for tides">
-          <field_group id="BrownBay" zoom_ref="BrownBay">
+          <field_group id="BrownBay" domain_ref="BrownBay">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="ChathamPoint" name_suffix="ChathamPoint" description="15min interval SSH for tides">
-          <field_group id="ChathamPoint" zoom_ref="ChathamPoint">
+          <field_group id="ChathamPoint" domain_ref="ChathamPoint">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="KelseyBay" name_suffix="KelseyBay" description="15min interval SSH for tides">
-          <field_group id="KelseyBay" zoom_ref="KelseyBay">
+          <field_group id="KelseyBay" domain_ref="KelseyBay">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="YorkeIsland" name_suffix="YorkeIsland" description="15min interval SSH for tides">
-          <field_group id="YorkeIsland" zoom_ref="YorkeIsland">
+          <field_group id="YorkeIsland" domain_ref="YorkeIsland">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
         <file id="CODAR" name_suffix="CODAR" description="15min interval SSH/U/V for tides">
-          <field_group id="CODAR" zoom_ref="CODAR">
+          <field_group id="CODAR" domain_ref="CODAR">
             <field field_ref="ssh" name="sossheig"/>
             <field field_ref="soce" name="vosaline"/>
             <field field_ref="uoce" name="vozocrtx"/>
