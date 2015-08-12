@@ -17,7 +17,7 @@ cat \
   ${ABOVE}/namelist.dynamics \
   ${ABOVE}/namelist.vertical \
   ${ABOVE}/namelist.diagnostics \
-  ${ABOVE}/namelist.misc \
+  ${HERE}/namelist.misc \
 > namelist_cfg
 
 echo 'roawrrr!'
