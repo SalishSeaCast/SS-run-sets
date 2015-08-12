@@ -11,7 +11,7 @@ cat \
   ${HERE}/namelist.time \
   ${HERE}/namelist.domain \
   ${HERE}/namelist.surface \
-  ${ABOVE}/namelist.lateral \
+  ${HERE}/namelist.lateral \
   ${HERE}/namelist.bottom \
   ${ABOVE}/namelist.tracer \
   ${ABOVE}/namelist.dynamics \
