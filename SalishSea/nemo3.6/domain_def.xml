@@ -8,8 +8,9 @@
          <domain id="VENUS_central"  zoom_ibegin="267" zoom_jbegin="425" zoom_ni="1" zoom_nj="1" />
          <domain id="VENUS_east_gridded"  zoom_ibegin="283" zoom_jbegin="416" zoom_ni="2" zoom_nj="2" />
          <domain id="VENUS_central_gridded"  zoom_ibegin="266" zoom_jbegin="424" zoom_ni="2" zoom_nj="2" />
+         <domain id="VENUS_delta_gridded" zoom_ibegin="284" zoom_jbegin="425" zoom_ni="2" zoom_nj="2" />
 
-       <!-- CODAR (note swtich on i and j) -->
+       <!-- CODAR (note switch on i and j) -->
          <domain id="CODAR" zoom_jbegin="381" zoom_ibegin="241" zoom_ni="80" zoom_nj="80" />
 
        <!-- Tide Points (note switch on i and j) -->
@@ -55,6 +56,7 @@
          <domain id="VENUS_central"  zoom_ibegin="267" zoom_jbegin="425" zoom_ni="1" zoom_nj="1" />
          <domain id="VENUS_east_gridded"  zoom_ibegin="283" zoom_jbegin="416" zoom_ni="2" zoom_nj="2" />
          <domain id="VENUS_central_gridded"  zoom_ibegin="266" zoom_jbegin="424" zoom_ni="2" zoom_nj="2" />
+         <domain id="VENUS_delta_gridded" zoom_ibegin="284" zoom_jbegin="425" zoom_ni="2" zoom_nj="2" />
 
        <!-- CODAR (note switch on i and j) -->
          <domain id="CODAR" zoom_jbegin="381" zoom_ibegin="241" zoom_ni="80" zoom_nj="80" />
@@ -69,6 +71,7 @@
          <domain id="VENUS_central"  zoom_ibegin="267" zoom_jbegin="425" zoom_ni="1" zoom_nj="1" />
          <domain id="VENUS_east_gridded"  zoom_ibegin="283" zoom_jbegin="416" zoom_ni="2" zoom_nj="2" />
          <domain id="VENUS_central_gridded"  zoom_ibegin="266" zoom_jbegin="424" zoom_ni="2" zoom_nj="2" />
+         <domain id="VENUS_delta_gridded" zoom_ibegin="284" zoom_jbegin="425" zoom_ni="2" zoom_nj="2" />
 
        <!-- CODAR (note switch on i and j) -->
          <domain id="CODAR" zoom_jbegin="381" zoom_ibegin="241" zoom_ni="80" zoom_nj="80" />
