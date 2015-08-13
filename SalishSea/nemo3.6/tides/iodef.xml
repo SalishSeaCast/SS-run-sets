@@ -64,7 +64,7 @@
 
    <file_definition type="multiple_file" name="" sync_freq="12h" min_digits="4">
 
-      <file_group id="15min" output_freq="15min" output_level="10" enabled=".TRUE."> <!-- 15 minute files -->
+      <file_group id="15min" output_freq="900s" output_level="10" enabled=".TRUE."> <!-- 15 minute files -->
         <file id="PortRenfrew" name_suffix="PortRenfrew" description="Port Renfrew 15m tides">
            <field_group id="PortRenfrew" domain_ref="PortRenfrew">
               <field field_ref="ssh" name="sossheig"/>
@@ -218,14 +218,6 @@
         <file id="YorkeIsland" name_suffix="YorkeIsland" description="15min interval SSH for tides">
           <field_group id="YorkeIsland" domain_ref="YorkeIsland">
              <field field_ref="ssh" name="sossheig"/>
-          </field_group>
-        </file>
-        <file id="CODAR" name_suffix="CODAR" description="15min interval SSH/U/V for tides">
-          <field_group id="CODAR" domain_ref="CODAR">
-            <field field_ref="ssh" name="sossheig"/>
-            <field field_ref="soce" name="vosaline"/>
-            <field field_ref="uoce" name="vozocrtx"/>
-            <field field_ref="voce" name="vomecrty"/>
           </field_group>
         </file>
       </file_group>
