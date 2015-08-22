@@ -17,8 +17,8 @@ cat \
   ${ABOVE}/namelist.dynamics \
   ${ABOVE}/namelist.vertical \
   ${ABOVE}/namelist.diagnostics \
-  ${HERE}/namelist.misc \
+  ${HERE}/namelist.misc.loglayer \
 > namelist_cfg
 
-echo 'roawrrr!'
+echo 'roawrrr! Log Layer'
 
