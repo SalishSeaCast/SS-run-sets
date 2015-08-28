@@ -63,7 +63,7 @@
    bn_v2d = 'SS2_SSH_climatology',   -1,        'vobtcrty', .true.,  .true.,  'yearly',  '',        ''
    bn_u3d = '',                      24,        'vozocrtx', .true.,  .false., 'daily',   '',        ''
    bn_v3d = '',                      24,        'vomecrty', .true.,  .false., 'daily',   '',        ''
-   bn_tem = 'SalishSea2_saliter', 168,        'votemper', .true.,  .true.,  'yearly',  '',        ''
+   bn_tem = 'SalishSea2_saltier', 168,        'votemper', .true.,  .true.,  'yearly',  '',        ''
    bn_sal = 'SalishSea2_saltier', 168,        'vosaline', .true.,  .true.,  'yearly',  '',        ''
 
    cn_dir = 'open_boundaries/west/'
