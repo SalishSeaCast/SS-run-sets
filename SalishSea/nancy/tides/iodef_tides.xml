@@ -173,6 +173,36 @@
             <field ref="voce" name="vomecrty"/>
           </group>
         </file> 
+       <file id="VENUS_central_gridded" name="VENUS_central_gridded" enabled=".t
+rue." description="VENUS central 15 minutes, 2x2 grid to unstagger velocities ">
+          <group id="VENUS_central_gridded" zoom_ref="VENUS_central_gridded">
+             <field ref="toce" name="votemper"/>
+             <field ref="soce" name="vosaline"/>
+             <field ref="uoce" name="vozocrtx"/>
+             <field ref="voce" name="vomecrty"/>
+             <field ref="woce" name="vovecrtz"/>
+          </group>
+       </file>
+        <file id="VENUS_east_gridded" name="VENUS_east_gridded" enabled=".true."
+ description="VENUS east 15 minutes, 2x2 grid to unstagger velocities ">
+          <group id="VENUS_east_gridded" zoom_ref="VENUS_east_gridded">
+             <field ref="toce" name="votemper"/>
+             <field ref="soce" name="vosaline"/>
+             <field ref="uoce" name="vozocrtx"/>
+             <field ref="voce" name="vomecrty"/>
+             <field ref="woce" name="vovecrtz"/>
+          </group>
+	    </file>
+        <file id="VENUS_delta_gridded" name="VENUS_delta_gridded" enabled=".true
+." description="VENUS delta 15 minutes, 2x2 grid to unstagger velocities ">
+          <group id="VENUS_delta_gridded" zoom_ref="VENUS_delta_gridded">
+             <field ref="toce" name="votemper"/>
+             <field ref="soce" name="vosaline"/>
+             <field ref="uoce" name="vozocrtx"/>
+             <field ref="voce" name="vomecrty"/>
+             <field ref="woce" name="vovecrtz"/>
+          </group>
+	    </file>
       </group>
 
       <group id="1h" output_freq="3600" output_level="10" enabled=".false.">
@@ -906,6 +936,10 @@
           <!-- Tide Regions -->
         <zoom id="CODAR" jbegin="381" ibegin="241" ni="80" nj="80" /> 
 </grid>
+     <!-- VENUS -->
+     <zoom id="VENUS_east_gridded"  ibegin="283" jbegin="416" ni="2" nj="2" />
+     <zoom id="VENUS_central_gridded"  ibegin="266" jbegin="424" ni="2" nj="2" />
+     <zoom id="VENUS_delta_gridded"  ibegin="284" jbegin="425" ni="2" nj="2" />
 
       <grid id="grid_U" description="grid U" >
         <!--   Eq section   -->
