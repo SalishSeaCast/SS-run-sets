@@ -1,6 +1,4 @@
 """ Script to define and execute a series of Salish Sea NEMO model runs.
-All use the same RC13, corr15 files but include different numbers of tidal
-constituents
 """
 from __future__ import absolute_import
 
@@ -11,18 +9,19 @@ import salishsea_cmd.api
 
 def main():
     run_desc = base_run_description()
-    run_id = 'isoneutral'
-    do_run(run_id, run_desc)
+    run_ids = ['visc1e-4', 'visc1e-6']
+    dynamics= ['namelist.dynamics.visc', 'namelist.dynamics']
+    for run_id, dynamic in zip(run_ids, dynamics):
+        do_run(run_id, dynamic, run_desc)
 
 
-def do_run(run_id, run_desc):
+def do_run(run_id, dynamic, run_desc):
     run_desc['run_id'] = run_id
-    run_desc['namelists'][6] = ('namelist.dynamics.{}'.format(run_id))
-    run_desc['namelists'][5] = ('namelist.tracers.{}'.format(run_id))
+    run_desc['namelists'][6] = dynamic
     salishsea_cmd.api.run_in_subprocess(
         run_id,
         run_desc,
-        'iodef_tides_10d.xml',
+        'iodef_tides.xml',
         os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/tides', run_id))
 
 
@@ -30,9 +29,9 @@ def base_run_description():
     # Relative paths from SS-run-sets/SalishSea/tides/
     run_desc = salishsea_cmd.api.run_description(
         walltime='21:00:00',
-        NEMO_code='../../../NEMO-code/',
-        forcing='../../../NEMO-forcing/',
-        runs_dir='../../../SalishSea/',
+        NEMO_code='../../../../NEMO-code/',
+        forcing='../../../../NEMO-forcing/',
+        runs_dir='../../../../SalishSea/',
         init_conditions=(
             '/home/dlatorne/MEOPAR/SalishSea/spin-up/'
             '11apr20apr/SalishSea_01529280_restart.nc'),
@@ -41,13 +40,13 @@ def base_run_description():
     # Relative paths to namelist section files
     run_desc['namelists'] = [
         'mynamelist21apr30may.time',
-        '../namelist.domain',
+        '../../namelist.domain',
         'mynamelist.surface',
-        '../namelist.lateral',
-        '../namelist.bottom',
-        '../namelist.tracers',
-        'mynamelist.dynamics15N',
-        '../namelist.compute.12x27',
+        '../../namelist.lateral',
+        '../../namelist.bottom',
+        '../../namelist.tracers',
+        '../../namelist.dynamics',
+        '../../namelist.compute.12x27',
         ]
     return run_desc
  
