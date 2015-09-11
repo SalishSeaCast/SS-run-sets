@@ -50,8 +50,7 @@ namelists:
   - namelist.tracer
   - namelist.dynamics
   - namelist.vertical
-  - namelist.misc
-  - namelist.diagnostics
+  - namelist.compute
 
 output:
   # If relative, paths are taken from current directory
