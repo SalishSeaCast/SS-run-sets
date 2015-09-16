@@ -9,8 +9,9 @@ import salishsea_cmd.api
 
 def main():
     run_desc = base_run_description()
-    run_ids = ['visc1e-4', 'visc1e-6']
-    dynamics= ['namelist.dynamics.visc', 'namelist.dynamics']
+    run_ids = ['visc1e-4', 'visc1e-5',  'visc1e-6']
+    dynamics= ['namelist.dynamics', 'namelist.dynamics.visc5', 
+               'namelist.dynamics.visc']
     for run_id, dynamic in zip(run_ids, dynamics):
         do_run(run_id, dynamic, run_desc)
 
