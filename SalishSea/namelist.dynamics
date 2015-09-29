@@ -44,7 +44,7 @@
 
 &namzdf        !   vertical physics
 !-----------------------------------------------------------------------
-   rn_avm0     =   1.e-4  !  vertical eddy viscosity   [m2/s]          (background Kz if not "key_zdfcst")
+   rn_avm0     =   1.e-5  !  vertical eddy viscosity   [m2/s]          (background Kz if not "key_zdfcst")
    rn_avt0     =   1.e-5  !  vertical eddy diffusivity [m2/s]          (background Kz if not "key_zdfcst")
    nn_avb      =    0     !  profile for background avt & avm (=1) or not (=0)
    nn_havtb    =    0     !  horizontal shape for avtb (=1) or not (=0)
