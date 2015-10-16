@@ -16,13 +16,12 @@ def main():
                'namelist.domain.bathy69', 'namelist.domain.bathy69']
     bathys = ['bathy_meter_SalishSea2.nc', 'bathy_meter_SalishSea2.nc',
               'bathy_meter_SalishSea6.nc', 'bathy_meter_SalishSea9.nc']
-    for run_id, dynamic, domain, bathy, surface in zip(run_ids, dynamics, domains, bathys, surfaces):
-        do_run(run_id, dynamic, domain, bathy, surface, run_desc)
+    for run_id, domain, bathy, surface in zip(run_ids, domains, bathys, surfaces):
+        do_run(run_id, domain, bathy, surface, run_desc)
 
 
-def do_run(run_id, dynamic, domain, bathy, surface, run_desc):
+def do_run(run_id, domain, bathy, surface, run_desc):
     run_desc['run_id'] = run_id
-    run_desc['namelists'][6] = dynamic
     run_desc['namelists'][1] = domain
     run_desc['namelists'][2] = surface
     run_desc['grid']['bathymetry'] = bathy
@@ -48,13 +47,13 @@ def base_run_description():
     # Relative paths to namelist section files
     run_desc['namelists'] = [
         'mynamelist21apr30may.time',
-        '../../namelist.domain',
+        '../../../namelist.domain',
         'mynamelist.surface',
-        '../../namelist.lateral',
-        '../../namelist.bottom',
-        '../../namelist.tracers',
+        '../../../namelist.lateral',
+        '../../../namelist.bottom',
+        '../../../namelist.tracers',
         'namelist.dynamics',
-        '../../namelist.compute.12x27',
+        '../../../namelist.compute.12x27',
         ]
     return run_desc
  
