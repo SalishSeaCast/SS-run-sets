@@ -45,6 +45,7 @@ def base_run_description():
         )
     run_desc['email'] = 'nsoontie@eos.ubc.ca'
     # Relative paths to namelist section files
+    run_desc['forcing']['atmospheric'] = '/home/nksoonti/MEOPAR/CGRF/NEMO-atmos'
     run_desc['namelists'] = [
         'mynamelist21apr30may.time',
         '../../../namelist.domain',
