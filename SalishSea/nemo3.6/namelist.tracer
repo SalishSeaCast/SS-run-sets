@@ -1,4 +1,4 @@
-&nameos        !   ocean physical parameters 
+&nameos        !   ocean physical parameters
 !-----------------------------------------------------------------------
    nn_eos      =  0     ! updated type of equation of state and Brunt-Vaisala frequency
                                  !  =-1, TEOS-10
@@ -7,12 +7,13 @@
    ln_useCT    = .false.  ! new use of Conservative Temp. ==> surface CT converted in Pot. Temp. in sbcssm
 &end
 
+
 &namtra_ldf    !   lateral diffusion scheme for tracers some changes, some new stuff
 !----------------------------------------------------------------------------------
-   !                       !  Operator type:
+   !                            !  Operator type:
    ln_traldf_lap    =  .true.   ! same laplacian operator
    ln_traldf_bilap  =  .false.  ! same bilaplacian operator
-   !                       !  Direction of action:
+   !                            !  Direction of action:
    ln_traldf_level  =  .false.  ! same iso-level
    ln_traldf_hor    =  .false.  ! (needs "key_ldfslp" when ln_sco=T)
    ln_traldf_iso    =  .true.   ! isoneutral (needs "key_ldfslp")
@@ -22,20 +23,23 @@
    ! Smagorinsky stuff here if you set the key
 &end
 
+
 &namtra_dmp !   tracer: T & S newtonian damping same except we have this turned off
 !-----------------------------------------------------------------------
-   ln_tradmp   =  .false.   ! add a damping term (T) or not (F)
+   ln_tradmp   =  .false.  ! add a damping term (T) or not (F)
 &end
+
 
 &namtra_adv    !   advection scheme for tracer
 !-----------------------------------------------------------------------
 !
-    ln_traadv_tvd = .false.
-    ln_traadv_tvd_zts = .true. ! TVD scheme with sub timestepping for vertical tracer advection
+    ln_traadv_tvd     = .false.
+    ln_traadv_tvd_zts = .true.  ! TVD scheme with sub timestepping for vertical tracer advection
 &end
+
 
 &namtra_adv_mle !   mixed layer eddy parametrisation (Fox-Kemper param) this is all new
 !-----------------------------------------------------------------------
-   ln_mle    = .false.      ! new (T) use the Mixed Layer Eddy (MLE) parameterisation
+   ln_mle    = .false.  ! new (T) use the Mixed Layer Eddy (MLE) parameterisation
 &end
 

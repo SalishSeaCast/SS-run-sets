@@ -28,11 +28,4 @@
    nn_npcp     =  365      !  npc control print frequency
    ln_zdfexp   = .false.   !  time-stepping: split-explicit (T) or implicit (F) time stepping
    nn_zdfexp   =    3      !  number of sub-timestep for ln_zdfexp=T
-/
-!-----------------------------------------------------------------------
-&namzdf_gls                !   GLS vertical diffusion                   ("key_zdfgls")
-!-----------------------------------------------------------------------
-! currently using all reference values
-/
-
-
+&end

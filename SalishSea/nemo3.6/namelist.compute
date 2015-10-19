@@ -4,8 +4,8 @@
                            !  buffer blocking send or immediate non-blocking sends, resp.
    nn_buffer   =   0       !  size in bytes of exported buffer ('B' case), 0 no exportation
    ln_nnogather=  .false.  !  activate code to avoid mpi_allgather use at the northfold
-   jpni        =   8       !  jpni   number of processors following i (set automatically if < 1)
-   jpnj        =   18      !  jpnj   number of processors following j (set automatically if < 1)
+   jpni        =   1       !  jpni   number of processors following i (set automatically if < 1)
+   jpnj        =   1       !  jpnj   number of processors following j (set automatically if < 1)
 &end
 
 
@@ -18,17 +18,4 @@
                            !  is optimal for postprocessing which works exclusively with horizontal slabs
    ln_nc4zip   = .true.    !  (T) use netcdf4 chunking and compression
                            !  (F) ignore chunking information and produce netcdf3-compatible files
-&end
-
-
-&namdyn_nept
-&end
-
-&namhsb
-&end
-
-&namtrd
-&end
-
-&namptr
 &end
