@@ -31,7 +31,7 @@
    sn_tem  = 'SalishSea_01529280_restart.nc',    -12,         'tb', .false., .true.,  'yearly', '',        ''
    sn_sal  = 'SalishSea_01529280_restart.nc'   , -12,         'sb', .false., .true.,  'yearly', '',        ''
 
-   cn_dir        = 'initial_strat/'  ! directory containing initial condition files
+   cn_dir        = '/home/dlatorne/MEOPAR/SalishSea/spin-up/11apr20apr/'  ! directory containing initial condition files
    ln_tsd_init   = .true.            ! Initialisation of ocean T & S with T &S input data (T) or not (F)
    ln_tsd_tradmp = .false.           ! damping of ocean T & S toward T &S input data (T) or not (F)
 &end
