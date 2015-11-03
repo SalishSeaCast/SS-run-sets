@@ -11,10 +11,9 @@ import salishsea_cmd.api
 
 def main():
     run_desc = base_run_description()
-    #run_ids = ['dwr_new_bcs_surface',  'dwr_new_bcs', 'dwr_base_bcs' ]
-    #laterals = ['namelist.lateral.new_surface', 'namelist.lateral.new', 'namelist.lateral']
-    run_ids = ['dwr_corrected',]
-    laterals = ['namelist.lateral.corrected',]
+    run_ids = ['dwr_corrected','dwr_new_bcs_surface',  'dwr_new_bcs', 'dwr_base_bcs' ]
+    laterals = ['namelist.lateral.corrected', 'namelist.lateral.new_surface',
+                'namelist.lateral.new', 'namelist.lateral']
     for run_id, lateral in zip(run_ids, laterals):
         do_run(run_id, run_desc, lateral)
 
