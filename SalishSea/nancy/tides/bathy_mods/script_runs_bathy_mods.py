@@ -9,12 +9,15 @@ import salishsea_cmd.api
 
 def main():
     run_desc = base_run_description()
-    run_ids = ['bathy2', 'bathy2_nowinds',  'bathy6', 'bathy9']
-    surfaces = ['mynamelist.surface', 'mynamelist.surface.nowinds',
+    run_ids = ['bathy10', 'bathy2', 'bathy2_nowinds',  'bathy6', 'bathy9']
+    surfaces = ['mynamelist.surface.bathy69',
+                'mynamelist.surface', 'mynamelist.surface.nowinds',
                 'mynamelist.surface.bathy69', 'mynamelist.surface.bathy69']
-    domains = ['namelist.domain.bathy2', 'namelist.domain.bathy2',
+    domains = ['namelist.domain.bathy69',
+               'namelist.domain.bathy2', 'namelist.domain.bathy2',
                'namelist.domain.bathy69', 'namelist.domain.bathy69']
-    bathys = ['bathy_meter_SalishSea2.nc', 'bathy_meter_SalishSea2.nc',
+    bathys = ['bathy_meter_SalishSea10.nc',
+              'bathy_meter_SalishSea2.nc', 'bathy_meter_SalishSea2.nc',
               'bathy_meter_SalishSea6.nc', 'bathy_meter_SalishSea9.nc']
     for run_id, domain, bathy, surface in zip(run_ids, domains, bathys, surfaces):
         do_run(run_id, domain, bathy, surface, run_desc)
