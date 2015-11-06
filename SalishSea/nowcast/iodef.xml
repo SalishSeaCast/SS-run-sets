@@ -68,6 +68,31 @@
              <field ref="ssh" name="sossheig"/>
           </group>
 	    </file>
+        <file id="Nanaimo" name="Nanaimo" enabled=".true." description="Nanaimo tides">
+          <group id="Nanaimo" zoom_ref="Nanaimo">
+             <field ref="ssh" name="sossheig"/>
+          </group>
+	    </file>
+        <file id="NeahBay" name="NeahBay" enabled=".true." description="Neah Bay tides">
+          <group id="NeahBay" zoom_ref="NeahBay">
+             <field ref="ssh" name="sossheig"/>
+          </group>
+	    </file>
+        <file id="CherryPoint" name="CherryPoint" enabled=".true." description="Cherry Point tides">
+          <group id="CherryPoint" zoom_ref="CherryPoint">
+             <field ref="ssh" name="sossheig"/>
+          </group>
+	    </file>
+        <file id="FridayHarbor" name="FridayHarbor" enabled=".true." description="Friday Harbor tides">
+          <group id="FridayHarbor" zoom_ref="FridayHarbor">
+             <field ref="ssh" name="sossheig"/>
+          </group>
+	    </file>
+        <file id="Sandheads" name="Sandheads" enabled=".true." description="Sandheads tides">
+          <group id="Sandheads" zoom_ref="Sandheads">
+             <field ref="ssh" name="sossheig"/>
+          </group>
+	    </file>
       </group>
 
 
@@ -758,6 +783,11 @@
 	<zoom id="Victoria"  ibegin="196" jbegin="299" ni="1" nj="1" />
 	<zoom id="PatriciaBay"  ibegin="214" jbegin="352" ni="1" nj="1" />
 	<zoom id="CampbellRiver"  ibegin="125" jbegin="748" ni="1" nj="1" />
+	<zoom id="NeahBay"  ibegin="16" jbegin="385" ni="1" nj="1" />
+	<zoom id="CherryPoint"  ibegin="343" jbegin="344" ni="1" nj="1" />
+	<zoom id="FridayHarbor"  ibegin="268" jbegin="299" ni="1" nj="1" />
+	<zoom id="Sandheads"  ibegin="294" jbegin="427" ni="1" nj="1" />
+	<zoom id="Nanaimo"  ibegin="209" jbegin="485" ni="1" nj="1" />
           <!-- Thalweg Points -->
         <zoom id="thalweg1"  ibegin="103" jbegin="321" ni="1" nj="1" />
 	<zoom id="thalweg2"  ibegin="203" jbegin="251" ni="1" nj="1" />
