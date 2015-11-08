@@ -15,9 +15,15 @@
 
 config_name: SalishSea
 
+# How is the domain to be distributed over the processors in the
+# i (longitude) and j (latitude) directions?
+# These values are used to set the nammpp namelist jpni & jpnj values
+# and to set the number of processors and nodes in the PBS script
+MPI decomposition: 8x18
+
 # For runs on systems that use qsub/PBS/TORQUE; e.g. Westgrid
-run_id: example
-walltime: 15:00:00
+run_id: tides_best
+walltime: 00:05:00
 
 paths:
   # If relative, paths are taken from current directory
@@ -41,17 +47,18 @@ forcing:
 namelists:
   # If relative, paths are taken from current directory
   - namelist.time.llap
-  - namelist.domain.weaklog
+  - namelist.domain.tides
   - namelist.surface
-  - namelist.lateral
-  - namelist.bottom.weaklog
+  - namelist.lateral.weakslip
+  - ../namelist.bottom
   - ../namelist.tracer
   - namelist.dynamics.llap
   - ../namelist.vertical
-  - ../namelist.diagnostics
-  - namelist.misc.llap
+  - ../namelist.compute
 
 output:
   # If relative, paths are taken from current directory
   domain: ../domain_def.xml
   fields: ../../../../nemo-3.6-code/NEMOGCM/CONFIG/SHARED/field_def.xml
+  separate XIOS server: True
+  XIOS servers: 1
