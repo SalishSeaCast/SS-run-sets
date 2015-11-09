@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<simulation>
+
+ <context id="nemo" time_origin="1900-01-01 00:00:00" >
+
+    <!-- $id$ -->
+
+    <!--
+============================================================================================================
+=                                  definition of all existing variables                                    =
+=                                            DO NOT CHANGE                                                 =
+============================================================================================================
+    -->
+    <field_definition src="./field_def.xml"/>
+    <!--
+============================================================================================================
+=                                           output files definition                                        =
+=                                            Define your own files                                         =
+=                                         put the variables you want...                                    =
+============================================================================================================
+    -->
+
+    <file_definition type="multiple_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4">
+
+      <file_group id="1ts" output_freq="1ts"  output_level="10" enabled=".TRUE."> <!-- 1 time step files -->
+      </file_group>
+
+      <file_group id="1h" output_freq="1h"  output_level="10" enabled=".TRUE."> <!-- 1h files -->
+      </file_group>
+      <file_group id="2h" output_freq="2h"  output_level="10" enabled=".TRUE."> <!-- 2h files -->
+      </file_group>
+      <file_group id="3h" output_freq="3h"  output_level="10" enabled=".TRUE."> <!-- 3h files -->
+      </file_group>
+      <file_group id="4h" output_freq="4h"  output_level="10" enabled=".TRUE."> <!-- 4h files -->
+      </file_group>
+      <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."> <!-- 6h files -->
+      </file_group>
+
+      <file_group id="1d" output_freq="1d"  output_level="10" enabled=".TRUE."> <!-- 1d files -->
+        <file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
+          <field field_ref="ssh" name="sossheig"/>
+          <field field_ref="toce" name="votemper"/>
+          <field field_ref="soce" name="vosaline"/>
+        </file>
+        <file id="file2" name_suffix="_grid_U" description="ocean U grid variables" >
+          <field field_ref="uoce" name="vozocrtx"  />
+        </file>
+        <file id="file3" name_suffix="_grid_V" description="ocean V grid variables" >
+          <field field_ref="voce" name="vomecrty"  />
+        </file>
+        <file id="file4" name_suffix="_grid_W" description="ocean W grid variables" >
+          <field field_ref="woce" name="vovecrtz" />
+        </file>
+      </file_group>
+
+      <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."> <!-- 3d files -->
+      </file_group>
+      <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE.">  <!-- 5d files -->
+      </file_group>
+
+      <file_group id="1m" output_freq="1mo" output_level="10" enabled=".TRUE."> <!-- real monthly files -->
+      </file_group>
+      <file_group id="2m" output_freq="2mo" output_level="10" enabled=".TRUE."> <!-- real 2m files -->
+      </file_group>
+      <file_group id="3m" output_freq="3mo" output_level="10" enabled=".TRUE."> <!-- real 3m files -->
+      </file_group>
+      <file_group id="4m" output_freq="4mo" output_level="10" enabled=".TRUE."> <!-- real 4m files -->
+      </file_group>
+      <file_group id="6m" output_freq="6mo" output_level="10" enabled=".TRUE."> <!-- real 6m files -->
+      </file_group>
+
+      <file_group id="1y"  output_freq="1y" output_level="10" enabled=".TRUE."> <!-- real yearly files -->
+      </file_group>
+      <file_group id="2y"  output_freq="2y" output_level="10" enabled=".TRUE."> <!-- real 2y files -->
+      </file_group>
+      <file_group id="5y"  output_freq="5y" output_level="10" enabled=".TRUE."> <!-- real 5y files -->
+      </file_group>
+      <file_group id="10y" output_freq="10y" output_level="10" enabled=".TRUE."> <!-- real 10y files -->
+      </file_group>
+
+      <file_group id="30min" output_freq="1800s" output_level="10" enabled=".TRUE."> <!-- 30 minute files -->
+        <file id="PortRenfrew" name="PortRenfrew" description="Port Renfrew 30m tides">
+           <field_group id="PortRenfrew" domain_ref="PortRenfrew">
+              <field field_ref="ssh" name="sossheig"/>
+           </field_group>
+        </file>
+        <file id="SheringhamPoint" name="SheringhamPoint" description="30min interval SSH for tides">
+          <field_group id="SheringhamPoint" domain_ref="SheringhamPoint">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="Sooke" name="Sooke" description="30min interval SSH for tides">
+          <field_group id="Sooke" domain_ref="Sooke">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="PedderBay" name="PedderBay" description="30min interval SSH for tides">
+          <field_group id="PedderBay" domain_ref="PedderBay">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="Esquimalt" name="Esquimalt" description="30min interval SSH for tides">
+          <field_group id="Esquimalt" domain_ref="Esquimalt">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="Victoria" name="Victoria" description="30min interval SSH for tides">
+          <field_group id="Victoria" domain_ref="Victoria">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="CloverPoint" name="CloverPoint" description="30min interval SSH for tides">
+          <field_group id="CloverPoint" domain_ref="CloverPoint">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="FinnertyCove" name="FinnertyCove" description="30min interval SSH for tides">
+          <field_group id="FinnertyCove" domain_ref="FinnertyCove">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="PortTownsend" name="PortTownsend" description="30min interval SSH for tides">
+          <field_group id="PortTownsend" domain_ref="PortTownsend">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="FulfordHarbour" name="FulfordHarbour" description="30min interval SSH for tides">
+          <field_group id="FulfordHarbour" domain_ref="FulfordHarbour">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="PatosIsland" name="PatosIsland" description="30min interval SSH for tides">
+          <field_group id="PatosIsland" domain_ref="PatosIsland">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="TumboChannel" name="TumboChannel" description="30min interval SSH for tides">
+          <field_group id="TumboChannel" domain_ref="TumboChannel">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="WhalerBay" name="WhalerBay" description="30min interval SSH for tides">
+          <field_group id="WhalerBay" domain_ref="WhalerBay">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="Tsawwassen" name="Tsawwassen" description="30min interval SSH for tides">
+          <field_group id="Tsawwassen" domain_ref="Tsawwassen">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="Sandheads" name="Sandheads" description="30min interval SSH for tides">
+          <field_group id="Sandheads" domain_ref="Sandheads">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="PointGrey" name="PointGrey" description="30min interval SSH for tides">
+          <field_group id="PointGrey" domain_ref="PointGrey">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="PointAtkinson" name="PointAtkinson" description="30min interval SSH for tides">
+          <field_group id="PointAtkinson" domain_ref="PointAtkinson">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="GibsonsLanding" name="GibsonsLanding" description="30min interval SSH for tides">
+          <field_group id="GibsonsLanding" domain_ref="GibsonsLanding">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="HalfmoonBay" name="HalfmoonBay" description="30min interval SSH for tides">
+          <field_group id="HalfmoonBay" domain_ref="HalfmoonBay">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="IrvinesLanding" name="IrvinesLanding" description="30min interval SSH for tides">
+          <field_group id="IrvinesLanding" domain_ref="IrvinesLanding">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="PowellRiver" name="PowellRiver" description="30min interval SSH for tides">
+          <field_group id="PowellRiver" domain_ref="PowellRiver">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="Lund" name="Lund" description="30min interval SSH for tides">
+          <field_group id="Lund" domain_ref="Lund">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="TwinIslets" name="TwinIslets" description="30min interval SSH for tides">
+          <field_group id="TwinIslets" domain_ref="TwinIslets">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="CampbellRiver" name="CampbellRiver" description="30min interval SSH for tides">
+          <field_group id="CampbellRiver" domain_ref="CampbellRiver">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="MaudeIslandE" name="MaudeIslandE" description="30min interval SSH for tides">
+          <field_group id="MaudeIslandE" domain_ref="MaudeIslandE">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="NympheCove" name="NympheCove" description="30min interval SSH for tides">
+          <field_group id="NympheCove" domain_ref="NympheCove">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="SeymourNarrows" name="SeymourNarrows" description="30min interval SSH for tides">
+          <field_group id="SeymourNarrows" domain_ref="SeymourNarrows">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="BrownBay" name="BrownBay" description="30min interval SSH for tides">
+          <field_group id="BrownBay" domain_ref="BrownBay">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="ChathamPoint" name="ChathamPoint" description="30min interval SSH for tides">
+          <field_group id="ChathamPoint" domain_ref="ChathamPoint">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="KelseyBay" name="KelseyBay" description="30min interval SSH for tides">
+          <field_group id="KelseyBay" domain_ref="KelseyBay">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="YorkeIsland" name="YorkeIsland" description="30min interval SSH for tides">
+          <field_group id="YorkeIsland" domain_ref="YorkeIsland">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+      </file_group>
+   </file_definition>
+
+
+
+    <!--
+============================================================================================================
+= grid definition = = DO NOT CHANGE =
+============================================================================================================
+    -->
+
+   <axis_definition>
+      <axis id="deptht" long_name="Vertical T levels" unit="m" positive="down" />
+      <axis id="depthu" long_name="Vertical U levels" unit="m" positive="down" />
+      <axis id="depthv" long_name="Vertical V levels" unit="m" positive="down" />
+      <axis id="depthw" long_name="Vertical W levels" unit="m" positive="down" />
+      <axis id="nfloat" long_name="Float number"      unit="-"  />
+      <axis id="icbcla" long_name="Iceberg class"     unit="-"  />
+   </axis_definition>
+
+   <domain_definition src="./domain_def.xml"/>
+
+   <grid_definition>
+     <grid id="grid_T_2D" domain_ref="grid_T"/>
+     <grid id="grid_T_3D" domain_ref="grid_T" axis_ref="deptht"/>
+     <grid id="grid_U_2D" domain_ref="grid_U"/>
+     <grid id="grid_U_3D" domain_ref="grid_U" axis_ref="depthu"/>
+     <grid id="grid_V_2D" domain_ref="grid_V"/>
+     <grid id="grid_V_3D" domain_ref="grid_V" axis_ref="depthv"/>
+     <grid id="grid_W_2D" domain_ref="grid_W"/>
+     <grid id="grid_W_3D" domain_ref="grid_W" axis_ref="depthw"/>
+    </grid_definition>
+
+  </context>
+
+
+<!--
+============================================================================================================
+=  XIOS Server Configuration
+============================================================================================================
+-->
+  <context id="xios">
+      <variable_definition>
+        <!--
+        We must have buffer_size > jpi*jpj*jpk*8 (with jpi and jpj the subdomain size)
+        -->
+    	  <variable id="buffer_size"               type="integer">50000000</variable>
+    	  <variable id="buffer_server_factor_size" type="integer">2</variable>
+    	  <variable id="info_level"                type="integer">0</variable>
+    	  <variable id="using_server"              type="boolean">false</variable>
+    	  <variable id="using_oasis"               type="boolean">false</variable>
+    	  <variable id="oasis_codes_id"            type="string" >oceanx</variable>
+      </variable_definition>
+  </context>
+
+</simulation>
