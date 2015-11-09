@@ -22,7 +22,7 @@ config_name: SalishSea
 MPI decomposition: 8x18
 
 # For runs on systems that use qsub/PBS/TORQUE; e.g. Westgrid
-run_id: tides_best
+run_id: downto5
 walltime: 17:00:00
 
 paths:
@@ -51,8 +51,8 @@ namelists:
   - namelist.surface
   - namelist.lateral.weakslip
   - ../namelist.bottom
-  - ../namelist.tracer
-  - namelist.dynamics.llap
+  - namelist.tracer.downto5
+  - namelist.dynamics.downto5
   - ../namelist.vertical
   - ../namelist.compute
 
