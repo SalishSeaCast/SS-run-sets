@@ -50,7 +50,7 @@ namelists:
   - namelist.time.19aug28sep
   - namelist.domain.19aug
   - namelist.surface
-  - ../../nemo3.6/namelist.lateral
+  - namelist.lateral
   - ../../nemo3.6/namelist.bottom
   - ../../nemo3.6/namelist.tracer
   - ../../nemo3.6/namelist.dynamics
