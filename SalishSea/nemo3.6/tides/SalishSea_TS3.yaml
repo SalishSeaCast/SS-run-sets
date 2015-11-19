@@ -46,8 +46,8 @@ forcing:
 
 namelists:
   # If relative, paths are taken from current directory
-  - namelist.time.llap
-  - namelist.domain.river.tides
+  - namelist.time.shortstep
+  - namelist.domain.river.shortstep
   - namelist.surface
   - namelist.lateral.TS3
   - ../namelist.bottom
