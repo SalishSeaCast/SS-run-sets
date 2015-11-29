@@ -23,7 +23,7 @@ MPI decomposition: 8x18
 
 # For runs on systems that use qsub/PBS/TORQUE; e.g. Westgrid
 run_id: tides_TS3
-walltime: 21:00:00
+walltime: 16:00:00
 
 paths:
   # If relative, paths are taken from current directory
@@ -46,8 +46,8 @@ forcing:
 
 namelists:
   # If relative, paths are taken from current directory
-  - namelist.time.shortstep
-  - namelist.domain.river.shortstep
+  - namelist.time.llap
+  - namelist.domain.river.tides
   - namelist.surface
   - namelist.lateral.TS3
   - ../namelist.bottom
