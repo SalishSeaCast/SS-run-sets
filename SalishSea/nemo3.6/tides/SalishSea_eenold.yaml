@@ -22,8 +22,8 @@ config_name: SalishSea
 MPI decomposition: 8x18
 
 # For runs on systems that use qsub/PBS/TORQUE; e.g. Westgrid
-run_id: smooth
-walltime: 24:00:00
+run_id: tides_eenold
+walltime: 18:00:00
 
 paths:
   # If relative, paths are taken from current directory
@@ -35,7 +35,7 @@ paths:
 grid:
   # If relative, paths are taken from forcing path above
   coordinates: coordinates_seagrid_SalishSea.nc
-  bathymetry: smoothto033.nc
+  bathymetry: bathy_meter_SalishSea6.nc
 
 forcing:
   # If relative, paths are taken from forcing path above
@@ -46,13 +46,13 @@ forcing:
 
 namelists:
   # If relative, paths are taken from current directory
-  - namelist.time.shortstep
-  - namelist.domain.smooth.shortstep
+  - namelist.time.llap
+  - namelist.domain.river.tides
   - namelist.surface
-  - namelist.lateral.weakslip
+  - namelist.lateral.TS4
   - ../namelist.bottom
-  - namelist.tracer.downto2
-  - namelist.dynamics.downto2
+  - ../namelist.tracer
+  - namelist.dynamics.eenold
   - ../namelist.vertical
   - ../namelist.compute
 
