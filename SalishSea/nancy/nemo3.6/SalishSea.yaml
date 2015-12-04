@@ -19,11 +19,11 @@ config_name: SalishSea
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 6x14
+MPI decomposition: 12x27
 
 # For runs on systems that use qsub/PBS/TORQUE; e.g. Westgrid
 run_id: dwr_base_36
-walltime: 60:00:00
+walltime: 10:00:00
 email: nsoontie@eos.ubc.ca
 
 paths:
@@ -53,7 +53,7 @@ namelists:
   - namelist.lateral
   - ../../nemo3.6/namelist.bottom
   - ../../nemo3.6/namelist.tracer
-  - ../../nemo3.6/namelist.dynamics
+  - namelist.dynamics
   - ../../nemo3.6/namelist.vertical
   - ../../nemo3.6/namelist.compute
 
