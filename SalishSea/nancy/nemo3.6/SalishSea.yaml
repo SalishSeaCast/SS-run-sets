@@ -23,7 +23,7 @@ MPI decomposition: 6x14
 
 # For runs on systems that use qsub/PBS/TORQUE; e.g. Westgrid
 run_id: dwr_base_36
-walltime: 12:00:00
+walltime: 60:00:00
 email: nsoontie@eos.ubc.ca
 
 paths:
