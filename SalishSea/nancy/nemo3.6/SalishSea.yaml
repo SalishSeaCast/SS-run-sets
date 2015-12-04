@@ -53,7 +53,7 @@ namelists:
   - namelist.lateral
   - ../../nemo3.6/namelist.bottom
   - ../../nemo3.6/namelist.tracer
-  - namelist.dynamics
+  - namelist.dynamics.holl
   - ../../nemo3.6/namelist.vertical
   - ../../nemo3.6/namelist.compute
 
