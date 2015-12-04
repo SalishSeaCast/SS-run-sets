@@ -1,0 +1,111 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! NEMO/TOP1 CFG:   - tracer run information                (namtrc_run)
+!!               - tracer definition                     (namtrc    )
+!!               - tracer data initialisation            (namtrc_dta)
+!!               - tracer advection                      (namtrc_adv)
+!!               - tracer lateral diffusion              (namtrc_ldf)
+!!               - tracer vertical physics               (namtrc_zdf)
+!!               - tracer newtonian damping              (namtrc_dmp)
+!!               - dynamical tracer trends               (namtrc_trd)
+!!               - tracer output diagonstics             (namtrc_dia)
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&namtrc     !   tracers definition
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!                !    name   !           title of the field              ! initial data ! initial data ! obc    !    sbc  !  cbc    ! save   !
+!                !           !                                           !  units       ! from file    !                             ! or not ! 
+!                !           !                                           !              ! or not       !                             !        !
+   sn_tracer(1)  = 'NO3     ' , 'Nitrates Concentration                 ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(2)  = 'NH4     ' , 'Ammonium Concentration                 ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(3)  = 'Si      ' , 'Silicate Concentration                 ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(4)  = 'PHY2    ' , 'Diatoms Concentration                  ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(5)  = 'PHY     ' , 'Nanophytoplankton Concentration        ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(6)  = 'MYRI    ' , 'Mesozooplankton Concentration          ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(7)  = 'MICZ    ' , 'Microzooplankton Concentration         ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(8)  = 'DOC     ' , 'Dissolved organic Concentration        ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(9)  = 'POC     ' , 'Small organic carbon Concentration     ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(10) = 'bSi     ' , 'biogenic Silicate Concentration        ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(11) = 'O2      ' , 'Dissolved Oxygen Concentration         ',  'mol-C/L' ,  .false.    , .false.   ,  .false. ,  .false.  ,  .true.
+   ln_trcdta = .true.
+   ln_trcdmp = .false.
+   /
+!-----------------------------------------------------------------------
+&namtrc_dta      !    Initialisation from data input file
+!-----------------------------------------------------------------------
+!
+!                !  file name               ! frequency (hours) ! variable   ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!                !                          !  (if <0  months)  !   name     !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_trcdta(1)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'NO3'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(2)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'NH4'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(3)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'Si'      ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(4)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'PHY2'    ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(5)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'PHY'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(6)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'MYRI'    ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(7)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'MICZ'    ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(8)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'DOC'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(9)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'POC'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(10) = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'bSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   
+   rn_trfac(1)   =  7.6e-6  !  -      -      -     -
+   rn_trfac(2)   =  7.6e-6  !  -      -      -     -
+   rn_trfac(3)   =  1.0e-6  !  multiplicative factor
+   rn_trfac(4)   =  1.0e-6  !  -      -      -     -
+   rn_trfac(5)   =  1.0e-6  !  -      -      -     -
+   rn_trfac(6)   =  1.0  !  -      -      -     -
+   rn_trfac(7)   =  1.0  !  -      -      -     -
+   rn_trfac(8)   =  1.0  !  -      -      -     -
+   rn_trfac(9)   =  1.0  !  -      -      -     -
+   rn_trfac(10)  =  1.0  !  -      -      -     -
+   cn_dir='./'
+/
+!-----------------------------------------------------------------------
+&namtrc_bdy     ! bdy for passive tracers
+!-----------------------------------------------------------------------
+   cn_trc_dflt='neumann', 'neumann'
+   cn_trc='neumann', 'neumann'         ! boundary condition type for passive tracers
+   nn_trcdmp_bdy = 0, 0
+/
+!-----------------------------------------------------------------------
+&namtrc_run     !   run information
+!-----------------------------------------------------------------------
+   ln_top_euler  = .false.    !  use Euler time-stepping for TOP
+/
+!-----------------------------------------------------------------------
+&namtrc     !   tracers definition
+!-----------------------------------------------------------------------
+/
+!-----------------------------------------------------------------------
+&namtrc_adv    !   advection scheme for passive tracer 
+!-----------------------------------------------------------------------
+/
+!-----------------------------------------------------------------------
+&namtrc_ldf    !   lateral diffusion scheme for passive tracer 
+!-----------------------------------------------------------------------
+!                               !  Type of the operator : 
+/
+!-----------------------------------------------------------------------
+&namtrc_zdf        !   vertical physics
+!-----------------------------------------------------------------------
+/
+!-----------------------------------------------------------------------
+&namtrc_rad        !  treatment of negative concentrations 
+!-----------------------------------------------------------------------
+/
+!-----------------------------------------------------------------------
+&namtrc_dmp    !   passive tracer newtonian damping   
+!-----------------------------------------------------------------------
+/
+!-----------------------------------------------------------------------
+&namtrc_ice       !    Representation of sea ice growth & melt effects
+!-----------------------------------------------------------------------
+/
+!-----------------------------------------------------------------------
+&namtrc_trd       !   diagnostics on tracer trends        ('key_trdtrc')
+!                          or mixed-layer trends          ('key_trdmld_trc')
+!----------------------------------------------------------------------
+/
+!-----------------------------------------------------------------------
+&namtrc_dia       !   parameters for passive tracer additional diagnostics
+!----------------------------------------------------------------------
+/
+
