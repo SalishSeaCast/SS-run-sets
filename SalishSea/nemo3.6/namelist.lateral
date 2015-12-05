@@ -1,6 +1,6 @@
 &namlbc        !   lateral momentum boundary condition
 !-----------------------------------------------------------------------
-   rn_shlat    = 0.5     !  shlat = 0  !  0 < shlat < 2  !  shlat = 2  !  2 < shlat
+   rn_shlat    = 0.2     !  shlat = 0  !  0 < shlat < 2  !  shlat = 2  !  2 < shlat
                          !  free slip  !   partial slip  !   no slip   ! strong slip
 &end
 
@@ -31,7 +31,7 @@
     nb_bdy         = 2                     !  number of open boundary sets According to merge namelist, only 1
     ln_coords_file = .false., .false.      !  =T : read bdy coordinates from file
     cn_dyn2d       = 'flather', 'flather'            !
-    nn_dyn2d_dta   =  3, 2                 !  = 0, bdy data are equal to the initial state
+    nn_dyn2d_dta   =  2, 2                 !  = 0, bdy data are equal to the initial state
                                            !  = 1, bdy data are read in 'bdydata   .nc' files
                                            !  = 2, use tidal harmonic forcing data from files
                                            !  = 3, use external data AND tidal harmonic forcing
@@ -63,15 +63,15 @@
   bn_v2d = 'ssh/ssh',                1,                'vobtcrty', .true.,        .false.,  'daily',    '',        ''
   bn_u3d = '',                      24,                'vozocrtx', .true.,        .false.,  'daily',    '',        ''
   bn_v3d = '',                      24,                'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'SalishSea2_Masson_DC', 168,                'votemper', .true.,        .true.,   'yearly',   '',        ''
-  bn_sal = 'SalishSea2_Masson_DC', 168,                'vosaline', .true.,        .true.,   'yearly',   '',        ''
+  bn_tem = 'SalishSea2_Masson_DC_corrected', 168,                'votemper', .true.,        .true.,   'yearly',   '',        ''
+  bn_sal = 'SalishSea2_Masson_DC_corrected', 168,                'vosaline', .true.,        .true.,   'yearly',   '',        ''
 
   cn_dir = 'open_boundaries/west/'
 &end
 
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide          = 'open_boundaries/west/tides/SalishSea2_Flux_RC13_west_tide_'
+   filtide          = 'open_boundaries/west/tides/SalishSea2_TS4_west_tide_'
    ln_bdytide_2ddta = .false.
    ln_bdytide_conj  = .false.
 &end
@@ -104,7 +104,7 @@
 
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide          = 'open_boundaries/north/tides/SalishSea2_corr15_North_tide_'
+   filtide          = 'open_boundaries/north/tides/SalishSea2_TS4_North_tide_'
    ln_bdytide_2ddta = .false.
    ln_bdytide_conj  = .false.
 &end
