@@ -16,8 +16,7 @@ cat \
   ${HERE}/namelist.tracer \
   ${HERE}/namelist.dynamics \
   ${HERE}/namelist.vertical \
-  ${HERE}/namelist.diagnostics \
-  ${HERE}/namelist.misc \
+  ${HERE}/namelist.compute \
 > namelist_cfg
 
 echo 'roawrrr!'

@@ -31,8 +31,8 @@
 !-----------------------------------------------------------------------
    nn_fsbc     =  1        !  frequency of surface boundary condition computation
                            !     (also = the frequency of sea-ice model call)
-   ln_ana      = .true.   !  analytical formulation                    (T => fill namsbc_ana )
-   ln_blk_core = .false.    !  CORE bulk formulation                     (T => fill namsbc_core)
+   ln_ana      = .false.   !  analytical formulation                    (T => fill namsbc_ana )
+   ln_blk_core = .true.    !  CORE bulk formulation                     (T => fill namsbc_core)
    ln_apr_dyn  = .false.   !  Patm gradient added in ocean & ice Eqs.   (T => fill namsbc_apr )
    nn_ice      = 0         !  =0 no ice boundary condition,
                            !  =1 use observed ice-cover,
@@ -86,7 +86,7 @@
 !-----------------------------------------------------------------------
 !             !  file name         ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
 !             !                    !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
-  sn_rnf      = 'rivers_month',       -1,               'rorunoff',  .true.,       .true.,  'yearly',   '',        ''
+  sn_rnf      = 'RLonFraCElse',       24,               'rorunoff',  .true.,      .false., 'daily',     '',        ''
   sn_cnf      = 'runoff_1m_nomask',    0,               'socoefr0',  .false.,      .true.,  'yearly',   '',        ''
   sn_s_rnf    = '',                   24,               'rosaline',  .false.,      .true.,  'yearly',   '',        ''
   sn_t_rnf    = 'rivers_month',       -1,               'rotemper',  .true.,      .true.,  'yearly',   '',        ''

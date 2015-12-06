@@ -63,8 +63,8 @@
   bn_v2d = 'ssh/ssh',                1,                'vobtcrty', .true.,        .false.,  'daily',    '',        ''
   bn_u3d = '',                      24,                'vozocrtx', .true.,        .false.,  'daily',    '',        ''
   bn_v3d = '',                      24,                'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'SalishSea2_Masson_DC_corrected', 168,                'votemper', .true.,        .true.,   'yearly',   '',        ''
-  bn_sal = 'SalishSea2_Masson_DC_corrected', 168,                'vosaline', .true.,        .true.,   'yearly',   '',        ''
+  bn_tem = 'SalishSea2_Masson_corrected', 168,                'votemper', .true.,        .true.,   'yearly',   '',        ''
+  bn_sal = 'SalishSea2_Masson_corrected', 168,                'vosaline', .true.,        .true.,   'yearly',   '',        ''
 
   cn_dir = 'open_boundaries/west/'
 &end
