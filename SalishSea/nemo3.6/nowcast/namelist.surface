@@ -68,7 +68,7 @@
 
    cn_dir      = 'NEMO-atmos/'    !  root directory for the location of the bulk files
    rn_zqt      = 2.               !  Air temperature and humidity reference height (m)
-   rn_vfac     = 0.               !  new feature, lets use (0. for comparison, then switch to 1)
+   rn_vfac     = 1.               !  new feature, lets use (0. for comparison, then switch to 1)
                                   !  multiplicative factor for ocean/ice velocity
                                   !  in the calculation of the wind stress (0.=absolute winds or 1.=relative winds)
 &end
