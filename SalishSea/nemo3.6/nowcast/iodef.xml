@@ -147,7 +147,7 @@
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
-
+      </file_group>
 
 
    </file_definition>
