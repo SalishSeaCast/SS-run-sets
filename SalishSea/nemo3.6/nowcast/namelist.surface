@@ -33,7 +33,7 @@
                            !     (also = the frequency of sea-ice model call)
    ln_ana      = .false.   !  analytical formulation                    (T => fill namsbc_ana )
    ln_blk_core = .true.    !  CORE bulk formulation                     (T => fill namsbc_core)
-   ln_apr_dyn  = .false.   !  Patm gradient added in ocean & ice Eqs.   (T => fill namsbc_apr )
+   ln_apr_dyn  = .true.   !  Patm gradient added in ocean & ice Eqs.   (T => fill namsbc_apr )
    nn_ice      = 0         !  =0 no ice boundary condition,
                            !  =1 use observed ice-cover,
                            !  =2 ice-model used                         ("key_lim3" or "key_lim2")
@@ -104,10 +104,10 @@
 !-----------------------------------------------------------------------
 !         !  file name     ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                ! rotation !
 !         !                !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename               ! pairing  !
-  sn_apr  = 'slp_corr_ops', 1,                  'atmpres',   .true.,       .false.,  'daily',    'weights-gem2.5-ops.nc', ''
+  sn_apr  = 'ops',       1,                  'atmpres',   .true.,       .false.,  'daily',    'weights-gem2.5-ops.nc', ''
 
   cn_dir      = 'NEMO-atmos/'  !  root directory for the location of the bulk files
-  ln_apr_obc  = .false.         !  inverse barometer added to OBC ssh data
+  ln_apr_obc  = .true.         !  inverse barometer added to OBC ssh data
 &end
 
 
