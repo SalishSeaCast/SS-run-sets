@@ -45,7 +45,10 @@
          <domain id="ChathamPoint" zoom_jbegin="818" zoom_ibegin="131"  zoom_ni="1" zoom_nj="1" />
          <domain id="KelseyBay" zoom_jbegin="867" zoom_ibegin="65"  zoom_ni="1" zoom_nj="1" />
          <domain id="YorkeIsland" zoom_jbegin="878" zoom_ibegin="67"  zoom_ni="1" zoom_nj="1" />
-
+         <domain id="Nanaimo" zoom_jbegin="485" zoom_ibegin="209" zoom_ni="1" zoom_nj="1" />
+         <domain id="NeahBay" zoom_jbegin="385" zoom_ibegin="16" zoom_ni="1" zoom_nj="1" />
+         <domain id="CherryPoint" zoom_jbegin="344" zoom_ibegin="343" zoom_ni="1" zoom_nj="1" />
+         <domain id="FridayHarbor" zoom_jbegin="299" zoom_ibegin="268" zoom_ni="1" zoom_nj="1" />
       </domain_group>
 
       <domain_group id="grid_U">
