@@ -69,6 +69,7 @@
 &namtrc_run     !   run information
 !-----------------------------------------------------------------------
    ln_top_euler  = .false.    !  use Euler time-stepping for TOP
+   ln_rsttr      = .false.    !  start from a restart file (T) or not (F)
 /
 !-----------------------------------------------------------------------
 &namtrc     !   tracers definition
