@@ -36,7 +36,7 @@
              <field ref="voce" name="vomecrty"/>
              <field ref="woce" name="vovecrtz"/>
           </group>
-            </file>
+           </file>
         <file id="VENUS_east_gridded" name="VENUS_east_gridded" enabled=".true." description="VENUS east 15 minutes, 2x2 grid to unstagger velocities ">
           <group id="VENUS_east_gridded" zoom_ref="VENUS_east_gridded">
              <field ref="toce" name="votemper"/>
@@ -61,7 +61,7 @@
              <field ref="ssh" name="sossheig"/>
           </group>
 	    </file>
-      </group>
+     </group>
 
 
       <group id="1h" output_freq="3600" output_level="10" enabled=".true.">
