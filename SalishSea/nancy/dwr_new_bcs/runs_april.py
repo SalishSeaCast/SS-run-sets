@@ -11,9 +11,9 @@ import salishsea_cmd.api
 
 def main():
     run_desc = base_run_description()
-    run_ids = ['dwr_base_enst', 'dwr_base_apr', 'dwr_corrected_apr']
-    laterals = [ 'namelist.lateral', 'namelist.lateral', 'namelist.lateral.corrected']
-    dynamics = ['namelist.dynamics.enst', 'namelist.dynamics','namelist.dynamics']
+    run_ids = ['dwr_base_apr', 'dwr_corrected_apr']
+    laterals = ['namelist.lateral', 'namelist.lateral.corrected']
+    dynamics = ['namelist.dynamics','namelist.dynamics']
     for run_id, lateral, dyn in zip(run_ids, laterals, dynamics):
         do_run(run_id, run_desc, lateral, dyn)
 
