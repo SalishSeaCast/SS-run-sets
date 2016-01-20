@@ -114,6 +114,8 @@
         </file>
         <file id="1h_grid_W" name="auto">
           <field ref="woce" name="vovecrtz"/>
+	      <field ref="avt" name="ve_eddy_diff"/>
+	      <field ref="avm" name="ve_eddy_visc"/>
         </file>
       </group>
 
@@ -320,6 +322,8 @@
         </file>
         <file id="1d_grid_W" name="auto">
           <field ref="woce" name="vovecrtz"/>
+	      <field ref="avt" name="ve_eddy_diff"/>
+	      <field ref="avm" name="ve_eddy_visc"/>
         </file>
       </group>
 
