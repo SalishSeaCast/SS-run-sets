@@ -9,6 +9,8 @@ config_name: SalishSea
 run_id: blastFraser_15may15
 walltime: 3:00:00
 
+MPI decomposition: 6x14
+
 paths:
   # If relative, paths are taken from current directory
   NEMO-code: ../../../../NEMO-code/
