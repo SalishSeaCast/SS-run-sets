@@ -32,13 +32,10 @@ def base_run_description():
         forcing_path='/home/nksoonti/MEOPAR/NEMO-forcing/',
         XIOS_code='/home/nksoonti/MEOPAR/XIOS/',
         runs_dir='/home/nksoonti/MEOPAR/SalishSea/',
-        init_conditions=(
-            '/home/dlatorne/MEOPAR/SalishSea/spin-up/'
-            '9aug18aug/'),
         forcing={'NEMO-atmos': {'link to': '/home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos/'},
                  'rivers': {'link to': 'rivers'},
                  'open_boundaries': {'link to': 'open_boundaries'},
-                 'initial_strat': {'link to': 'initial_strat'},
+                 'initial_strat': {'link to': '/home/dlatorne/MEOPAR/SalishSea/spin-up/9aug18aug/'},
                  },
         )
     run_desc['email'] = 'nsoontie@eos.ubc.ca'
