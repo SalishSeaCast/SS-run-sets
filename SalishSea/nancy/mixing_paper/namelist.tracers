@@ -1,6 +1,6 @@
 &nameos        !   ocean physical parameters
 !-----------------------------------------------------------------------
-   nn_eos      =  -1      ! updated type of equation of state and Brunt-Vaisala frequency
+   nn_eos      =  0      ! updated type of equation of state and Brunt-Vaisala frequency
                                  !  =-1, TEOS-10
                                  !  = 0, EOS-80
                                  !  = 1, S-EOS   (simplified eos)
