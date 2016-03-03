@@ -9,13 +9,25 @@ import salishsea_cmd.api
 
 def main():
     run_desc = base_run_description()
-    run_ids = ['dwr_base_noTEOS',]
-    for run_id in run_ids:
-        do_run(run_id, run_desc)
+    run_ids = ['dwr_kw', 'dwr_kkl',
+               'dwr_holl','dwr_bcs',
+               'dwr_background','dwr_nowinds',]
+    verticals = ['namelist.vertical.kw', 'namelist.vertical.kkl',
+                'namelist.vertical','namelist.vertical',
+                'namelist.vertical.background','namelist.vertical']  
+    for run_id, vertical in zip(run_ids,verticals):
+        do_run(run_id, vertical, run_desc)
 
 
-def do_run(run_id, run_desc):
+def do_run(run_id, vertical, run_desc):
     run_desc['run_id'] = run_id
+    run_desc['namelists']['namelist_cfg'][7]=vertical
+    if run_id == 'dwr_nowinds':
+       run_desc['namelists']['namelists_cfg'][2]='namelist.surface.nowinds'
+    elif run_id == 'dwr_bcs':
+       run_desc['namelists']['namelists_cfg'][3]='namelist.lateral.newBCs'
+    elif run_id == 'dwr_holl']:
+       run_desc['namelists']['namelists_cfg'][6]='namelists.dynamics.holl'
     salishsea_cmd.api.run_in_subprocess(
         run_id,
         run_desc,
