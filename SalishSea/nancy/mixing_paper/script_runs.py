@@ -9,7 +9,7 @@ import salishsea_cmd.api
 
 def main():
     run_desc = base_run_description()
-    run_ids = ['dwr_base_TS13',]
+    run_ids = ['dwr_base_noTEOS3',]
     for run_id in run_ids:
         do_run(run_id, run_desc)
 
