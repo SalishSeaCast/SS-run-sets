@@ -9,9 +9,9 @@ import salishsea_cmd.api
 
 def main():
     run_desc = base_run_description()
-    run_ids = ['dwr_kw', 'dwr_kkl',
-               'dwr_holl','dwr_bcs',
-               'dwr_background','dwr_nowinds',]
+    run_ids = ['kw', 'kkl',
+               'holl','new_bcs',
+               'background_eddy','nowinds',]
     verticals = ['namelist.vertical.kw', 'namelist.vertical.kkl',
                 'namelist.vertical','namelist.vertical',
                 'namelist.vertical.background','namelist.vertical']  
