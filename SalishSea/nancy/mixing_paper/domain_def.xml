@@ -2,183 +2,92 @@
    <domain_definition>
       <domain_group id="grid_T">
          <domain id="grid_T" long_name="grid T"/>
-	 <!--   My zoom: example of hand defined zoom   -->
-         <domain id="myzoom" zoom_ibegin="10" zoom_jbegin="10" zoom_ni="5" zoom_nj="5" />
-         <domain id="1point" zoom_ibegin="10" zoom_jbegin="10" zoom_ni="1" zoom_nj="1" />
-         <!--   Eq section   -->
-         <domain id="EqT" zoom_ibegin="1" zoom_jbegin="0000" zoom_ni="0000" zoom_nj="1" />
-         <!--   TAO   -->
-         <!--   137e   -->
-         <domain id="2n137eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5n137eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8n137eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   147e   -->
-         <domain id="0n147eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2n147eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5n147eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   156e   -->
-         <domain id="5s156eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2s156eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="0n156eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2n156eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5n156eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8n156eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   165e   -->
-         <domain id="8s165eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5s165eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2s165eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="0n165eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2n165eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5n165eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8n165eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   180w   -->
-         <domain id="8s180wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5s180wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2s180wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="0n180wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2n180wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5n180wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8n180wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   170w   -->
-         <domain id="8s170wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5s170wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2s170wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="0n170wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2n170wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5n170wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8n170wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   155w   -->
-         <domain id="8s155wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5s155wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2s155wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="0n155wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2n155wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5n155wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8n155wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   140w   -->
-         <domain id="8s140wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5s140wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2s140wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="0n140wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2n140wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5n140wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8n140wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   125w   -->
-         <domain id="8s125wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5s125wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2s125wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="0n125wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2n125wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5n125wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8n125wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   110w   -->
-         <domain id="8s110wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5s110wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2s110wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="0n110wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2n110wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5n110wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8n110wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   95w   -->
-         <domain id="8s95wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5s95wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2s95wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="0n95wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="2n95wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5n95wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8n95wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   RAMA   -->
-         <!--   55e   -->
-         <domain id="16s55eT"    zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="12s55eT"    zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8s55eT"     zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="4s55eT"     zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="1.5s55eT"   zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="0n55eT"     zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="1.5n55eT"   zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="4n55eT"     zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-            <!--   65e   -->
-         <domain id="15n65eT"    zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-            <!--   67e   -->
-         <domain id="16s67eT"    zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="12s67eT"    zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8s67eT"     zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="4s67eT"     zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="1.5s67eT"   zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="0n67eT"     zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="1.5n67eT"   zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="4n67eT"     zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8n67eT"     zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   80.5e   -->
-         <domain id="16s80.5eT"  zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="12s80.5eT"  zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8s80.5eT"   zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="4s80.5eT"   zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="1.5s80.5eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="0n80.5eT"   zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="1.5n80.5eT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="4n80.5eT"   zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   90e   -->
-         <domain id="1.5s90eT"   zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="0n90eT"     zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="1.5n90eT"   zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="4n90eT"     zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8n90eT"     zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="12n90eT"    zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="15n90eT"    zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   95e   -->
-         <domain id="16s95eT"    zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="12s95eT"    zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8s95eT"     zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="5s95eT"     zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   PIRATA   -->
-         <!--   38w-30w   -->
-         <domain id="19s34wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="14s32wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8s30wT"  zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="0n35wT"  zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="4n38wT"  zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="8n38wT"  zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="12n38wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="15n38wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="20n38wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   23w   -->
-         <domain id="0n23wT"  zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="4n23wT"  zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="12n23wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="21n23wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   10w   -->
-         <domain id="10s10wT" zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="6s10wT"  zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <domain id="0n10wT"  zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
-         <!--   0e   -->
-         <domain id="0n0eT"   zoom_ibegin="0000" zoom_jbegin="0000" zoom_ni="1" zoom_nj="1" />
+
+       <!-- VENUS -->
+         <domain id="VENUS_east"  zoom_ibegin="284" zoom_jbegin="417" zoom_ni="1" zoom_nj="1" />
+         <domain id="VENUS_central"  zoom_ibegin="267" zoom_jbegin="425" zoom_ni="1" zoom_nj="1" />
+         <domain id="VENUS_east_gridded"  zoom_ibegin="283" zoom_jbegin="416" zoom_ni="2" zoom_nj="2" />
+         <domain id="VENUS_central_gridded"  zoom_ibegin="266" zoom_jbegin="424" zoom_ni="2" zoom_nj="2" />
+         <domain id="VENUS_delta_gridded" zoom_ibegin="284" zoom_jbegin="425" zoom_ni="2" zoom_nj="2" />
+
+       <!-- CODAR (note switch on i and j) -->
+         <domain id="CODAR" zoom_jbegin="381" zoom_ibegin="241" zoom_ni="80" zoom_nj="80" />
+
+       <!-- Tide Points (note switch on i and j) -->
+         <domain id="PortRenfrew" zoom_jbegin="403" zoom_ibegin="57"  zoom_ni="1" zoom_nj="1" />
+         <domain id="SheringhamPoint" zoom_jbegin="331" zoom_ibegin="113"  zoom_ni="1" zoom_nj="1" />
+         <domain id="Sooke" zoom_jbegin="314" zoom_ibegin="137"  zoom_ni="1" zoom_nj="1" />
+         <domain id="PedderBay" zoom_jbegin="296" zoom_ibegin="162"  zoom_ni="1" zoom_nj="1" />
+         <domain id="Esquimalt" zoom_jbegin="308" zoom_ibegin="191"  zoom_ni="1" zoom_nj="1" />
+         <domain id="Victoria" zoom_jbegin="299" zoom_ibegin="197"  zoom_ni="1" zoom_nj="1" />
+         <domain id="CloverPoint" zoom_jbegin="296" zoom_ibegin="200"  zoom_ni="1" zoom_nj="1" />
+         <domain id="FinnertyCove" zoom_jbegin="305" zoom_ibegin="217"  zoom_ni="1" zoom_nj="1" />
+         <domain id="PortTownsend" zoom_jbegin="204" zoom_ibegin="255"  zoom_ni="1" zoom_nj="1" />
+         <domain id="FulfordHarbour" zoom_jbegin="369" zoom_ibegin="230"  zoom_ni="1" zoom_nj="1" />
+         <domain id="PatosIsland" zoom_jbegin="342" zoom_ibegin="303"  zoom_ni="1" zoom_nj="1" />
+         <domain id="TumboChannel" zoom_jbegin="355" zoom_ibegin="284"  zoom_ni="1" zoom_nj="1" />
+         <domain id="WhalerBay" zoom_jbegin="386" zoom_ibegin="264"  zoom_ni="1" zoom_nj="1" />
+         <domain id="Tsawwassen" zoom_jbegin="394" zoom_ibegin="304"  zoom_ni="1" zoom_nj="1" />
+         <domain id="Sandheads" zoom_jbegin="427" zoom_ibegin="294"  zoom_ni="1" zoom_nj="1" />
+         <domain id="PointGrey" zoom_jbegin="454" zoom_ibegin="317"  zoom_ni="1" zoom_nj="1" />
+         <domain id="PointAtkinson" zoom_jbegin="469" zoom_ibegin="330"  zoom_ni="1" zoom_nj="1" />
+         <domain id="GibsonsLanding" zoom_jbegin="499" zoom_ibegin="301"  zoom_ni="1" zoom_nj="1" />
+         <domain id="HalfmoonBay" zoom_jbegin="551" zoom_ibegin="254"  zoom_ni="1" zoom_nj="1" />
+         <domain id="IrvinesLanding" zoom_jbegin="584" zoom_ibegin="249"  zoom_ni="1" zoom_nj="1" />
+         <domain id="PowellRiver" zoom_jbegin="664" zoom_ibegin="205"  zoom_ni="1" zoom_nj="1" />
+         <domain id="Lund" zoom_jbegin="701" zoom_ibegin="187"  zoom_ni="1" zoom_nj="1" />
+         <domain id="TwinIslets" zoom_jbegin="723" zoom_ibegin="168"  zoom_ni="1" zoom_nj="1" />
+         <domain id="CampbellRiver" zoom_jbegin="748" zoom_ibegin="126"  zoom_ni="1" zoom_nj="1" />
+         <domain id="MaudeIslandE" zoom_jbegin="771" zoom_ibegin="123"  zoom_ni="1" zoom_nj="1" />
+         <domain id="NympheCove" zoom_jbegin="774" zoom_ibegin="118"  zoom_ni="1" zoom_nj="1" />
+         <domain id="SeymourNarrows" zoom_jbegin="772" zoom_ibegin="121"  zoom_ni="1" zoom_nj="1" />
+         <domain id="BrownBay" zoom_jbegin="780" zoom_ibegin="122"  zoom_ni="1" zoom_nj="1" />
+         <domain id="ChathamPoint" zoom_jbegin="818" zoom_ibegin="131"  zoom_ni="1" zoom_nj="1" />
+         <domain id="KelseyBay" zoom_jbegin="867" zoom_ibegin="65"  zoom_ni="1" zoom_nj="1" />
+         <domain id="YorkeIsland" zoom_jbegin="878" zoom_ibegin="67"  zoom_ni="1" zoom_nj="1" />
+         <domain id="Nanaimo" zoom_jbegin="485" zoom_ibegin="209" zoom_ni="1" zoom_nj="1" />
+         <domain id="NeahBay" zoom_jbegin="385" zoom_ibegin="16" zoom_ni="1" zoom_nj="1" />
+         <domain id="CherryPoint" zoom_jbegin="344" zoom_ibegin="343" zoom_ni="1" zoom_nj="1" />
+         <domain id="FridayHarbor" zoom_jbegin="299" zoom_ibegin="268" zoom_ni="1" zoom_nj="1" />
       </domain_group>
 
       <domain_group id="grid_U">
          <domain id="grid_U" long_name="grid U"/>
-         <!--   Eq section   -->
-         <domain id="EqU" zoom_ibegin="1" zoom_jbegin="0000" zoom_ni="0000" zoom_nj="1" />
+
+       <!-- VENUS -->
+         <domain id="VENUS_east"  zoom_ibegin="284" zoom_jbegin="417" zoom_ni="1" zoom_nj="1" />
+         <domain id="VENUS_central"  zoom_ibegin="267" zoom_jbegin="425" zoom_ni="1" zoom_nj="1" />
+         <domain id="VENUS_east_gridded"  zoom_ibegin="283" zoom_jbegin="416" zoom_ni="2" zoom_nj="2" />
+         <domain id="VENUS_central_gridded"  zoom_ibegin="266" zoom_jbegin="424" zoom_ni="2" zoom_nj="2" />
+         <domain id="VENUS_delta_gridded" zoom_ibegin="284" zoom_jbegin="425" zoom_ni="2" zoom_nj="2" />
+
+       <!-- CODAR (note switch on i and j) -->
+         <domain id="CODAR" zoom_jbegin="381" zoom_ibegin="241" zoom_ni="80" zoom_nj="80" />
+
       </domain_group>
 
-      <domain id="grid_V" long_name="grid V"/>
+      <domain_group id="grid_V">
+         <domain id="grid_V" long_name="grid V"/>
+
+       <!-- VENUS -->
+         <domain id="VENUS_east"  zoom_ibegin="284" zoom_jbegin="417" zoom_ni="1" zoom_nj="1" />
+         <domain id="VENUS_central"  zoom_ibegin="267" zoom_jbegin="425" zoom_ni="1" zoom_nj="1" />
+         <domain id="VENUS_east_gridded"  zoom_ibegin="283" zoom_jbegin="416" zoom_ni="2" zoom_nj="2" />
+         <domain id="VENUS_central_gridded"  zoom_ibegin="266" zoom_jbegin="424" zoom_ni="2" zoom_nj="2" />
+         <domain id="VENUS_delta_gridded" zoom_ibegin="284" zoom_jbegin="425" zoom_ni="2" zoom_nj="2" />
+
+       <!-- CODAR (note switch on i and j) -->
+         <domain id="CODAR" zoom_jbegin="381" zoom_ibegin="241" zoom_ni="80" zoom_nj="80" />
+
+      </domain_group>
+
       <domain_group id="grid_W">
          <domain id="grid_W" long_name="grid W"/>
-         <!--   Eq section   -->
-         <domain id="EqW" zoom_ibegin="1" zoom_jbegin="0000" zoom_ni="0000" zoom_nj="1" />
       </domain_group>
 
-      <domain_group id="scalarpoint"> 
-         <domain id="scalarpoint" long_name="scalar"/> 
-         <!-- 
-         <domain id="1point" zoom_ibegin="1" zoom_jbegin="1" zoom_ni="1" zoom_nj="1" /> 
-         --> 
+      <domain_group id="scalarpoint">
+         <domain id="scalarpoint" long_name="scalar"/>
       </domain_group>
 
-      <domain_group id="gznl">
-         <domain id="ptr" long_name="zonal mean grid" zoom_ibegin="0000"  zoom_jbegin="1" zoom_ni="1" zoom_nj="0000" />
-      </domain_group>
+   </domain_definition>
 
-
-   </domain_definition>    
- 
