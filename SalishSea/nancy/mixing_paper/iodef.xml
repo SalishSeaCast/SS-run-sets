@@ -80,6 +80,14 @@
       <file_group id="10y" output_freq="10y" output_level="10" enabled=".TRUE."> <!-- real 10y files -->
       </file_group>
 
+
+      <file_group id="15min" output_freq="900s" output_level="10" enabled=".TRUE."> <!-- 15 minute files -->
+        <file id="PointAtkinson" name="PointAtkinson" description="15min interval SSH for tides">
+          <field_group id="PointAtkinson" domain_ref="PointAtkinson">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+     </file_group>
    </file_definition>
 
 
