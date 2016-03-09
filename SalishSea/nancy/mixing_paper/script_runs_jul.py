@@ -33,7 +33,7 @@ def base_run_description():
         XIOS_code='/home/nksoonti/MEOPAR/XIOS/',
         runs_dir='/home/nksoonti/MEOPAR/SalishSea/',
         forcing={'NEMO-atmos': {'link to': '/home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos/'},
-                 'rivers': {'link to': '/home/nksoontie/MEOPAR/rivers/'},
+                 'rivers': {'link to': '/home/nksoonti/MEOPAR/rivers/'},
                  'open_boundaries': {'link to': 'open_boundaries'},
                  'initial_strat': {'link to': '/home/nksoonti/MEOPAR/spin-up/30jun9jul/'},
                  },
