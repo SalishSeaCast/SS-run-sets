@@ -15,17 +15,17 @@
 !                !    name   !           title of the field              ! initial data ! initial data ! obc    !    sbc  !  cbc    ! save   !
 !                !           !                                           !  units       ! from file    !                             ! or not ! 
 !                !           !                                           !              ! or not       !                             !        !
-   sn_tracer(1)  = 'NO3     ' , 'Nitrates Concentration                 ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(2)  = 'NH4     ' , 'Ammonium Concentration                 ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(3)  = 'Si      ' , 'Silicate Concentration                 ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(4)  = 'PHY2    ' , 'Diatoms Concentration                  ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(5)  = 'PHY     ' , 'Nanophytoplankton Concentration        ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(6)  = 'MYRI    ' , 'Mesozooplankton Concentration          ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(7)  = 'MICZ    ' , 'Microzooplankton Concentration         ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(8)  = 'DOC     ' , 'Dissolved organic Concentration        ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(9)  = 'POC     ' , 'Small organic carbon Concentration     ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(10) = 'bSi     ' , 'biogenic Silicate Concentration        ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(11) = 'O2      ' , 'Dissolved Oxygen Concentration         ',  'mol-C/L' ,  .false.    , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(1)  = 'NO3     ' , 'Nitrates Concentration                 ',  'mol-C/L' ,  .true.     , .true.    ,  .false. ,  .false.  ,  .true.
+   sn_tracer(2)  = 'NH4     ' , 'Ammonium Concentration                 ',  'mol-C/L' ,  .true.     , .true.    ,  .false. ,  .false.  ,  .true.
+   sn_tracer(3)  = 'Si      ' , 'Silicate Concentration                 ',  'mol-C/L' ,  .true.     , .true.    ,  .false. ,  .false.  ,  .true.
+   sn_tracer(4)  = 'PHY2    ' , 'Diatoms Concentration                  ',  'mol-C/L' ,  .true.     , .true.    ,  .false. ,  .false.  ,  .true.
+   sn_tracer(5)  = 'PHY     ' , 'Nanophytoplankton Concentration        ',  'mol-C/L' ,  .true.     , .true.    ,  .false. ,  .false.  ,  .true.
+   sn_tracer(6)  = 'MYRI    ' , 'Mesozooplankton Concentration          ',  'mol-C/L' ,  .true.     , .true.    ,  .false. ,  .false.  ,  .true.
+   sn_tracer(7)  = 'MICZ    ' , 'Microzooplankton Concentration         ',  'mol-C/L' ,  .true.     , .true.    ,  .false. ,  .false.  ,  .true.
+   sn_tracer(8)  = 'DOC     ' , 'Dissolved organic Concentration        ',  'mol-C/L' ,  .true.     , .true.    ,  .false. ,  .false.  ,  .true.
+   sn_tracer(9)  = 'POC     ' , 'Small organic carbon Concentration     ',  'mol-C/L' ,  .true.     , .true.    ,  .false. ,  .false.  ,  .true.
+   sn_tracer(10) = 'bSi     ' , 'biogenic Silicate Concentration        ',  'mol-C/L' ,  .true.     , .true.    ,  .false. ,  .false.  ,  .true.
+   sn_tracer(11) = 'O2      ' , 'Dissolved Oxygen Concentration         ',  'mol-C/L' ,  .false.    , .true.    ,  .false. ,  .false.  ,  .true.
    ln_trcdta = .true.
    ln_trcdmp = .false.
    /
@@ -109,4 +109,36 @@
 &namtrc_dia       !   parameters for passive tracer additional diagnostics
 !----------------------------------------------------------------------
 /
-
+!----------------------------------------------------------------------
+! namtrc_bc       !   data for boundary conditions
+!-----------------------------------------------------------------------
+&namtrc_bc
+!
+!              !  file name      ! frequency (hours) ! variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !                 !  (if <0  months)  !   name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_trcobc(1) = 'bioOBC_full.nc',               168,        'NO3',      .true.,  .true.,  'yearly',   '',        ''
+   sn_trcobc(2) = 'bioOBC_full.nc',               168,        'NH4',      .true.,  .true.,  'yearly',   '',        ''
+   sn_trcobc(3) = 'bioOBC_full.nc',               168,        'Si',       .true.,  .true.,  'yearly',   '',        ''
+   sn_trcobc(4) = 'bioOBC_full.nc',               168,        'DIA',      .true.,  .true.,  'yearly',   '',        ''
+   sn_trcobc(5) = 'bioOBC_full.nc',               168,        'CRY',      .true.,  .true.,  'yearly',   '',        ''
+   sn_trcobc(6) = 'bioOBC_full.nc',               168,        'MYRI',     .true.,  .true.,  'yearly',   '',        ''
+   sn_trcobc(7) = 'bioOBC_full.nc',               168,        'MICZ',     .true.,  .true.,  'yearly',   '',        ''
+   sn_trcobc(8) = 'bioOBC_full.nc',               168,        'DON',      .true.,  .true.,  'yearly',   '',        ''
+   sn_trcobc(9) = 'bioOBC_full.nc',               168,        'PON',      .true.,  .true.,  'yearly',   '',        ''
+   sn_trcobc(10) = 'bioOBC_full.nc',              168,        'bSi',      .true.,  .true.,  'yearly',   '',        ''
+   sn_trcobc(11) = 'bioOBC_full.nc',              168,        'O2',       .true.,  .true.,  'yearly',   '',        ''
+   cn_dir_sbc        =  './'      !  root directory for the location of SURFACE data files
+   cn_dir_cbc        =  './'      !  root directory for the location of COASTAL data files
+   cn_dir_obc        =  './open_boundaries/west/'      !  root directory for the location of OPEN data files
+   rn_trofac(1)   =  7.6e-6  !  -      -      -     -
+   rn_trofac(2)   =  7.6e-6  !  -      -      -     -
+   rn_trofac(3)   =  1.0e-6  !  multiplicative factor
+   rn_trofac(4)   =  1.0e-6  !  -      -      -     -
+   rn_trofac(5)   =  1.0e-6  !  -      -      -     -
+   rn_trofac(6)   =  1.0  !  -      -      -     -
+   rn_trofac(7)   =  1.0  !  -      -      -     -
+   rn_trofac(8)   =  1.0  !  -      -      -     -
+   rn_trofac(9)   =  1.0  !  -      -      -     -
+   rn_trofac(10)  =  1.0  !  -      -      -     -
+   rn_trofac(11)  =  1.0  !  -      -      -     -
+/
