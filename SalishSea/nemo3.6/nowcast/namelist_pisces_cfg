@@ -2,7 +2,7 @@
 !! PISCES  (key_pisces) cfg namelist (see below for key_pisces_reduced)
 !!              1  - air-sea exchange                         (nampisext)
 !!              2  - biological parameters                    (nampisbio)
-!!              3  - parameters for nutrient limitations      (nampislim)    
+!!              3  - parameters for nutrient limitations      (nampislim)
 !!              4  - parameters for phytoplankton             (nampisprod,nampismort)
 !!              5  - parameters for zooplankton               (nampismes,nampiszoo)
 !!              6  - parameters for remineralization          (nampisrem)
@@ -23,25 +23,26 @@
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampissbc
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-!              !  file name          ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
-!              !                     !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
-   sn_dust      =              ''     ,        -12,               '',      .false.,      .true.,  'yearly', '',        '',        ''
-   sn_solub     =              ''     ,        -12,               '',      .false.,      .true.,  'yearly', '',        '',        ''
-   sn_riverno3  ='rivers/riverBio',         24,            'no3',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_rivernh4  ='rivers/riverBio',         24,            'nh4',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_riversil  ='rivers/riverBio',         24,            'sil',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_riverdia  ='rivers/riverBio',         24,            'dia',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_riverphy  ='rivers/riverBio',         24,            'phy',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_rivermes  ='rivers/riverBio',         24,            'mes',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_riverzoo  ='rivers/riverBio',         24,            'zoo',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_riverdoc  ='rivers/riverBio',         24,            'don',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_riverpoc  ='rivers/riverBio',         24,            'pon',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_riverdsi  ='rivers/riverBio',         24,            'bsi',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_riveroxy  ='rivers/riverBio',         24,            'oxy',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_ndepo     =                   '',        -12,               '',      .false.,      .true.,  'yearly', '',        '',        ''
-   sn_ironsed   =                   '',        -12,               '',      .false.,      .true.,  'yearly', '',        '',        ''
-   sn_hydrofe   =                   '',        -12,               '',      .false.,      .true.,  'yearly', '',        '',        ''
-   cn_dir       = './'   !  root directory for the location of the runoff files
+!               !  file name ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!               !            !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_dust      = '',          -12,               '',          .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_solub     = '',          -12,               '',          .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverno3  = 'riverBio',   24,               'no3',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_rivernh4  = 'riverBio',   24,               'nh4',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riversil  = 'riverBio',   24,               'sil',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riverdia  = 'riverBio',   24,               'dia',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riverphy  = 'riverBio',   24,               'phy',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_rivermes  = 'riverBio',   24,               'mes',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riverzoo  = 'riverBio',   24,               'zoo',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riverdoc  = 'riverBio',   24,               'don',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riverpoc  = 'riverBio',   24,               'pon',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riverdsi  = 'riverBio',   24,               'bsi',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riveroxy  = 'riverBio',   24,               'oxy',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_ndepo     = '',          -12,               '',          .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_ironsed   = '',          -12,               '',          .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_hydrofe   = '',          -12,               '',          .false.,      .true.,  'yearly',   '',        '',        ''
+
+   cn_dir       = 'rivers/bio_climatology/'  ! root directory for the location of the runoff files
    ln_dust = .false.
    ln_solub = .false.
    ln_river = .true.
@@ -67,13 +68,13 @@
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-&nampisdia     !   additional 2D/3D tracers diagnostics 
+&nampisdia     !   additional 2D/3D tracers diagnostics
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 !              !    name   !           title of the field          !     units      !
-!              !           !                                       !                !  
+!              !           !                                       !                !
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-&nampisdmp     !  Damping 
+&nampisdmp     !  Damping
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
