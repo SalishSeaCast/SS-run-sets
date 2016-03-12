@@ -9,7 +9,7 @@ import salishsea_cmd.api
 
 def main():
     run_desc = base_run_description()
-    run_ids = ['base_jul9',]
+    run_ids = ['holl_jul9_nu15',]
     for run_id in run_ids:
         do_run(run_id, run_desc)
 
@@ -47,7 +47,7 @@ def base_run_description():
         'namelist.lateral',
         'namelist.bottom',
         'namelist.tracers',
-        'namelist.dynamics',
+        'namelist.dynamics.holl.nu15',
         'namelist.vertical',
         'namelist.compute',
         ]
