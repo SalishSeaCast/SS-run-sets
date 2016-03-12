@@ -31,7 +31,7 @@
     nb_bdy         = 2                     !  number of open boundary sets According to merge namelist, only 1
     ln_coords_file = .false., .false.      !  =T : read bdy coordinates from file
     cn_dyn2d       = 'flather', 'flather'            !
-    nn_dyn2d_dta   =  2, 2                 !  = 0, bdy data are equal to the initial state
+    nn_dyn2d_dta   =  3, 2                 !  = 0, bdy data are equal to the initial state
                                            !  = 1, bdy data are read in 'bdydata   .nc' files
                                            !  = 2, use tidal harmonic forcing data from files
                                            !  = 3, use external data AND tidal harmonic forcing
