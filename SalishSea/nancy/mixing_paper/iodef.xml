@@ -26,7 +26,26 @@
       </file_group>
 
       <file_group id="1h" output_freq="1h"  output_level="10" enabled=".TRUE."> <!-- 1h files -->
+        <file id="Nanaimo_region" name="Nanaimo_region" description="ocean T grid variables" >
+          <field_group id="Nanaimo_region" domain_ref="Nanaimo_region">
+            <field field_ref="toce" name="votemper"/>
+            <field field_ref="soce" name="vosaline"/>
+          </field_group>
+        </file>
+        <file id="Steveston_region" name="Steveston_region" description="ocean T grid variables" >
+          <field_group id="Steveston_region" domain_ref="Steveston_region">
+            <field field_ref="toce" name="votemper"/>
+            <field field_ref="soce" name="vosaline"/>
+          </field_group>
+        </file>
+        <file id="Victoria_region" name="Victoria_region" description="ocean T grid variables" >
+          <field_group id="Victoria_region" domain_ref="Victoria_region">
+            <field field_ref="toce" name="votemper"/>
+            <field field_ref="soce" name="vosaline"/>
+          </field_group>
+        </file>
       </file_group>
+
       <file_group id="2h" output_freq="2h"  output_level="10" enabled=".TRUE."> <!-- 2h files -->
       </file_group>
       <file_group id="3h" output_freq="3h"  output_level="10" enabled=".TRUE."> <!-- 3h files -->
