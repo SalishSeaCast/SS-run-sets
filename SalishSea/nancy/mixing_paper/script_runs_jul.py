@@ -9,7 +9,7 @@ import salishsea_cmd.api
 
 def main():
     run_desc = base_run_description()
-    run_ids = ['holl_jul9_nu15',]
+    run_ids = ['holl_jul9_20s',]
     for run_id in run_ids:
         do_run(run_id, run_desc)
 
@@ -27,7 +27,7 @@ def do_run(run_id, run_desc):
 def base_run_description():
     # Relative paths from SS-run-sets/SalishSea/nancy/
     run_desc = salishsea_cmd.api.run_description(
-        walltime='21:00:00',
+        walltime='23:00:00',
         NEMO_code='/home/nksoonti/MEOPAR/NEMO-3.6-code/',
         forcing_path='/home/nksoonti/MEOPAR/NEMO-forcing/',
         XIOS_code='/home/nksoonti/MEOPAR/XIOS/',
@@ -47,7 +47,7 @@ def base_run_description():
         'namelist.lateral',
         'namelist.bottom',
         'namelist.tracers',
-        'namelist.dynamics.holl.nu15',
+        'namelist.dynamics.holl',
         'namelist.vertical',
         'namelist.compute',
         ]
