@@ -23,7 +23,7 @@ MPI decomposition: 8x18
 
 # For runs on systems that use qsub/PBS/TORQUE; e.g. Westgrid
 run_id: tides_TS4wHoll
-walltime: 4:00:00
+walltime: 04:00:00
 
 paths:
   # If relative, paths are taken from current directory
@@ -39,22 +39,30 @@ grid:
 
 forcing:
   # If relative, paths are taken from forcing path above
-  atmospheric: /home/dlatorne/MEOPAR/CGRF
-  initial conditions: initial_strat/
-  open boundaries: open_boundaries/
-  rivers: rivers/
+  NEMO-atmos:
+    link to: /home/dlatorne/MEOPAR/CGRF
+    check link:
+      type: atmospheric
+      namelist filename: namelist_cfg
+  initial_strat:
+    link to: initial_strat/
+  open_boundaries:
+    link to: open_boundaries/
+  rivers:
+    link to: rivers/
 
 namelists:
   # If relative, paths are taken from current directory
-  - namelist.time.llap
-  - namelist.domain.river.tides
-  - namelist.surface
-  - namelist.lateral.TS4
-  - namelist.bottom.TS4wHoll
-  - namelist.tracer.TS4wHoll
-  - namelist.dynamics.wHoll
-  - namelist.vertical.TS4wHoll
-  - ../namelist.compute
+  namelist_cfg:
+    - namelist.time.llap.short
+    - namelist.domain.river.tides
+    - namelist.surface
+    - namelist.lateral.TS4
+    - namelist.bottom.TS4wHoll
+    - namelist.tracer.TS4wHoll
+    - namelist.dynamics.wHoll
+    - namelist.vertical.TS4wHoll
+    - ../namelist.compute
 
 output:
   # If relative, paths are taken from current directory
