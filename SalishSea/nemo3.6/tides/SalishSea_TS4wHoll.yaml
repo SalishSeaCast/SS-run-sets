@@ -23,7 +23,7 @@ MPI decomposition: 8x18
 
 # For runs on systems that use qsub/PBS/TORQUE; e.g. Westgrid
 run_id: tides_TS4wHoll
-walltime: 16:00:00
+walltime: 4:00:00
 
 paths:
   # If relative, paths are taken from current directory
