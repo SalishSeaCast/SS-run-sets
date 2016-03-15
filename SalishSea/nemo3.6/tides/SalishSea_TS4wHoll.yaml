@@ -50,10 +50,10 @@ namelists:
   - namelist.domain.river.tides
   - namelist.surface
   - namelist.lateral.TS4
-  - ../namelist.bottom
-  - ../namelist.tracer
+  - namelist.bottom.TS4wHoll
+  - namelist.tracer.TS4wHoll
   - namelist.dynamics.wHoll
-  - ../namelist.vertical
+  - namelist.vertical.TS4wHoll
   - ../namelist.compute
 
 output:
