@@ -12,6 +12,15 @@
 
        <!-- CODAR (note switch on i and j) -->
          <domain id="CODAR" zoom_jbegin="381" zoom_ibegin="241" zoom_ni="80" zoom_nj="80" />
+       <!-- ONC Patrol data - for July/Aug 2015 -->
+        <domain id="Steveston_region" zoom_jbegin="422" zoom_ibegin="261" zoom_ni="66" zoom_nj="43" />
+        <domain id="Victoria_region"  zoom_jbegin="467" zoom_ibegin="171" zoom_ni="61" zoom_nj="30" />
+        <domain id="Nanaimo_region"   zoom_jbegin="529" zoom_ibegin="173" zoom_ni="61" zoom_nj="64" />
+        <domain id="CowichanBay_region" zoom_jbegin="362" zoom_ibegin="201" zoom_ni="20" zoom_nj="22" />
+        <domain id="Irvines_region" zoom_jbegin="567" zoom_ibegin="216" zoom_ni="31" zoom_nj="40" />
+        <domain id="LundSouth_region" zoom_jbegin="660" zoom_ibegin="133" zoom_ni="69" zoom_nj="45" />
+        <domain id="LundNorth_region" zoom_jbegin="705" zoom_ibegin="171" zoom_ni="37" zoom_nj="38" />
+        <domain id="BaynesSound_region" zoom_jbegin="594" zoom_ibegin="124" zoom_ni="48" zoom_nj="54" />
 
        <!-- Tide Points (note switch on i and j) -->
          <domain id="PortRenfrew" zoom_jbegin="403" zoom_ibegin="57"  zoom_ni="1" zoom_nj="1" />
