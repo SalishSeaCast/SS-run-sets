@@ -33,7 +33,7 @@
    rn_e3zps_min=    5.     !  partial step thickness is set larger than the minimum of
    rn_e3zps_rat=    0.2    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
                            !
-   rn_rdt      =   20.     !  time step for the dynamics (and tracer if nn_acc=0)
+   rn_rdt      =   30.     !  time step for the dynamics (and tracer if nn_acc=0)
    rn_atfp     =    0.1    !  asselin time filter parameter
    nn_acc      =    0      !  acceleration of convergence : =1      used, rdt < rdttra(k)
                            !                                =0, not used, rdt = rdttra
@@ -59,7 +59,7 @@
    ln_bt_av      =    .TRUE.           !  Time filtering of barotropic variables
    ln_bt_nn_auto =    .FALSE.           !  Set nn_baro automatically to be just below
                                        !  a user defined maximum courant number (rn_bt_cmax)
-   nn_baro       =     10               !  Number of iterations of barotropic mode
+   nn_baro       =     15               !  Number of iterations of barotropic mode
                                        !  during rn_rdt seconds. Only used if ln_bt_nn_auto=F
    rn_bt_cmax    =    0.8              !  Maximum courant number allowed if ln_bt_nn_auto=T
    nn_bt_flt     =    1                !  Time filter choice

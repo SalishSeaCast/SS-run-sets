@@ -7,7 +7,7 @@
 !-----------------------------------------------------------------------
    cn_exp      = "SalishSea"  ! experience name
    nn_it000    =     1    ! first time step
-   nn_itend    =    172800    ! last time step (std 1 day = 2160 re: rn_rdt=40 in &namdom)
+   nn_itend    =    115200    ! last time step (std 1 day = 2880 re: rn_rdt=30 in &namdom)
    nn_date0    =  20150709    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
                               ! used to adjust tides to run date (regardless of restart control)
    nn_leapy    =       1      ! Leap year calendar (1) or not (0)
@@ -21,6 +21,6 @@
                               !   = 2 nn_date0 read in restart
                               !       nn_it000 check consistency between namelist and restart
    nn_istate   =       0      ! output the initial state (1) or not (0)
-   nn_stock    =   172800      ! frequency of creation of a restart file (modulo referenced to 1)
+   nn_stock    =   115200      ! frequency of creation of a restart file (modulo referenced to 1)
    ln_clobber  =  .true.      ! clobber (overwrite) an existing file
 &end
