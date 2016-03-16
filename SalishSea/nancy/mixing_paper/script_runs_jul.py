@@ -9,7 +9,7 @@ import salishsea_cmd.api
 
 def main():
     run_desc = base_run_description()
-    run_ids = ['holl_jul9_20s',]
+    run_ids = ['holl_jul9_30s',]
     for run_id in run_ids:
         do_run(run_id, run_desc)
 
