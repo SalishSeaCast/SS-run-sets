@@ -16,8 +16,6 @@
    ln_dynadv_cen2= .false. !  flux form - 2nd order centered scheme
    ln_dynadv_ubs = .false. !  flux form - 3rd order UBS      scheme
    ln_dynzad_zts = .true.  !  Use (T) sub timestepping for vertical momentum advection
-   nn_dynkeg     = 1       ! scheme for grad(KE): =0   C2  ;  =1   Hollingsworth correction
-
 &end
 
 
@@ -58,10 +56,10 @@
    ln_dynldf_bilap  =  .false.  !  bilaplacian operator
    !                            !  Direction of action  :
    ln_dynldf_level  =  .false.  !  iso-level
-   ln_dynldf_hor    =  .false.  !  horizontal (geopotential)   (require "key_ldfslp" in s-coord.)
-   ln_dynldf_iso    =  .true.   !  iso-neutral                 (require "key_ldfslp")
+   ln_dynldf_hor    =  .true.  !  horizontal (geopotential)   (require "key_ldfslp" in s-coord.)
+   ln_dynldf_iso    =  .false.   !  iso-neutral                 (require "key_ldfslp")
    !                            !  Coefficient
-   rn_ahm_0_lap     =   15.     !  horizontal laplacian eddy viscosity   [m2/s]
+   rn_ahm_0_lap     =   10      !  horizontal laplacian eddy viscosity   [m2/s]
    rn_ahmb_0        =     0.    !  background eddy viscosity for ldf_iso [m2/s]
    rn_ahm_0_blp     =  -1.0e+10 !  horizontal bilaplacian eddy viscosity [m4/s]
    rn_cmsmag_1      =     3.    !  constant in laplacian Smagorinsky viscosity
