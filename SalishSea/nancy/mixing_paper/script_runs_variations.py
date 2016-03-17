@@ -10,11 +10,11 @@ import salishsea_cmd.api
 def main():
     run_desc = base_run_description()
     run_ids = ['kw', 'kkl',
-               'holl','new_bcs',
+               'new_bcs',
                'background_eddy','nowinds',
                'horizontal']
     verticals = ['namelist.vertical.kw', 'namelist.vertical.kkl',
-                'namelist.vertical','namelist.vertical',
+                'namelist.vertical',
                 'namelist.vertical.background','namelist.vertical',
                 'namelist.vertical']  
     for run_id, vertical in zip(run_ids,verticals):
