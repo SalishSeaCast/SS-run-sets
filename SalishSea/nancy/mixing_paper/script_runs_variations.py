@@ -25,14 +25,14 @@ def do_run(run_id, vertical, run_desc):
     run_desc['run_id'] = run_id
     run_desc['namelists']['namelist_cfg'][7]=vertical
     if run_id == 'nowinds':
-       run_desc['namelists']['namelists_cfg'][2]='namelist.surface.nowinds'
+       run_desc['namelists']['namelist_cfg'][2]='namelist.surface.nowinds'
     elif run_id == 'new_bcs':
-       run_desc['namelists']['namelists_cfg'][3]='namelist.lateral.newBCs'
+       run_desc['namelists']['namelist_cfg'][3]='namelist.lateral.newBCs'
     elif run_id == 'holl':
-       run_desc['namelists']['namelists_cfg'][6]='namelist.dynamics.holl'
+       run_desc['namelists']['namelist_cfg'][6]='namelist.dynamics.holl'
     elif run_id == 'horizontal':
-       run_desc['namelists']['namelists_cfg'][5]='namelist.tracers.hori'
-       run_desc['namelists']['namelists_cfg'][6]='namelist.dynamics.hori'
+       run_desc['namelists']['namelist_cfg'][5]='namelist.tracers.hori'
+       run_desc['namelists']['namelist_cfg'][6]='namelist.dynamics.hori'
     salishsea_cmd.api.run_in_subprocess(
         run_id,
         run_desc,
@@ -44,7 +44,7 @@ def do_run(run_id, vertical, run_desc):
 def base_run_description():
     # Relative paths from SS-run-sets/SalishSea/nancy/
     run_desc = salishsea_cmd.api.run_description(
-        walltime='23:00:00',
+        walltime='20:00:00',
         NEMO_code='/home/nksoonti/MEOPAR/NEMO-3.6-code/',
         forcing_path='/home/nksoonti/MEOPAR/NEMO-forcing/',
         XIOS_code='/home/nksoonti/MEOPAR/XIOS/',
