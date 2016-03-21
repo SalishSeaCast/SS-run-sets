@@ -26,14 +26,24 @@ def do_run(run_id, vertical, run_desc):
     run_desc['namelists']['namelist_cfg'][7]=vertical
     if run_id == 'nowinds':
        run_desc['namelists']['namelist_cfg'][2]='namelist.surface.nowinds'
-    elif run_id == 'new_bcs':
+    else:
+        run_desc['namelists']['namelist_cfg'][2]='namelist.surface'
+    if run_id == 'new_bcs':
        run_desc['namelists']['namelist_cfg'][3]='namelist.lateral.newBCs'
-    elif run_id == 'holl':
+    else:
+       run_desc['namelists']['namelist_cfg'][3]='namelist.lateral'
+    if run_id == 'holl':
        run_desc['namelists']['namelist_cfg'][6]='namelist.dynamics.holl'
-    elif run_id == 'horizontal':
+    else:
+       run_desc['namelists']['namelist_cfg'][6]='namelist.dynamics'
+    if run_id == 'horizontal':
        run_desc['namelists']['namelist_cfg'][5]='namelist.tracers.hori'
        run_desc['namelists']['namelist_cfg'][6]='namelist.dynamics.hori'
-    salishsea_cmd.api.run_in_subprocess(
+    else:
+       run_desc['namelists']['namelist_cfg'][5]='namelist.tracers'
+       run_desc['namelists']['namelist_cfg'][6]='namelist.dynamics'
+    
+salishsea_cmd.api.run_in_subprocess(
         run_id,
         run_desc,
         'iodef.xml',
