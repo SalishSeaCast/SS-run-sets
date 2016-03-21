@@ -43,7 +43,7 @@ def do_run(run_id, vertical, run_desc):
        run_desc['namelists']['namelist_cfg'][5]='namelist.tracers'
        run_desc['namelists']['namelist_cfg'][6]='namelist.dynamics'
     
-salishsea_cmd.api.run_in_subprocess(
+    salishsea_cmd.api.run_in_subprocess(
         run_id,
         run_desc,
         'iodef.xml',
