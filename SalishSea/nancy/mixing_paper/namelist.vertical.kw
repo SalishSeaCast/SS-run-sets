@@ -36,7 +36,7 @@
    rn_emin       = 1.e-7   !  minimum value of e   [m2/s2]
    rn_epsmin     = 1.e-12  !  minimum value of eps [m2/s3]
    ln_length_lim = .true.  !  limit on the dissipation rate under stable stratification (Galperin et al., 1988)
-   rn_clim_galp  = 0.53   !  galperin limit
+   rn_clim_galp  = 0.267   !  galperin limit
    ln_sigpsi     = .true.  !  Activate or not Burchard 2001 mods on psi schmidt number in the wb case
    rn_crban      = 100.    !  Craig and Banner 1994 constant for wb tke flux
    rn_charn      = 70000.  !  Charnock constant for wb induced roughness length
