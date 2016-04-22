@@ -45,40 +45,7 @@
       <file_group id="4h" output_freq="4h"  output_level="10" enabled=".FALSE."/> <!-- 4h files -->
       <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."/> <!-- 6h files -->
 
-      <file_group id="1d" output_freq="1d"  output_level="10" enabled=".TRUE."> <!-- 1d files -->
-    	<file id="file6" name_suffix="_grid_T" description="ocean T grid variables" >
-          <field field_ref="ssh" name="sossheig"/>
-          <field field_ref="toce" name="votemper"/>
-          <field field_ref="soce" name="vosaline"/>
-          <field field_ref="bn2"  name="buoy_n2"/>
-          <field field_ref="mldr10_1" name="mixed_depth"/>
-        </file>
-    	<file id="file7" name_suffix="_grid_U" description="ocean U grid variables" >
-          <field field_ref="uoce"         name="vozocrtx"  />
-        </file>
-	    <file id="file8" name_suffix="_grid_V" description="ocean V grid variables" >
-          <field field_ref="voce"         name="vomecrty"  />
-        </file>
-	    <file id="file9" name_suffix="_grid_W" description="ocean W grid variables" >
-          <field field_ref="woce"         name="vovecrtz" />
-          <field field_ref="avt"          name="vert_eddy_diff" />
-          <field field_ref="avm"          name="vert_eddy_visc" />
-          <field field_ref="eps" name="dissipation"/>
-        </file>
-        <file id="file10" name_suffix="_ptrc_T" description="sog variables" >
-          <field field_ref="NO3"      />
-          <field field_ref="NH4"      />
-          <field field_ref="Si"       />
-          <field field_ref="PHY2"     />
-          <field field_ref="PHY"      />
-          <field field_ref="MYRI"     />
-          <field field_ref="MICZ"     />
-          <field field_ref="DOC"      />
-          <field field_ref="POC"      />
-          <field field_ref="bSi"      />
-          <field field_ref="O2"       />
-        </file>
-      </file_group>
+      <file_group id="1d" output_freq="1d"  output_level="10" enabled=".TRUE."/> <!-- 1d files -->
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
       <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE."/>  <!-- 5d files -->
 
