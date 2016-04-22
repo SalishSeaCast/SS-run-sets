@@ -77,8 +77,7 @@
 &namtra_qsr    !   penetrative solar radiation
 !-----------------------------------------------------------------------
    ln_qsr_rgb  = .false.  !  RGB (Red-Green-Blue) light penetration
-   ln_qsr_2bd  = .false.   !  2 bands              light penetration
-   ln_qsr_bio  = .true.   !  bio-model light penetration
+   ln_qsr_2bd  = .true.   !  2 bands              light penetration
    nn_chldta   = 0        !  RGB : Chl data (=1) or cst value (=0)
 &end
 
@@ -87,7 +86,7 @@
 !-----------------------------------------------------------------------
 !             !  file name         ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
 !             !                    !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
-  sn_rnf      = 'rivers_month_extended',       -1,      'rorunoff',  .true.,       .true,   'yearly,    '',        ''
+  sn_rnf      = 'rivers_month_extended',       -1,      'rorunoff',  .true.,       .true,   'yearly',    '',        ''
   sn_cnf      = 'runoff_1m_nomask',    0,               'socoefr0',  .false.,      .true.,  'yearly',   '',        ''
   sn_s_rnf    = '',                   24,               'rosaline',  .false.,      .true.,  'yearly',   '',        ''
   sn_t_rnf    = 'rivers_month_extended',       -1,      'rotemper',  .true.,       .true.,  'yearly',   '',        ''
