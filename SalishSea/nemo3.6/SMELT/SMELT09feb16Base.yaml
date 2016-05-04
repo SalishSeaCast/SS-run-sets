@@ -14,20 +14,20 @@ config_name: SOG
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 1x2
+MPI decomposition: 8x18
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: SMELT08feb16Base
-walltime: 30:00:00
+walltime: 4:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
 paths:
   # If relative, paths are taken from current directory
-  NEMO-code: /ocean/sallen/allen/research/MEOPAR/nemo-3.6-code/
-  XIOS: /ocean/sallen/allen/research/MEOPAR/XIOS/
-  forcing: /ocean/sallen/allen/research/MEOPAR/NEMO-forcing/
-  runs directory: /data/sallen/MEOPAR/SalishSea/
+  NEMO-code: /home/sallen/MEOPAR/nemo-3.6-code/
+  XIOS: /home/sallen/MEOPAR/XIOS/
+  forcing: /home/sallen/MEOPAR/NEMO-forcing/
+  runs directory: /home/sallen/MEOPAR/SalishSea/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -38,7 +38,7 @@ grid:
 forcing:
   # If relative, paths are taken from forcing path above
   NEMO-atmos:
-    link to: /results/forcing/atmospheric/GEM2.5/operational/
+    link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos/
     check link:
       type: atmospheric
       namelist filename: namelist_cfg
@@ -47,7 +47,7 @@ forcing:
   rivers:
     link to: rivers/
   restart.nc:
-    link to: /results/SalishSea/nowcast-green/08feb16/SalishSea_00007200_restart.nc
+    link to: /home/sallen/MEOPAR/SalishSea/nowcast-green/SalishSea_00007200_restart.nc
   initial_green:
     link to: initial_green/
 
@@ -71,13 +71,13 @@ namelists:
     - ../namelist.vertical
     - ../namelist.compute
   namelist_top_cfg:
-    -  /ocean/sallen/allen/research/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_top_cfg_BioICv1
+    -  /home/sallen/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_top_cfg_BioICv1
   namelist_pisces_cfg:
-    -  /ocean/sallen/allen/research/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_pisces_cfg
+    -  /home/sallen/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_pisces_cfg
 
 output:
   # If relative, paths are taken from current directory
-  domain: /ocean/sallen/allen/research/MEOPAR/SS-run-sets/SS-SMELT/iofiles/domain_def.xml
-  fields: /ocean/sallen/allen/research/MEOPAR/SS-run-sets/SS-SMELT/iofiles/field_def.xml
+  domain: /home/sallen/MEOPAR/SS-run-sets/SS-SMELT/iofiles/domain_def.xml
+  fields: /home/sallen/MEOPAR/SS-run-sets/SS-SMELT/iofiles/field_def.xml
   separate XIOS server: True
   XIOS servers: 1
