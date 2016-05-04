@@ -27,15 +27,16 @@ paths:
   NEMO-code: /data/jpetrie/MEOPAR/NEMO-3.6-code/
   XIOS: /data/jpetrie/MEOPAR/XIOS/
   forcing: /data/jpetrie/MEOPAR/NEMO-forcing/
-  runs directory: /data/jpetrie/MEOPAR/SalishSea/results
+  runs directory: /data/jpetrie/MEOPAR/SalishSea/results/
 
 grid:
   coordinates: coordinates_seagrid_SalishSea.nc  
   bathymetry: bathy_downonegrid.nc
+
 forcing:
   # If relative, paths are taken from forcing path above
   NEMO-atmos:
-    link to: /ocean/sallen/allen/research/MEOPAR/Operational/
+    link to: atmospheric/
     check link:
       type: atmospheric
       namelist filename: namelist_cfg
