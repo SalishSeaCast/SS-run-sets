@@ -30,10 +30,8 @@ paths:
   runs directory: /data/jpetrie/MEOPAR/SalishSea/results
 
 grid:
-  # If relative, paths are taken from the grid/ directory in the forcing
-  # path above
-  
-
+  coordinates: coordinates_seagrid_SalishSea.nc  
+  bathymetry: bathy_downonegrid.nc
 forcing:
   # If relative, paths are taken from forcing path above
   NEMO-atmos:
