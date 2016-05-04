@@ -51,17 +51,17 @@
 !
 !                !  file name               ! frequency (hours) ! variable   ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !                !                          !  (if <0  months)  !   name     !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
-   sn_trcdta(1)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'NO3'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(2)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'NH4'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(3)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'Si'      ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(4)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'PHY2'    ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(5)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'PHY'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(6)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'MYRI'    ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(7)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'MICZ'    ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(8)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'DON'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(9)  = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'PON'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(10) = 'data_nutsPhy_SOG.nc'    ,        -12        ,  'bSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   cn_dir        =  './'      !  root directory for the location of the data files
+   sn_trcdta(1)  = 'nutsPhy_5x5_NewDataBasedICs.nc'    ,        -12        ,  'NO3'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(2)  = 'nutsPhy_5x5_NewDataBasedICs.nc'    ,        -12        ,  'NH4'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(3)  = 'nutsPhy_5x5_NewDataBasedICs.nc'    ,        -12        ,  'Si'      ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(4)  = 'nutsPhy_5x5_NewDataBasedICs.nc'    ,        -12        ,  'PHY2'    ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(5)  = 'nutsPhy_5x5_NewDataBasedICs.nc'    ,        -12        ,  'PHY'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(6)  = 'nutsPhy_5x5_NewDataBasedICs.nc'    ,        -12        ,  'MYRI'    ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(7)  = 'nutsPhy_5x5_NewDataBasedICs.nc'    ,        -12        ,  'MICZ'    ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(8)  = 'nutsPhy_5x5_NewDataBasedICs.nc'    ,        -12        ,  'DON'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(9)  = 'nutsPhy_5x5_NewDataBasedICs.nc'    ,        -12        ,  'PON'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(10) = 'nutsPhy_5x5_NewDataBasedICs.nc'    ,        -12        ,  'bSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   cn_dir        =  './initial_green/'      !  root directory for the location of the data files
    rn_trfac(1)   =  1.0  !  -      -      -     -
    rn_trfac(2)   =  1.0  !  -      -      -     -
    rn_trfac(3)   =  1.0  !  multiplicative factor

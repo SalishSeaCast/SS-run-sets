@@ -190,10 +190,10 @@
 !-----------------------------------------------------------------------
 !          !  file name     !frequency (hours)! variable ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !          !                ! (if <0  months) !   name   !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
-   sn_tem  = 'ic_SS5x5'     ,       -12       ,'votemper',    .false.   , .true. , 'yearly'   , ''       ,   ''    ,    ''
-   sn_sal  = 'ic_SS5x5'     ,       -12       ,'vosaline',    .false.   , .true. , 'yearly'   , ''       ,   ''    ,    ''
+   sn_tem  = 'TS_08feb16_5x5'     ,       -12       ,'votemper',    .false.   , .true. , 'yearly'   , ''       ,   ''    ,    ''
+   sn_sal  = 'TS_08feb16_5x5'     ,       -12       ,'vosaline',    .false.   , .true. , 'yearly'   , ''       ,   ''    ,    ''
    !
-   cn_dir        = './initial_conditions/'     !  root directory for the location of the runoff files
+   cn_dir        = './initial_strat/'     !  root directory for the location of the runoff files
    ln_tsd_init   = .true.   !  Initialisation of ocean T & S with T &S input data (T) or not (F)
    ln_tsd_tradmp = .false.  !  damping of ocean T & S toward T &S input data (T) or not (F)
 /
