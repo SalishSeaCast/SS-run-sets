@@ -76,13 +76,6 @@
 !-----------------------------------------------------------------------
 &namtrc_adv    !   advection scheme for passive tracer 
 !-----------------------------------------------------------------------
-   ln_trcadv_cen2    =  .false.  !  2nd order centered scheme   
-   ln_trcadv_tvd     =  .false.  !  TVD scheme
-   ln_trcadv_muscl   =  .true.   !  MUSCL scheme
-   ln_trcadv_muscl2  =  .false.  !  MUSCL2 scheme + cen2 at boundaries
-   ln_trcadv_ubs     =  .false.  !  UBS scheme
-   ln_trcadv_qck     =  .false.  !  QUICKEST scheme
-   ln_trcadv_msc_ups =  .false.  !  use upstream scheme within muscl
 /
 !-----------------------------------------------------------------------
 &namtrc_ldf    !   lateral diffusion scheme for passive tracer 
