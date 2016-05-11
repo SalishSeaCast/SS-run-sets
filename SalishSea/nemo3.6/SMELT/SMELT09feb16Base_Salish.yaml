@@ -14,7 +14,7 @@ config_name: SOG
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 1x2
+MPI decomposition: 1x1
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: SMELT08feb16Base
@@ -61,7 +61,7 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - namelist.time
+    - namelist.time.sstep
     - ../namelist.domain
     - ../nowcast/namelist.surface
     - ../namelist.lateral
