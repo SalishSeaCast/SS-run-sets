@@ -27,7 +27,7 @@ paths:
   NEMO-code: /home/eolson/MEOPAR/NEMO-3.6-code/
   XIOS: /home/eolson/MEOPAR/XIOS/
   forcing: /home/eolson/MEOPAR/NEMO-forcing/
-  runs directory: /home/eolson/MEOPAR/NewRuns/SMELT08feb16Base/
+  runs directory: /global/scratch/eolson/ 
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
