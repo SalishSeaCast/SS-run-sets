@@ -17,8 +17,8 @@ config_name: SOG
 MPI decomposition: 8x18
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: SMELT160209NoRivICv2
-walltime: 20:00:00
+run_id: SMELT160209Base_20
+walltime: 00:05:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eos.ubc.ca
 
@@ -61,16 +61,16 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/NoRiv8x18/namelist_cfg_20160209_10d
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_cfg_20160209_8x18_test
   namelist_top_cfg:
     - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_top_cfg_BioICv2
   namelist_pisces_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_pisces_cfg_NoRiv
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_pisces_cfg
 
 output:
   # If relative, paths are taken from current directory
   domain: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/domain_def.xml
   fields: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/field_def.xml
-  files: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/iodef_bio_1d.xml
+  files: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/iodef_bio_1hr.xml
   separate XIOS server: True
   XIOS servers: 1
