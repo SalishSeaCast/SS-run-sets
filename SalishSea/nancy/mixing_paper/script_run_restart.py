@@ -38,7 +38,7 @@ def base_run_description(run_id):
         forcing={'NEMO-atmos': {'link to': '/home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos/'},
                  'rivers': {'link to': '/home/nksoonti/MEOPAR/rivers/'},
                  'open_boundaries': {'link to': 'open_boundaries'},
-                 'initial_strat': {'link to': os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/mixing_paper', run_id, 'SalishSea_00086400_restart.nc')},
+                 'restart.nc': {'link to': os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/mixing_paper', run_id, 'SalishSea_00086400_restart.nc')},
                  },
         )
     run_desc['email'] = 'nsoontie@eos.ubc.ca'
