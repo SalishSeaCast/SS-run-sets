@@ -71,7 +71,7 @@
 
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide          = 'open_boundaries/west/tides/SalishSea2_TS13_west_tide_'
+   filtide          = 'open_boundaries/west/tides/SalishSea2_N36_D_west_tide_'
    ln_bdytide_2ddta = .false.
    ln_bdytide_conj  = .false.
 &end
@@ -104,7 +104,7 @@
 
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide          = 'open_boundaries/north/tides/SalishSea2_TS13_North_tide_'
+   filtide          = 'open_boundaries/north/tides/SalishSea2_N36_D_North_tide_'
    ln_bdytide_2ddta = .false.
    ln_bdytide_conj  = .false.
 &end
