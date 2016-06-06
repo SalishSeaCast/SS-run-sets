@@ -18,26 +18,7 @@ def main():
 
 def do_run(run_id, dynamic, run_desc):
     run_desc['run_id'] = run_id
-    run_desc['namelists']['namelist_cfg'][6]=dynamic
-    if run_id == 'nowinds':
-       run_desc['namelists']['namelist_cfg'][2]='namelist.surface.nowinds'
-    else:
-        run_desc['namelists']['namelist_cfg'][2]='namelist.surface'
-    if run_id == 'new_bcs':
-       run_desc['namelists']['namelist_cfg'][3]='namelist.lateral.newBCs'
-    else:
-       run_desc['namelists']['namelist_cfg'][3]='namelist.lateral'
-    if run_id == 'holl':
-       run_desc['namelists']['namelist_cfg'][6]='namelist.dynamics.holl'
-    else:
-       run_desc['namelists']['namelist_cfg'][6]='namelist.dynamics'
-    if run_id == 'horizontal':
-       run_desc['namelists']['namelist_cfg'][5]='namelist.tracers.hori'
-       run_desc['namelists']['namelist_cfg'][6]='namelist.dynamics.hori'
-    else:
-       run_desc['namelists']['namelist_cfg'][5]='namelist.tracers'
-       run_desc['namelists']['namelist_cfg'][6]='namelist.dynamics'
-    
+    run_desc['namelists']['namelist_cfg'][6]=dynamic    
     salishsea_cmd.api.run_in_subprocess(
         run_id,
         run_desc,
