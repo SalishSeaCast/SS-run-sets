@@ -25,7 +25,7 @@
    ln_dynvor_ens = .false. !  energy conserving scheme
    ln_dynvor_mix = .false. !  mixed scheme
    ln_dynvor_een = .false. !  energy & enstrophy scheme
-   ln_dynvor_een_old = .flase. !  energy & enstrophy scheme - original formulation
+   ln_dynvor_een_old = .false. !  energy & enstrophy scheme - original formulation
 /
 
 !-----------------------------------------------------------------------
