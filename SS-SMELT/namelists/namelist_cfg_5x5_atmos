@@ -13,7 +13,7 @@
    nn_no       =       0   !  job number (no more used...)
    cn_exp      =  "SS5x5"  !  experience name
    nn_it000    =       1   !  first time step
-   nn_itend    =  194400   !  last  time step (std 2160=1 day with rn_rdt=40.)
+   nn_itend    =     500   !194400   !  last  time step (std 2160=1 day with rn_rdt=40.)
    nn_date0    =  20150201 !  date at nit_0000 (format yyyymmdd) used if ln_rstart=F or (ln_rstart=T and nn_rstctl=0 or 1)
    nn_leapy    =       1   !  Leap year calendar (1) or not (0)
    ln_rstart   = .false.   !  start from rest (F) or from a restart file (T)
