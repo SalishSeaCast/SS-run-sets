@@ -61,7 +61,7 @@ namelists:
 output:
   # If relative, paths are taken from current directory
   domain: /data/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/domain_def.xml
-  fields: /data/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/field_def.xml
-  files: /data/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/iodef_bio_1ts.xml
+  fields: /data/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/field_def_MESZ.xml
+  files: /data/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/iodef_bio_1ts_MESZ.xml
   separate XIOS server: True
   XIOS servers: 1
