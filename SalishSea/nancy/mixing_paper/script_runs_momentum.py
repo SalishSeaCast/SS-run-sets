@@ -9,9 +9,8 @@ import salishsea_cmd.api
 
 def main():
     run_desc = base_run_description()
-    run_ids = ['enst', 'ubs']
-    dynamics = ['namelist.dynamics.enst', 'namelist.dynamics.ubs',
-               ]  
+    run_ids = ['enst', 'ubs',]
+    dynamics = ['namelist.dynamics.enst','namelist.dynamics.ubs',]  
     for run_id, dynamic in zip(run_ids,dynamics):
         do_run(run_id, dynamic, run_desc)
 
@@ -30,7 +29,7 @@ def do_run(run_id, dynamic, run_desc):
 def base_run_description():
     # Relative paths from SS-run-sets/SalishSea/nancy/
     run_desc = salishsea_cmd.api.run_description(
-        walltime='20:00:00',
+        walltime='23:00:00',
         NEMO_code='/home/nksoonti/MEOPAR/NEMO-3.6-code/',
         forcing_path='/home/nksoonti/MEOPAR/NEMO-forcing/',
         XIOS_code='/home/nksoonti/MEOPAR/XIOS/',
@@ -40,12 +39,13 @@ def base_run_description():
                  'open_boundaries': {'link to': 'open_boundaries'},
                  'initial_strat': {'link to': '/home/nksoonti/MEOPAR/spin-up/30jun9jul/'},
                  },
+         mpi_decomposition='12x27',
         )
     run_desc['email'] = 'nsoontie@eos.ubc.ca'
     # Relative paths to namelist section files
     run_desc['namelists']['namelist_cfg'] = [
-        'namelist.time.9jul18aug',
-        'namelist.domain.9jul',
+        'namelist.time.9jul18aug.10s',
+        'namelist.domain.9jul.10s',
         'namelist.surface',
         'namelist.lateral',
         'namelist.bottom',
