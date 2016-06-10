@@ -216,7 +216,7 @@
 &nampisrem     !   parameters for remineralization
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    zz_remin_NH     =  4.0e-7
-   zz_remin_D_DON  =  2.3e-6
+   zz_remin_D_DON  =  2.3e-7 ! should be -6
    zz_remin_D_PON  =  2.3e-6
    zz_remin_D_bSi  =  3.24e-6
 /
