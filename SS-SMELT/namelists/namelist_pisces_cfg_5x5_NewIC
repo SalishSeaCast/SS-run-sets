@@ -128,21 +128,18 @@
    zz_frac_waste_FNM_PON   = 0.475     ! waste fraction from pico-phyto natural mortality to PON
    zz_frac_waste_FNM_Ref   = 0.05      ! waste fraction from pico-phyto natural mort to refractory
    zz_frac_waste_FNM_Bsi   = 1.0       ! waste fraction from pico-phyto natural mortality to bSi
-   zz_rate_pico_Si_ratio   = 0.0       ! pico-phyto silicon/nitrogen ratio
    zz_rate_myri_Rm         = 0.270E-05 ! pico-phyto natural mortality
    zz_frac_waste_NNM_NH    = 0.0       ! waste fraction from pico-phyto natural mortality to NH
    zz_frac_waste_NNM_DON   = 0.475     ! waste fraction from pico-phyto natural mortality to DON
    zz_frac_waste_NNM_PON   = 0.475     ! waste fraction from pico-phyto natural mortality to PON
    zz_frac_waste_NNM_Ref   = 0.05      ! waste fraction from pico-phyto natural mort to refractory
    zz_frac_waste_NNM_Bsi   = 1.0       ! waste fraction from pico-phyto natural mortality to bSi
-   zz_rate_myri_Si_ratio   = 0.0       ! pico-phyto silicon/nitrogen ratio
    zz_rate_micro_Rm        = 0.265E-05 ! micro-phyto natural mortality
    zz_frac_waste_DNM_NH    = 0.        ! waste fraction from micro-phyto natural mortality to NH
    zz_frac_waste_DNM_DON   = 0.475     ! waste fraction from micro-phyto natural mortality to DON
    zz_frac_waste_DNM_PON   = 0.475     ! waste fraction from micro-phyto natural mortality to PON
    zz_frac_waste_DNM_Ref   = 0.05      ! waste fraction from micro-phyto natural mort to refractory
    zz_frac_waste_DNM_Bsi   = 1.        ! waste fraction from micro-phyto natural mortality to bSi
-   zz_rate_micro_Si_ratio  = 2.        ! micro-phyto silicon/nitrogen ratio
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampismes     !   parameters for mesozooplankton
