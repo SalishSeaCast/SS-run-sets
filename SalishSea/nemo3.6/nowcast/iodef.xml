@@ -51,6 +51,7 @@
           <field field_ref="POC"      />
           <field field_ref="bSi"      />
           <field field_ref="O2"       />
+          <field field_ref="MESZ"     />
         </file>
      </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" enabled=".TRUE."/> <!-- 2h files -->
@@ -90,6 +91,7 @@
           <field field_ref="POC"      />
           <field field_ref="bSi"      />
           <field field_ref="O2"       />
+          <field field_ref="MESZ"     />
         </file>
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
