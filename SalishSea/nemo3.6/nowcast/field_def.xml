@@ -739,6 +739,8 @@
       <!-- ptrc on T grid -->
 
      <field_group id="ptrc_T" grid_ref="grid_T_3D">
+       <field id="MESZ"         long_name="Mesozooplankton Concentration"            unit="mmol/m3" />
+       <field id="MESZ_E3T"     long_name="MESZ * E3T"                               unit="mmol/m2"  > MESZ * e3t </field >
        <field id="O2"           long_name="Oxygen Concentration"                     unit="mmol/m3" />
        <field id="O2_E3T"       long_name="O2 * E3T"                                 unit="mmol/m2"  > O2 * e3t </field >
        <field id="POC"          long_name="Small organic carbon Concentration"       unit="mmol/m3" />
