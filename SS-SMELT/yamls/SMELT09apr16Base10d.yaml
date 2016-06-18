@@ -17,7 +17,7 @@ config_name: SOG
 MPI decomposition: 8x18
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: SMELT160310NRICv2
+run_id: SMELT160409BaseICv2
 walltime: 20:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eos.ubc.ca
@@ -47,9 +47,9 @@ forcing:
   rivers:
     link to: rivers/
   restart.nc:
-    link to: /home/eolson/MEOPAR/NewRuns/SMELTNoRiv20160301/SalishSea_00072000_restart.nc
+    link to: /home/eolson/MEOPAR/NewRuns/SMELTBase20160330/SalishSea_00136800_restart.nc
   restart_trc.nc:
-    link to: /home/eolson/MEOPAR/NewRuns/SMELTNoRiv20160301/SalishSea_00072000_restart_trc.nc
+    link to: /home/eolson/MEOPAR/NewRuns/SMELTBase20160330/SalishSea_00136700_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -61,11 +61,11 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/NoRiv8x18/namelist_cfg_20160310_10d
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/base8x18/namelist_cfg_20160409_10d
   namelist_top_cfg:
     - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_top_cfg_rst
   namelist_pisces_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_pisces_cfg_NoRiv
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_pisces_cfg
 
 output:
   # If relative, paths are taken from current directory
