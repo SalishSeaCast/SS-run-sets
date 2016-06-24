@@ -56,8 +56,8 @@
    ln_dynldf_bilap  =  .false.  !  bilaplacian operator
    !                            !  Direction of action  :
    ln_dynldf_level  =  .false.  !  iso-level
-   ln_dynldf_hor    =  .false.  !  horizontal (geopotential)   (require "key_ldfslp" in s-coord.)
-   ln_dynldf_iso    =  .true.   !  iso-neutral                 (require "key_ldfslp")
+   ln_dynldf_hor    =  .true.  !  horizontal (geopotential)   (require "key_ldfslp" in s-coord.)
+   ln_dynldf_iso    =  .false.   !  iso-neutral                 (require "key_ldfslp")
    !                            !  Coefficient
    rn_ahm_0_lap     =   10      !  horizontal laplacian eddy viscosity   [m2/s]
    rn_ahmb_0        =     0.    !  background eddy viscosity for ldf_iso [m2/s]
