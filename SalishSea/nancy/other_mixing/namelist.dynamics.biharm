@@ -61,7 +61,7 @@
    !                            !  Coefficient
    rn_ahm_0_lap     =   1      !  horizontal laplacian eddy viscosity   [m2/s]
    rn_ahmb_0        =     0.    !  background eddy viscosity for ldf_iso [m2/s]
-   rn_ahm_0_blp     =  -5000  !  horizontal bilaplacian eddy viscosity [m4/s]
+   rn_ahm_0_blp     =  -1.e6  !  horizontal bilaplacian eddy viscosity [m4/s]
    rn_cmsmag_1      =     3.    !  constant in laplacian Smagorinsky viscosity
    rn_cmsmag_2      =     3     !  constant in bilaplacian Smagorinsky viscosity
    rn_cmsh          =     1.    !  1 or 0 , if 0 -use only shear for Smagorinsky viscosity
