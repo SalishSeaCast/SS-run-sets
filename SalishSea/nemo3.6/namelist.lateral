@@ -35,12 +35,16 @@
                                            !  = 1, bdy data are read in 'bdydata   .nc' files
                                            !  = 2, use tidal harmonic forcing data from files
                                            !  = 3, use external data AND tidal harmonic forcing
-    cn_dyn3d      =  'none', 'none'
+    cn_dyn3d      =  'orlanski', 'orlanski'
     nn_dyn3d_dta  =  0, 0                  !  = 0, bdy data are equal to the initial state
                                            !  = 1, bdy data are read in 'bdydata   .nc' files
     cn_tra        =  'frs','frs'           !
     nn_tra_dta    =  1, 1                  !  = 0, bdy data are equal to the initial state
                                            !  = 1, bdy data are read in 'bdydata   .nc' files
+    ln_tra_dmp    =.false., .false.        !  open boudaries conditions for tracers
+    ln_dyn3d_dmp  =.false., .false.        !  open boundary condition for baroclinic velocities
+    rn_time_dmp   =  1., 1.                ! Damping time scale in days (nudging on orlanski inflow)
+    rn_time_dmp_out =  1., 1.              ! Outflow damping time scale (nudging on orlanski outflow)
     nn_rimwidth   = 10, 10
 &end
 
