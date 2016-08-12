@@ -9,7 +9,7 @@ import salishsea_cmd.api
 
 def main():
     run_desc = base_run_description()
-    run_ids = ['smag_hori',]
+    run_ids = ['holl_biharm',]
     for run_id in run_ids:
         do_run(run_id, run_desc)
 
@@ -46,8 +46,8 @@ def base_run_description():
         'namelist.surface',
         'namelist.lateral',
         'namelist.bottom',
-        'namelist.tracers.smag',
-        'namelist.dynamics.smag',
+        'namelist.tracers.biharm',
+        'namelist.dynamics.biharm_holl',
         'namelist.vertical',
         'namelist.compute',
         ]
