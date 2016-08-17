@@ -1,4 +1,0 @@
-export PAGER=less
-export LESS=-r
-export EDITOR=emacs
-export VISUAL=emacs
