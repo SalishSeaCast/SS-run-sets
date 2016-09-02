@@ -77,6 +77,7 @@ namelists:
 
 output:
   # If relative, paths are taken from current directory
+  files: iodef_Salish.xml
   domain: /ocean/sallen/allen/research/MEOPAR/SS-run-sets/SS-SMELT/iofiles/domain_def.xml
   fields: /ocean/sallen/allen/research/MEOPAR/SS-run-sets/SS-SMELT/iofiles/field_def.xml
   separate XIOS server: True
