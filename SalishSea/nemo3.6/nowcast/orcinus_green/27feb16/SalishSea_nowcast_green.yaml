@@ -1,0 +1,83 @@
+# salishsea command processor run description example for NEMO-3.6
+#
+# Salish Sea Deepened Long River Domain (down by one) with:
+#     Tidal forcing
+#     Salinity and Temperate at Both open boundaries
+#  Rivers run-off forcing
+#  Atmospheric forcing with operational GEM2.5 model products
+#    Constrained to no solid precipitation
+#  SOG biological model
+
+config_name: SOG
+
+# How is the domain to be distributed over the processors in the
+# i (longitude) and j (latitude) directions?
+# These values are used to set the nammpp namelist jpni & jpnj values
+# and to set the number of processors and nodes in the PBS script
+MPI decomposition: 8x18
+
+# For runs on systems that use qsub/PBS/TORQUE
+run_id: nowcast-green-27feb16
+walltime: 3:00:00
+# If missing, email address is set to ${USER}@eos.ubc.ca
+email: sallen@eos.ubc.ca
+
+paths:
+  # If relative, paths are taken from current directory
+  NEMO-code: /home/sallen/MEOPAR/nemo-3.6-code/
+  XIOS: /home/sallen/MEOPAR/XIOS/
+  forcing: /home/sallen/MEOPAR/NEMO-forcing/
+  runs directory: /home/sallen/MEOPAR/SalishSea/
+
+grid:
+  # If relative, paths are taken from the grid/ directory in the forcing
+  # path above
+  coordinates: coordinates_seagrid_SalishSea.nc
+  bathymetry: bathy_downonegrid.nc
+
+forcing:
+  # If relative, paths are taken from forcing path above
+  NEMO-atmos:
+    link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos
+    check link:
+      type: atmospheric
+      namelist filename: namelist_cfg
+  open_boundaries:
+    link to: open_boundaries
+  rivers:
+    link to: /home/sallen/MEOPAR/rivers
+  restart.nc:
+    link to: /home/sallen/MEOPAR/SalishSea/nowcast-green/26feb16/SalishSea_00046080_restart.nc
+  restart_trc.nc:
+    link to: /home/sallen/MEOPAR/SalishSea/nowcast-green/26feb16/SalishSea_00046080_restart_trc.nc
+
+namelists:
+  # The namelist section files in the lists below will be concatenated
+  # to create a namelist file whose name is the key under which the files
+  # are listed. The keys are the names of the namelist files that NEMO-3.6
+  # expects.
+  #
+  # The only required key is namelist_cfg.
+  #
+  # If relative, paths are taken from current directory
+  namelist_cfg:
+    - ./namelist.time
+    - ../../namelist.domain
+    - ../../namelist.surface
+    - ../namelist.lateral.N36_D
+    - ../../namelist.bottom
+    - ../../namelist.tracer
+    - ../../namelist.dynamics
+    - ../../namelist.vertical
+    - ../../namelist.compute
+  namelist_top_cfg:
+    - ../namelist_top_cfg
+  namelist_pisces_cfg:
+    - ../namelist_pisces_cfg
+
+output:
+  # If relative, paths are taken from current directory
+  domain: /home/sallen/MEOPAR/SS-run-sets/SalishSea/nemo3.6/domain_def.xml
+  fields: /home/sallen/MEOPAR/SS-run-sets/SalishSea/nemo3.6/nowcast/field_def.xml
+  separate XIOS server: True
+  XIOS servers: 1
