@@ -8,7 +8,7 @@
     <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4">
       <file_group id="1ts" output_freq="1ts"  output_level="10" enabled=".TRUE."/> <!-- 1 time step files -->
       <file_group id="1h" output_freq="1h"  output_level="10" enabled=".TRUE."> <!-- 1h files -->
-    	<file id="file1" name_suffix="_grid_T" description="ocean T grid variables">
+    	<file id="file1" name="grid_T" description="ocean T grid variables">
           <field field_ref="ssh" name="sossheig"/>
         </file>
       </file_group>
