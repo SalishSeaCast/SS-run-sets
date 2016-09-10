@@ -1,10 +1,10 @@
 <!--
 <?xml version="1.0"?>
        -->
- 
+
     <!-- $id$ -->
-    
-    <!-- 
+
+    <!--
 ============================================================================================================
 =                                  definition of all existing variables                                    =
 =                                            DO NOT CHANGE                                                 =
@@ -12,14 +12,14 @@
     -->
    <field_definition level="1" prec="4" operation="average" enabled=".TRUE." default_value="1.e20" > <!-- time step automaticaly defined -->
 
-    <!-- 
+    <!--
 ============================================================================================================
                                   Physical ocean and ice model variables
 ============================================================================================================
     -->
 
       <!-- T grid -->
-      
+
       <field_group id="grid_T" grid_ref="grid_T_2D" >
          <field id="e3t"          long_name="T-cell thickness"   standard_name="cell_thickness"   unit="m"   grid_ref="grid_T_3D"/>
 
@@ -35,14 +35,13 @@
          <field id="sstgrad"      long_name="module of sst gradient"                                                                  unit="degC/m"   />
          <field id="sstgrad2"     long_name="square of module of sst gradient"                                                        unit="degC2/m2" />
          <field id="sbt"          long_name="sea bottom temperature"                                                                  unit="degC"     />
-	 
          <field id="sss"          long_name="sea surface salinity"             standard_name="sea_surface_salinity"   unit="1e-3" />
          <field id="sss2"         long_name="square of sea surface salinity"                                          unit="1e-6"  > sss * sss </field >
          <field id="sssmax"       long_name="max of sea surface salinity"   field_ref="sss"   operation="maximum"                 />
          <field id="sssmin"       long_name="min of sea surface salinity"   field_ref="sss"   operation="minimum"                 />
          <field id="sbs"          long_name="sea bottom salinity"                                                     unit="1e-3" />
 
-         <field id="taubot"       long_name="bottom stress module"                                                    unit="N/m2" /> 
+         <field id="taubot"       long_name="bottom stress module"                                                    unit="N/m2" />
 
          <field id="ssh"          long_name="sea surface height"             standard_name="sea_surface_height_above_geoid"             unit="m" />
          <field id="ssh2"         long_name="square of sea surface height"   standard_name="square_of_sea_surface_height_above_geoid"   unit="m2" > ssh * ssh </field >

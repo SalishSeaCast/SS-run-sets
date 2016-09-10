@@ -1,0 +1,14 @@
+
+   <domain_definition>
+      <domain id="grid_T" long_name="grid T"/>
+
+      <domain id="grid_U" long_name="grid U"/>
+
+      <domain id="grid_V" long_name="grid V"/>
+
+      <domain id="grid_W" long_name="grid W"/>
+
+      <domain id="scalarpoint" long_name="scalar"/>
+
+   </domain_definition>
+
