@@ -9,7 +9,7 @@
       <file_group id="1ts" output_freq="1ts"  output_level="10" enabled=".TRUE."/> <!-- 1 time step files -->
       <file_group id="1h" output_freq="1h"  output_level="10" enabled=".TRUE."> <!-- 1h files -->
     	<file id="file1" name="grid_T" description="ocean T grid variables">
-          <field field_ref="ssh" name="sossheig"/>
+          <field field_ref="ssh_ptak" name="sossheig"/>
         </file>
       </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" enabled=".TRUE."/> <!-- 2h files -->
