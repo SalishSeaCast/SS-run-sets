@@ -3,12 +3,12 @@
       <domain id="grid_T" long_name="grid T"/>
 
        <!-- VENUS -->
-      <domain id="VENUS_east" domain_ref="grid_T"> 
+      <domain id="VENUS_east" domain_ref="grid_T">
          <zoom_domain  zoom_ibegin="284" zoom_jbegin="417" zoom_ni="1" zoom_nj="1" />
-      </domain>   
+      </domain>
       <domain id="VENUS_central"  domain_ref="grid_T">
          <zoom_domain zoom_ibegin="267" zoom_jbegin="425" zoom_ni="1" zoom_nj="1" />
-      </domain>   
+      </domain>
       <domain id="VENUS_east_gridded"  domain_ref="grid_T">
          <zoom_domain  zoom_ibegin="283" zoom_jbegin="416" zoom_ni="2" zoom_nj="2" />
       </domain>

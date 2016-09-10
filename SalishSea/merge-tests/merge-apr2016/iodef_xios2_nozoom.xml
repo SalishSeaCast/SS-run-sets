@@ -71,42 +71,6 @@
      </grid>
      <grid id="scalarpoint" />
 
-<!-- Zoomed grids -->
-
-     <grid id="VENUS_east_grid_T">
-       <domain domain_ref="VENUS_east"/>
-     </grid>
-     <grid id="VENUS_central_grid_T">
-       <domain domain_ref="VENUS_central"/>
-     </grid>
-     <grid id="VENUS_east_gridded_grid_T">
-       <domain domain_ref="VENUS_east_gridded"/>
-     </grid>
-     <grid id="VENUS_central_gridded_grid_T">
-       <domain domain_ref="VENUS_central_gridded"/>
-     </grid>
-     <grid id="VENUS_delta_gridded_grid_T">
-       <domain domain_ref="VENUS_delta_gridded"/>
-     </grid>
-
-     <grid id="CODAR_grid_T">
-       <domain domain_ref="VENUS_CODAR"/>
-     </grid>
-     <grid id="CODAR_grid_T">
-       <domain domain_ref="VENUS_CODAR"/>
-     </grid>
-     <grid id="CODAR_grid_T">
-       <domain domain_ref="VENUS_CODAR"/>
-     </grid>
-     <grid id="CODAR_grid_T">
-       <domain domain_ref="VENUS_CODAR"/>
-     </grid>
-     <grid id="CODAR_grid_T">
-       <domain domain_ref="VENUS_CODAR"/>
-     </grid>
-
-
-
     </grid_definition>
 
   </context>
