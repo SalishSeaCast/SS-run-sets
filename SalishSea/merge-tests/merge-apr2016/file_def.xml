@@ -50,44 +50,28 @@
 
       <file_group id="10min" output_freq="600s" output_level="10" enabled=".TRUE."> <!-- 10 minute files -->
         <file id="PointAtkinson" name="PointAtkinson" description="10min interval SSH for tides">
-          <field_group id="PointAtkinson" domain_ref="PointAtkinson">
-             <field field_ref="ssh" name="sossheig"/>
-          </field_group>
+          <field field_ref="ssh" name="sossheig" grid_ref="PointAtkinson_grid"/>
         </file>
         <file id="Victoria" name="Victoria" description="10min interval SSH for tides">
-          <field_group id="Victoria" domain_ref="Victoria">
-             <field field_ref="ssh" name="sossheig"/>
-          </field_group>
+          <field field_ref="ssh" name="sossheig" grid_ref="Victoria_grid"/>
         </file>
         <file id="CampbellRiver" name="CampbellRiver" description="10min interval SSH for tides">
-          <field_group id="CampbellRiver" domain_ref="CampbellRiver">
-             <field field_ref="ssh" name="sossheig"/>
-          </field_group>
+          <field field_ref="ssh" name="sossheig" grid_ref="CampbellRiver_grid"/>
         </file>
         <file id="Nanaimo" name="Nanaimo" description="10min interval SSH for tides">
-          <field_group id="Nanaimo" domain_ref="Nanaimo">
-            <field field_ref="ssh" name="sossheig"/>
-          </field_group>
+          <field field_ref="ssh" name="sossheig" grid_ref="Nanaimo_grid"/>
         </file>
         <file id="NeahBay" name="NeahBay" description="10min interval SSH for tides">
-          <field_group id="NeahBay" domain_ref="NeahBay">
-            <field field_ref="ssh" name="sossheig"/>
-          </field_group>
+          <field field_ref="ssh" name="sossheig" grid_ref="NeahBay_grid"/>
         </file>
         <file id="CherryPoint" name="CherryPoint" description="10min interval SSH for tides">
-          <field_group id="CherryPoint" domain_ref="CherryPoint">
-            <field field_ref="ssh" name="sossheig"/>
-          </field_group>
+          <field field_ref="ssh" name="sossheig" grid_ref="CherryPoint"/>
         </file>
         <file id="FridayHarbor" name="FridayHarbor" description="10min interval SSH for tides">
-          <field_group id="FridayHarbor" domain_ref="FridayHarbor">
-            <field field_ref="ssh" name="sossheig"/>
-          </field_group>
+          <field field_ref="ssh" name="sossheig" grid_ref="FridayHarbor"/>
         </file>
         <file id="Sandheads" name="Sandheads" description="10min interval SSH for tides">
-          <field_group id="Sandheads" domain_ref="Sandheads">
-             <field field_ref="ssh" name="sossheig"/>
-          </field_group>
+          <field field_ref="ssh" name="sossheig" grid_ref="Sandheads"/>
         </file>
       </file_group>
 
