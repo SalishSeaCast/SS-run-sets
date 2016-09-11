@@ -4,24 +4,24 @@
          <domain id="grid_T" long_name="grid T"/>
 
        <!-- VENUS -->
-         <domain id="VENUS_east" domain_ref="grid_T">
+         <domain id="VENUS_east_T" domain_ref="grid_T">
             <zoom_domain  ibegin="284" jbegin="417" ni="1" nj="1" />
          </domain>
-         <domain id="VENUS_central"  domain_ref="grid_T">
+         <domain id="VENUS_central_T"  domain_ref="grid_T">
             <zoom_domain ibegin="267" jbegin="425" ni="1" nj="1" />
          </domain>
-         <domain id="VENUS_east_gridded"  domain_ref="grid_T">
+         <domain id="VENUS_east_gridded_T"  domain_ref="grid_T">
             <zoom_domain  ibegin="283" jbegin="416" ni="2" nj="2" />
          </domain>
-         <domain id="VENUS_central_gridded"  domain_ref="grid_T">
+         <domain id="VENUS_central_gridded_T"  domain_ref="grid_T">
             <zoom_domain  ibegin="266" jbegin="424" ni="2" nj="2" />
          </domain>
-         <domain id="VENUS_delta_gridded" domain_ref="grid_T">
+         <domain id="VENUS_delta_gridded_T" domain_ref="grid_T">
             <zoom_domain  ibegin="284" jbegin="425" ni="2" nj="2" />
          </domain>
 
        <!-- CODAR (note switch on i and j) -->
-         <domain id="CODAR" domain_ref="grid_T">
+         <domain id="CODAR_T" domain_ref="grid_T">
             <zoom_domain  jbegin="381" ibegin="241" ni="80" nj="80" />
          </domain>
 
@@ -137,24 +137,24 @@
          <domain id="grid_U" long_name="grid U"/>
 
        <!-- VENUS -->
-         <domain id="VENUS_east"  domain_ref="grid_U">
+         <domain id="VENUS_east_U"  domain_ref="grid_U">
             <zoom_domain  ibegin="284" jbegin="417" ni="1" nj="1" />
          </domain>
-         <domain id="VENUS_central"  domain_ref="grid_U">
+         <domain id="VENUS_central_U"  domain_ref="grid_U">
             <zoom_domain  ibegin="267" jbegin="425" ni="1" nj="1" />
          </domain>
-         <domain id="VENUS_east_gridded"  domain_ref="grid_U">
+         <domain id="VENUS_east_gridded_U"  domain_ref="grid_U">
             <zoom_domain  ibegin="283" jbegin="416" ni="2" nj="2" />
          </domain>
-         <domain id="VENUS_central_gridded"  domain_ref="grid_U">
+         <domain id="VENUS_central_gridded_U"  domain_ref="grid_U">
             <zoom_domain  ibegin="266" jbegin="424" ni="2" nj="2" />
          </domain>
-         <domain id="VENUS_delta_gridded" domain_ref="grid_U">
+         <domain id="VENUS_delta_gridded_U" domain_ref="grid_U">
             <zoom_domain  ibegin="284" jbegin="425" ni="2" nj="2" />
          </domain>
 
        <!-- CODAR (note switch on i and j) -->
-         <domain id="CODAR" domain_ref="grid_U">
+         <domain id="CODAR_U" domain_ref="grid_U">
             <zoom_domain  jbegin="381" ibegin="241" ni="80" nj="80" />
          </domain>
       </domain_group>
@@ -163,24 +163,24 @@
          <domain id="grid_V" long_name="grid V"/>
 
        <!-- VENUS -->
-         <domain id="VENUS_east"  domain_ref="grid_V">
+         <domain id="VENUS_east_V"  domain_ref="grid_V">
             <zoom_domain  ibegin="284" jbegin="417" ni="1" nj="1" />
          </domain>
-         <domain id="VENUS_central"  domain_ref="grid_V">
+         <domain id="VENUS_central_V"  domain_ref="grid_V">
             <zoom_domain  ibegin="267" jbegin="425" ni="1" nj="1" />
          </domain>
-         <domain id="VENUS_east_gridded"  domain_ref="grid_V">
+         <domain id="VENUS_east_gridded_V"  domain_ref="grid_V">
             <zoom_domain  ibegin="283" jbegin="416" ni="2" nj="2" />
          </domain>
-         <domain id="VENUS_central_gridded"  domain_ref="grid_V">
+         <domain id="VENUS_central_gridded_V"  domain_ref="grid_V">
             <zoom_domain  ibegin="266" jbegin="424" ni="2" nj="2" />
          </domain>
-         <domain id="VENUS_delta_gridded" domain_ref="grid_V">
+         <domain id="VENUS_delta_gridded_V" domain_ref="grid_V">
             <zoom_domain  ibegin="284" jbegin="425" ni="2" nj="2" />
          </domain>
 
        <!-- CODAR (note switch on i and j) -->
-         <domain id="CODAR" domain_ref="grid_V">
+         <domain id="CODAR_V" domain_ref="grid_V">
             <zoom_domain  jbegin="381" ibegin="241" ni="80" nj="80" />
          </domain>
       </domain_group>
