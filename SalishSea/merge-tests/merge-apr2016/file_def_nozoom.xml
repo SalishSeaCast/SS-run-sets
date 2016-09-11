@@ -7,9 +7,9 @@
     -->
     <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4">
       <file_group id="1ts" output_freq="1ts"  output_level="10" enabled=".TRUE."/> <!-- 1 time step files -->
-      <file_group id="1h" output_freq="1h"  output_level="10" enabled=".TRUE." grid_ref="grid_ptak"> <!-- 1h files -->
+      <file_group id="1h" output_freq="1h"  output_level="10" enabled=".TRUE."> <!-- 1h files -->
     	<file id="file1" name="grid_T" description="ocean T grid variables">
-          <field id="ssh" name="sossheig"/>
+          <field id="ssh_ptak" field_ref="ssh" name="sossheig" grid_ref="grid_ptak"/>
         </file>
       </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" enabled=".TRUE."/> <!-- 2h files -->
