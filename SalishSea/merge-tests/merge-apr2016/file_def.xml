@@ -65,13 +65,13 @@
           <field field_ref="ssh" name="sossheig" grid_ref="NeahBay_grid"/>
         </file>
         <file id="CherryPoint" name="CherryPoint" description="10min interval SSH for tides">
-          <field field_ref="ssh" name="sossheig" grid_ref="CherryPoint"/>
+          <field field_ref="ssh" name="sossheig" grid_ref="CherryPoint_grid"/>
         </file>
         <file id="FridayHarbor" name="FridayHarbor" description="10min interval SSH for tides">
-          <field field_ref="ssh" name="sossheig" grid_ref="FridayHarbor"/>
+          <field field_ref="ssh" name="sossheig" grid_ref="FridayHarbor_grid"/>
         </file>
         <file id="Sandheads" name="Sandheads" description="10min interval SSH for tides">
-          <field field_ref="ssh" name="sossheig" grid_ref="Sandheads"/>
+          <field field_ref="ssh" name="sossheig" grid_ref="Sandheads_grid"/>
         </file>
       </file_group>
 
