@@ -23,13 +23,13 @@ MPI decomposition: 8x18
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: xios2-SalishSea-r6204
-walltime: 0:10:00
+walltime: 4:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
 paths:
   # If relative, paths are taken from current directory
-  NEMO-code: /home/sallen/MEOPAR/NEMO-3.6-rXIOS2/
+  NEMO-code: /home/sallen/MEOPAR/NEMO-3.6-r6204/
   XIOS: /home/sallen/MEOPAR/XIOS_2/
   forcing: /home/sallen/MEOPAR/NEMO-forcing/
   runs directory: /global/scratch/sallen/
@@ -72,7 +72,7 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - namelist.time.short
+    - namelist.time
     - namelist.domain
     - namelist.surface
     - namelist.lateral
