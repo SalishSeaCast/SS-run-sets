@@ -90,7 +90,7 @@
   sn_rnf      = 'RLonFraCElse',       24,               'rorunoff',  .true.,      .false., 'daily',     '',        ''
   sn_cnf      = 'runoff_1m_nomask',    0,               'socoefr0',  .false.,      .true.,  'yearly',   '',        ''
   sn_s_rnf    = '',                   24,               'rosaline',  .false.,      .true.,  'yearly',   '',        ''
-  sn_t_rnf    = 'rivers_month',       -1,               'rotemper',  .true.,      .true.,  'yearly',   '',        ''
+  sn_t_rnf    = 'river_ConsTemp_month', -1,             'rotemper',  .true.,      .true.,  'yearly',   '',        ''
   sn_dep_rnf  = 'rivers_month',       -1,               'rodepth' ,  .true.,       .true.,  'yearly',   '',        ''
 
   cn_dir       = 'rivers/'  !  root directory for the location of the runoff files

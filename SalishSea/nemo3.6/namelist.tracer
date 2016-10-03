@@ -4,7 +4,7 @@
                                  !  =-1, TEOS-10
                                  !  = 0, EOS-80
                                  !  = 1, S-EOS   (simplified eos)
-   ln_useCT    = .false.  ! new use of Conservative Temp. ==> surface CT converted in Pot. Temp. in sbcssm
+   ln_useCT    = .true.  ! new use of Conservative Temp. ==> surface CT converted in Pot. Temp. in sbcssm
 &end
 
 
