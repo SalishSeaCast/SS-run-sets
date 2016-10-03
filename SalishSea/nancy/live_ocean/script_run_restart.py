@@ -24,7 +24,7 @@ def do_run(run_id, run_desc, lateral):
         run_desc,
         'iodef.xml',
         os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/live_ocean',
-                     run_id, 'restart'))
+                     run_id, 'restart2'))
 
 
 def base_run_description(run_id):
@@ -38,7 +38,7 @@ def base_run_description(run_id):
         forcing={'NEMO-atmos': {'link to': '/home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos/'},
                  'rivers': {'link to': '/home/nksoonti/MEOPAR/rivers/'},
                  'open_boundaries': {'link to': 'open_boundaries'},
-                 'restart.nc': {'link to': os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/live_ocean', run_id, 'SalishSea_00080640_restart.nc')},
+                 'restart.nc': {'link to': os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/live_ocean', run_id, 'restart', 'SalishSea_00241920_restart.nc')},
                  },
         )
     run_desc['email'] = 'nsoontie@eos.ubc.ca'
