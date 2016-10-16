@@ -27,7 +27,7 @@
          <domain id="PatosIsland" zoom_jbegin="342" zoom_ibegin="303"  zoom_ni="1" zoom_nj="1" />
          <domain id="TumboChannel" zoom_jbegin="355" zoom_ibegin="284"  zoom_ni="1" zoom_nj="1" />
          <domain id="WhalerBay" zoom_jbegin="386" zoom_ibegin="264"  zoom_ni="1" zoom_nj="1" />
-         <domain id="BoundaryBay" zoom_jbegin='398" zoom_ibegin="336" zoom_ni="1" zoom_nj="1" />
+         <domain id="BoundaryBay" zoom_jbegin="398" zoom_ibegin="336" zoom_ni="1" zoom_nj="1" />
          <domain id="Tsawwassen" zoom_jbegin="394" zoom_ibegin="304"  zoom_ni="1" zoom_nj="1" />
          <domain id="Sandheads" zoom_jbegin="427" zoom_ibegin="294"  zoom_ni="1" zoom_nj="1" />
          <domain id="PointGrey" zoom_jbegin="454" zoom_ibegin="317"  zoom_ni="1" zoom_nj="1" />
