@@ -81,6 +81,49 @@
       <file_group id="10y" output_freq="10y" output_level="10" enabled=".TRUE."/> <!-- real 10y files -->
 
       <file_group id="10min" output_freq="600s" output_level="10" enabled=".TRUE."> <!-- 10 minute files -->
+        <file id="VENUS_central" name="VENUS_central"  description="VENUS central 10 minutes">
+          <group id="VENUS_central" domain_ref="VENUS_central">
+             <field field_ref="toce" name="votemper"/>
+             <field field_ref="soce" name="vosaline"/>
+             <field field_ref="uoce" name="vozocrtx"/>
+             <field field_ref="voce" name="vomecrty"/>
+          </group>
+	    </file>
+       <file id="VENUS_central_gridded" name="VENUS_central_gridded"  description="VENUS central 10 minutes, 2x2 grid to unstagger velocities ">
+          <group id="VENUS_central_gridded" domain_ref="VENUS_central_gridded">
+             <field field_ref="toce" name="votemper"/>
+             <field field_ref="soce" name="vosaline"/>
+             <field field_ref="uoce" name="vozocrtx"/>
+             <field field_ref="voce" name="vomecrty"/>
+             <field field_ref="woce" name="vovecrtz"/>
+          </group>
+       </file>
+        <file id="VENUS_east" name="VENUS_east"  description="VENUS east 10 minutes">
+          <group id="VENUS_east" domain_ref="VENUS_east">
+             <field field_ref="toce" name="votemper"/>
+             <field field_ref="soce" name="vosaline"/>
+             <field field_ref="uoce" name="vozocrtx"/>
+             <field field_ref="voce" name="vomecrty"/>
+          </group>
+	    </file>
+        <file id="VENUS_east_gridded" name="VENUS_east_gridded"  description="VENUS east 10 minutes, 2x2 grid to unstagger velocities ">
+          <group id="VENUS_east_gridded" domain_ref="VENUS_east_gridded">
+             <field field_ref="toce" name="votemper"/>
+             <field field_ref="soce" name="vosaline"/>
+             <field field_ref="uoce" name="vozocrtx"/>
+             <field field_ref="voce" name="vomecrty"/>
+             <field field_ref="woce" name="vovecrtz"/>
+          </group>
+	    </file>
+        <file id="VENUS_delta_gridded" name="VENUS_delta_gridded"  description="VENUS delta 10 minutes, 2x2 grid to unstagger velocities ">
+          <group id="VENUS_delta_gridded" domain_ref="VENUS_delta_gridded">
+             <field field_ref="toce" name="votemper"/>
+             <field field_ref="soce" name="vosaline"/>
+             <field field_ref="uoce" name="vozocrtx"/>
+             <field field_ref="voce" name="vomecrty"/>
+             <field field_ref="woce" name="vovecrtz"/>
+          </group>
+	    </file>
         <file id="PointAtkinson" name="PointAtkinson" description="10min interval SSH for tides">
           <field_group id="PointAtkinson" domain_ref="PointAtkinson">
              <field field_ref="ssh" name="sossheig"/>
@@ -111,6 +154,12 @@
             <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
+        <file id="BoundaryBay" name="BoundaryBay" description="10min interval SSH for tides">
+          <field_group id="BoundaryBay" domain_ref="BoundaryBay">
+            <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+
         <file id="FridayHarbor" name="FridayHarbor" description="10min interval SSH for tides">
           <field_group id="FridayHarbor" domain_ref="FridayHarbor">
             <field field_ref="ssh" name="sossheig"/>
