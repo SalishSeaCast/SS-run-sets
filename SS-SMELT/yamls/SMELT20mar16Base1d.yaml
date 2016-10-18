@@ -18,7 +18,7 @@ MPI decomposition: 8x18
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: SMELT160320BaseICv2
-walltime: 20:00:00
+walltime: 1:30:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eos.ubc.ca
 
@@ -61,9 +61,9 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/base8x18/namelist_cfg_20160320_10d
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/base8x18/namelist_cfg_20160320_1d
   namelist_top_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_top_cfg_rst_cen2nomix
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_top_cfg_rst
   namelist_pisces_cfg:
     - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_pisces_cfg
 
