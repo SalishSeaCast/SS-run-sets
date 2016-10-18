@@ -359,7 +359,7 @@
    nn_bfr      =    2       !  type of bottom friction :   = 0 : free slip,  = 1 : linear friction
                             !                              = 2 : nonlinear friction
    rn_bfri1    =    4.e-4   !  bottom drag coefficient (linear case)
-   rn_bfri2    =    1.2-2   !  bottom drag coefficient (non linear case). Minimum coeft if ln_loglayer=T
+   rn_bfri2    =    1.2e-2   !  bottom drag coefficient (non linear case). Minimum coeft if ln_loglayer=T
    rn_bfri2_max =   2.      !  max. bottom drag coefficient (non linear case and ln_loglayer=T)
    rn_bfeb2    =    2.5e-3  !  bottom turbulent kinetic energy background  (m2/s2)
    rn_bfrz0    =    0.25     !  bottom roughness [m] if ln_loglayer=T
