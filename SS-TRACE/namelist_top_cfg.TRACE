@@ -84,6 +84,9 @@
 !-----------------------------------------------------------------------
 &namtrc_adv    !   advection scheme for passive tracer 
 !-----------------------------------------------------------------------
+   ln_trcadv_tvd = .false.
+   ln_trcadv_tvd_zts = .false.
+   ln_trcadv_qck = .true.
 /
 !-----------------------------------------------------------------------
 &namtrc_ldf    !   lateral diffusion scheme for passive tracer 
