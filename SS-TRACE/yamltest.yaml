@@ -59,17 +59,11 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/namelist_cfg.TRACE20dOffsetCheck8x18
-  namelist_ref:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/namelist_ref.TRACE
+    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/namelist_cfg_TRACE20dOffsetCheck8x18
   namelist_top_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/namelist_top_cfg.TRACE
-  namelist_top_ref:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/namelist_top_ref.TRACE
+    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/namelist_top_cfg_TRACE
   namelist_pisces_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/namelist_pisces_cfg.TRACE
-  namelist_pisces_ref:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/namelist_pisces_ref.TRACE
+    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/namelist_pisces_cfg_TRACE
 
 output:
   # If relative, paths are taken from current directory
