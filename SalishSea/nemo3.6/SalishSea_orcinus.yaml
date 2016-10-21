@@ -23,7 +23,7 @@ MPI decomposition: 8x18
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: example
-walltime: 00:15:00
+walltime: 00:45:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
