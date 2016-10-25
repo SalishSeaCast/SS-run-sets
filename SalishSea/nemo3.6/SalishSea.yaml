@@ -19,7 +19,7 @@ config_name: SalishSea
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 8x18
+MPI decomposition: 1x7
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: example
@@ -43,7 +43,7 @@ grid:
 forcing:
   # If relative, paths are taken from forcing path above
   NEMO-atmos:
-    link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos/
+    link to: /results/forcing/atmospheric/GEM2.5/operational/
   initial_strat:
     link to: initial_strat/
   open_boundaries: 
