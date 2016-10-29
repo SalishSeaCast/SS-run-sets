@@ -96,6 +96,9 @@
             <zoom_domain  jbegin="723" ibegin="168"  ni="1" nj="1" />
          </domain>
          <domain id="CampbellRiver" domain_ref="grid_T">
+            <zoom_domain  jbegin="743" ibegin="126"  ni="1" nj="1" />
+         </domain>
+         <domain id="CampbellRiverNorth" domain_ref="grid_T">
             <zoom_domain  jbegin="748" ibegin="126"  ni="1" nj="1" />
          </domain>
          <domain id="MaudeIslandE" domain_ref="grid_T">
