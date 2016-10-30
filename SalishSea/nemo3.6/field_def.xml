@@ -59,6 +59,8 @@
          <!-- EOS -->
          <field id="alpha"        long_name="thermal expansion"                                                         unit="degC-1" grid_ref="grid_T_3D" />
          <field id="beta"         long_name="haline contraction"                                                        unit="1e3"    grid_ref="grid_T_3D" />
+         <field id="bfN2"         long_name="Buoyancy frequency squared"
+        unit="s-2" grid_ref="grid_T_3D" />
          <field id="rhop"         long_name="potential density (sigma0)"        standard_name="sea_water_sigma_theta"   unit="kg/m3"  grid_ref="grid_T_3D" />
 
          <!-- Energy - horizontal divergence -->
