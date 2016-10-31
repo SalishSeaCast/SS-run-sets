@@ -200,11 +200,11 @@
 !-----------------------------------------------------------------------
 !             !  file name         ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
 !             !                    !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
-  sn_rnf      = 'RLonFraCElse',       24,               'rorunoff',  .true.,      .false., 'daily',     '',        ''
-  sn_cnf      = 'runoff_1m_nomask',    0,               'socoefr0',  .false.,      .true.,  'yearly',   '',        ''
-  sn_s_rnf    = '',                   24,               'rosaline',  .false.,      .true.,  'yearly',   '',        ''
-  sn_t_rnf    = 'rivers_ConsTemp_month',       -1,               'rotemper',  .true.,      .true.,  'yearly',   '',        ''
-  sn_dep_rnf  = 'rivers_month',       -1,               'rodepth' ,  .true.,       .true.,  'yearly',   '',        ''
+  sn_rnf      = 'RLonFraCElse',         24,               'rorunoff',  .true.,      .false., 'daily',     '',        ''
+  sn_cnf      = 'runoff_1m_nomask',      0,               'socoefr0',  .false.,      .true.,  'yearly',   '',        ''
+  sn_s_rnf    = '',                     24,               'rosaline',  .false.,      .true.,  'yearly',   '',        ''
+  sn_t_rnf    = 'river_ConsTemp_month', -1,               'rotemper',  .true.,      .true.,  'yearly',   '',        ''
+  sn_dep_rnf  = 'rivers_month',         -1,               'rodepth' ,  .true.,       .true.,  'yearly',   '',        ''
 
   cn_dir       = 'rivers/'  !  root directory for the location of the runoff files
   ln_rnf_mouth = .false.    !  specific treatment at rivers mouths
@@ -504,7 +504,7 @@
    ln_dynldf_hor    =  .false.  !  horizontal (geopotential)   (require "key_ldfslp" in s-coord.)
    ln_dynldf_iso    =  .true.   !  iso-neutral                 (require "key_ldfslp")
    !                            !  Coefficient
-   rn_ahm_0_lap     =   2.0     !  horizontal laplacian eddy viscosity   [m2/s]
+   rn_ahm_0_lap     =   5.0     !  horizontal laplacian eddy viscosity   [m2/s]
    rn_ahmb_0        =     0.    !  background eddy viscosity for ldf_iso [m2/s]
    rn_ahm_0_blp     =  -1.0e+10 !  horizontal bilaplacian eddy viscosity [m4/s]
    rn_cmsmag_1      =     3.    !  constant in laplacian Smagorinsky viscosity
