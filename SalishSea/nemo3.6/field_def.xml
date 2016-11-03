@@ -263,7 +263,9 @@
          <field id="u_imasstr"    long_name="Sea-ice mass transport along i-axis"                          standard_name="sea_ice_x_transport"                                unit="kg/s"         />
          <field id="v_imasstr"    long_name="Sea-ice mass transport along j-axis"                          standard_name="sea_ice_y_transport"                                unit="kg/s"         />
          <field id="emp_x_sst"    long_name="Concentration/Dilution term on SST"                                                                                              unit="kg*degC/m2/s" />
-         <field id="emp_x_sss"    long_name="Concentration/Dilution term on SSS"                                                                                              unit="kg*1e-3/m2/s" />        
+         <field id="emp_x_sss"    long_name="Concentration/Dilution term on SSS"                                                                                              unit="kg*1e-3/m2/s" />
+         <field id="rnf_x_sst"    long_name="Runoff term on SST"                                                                                                              unit="kg*degC/m2/s" />
+         <field id="rnf_x_sss"    long_name="Runoff term on SSS"                                                                                                              unit="kg*1e-3/m2/s" />        
        
          <field id="iceconc"      long_name="ice concentration"                                            standard_name="sea_ice_area_fraction"                              unit="%"            />
        	 <field id="isst"         long_name="sea surface temperature"                                      standard_name="sea_surface_temperature"                            unit="degC"         />
