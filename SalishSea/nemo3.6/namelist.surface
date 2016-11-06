@@ -104,7 +104,7 @@
 !-----------------------------------------------------------------------
 !         !  file name     ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                ! rotation !
 !         !                !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename               ! pairing  !
-  sn_apr  = 'slp_corr_ops', 1,                  'atmpres',   .true.,       .false.,  'daily',    'weights-gem2.5-ops.nc', ''
+  sn_apr  = 'ops', 1,                  'atmpres',   .true.,       .false.,  'daily',    'weights-gem2.5-ops.nc', ''
 
   cn_dir      = 'NEMO-atmos/'  !  root directory for the location of the bulk files
   ln_apr_obc  = .false.         !  inverse barometer added to OBC ssh data
