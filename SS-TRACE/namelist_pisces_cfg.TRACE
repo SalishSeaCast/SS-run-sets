@@ -32,5 +32,5 @@
    cn_dir       = './'   !  root directory for the location of the runoff files
    ln_river = .true.
    C0riv = 100.
-   AOff = 0.
+   AOff = -1.8
 /
