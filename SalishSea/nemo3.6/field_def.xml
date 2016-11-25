@@ -766,20 +766,20 @@
        <field id="MESZ_E3T"     long_name="MESZ * E3T"                               unit="mmol/m2"  > MESZ * e3t </field >
        <field id="O2"           long_name="Oxygen Concentration"                     unit="mmol/m3" />
        <field id="O2_E3T"       long_name="O2 * E3T"                                 unit="mmol/m2"  > O2 * e3t </field >
-       <field id="POC"          long_name="Small organic carbon Concentration"       unit="mmol/m3" />
+       <field id="POC"          long_name="Particulate Organic N Concentration"       unit="mmol/m3" />
        <field id="POC_E3T"      long_name="POC * E3T"                                unit="mmol/m2"  > POC * e3t </field >
        <field id="Si"           long_name="Silicate Concentration"                   unit="mmol/m3" />
        <field id="Si_E3T"       long_name="Si * E3T"                                 unit="mmol/m2"  > Si * e3t </field >
        <field id="PHY"          long_name="(Nano)Phytoplankton Concentration"        unit="mmol/m3" />
        <field id="PHY_E3T"      long_name="PHY * E3T"                                unit="mmol/m2"  > PHY * e3t </field >
-       <field id="MICZ"          long_name="(Micro)Zooplankton Concentration"         unit="mmol/m3" />
-       <field id="MICZ_E3T"      long_name="ZOO2 * E3T"                               unit="mmol/m2"  > MICZ * e3t </field >
-       <field id="DOC"          long_name="Dissolved organic Concentration"          unit="mmol/m3" />
+       <field id="MICZ"         long_name="(Micro)Zooplankton Concentration"         unit="mmol/m3" />
+       <field id="MICZ_E3T"     long_name="MICZ * E3T"                               unit="mmol/m2"  > MICZ * e3t </field >
+       <field id="DOC"          long_name="Dissolved Organic N Concentration"          unit="mmol/m3" />
        <field id="DOC_E3T"      long_name="DOC * E3T"                                unit="mmol/m2"  > DOC * e3t </field >
        <field id="PHY2"         long_name="Diatoms Concentration"                    unit="mmol/m3" />
        <field id="PHY2_E3T"     long_name="PHY2 * E3T"                               unit="mmol/m2"  > PHY2 * e3t </field >
-       <field id="MYRI"         long_name="Mesozooplankton Concentration"            unit="mmol/m3" />
-       <field id="MYRI_E3T"     long_name="ZOO2 * E3T"                               unit="mmol/m2"  > MYRI * e3t </field >
+       <field id="MYRI"         long_name="Mesodinium rubrum Concentration"            unit="mmol/m3" />
+       <field id="MYRI_E3T"     long_name="MYRI * E3T"                               unit="mmol/m2"  > MYRI * e3t </field >
        <field id="bSi"          long_name="biogenic Silicate Concentration"           unit="mmol/m3" />
        <field id="bSi_E3T"      long_name="bsi * E3T"                                unit="mmol/m2"  > bSi * e3t </field >
        <field id="NO3"          long_name="Nitrate Concentration"                    unit="mmol/m3" />
