@@ -40,7 +40,7 @@ def do_run(run_id, vertical, run_desc):
     salishsea_cmd.api.run_in_subprocess(
         run_id,
         run_desc,
-        'iodef_spinup.xml',
+        #'iodef_spinup.xml', - changes in salishsea command means the iodef file has ttol be claled iodef.xml
         os.path.join('/home/nksoonti/MEOPAR/SalishSea/results/mixing_paper',
                      run_id))
 
