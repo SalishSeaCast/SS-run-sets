@@ -8,8 +8,8 @@ import salishsea_cmd.api
 
 
 def main():
-    run_ids = ['base', 'live_ocean_test',]
-    laterals = ['namelist.lateral','namelist.lateral.live_ocean',]
+    run_ids = ['base',]# 'live_ocean_test',]
+    laterals = ['namelist.lateral',]#'namelist.lateral.live_ocean',]
     for run_id, lateral in zip(run_ids, laterals):
         print(lateral)
         run_desc = base_run_description(run_id)
