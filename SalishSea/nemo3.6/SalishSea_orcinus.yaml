@@ -19,11 +19,11 @@ config_name: SalishSea
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 8x18
+MPI decomposition: 11x26
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: example
-walltime: 00:45:00
+walltime: 00:15:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
