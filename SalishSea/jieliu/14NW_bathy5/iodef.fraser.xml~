@@ -40,36 +40,54 @@
       </group>
 
 
-    <group id="codar" output_freq="3600" output_level="10" enabled=".true.">
-       <file id="1h_codar_T" name="1h_codar_T" enabled=".true." description="Select codar domain points 1h outputs of grid T">
-          <group id="1h_codar" zoom_ref="codar" >
-          <field ref="ssh" name="sossheig"/>
-          <field ref="toce" name="votemper"/>
-          <field ref="soce" name="vosaline"/>
-        </group>
+    <group id="plume" output_freq="3600" output_level="10" enabled=".true.">
+       <file id="1h_Plume_T" name="1h_Plume_T" enabled=".true." description="Select plume points 1h outputs">
+          <group id="1h_Plume" zoom_ref="plume_area" >
+            <field ref="ssh" name="sossheig"/>
+            <field ref="toce" name="votemper"/>
+            <field ref="soce" name="vosaline"/>
+            <field ref="rain" name="rain_rate"/>
+            <field ref="snowpre" name="snow_rate"/>
+          </group>
        </file>
-       <file id="1h_codar_UV" name="1h_codar_UV" enabled=".true." description="Select codar domain points 1h outputs of u and v">
-          <group id="1h_codar" zoom_ref="codar" > 
+       <file id="1h_Plume_U" name="1h_Plume_U" enabled=".true." description="Select plume points 1h outputs">
+          <group id="1h_Plume" zoom_ref="plume_area" > 
             <field ref="uoce" name="vozocrtx"/>
-            <field ref="voce" name="vomecrty"/>
-        </group>
+            <field ref="utau" name="u_wind_stress"/>
+          </group>
        </file>
+       <file id="1h_Plume_V" name="1h_Plume_V" enabled=".true." description="Select plume points 1h outputs">
+          <group id="1h_Plume" zoom_ref="plume_area" >
+            <field ref="voce" name="vomecrty"/>
+            <field ref="vtau" name="v_wind_stress"/>
+          </group>
+       </file>
+       <file id="1h_Plume_W" name="1h_Plume_W" enabled=".true." description="Select plume points 1h outputs">
+          <group id="1h_Plume" zoom_ref="plume_area" >                 
+            <field ref="woce" name="vovecrtz"/>
+          </group>
+        </file>
     </group>
 
 
-      <group id="1d" output_freq="86400" output_level="10" enabled=".true.">
-        <file id="1d_grid_T" name="auto" enabled=".true.">
+      <group id="1d" output_freq="86400" output_level="10" enabled=".false.">
+        <file id="1d_grid_T" name="auto" enabled=".false.">
           <field ref="ssh" name="sossheig"/>
           <field ref="toce" name="votemper"/>
           <field ref="soce" name="vosaline"/>
+          <field ref="rain" name="rain_rate"/>
+          <field ref="snowpre" name="snow_rate"/>
         </file>
-        <file id="1d_grid_U" name="auto" enabled=".true.">
+        <file id="1d_grid_U" name="auto" enabled=".false.">
           <field ref="uoce" name="vozocrtx"/>
           <field ref="utau" name="u_wind_stress"/>
         </file>
-        <file id="1d_grid_V" name="auto" enabled=".true.">
+        <file id="1d_grid_V" name="auto" enabled=".false.">
           <field ref="voce" name="vomecrty"/>
           <field ref="vtau" name="v_wind_stress"/>
+        </file>
+        <file id="1d_grid_W" name="auto" enabled=".false.">
+          <field ref="woce" name="vovecrtz"/>
         </file>
       </group>
 
@@ -510,9 +528,7 @@
 	<zoom id="thalweg6"  ibegin="162" jbegin="583" ni="1" nj="1" />
 	  <!-- Plume Points -->
         <zoom id="plume"  ibegin="290" jbegin="440" ni="1" nj="1" />
-        <zoom id="plume_area"  ibegin="260" jbegin="350" ni="138" nj="90" />
-        <!-- CODRAR Points -->
-        <zoom id="codar"  ibegin="241" jbegin="381" ni="80" nj="100" />
+        <zoom id="plume_area"  ibegin="241" jbegin="350" ni="157" nj="170" />
           <!-- VENUS -->
         <zoom id="VENUS_east"  ibegin="284" jbegin="417" ni="1" nj="1" />
         <zoom id="VENUS_central"  ibegin="267" jbegin="425" ni="1" nj="1" />
