@@ -29,7 +29,7 @@ email: sallen@eos.ubc.ca
 
 paths:
   # If relative, paths are taken from current directory
-  NEMO-code: ../../../NEMO-3.6-code/
+  NEMO-code: $HOME/MEOPAR/NEMO-3.6-code/
   XIOS: ../../../XIOS/
   forcing: ../../../NEMO-forcing/
   runs directory: ../../../SalishSea/
