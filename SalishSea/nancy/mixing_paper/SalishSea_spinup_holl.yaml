@@ -22,7 +22,7 @@ config_name: SalishSea
 MPI decomposition: 11x26
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: base_spinup
+run_id: holl_spinup
 walltime: 24:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: nsoontie@eos.ubc.ca
@@ -78,7 +78,7 @@ namelists:
     - namelist.lateral
     - namelist.bottom
     - namelist.tracers
-    - namelist.dynamics
+    - namelist.dynamics.holl
     - namelist.vertical
     - namelist.compute
 
