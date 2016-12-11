@@ -56,7 +56,7 @@ forcing:
   NEMO-atmos:
     link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos/
   initial_strat:
-    link to: /home/nksoonti/MEOPAR/spin-up/27augsep7/
+    link to: /home/nksoonti/MEOPAR/spin-up/29augsep7/
   open_boundaries:
     link to: open_boundaries/
   rivers:
