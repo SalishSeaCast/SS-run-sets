@@ -24,9 +24,9 @@
          <field id="e3t"          long_name="T-cell thickness"   standard_name="cell_thickness"   unit="m"   grid_ref="grid_T_3D"/>
          <field id="e3t_0"        long_name="Initial T-cell thickness"   standard_name="ref_cell_thickness"   unit="m"   grid_ref="grid_T_3D"/>
 
-         <field id="toce"         long_name="temperature"         standard_name="sea_water_potential_temperature"   unit="degC"     grid_ref="grid_T_3D"/>
+         <field id="toce"         long_name="temperature"         standard_name="sea_water_conservative_temperature"   unit="degC"     grid_ref="grid_T_3D"/>
          <field id="toce_e3t"     long_name="temperature * e3t"                                                     unit="degC*m"   grid_ref="grid_T_3D" > toce * e3t </field >
-         <field id="soce"         long_name="salinity"            standard_name="sea_water_practical_salinity"      unit="1e-3"     grid_ref="grid_T_3D"/>
+         <field id="soce"         long_name="salinity"            standard_name="sea_water_reference_salinity"      unit="g kg-1"     grid_ref="grid_T_3D"/>
          <field id="soce_e3t"     long_name="salinity * e3t"                                                        unit="1e-3*m"   grid_ref="grid_T_3D" > soce * e3t </field >
 
          <field id="sst"          long_name="sea surface temperature"             standard_name="sea_surface_temperature"             unit="degC"     />
