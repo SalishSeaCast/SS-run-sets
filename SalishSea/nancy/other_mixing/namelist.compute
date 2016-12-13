@@ -6,6 +6,7 @@
    ln_nnogather=  .false.  !  activate code to avoid mpi_allgather use at the northfold
    jpni        =   1       !  jpni   number of processors following i (set automatically if < 1)
    jpnj        =   1       !  jpnj   number of processors following j (set automatically if < 1)
+   jpnij       =   0       !  jpnij  number of local domains (set automatically if < 1)
 &end
 
 

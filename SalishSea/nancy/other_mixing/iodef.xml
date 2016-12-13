@@ -152,7 +152,7 @@
         <!--
         We must have buffer_size > jpi*jpj*jpk*8 (with jpi and jpj the subdomain size)
         -->
-    	  <variable id="buffer_size"               type="integer">2500000</variable>
+    	  <variable id="buffer_size"               type="integer">20000000</variable>
     	  <variable id="buffer_server_factor_size" type="integer">2</variable>
     	  <variable id="info_level"                type="integer">0</variable>
     	  <variable id="using_server"              type="boolean">false</variable>
