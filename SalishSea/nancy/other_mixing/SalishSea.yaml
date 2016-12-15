@@ -72,12 +72,12 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - namelist.time.9jul18aug
-    - namelist.domain.9jul
+    - namelist.time.9jul18aug.10s
+    - namelist.domain.9jul.10s
     - namelist.surface
     - namelist.lateral
     - namelist.bottom
-    - namelist.tracers
+    - namelist.tracers.ubs
     - namelist.dynamics.ubs
     - namelist.vertical
     - namelist.compute
