@@ -61,7 +61,7 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - ./namelist.time
+    - ./namelist.time.12sep14
     - ./namelist.domain.20
     - ./namelist.surface
     - ./namelist.lateral.sshhindcast
