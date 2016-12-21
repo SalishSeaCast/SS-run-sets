@@ -39,9 +39,6 @@ forcing:
   # If relative, paths are taken from forcing path above
   NEMO-atmos:
     link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos
-    check link:
-      type: atmospheric
-      namelist filename: namelist_cfg
   open_boundaries:
     link to: open_boundaries
   rivers:
