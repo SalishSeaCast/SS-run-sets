@@ -17,7 +17,7 @@ config_name: SOG
 MPI decomposition: 11x26
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: orcinus-green-03aug16
+run_id: hindjetty-short
 walltime: 2:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
@@ -33,19 +33,18 @@ grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path above
   coordinates: coordinates_seagrid_SalishSea.nc
-  bathymetry: bathy_downonegrid2.nc
+  bathymetry: bathy_db1_jetty.nc
 
 forcing:
   # If relative, paths are taken from forcing path above
   NEMO-atmos:
     link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos
-    check link:
-      type: atmospheric
-      namelist filename: namelist_cfg
   open_boundaries:
     link to: open_boundaries
   rivers:
     link to: /home/sallen/MEOPAR/rivers
+  bfr_coef.nc:
+    link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask.nc
   initial_strat:
     link to: initial_strat/
   restart_trc.nc:
@@ -65,7 +64,7 @@ namelists:
     - ./namelist.domain.20
     - ./namelist.surface
     - ./namelist.lateral.sshhindcast
-    - ./namelist.bottom
+    - ./namelist.bottom.jetty
     - ./namelist.tracer
     - ./namelist.dynamics
     - ./namelist.vertical
