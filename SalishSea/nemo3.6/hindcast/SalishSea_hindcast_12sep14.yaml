@@ -17,8 +17,8 @@ config_name: SOG
 MPI decomposition: 11x26
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: orcinus-green-03aug16
-walltime: 4:00:00
+run_id: hindcast-12sep14
+walltime: 3:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
@@ -27,7 +27,7 @@ paths:
   NEMO-code: /home/sallen/MEOPAR/nemo-3.6-code/
   XIOS: /home/sallen/MEOPAR/XIOS/
   forcing: /home/sallen/MEOPAR/NEMO-forcing/
-  runs directory: /global/scratch/sallen/
+  runs directory: /home/sallen/MEOPAR/SalishSea/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -46,7 +46,7 @@ forcing:
   initial_strat:
     link to: initial_strat/
   restart_trc.nc:
-    link to: /home/sallen/MEOPAR/SalishSea/11sep16/SalishSea_00482400_restart_trc.nc
+    link to: /home/sallen/MEOPAR/SalishSea/hindcast/11sep16/SalishSea_00482400_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
