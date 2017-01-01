@@ -62,7 +62,7 @@ namelists:
   namelist_cfg:
     - ./namelist.time.13sep14
     - ./namelist.domain.30
-    - ./namelist.surface
+    - ./namelist.surface.allArm
     - ./namelist.lateral.sshhindcast
     - ./namelist.bottom.jetty
     - ./namelist.tracer
