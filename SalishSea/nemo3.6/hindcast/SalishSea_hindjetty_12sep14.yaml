@@ -17,7 +17,7 @@ config_name: SOG
 MPI decomposition: 11x26
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: hindjetty-short
+run_id: hindjetty
 walltime: 2:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
@@ -47,8 +47,6 @@ forcing:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask.nc
   initial_strat:
     link to: initial_strat/
-  restart_trc.nc:
-    link to: /home/sallen/MEOPAR/SalishSea/11sep16/SalishSea_00482400_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -61,8 +59,8 @@ namelists:
   # If relative, paths are taken from current directory
   namelist_cfg:
     - ./namelist.time.12sep14
-    - ./namelist.domain.20
-    - ./namelist.surface
+    - ./namelist.domain.20.jetty
+    - ./namelist.surface.allArm
     - ./namelist.lateral.sshhindcast
     - ./namelist.bottom.jetty
     - ./namelist.tracer
@@ -70,7 +68,7 @@ namelists:
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
-    - ./namelist_top_cfg
+    - ./namelist_top_cfg_initial_jetty
   namelist_pisces_cfg:
     - ./namelist_pisces_cfg
 
