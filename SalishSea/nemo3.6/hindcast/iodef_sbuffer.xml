@@ -19,7 +19,7 @@
     -->
     <file_definition type="multiple_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4">
       <file_group id="1ts" output_freq="1ts"  output_level="10" enabled=".TRUE."/> <!-- 1 time step files -->
-      <file_group id="1h" output_freq="1h"  output_level="10" enabled=".TRUE."> <!-- 1h files -->
+      <file_group id="1h" output_freq="1h"  split_freq="1d" output_level="10" enabled=".TRUE."> <!-- 1h files -->
     	<file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
           <field field_ref="ssh" name="sossheig"/>
           <field field_ref="toce" name="votemper"/>
@@ -59,7 +59,7 @@
       <file_group id="4h" output_freq="4h"  output_level="10" enabled=".FALSE."/> <!-- 4h files -->
       <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."/> <!-- 6h files -->
 
-      <file_group id="1d" output_freq="1d"  output_level="10" enabled=".TRUE."> <!-- 1d files -->
+      <file_group id="1d" output_freq="1d"  split_freq="1d" output_level="10" enabled=".TRUE."> <!-- 1d files -->
     	<file id="file6" name_suffix="_grid_T" description="ocean T grid variables" >
           <field field_ref="ssh" name="sossheig"/>
           <field field_ref="toce" name="votemper"/>
@@ -108,7 +108,7 @@
       <file_group id="5y"  output_freq="5y" output_level="10" enabled=".TRUE."/> <!-- real 5y files -->
       <file_group id="10y" output_freq="10y" output_level="10" enabled=".TRUE."/> <!-- real 10y files -->
 
-      <file_group id="10min" output_freq="600s" output_level="10" enabled=".TRUE."> <!-- 10 minute files -->
+      <file_group id="10min" output_freq="600s" split_freq="1d" output_level="10" enabled=".TRUE."> <!-- 10 minute files -->
         <file id="VENUS_central" name="VENUS_central"  description="VENUS central 10 minutes">
           <field_group id="VENUS_central" domain_ref="VENUS_central">
              <field field_ref="toce" name="votemper"/>
