@@ -32,12 +32,12 @@
    sn_tracer(1)  = 'NO3     ' , 'Nitrates Concentration                 ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(2)  = 'NH4     ' , 'Ammonium Concentration                 ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(3)  = 'Si      ' , 'Silicate Concentration                 ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(4)  = 'PHY2    ' , 'Diatoms Concentration                  ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(4)  = 'DIAT    ' , 'Diatoms Concentration                  ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(5)  = 'PHY     ' , 'Nanophytoplankton Concentration        ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(6)  = 'MYRI    ' , 'Mesozooplankton Concentration          ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(6)  = 'MYRI    ' , 'Mesodinium Rubrum Concentration        ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(7)  = 'MICZ    ' , 'Microzooplankton Concentration         ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(8)  = 'DOC     ' , 'Dissolved organic Concentration        ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(9)  = 'POC     ' , 'Small organic carbon Concentration     ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(8)  = 'DON     ' , 'Dissolved organic N Concentration      ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(9)  = 'PON     ' , 'Particulate organic N Concentration    ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(10) = 'bSi     ' , 'biogenic Silicate Concentration        ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(11) = 'O2      ' , 'Dissolved Oxygen Concentration         ',  'mol-C/L' ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
    ln_trcdta = .true.
