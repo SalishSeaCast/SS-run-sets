@@ -43,12 +43,12 @@
           <field field_ref="NO3"      />
           <field field_ref="NH4"      />
           <field field_ref="Si"       />
-          <field field_ref="PHY2"     />
+          <field field_ref="DIAT"     />
           <field field_ref="PHY"      />
           <field field_ref="MYRI"     />
           <field field_ref="MICZ"     />
-          <field field_ref="DOC"      />
-          <field field_ref="POC"      />
+          <field field_ref="DON"      />
+          <field field_ref="PON"      />
           <field field_ref="bSi"      />
           <field field_ref="O2"       />
           <field field_ref="MESZ"     />

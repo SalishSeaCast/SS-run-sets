@@ -1,0 +1,75 @@
+# salishsea command processor run description example for NEMO-3.6
+#
+# Salish Sea Long River Domain (#6) with:
+#     Tidal forcing
+#     Salinity and Temperate at Both open boundaries
+#  Rivers run-off forcing
+#  Atmospheric forcing with operational GEM2.5 model products
+#    Constrained to no solid precipitation
+#  SOG biological model
+
+config_name: SOG
+
+# How is the domain to be distributed over the processors in the
+# i (longitude) and j (latitude) directions?
+# These values are used to set the nammpp namelist jpni & jpnj values
+# and to set the number of processors and nodes in the PBS script
+MPI decomposition: 8x18
+
+# For runs on systems that use qsub/PBS/TORQUE
+run_id: SMELT12feb16Base
+walltime: 10:00:00
+# If missing, email address is set to ${USER}@eos.ubc.ca
+email: eolson@eos.ubc.ca
+
+paths:
+  # If relative, paths are taken from current directory
+  NEMO-code: /home/eolson/MEOPAR/NEMO-3.6-code/
+  XIOS: /home/eolson/MEOPAR/XIOS/
+  forcing: /home/eolson/MEOPAR/NEMO-forcing/
+  runs directory: /global/scratch/eolson/
+
+grid:
+  # If relative, paths are taken from the grid/ directory in the forcing
+  # path above
+  coordinates: coordinates_seagrid_SalishSea.nc
+  bathymetry: bathy_downonegrid.nc
+
+forcing:
+  # If relative, paths are taken from forcing path above
+  NEMO-atmos:
+    link to: atmospheric/
+    check link:
+      type: atmospheric
+      namelist filename: namelist_cfg
+  open_boundaries:
+    link to: open_boundaries/
+  rivers:
+    link to: rivers/
+  restart.nc:
+    link to: /home/eolson/MEOPAR/NewRuns/SMELT10feb16Base/SalishSea_00013680_restart.nc
+  restart_trc.nc:
+    link to: /home/eolson/MEOPAR/NewRuns/SMELT10feb16Base/SalishSea_00013680_restart_trc.nc
+
+namelists:
+  # The namelist section files in the lists below will be concatenated
+  # to create a namelist file whose name is the key under which the files
+  # are listed. The keys are the names of the namelist files that NEMO-3.6
+  # expects.
+  #
+  # The only required key is namelist_cfg.
+  #
+  # If relative, paths are taken from current directory
+  namelist_cfg:
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_cfg_20160212_1day_8x18
+  namelist_top_cfg:
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_top_cfg_rst
+  namelist_pisces_cfg:
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_pisces_cfg
+
+output:
+  # If relative, paths are taken from current directory
+  domain: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/domain_def.xml
+  fields: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/field_def_MESZ.xml
+  separate XIOS server: True
+  XIOS servers: 1
