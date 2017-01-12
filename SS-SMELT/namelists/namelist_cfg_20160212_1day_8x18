@@ -61,7 +61,7 @@
    rn_e3zps_min=    5.     !  partial step thickness is set larger than the minimum of
    rn_e3zps_rat=    0.2    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
                            !
-   rn_rdt      =   40.     !  time step for the dynamics (and tracer if nn_acc=0)
+   rn_rdt      =   10.     !  time step for the dynamics (and tracer if nn_acc=0)
    rn_atfp     =    0.1    !  asselin time filter parameter
    nn_acc      =    0      !  acceleration of convergence : =1      used, rdt < rdttra(k)
                            !                                =0, not used, rdt = rdttra
@@ -396,7 +396,7 @@
                                  !  =-1, TEOS-10
                                  !  = 0, EOS-80
                                  !  = 1, S-EOS   (simplified eos)
-   ln_useCT    = .false.  ! new use of Conservative Temp. ==> surface CT converted in Pot. Temp. in sbcssm
+   ln_useCT    = .true.   ! new use of Conservative Temp. ==> surface CT converted in Pot. Temp. in sbcssm
 &end
 
 
@@ -551,6 +551,7 @@
    ln_nnogather=  .false.  !  activate code to avoid mpi_allgather use at the northfold
    jpni        =   8       !  jpni   number of processors following i (set automatically if < 1)
    jpnj        =   18       !  jpnj   number of processors following j (set automatically if < 1)
+   jpnij       =   0
 &end
 
 

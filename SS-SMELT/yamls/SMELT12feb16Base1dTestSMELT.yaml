@@ -8,7 +8,7 @@
 #    Constrained to no solid precipitation
 #  SOG biological model
 
-config_name: SOG
+config_name: SMELT
 
 # How is the domain to be distributed over the processors in the
 # i (longitude) and j (latitude) directions?
@@ -64,7 +64,9 @@ namelists:
     - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_cfg_20160212_1day_8x18
   namelist_top_cfg:
     - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_top_cfg_rst
-  namelist_pisces_cfg:
+  namelist_smelt_ref:
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_pisces_ref
+  namelist_smelt_cfg:
     - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/namelist_pisces_cfg
 
 output:
