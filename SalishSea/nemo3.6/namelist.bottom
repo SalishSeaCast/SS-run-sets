@@ -27,7 +27,7 @@
    rn_tfrien   =    50.     !  local multiplying factor of tfr (ln_tfr2d=T)
 
    ln_bfrimp   = .true.     !  implicit bottom friction (requires ln_zdfexp = .false. if true)
-   ln_loglayer = .true.    !  logarithmic formulation (non linear case)
+   ln_loglayer = .true.     !  logarithmic formulation (non linear case)
 /
 !-----------------------------------------------------------------------
 &nambbc        !   bottom temperature boundary condition
