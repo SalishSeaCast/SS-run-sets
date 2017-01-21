@@ -34,7 +34,8 @@
       <domain id="PowellRiver"             domain_ref="grid_T"> <zoom_domain ibegin="205" jbegin="664" ni="1"  nj="1"  /> </domain>
       <domain id="Lund"                    domain_ref="grid_T"> <zoom_domain ibegin="187" jbegin="701" ni="1"  nj="1"  /> </domain>
       <domain id="TwinIslets"              domain_ref="grid_T"> <zoom_domain ibegin="168" jbegin="723" ni="1"  nj="1"  /> </domain>
-      <domain id="CampbellRiver"           domain_ref="grid_T"> <zoom_domain ibegin="126" jbegin="748" ni="1"  nj="1"  /> </domain>
+      <domain id="CampbellRiver"           domain_ref="grid_T"> <zoom_domain ibegin="126" jbegin="743" ni="1"  nj="1"  /> </domain>
+      <domain id="CampbellRiverNorth"      domain_ref="grid_T"> <zoom_domain ibegin="126" jbegin="748" ni="1"  nj="1"  /> </domain>
       <domain id="MaudeIslandE"            domain_ref="grid_T"> <zoom_domain ibegin="123" jbegin="771" ni="1"  nj="1"  /> </domain>
       <domain id="NympheCove"              domain_ref="grid_T"> <zoom_domain ibegin="118" jbegin="774" ni="1"  nj="1"  /> </domain>
       <domain id="SeymourNarrows"          domain_ref="grid_T"> <zoom_domain ibegin="121" jbegin="772" ni="1"  nj="1"  /> </domain>
