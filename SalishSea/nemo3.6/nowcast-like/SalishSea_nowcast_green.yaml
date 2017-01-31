@@ -25,6 +25,7 @@ email: sallen@eos.ubc.ca
 paths:
   # If relative, paths are taken from current directory
   NEMO-code: /ocean/sallen/allen/research/MEOPAR/nemo-3.6-code/
+  NEMO code config: /ocean/sallen/allen/research/MEOPAR/nemo-3.6-code/NEMOGCM/CONFIG/
   XIOS: /ocean/sallen/allen/research/MEOPAR/XIOS/
   forcing: /ocean/sallen/allen/research/MEOPAR/NEMO-forcing/
   runs directory: /data/sallen/MEOPAR/nowcast-green/
