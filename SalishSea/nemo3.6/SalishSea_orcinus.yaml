@@ -30,6 +30,7 @@ email: sallen@eos.ubc.ca
 paths:
   # If relative, paths are taken from current directory
   NEMO-code: $HOME/MEOPAR/NEMO-3.6-code/
+  NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/
   XIOS: ../../../XIOS/
   forcing: ../../../NEMO-forcing/
   runs directory: ../../../SalishSea/
@@ -46,9 +47,9 @@ forcing:
     link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos/
   initial_strat:
     link to: initial_strat/
-  open_boundaries: 
+  open_boundaries:
     link to: open_boundaries/
-  rivers: 
+  rivers:
     link to: rivers/
 
 namelists:

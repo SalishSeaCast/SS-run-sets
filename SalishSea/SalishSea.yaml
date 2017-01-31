@@ -23,6 +23,7 @@ paths:
   # Absolute path to NEMO-code repository clone.
   # You can use ~ or $HOME if you wish.
   NEMO-code: $HOME/MEOPAR/NEMO-code/
+  NEMO code config: $HOME/MEOPAR/NEMO-code/NEMOGCM/CONFIG
   # If relative, paths below are taken from current directory
   forcing: ../../NEMO-forcing/
   runs directory: ../../SalishSea/
