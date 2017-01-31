@@ -31,6 +31,7 @@ paths:
   # Absolute path to NEMO-code repository clone.
   # You can use ~ or $HOME if you wish.
   NEMO-code: $HOME/MEOPAR/NEMO-3.6-code/
+  NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/
   # If relative, paths below are taken from current directory
   XIOS: ../../../XIOS/
   forcing: ../../../NEMO-forcing/
@@ -48,9 +49,9 @@ forcing:
     link to: /results/forcing/atmospheric/GEM2.5/operational/
   initial_strat:
     link to: initial_strat/
-  open_boundaries: 
+  open_boundaries:
     link to: open_boundaries/
-  rivers: 
+  rivers:
     link to: rivers/
 
 namelists:
