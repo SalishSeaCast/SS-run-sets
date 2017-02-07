@@ -35,7 +35,7 @@
                                            !  = 1, bdy data are read in 'bdydata   .nc' files
                                            !  = 2, use tidal harmonic forcing data from files
                                            !  = 3, use external data AND tidal harmonic forcing
-    cn_dyn3d      =  'orlanski', 'orlanski'
+    cn_dyn3d      =  'none', 'none'
     nn_dyn3d_dta  =  0, 0                  !  = 0, bdy data are equal to the initial state
                                            !  = 1, bdy data are read in 'bdydata   .nc' files
     cn_tra        =  'frs','frs'           !
