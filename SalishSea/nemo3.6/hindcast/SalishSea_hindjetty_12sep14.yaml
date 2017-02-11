@@ -33,7 +33,7 @@ grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path above
   coordinates: coordinates_seagrid_SalishSea.nc
-  bathymetry: bathy_db1_jetty.nc
+  bathymetry: bathy_db1_jettyR.nc
 
 forcing:
   # If relative, paths are taken from forcing path above
