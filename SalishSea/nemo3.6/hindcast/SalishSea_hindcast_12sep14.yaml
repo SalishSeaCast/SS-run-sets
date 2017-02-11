@@ -8,7 +8,7 @@
 #    Constrained to no solid precipitation
 #  SMELT biological model
 
-config_name: SOG
+config_name: SMELT
 
 # How is the domain to be distributed over the processors in the
 # i (longitude) and j (latitude) directions?
