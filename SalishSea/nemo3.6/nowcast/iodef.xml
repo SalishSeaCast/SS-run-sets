@@ -18,7 +18,10 @@
 ============================================================================================================
     -->
     <file_definition type="multiple_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4">
-      <file_group id="1ts" output_freq="1ts"  output_level="10" enabled=".TRUE."/> <!-- 1 time step files -->
+
+      <file_group id="1ts" output_freq="1ts"  output_level="10" enabled=".TRUE."> <!-- 1 time step files -->
+     </file_group>
+
       <file_group id="1h" output_freq="1h"  output_level="10" enabled=".TRUE."> <!-- 1h files -->
     	<file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
           <field field_ref="ssh" name="sossheig"/>
@@ -54,10 +57,15 @@
           <field field_ref="MESZ"     />
         </file>
      </file_group>
-      <file_group id="2h" output_freq="2h"  output_level="10" enabled=".TRUE."/> <!-- 2h files -->
-      <file_group id="3h" output_freq="3h"  output_level="10" enabled=".TRUE."/> <!-- 3h files -->
-      <file_group id="4h" output_freq="4h"  output_level="10" enabled=".FALSE."/> <!-- 4h files -->
-      <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."/> <!-- 6h files -->
+
+      <file_group id="2h" output_freq="2h"  output_level="10" enabled=".TRUE."> <!-- 2h files -->
+      </file_group>
+      <file_group id="3h" output_freq="3h"  output_level="10" enabled=".TRUE."> <!-- 3h files -->
+      </file_group>
+      <file_group id="4h" output_freq="4h"  output_level="10" enabled=".FALSE."> <!-- 4h files -->
+      </file_group>
+      <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."> <!-- 6h files -->
+      </file_group>
 
       <file_group id="1d" output_freq="1d"  output_level="10" enabled=".TRUE."> <!-- 1d files -->
     	<file id="file6" name_suffix="_grid_T" description="ocean T grid variables" >
@@ -94,19 +102,31 @@
           <field field_ref="MESZ"     />
         </file>
       </file_group>
-      <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
-      <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE."/>  <!-- 5d files -->
 
-      <file_group id="1m" output_freq="1mo" output_level="10" enabled=".TRUE."/> <!-- real monthly files -->
-      <file_group id="2m" output_freq="2mo" output_level="10" enabled=".TRUE."/> <!-- real 2m files -->
-      <file_group id="3m" output_freq="3mo" output_level="10" enabled=".TRUE."/> <!-- real 3m files -->
-      <file_group id="4m" output_freq="4mo" output_level="10" enabled=".TRUE."/> <!-- real 4m files -->
-      <file_group id="6m" output_freq="6mo" output_level="10" enabled=".TRUE."/> <!-- real 6m files -->
+      <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."> <!-- 3d files -->
+      </file_group>
+      <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE.">  <!-- 5d files -->
+      </file_group>
 
-      <file_group id="1y"  output_freq="1y" output_level="10" enabled=".TRUE."/> <!-- real yearly files -->
-      <file_group id="2y"  output_freq="2y" output_level="10" enabled=".TRUE."/> <!-- real 2y files -->
-      <file_group id="5y"  output_freq="5y" output_level="10" enabled=".TRUE."/> <!-- real 5y files -->
-      <file_group id="10y" output_freq="10y" output_level="10" enabled=".TRUE."/> <!-- real 10y files -->
+      <file_group id="1m" output_freq="1mo" output_level="10" enabled=".TRUE."> <!-- real monthly files -->
+      </file_group>
+      <file_group id="2m" output_freq="2mo" output_level="10" enabled=".TRUE."> <!-- real 2m files -->
+      </file_group>
+      <file_group id="3m" output_freq="3mo" output_level="10" enabled=".TRUE."> <!-- real 3m files -->
+      </file_group>
+      <file_group id="4m" output_freq="4mo" output_level="10" enabled=".TRUE."> <!-- real 4m files -->
+      </file_group>
+      <file_group id="6m" output_freq="6mo" output_level="10" enabled=".TRUE."> <!-- real 6m files -->
+      </file_group>
+
+      <file_group id="1y"  output_freq="1y" output_level="10" enabled=".TRUE."> <!-- real yearly files -->
+      </file_group>
+      <file_group id="2y"  output_freq="2y" output_level="10" enabled=".TRUE."> <!-- real 2y files -->
+      </file_group>
+      <file_group id="5y"  output_freq="5y" output_level="10" enabled=".TRUE."> <!-- real 5y files -->
+      </file_group>
+      <file_group id="10y" output_freq="10y" output_level="10" enabled=".TRUE."> <!-- real 10y files -->
+      </file_group>
 
       <file_group id="10min" output_freq="600s" output_level="10" enabled=".TRUE."> <!-- 10 minute files -->
         <file id="VENUS_central" name="VENUS_central"  description="VENUS central 10 minutes">
@@ -199,7 +219,6 @@
         </file>
       </file_group>
 
-
    </file_definition>
     <!--
 ============================================================================================================
@@ -214,7 +233,9 @@
       <axis id="nfloat" long_name="Float number"      unit="-"  />
       <axis id="icbcla" long_name="Iceberg class"     unit="-"  />
    </axis_definition>
+
    <domain_definition src="./domain_def.xml"/>
+
    <grid_definition>
      <grid id="grid_T_2D" domain_ref="grid_T"/>
      <grid id="grid_T_3D" domain_ref="grid_T" axis_ref="deptht"/>
@@ -229,17 +250,16 @@
   </context>
 
   <context id="xios">
-
-      <variable_definition>
-     <!--
+    <variable_definition>
+       <!--
         We must have buffer_size > jpi*jpj*jpk*8 (with jpi and jpj the subdomain size)
--->
-	  <variable id="buffer_size"               type="integer">50000000</variable>
-	  <variable id="buffer_server_factor_size" type="integer">2</variable>
-	  <variable id="info_level"                type="integer">0</variable>
-	  <variable id="using_server"              type="boolean">true</variable>
-	  <variable id="using_oasis"               type="boolean">false</variable>
-	  <variable id="oasis_codes_id"            type="string" >oceanx</variable>
-      </variable_definition>
+        -->
+  	  <variable id="buffer_size"               type="integer">50000000</variable>
+  	  <variable id="buffer_server_factor_size" type="integer">2</variable>
+  	  <variable id="info_level"                type="integer">0</variable>
+  	  <variable id="using_server"              type="boolean">true</variable>
+  	  <variable id="using_oasis"               type="boolean">false</variable>
+  	  <variable id="oasis_codes_id"            type="string" >oceanx</variable>
+    </variable_definition>
   </context>
 </simulation>
