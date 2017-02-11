@@ -72,10 +72,14 @@ namelists:
     - ./namelist_top_cfg
   namelist_pisces_cfg:
     - ./namelist_pisces_cfg
+  namelist_smelt_cfg:
+    - ./namelist_smelt_cfg
+  namelist_top_cfg_smelt:
+    - ./namelist_top_cfg_smelt
 
 output:
   # If relative, paths are taken from current directory
-  files: iodef_sbuffer.xml
+  files: iodef_MESZ_sbuffer.xml
   domain: domain_def.xml
   fields: field_def.xml
   separate XIOS server: True
