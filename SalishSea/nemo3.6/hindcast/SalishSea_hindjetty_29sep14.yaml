@@ -17,7 +17,7 @@ config_name: SOG
 MPI decomposition: 11x26
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: hindjetty
+run_id: hindjettyR
 walltime: 9:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
@@ -33,7 +33,7 @@ grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path above
   coordinates: coordinates_seagrid_SalishSea.nc
-  bathymetry: bathy_db1_jetty.nc
+  bathymetry: bathy_db1_jettyR.nc
 
 forcing:
   # If relative, paths are taken from forcing path above
@@ -46,9 +46,9 @@ forcing:
   bfr_coef.nc:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask.nc
   restart.nc:
-    link to: /home/sallen/MEOPAR/SalishSea/hindjetty/19sep14/SalishSea_00039600_restart.nc
+    link to: /home/sallen/MEOPAR/SalishSea/hindjettyR/19sep14/SalishSea_00039600_restart.nc
   restart_trc.nc:
-    link to: /home/sallen/MEOPAR/SalishSea/hindjetty/19sep14/SalishSea_00039600_restart_trc.nc
+    link to: /home/sallen/MEOPAR/SalishSea/hindjettyR/19sep14/SalishSea_00039600_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
