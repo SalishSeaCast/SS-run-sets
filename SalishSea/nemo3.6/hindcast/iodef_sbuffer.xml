@@ -40,18 +40,18 @@
           <field field_ref="eps" name="dissipation"/>
         </file>
         <file id="file5" name_suffix="_ptrc_T" description="sog variables" >
-          <field field_ref="NO3"      />
-          <field field_ref="NH4"      />
-          <field field_ref="Si"       />
-          <field field_ref="PHY2"     />
-          <field field_ref="PHY"      />
-          <field field_ref="MYRI"     />
-          <field field_ref="MICZ"     />
-          <field field_ref="DOC"      />
-          <field field_ref="POC"      />
-          <field field_ref="bSi"      />
-          <field field_ref="O2"       />
-          <field field_ref="MESZ"     />
+          <field field_ref="NO3"          name="nitrate"      />
+          <field field_ref="NH4"          name="ammonium"     />
+          <field field_ref="Si"           name="silicon"     />
+          <field field_ref="DIAT"         name="diatoms"     />
+          <field field_ref="PHY"          name="flagellates"    />
+          <field field_ref="MYRI"         name="ciliates"/>
+          <field field_ref="MICZ"         name="microzooplankton"/>
+          <field field_ref="DON"          name="dissolved organic nitrogen"/>
+          <field field_ref="PON"          name="particulate organic nitrogen"/>
+          <field field_ref="bSi"          name="biogenic silicon"/>
+          <field field_ref="TRA"          name="Fraser tracer"/>
+          <field field_ref="MESZ"         name="mesozooplantkon"/>
         </file>
      </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" enabled=".TRUE."/> <!-- 2h files -->
@@ -80,18 +80,18 @@
           <field field_ref="eps" name="dissipation"/>
         </file>
         <file id="file10" name_suffix="_ptrc_T" description="sog variables" >
-          <field field_ref="NO3"      />
-          <field field_ref="NH4"      />
-          <field field_ref="Si"       />
-          <field field_ref="PHY2"     />
-          <field field_ref="PHY"      />
-          <field field_ref="MYRI"     />
-          <field field_ref="MICZ"     />
-          <field field_ref="DOC"      />
-          <field field_ref="POC"      />
-          <field field_ref="bSi"      />
-          <field field_ref="O2"       />
-          <field field_ref="MESZ"     />
+          <field field_ref="NO3"          name="nitrate"      />
+          <field field_ref="NH4"          name="ammonium"     />
+          <field field_ref="Si"           name="silicon"     />
+          <field field_ref="DIAT"         name="diatoms"     />
+          <field field_ref="PHY"          name="flagellates"    />
+          <field field_ref="MYRI"         name="ciliates"/>
+          <field field_ref="MICZ"         name="microzooplankton"/>
+          <field field_ref="DON"          name="dissolved organic nitrogen"/>
+          <field field_ref="PON"          name="particulate organic nitrogen"/>
+          <field field_ref="bSi"          name="biogenic silicon"/>
+          <field field_ref="TRA"          name="Fraser tracer"/>
+          <field field_ref="MESZ"         name="mesozooplantkon"/>
         </file>
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
@@ -192,8 +192,8 @@
             <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
-        <file id="Sandheads" name="Sandheads" description="10min interval SSH for tides">
-          <field_group id="Sandheads" domain_ref="Sandheads">
+        <file id="SandHeads" name="SandHeads" description="10min interval SSH for tides">
+          <field_group id="SandHeads" domain_ref="SandHeads">
              <field field_ref="ssh" name="sossheig"/>
           </field_group>
         </file>
