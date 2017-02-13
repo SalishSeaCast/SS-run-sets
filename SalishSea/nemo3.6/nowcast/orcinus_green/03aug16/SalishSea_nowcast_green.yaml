@@ -62,7 +62,7 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_ref:
-    - ../../namelist_ref
+    - ../../../../../NEMO-3.6-code/NEMOGCM/CONFIG/SOG/EXP00/namelist_ref
   namelist_cfg:
     - ./namelist.time
     - ../../namelist.domain
@@ -73,8 +73,12 @@ namelists:
     - ../../namelist.dynamics
     - ../../namelist.vertical
     - ../../namelist.compute
+  namelist_top_ref:
+    - ../../../../../NEMO-3.6-code/NEMOGCM/CONFIG/SOG/EXP00/namelist_ref
   namelist_top_cfg:
     - ../namelist_top_cfg
+  namelist_pisces_ref:
+    - ../../../../../NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea/EXP00/namelist_ref
   namelist_pisces_cfg:
     - ../namelist_pisces_cfg
 
