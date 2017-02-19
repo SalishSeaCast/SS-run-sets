@@ -8,23 +8,24 @@
 #    Constrained to no solid precipitation
 #  SMELT biological model
 
-config_name: SOG
+config_name: SMELT
 
 # How is the domain to be distributed over the processors in the
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 11x26
+MPI decomposition: 11x17
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: hindcast-09oct14
-walltime: 12:00:00
+run_id: hindcast
+walltime: 11:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
 paths:
   # If relative, paths are taken from current directory
   NEMO-code: /home/sallen/MEOPAR/nemo-3.6-code/
+  NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /home/sallen/MEOPAR/XIOS/
   forcing: /home/sallen/MEOPAR/NEMO-forcing/
   runs directory: /home/sallen/MEOPAR/SalishSea/
@@ -32,7 +33,7 @@ paths:
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path above
-  coordinates: coordinates_seagrid_SalishSea.nc
+  coordinates: coordinates_seagrid_SalishSea3.nc
   bathymetry: bathy_downonegrid2.nc
 
 forcing:
@@ -68,13 +69,13 @@ namelists:
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
-    - ./namelist_top_cfg
-  namelist_pisces_cfg:
-    - ./namelist_pisces_cfg
+    - ./namelist_top_cfg_smelt
+  namelist_smelt_cfg:
+    - ./namelist_smelt_cfg
 
 output:
   # If relative, paths are taken from current directory
-  files: iodef_sbuffer.xml
+  files: iodef_mbuffer.xml
   domain: domain_def.xml
   fields: field_def.xml
   separate XIOS server: True

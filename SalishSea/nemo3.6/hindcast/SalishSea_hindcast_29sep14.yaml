@@ -58,6 +58,8 @@ namelists:
   # The only required key is namelist_cfg.
   #
   # If relative, paths are taken from current directory
+  namelist_ref:
+    - ./namelist_ref
   namelist_cfg:
     - ./namelist.time.29sep14
     - ./namelist.domain
