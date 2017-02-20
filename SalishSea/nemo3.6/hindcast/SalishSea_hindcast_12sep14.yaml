@@ -18,7 +18,7 @@ MPI decomposition: 6x15
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: hindcast
-walltime: 5:00:00
+walltime: 6:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
@@ -33,8 +33,8 @@ paths:
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path above
-  coordinates: coordinates_seagrid_SalishSea3.nc
-  bathymetry: bathy_downonegrid2.nc
+  coordinates: coordinates_seagrid_SalishSea201702.nc
+  bathymetry: bathymetry_201702.nc
 
 forcing:
   # If relative, paths are taken from forcing path above
@@ -44,10 +44,10 @@ forcing:
     link to: open_boundaries
   rivers:
     link to: /home/sallen/MEOPAR/rivers
+  bfr_coef.nc:
+    link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
   initial_strat:
-    link to: initial_strat/
-  restart_trc.nc:
-    link to: /home/sallen/MEOPAR/SalishSea/hindcast/11sep16/SalishSea_00482400_restart_trc_newNames.nc
+    link to: /home/sallen/MEOPAR/SalishSea/hindcast/11sep16/
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -63,19 +63,19 @@ namelists:
     - ./namelist.domain.20
     - ./namelist.surface
     - ./namelist.lateral.sshhindcast
-    - ./namelist.bottom
+    - ./namelist.bottom.jetty
     - ./namelist.tracer
     - ./namelist.dynamics
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
-    - ./namelist_top_cfg_smelt
+    - ./namelist_top_cfg_initial
   namelist_smelt_cfg:
     - ./namelist_smelt_cfg
 
 output:
   # If relative, paths are taken from current directory
-  files: iodef_MESZ_mbuffer.xml
+  files: iodef_mbuffer.xml
   domain: domain_def.xml
   fields: field_def.xml
   separate XIOS server: True
