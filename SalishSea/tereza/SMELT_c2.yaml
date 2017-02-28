@@ -21,9 +21,11 @@ walltime: 10:00:00
 
 paths:
   # If relative, paths are taken from current directory
+  NEMO-code-config: /data/tjarniko/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   NEMO-code: /data/tjarniko/MEOPAR/NEMO-3.6-code
   forcing: ../../NEMO-forcing/
   runs directory: ../../SalishSea/
+  XIOS: /data/tjarniko/MEOPAR/XIOS
 
 grid:
   # If relative, paths are taken from forcing path above
