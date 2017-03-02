@@ -13,7 +13,7 @@
 #  Atmospheric forcing with operational GEM2.5 model products
 #    Constrained to no solid precipitation
 
-config_name: SalishSea
+config_name: SMELT_c2
 
 # How is the domain to be distributed over the processors in the
 # i (longitude) and j (latitude) directions?
@@ -25,7 +25,7 @@ MPI decomposition: 1x7
 run_id: example
 walltime: 05:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
-email: sallen@eos.ubc.ca
+email: tjarnik@gmail.com
 
 paths:
   # Absolute path to NEMO-code repository clone.
@@ -35,7 +35,7 @@ paths:
   # If relative, paths below are taken from current directory
   XIOS: ../../../XIOS/
   forcing: ../../../NEMO-forcing/
-  runs directory: ../../../SalishSea/
+  runs directory: ../../SalishSea/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -64,7 +64,7 @@ namelists:
     - namelist.surface
     - namelist.lateral
     - namelist.bottom
-    - namelist.tracer
+    - namelist.tracers
     - namelist.dynamics
     - namelist.vertical
     - namelist.compute
@@ -76,4 +76,3 @@ output:
   fields: field_def.xml
   separate XIOS server: True
   XIOS servers: 1
-
