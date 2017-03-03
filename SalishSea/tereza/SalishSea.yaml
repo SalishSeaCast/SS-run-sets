@@ -71,7 +71,7 @@ namelists:
 
 output:
   # If relative, paths are taken from current directory
-  files: iodef.xml
+  files: iodef_bio_1d.xml
   domain: domain_def.xml
   fields: field_def.xml
   separate XIOS server: True
