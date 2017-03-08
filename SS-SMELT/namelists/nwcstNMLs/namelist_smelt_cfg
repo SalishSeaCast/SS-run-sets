@@ -25,30 +25,21 @@
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 !              !  file name          ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !              !                     !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
-   sn_dust      =   ''     ,        -12,               '',      .false.,      .true.,  'yearly', '',        '',        ''
-   sn_solub     =   ''     ,        -12,               '',      .false.,      .true.,  'yearly', '',        '',        ''
-   sn_riverno3  ='riverBio',         24,            'no3',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_rivernh4  ='riverBio',         24,            'nh4',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_riversil  ='riverBio',         24,            'sil',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_riverdia  ='riverBio',         24,            'dia',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_riverphy  ='riverBio',         24,            'phy',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_rivermes  ='riverBio',         24,            'mes',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_riverzoo  ='riverBio',         24,            'zoo',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_riverdoc  ='riverBio',         24,            'don',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_riverpoc  ='riverBio',         24,            'pon',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_riverdsi  ='riverBio',         24,            'bsi',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_rivertra  ='riverBio',         24,            'oxy',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_ndepo     =        '',        -12,               '',      .false.,      .true.,  'yearly', '',        '',        ''
-   sn_ironsed   =        '',        -12,               '',      .false.,      .true.,  'yearly', '',        '',        ''
-   sn_hydrofe   =        '',        -12,               '',      .false.,      .true.,  'yearly', '',        '',        ''
-   cn_dir       = 'rivers/bio_climatology/'  ! root directory for the location of the runoff files
-   ln_dust = .false.
-   ln_solub = .false.
+   sn_riverno3  ='bio_climatology/riverBio',         24,            'no3',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_rivernh4  ='bio_climatology/riverBio',         24,            'nh4',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_riversil  ='bio_climatology/riverBio',         24,            'sil',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_riverdia  ='bio_climatology/riverBio',         24,            'dia',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_riverphy  ='bio_climatology/riverBio',         24,            'phy',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_rivermes  ='bio_climatology/riverBio',         24,            'mes',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_riverzoo  ='bio_climatology/riverBio',         24,            'zoo',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_riverdoc  ='bio_climatology/riverBio',         24,            'don',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_riverpoc  ='bio_climatology/riverBio',         24,            'pon',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_riverdsi  ='bio_climatology/riverBio',         24,            'bsi',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_rivertra  ='bio_climatology/riverBio',         24,            'oxy',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_turb      ='riverTurbFake',                    24,           'turb',       .true.,     .false.,  'daily', '',        '',        ''
+   cn_dir       = 'rivers/'  ! root directory for the location of the runoff files
    ln_river = .true.
-   ln_ndepo = .false.
-   ln_ironsed = .false.
-   ln_ironice = .false.
-   ln_hydrofe = .false.
+   ln_turb = .true.
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampismort     !   parameters for phytoplankton sinks
