@@ -14,11 +14,11 @@ config_name: SMELT
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 11x17
+MPI decomposition: 10x17
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: hindcast
-walltime: 11:00:00
+run_id: hindcast_29sep14
+walltime: 6:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
@@ -33,8 +33,8 @@ paths:
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path above
-  coordinates: coordinates_seagrid_SalishSea3.nc
-  bathymetry: bathy_downonegrid2.nc
+  coordinates: coordinates_seagrid_SalishSea201702.nc
+  bathymetry: bathymetry_201702.nc
 
 forcing:
   # If relative, paths are taken from forcing path above
@@ -44,6 +44,8 @@ forcing:
     link to: open_boundaries
   rivers:
     link to: /home/sallen/MEOPAR/rivers
+  bfr_coef.nc:
+    link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
   restart.nc:
     link to: /home/sallen/MEOPAR/SalishSea/hindcast/19sep14/SalishSea_00039600_restart.nc
   restart_trc.nc:
@@ -58,14 +60,13 @@ namelists:
   # The only required key is namelist_cfg.
   #
   # If relative, paths are taken from current directory
-  namelist_ref:
-    - ./namelist_ref
+
   namelist_cfg:
-    - ./namelist.time.29sep14
+    - ./namelist.time.29sep14.4days
     - ./namelist.domain
-    - ./namelist.surface
+    - ./namelist.surface.newrivers
     - ./namelist.lateral.sshhindcast
-    - ./namelist.bottom
+    - ./namelist.bottom.jetty
     - ./namelist.tracer
     - ./namelist.dynamics
     - ./namelist.vertical
