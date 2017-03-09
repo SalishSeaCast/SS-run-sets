@@ -17,7 +17,7 @@ config_name: SMELT
 MPI decomposition: 6x15
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: hindcast
+run_id: hindcast-12sep14
 walltime: 6:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
