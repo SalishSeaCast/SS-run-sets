@@ -56,9 +56,6 @@ forcing:
 
 namelists:
   # If relative, paths are taken from current directory
-  namelist_ref:
-    - ../../../NEMO-3.6-code/NEMOGCM/CONFIG/SMELT_c2/EXP00/namelist_ref
-  namelist_cfg:
     - namelist.time
     - namelist.domain
     - namelist.surface
@@ -67,12 +64,17 @@ namelists:
     - namelist.tracers
     - namelist.dynamics
     - namelist.vertical
-    - namelist.compute
-
+    - namelist.compute 
+ namelist_cfg:
+    - /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/namelist_cfg_E
+  namelist_top_cfg:
+    - /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/namelist_top_cfg_E
+  namelist_smelt_cfg:
+    - /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/namelist_smelt_cfg_E
 output:
   # If relative, paths are taken from current directory
-  files: iodef_bio_1d.xml
+  files: /data/tjarniko/MEOPAR/SS-run-sets/SS-SMELT/iofiles/iodef_bio_1hr_MESZ_new.xml
   domain: domain_def.xml
-  fields: field_def.xml
+  fields: fi ii
   separate XIOS server: True
   XIOS servers: 1
