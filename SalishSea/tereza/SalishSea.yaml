@@ -22,7 +22,7 @@ config_name: SMELT_c2
 MPI decomposition: 1x7
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: example
+run_id: tereza_debug
 walltime: 05:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: tjarnik@gmail.com
@@ -30,12 +30,12 @@ email: tjarnik@gmail.com
 paths:
   # Absolute path to NEMO-code repository clone.
   # You can use ~ or $HOME if you wish.
-  NEMO-code: ../../../NEMO-3.6-code/
-  NEMO code config: ../../../NEMO-3.6-code/NEMOGCM/CONFIG/
+  NEMO-code: /data/tjarniko/MEOPAR/NEMO-3.6-code/
+  NEMO code config: /data/tjarniko/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/
   # If relative, paths below are taken from current directory
-  XIOS: ../../../XIOS/
-  forcing: ../../../NEMO-forcing/
-  runs directory: ../../SalishSea/
+  XIOS: /data/tjarniko/MEOPAR/XIOS/
+  forcing: /data/tjarniko/MEOPAR/NEMO-forcing/
+  runs directory: /data/tjarniko/MEOPAR/SalishSea/results/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -52,12 +52,12 @@ forcing:
   open_boundaries:
     link to: open_boundaries/
   rivers:
-    link to: rivers/
+    link to: /results/forcing/rivers/
 
 namelists:
   # If relative, paths are taken from current directory
   namelist_ref:
-    - ../../../NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea/EXP00/namelist_ref
+    - ../../../NEMO-3.6-code/NEMOGCM/CONFIG/SMELT_c2/EXP00/namelist_ref
   namelist_cfg:
     - namelist.time
     - namelist.domain
