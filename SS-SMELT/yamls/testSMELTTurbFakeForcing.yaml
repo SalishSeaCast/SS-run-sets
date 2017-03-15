@@ -18,7 +18,7 @@ MPI decomposition: 8x18
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: testSMELTTurb
-walltime: 20:00:00
+walltime: 10:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 
@@ -47,9 +47,9 @@ forcing:
   rivers:
     link to: rivers/
   restart.nc:
-    link to: /home/eolson/MEOPAR/NEMO-forcing/restarts/SalishSea_00144000_restart.nc
+    link to: /home/eolson/MEOPAR/NEMO-forcing/restarts/SalishSea_00741600_restart.nc
   restart_trc.nc:
-    link to: /home/eolson/MEOPAR/NEMO-forcing/restarts/SalishSea_00144000_restart_trc_newVars2_zeroTRA.nc
+    link to: /home/eolson/MEOPAR/NEMO-forcing/restarts/SalishSea_00741600_restart_trc_newVars2_zeroTRA.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -61,11 +61,11 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_cfg_20160411
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_cfg
   namelist_top_cfg:
     - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_top_cfg
   namelist_smelt_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_smelt_cfg_dailyTurb
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_smelt_cfg
 
 output:
   # If relative, paths are taken from current directory
