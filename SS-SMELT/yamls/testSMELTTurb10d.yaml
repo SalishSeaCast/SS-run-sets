@@ -61,7 +61,7 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_cfg_20160411
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_cfg_20160411_10d
   namelist_top_cfg:
     - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_top_cfg
   namelist_smelt_cfg:
