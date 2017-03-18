@@ -1,0 +1,76 @@
+# salishsea command processor run description example for NEMO-3.6
+#
+# Salish Sea Deepened Long River Domain (down by one) with:
+#     Tidal forcing
+#     Salinity and Temperate at Both open boundaries
+#  Rivers run-off forcing constant
+#  no atmospheric forcing 
+#    Constrained to no solid precipitation
+
+config_name: SalishSea
+
+# How is the domain to be distributed over the processors in the
+# i (longitude) and j (latitude) directions?
+# These values are used to set the nammpp namelist jpni & jpnj values
+# and to set the number of processors and nodes in the PBS script
+MPI decomposition: 11x24
+
+# For runs on systems that use qsub/PBS/TORQUE
+run_id: tides_a4
+walltime: 20:00:00
+# If missing, email address is set to ${USER}@eos.ubc.ca
+email: sallen@eos.ubc.ca
+
+paths:
+  # If relative, paths are taken from current directory
+  NEMO-code: /home/sallen/MEOPAR/nemo-3.6-code/
+  NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: /home/sallen/MEOPAR/XIOS/
+  forcing: /home/sallen/MEOPAR/NEMO-forcing/
+  runs directory: /global/scratch/sallen/
+
+grid:
+  # If relative, paths are taken from the grid/ directory in the forcing
+  # path above
+  coordinates: coordinates_seagrid_SalishSea201702.nc
+  bathymetry: bathymetry_201702.nc
+
+forcing:
+  # If relative, paths are taken from forcing path above
+  open_boundaries:
+    link to: open_boundaries
+  rivers:
+    link to: /home/sallen/MEOPAR/NEMO-forcing/rivers/
+  bfr_coef.nc:
+    link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
+  restart.nc:
+    link to: /home/sallen/MEOPAR/SalishSea/tides/M17_BMD/d2/SalishSea_00007200_restart.nc
+
+
+namelists:
+  # The namelist section files in the lists below will be concatenated
+  # to create a namelist file whose name is the key under which the files
+  # are listed. The keys are the names of the namelist files that NEMO-3.6
+  # expects.
+  #
+  # The only required key is namelist_cfg.
+  #
+  # If relative, paths are taken from current directory
+  namelist_cfg:
+    - ./namelist.time.20
+    - ../../hindcast/namelist.domain.20
+    - ./namelist.surface.tides
+    - ./namelist.lateral.tides
+    - ./namelist.bottom.jetty.a4
+    - ./namelist.tracer.10
+    - ./namelist.dynamics.10
+    - ../../namelist.vertical
+    - ../../namelist.compute
+
+output:
+  # If relative, paths are taken from current directory
+  files: ./iodef_tides.xml
+  domain: ../../hindcast/domain_def.xml
+  fields: ../../hindcast/field_def.xml
+  separate XIOS server: True
+  XIOS servers: 1
