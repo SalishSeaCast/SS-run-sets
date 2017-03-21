@@ -44,7 +44,7 @@ forcing:
   bfr_coef.nc:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
   restart.nc:
-    link to: /home/sallen/MEOPAR/SalishSea/tides/M17_BMD/d2/SalishSea_00007200_restart.nc
+    link to: /home/sallen/MEOPAR/SalishSea/tides/M17_BMD/d2_again/SalishSea_00007200_restart.nc
 
 
 namelists:
