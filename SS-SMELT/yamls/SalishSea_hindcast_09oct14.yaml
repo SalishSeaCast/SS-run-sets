@@ -1,12 +1,12 @@
 # salishsea command processor run description example for NEMO-3.6
 #
-# Salish Sea Long River Domain (#6) with:
+# Salish Sea Deepened Long River Domain (down by one) with:
 #     Tidal forcing
 #     Salinity and Temperate at Both open boundaries
 #  Rivers run-off forcing
 #  Atmospheric forcing with operational GEM2.5 model products
 #    Constrained to no solid precipitation
-#  SOG biological model
+#  SMELT biological model
 
 config_name: SMELT
 
@@ -14,42 +14,42 @@ config_name: SMELT
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 8x18
+MPI decomposition: 10x17
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: testSMELTTurb
-walltime: 20:00:00
+run_id: hindcast_09oct14
+walltime: 15:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
-email: eolson@eoas.ubc.ca
+email: sallen@eos.ubc.ca
 
 paths:
   # If relative, paths are taken from current directory
-  NEMO-code: /home/eolson/MEOPAR/NEMO-3.6-code/
-  XIOS: /home/eolson/MEOPAR/XIOS/
-  forcing: /home/eolson/MEOPAR/NEMO-forcing/
-  runs directory: /global/scratch/eolson/ 
+  NEMO-code: /home/sallen/MEOPAR/nemo-3.6-code/
+  NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: /home/sallen/MEOPAR/XIOS/
+  forcing: /home/sallen/MEOPAR/NEMO-forcing/
+  runs directory: /home/sallen/MEOPAR/SalishSea/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path above
-  coordinates: coordinates_seagrid_SalishSea.nc
-  bathymetry: bathy_downonegrid2.nc
+  coordinates: coordinates_seagrid_SalishSea201702.nc
+  bathymetry: bathymetry_201702.nc
 
 forcing:
   # If relative, paths are taken from forcing path above
   NEMO-atmos:
-    link to: atmospheric/
-    check link:
-      type: atmospheric
-      namelist filename: namelist_cfg
+    link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos
   open_boundaries:
-    link to: open_boundaries/
+    link to: open_boundaries
   rivers:
-    link to: rivers/
+    link to: /home/sallen/MEOPAR/rivers
+  bfr_coef.nc:
+    link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
   restart.nc:
-    link to: /home/eolson/MEOPAR/NEMO-forcing/restarts/SalishSea_00144000_restart.nc
+    link to: /home/sallen/MEOPAR/SalishSea/hindcast/04oct14/SalishSea_00061200_restart.nc
   restart_trc.nc:
-    link to: /home/eolson/MEOPAR/NEMO-forcing/restarts/SalishSea_00144000_restart_trc_newVars2_zeroTRA.nc
+    link to: /home/sallen/MEOPAR/SalishSea/hindcast/04oct14/SalishSea_00061200_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -61,16 +61,24 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_cfg_20160411
+    - ./namelist.time.09oct14
+    - ./namelist.domain
+    - ./namelist.surface.newrivers
+    - ./namelist.lateral.sshhindcast
+    - ./namelist.bottom.jetty
+    - ./namelist.tracer
+    - ./namelist.dynamics
+    - ./namelist.vertical
+    - ./namelist.compute
   namelist_top_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_top_cfg
+    - ./namelist_top_cfg_smelt
   namelist_smelt_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_smelt_cfg
+    - ./namelist_smelt_cfg
 
 output:
   # If relative, paths are taken from current directory
-  domain: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/domain_def.xml
-  fields: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/field_def_MESZ_new.xml
-  files: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/iodef_bio_1hr_MESZ_new.xml
+  files: iodef_mbuffer.xml
+  domain: domain_def.xml
+  fields: field_def.xml
   separate XIOS server: True
   XIOS servers: 1
