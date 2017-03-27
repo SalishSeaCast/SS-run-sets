@@ -57,15 +57,7 @@ forcing:
 namelists:
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - namelist.time
-    - namelist.domain
-    - namelist.surface
-    - namelist.lateral
-    - namelist.bottom
-    - namelist.tracers
-    - namelist.dynamics
-    - namelist.vertical
-    - namelist.compute 
+    - /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/namelist_cfg_E
   namelist_top_cfg:
     - /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/namelist_top_cfg_E
   namelist_smelt_cfg:
