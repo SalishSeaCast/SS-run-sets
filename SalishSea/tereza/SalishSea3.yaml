@@ -52,22 +52,17 @@ forcing:
   open_boundaries:
     link to: open_boundaries/
   rivers:
-    link to: /results/forcing/rivers/
-
+    link to: /data/tjarniko/MEOPAR/NEMO-forcing/rivers/
+  restart.nc:
+    link to: /data/tjarniko/MEOPAR/NEMO-forcing/restarts/SalishSea_00741600_restart.nc
+  restart_trc.nc: 
+    link to: /data/tjarniko/MEOPAR/NEMO-forcing/restarts/SalishSea_00741600_restart_trc_newVars2.nc
 namelists:
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - namelist.time
-    - namelist.domain
-    - namelist.surface
-    - namelist.lateral
-    - namelist.bottom
-    - namelist.tracers
-    - namelist.dynamics
-    - namelist.vertical
-    - namelist.compute 
-  namelist_top_cfg:
-    - /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/namelist_top_cfg_E
+    - /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/namelist_cfg2
+  namelist_top_cfg: 
+    - /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/namelist_top_cfg2
   namelist_smelt_cfg:
     - /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/namelist_smelt_cfg_E
 output:

@@ -6,8 +6,9 @@
                            !     = 0, UNESCO (formulation of Jackett and McDougall (1994) and of McDougall (1987) )
                            !     = 1, linear: rho(T)   = rau0 * ( 1.028 - ralpha * T )
                            !     = 2, linear: rho(T,S) = rau0 * ( rbeta * S - ralpha * T )
-   rn_alpha    =   2.0e-4  !  thermal expension coefficient (nn_eos= 1 or 2)
-   rn_beta     =   7.7e-4  !  saline  expension coefficient (nn_eos= 2)
+   rn_a0    =   2.0e-4  !  thermal expension coefficient (nn_eos= 1 or 2)
+   rn_b0     =   7.7e-4  !  saline  expension coefficient (nn_eos= 2)
+   ln_useCT = .false. ! should be set to False if using TEOS-80 or simplified equation of state
 &end
 
 &namtra_adv    !   advection scheme for tracer
