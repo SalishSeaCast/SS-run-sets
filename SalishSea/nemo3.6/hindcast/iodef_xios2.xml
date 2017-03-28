@@ -65,7 +65,7 @@
      <grid id="TumboChannel_grid">            <domain domain_ref="TumboChannel"/>             </grid>
      <grid id="WhalerBay_grid">               <domain domain_ref="WhalerBay"/>                </grid>
      <grid id="Tsawwassen_grid">              <domain domain_ref="Tsawwassen"/>               </grid>
-     <grid id="Sandheads_grid">               <domain domain_ref="Sandheads"/>                </grid>
+     <grid id="SandHeads_grid">               <domain domain_ref="SandHeads"/>                </grid>
      <grid id="PointGrey_grid">               <domain domain_ref="PointGrey"/>                </grid>
      <grid id="PointAtkinson_grid">           <domain domain_ref="PointAtkinson"/>            </grid>
      <grid id="GibsonsLanding_grid">          <domain domain_ref="GibsonsLanding"/>           </grid>
