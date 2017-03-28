@@ -65,9 +65,9 @@ namelists:
     - ./namelist.domain
     - ./namelist.surface.newrivers
     - ./namelist.lateral.sshhindcast
-    - ./namelist.bottom.jetty
-    - ./namelist.tracer
-    - ./namelist.dynamics
+    - ../tides/mar2017/namelist.bottom.jetty.a3
+    - ../tides/mar2017/namelist.tracer.10
+    - ../tides/mar2017/namelist.dynamics.10
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
