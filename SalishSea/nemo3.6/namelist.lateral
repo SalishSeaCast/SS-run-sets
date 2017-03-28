@@ -84,9 +84,9 @@
 &nambdy_index ! open boundaries - definition ("key_bdy")
 !-----------------------------------------------------------------------
     ctypebdy  = 'N'
-    nbdyind   = 896  ! i-index for segment
-    nbdybeg   = 33   ! j-index for segment beginning
-    nbdyend   = 62   ! j-index for segment end
+    nbdyind   = 896  ! j-index for segment
+    nbdybeg   = 33   ! i-index for segment beginning
+    nbdyend   = 62   ! i-index for segment end
 &end
 
 
