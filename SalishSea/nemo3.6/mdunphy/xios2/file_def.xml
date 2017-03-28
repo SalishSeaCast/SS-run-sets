@@ -1,0 +1,227 @@
+    <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="600s" min_digits="4">
+      <file_group id="1ts"   output_freq="1ts"   output_level="10" enabled=".FALSE."> </file_group> <!-- 1 time step files -->
+
+      <file_group id="10min" output_freq="600s"  output_level="10" enabled=".TRUE.">                <!-- 10 min files -->
+        <file id="BaynesSound" name="BaynesSound" description="Baynes Sound 10m tides">
+           <field_group id="BaynesSound" grid_ref="BaynesSound_grid">
+              <field field_ref="ssh" name="sossheig"/>
+           </field_group>
+        </file>
+        <file id="EastDenmanIsland" name="EastDenmanIsland" description="East Denman Island 10m tides">
+           <field_group id="EastDenmanIsland" grid_ref="EastDenmanIsland_grid">
+              <field field_ref="ssh" name="sossheig"/>
+           </field_group>
+        </file>
+      </file_group>
+
+      <file_group id="30min" output_freq="1800s" output_level="10" enabled=".TRUE.">                <!-- 30 min files -->
+        <file id="PortRenfrew" name="PortRenfrew" description="Port Renfrew 30m tides">
+           <field_group id="PortRenfrew" grid_ref="PortRenfrew_grid">
+              <field field_ref="ssh" name="sossheig"/>
+           </field_group>
+        </file>
+        <file id="SheringhamPoint" name="SheringhamPoint" description="30min interval SSH for tides">
+          <field_group id="SheringhamPoint" grid_ref="SheringhamPoint_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="Sooke" name="Sooke" description="30min interval SSH for tides">
+          <field_group id="Sooke" grid_ref="Sooke_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="PedderBay" name="PedderBay" description="30min interval SSH for tides">
+          <field_group id="PedderBay" grid_ref="PedderBay_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="Esquimalt" name="Esquimalt" description="30min interval SSH for tides">
+          <field_group id="Esquimalt" grid_ref="Esquimalt_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="Victoria" name="Victoria" description="30min interval SSH for tides">
+          <field_group id="Victoria" grid_ref="Victoria_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="CloverPoint" name="CloverPoint" description="30min interval SSH for tides">
+          <field_group id="CloverPoint" grid_ref="CloverPoint_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="FinnertyCove" name="FinnertyCove" description="30min interval SSH for tides">
+          <field_group id="FinnertyCove" grid_ref="FinnertyCove_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="PortTownsend" name="PortTownsend" description="30min interval SSH for tides">
+          <field_group id="PortTownsend" grid_ref="PortTownsend_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="FulfordHarbour" name="FulfordHarbour" description="30min interval SSH for tides">
+          <field_group id="FulfordHarbour" grid_ref="FulfordHarbour_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="PatosIsland" name="PatosIsland" description="30min interval SSH for tides">
+          <field_group id="PatosIsland" grid_ref="PatosIsland_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="TumboChannel" name="TumboChannel" description="30min interval SSH for tides">
+          <field_group id="TumboChannel" grid_ref="TumboChannel_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="WhalerBay" name="WhalerBay" description="30min interval SSH for tides">
+          <field_group id="WhalerBay" grid_ref="WhalerBay_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="Tsawwassen" name="Tsawwassen" description="30min interval SSH for tides">
+          <field_group id="Tsawwassen" grid_ref="Tsawwassen_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="Sandheads" name="Sandheads" description="30min interval SSH for tides">
+          <field_group id="Sandheads" grid_ref="Sandheads_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="PointGrey" name="PointGrey" description="30min interval SSH for tides">
+          <field_group id="PointGrey" grid_ref="PointGrey_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="PointAtkinson" name="PointAtkinson" description="30min interval SSH for tides">
+          <field_group id="PointAtkinson" grid_ref="PointAtkinson_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="GibsonsLanding" name="GibsonsLanding" description="30min interval SSH for tides">
+          <field_group id="GibsonsLanding" grid_ref="GibsonsLanding_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="HalfmoonBay" name="HalfmoonBay" description="30min interval SSH for tides">
+          <field_group id="HalfmoonBay" grid_ref="HalfmoonBay_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="IrvinesLanding" name="IrvinesLanding" description="30min interval SSH for tides">
+          <field_group id="IrvinesLanding" grid_ref="IrvinesLanding_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="PowellRiver" name="PowellRiver" description="30min interval SSH for tides">
+          <field_group id="PowellRiver" grid_ref="PowellRiver_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="Lund" name="Lund" description="30min interval SSH for tides">
+          <field_group id="Lund" grid_ref="Lund_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="TwinIslets" name="TwinIslets" description="30min interval SSH for tides">
+          <field_group id="TwinIslets" grid_ref="TwinIslets_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="CampbellRiver" name="CampbellRiver" description="30min interval SSH for tides">
+          <field_group id="CampbellRiver" grid_ref="CampbellRiver_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="MaudeIslandE" name="MaudeIslandE" description="30min interval SSH for tides">
+          <field_group id="MaudeIslandE" grid_ref="MaudeIslandE_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="NympheCove" name="NympheCove" description="30min interval SSH for tides">
+          <field_group id="NympheCove" grid_ref="NympheCove_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="SeymourNarrows" name="SeymourNarrows" description="30min interval SSH for tides">
+          <field_group id="SeymourNarrows" grid_ref="SeymourNarrows_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="BrownBay" name="BrownBay" description="30min interval SSH for tides">
+          <field_group id="BrownBay" grid_ref="BrownBay_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="ChathamPoint" name="ChathamPoint" description="30min interval SSH for tides">
+          <field_group id="ChathamPoint" grid_ref="ChathamPoint_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="KelseyBay" name="KelseyBay" description="30min interval SSH for tides">
+          <field_group id="KelseyBay" grid_ref="KelseyBay_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+        <file id="YorkeIsland" name="YorkeIsland" description="30min interval SSH for tides">
+          <field_group id="YorkeIsland" grid_ref="YorkeIsland_grid">
+             <field field_ref="ssh" name="sossheig"/>
+          </field_group>
+        </file>
+      </file_group>
+
+      <file_group id="1h"  output_freq="1h"    output_level="10" enabled=".TRUE.">              <!-- 1h files -->
+        <file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
+          <field field_ref="ssh"  name="sossheig"/>
+          <field field_ref="toce" name="votemper"/>
+          <field field_ref="soce" name="vosaline"/>
+        </file>
+        <file id="file2" name_suffix="_grid_U" description="ocean U grid variables" >
+          <field field_ref="uoce" name="vozocrtx"  />
+        </file>
+        <file id="file3" name_suffix="_grid_V" description="ocean V grid variables" >
+          <field field_ref="voce" name="vomecrty"  />
+        </file>
+        <file id="file4" name_suffix="_grid_W" description="ocean W grid variables" >
+          <field field_ref="woce" name="vovecrtz" />
+        </file>
+      </file_group>
+
+      <file_group id="2h"  output_freq="2h"  output_level="10" enabled=".FALSE."> </file_group> <!-- 2h files -->
+      <file_group id="3h"  output_freq="3h"  output_level="10" enabled=".FALSE."> </file_group> <!-- 3h files -->
+      <file_group id="4h"  output_freq="4h"  output_level="10" enabled=".FALSE."> </file_group> <!-- 4h files -->
+      <file_group id="6h"  output_freq="6h"  output_level="10" enabled=".FALSE."> </file_group> <!-- 6h files -->
+
+      <file_group id="1d"  output_freq="1d"  output_level="10" enabled=".TRUE.">                <!-- 1d files -->
+        <file id="file5" name_suffix="_grid_T" description="ocean T grid variables" >
+          <field field_ref="ssh"  name="sossheig"/>
+          <field field_ref="toce" name="votemper"/>
+          <field field_ref="soce" name="vosaline"/>
+        </file>
+        <file id="file6" name_suffix="_grid_U" description="ocean U grid variables" >
+          <field field_ref="uoce" name="vozocrtx"  />
+        </file>
+        <file id="file7" name_suffix="_grid_V" description="ocean V grid variables" >
+          <field field_ref="voce" name="vomecrty"  />
+        </file>
+        <file id="file8" name_suffix="_grid_W" description="ocean W grid variables" >
+          <field field_ref="woce" name="vovecrtz" />
+        </file>
+      </file_group>
+
+      <file_group id="3d"  output_freq="3d"  output_level="10" enabled=".FALSE."> </file_group> <!-- 3d files -->
+      <file_group id="5d"  output_freq="5d"  output_level="10" enabled=".FALSE."> </file_group> <!-- 5d files -->
+      <file_group id="1m"  output_freq="1mo" output_level="10" enabled=".FALSE."> </file_group> <!-- real monthly files -->
+      <file_group id="2m"  output_freq="2mo" output_level="10" enabled=".FALSE."> </file_group> <!-- real 2m files -->
+      <file_group id="3m"  output_freq="3mo" output_level="10" enabled=".FALSE."> </file_group> <!-- real 3m files -->
+      <file_group id="4m"  output_freq="4mo" output_level="10" enabled=".FALSE."> </file_group> <!-- real 4m files -->
+      <file_group id="6m"  output_freq="6mo" output_level="10" enabled=".FALSE."> </file_group> <!-- real 6m files -->
+      <file_group id="1y"  output_freq="1y"  output_level="10" enabled=".FALSE."> </file_group> <!-- real yearly files -->
+      <file_group id="2y"  output_freq="2y"  output_level="10" enabled=".FALSE."> </file_group> <!-- real 2y files -->
+      <file_group id="5y"  output_freq="5y"  output_level="10" enabled=".FALSE."> </file_group> <!-- real 5y files -->
+      <file_group id="10y" output_freq="10y" output_level="10" enabled=".FALSE."> </file_group> <!-- real 10y files -->
+
+   </file_definition>
+
