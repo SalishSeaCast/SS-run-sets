@@ -18,7 +18,7 @@ MPI decomposition: 10x17
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: testSMELTTurb
-walltime: 10:00:00
+walltime: 12:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 
