@@ -9,20 +9,20 @@
       <file_group id="1ts" output_freq="1ts"  output_level="10" enabled=".TRUE."/> <!-- 1 time step files -->
       <file_group id="1h" output_freq="1h"  output_level="10" enabled=".TRUE."> <!-- 1h files -->
     	<file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
-          <field field_ref="ssh"            name="sea_surface_height"/>
-          <field field_ref="toce"           name="seawater_temperature"/>
-          <field field_ref="soce"           name="seawater_salinity"/>
-          <field field_ref="bfn2"           name="buoyancy_frequency_squared"/>
-          <field field_ref="mldr10_1"       name="mixed_layer_depth"/>
+          <field field_ref="ssh"            name="sossheig"/>
+          <field field_ref="toce"           name="votemper"/>
+          <field field_ref="soce"           name="vosaline"/>
+          <field field_ref="bfn2"           name="buoy_n2"/>
+          <field field_ref="mldr10_1"       name="mixed_depth"/>
         </file>
     	<file id="file2" name_suffix="_grid_U" description="ocean U grid variables" >
-          <field field_ref="uoce"           name="ocean_current_along_x_axis"  />
+          <field field_ref="uoce"           name="vozocrtx"  />
         </file>
 	    <file id="file3" name_suffix="_grid_V" description="ocean V grid variables" >
-          <field field_ref="voce"           name="ocean_current_along_y_axis"  />
+          <field field_ref="voce"           name="vomecrty"  />
         </file>
 	    <file id="file4" name_suffix="_grid_W" description="ocean W grid variables" >
-          <field field_ref="woce"           name="ocean_vertical_velocity" />
+          <field field_ref="woce"           name="vovecrtz" />
           <field field_ref="avt"            name="vert_eddy_diff" />
           <field field_ref="avm"            name="vert_eddy_visc" />
           <field field_ref="eps" name="dissipation"/>
@@ -33,12 +33,12 @@
           <field field_ref="Si"             name="silicon"/>
           <field field_ref="DIAT"           name="diatoms"/>
           <field field_ref="PHY"            name="flagellates"/>
-          <field field_ref="MYRI"           name="Mesodinium_rubrum"/>
+          <field field_ref="MYRI"           name="ciliates"/>
           <field field_ref="MICZ"           name="microzooplankton"/>
           <field field_ref="DON"            name="dissolved_organic_nitrogen"/>
           <field field_ref="PON"            name="particulate_organic_nitrogen"/>
           <field field_ref="bSi"            name="biogenic_silicon"/>
-          <field field_ref="TRA"            name="Fraser_river_turbidity_tracer"/>
+          <field field_ref="TRA"            name="Fraser_tracer"/>
           <field field_ref="MESZ"           name="mesozooplankton"/>
         </file>
      </file_group>
@@ -49,20 +49,20 @@
 
       <file_group id="1d" output_freq="1d"  output_level="10" enabled=".TRUE."> <!-- 1d files -->
     	<file id="file6" name_suffix="_grid_T" description="ocean T grid variables" >
-          <field field_ref="ssh"            name="sea_surface_height"/>
-          <field field_ref="toce"           name="seawater_temperature"/>
-          <field field_ref="soce"           name="seawater_salinity"/>
-          <field field_ref="bfn2"           name="buoyancy_frequency_squared"/>
-          <field field_ref="mldr10_1"       name="mixed_layer_depth"/>
+          <field field_ref="ssh"            name="sossheig"/>
+          <field field_ref="toce"           name="votemper"/>
+          <field field_ref="soce"           name="vosaline"/>
+          <field field_ref="bfn2"           name="buoy_n2"/>
+          <field field_ref="mldr10_1"       name="mixed_depth"/>
         </file>
     	<file id="file7" name_suffix="_grid_U" description="ocean U grid variables" >
-          <field field_ref="uoce"           name="ocean_current_along_x_axis"  />
+          <field field_ref="uoce"           name="vozocrtx"  />
         </file>
 	    <file id="file8" name_suffix="_grid_V" description="ocean V grid variables" >
-          <field field_ref="voce"           name="ocean_current_along_y_axis"  />
+          <field field_ref="voce"           name="vomecrty"  />
         </file>
 	    <file id="file9" name_suffix="_grid_W" description="ocean W grid variables" >
-          <field field_ref="woce"           name="ocean_vertical_velocity" />
+          <field field_ref="woce"           name="vovecrtz" />
           <field field_ref="avt"            name="vert_eddy_diff" />
           <field field_ref="avm"            name="vert_eddy_visc" />
           <field field_ref="eps" name="dissipation"/>
@@ -73,12 +73,12 @@
           <field field_ref="Si"             name="silicon"/>
           <field field_ref="DIAT"           name="diatoms"/>
           <field field_ref="PHY"            name="flagellates"/>
-          <field field_ref="MYRI"           name="Mesodinium_rubrum"/>
+          <field field_ref="MYRI"           name="ciliates"/>
           <field field_ref="MICZ"           name="microzooplankton"/>
           <field field_ref="DON"            name="dissolved_organic_nitrogen"/>
           <field field_ref="PON"            name="particulate_organic_nitrogen"/>
           <field field_ref="bSi"            name="biogenic_silicon"/>
-          <field field_ref="TRA"            name="Fraser_river_turbidity_tracer"/>
+          <field field_ref="TRA"            name="Fraser_tracer"/>
           <field field_ref="MESZ"           name="mesozooplankton"/>
         </file>
       </file_group>
