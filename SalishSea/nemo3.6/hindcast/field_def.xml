@@ -376,7 +376,7 @@
          <field id="e3u"          long_name="U-cell thickness"                                       standard_name="cell_thickness"              unit="m"          grid_ref="grid_U_3D" />
          <field id="e3u_0"        long_name="Initial U-cell thickness"                               standard_name="ref_cell_thickness"          unit="m"          grid_ref="grid_U_3D"/>
          <field id="utau"         long_name="Wind Stress along i-axis"                               standard_name="surface_downward_x_stress"   unit="N/m2"                            />
-         <field id="uoce"         long_name="ocean current along i-axis"                             standard_name="sea_water_x_velocity"        unit="m/s"        grid_ref="grid_U_3D" />
+         <field id="uoce"         long_name="ocean current along x-axis"                             standard_name="sea_water_x_velocity"        unit="m/s"        grid_ref="grid_U_3D" />
          <field id="uoce_e3u"     long_name="ocean current along i-axis * e3u"                                                                   unit="m2/s"       grid_ref="grid_U_3D"  > uoce * e3u </field>
          <field id="ssu"          long_name="ocean surface current along i-axis"                                                                 unit="m/s"                             />
          <field id="sbu"          long_name="ocean bottom current along i-axis"                                                                  unit="m/s"                             />
@@ -412,7 +412,7 @@
          <field id="e3v"          long_name="V-cell thickness"                                       standard_name="cell_thickness"              unit="m"          grid_ref="grid_V_3D" />
          <field id="e3v_0"        long_name="Initial V-cell thickness"                               standard_name="ref_cell_thickness"          unit="m"          grid_ref="grid_V_3D"/>
          <field id="vtau"         long_name="Wind Stress along j-axis"                               standard_name="surface_downward_y_stress"   unit="N/m2"                            />
-         <field id="voce"         long_name="ocean current along j-axis"                             standard_name="sea_water_y_velocity"        unit="m/s"        grid_ref="grid_V_3D" />
+         <field id="voce"         long_name="ocean current along y-axis"                             standard_name="sea_water_y_velocity"        unit="m/s"        grid_ref="grid_V_3D" />
          <field id="voce_e3v"     long_name="ocean current along j-axis * e3v"                                                                   unit="m2/s"       grid_ref="grid_V_3D"  > voce * e3v </field>
          <field id="ssv"          long_name="ocean surface current along j-axis"                                                                 unit="m/s"                             />
          <field id="sbv"          long_name="ocean bottom current along j-axis"                                                                  unit="m/s"                             />
@@ -761,29 +761,29 @@
       <!-- ptrc on T grid -->
 
      <field_group id="ptrc_T" grid_ref="grid_T_3D">
-       <field id="MESZ"         long_name="Mesozooplankton Concentration"            unit="mmol/m3" />
+       <field id="MESZ"         long_name="Mesozooplankton Concentration"       standard_name="mole_concentration_of_mesozooplankton_expressed_as_nitrogen_in_sea_water"            unit="mmol m-3" />
        <field id="MESZ_E3T"     long_name="MESZ * E3T"                               unit="mmol/m2"  > MESZ * e3t </field >
-       <field id="TRA"           long_name="River Tracer"                            unit="mmol/m3" />
-       <field id="TRA_E3T"       long_name="TRA * E3T"                               unit="mmol/m2"  > TRA * e3t </field >
-       <field id="PON"          long_name="Particulate Organic N Concentration"      unit="mmol/m3" />
+       <field id="TRA"          long_name="Fraser River Turbidity Tracer"       standard_name="mole_concentration_of_artificial_river_turbidity_tracer"                             unit="1" />
+       <field id="TRA_E3T"      long_name="TRA * E3T"                               unit="mmol/m2"  > TRA * e3t </field >
+       <field id="PON"          long_name="Particulate Organic N Concentration" standard_name="mole_concentration_of_particulate_organic_matter_expressed_as_nitrogen_in_sea_water" unit="mmol m-3" />
        <field id="PON_E3T"      long_name="PON * E3T"                                unit="mmol/m2"  > PON * e3t </field >
-       <field id="Si"           long_name="Silicate Concentration"                   unit="mmol/m3" />
+       <field id="Si"           long_name="Silicon Concentration"               standard_name="mole_concentration_of_silicate_in_sea_water"                                         unit="mmol m-3" />
        <field id="Si_E3T"       long_name="Si * E3T"                                 unit="mmol/m2"  > Si * e3t </field >
-       <field id="PHY"          long_name="(Nano)Phytoplankton Concentration"        unit="mmol/m3" />
+       <field id="PHY"          long_name="Flagellates Concentration"           standard_name="mole_concentration_of_flagellates_expressed_as_nitrogen_in_sea_water"                unit="mmol m-3" />
        <field id="PHY_E3T"      long_name="PHY * E3T"                                unit="mmol/m2"  > PHY * e3t </field >
-       <field id="MICZ"         long_name="(Micro)Zooplankton Concentration"         unit="mmol/m3" />
+       <field id="MICZ"         long_name="Microzooplankton Concentration"      standard_name="mole_concentration_of_microzooplankton_expressed_as_nitrogen_in_sea_water"           unit="mmol m-3" />
        <field id="MICZ_E3T"     long_name="MICZ * E3T"                               unit="mmol/m2"  > MICZ * e3t </field >
-       <field id="DON"          long_name="Dissolved Organic N Concentration"          unit="mmol/m3" />
+       <field id="DON"          long_name="Dissolved Organic N Concentration"   standard_name="mole_concentration_of_organic_detritus_expressed_as_nitrogen_in_sea_water"           unit="mmol m-3" />
        <field id="DON_E3T"      long_name="DON * E3T"                                unit="mmol/m2"  > DON * e3t </field >
-       <field id="DIAT"         long_name="Diatoms Concentration"                    unit="mmol/m3" />
+       <field id="DIAT"         long_name="Diatoms Concentration"               standard_name="mole_concentration_of_diatoms_expressed_as_nitrogen_in_sea_water"                    unit="mmol m-3" />
        <field id="DIAT_E3T"     long_name="DIAT * E3T"                               unit="mmol/m2"  > DIAT * e3t </field >
-       <field id="MYRI"         long_name="Mesodinium rubrum Concentration"            unit="mmol/m3" />
+       <field id="MYRI"         long_name="Mesodinium rubrum Concentration"     standard_name="mole_concentration_of_mesodinium_rubrum_expressed_as_nitrogen_in_sea_water"          unit="mmol m-3" />
        <field id="MYRI_E3T"     long_name="MYRI * E3T"                               unit="mmol/m2"  > MYRI * e3t </field >
-       <field id="bSi"          long_name="biogenic Silicate Concentration"           unit="mmol/m3" />
+       <field id="bSi"          long_name="Biogenic Silicon Concentration"      standard_name="mole_concentration_of_organic_detritus_expressed_as_silicon_in_sea_water"            unit="mmol m-3" />
        <field id="bSi_E3T"      long_name="bsi * E3T"                                unit="mmol/m2"  > bSi * e3t </field >
-       <field id="NO3"          long_name="Nitrate Concentration"                    unit="mmol/m3" />
+       <field id="NO3"          long_name="Nitrate Concentration"               standard_name="mole_concentration_of_nitrate_in_sea_water"   unit="mmol m-3" />
        <field id="NO3_E3T"      long_name="NO3 * E3T"                                unit="mmol/m2"  > NO3 * e3t </field >
-       <field id="NH4"          long_name="Ammonium Concentration"                   unit="mmol/m3" />
+       <field id="NH4"          long_name="Ammonium Concentration"              standard_name="mole_concentration_of_ammonium_in_sea_water"  unit="mmol m-3" />
        <field id="NH4_E3T"      long_name="NH4 * E3T"                                unit="mmol/m2"  > NH4 * e3t </field >
 
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
