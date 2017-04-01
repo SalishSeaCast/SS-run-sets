@@ -62,10 +62,10 @@ namelists:
     - ./namelist.time.12sep14
     - ./namelist.domain.20
     - ./namelist.surface.newrivers
-    - ./namelist.lateral.sshhindcast
-    - ./namelist.bottom.jetty
-    - ./namelist.tracer
-    - ./namelist.dynamics
+    - ./namelist.lateral.sshhindcast.Pb
+    - ./namelist.bottom.jetty.005
+    - ./namelist.tracer.7
+    - ./namelist.dynamics.7
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
