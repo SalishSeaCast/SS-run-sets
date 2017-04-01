@@ -24,7 +24,6 @@ email: sallen@eos.ubc.ca
 
 paths:
   # If relative, paths are taken from current directory
-  NEMO-code: /home/sallen/MEOPAR/nemo-3.6-code/
   NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /home/sallen/MEOPAR/XIOS/
   forcing: /home/sallen/MEOPAR/NEMO-forcing/
@@ -75,8 +74,13 @@ namelists:
 
 output:
   # If relative, paths are taken from current directory
-  files: iodef_mbuffer.xml
-  domain: domain_def.xml
-  fields: field_def.xml
+  iodefs: iodef_xios2.xml
+  filedefs: file_def_xios2.xml
+  domaindefs: domain_def_xios2.xml
+  fielddefs: field_def.xml
   separate XIOS server: True
   XIOS servers: 1
+
+vcs revisions:
+  hg: 
+    - /home/sallen/MEOPAR/ss-run-sets
