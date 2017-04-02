@@ -62,7 +62,7 @@ namelists:
     - ./namelist.domain.20
     - ./namelist.surface.newrivers
     - ./namelist.lateral.sshhindcast.Pb
-    - ./namelist.bottom.jetty.005
+    - ./namelist.bottom.jetty.006
     - ./namelist.tracer.7
     - ./namelist.dynamics.7
     - ./namelist.vertical
@@ -83,4 +83,4 @@ output:
 
 vcs revisions:
   hg: 
-    - /home/sallen/MEOPAR/ss-run-sets
+    - /home/sallen/MEOPAR/SS-run-sets
