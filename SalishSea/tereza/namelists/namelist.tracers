@@ -1,0 +1,61 @@
+!! Tracers configuration
+!!
+&nameos        !   ocean physical parameters
+!-----------------------------------------------------------------------
+   nn_eos      =   0       !  type of equation of state and Brunt-Vaisala frequency
+                           !     = 0, UNESCO (formulation of Jackett and McDougall (1994) and of McDougall (1987) )
+                           !     = 1, linear: rho(T)   = rau0 * ( 1.028 - ralpha * T )
+                           !     = 2, linear: rho(T,S) = rau0 * ( rbeta * S - ralpha * T )
+   rn_a0    =   2.0e-4  !  thermal expension coefficient (nn_eos= 1 or 2)
+   rn_b0     =   7.7e-4  !  saline  expension coefficient (nn_eos= 2)
+   ln_useCT = .false. ! should be set to False if using TEOS-80 or simplified equation of state
+&end
+
+&namtra_adv    !   advection scheme for tracer
+!-----------------------------------------------------------------------
+   ln_traadv_cen2   =  .false.  !  2nd order centered scheme
+   ln_traadv_tvd    =  .true.   !  TVD scheme
+   ln_traadv_muscl  =  .false.  !  MUSCL scheme
+   ln_traadv_muscl2 =  .false.  !  MUSCL2 scheme + cen2 at boundaries
+   ln_traadv_ubs    =  .false.  !  UBS scheme
+   ln_traadv_qck    =  .false.  !  QUICKEST scheme
+&end
+
+&namtra_ldf    !   lateral diffusion scheme for tracers
+!----------------------------------------------------------------------------------
+   !                       !  Operator type:
+   ln_traldf_lap    =  .true.   !  laplacian operator
+   ln_traldf_bilap  =  .false.  !  bilaplacian operator
+   !                       !  Direction of action:
+   ln_traldf_level  =  .false.  !  iso-level
+   ln_traldf_hor    =  .false.   !  horizontal (geopotential)   (needs "key_ldfslp" when ln_sco=T)
+   ln_traldf_iso    =  .true.  !  iso-neutral                 (needs "key_ldfslp")
+   !                   !  Griffies parameters              (all need "key_ldfslp")
+   ln_traldf_grif   =  .false.  !  use griffies triads
+   ln_traldf_gdia   =  .false.  !  output griffies eddy velocities
+   ln_triad_iso     =  .false.  !  pure lateral mixing in ML
+   ln_botmix_grif   =  .false.  !  lateral mixing on bottom
+   !                       !  Coefficients
+   ! Eddy-induced (GM) advection always used with Griffies; otherwise needs "key_traldf_eiv"
+   ! Value rn_aeiv_0 is ignored unless = 0 with Held-Larichev spatially varying aeiv
+   !                                  (key_traldf_c2d & key_traldf_eiv & key_orca_r2, _r1 or _r05)
+   rn_aeiv_0        =     0.    !  eddy induced velocity coefficient [m2/s]
+   rn_aht_0         =    10.    !  horizontal eddy diffusivity for tracers [m2/s]
+   rn_ahtb_0        =     0.    !  background eddy diffusivity for ldf_iso [m2/s]
+   !                                           (normally=0; not used with Griffies)
+&end
+
+&namtra_dmp    !   tracer: T & S newtonian damping
+!-----------------------------------------------------------------------
+   ln_tradmp   =  .false.  !  add a damping termn (T) or not (F)
+   nn_hdmp     =   -1      !  horizontal shape =-1, damping in Med and Red Seas only
+                           !                   =XX, damping poleward of XX degrees (XX>0)
+                           !                      + F(distance-to-coast) + Red and Med Seas
+   nn_zdmp     =    0      !  vertical   shape =0    damping throughout the water column
+                           !                   =1 no damping in the mixing layer (kz  criteria)
+                           !                   =2 no damping in the mixed  layer (rho crieria)
+   rn_surf     =   50.     !  surface time scale of damping   [days]
+   rn_bot      =  360.     !  bottom  time scale of damping   [days]
+   rn_dep      =  800.     !  depth of transition between rn_surf and rn_bot [meters]
+   nn_file     =    0      !  create a damping.coeff NetCDF file (=1) or not (=0)
+&end
