@@ -24,11 +24,10 @@ email: sallen@eos.ubc.ca
 
 paths:
   # If relative, paths are taken from current directory
-  NEMO-code: /home/sallen/MEOPAR/nemo-3.6-code/
   NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /home/sallen/MEOPAR/XIOS/
   forcing: /home/sallen/MEOPAR/NEMO-forcing/
-  runs directory: /home/sallen/MEOPAR/SalishSea/
+  runs directory: /global/scratch/sallen/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -40,6 +39,9 @@ forcing:
   # If relative, paths are taken from forcing path above
   NEMO-atmos:
     link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos
+    check link:
+      type: atmospheric
+      namelist filename: namelist_cfg
   open_boundaries:
     link to: open_boundaries
   rivers:
@@ -64,10 +66,10 @@ namelists:
     - ./namelist.time.13sep14
     - ./namelist.domain.30
     - ./namelist.surface.newrivers
-    - ./namelist.lateral.sshhindcast
-    - ./namelist.bottom.jetty
-    - ./namelist.tracer
-    - ./namelist.dynamics
+    - ./namelist.lateral.sshhindcast.Pb
+    - ./namelist.bottom.jetty.006
+    - ./namelist.tracer.7
+    - ./namelist.dynamics.7
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
@@ -77,8 +79,15 @@ namelists:
 
 output:
   # If relative, paths are taken from current directory
-  files: iodef_mbuffer.xml
-  domain: domain_def.xml
-  fields: field_def.xml
+  iodefs: iodef_xios2.xml
+  filedefs: file_def_xios2.xml
+  domaindefs: domain_def_xios2.xml
+  fielddefs: field_def.xml
   separate XIOS server: True
   XIOS servers: 1
+
+vcs revisions:
+  hg: 
+    - /home/sallen/MEOPAR/SS-run-sets
+
+
