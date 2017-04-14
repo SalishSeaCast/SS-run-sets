@@ -39,6 +39,9 @@ forcing:
   # If relative, paths are taken from forcing path above
   NEMO-atmos:
     link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos
+    check link:
+      type: atmospheric
+      namelist filename: namelist_cfg
   open_boundaries:
     link to: open_boundaries
   rivers:
@@ -61,10 +64,10 @@ namelists:
     - ./namelist.time.12sep14
     - ./namelist.domain.20
     - ./namelist.surface.newrivers
-    - ./namelist.lateral.sshhindcast.Pb
-    - ./namelist.bottom.jetty.006
-    - ./namelist.tracer.7
-    - ./namelist.dynamics.7
+    - ./namelist.lateral.sshhindcast.V20
+    - ./namelist.bottom.jetty.a14
+    - ./namelist.tracer.9
+    - ./namelist.dynamics.9
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
