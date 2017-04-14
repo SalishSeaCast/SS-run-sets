@@ -47,6 +47,9 @@
       <domain id="NeahBay"                 domain_ref="grid_T"> <zoom_domain ibegin="16"  jbegin="385" ni="1"  nj="1"  /> </domain>
       <domain id="CherryPoint"             domain_ref="grid_T"> <zoom_domain ibegin="343" jbegin="344" ni="1"  nj="1"  /> </domain>
       <domain id="FridayHarbor"            domain_ref="grid_T"> <zoom_domain ibegin="268" jbegin="299" ni="1"  nj="1"  /> </domain>
+      <!-- Tide Points Baynes Sound-->
+      <domain id="BaynesSound"             domain_ref="grid_T"> <zoom_domain ibegin="125" jbegin="605" ni="1"  nj="1"  /> </domain>
+      <domain id="EastDenmanIsland"        domain_ref="grid_T"> <zoom_domain ibegin="136" jbegin="606" ni="1"  nj="1"  /> </domain>
    </domain_group>
 
    <domain_group id="grid_U">
