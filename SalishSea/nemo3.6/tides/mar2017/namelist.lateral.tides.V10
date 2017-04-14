@@ -76,7 +76,7 @@
 
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide          = 'open_boundaries/west/tides/SalishSea_N36_Q_west_tide_'
+   filtide          = 'open_boundaries/west/tides/SalishSea_N36_V_west_tide_'
    ln_bdytide_2ddta = .false.
    ln_bdytide_conj  = .false.
 &end
@@ -86,8 +86,8 @@
 !-----------------------------------------------------------------------
     ctypebdy  = 'N'
     nbdyind   = 896  ! i-index for segment
-    nbdybeg   = 33   ! j-index for segment beginning
-    nbdyend   = 62   ! j-index for segment end
+    nbdybeg   = 34   ! j-index for segment beginning
+    nbdyend   = 63   ! j-index for segment end
 &end
 
 
@@ -109,7 +109,7 @@
 
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide          = 'open_boundaries/north/tides/SalishSea_N36_R_North_tide_'
+   filtide          = 'open_boundaries/north/tides/SalishSea_N36_V10_North_tide_'
    ln_bdytide_2ddta = .false.
    ln_bdytide_conj  = .false.
 &end
