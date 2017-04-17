@@ -66,10 +66,10 @@ namelists:
     - ./namelist.time.14sep14
     - ./namelist.domain
     - ./namelist.surface.newrivers
-    - ./namelist.lateral.sshhindcast.Pb
-    - ./namelist.bottom.jetty.006
-    - ./namelist.tracer.7
-    - ./namelist.dynamics.7
+    - ./namelist.lateral.sshhindcast.V20
+    - ./namelist.bottom.jetty.a14
+    - ./namelist.tracer.9
+    - ./namelist.dynamics.9
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
