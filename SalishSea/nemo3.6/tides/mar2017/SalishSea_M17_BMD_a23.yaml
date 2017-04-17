@@ -13,11 +13,11 @@ config_name: SalishSea
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 5x16
+MPI decomposition: 15x18
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: tides_d1
-walltime: 2:00:00
+run_id: tides_a23
+walltime: 17:30:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
@@ -27,7 +27,7 @@ paths:
   NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /home/sallen/MEOPAR/XIOS/
   forcing: /home/sallen/MEOPAR/NEMO-forcing/
-  runs directory: /home/sallen/MEOPAR/SalishSea
+  runs directory: /home/sallen/MEOPAR/SalishSea/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -43,8 +43,9 @@ forcing:
     link to: /home/sallen/MEOPAR/NEMO-forcing/rivers/
   bfr_coef.nc:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
-  initial_strat:
-    link to: /home/sallen/MEOPAR/NEMO-forcing/initial_strat/
+  restart.nc:
+    link to: /home/sallen/MEOPAR/SalishSea/tides/M17_BMD/d2/SalishSea_00007200_restart.nc
+
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -56,10 +57,10 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - ./namelist.time.d1
-    - ../../hindcast/namelist.domain.20
+    - ./namelist.time.30
+    - ../../hindcast/namelist.domain
     - ./namelist.surface.tides
-    - ./namelist.lateral.tides.X
+    - ./namelist.lateral.tides.Y
     - ./namelist.bottom.jetty.a14
     - ./namelist.tracer.9
     - ./namelist.dynamics.9
