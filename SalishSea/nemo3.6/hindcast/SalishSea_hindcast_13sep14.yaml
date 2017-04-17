@@ -48,10 +48,10 @@ forcing:
     link to: /home/sallen/MEOPAR/rivers
   bfr_coef.nc:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
-  restart.nc:
-    link to: /home/sallen/MEOPAR/SalishSea/hindcast/12sep14/SalishSea_00004320_restart.nc
-  restart_trc.nc:
-    link to: /home/sallen/MEOPAR/SalishSea/hindcast/12sep14/SalishSea_00004320_restart_trc.nc
+
+restart:
+  restart.nc: /home/sallen/MEOPAR/SalishSea/hindcast/12sep14/SalishSea_00004320_restart.nc
+  restart_trc.nc: /home/sallen/MEOPAR/SalishSea/hindcast/12sep14/SalishSea_00004320_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -66,10 +66,10 @@ namelists:
     - ./namelist.time.13sep14
     - ./namelist.domain.30
     - ./namelist.surface.newrivers
-    - ./namelist.lateral.sshhindcast.Pb
-    - ./namelist.bottom.jetty.006
-    - ./namelist.tracer.7
-    - ./namelist.dynamics.7
+    - ./namelist.lateral.sshhindcast.V20
+    - ./namelist.bottom.jetty.a14
+    - ./namelist.tracer.9
+    - ./namelist.dynamics.9
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
