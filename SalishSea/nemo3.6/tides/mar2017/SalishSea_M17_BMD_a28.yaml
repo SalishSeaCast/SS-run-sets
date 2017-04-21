@@ -63,7 +63,7 @@ namelists:
     - ./namelist.lateral.tides.AD
     - ./namelist.bottom.jetty.a14
     - ./namelist.tracer.10
-    - ./namelist.dynamics.10
+    - ./namelist.dynamics.11
     - ../../namelist.vertical
     - ../../namelist.compute
 
