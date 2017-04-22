@@ -29,7 +29,7 @@
 !-----------------------------------------------------------------------
    nn_bathy    =    1      !  compute (=0) or read (=1) the bathymetry file
    nn_msh      =    0      !  create (=1) a mesh file or not (=0)
-   rn_hmin     =    4.     !  min depth of the ocean (>0) or min number of ocean level (<0)
+   rn_hmin     =    3.     !  min depth of the ocean (>0) or min number of ocean level (<0)
    rn_e3zps_min=    2.     !  partial step thickness is set larger than the minimum of
    rn_e3zps_rat=    0.5    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
                            !
