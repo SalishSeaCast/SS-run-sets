@@ -68,7 +68,7 @@ namelists:
     - ./namelist.lateral.sshhindcast.AC
     - ./namelist.bottom.jetty.a14
     - ./namelist.tracer.10
-    - ./namelist.dynamics.11
+    - ./namelist.dynamics.10
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
