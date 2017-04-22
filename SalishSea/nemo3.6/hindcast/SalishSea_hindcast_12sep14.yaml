@@ -34,6 +34,7 @@ grid:
   # path above
   coordinates: coordinates_seagrid_SalishSea201702.nc
   bathymetry: bathymetry_201702.nc
+  land processor elimination: bathymetry_201702.csv
 
 forcing:
   # If relative, paths are taken from forcing path above
@@ -62,12 +63,12 @@ namelists:
   # If relative, paths are taken from current directory
   namelist_cfg:
     - ./namelist.time.12sep14
-    - ./namelist.domain.20
+    - ./namelist.domain
     - ./namelist.surface.newrivers
-    - ./namelist.lateral.sshhindcast.V20
+    - ./namelist.lateral.sshhindcast.AC
     - ./namelist.bottom.jetty.a14
-    - ./namelist.tracer.9
-    - ./namelist.dynamics.9
+    - ./namelist.tracer.10
+    - ./namelist.dynamics.11
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
