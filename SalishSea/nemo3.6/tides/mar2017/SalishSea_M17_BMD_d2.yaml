@@ -60,10 +60,10 @@ namelists:
     - ./namelist.time.d2
     - ../../hindcast/namelist.domain.30
     - ./namelist.surface.tides
-    - ./namelist.lateral.tides.X
+    - ./namelist.lateral.tides.AD
     - ./namelist.bottom.jetty.a14
-    - ./namelist.tracer.9
-    - ./namelist.dynamics.9
+    - ./namelist.tracer.10
+    - ./namelist.dynamics.10
     - ../../namelist.vertical
     - ../../namelist.compute
 

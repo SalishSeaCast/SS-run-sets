@@ -16,7 +16,7 @@ config_name: SalishSea
 MPI decomposition: 15x18
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: tides_a28
+run_id: tides_a28_4
 walltime: 17:30:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
@@ -63,7 +63,7 @@ namelists:
     - ./namelist.lateral.tides.AD
     - ./namelist.bottom.jetty.a14
     - ./namelist.tracer.10
-    - ./namelist.dynamics.11
+    - ./namelist.dynamics.10
     - ../../namelist.vertical
     - ../../namelist.compute
 
