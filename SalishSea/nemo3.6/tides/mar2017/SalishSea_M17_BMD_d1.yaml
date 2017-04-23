@@ -27,7 +27,7 @@ paths:
   NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /home/sallen/MEOPAR/XIOS/
   forcing: /home/sallen/MEOPAR/NEMO-forcing/
-  runs directory: /home/sallen/MEOPAR/SalishSea
+  runs directory: /home/sallen/MEOPAR/SalishSea/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -57,12 +57,12 @@ namelists:
   # If relative, paths are taken from current directory
   namelist_cfg:
     - ./namelist.time.d1
-    - ../../hindcast/namelist.domain.20
+    - ../../hindcast/namelist.domain
     - ./namelist.surface.tides
-    - ./namelist.lateral.tides.X
+    - ./namelist.lateral.tides.AD
     - ./namelist.bottom.jetty.a14
-    - ./namelist.tracer.9
-    - ./namelist.dynamics.9
+    - ./namelist.tracer.10
+    - ./namelist.dynamics.10
     - ../../namelist.vertical
     - ../../namelist.compute
 
