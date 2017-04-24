@@ -14,7 +14,7 @@ config_name: SMELT
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 11x15
+MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: hindcast-19sep14
@@ -25,7 +25,7 @@ email: sallen@eos.ubc.ca
 paths:
   # If relative, paths are taken from current directory
   NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-  XIOS: /home/sallen/MEOPAR/XIOS/
+  XIOS: /home/sallen/MEOPAR/XIOS2/
   forcing: /home/sallen/MEOPAR/NEMO-forcing/
   runs directory: /global/scratch/sallen/
 
@@ -51,8 +51,8 @@ forcing:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /home/sallen/MEOPAR/SalishSea/hindcast/14sep14/SalishSea_00018000_restart.nc
-  restart_trc.nc: /home/sallen/MEOPAR/SalishSea/hindcast/14sep14/SalishSea_00018000_restart_trc.nc
+  restart.nc: /home/sallen/MEOPAR/SalishSea/hindcast/14sep14/SalishSea_00015120_restart.nc
+  restart_trc.nc: /home/sallen/MEOPAR/SalishSea/hindcast/14sep14/SalishSea_00015120_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -67,10 +67,10 @@ namelists:
     - ./namelist.time.19sep14
     - ./namelist.domain
     - ./namelist.surface.newrivers
-    - ./namelist.lateral.sshhindcast.V20
+    - ./namelist.lateral.sshhindcast.AC
     - ./namelist.bottom.jetty.a14
-    - ./namelist.tracer.9
-    - ./namelist.dynamics.9
+    - ./namelist.tracer.1
+    - ./namelist.dynamics.1
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
