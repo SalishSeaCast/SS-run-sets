@@ -34,6 +34,7 @@ grid:
   # path above
   coordinates: coordinates_seagrid_SalishSea201702.nc
   bathymetry: bathymetry_201702.nc
+  land processor elimination: bathymetry_201702.csv
 
 forcing:
   # If relative, paths are taken from forcing path above
@@ -50,8 +51,8 @@ forcing:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /home/sallen/MEOPAR/SalishSea/hindcast/12sep14/SalishSea_00004320_restart.nc
-  restart_trc.nc: /home/sallen/MEOPAR/SalishSea/hindcast/12sep14/SalishSea_00004320_restart_trc.nc
+  restart.nc: /home/sallen/MEOPAR/SalishSea/hindcast/12sep14/SalishSea_00002160_restart.nc
+  restart_trc.nc: /home/sallen/MEOPAR/SalishSea/hindcast/12sep14/SalishSea_00002160_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -64,12 +65,12 @@ namelists:
   # If relative, paths are taken from current directory
   namelist_cfg:
     - ./namelist.time.13sep14
-    - ./namelist.domain.30
+    - ./namelist.domain
     - ./namelist.surface.newrivers
-    - ./namelist.lateral.sshhindcast.V20
+    - ./namelist.lateral.sshhindcast.AC
     - ./namelist.bottom.jetty.a14
-    - ./namelist.tracer.9
-    - ./namelist.dynamics.9
+    - ./namelist.tracer.10
+    - ./namelist.dynamics.10
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
