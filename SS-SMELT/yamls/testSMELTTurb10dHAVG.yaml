@@ -17,7 +17,7 @@ config_name: SMELT
 MPI decomposition: 8x18
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: SMELTTurbHrly
+run_id: SMELTTurbDaily
 walltime: 20:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
@@ -65,7 +65,7 @@ namelists:
   namelist_top_cfg:
     - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_top_cfg
   namelist_smelt_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_smelt_cfg_hrlyTurb
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_smelt_cfg_dailyTurbHAVG
 
 output:
   # If relative, paths are taken from current directory
