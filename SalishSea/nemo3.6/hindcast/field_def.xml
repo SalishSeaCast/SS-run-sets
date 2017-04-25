@@ -806,69 +806,30 @@
 
      <!-- PISCES additional diagnostics on T grid  -->
 
-     <field_group id="diad_T" grid_ref="grid_T_2D">
-       <field id="PH"          long_name="PH"                                      unit="1"          grid_ref="grid_T_3D" />
-       <field id="CO3"         long_name="Bicarbonates"                            unit="mol/m3"     grid_ref="grid_T_3D" />
-       <field id="CO3sat"      long_name="CO3 saturation"                          unit="mol/m3"     grid_ref="grid_T_3D" />
-       <field id="PAR"         long_name="Photosynthetically Available Radiation"  unit="W/m2"       grid_ref="grid_T_3D" />
-       <field id="PARDM"       long_name="Daily mean PAR"                          unit="W/m2"       grid_ref="grid_T_3D" />
-       <field id="PPPHY"       long_name="Primary production of nanophyto"         unit="mol/m3/s"   grid_ref="grid_T_3D" />
-       <field id="PPPHY2"      long_name="Primary production of diatoms"           unit="mol/m3/s"   grid_ref="grid_T_3D" />
-       <field id="PPNEWN"      long_name="New Primary production of nanophyto"     unit="mol/m3/s"   grid_ref="grid_T_3D" />
-       <field id="PPNEWD"      long_name="New Primary production of diatoms"       unit="mol/m3/s"   grid_ref="grid_T_3D" />
-       <field id="PBSi"        long_name="Primary production of Si diatoms"        unit="mol/m3/s"   grid_ref="grid_T_3D" />
-       <field id="PFeN"        long_name="Primary production of nano iron"         unit="mol/m3/s"   grid_ref="grid_T_3D" />
-       <field id="PFeD"        long_name="Primary production of diatoms iron"      unit="mol/m3/s"   grid_ref="grid_T_3D" />
-       <field id="xfracal"     long_name="Calcifying fraction"                     unit="1"          grid_ref="grid_T_3D" />
-       <field id="PCAL"        long_name="Calcite production"                      unit="mol/m3/s"   grid_ref="grid_T_3D" />
-       <field id="DCAL"        long_name="Calcite dissolution"                     unit="mol/m3/s"   grid_ref="grid_T_3D" />
-       <field id="GRAZ1"       long_name="Grazing by microzooplankton"             unit="mol/m3/s"   grid_ref="grid_T_3D" />
-       <field id="GRAZ2"       long_name="Grazing by mesozooplankton"              unit="mol/m3/s"   grid_ref="grid_T_3D" />
-       <field id="REMIN"       long_name="Oxic remineralization of OM"             unit="mol/m3/s"   grid_ref="grid_T_3D" />
-       <field id="DENIT"       long_name="Anoxic remineralization of OM"           unit="mol/m3/s"   grid_ref="grid_T_3D" />
-       <field id="Nfix"        long_name="Nitrogen fixation"                       unit="mol/m3/s"   grid_ref="grid_T_3D" />
-       <field id="Mumax"       long_name="Maximum growth rate"                     unit="s-1"        grid_ref="grid_T_3D" />
-       <field id="MuN"         long_name="Realized growth rate for nanophyto"      unit="s-1"        grid_ref="grid_T_3D" />
-       <field id="MuD"         long_name="Realized growth rate for diatomes"       unit="s-1"        grid_ref="grid_T_3D" />
-       <field id="LNnut"       long_name="Nutrient limitation term in Nanophyto"   unit=""           grid_ref="grid_T_3D" />
-       <field id="LDnut"       long_name="Nutrient limitation term in Diatoms"     unit=""           grid_ref="grid_T_3D" />
-       <field id="LNFe"        long_name="Iron limitation term in Nanophyto"       unit=""           grid_ref="grid_T_3D" />
-       <field id="LDFe"        long_name="Iron limitation term in Diatoms"         unit=""           grid_ref="grid_T_3D" />
-       <field id="LNlight"     long_name="Light limitation term in Nanophyto"      unit=""           grid_ref="grid_T_3D" />
-       <field id="LDlight"     long_name="Light limitation term in Diatoms"        unit=""           grid_ref="grid_T_3D" />
-       <field id="Fe2"         long_name="Iron II concentration"                   unit="nmol/m3"    grid_ref="grid_T_3D" />
-       <field id="Fe3"         long_name="Iron III concentration"                  unit="nmol/m3"    grid_ref="grid_T_3D" />
-       <field id="FeL1"        long_name="Complexed Iron concentration with L1"    unit="nmol/m3"    grid_ref="grid_T_3D" />
-       <field id="FeL2"        long_name="Complexed Iron concentration with L2"    unit="nmol/m3"    grid_ref="grid_T_3D" />
-       <field id="FeP"         long_name="Precipitated Iron III"                   unit="nmol/m3"    grid_ref="grid_T_3D" />
-       <field id="TL1"         long_name="Total L1 concentration"                  unit="nmol/m3"    grid_ref="grid_T_3D" />
-       <field id="TL2"         long_name="Total L2 concentration"                  unit="nmol/m3"    grid_ref="grid_T_3D" />
-       <field id="pdust"       long_name="dust concentration"                      unit="g/m3"                            />
-       <field id="Totlig"      long_name="Total ligand concentation"               unit="nmol/m3"    grid_ref="grid_T_3D" />
-       <field id="Biron"       long_name="Bioavailable iron"                       unit="nmol/m3"    grid_ref="grid_T_3D" />
-       <field id="Sdenit"      long_name="Nitrate reduction in the sediments"      unit="molN/m2/s"                       />
-       <field id="SedCal"      long_name="Calcite burial in the sediments"         unit="molC/m2/s"                       />
-       <field id="SedSi"       long_name="Silicon burial in the sediments"         unit="molSi/m2/s"                      />
-       <field id="SedC"        long_name="Organic C burial in the sediments"       unit="molC/m2/s"                       />
-       <field id="Ironice"     long_name="Iron input/uptake due to sea ice"        unit="mol/m2/s"                        />
-       <field id="HYDR"        long_name="Iron input from hydrothemal vents"       unit="mol/m2/s"   grid_ref="grid_T_3D" />
-       <field id="EPC100"      long_name="Export of carbon particles at 100 m"     unit="mol/m2/s"                        />
-       <field id="EPFE100"     long_name="Export of biogenic iron at 100 m"        unit="mol/m2/s"                        />
-       <field id="EPSI100"     long_name="Export of Silicate at 100 m"             unit="mol/m2/s"                        />
-       <field id="EPCAL100"    long_name="Export of Calcite at 100 m"              unit="mol/m2/s"                        />
-       <field id="EXPC"        long_name="Export of carbon"                        unit="mol/m2/s"   grid_ref="grid_T_3D" />
-       <field id="EXPFE"       long_name="Export of biogenic iron"                 unit="mol/m2/s"   grid_ref="grid_T_3D" />
-       <field id="EXPSI"       long_name="Export of Silicate"                      unit="mol/m2/s"   grid_ref="grid_T_3D" />
-       <field id="EXPCAL"      long_name="Export of Calcite"                       unit="mol/m2/s"   grid_ref="grid_T_3D" />
-       <field id="Cflx"        long_name="DIC flux"                                unit="mol/m2/s"                        />
-       <field id="Oflx"        long_name="Oxygen flux"                             unit="mol/m2/s"                        />
-       <field id="Kg"          long_name="Gas transfer"                            unit="mol/m2/s/uatm"                   />
-       <field id="Dpco2"       long_name="Delta CO2"                               unit="uatm"                            />
-       <field id="Dpo2"        long_name="Delta O2"                                unit="uatm"                            />
+     <field_group id="diad_T" grid_ref="grid_T_3D">
+       <field id="PAR"         long_name="Photosynthetically Available Radiation"  unit="W/m2"          grid_ref="grid_T_3D" />
+       <field id="PPDIAT"      long_name="Primary production of diatoms"           unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PPPHY"       long_name="Primary production of small phyto"       unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PPMRUB"      long_name="Primary production of M. rubrum"         unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PPDIATNO3"   long_name="New Primary production of diatoms"       unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PPPHYNO3"    long_name="New Primary production of small phyto"   unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PPMRUBNO3"   long_name="New Primary production of M. rubrum"     unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="HetMRub"     long_name="Heterotrophic growth of M. rubrum"       unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMESZDIAT"  long_name="Mesozoo grazing on diatoms"              unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMESZMRUB"  long_name="Mesozoo grazing on M. rubrum"            unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMESZPHY"   long_name="Mesozoo grazing on small phyto"          unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMESZPON"   long_name="Mesozoo grazing on PON"                  unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMESZMICZ"  long_name="Mesozoo grazing on microzooplankton"     unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMICZDIAT"  long_name="Microzoo grazing on diatoms"             unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMICZMRUB"  long_name="Microzoo grazing on M. rubrum"           unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMICZPHY"   long_name="Microzoo grazing on small phyto"         unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMICZPON"   long_name="Microzoo grazing on PON"                 unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMICZMICZ"  long_name="Microzoo grazing on microzooplankton"    unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="MORTPHY"     long_name="Small phyto mortality"                   unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="MORTMRUB"    long_name="M. rubrum mortality"                     unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="MORTDIAT"    long_name="Diatom mortality"                        unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="TQ10"        long_name="Temperature dependence of bio rates"     unit="1"             grid_ref="grid_T_3D" />
        <field id="Heup"        long_name="Euphotic layer depth"                    unit="m"                               />
-       <field id="Irondep"     long_name="Iron deposition from dust"               unit="mol/m2/s"                        />
-       <field id="Ironsed"     long_name="Iron deposition from sediment"           unit="mol/m2/s"   grid_ref="grid_T_3D" />
-
 
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
        <field id="EPN100"      long_name="Particulate number flux at 100 m"        unit="mol/m2/s"                        />
