@@ -93,7 +93,7 @@
           <field field_ref="avm"            name="vert_eddy_visc" />
           <field field_ref="eps" name="dissipation"/>
         </file>
-        <file id="file12" name_suffix="_ptrc_T" description="sog variables" >
+        <file id="file12" name_suffix="_ptrc_T" description="biogeochemical variables" >
           <field field_ref="NO3"            name="nitrate"/>
           <field field_ref="NH4"            name="ammonium"/>
           <field field_ref="Si"             name="silicon"/>
