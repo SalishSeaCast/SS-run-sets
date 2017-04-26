@@ -13,11 +13,11 @@ config_name: SalishSea
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 15x18
+MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: tides_a28_4
-walltime: 17:30:00
+run_id: tides_a28_12x22
+walltime: 00:10:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
@@ -44,7 +44,7 @@ forcing:
   bfr_coef.nc:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
   restart.nc:
-    link to: /home/sallen/MEOPAR/SalishSea/tides/M17_BMD/d2/SalishSea_00007200_restart.nc
+    link to: /home/sallen/MEOPAR/SalishSea/tides/M17_BMD/d2/SalishSea_00004320_restart.nc
 
 
 namelists:
