@@ -18,7 +18,7 @@ MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: hindcast-19sep14
-walltime: 15:00:00
+walltime: 10:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
@@ -67,10 +67,10 @@ namelists:
     - ./namelist.time.19sep14
     - ./namelist.domain
     - ./namelist.surface.newrivers
-    - ./namelist.lateral.sshhindcast.AC
+    - ./namelist.lateral.hindcast
     - ./namelist.bottom.jetty.a14
     - ./namelist.tracer.1
-    - ./namelist.dynamics.1
+    - ./namelist.dynamics
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
