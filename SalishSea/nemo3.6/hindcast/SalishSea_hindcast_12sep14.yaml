@@ -25,7 +25,7 @@ email: sallen@eos.ubc.ca
 paths:
   # If relative, paths are taken from current directory
   NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-  XIOS: /home/sallen/MEOPAR/XIOS/
+  XIOS: /home/sallen/MEOPAR/XIOS2/
   forcing: /home/sallen/MEOPAR/NEMO-forcing/
   runs directory: /global/scratch/sallen/
 
@@ -67,8 +67,8 @@ namelists:
     - ./namelist.surface.newrivers
     - ./namelist.lateral.sshhindcast.AC
     - ./namelist.bottom.jetty.a14
-    - ./namelist.tracer.10
-    - ./namelist.dynamics.10
+    - ./namelist.tracer.1
+    - ./namelist.dynamics
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
