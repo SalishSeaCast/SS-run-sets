@@ -14,18 +14,18 @@ config_name: SMELT
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 6x15
+MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: hindcast-13sep14
-walltime: 3:45:00
+walltime: 00:40:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
 paths:
   # If relative, paths are taken from current directory
   NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-  XIOS: /home/sallen/MEOPAR/XIOS/
+  XIOS: /home/sallen/MEOPAR/XIOS2/
   forcing: /home/sallen/MEOPAR/NEMO-forcing/
   runs directory: /global/scratch/sallen/
 
@@ -67,10 +67,10 @@ namelists:
     - ./namelist.time.13sep14
     - ./namelist.domain
     - ./namelist.surface.newrivers
-    - ./namelist.lateral.sshhindcast.AC
+    - ./namelist.lateral.hindcast
     - ./namelist.bottom.jetty.a14
-    - ./namelist.tracer.10
-    - ./namelist.dynamics.10
+    - ./namelist.tracer.1
+    - ./namelist.dynamics
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
