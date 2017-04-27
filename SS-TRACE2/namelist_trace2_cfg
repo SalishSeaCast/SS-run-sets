@@ -35,6 +35,6 @@
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 !              !  file name          ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !              !                     !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename       !
-   sn_turb     ='riverTurbDaily',                 24,           'turb',       .true.,  false.,  'daily',    '',        '',        ''
+   sn_turb  ='river_turb/riverTurbDaily2',       24,           'turb',       .true.,  false.,  'daily',    '',        '',        ''
    cn_dir      = 'rivers/'  ! root directory for the location of the runoff files
 /
