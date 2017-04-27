@@ -18,7 +18,7 @@ MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: hindcast-12sep14
-walltime: 01:00:00
+walltime: 01:42:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
