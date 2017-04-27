@@ -41,6 +41,8 @@
           <field field_ref="TRA"            name="Fraser_tracer"/>
           <field field_ref="MESZ"           name="mesozooplankton"/>
         </file>
+     </file_group>
+      <file_group id="2h" output_freq="2h"  split_freq="1d" output_level="10" enabled=".TRUE."> <!-- 2h files -->
         <file id="file6" name_suffix="_dia1_T" description="smelt diagnostics A" >
           <field field_ref="PAR"      />
           <field field_ref="PPDIAT"      />
@@ -55,20 +57,7 @@
           <field field_ref="MORTDIAT"      />
           <field field_ref="TQ10"       />
         </file>
-        <file id="file7" name_suffix="_dia2_T" description="smelt diagnostics B" >
-          <field field_ref="GRMESZDIAT"      />
-          <field field_ref="GRMESZMRUB"      />
-          <field field_ref="GRMESZPHY"      />
-          <field field_ref="GRMESZPON"      />
-          <field field_ref="GRMESZMICZ"       />
-          <field field_ref="GRMICZDIAT"      />
-          <field field_ref="GRMICZMRUB"       />
-          <field field_ref="GRMICZPHY"      />
-          <field field_ref="GRMICZPON"      />
-          <field field_ref="GRMICZMICZ"      />
-        </file>
      </file_group>
-      <file_group id="2h" output_freq="2h"  output_level="10" enabled=".TRUE."/> <!-- 2h files -->
       <file_group id="3h" output_freq="3h"  output_level="10" enabled=".TRUE."/> <!-- 3h files -->
       <file_group id="4h" output_freq="4h"  output_level="10" enabled=".FALSE."/> <!-- 4h files -->
       <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."/> <!-- 6h files -->
@@ -107,6 +96,19 @@
           <field field_ref="TRA"            name="Fraser_tracer"/>
           <field field_ref="MESZ"           name="mesozooplankton"/>
         </file>
+        <file id="file7" name_suffix="_dia2_T" description="smelt diagnostics B" >
+          <field field_ref="GRMESZDIAT"      />
+          <field field_ref="GRMESZMRUB"      />
+          <field field_ref="GRMESZPHY"      />
+          <field field_ref="GRMESZPON"      />
+          <field field_ref="GRMESZMICZ"       />
+          <field field_ref="GRMICZDIAT"      />
+          <field field_ref="GRMICZMRUB"       />
+          <field field_ref="GRMICZPHY"      />
+          <field field_ref="GRMICZPON"      />
+          <field field_ref="GRMICZMICZ"      />
+        </file>
+
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
       <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE."/>  <!-- 5d files -->
