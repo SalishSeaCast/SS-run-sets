@@ -24,18 +24,18 @@ MPI decomposition: 1x7
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: example
 walltime: 05:00:00
-# If missing, email address is set to ${USER}@eos.ubc.ca
-email: sallen@eos.ubc.ca
+# If missing, email address is set to ${USER}@eoas.ubc.ca
+email: SETME@eoas.ubc.ca
 
 paths:
   # Absolute path to NEMO-code repository clone.
   # You can use ~ or $HOME if you wish.
-  NEMO-code: ../../../NEMO-3.6-code/
-  NEMO code config: ../../../NEMO-3.6-code/NEMOGCM/CONFIG/
+  NEMO-code: $HOME/MEOPAR/NEMO-3.6-code/
+  NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/
   # If relative, paths below are taken from current directory
-  XIOS: ../../../XIOS/
-  forcing: ../../../NEMO-forcing/
-  runs directory: ../../../SalishSea/
+  XIOS: $HOME/MEOPAR/XIOS/
+  forcing: $HOME/MEOPAR/NEMO-forcing/
+  runs directory: $HOME/MEOPAR/SalishSea/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -57,7 +57,7 @@ forcing:
 namelists:
   # If relative, paths are taken from current directory
   namelist_ref:
-    - ../../../NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea/EXP00/namelist_ref
+    - /home/SETME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea/EXP00/namelist_ref
   namelist_cfg:
     - namelist.time
     - namelist.domain
