@@ -25,7 +25,7 @@ namelists:
   - ./namelist.time.29apr17
   - /home/sallen/MEOPAR/SS-run-sets/SalishSea/nemo3.6/namelist.domain
   - /home/sallen/MEOPAR/SS-run-sets/SalishSea/nemo3.6/nowcast/namelist.surface
-  - /home/sallen/MEOPAR/SS-run-sets/SalishSea/nemo3.6/namelist.lateral
+  - ../namelist.lateral.orcinusssh
   - /home/sallen/MEOPAR/SS-run-sets/SalishSea/nemo3.6/namelist.bottom
   - /home/sallen/MEOPAR/SS-run-sets/SalishSea/nemo3.6/namelist.tracer
   - /home/sallen/MEOPAR/SS-run-sets/SalishSea/nemo3.6/namelist.dynamics
