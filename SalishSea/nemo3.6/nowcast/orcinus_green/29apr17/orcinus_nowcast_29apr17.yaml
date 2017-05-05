@@ -17,7 +17,7 @@ forcing:
 grid:
   bathymetry: bathy_downonegrid2.nc
   coordinates: coordinates_seagrid_SalishSea.nc
-  land processor elimination: salish.csv
+  land processor elimination: bathy_downonegrid2.csv
   
 namelists:
   namelist_cfg:
