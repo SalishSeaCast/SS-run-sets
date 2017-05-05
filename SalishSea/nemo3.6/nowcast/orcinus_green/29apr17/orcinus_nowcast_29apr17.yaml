@@ -8,12 +8,13 @@ forcing:
     link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos
   open_boundaries:
     link to: open_boundaries
-  restart.nc:
-    link to: /home/sallen/MEOPAR/SalishSea/nowcast-green/28apr17/SalishSea_00977040_restart.nc
-  restart_trc.nc:
-    link to: /home/sallen/MEOPAR/SalishSea/nowcast-green/28apr17/SalishSea_00977040_restart_trc.nc
   rivers:
     link to: /home/sallen/MEOPAR/rivers
+
+restart:
+  restart.nc: /home/sallen/MEOPAR/SalishSea/nowcast-green/28apr17/SalishSea_00977040_restart.nc
+  restart_trc.nc: /home/sallen/MEOPAR/SalishSea/nowcast-green/28apr17/SalishSea_00977040_restart_trc.nc
+
 grid:
   bathymetry: bathy_downonegrid2.nc
   coordinates: coordinates_seagrid_SalishSea.nc
