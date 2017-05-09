@@ -25,15 +25,15 @@ MPI decomposition: 11x26
 run_id: example
 walltime: 00:15:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
-email: sallen@eos.ubc.ca
+email: vdo@eoas.ubc.ca
 
 paths:
   # If relative, paths are taken from current directory
   NEMO-code: $HOME/MEOPAR/NEMO-3.6-code/
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/
-  XIOS: ../../../XIOS/
-  forcing: ../../../NEMO-forcing/
-  runs directory: ../../../SalishSea/
+  XIOS: $HOME/MEOPAR/XIOS/
+  forcing: $HOME/MEOPAR/NEMO-forcing/
+  runs directory: $HOME/MEOPAR/SalishSea/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -44,7 +44,7 @@ grid:
 forcing:
   # If relative, paths are taken from forcing path above
   NEMO-atmos:
-    link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos/
+    link to: /home/vdo/MEOPAR/GEM2.5/ops/NEMO-atmos/
   initial_strat:
     link to: initial_strat/
   open_boundaries:
