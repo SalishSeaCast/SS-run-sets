@@ -1,0 +1,42 @@
+# salishsea command processor run description example
+#
+# Salish Sea full domain with:
+#   nowcast + blasted out Fraser River
+
+config_name: SalishSea
+
+# For runs on systems that use qsub/PBS/TORQUE; e.g. Westgrid
+run_id: blastFraser_15may15
+walltime: 3:00:00
+
+MPI decomposition: 6x14
+
+paths:
+  # If relative, paths are taken from current directory
+  NEMO-code: ../../../../NEMO-code/
+  forcing: ../../../../NEMO-forcing/
+  runs directory: ../../../../SalishSea/
+
+grid:
+  # If relative, paths are taken from forcing path above
+  coordinates: coordinates_seagrid_SalishSea.nc
+  bathymetry: bathy_with_Fraser.nc
+
+forcing:
+  # If relative, paths are taken from forcing path above
+  atmospheric: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos/
+  # The path and name of a restart file may be used as initial conditions
+  initial conditions: /home/sallen/MEOPAR/SalishSea/nowcast/14may15/SalishSea_00034560_restart.nc
+  open boundaries: /home/sallen/MEOPAR/likenowcast/open_boundaries/
+  rivers: /home/sallen/MEOPAR/rivers/
+
+namelists:
+  # If relative, paths are taken from current directory
+  - namelist.time.15may15
+  - namelist.domain
+  - namelist.surface.nowcast
+  - namelist.lateral.nowcast
+  - namelist.bottom
+  - namelist.tracers
+  - namelist.dynamics
+  - namelist.compute.6x14
