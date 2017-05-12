@@ -60,7 +60,7 @@
    ln_dynldf_hor    =  .true.  !  horizontal (geopotential)   (require "key_ldfslp" in s-coord.)
    ln_dynldf_iso    =  .false.   !  iso-neutral                 (require "key_ldfslp")
    !                            !  Coefficient
-   rn_ahm_0_lap     =   1.4     !  horizontal laplacian eddy viscosity   [m2/s]
+   rn_ahm_0_lap     =   1.5     !  horizontal laplacian eddy viscosity   [m2/s]
    rn_ahmb_0        =     0.    !  background eddy viscosity for ldf_iso [m2/s]
    rn_ahm_0_blp     =  -1.0e+10 !  horizontal bilaplacian eddy viscosity [m4/s]
    rn_cmsmag_1      =     3.    !  constant in laplacian Smagorinsky viscosity
