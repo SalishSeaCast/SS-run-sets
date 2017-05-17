@@ -66,7 +66,7 @@ namelists:
 
   namelist_cfg:
     - ./namelist.time.26jun15
-    - ./namelist.domain
+    - ./namelist.domain.30
     - ./namelist.surface.newrivers
     - ./namelist.lateral.hindcast
     - ./namelist.bottom.jetty.a14
