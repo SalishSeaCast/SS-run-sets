@@ -7,14 +7,17 @@
    jpidta      =     398               !  1st lateral dimension ( >= jpi )
    jpjdta      =     898               !  2nd    "         "    ( >= jpj )
    jpkdta      =      40               !  number of levels      ( >= jpk )
-   jpiglo      =     398               !  1st dimension of global domain --> i =jpidta
-   jpjglo      =     898               !  2nd    -                  -    --> j =jpjdta
+   jpiglo      =     284               !  1st dimension of global domain --> i =jpidta
+   jpjglo      =     564               !  2nd    -                  -    --> j =jpjdta
+   jpizoom     =     115               !  left bottom (i,j) indices of the zoom
+   jpjzoom     =     335               !  in data domain indices
    jperio      =       0               !  lateral cond. type (between 0 and 6)
                                        !  = 0 closed                 ;   = 1 cyclic East-West
                                        !  = 2 equatorial symmetric   ;   = 3 North fold T-point pivot
                                        !  = 4 cyclic East-West AND North fold T-point pivot
                                        !  = 5 North fold F-point pivot
                                        !  = 6 cyclic East-West AND North fold F-point pivot
+
 &end
 
 
@@ -30,8 +33,8 @@
    nn_bathy    =    1      !  compute (=0) or read (=1) the bathymetry file
    nn_msh      =    0      !  create (=1) a mesh file or not (=0)
    rn_hmin     =    3.     !  min depth of the ocean (>0) or min number of ocean level (<0)
-   rn_e3zps_min=    2.     !  partial step thickness is set larger than the minimum of
-   rn_e3zps_rat=    0.5    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
+   rn_e3zps_min=    5.     !  partial step thickness is set larger than the minimum of
+   rn_e3zps_rat=    0.2    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
                            !
    rn_rdt      =   40.     !  time step for the dynamics (and tracer if nn_acc=0)
    rn_atfp     =    0.1    !  asselin time filter parameter
@@ -73,8 +76,8 @@
 !-----------------------------------------------------------------------
 !              ! file name                       ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
 !              !                                 ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
- sn_tem        = 'TS20mar2016DeepSmooth.nc',           -12,     'votemper', .false., .true.,  'yearly', '',        ''
- sn_sal        = 'TS20mar2016DeepSmooth.nc',           -12,     'vosaline', .false., .true.,  'yearly', '',        ''
+ sn_tem        = 'winter2017_downbyone2.nc',           -12,     'votemper', .false., .true.,  'yearly', '',        ''
+ sn_sal        = 'winter2017_downbyone2.nc',           -12,     'vosaline', .false., .true.,  'yearly', '',        ''
 
  cn_dir        = 'initial_strat/'  ! directory containing initial condition files
  ln_tsd_init   = .true.            ! Initialisation of ocean T & S with T &S input data (T) or not (F)

@@ -12,12 +12,12 @@
    nn_bfr      =    2       !  type of bottom friction :   = 0 : free slip,  = 1 : linear friction
                             !                              = 2 : nonlinear friction
    rn_bfri1    =    4.e-4   !  bottom drag coefficient (linear case)
-   rn_bfri2    =    7.5e-3  !  bottom drag coefficient (non linear case). Minimum coeft if ln_loglayer=T
+   rn_bfri2    =    1.2e-2  !  bottom drag coefficient (non linear case). Minimum coeft if ln_loglayer=T
    rn_bfri2_max =   2.      !  max. bottom drag coefficient (non linear case and ln_loglayer=T)
    rn_bfeb2    =    2.5e-3  !  bottom turbulent kinetic energy background  (m2/s2)
-   rn_bfrz0    =    0.07    !  bottom roughness [m] if ln_loglayer=T
-   ln_bfr2d    = .true.    !  horizontal variation of the bottom friction coef (read a 2D mask file )
-   rn_bfrien   =    400.     !  local multiplying factor of bfr (ln_bfr2d=T)
+   rn_bfrz0    =    0.25    !  bottom roughness [m] if ln_loglayer=T
+   ln_bfr2d    = .false.    !  horizontal variation of the bottom friction coef (read a 2D mask file )
+   rn_bfrien   =    50.     !  local multiplying factor of bfr (ln_bfr2d=T)
    rn_tfri1    =    4.e-4   !  top drag coefficient (linear case)
    rn_tfri2    =    2.5e-3  !  top drag coefficient (non linear case). Minimum coeft if ln_loglayer=T
    rn_tfri2_max =   1.e-1   !  max. top drag coefficient (non linear case and ln_loglayer=T)
@@ -27,7 +27,7 @@
    rn_tfrien   =    50.     !  local multiplying factor of tfr (ln_tfr2d=T)
 
    ln_bfrimp   = .true.     !  implicit bottom friction (requires ln_zdfexp = .false. if true)
-   ln_loglayer = .true.    !  logarithmic formulation (non linear case)
+   ln_loglayer = .true.     !  logarithmic formulation (non linear case)
 /
 !-----------------------------------------------------------------------
 &nambbc        !   bottom temperature boundary condition

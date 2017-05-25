@@ -7,7 +7,7 @@
    jpidta      =     398               !  1st lateral dimension ( >= jpi )
    jpjdta      =     898               !  2nd    "         "    ( >= jpj )
    jpkdta      =      40               !  number of levels      ( >= jpk )
-   jpiglo      =     204               !  1st dimension of global domain --> i =jpidta
+   jpiglo      =     284               !  1st dimension of global domain --> i =jpidta
    jpjglo      =     564               !  2nd    -                  -    --> j =jpjdta
    jpizoom     =     115               !  left bottom (i,j) indices of the zoom
    jpjzoom     =     335               !  in data domain indices
@@ -76,8 +76,8 @@
 !-----------------------------------------------------------------------
 !              ! file name                       ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
 !              !                                 ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
- sn_tem        = 'summer_Jun2016.nc',           -12,     'votemper', .false., .true.,  'yearly', '',        ''
- sn_sal        = 'summer_Jun2016.nc',           -12,     'vosaline', .false., .true.,  'yearly', '',        ''
+ sn_tem        = 'summer2016_downbyone2.nc',           -12,     'votemper', .false., .true.,  'yearly', '',        ''
+ sn_sal        = 'summer2016_downbyone2.nc',           -12,     'vosaline', .false., .true.,  'yearly', '',        ''
 
  cn_dir        = 'initial_strat/'  ! directory containing initial condition files
  ln_tsd_init   = .true.            ! Initialisation of ocean T & S with T &S input data (T) or not (F)
