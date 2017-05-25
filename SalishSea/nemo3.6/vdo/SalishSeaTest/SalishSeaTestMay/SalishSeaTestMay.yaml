@@ -18,8 +18,8 @@ MPI decomposition: 8x18
 #MPI decomposition: 1x7
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: test_23dec14a
-walltime: 2:00:00
+run_id: test_07may15
+walltime: 5:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: vdo@eoas.ubc.ca
 
@@ -50,7 +50,7 @@ forcing:
     link to: $HOME/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: $HOME/MEOPAR/RESTART/SalishSea_00220320_restart.nc
+  restart.nc: $HOME/MEOPAR/RESTART/SalishSea_00511920_restart.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -62,8 +62,8 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_ref:
-    - /home/vdo/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaTest/EXP00
-
+    - /home/vdo/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaTest/EXP00/namelist_ref
+ 
   namelist_cfg:
     - ./namelist.time
     - ./namelist.domain
@@ -83,4 +83,4 @@ output:
   fielddefs: field_def.xml
   separate XIOS server: True
   XIOS servers: 1
-:
+
