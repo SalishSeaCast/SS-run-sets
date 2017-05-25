@@ -22,7 +22,7 @@ config_name: SalishSeaLake
 MPI decomposition: 1x7
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: SalishSeaLakeJun
+run_id: LakeJanS0.02
 walltime: 05:00:00
 # If missing, email address is set to ${USER}@eoas.ubc.ca
 email: vdo@eoas.ubc.ca
