@@ -186,6 +186,20 @@
     <file id="file4" name_suffix="_grid_W" description="ocean W grid variables" >
       <field field_ref="woce" name="vovecrtz" />
     </file>
+    <file id="file5" name_suffix="_ptrc_T" description="smelt variables" >
+      <field field_ref="NO3"            name="nitrate"/>
+      <field field_ref="NH4"            name="ammonium"/>
+      <field field_ref="Si"             name="silicon"/>
+      <field field_ref="DIAT"           name="diatoms"/>
+      <field field_ref="PHY"            name="flagellates"/>
+      <field field_ref="MYRI"           name="ciliates"/>
+      <field field_ref="MICZ"           name="microzooplankton"/>
+      <field field_ref="DON"            name="dissolved_organic_nitrogen"/>
+      <field field_ref="PON"            name="particulate_organic_nitrogen"/>
+      <field field_ref="bSi"            name="biogenic_silicon"/>
+      <field field_ref="TRA"            name="Fraser_tracer"/>
+      <field field_ref="MESZ"           name="mesozooplankton"/>
+    </file>
   </file_group>
 
   <file_group id="2h"  output_freq="2h"  output_level="10" enabled=".FALSE."> </file_group> <!-- 2h files -->
@@ -194,18 +208,18 @@
   <file_group id="6h"  output_freq="6h"  output_level="10" enabled=".FALSE."> </file_group> <!-- 6h files -->
 
   <file_group id="1d"  output_freq="1d"  split_freq="1d" output_level="10" enabled=".TRUE.">             <!-- 1d files -->
-    <file id="file5" name_suffix="_grid_T" description="ocean T grid variables" >
+    <file id="file6" name_suffix="_grid_T" description="ocean T grid variables" >
       <field field_ref="ssh"  name="sossheig"/>
       <field field_ref="toce" name="votemper"/>
       <field field_ref="soce" name="vosaline"/>
     </file>
-    <file id="file6" name_suffix="_grid_U" description="ocean U grid variables" >
+    <file id="file7" name_suffix="_grid_U" description="ocean U grid variables" >
       <field field_ref="uoce" name="vozocrtx"  />
     </file>
-    <file id="file7" name_suffix="_grid_V" description="ocean V grid variables" >
+    <file id="file8" name_suffix="_grid_V" description="ocean V grid variables" >
       <field field_ref="voce" name="vomecrty"  />
     </file>
-    <file id="file8" name_suffix="_grid_W" description="ocean W grid variables" >
+    <file id="file9" name_suffix="_grid_W" description="ocean W grid variables" >
       <field field_ref="woce" name="vovecrtz" />
     </file>
   </file_group>
