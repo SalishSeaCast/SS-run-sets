@@ -211,7 +211,7 @@
   </file_group>
 
   <!-- 1 time step files -->
-  <file_group id="1ts" name="@expname@_1TS_@startdate@_@enddate@" output_freq="1ts"  split_freq="1h" output_level="10" enabled=".FALSE.">
+  <file_group id="1ts" name="@expname@_1TS_@startdate@_@enddate@" output_freq="1ts"  split_freq="1h" output_level="10" enabled=".TRUE.">
     <file id="file9" name_suffix="_grid_T" description="ocean T grid variables" >
       <field field_ref="ssh"  name="sossheig" operation="instant"/>
       <field field_ref="toce" name="votemper" operation="instant"/>
@@ -242,4 +242,3 @@
   <file_group id="10y" output_freq="10y" output_level="10" enabled=".FALSE."> </file_group> <!-- real 10y files -->
 
 </file_definition>
-
