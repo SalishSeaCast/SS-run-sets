@@ -57,7 +57,7 @@ forcing:
 namelists:
   # If relative, paths are taken from current directory
   namelist_ref:
-    - /home/SETME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea/EXP00/namelist_ref
+    - $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea/EXP00/namelist_ref
   namelist_cfg:
     - namelist.time
     - namelist.domain
