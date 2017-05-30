@@ -6,14 +6,14 @@
 &namrun        !   Parameters of the run
 !-----------------------------------------------------------------------
    cn_exp      = "SalishSea"  ! experience name
-   nn_it000    =      2161    ! first time step
-   nn_itend    =     23760    ! 4320    ! last time step (std 1 day = 2160 re: rn_rdt in &namdom)
-   nn_date0    =  20140913    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
+   nn_it000    =    382321    ! first time step
+   nn_itend    =    403920    ! last time step (std 1 day = 2160 re: rn_rdt in &namdom)
+   nn_date0    =  20150308    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
                               ! used to adjust tides to run date (regardless of restart control)
    nn_leapy    =       1      ! Leap year calendar (1) or not (0)
-   ln_rstart   =  .true.      ! start from rest (F) or from a restart file (T)
+   ln_rstart   =  .true.     ! start from rest (F) or from a restart file (T)
    nn_euler    =       1      !  = 0 : start with forward time step if ln_rstart=T
-   nn_rstctl   =       1      ! restart control => activated only if ln_rstart = T
+   nn_rstctl   =       2      ! restart control => activated only if ln_rstart = T
                               !   = 0 nn_date0 read in namelist
                               !       nn_it000 read in namelist
                               !   = 1 nn_date0 read in namelist
@@ -21,7 +21,7 @@
                               !   = 2 nn_date0 read in restart
                               !       nn_it000 check consistency between namelist and restart
    nn_istate   =       0      ! output the initial state (1) or not (0)
-   nn_stock    =    2160      ! frequency of creation of a restart file (modulo referenced to 1)
+   nn_stock    =   10800      ! frequency of creation of a restart file (modulo referenced to 1)
    ln_cfmeta   =  .true.      !  output additional data to netCDF files required for compliance with the CF metadata standard
    ln_clobber  =  .true.      ! clobber (overwrite) an existing file
 &end
@@ -59,8 +59,8 @@
    nn_bathy    =    1      !  compute (=0) or read (=1) the bathymetry file
    nn_msh      =    0      !  create (=1) a mesh file or not (=0)
    rn_hmin     =    3.     !  min depth of the ocean (>0) or min number of ocean level (<0)
-   rn_e3zps_min=    2.     !  partial step thickness is set larger than the minimum of
-   rn_e3zps_rat=    0.5    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
+   rn_e3zps_min=    5.     !  partial step thickness is set larger than the minimum of
+   rn_e3zps_rat=    0.2    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
                            !
    rn_rdt      =   40.     !  time step for the dynamics (and tracer if nn_acc=0)
    rn_atfp     =    0.1    !  asselin time filter parameter
@@ -102,8 +102,9 @@
 !-----------------------------------------------------------------------
 !              ! file name                       ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
 !              !                                 ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
- sn_tem  = 'Bathy201702_initial.nc',                -12,           'tn',   .false., .true.,  'yearly', '',        ''
- sn_sal  = 'Bathy201702_initial.nc',                -12,           'sn',   .false., .true.,  'yearly', '',        ''
+ sn_tem        = 'TS20mar2016DeepSmooth.nc',           -12,     'votemper', .false., .true.,  'yearly', '',        ''
+ sn_sal        = 'TS20mar2016DeepSmooth.nc',           -12,     'vosaline', .false., .true.,  'yearly', '',        ''
+
  cn_dir        = 'initial_strat/'  ! directory containing initial condition files
  ln_tsd_init   = .true.            ! Initialisation of ocean T & S with T &S input data (T) or not (F)
  ln_tsd_tradmp = .false.           ! damping of ocean T & S toward T &S input data (T) or not (F)
@@ -169,14 +170,14 @@
 !-----------------------------------------------------------------------
 !         !  file name  ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                ! rotation !
 !         !             !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename               ! pairing  !
-  sn_wndi = 'ops',        1,                 'u_wind',    .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', 'Uwnd'
-  sn_wndj = 'ops',        1,                 'v_wind',    .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', 'Vwnd'
-  sn_qsr  = 'ops',        1,                 'solar',     .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', ''
-  sn_qlw  = 'ops',        1,                 'therm_rad', .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', ''
-  sn_tair = 'ops',        1,                 'tair',      .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', ''
-  sn_humi = 'ops',        1,                 'qair',      .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', ''
-  sn_prec = 'ops',        1,                 'precip',    .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', ''
-  sn_snow = 'no_snow',  -12,                 'snow',      .true.,       .true.,   'yearly',   'weights-gem2.5-ops_201702.nc', ''
+  sn_wndi = 'ops',        1,                 'u_wind',    .true.,       .false.,  'daily',    'weights-gem2.5-ops.nc', 'Uwnd'
+  sn_wndj = 'ops',        1,                 'v_wind',    .true.,       .false.,  'daily',    'weights-gem2.5-ops.nc', 'Vwnd'
+  sn_qsr  = 'ops',        1,                 'solar',     .true.,       .false.,  'daily',    'weights-gem2.5-ops.nc', ''
+  sn_qlw  = 'ops',        1,                 'therm_rad', .true.,       .false.,  'daily',    'weights-gem2.5-ops.nc', ''
+  sn_tair = 'ops',        1,                 'tair',      .true.,       .false.,  'daily',    'weights-gem2.5-ops.nc', ''
+  sn_humi = 'ops',        1,                 'qair',      .true.,       .false.,  'daily',    'weights-gem2.5-ops.nc', ''
+  sn_prec = 'ops',        1,                 'precip',    .true.,       .false.,  'daily',    'weights-gem2.5-ops.nc', ''
+  sn_snow = 'no_snow',  -12,                 'snow',      .true.,       .true.,   'yearly',   'weights-gem2.5-ops.nc', ''
 
    cn_dir      = 'NEMO-atmos/'    !  root directory for the location of the bulk files
    rn_zqt      = 2.               !  Air temperature and humidity reference height (m)
@@ -189,8 +190,8 @@
 &namtra_qsr    !   penetrative solar radiation
 !-----------------------------------------------------------------------
    ln_qsr_rgb  = .false.  !  RGB (Red-Green-Blue) light penetration
-   ln_qsr_2bd  = .true.   !  2 bands              light penetration
-   ln_qsr_bio  = .false.   !  bio-model light penetration
+   ln_qsr_2bd  = .false.   !  2 bands              light penetration
+   ln_qsr_bio  = .true.   !  bio-model light penetration
    nn_chldta   = 0        !  RGB : Chl data (=1) or cst value (=0)
 &end
 
@@ -217,7 +218,7 @@
 !-----------------------------------------------------------------------
 !         !  file name     ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                ! rotation !
 !         !                !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename               ! pairing  !
-  sn_apr  = 'ops',                 1,           'atmpres',   .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', ''
+  sn_apr  = 'ops',                 1,           'atmpres',   .true.,       .false.,  'daily',    'weights-gem2.5-ops.nc', ''
 
   cn_dir      = 'NEMO-atmos/'  !  root directory for the location of the bulk files
   ln_apr_obc  = .false.        !  inverse barometer added to OBC ssh data
@@ -293,9 +294,9 @@
 !-----------------------------------------------------------------------
 !        !  file name             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
 !        !                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
-  bn_ssh = 'ssh/hindcast/ssh',                1,                'sossheig', .true.,        .false.,  'daily',    '',        ''
-  bn_u2d = 'ssh/hindcast/ssh',                1,                'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
-  bn_v2d = 'ssh/hindcast/ssh',                1,                'vobtcrty', .true.,        .false.,  'daily',    '',        ''
+  bn_ssh = 'ssh/ssh',                1,                'sossheig', .true.,        .false.,  'daily',    '',        ''
+  bn_u2d = 'ssh/ssh',                1,                'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v2d = 'ssh/ssh',                1,                'vobtcrty', .true.,        .false.,  'daily',    '',        ''
   bn_u3d = '',                      24,                'vozocrtx', .true.,        .false.,  'daily',    '',        ''
   bn_v3d = '',                      24,                'vomecrty', .true.,        .false.,  'daily',    '',        ''
   bn_tem = 'SalishSea_west_TEOS10', 168,                'votemper', .true.,        .true.,   'yearly',   '',        ''
@@ -306,7 +307,7 @@
 
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide          = 'open_boundaries/west/tides/SalishSea_N36_AC_west_tide_'
+   filtide          = 'open_boundaries/west/tides/DownbyOne2_N36_J_west_tide_'
    ln_bdytide_2ddta = .false.
    ln_bdytide_conj  = .false.
 &end
@@ -316,8 +317,8 @@
 !-----------------------------------------------------------------------
     ctypebdy  = 'N'
     nbdyind   = 896  ! i-index for segment
-    nbdybeg   = 40   ! j-index for segment beginning
-    nbdyend   = 72   ! j-index for segment end
+    nbdybeg   = 33   ! j-index for segment beginning
+    nbdyend   = 62   ! j-index for segment end
 &end
 
 
@@ -339,7 +340,7 @@
 
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide          = 'open_boundaries/north/tides/SalishSea_N36_AC_North_tide_'
+   filtide          = 'open_boundaries/north/tides/DownbyOne2_N36_J_North_tide_'
    ln_bdytide_2ddta = .false.
    ln_bdytide_conj  = .false.
 &end
@@ -359,10 +360,10 @@
    nn_bfr      =    2       !  type of bottom friction :   = 0 : free slip,  = 1 : linear friction
                             !                              = 2 : nonlinear friction
    rn_bfri1    =    4.e-4   !  bottom drag coefficient (linear case)
-   rn_bfri2    =    7.5e-3  !  bottom drag coefficient (non linear case). Minimum coeft if ln_loglayer=T
+   rn_bfri2    =    1.2e-2  !  bottom drag coefficient (non linear case). Minimum coeft if ln_loglayer=T
    rn_bfri2_max =   2.      !  max. bottom drag coefficient (non linear case and ln_loglayer=T)
    rn_bfeb2    =    2.5e-3  !  bottom turbulent kinetic energy background  (m2/s2)
-   rn_bfrz0    =    0.07    !  bottom roughness [m] if ln_loglayer=T
+   rn_bfrz0    =    0.25    !  bottom roughness [m] if ln_loglayer=T
    ln_bfr2d    = .true.    !  horizontal variation of the bottom friction coef (read a 2D mask file )
    rn_bfrien   =    400.     !  local multiplying factor of bfr (ln_bfr2d=T)
    rn_tfri1    =    4.e-4   !  top drag coefficient (linear case)
@@ -416,7 +417,7 @@
    ln_traldf_iso    =  .true.   ! isoneutral (needs "key_ldfslp")
    !
    rn_aeiv_0        =     0.    ! we have 0 eddy induced velocity coefficient [m2/s]
-   rn_aht_0         =     1.    ! we have 10 horizontal eddy diffusivity for tracers [m2/s]
+   rn_aht_0         =     2.    ! we have 10 horizontal eddy diffusivity for tracers [m2/s]
    ! Smagorinsky stuff here if you set the key
 &end
 
@@ -504,7 +505,7 @@
    ln_dynldf_hor    =  .true.  !  horizontal (geopotential)   (require "key_ldfslp" in s-coord.)
    ln_dynldf_iso    =  .false.   !  iso-neutral                 (require "key_ldfslp")
    !                            !  Coefficient
-   rn_ahm_0_lap     =   1.1     !  horizontal laplacian eddy viscosity   [m2/s]
+   rn_ahm_0_lap     =   5.0     !  horizontal laplacian eddy viscosity   [m2/s]
    rn_ahmb_0        =     0.    !  background eddy viscosity for ldf_iso [m2/s]
    rn_ahm_0_blp     =  -1.0e+10 !  horizontal bilaplacian eddy viscosity [m4/s]
    rn_cmsmag_1      =     3.    !  constant in laplacian Smagorinsky viscosity
@@ -554,9 +555,9 @@
                            !  buffer blocking send or immediate non-blocking sends, resp.
    nn_buffer   =   0       !  size in bytes of exported buffer ('B' case), 0 no exportation
    ln_nnogather=  .false.  !  activate code to avoid mpi_allgather use at the northfold
-   jpni        =   6       !  jpni   number of processors following i (set automatically if < 1)
-   jpnj        =   15       !  jpnj   number of processors following j (set automatically if < 1)
-   jpnij       =   65       !  jpnij  number of local domains (set automatically if < 1)
+   jpni        =   10       !  jpni   number of processors following i (set automatically if < 1)
+   jpnj        =   17       !  jpnj   number of processors following j (set automatically if < 1)
+   jpnij       =   106       !  jpnij  number of local domains (set automatically if < 1)
 &end
 
 
