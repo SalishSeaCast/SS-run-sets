@@ -53,6 +53,7 @@
         </file>
 	<file id="file6" name_suffix="_grid_V" description="ocean V grid variables" >
           <field field_ref="voce"         name="vomecrty"  />
+        </file>
         <file id="file7" name_suffix="_ptrc_T" description="sog variables" >
           <field field_ref="NO3"      />
           <field field_ref="NH4"      />
@@ -114,7 +115,7 @@
      <!--
         We must have buffer_size > jpi*jpj*jpk*8 (with jpi and jpj the subdomain size)
 -->
-	  <variable id="buffer_size"               type="integer">50000000</variable>
+	  <variable id="buffer_size"               type="integer">20000000</variable>
 	  <variable id="buffer_server_factor_size" type="integer">2</variable>
 	  <variable id="info_level"                type="integer">0</variable>
 <variable id="using_server" type="boolean">true</variable>
