@@ -22,7 +22,7 @@ grid:
 
 restart:
   # Parent
-  restart.nc: $HOME/MEOPAR/NEMO-forcing-MD/restarts/28sep14/SalishSea_00025920_restart_expanded.nc
+  restart.nc: $HOME/MEOPAR/NEMO-forcing-MD/hindcast/28sep14/SalishSea_00025920_restart_expanded.nc
   AGRIF_1:
     restart.nc: $HOME/MEOPAR/NEMO-forcing-BS1/1_SalishSea_00025920_restart_expanded.nc
 
