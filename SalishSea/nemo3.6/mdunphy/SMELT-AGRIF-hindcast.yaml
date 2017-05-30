@@ -73,21 +73,22 @@ namelists:
     - namelist_top_cfg
 
   # Zoom domain namelists
-  1_namelist_cfg:
-    - 1_namelist.time.cont
-    - 1_namelist.domain.20
-    - 1_namelist.surface.green
-    - 1_namelist.lateral
-    - 1_namelist.bottom
-    - 1_namelist.tracer
-    - 1_namelist.dynamics
-    - namelist.vertical
-    - namelist.compute
-    - 1_namelist.agrif
-  1_namelist_smelt_cfg:
-    - 1_namelist_smelt_cfg
-  1_namelist_top_cfg:
-    - namelist_top_cfg
+  AGRIF_1:
+    namelist_cfg:
+      - 1_namelist.time.cont
+      - 1_namelist.domain.20
+      - 1_namelist.surface.green
+      - 1_namelist.lateral
+      - 1_namelist.bottom
+      - 1_namelist.tracer
+      - 1_namelist.dynamics
+      - namelist.vertical
+      - namelist.compute
+      - 1_namelist.agrif
+    namelist_smelt_cfg:
+      - 1_namelist_smelt_cfg
+    namelist_top_cfg:
+      - namelist_top_cfg
 
 # AGRIF grid definitions
 AGRIF:

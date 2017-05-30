@@ -61,17 +61,18 @@ namelists:
     - namelist.compute
 
   # Zoom domain namelists
-  1_namelist_cfg:
-    - 1_namelist.time.cont
-    - 1_namelist.domain.20
-    - 1_namelist.surface.blue
-    - 1_namelist.lateral
-    - 1_namelist.bottom
-    - 1_namelist.tracer
-    - 1_namelist.dynamics
-    - namelist.vertical
-    - namelist.compute
-    - 1_namelist.agrif
+  AGRIF_1:
+    namelist_cfg:
+      - 1_namelist.time.cont
+      - 1_namelist.domain.20
+      - 1_namelist.surface.blue
+      - 1_namelist.lateral
+      - 1_namelist.bottom
+      - 1_namelist.tracer
+      - 1_namelist.dynamics
+      - namelist.vertical
+      - namelist.compute
+      - 1_namelist.agrif
 
 # AGRIF grid definitions
 AGRIF:
