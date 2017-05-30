@@ -35,6 +35,7 @@
           <field field_ref="MYRI"     />
           <field field_ref="TRA"       />
           <field field_ref="PAR"      />
+        </file>
      </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" enabled=".TRUE."/> <!-- 2h files -->
       <file_group id="3h" output_freq="3h"  output_level="10" enabled=".TRUE."/> <!-- 3h files -->
@@ -60,7 +61,7 @@
           <field field_ref="PHY"      />
           <field field_ref="MYRI"     />
           <field field_ref="MICZ"     />
-          <field field_ref="TRA"       />
+          <field field_ref="TRA"      />
 	</file>
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
