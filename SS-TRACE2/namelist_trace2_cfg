@@ -19,22 +19,22 @@
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisriv
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-   Tau1 = 0.1   ! decay  timescale in days
-   Tau2 = 0.5
-   Tau3 = 1.0
-   Tau4 = 1.5
-   Tau5 = 2.0
-   Tau6 = 3.0
-   Tau7 = 5.0
-   Tau8 = 10.0
-   Tau9 = 20.0
-   Tau10= 30.0
+   Tau1 = 5.0   ! decay  timescale in days
+   Tau2 = 15.0
+   Tau2 = 30.0
+   Tau4 = 50.0
+   Tau5 = 75.0
+   Tau6 = 100.0
+   Tau7 = 150.0
+   Tau8 = 200.0
+   Tau9 = 365.0
+   Tau10 = 730.0
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampissbc
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 !              !  file name          ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !              !                     !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename       !
-   sn_turb  ='river_turb/riverTurbDaily2',       24,           'turb',       .true.,  false.,  'daily',    '',        '',        ''
+   sn_turb  ='river_turb/riverTurbDaily2',       24,           'turb',       .true., .false.,  'daily',    '',        '',        ''
    cn_dir      = 'rivers/'  ! root directory for the location of the runoff files
 /
