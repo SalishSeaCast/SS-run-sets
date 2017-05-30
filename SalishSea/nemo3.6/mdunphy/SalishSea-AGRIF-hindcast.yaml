@@ -23,8 +23,8 @@ grid:
 restart:
   # Parent
   restart.nc: $HOME/MEOPAR/NEMO-forcing-MD/restarts/28sep14/SalishSea_00025920_restart.nc
-  # Zoom
-  1_restart.nc: $HOME/MEOPAR/NEMO-forcing-BS1/1_SalishSea_00025920_restart_expanded.nc
+  AGRIF_1:
+    restart.nc: $HOME/MEOPAR/NEMO-forcing-BS1/1_SalishSea_00025920_restart_expanded.nc
 
 forcing:
   # If relative, paths are taken from forcing path above
@@ -73,24 +73,21 @@ namelists:
     - namelist.compute
     - 1_namelist.agrif
 
-# Repurposing the namelist concatenator to bring in additional text files for AGRIF zoom domain
-  1_file_def.xml:
-    - xios2/1_file_def.xml
-  1_domain_def.xml:
-    - xios2/1_domain_def.xml
-
 # AGRIF grid definitions
 AGRIF:
   fixed grids: $HOME/MEOPAR/NEMO-forcing-BS1/AGRIF_FixedGrids.in
 
 # Output settings. XMLs here are for the parent grid
 output:
+  separate XIOS server: True
+  XIOS servers: 1
   iodefs: xios2/iodef.xml
   domaindefs: xios2/domain_def.xml
   fielddefs: ../hindcast/field_def.xml
   filedefs: xios2/file_def.xml
-  separate XIOS server: True
-  XIOS servers: 1
+  AGRIF_1:
+    domaindefs: xios2/1_domain_def.xml
+    filedefs: xios2/1_file_def.xml
 
 vcs revisions:
   hg:
