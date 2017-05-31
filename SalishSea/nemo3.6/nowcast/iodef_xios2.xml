@@ -86,6 +86,7 @@
      <grid id="NeahBay_grid">                 <domain domain_ref="NeahBay"/>                  </grid>
      <grid id="CherryPoint_grid">             <domain domain_ref="CherryPoint"/>              </grid>
      <grid id="FridayHarbor_grid">            <domain domain_ref="FridayHarbor"/>             </grid>
+     <grid id="BoundaryBay_grid">             <domain domain_ref="BoundaryBay"/>              </grid>
      <grid id="VENUS_east_grid_U">            <domain domain_ref="VENUS_east_U"/>             </grid>
      <grid id="VENUS_central_grid_U">         <domain domain_ref="VENUS_central_U"/>          </grid>
      <grid id="VENUS_east_gridded_grid_U">    <domain domain_ref="VENUS_east_gridded_U"/>     </grid>
