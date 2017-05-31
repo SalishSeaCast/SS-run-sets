@@ -76,7 +76,15 @@
       <domain id="CODAR_V"                 domain_ref="grid_V"> <zoom_domain ibegin="241" jbegin="381" ni="80" nj="80" /> </domain>
    </domain_group>
 
-   <domain id="grid_W" long_name="grid W"/>
+   <domain_group id="grid_W">
+      <domain id="grid_W" long_name="grid W"/>
+      <domain id="VENUS_east_gridded_W"    domain_ref="grid_W"> <zoom_domain ibegin="283" jbegin="416" ni="2"  nj="2"  /> </domain>
+      <domain id="VENUS_central_gridded_W" domain_ref="grid_W"> <zoom_domain ibegin="266" jbegin="424" ni="2"  nj="2"  /> </domain>
+      <domain id="VENUS_delta_gridded_W"   domain_ref="grid_W"> <zoom_domain ibegin="284" jbegin="425" ni="2"  nj="2"  /> </domain>
+   </domain_group>
+
+
+
    <domain id="scalarpoint" long_name="scalar"/>
 </domain_definition>
 
