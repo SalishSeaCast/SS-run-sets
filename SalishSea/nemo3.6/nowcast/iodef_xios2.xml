@@ -31,6 +31,9 @@
       <axis id="depthw" long_name="Vertical W levels" unit="m" positive="down" />
       <axis id="nfloat" long_name="Float number"      unit="-" />
       <axis id="icbcla" long_name="Iceberg class"     unit="-" />
+     <!-- Surface Slab -->
+     <axis id="nearsurface_U" long_name="Top 5 U levels" axis_ref="depthu"> <zoom_axis begin="0" n="5" /> </axis>
+     <axis id="nearsurface_V" long_name="Top 5 V levels" axis_ref="depthv"> <zoom_axis begin="0" n="5" /> </axis>
    </axis_definition>
 
    <domain_definition src="./domain_def.xml"/>
