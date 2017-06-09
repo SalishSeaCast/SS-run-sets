@@ -52,7 +52,7 @@ forcing:
 
 restart:
   restart.nc: /home/sallen/MEOPAR/SalishSea/hindcast/12jan16/SalishSea_01116720_restart.nc
-  restart_trc.nc: /home/sallen/MEOPAR/SalishSea/hindcast/12jan16/SalishSea_0116720_restart_trc.nc
+  restart_trc.nc: /home/sallen/MEOPAR/SalishSea/hindcast/12jan16/SalishSea_01116720_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
