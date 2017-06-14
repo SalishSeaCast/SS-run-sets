@@ -1,0 +1,15 @@
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+#0  0x7F42905BD777
+#1  0x7F42905BDD7E
+#2  0x7F428FAD8CAF
+#3  0x5CDCB2 in __iom_MOD_iom_g3d at iom.f90:612
+#4  0x51F6D9 in dom_grd at domrea.f90:554
+#5  0x4127F4 in nemo_init at nemogcm.f90:269
+#6  0x40BD0C in nemo at nemo.f90:18
+#7  0x7F428FAC3F44
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 26988 on node salish.eos.ubc.ca exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
