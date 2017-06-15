@@ -77,8 +77,8 @@
 &namtra_qsr    !   penetrative solar radiation
 !-----------------------------------------------------------------------
    ln_qsr_rgb  = .false.  !  RGB (Red-Green-Blue) light penetration
-   ln_qsr_2bd  = .false.  !  2 bands              light penetration
-   ln_qsr_bio  = .true.   !  bio-model light penetration
+   ln_qsr_2bd  = .true.   !  2 bands              light penetration
+   ln_qsr_bio  = .false.  !  bio-model light penetration
    nn_chldta   = 0        !  RGB : Chl data (=1) or cst value (=0)
 &end
 
