@@ -105,6 +105,12 @@
 &NAMCLA
  NN_CLA=          0,
  /
+&NAMNC4
+ NN_NCHUNKS_I=          1,
+ NN_NCHUNKS_J=          1,
+ NN_NCHUNKS_K=          1,
+ LN_NC4ZIP=T,
+ /
 &NAMZGR
  LN_ZCO=F,
  LN_ZPS=T,
@@ -114,6 +120,18 @@
 &NAMLBC
  RN_SHLAT=  0.0000000000000000     ,
  LN_VORLAT=F,
+ /
+&NAM_VVL
+ LN_VVL_ZSTAR=T,
+ LN_VVL_ZTILDE=F,
+ LN_VVL_LAYER=F,
+ LN_VVL_ZTILDE_AS_ZSTAR=F,
+ LN_VVL_ZSTAR_AT_EQTOR=F,
+ RN_AHE3=  0.0000000000000000     ,
+ RN_RST_E3T=  30.000000000000000     ,
+ RN_LF_CUTOFF=  5.0000000000000000     ,
+ RN_ZDEF_MAX= 0.90000000000000002     ,
+ LN_VVL_DBG=T,
  /
 &NAMTSD
  LN_TSD_INIT=T,
@@ -138,6 +156,12 @@
  SN_SAL%VCOMP="                                  ",
  SN_SAL%LNAME="                                  ",
  /
+&NAM_TIDE
+ LN_TIDE_POT=F,
+ LN_TIDE_RAMP=F,
+ RDTTIDERAMP=  0.0000000000000000     ,
+ CLNAME="DUMMY ", 18*"      ",
+ /
 &NAMSBC
  NN_FSBC=          1,
  LN_ANA=T,
@@ -161,6 +185,32 @@
  NN_LIMFLX=         -1,
  NN_COMPONENTS=          0,
  LN_CPL=F,
+ /
+&NAMBDY
+ NB_BDY=          0,
+ LN_COORDS_FILE= 10*F,
+ CN_COORDS_FILE="coordinates.bdy.nc                                                              ", 9*"                                                                                ",
+ LN_MASK_FILE=F,
+ CN_MASK_FILE="                                                                                ",
+ CN_DYN2D="none                ", 9*"                    ",
+ NN_DYN2D_DTA= 10*0          ,
+ CN_DYN3D="none                ", 9*"                    ",
+ NN_DYN3D_DTA= 10*0          ,
+ CN_TRA="none                ", 9*"                    ",
+ NN_TRA_DTA= 10*0          ,
+ LN_TRA_DMP= 10*F,
+ LN_DYN3D_DMP= 10*F,
+ RN_TIME_DMP=  1.0000000000000000     , 9*0.0000000000000000       ,
+ RN_TIME_DMP_OUT=  1.0000000000000000     , 9*0.0000000000000000       ,
+ RN_MAX_SPONGE= 10*0.0000000000000000       ,
+ CN_ICE_LIM="none                ", 9*"                    ",
+ NN_ICE_LIM_DTA= 10*0          ,
+ RN_ICE_TEM=  270.00000000000000     , 9*0.0000000000000000       ,
+ RN_ICE_SAL=  10.000000000000000     , 9*0.0000000000000000       ,
+ RN_ICE_AGE=  30.000000000000000     , 9*0.0000000000000000       ,
+ LN_VOL=F,
+ NN_VOLCTL=          1,
+ NN_RIMWIDTH=         10, 9*0          ,
  /
 &NAMDYN_NEPT
  LN_NEPTSIMP=F,
@@ -204,34 +254,21 @@
  LN_BFRIMP=T,
  LN_LOGLAYER=F,
  /
-&NAMZDF_TKE
- RN_EDIFF= 0.10000000000000001     ,
- RN_EDISS= 0.69999999999999996     ,
- RN_EBB=  67.829999999999998     ,
+&NAMZDF_GLS
  RN_EMIN=  9.9999999999999995E-007,
- RN_EMIN0=  1.0000000000000000E-004,
- RN_BSHEAR=  9.9999999999999995E-021,
- NN_MXL=          2,
- LN_MXL0=T,
- RN_MXL0=  4.0000000000000001E-002,
- NN_PDL=          1,
- LN_LC=T,
- RN_LC= 0.14999999999999999     ,
- NN_ETAU=          1,
- NN_HTAU=          1,
- RN_EFR=  5.0000000000000003E-002,
- /
-&NAMZDF_TMX
- RN_HTMX=  500.00000000000000     ,
- RN_N2MIN=  1.0000000000000000E-008,
- RN_TFE= 0.33300000000000002     ,
- RN_ME= 0.20000000000000001     ,
- LN_TMX_ITF=T,
- RN_TFE_ITF=  1.0000000000000000     ,
- /
-&NAMZDF_DDM
- RN_AVTS=  1.0000000000000000E-004,
- RN_HSBFR=  1.6000000000000001     ,
+ RN_EPSMIN=  9.9999999999999998E-013,
+ LN_LENGTH_LIM=T,
+ RN_CLIM_GALP= 0.53000000000000003     ,
+ LN_SIGPSI=T,
+ RN_HSRO=  3.0000000000000001E-003,
+ RN_CRBAN=  100.00000000000000     ,
+ RN_CHARN=  100000.00000000000     ,
+ RN_FRAC_HS=  1.3000000000000000     ,
+ NN_BC_SURF=          1,
+ NN_BC_BOT=          1,
+ NN_Z0_MET=          2,
+ NN_STAB_FUNC=          2,
+ NN_CLOS=          1,
  /
 &NAMTRA_LDF
  LN_TRALDF_LAP=T,
@@ -302,12 +339,6 @@
  SN_QGH%LNAME="                                  ",
  CN_DIR="./                                                                                                                                                                                                                                                              ",
  /
-&NAMBBL
- NN_BBL_LDF=          0,
- NN_BBL_ADV=          0,
- RN_AHTBBL=  0.0000000000000000     ,
- RN_GAMBBL=  10.000000000000000     ,
- /
 &NAMTRA_DMP
  LN_TRADMP=F,
  NN_ZDMP=          0,
@@ -322,6 +353,7 @@
  LN_TRAADV_QCK=F,
  LN_TRAADV_MSC_UPS=F,
  LN_TRAADV_TVD_ZTS=T,
+ NN_TRAADV_TVD_ZTS=          0,
  /
 &NAMTRA_ADV_MLE
  LN_MLE=F,
@@ -340,6 +372,7 @@
  LN_DYNADV_CEN2=F,
  LN_DYNADV_UBS=F,
  LN_DYNZAD_ZTS=T,
+ NN_DYNZAD_ZTS=          0,
  /
 &NAMDYN_VOR
  LN_DYNVOR_ENS=F,
@@ -357,15 +390,13 @@
  LN_HPG_ISF=F,
  LN_DYNHPG_IMP=F,
  /
-&NAMSOL
- NN_SOLV=          1,
- NN_SOL_ARP=          0,
- NN_NMIN=        300,
- NN_NMAX=        800,
- NN_NMOD=         10,
- RN_EPS=  9.9999999999999995E-007,
- RN_RESMAX=  1.0000000000000000E-010,
- RN_SOR=  1.9199999999999999     ,
+&NAMSPLIT
+ LN_BT_FW=T,
+ LN_BT_AV=T,
+ LN_BT_NN_AUTO=T,
+ NN_BARO=          5,
+ RN_BT_CMAX= 0.80000000000000004     ,
+ NN_BT_FLT=          1,
  /
 &NAMBERG
  LN_ICEBERGS=F,
@@ -455,81 +486,4 @@
  LN_GLO_TRD=F,
  LN_TRA_MXL=F,
  NN_TRD=        365,
- /
-&NAMOBS
- LN_ENA=F,
- LN_COR=F,
- LN_PROFB=F,
- LN_T3D=F,
- LN_S3D=F,
- LN_SLA=F,
- LN_SLADT=F,
- LN_SLAFB=F,
- LN_SSH=F,
- LN_SST=F,
- LN_SSTFB=F,
- LN_SSS=F,
- LN_NEA=F,
- ENACTFILES="enact.nc                                                                                                                        ", 999*"                                                                                                                                ",
- CORIOFILES="corio.nc                                                                                                                        ", 999*"                                                                                                                                ",
- PROFBFILES="profiles_01.nc                                                                                                                  ", 999*"                                                                                                                                ",
- SLAFILESACT="sla_act.nc                                                                                                                      ", 999*"                                                                                                                                ",
- SLAFILESPAS="sla_pass.nc                                                                                                                     ", 999*"                                                                                                                                ",
- SLAFBFILES="sla_01.nc                                                                                                                       ", 999*"                                                                                                                                ",
- SSTFILES="ghrsst.nc                                                                                                                       ", 999*"                                                                                                                                ",
- SSTFBFILES="sst_01.nc                                                                                                                       ", 999*"                                                                                                                                ",
- LN_SEAICE=F,
- SEAICEFILES="seaice_01.nc                                                                                                                    ", 999*"                                                                                                                                ",
- DOBSINI=  20000101.000000000     ,
- DOBSEND=  20010101.000000000     ,
- N1DINT=          0,
- N2DINT=          0,
- NMSSHC=          0,
- MDTCORR=  1.6100000000000001     ,
- MDTCUTOFF=  65.000000000000000     ,
- LN_REYSST=F,
- LN_GHRSST=F,
- REYSSTNAME="      Ðî¦àþ         «­Ø_vO      @a=       8       2       àî¦àþ  },‹€c                     þ                  ðî¦àþ  ",
- REYSSTFMT="      (Àj!‹€",
- LN_SSTNIGHT=F,
- LN_GRID_SEARCH_LOOKUP=F,
- GRID_SEARCH_FILE="grid_search                                 ",
- GRID_SEARCH_RES= 0.50000000000000000     ,
- LN_GRID_GLOBAL=T,
- BIAS_FILE="                             @î¦àþ  ±3‹€c          xþ¦àþ  Xò¦àþ                 Pî¦àþ  ®Ø_vO¶?j!‹€c                ",
- LN_ALTBIAS=F,
- ENDAILYAVTYPES=        820, 19*-1         ,
- LN_S_AT_T=F,
- LN_PROFB_ENA= 1000*F,
- LN_VEL3D=F,
- LN_VELAVCUR=F,
- VELAVCURFILES="velavcurfile.nc                                                                                                                 ", 999*"                                                                                                                                ",
- LN_VELHRCUR=F,
- VELHRCURFILES="velhrcurfile.nc                                                                                                                 ", 999*"                                                                                                                                ",
- LN_VELAVADCP=F,
- VELAVADCPFILES="velavadcpfile.nc                                                                                                                ", 999*"                                                                                                                                ",
- LN_VELHRADCP=F,
- VELHRADCPFILES="velhradcpfile.nc                                                                                                                ", 999*"                                                                                                                                ",
- LN_VELFB=F,
- VELFBFILES="velfbfile.nc                                                                                                                    ", 999*"                                                                                                                                ",
- LN_VELFB_AV= 1000*F,
- LN_PROFB_ENATIM=F, 999*T,
- LN_IGNMIS=T,
- LN_CL4=F,
- /
-&NAM_ASMINC
- LN_BKGWRI=F,
- LN_TRAINC=F,
- LN_DYNINC=F,
- LN_SSHINC=F,
- LN_ASMDIN=F,
- LN_ASMIAU=F,
- NITBKG=          0,
- NITDIN=          0,
- NITIAUSTR=          1,
- NITIAUFIN=         15,
- NIAUFN=          0,
- LN_SALFIX=F,
- SALFIXMIN= -9999.0000000000000     ,
- NN_DIVDMP=          0,
  /
