@@ -785,7 +785,7 @@
        <field id="NO3_E3T"      long_name="NO3 * E3T"                                unit="mmol/m2"  > NO3 * e3t </field >
        <field id="NH4"          long_name="Ammonium Concentration"              standard_name="mole_concentration_of_ammonium_in_sea_water"  unit="mmol m-3" />
        <field id="NH4_E3T"      long_name="NH4 * E3T"                                unit="mmol/m2"  > NH4 * e3t </field >
-
+<field id="DIC"          long_name="Dissolved Inorganic Carbon Concentration"      standard_name="mole_concentration_of_dissolved_inorganic_carbon"            unit="mmol m-3" />
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
        <field id="Num"         long_name="Number of organic particles"              unit="1" />
        <field id="Num_E3T"     long_name="Num * E3T"                                unit="m"  > Num * e3t </field >
