@@ -32,7 +32,8 @@
           <field field_ref="bSi"      />
           <field field_ref="TRA"       />
           <field field_ref="MESZ"     />
-        </file>
+	  <field field_ref="DIC"      />     
+      </file>
      </file_group>
       <file_group id="1h" output_freq="1h"  output_level="10" enabled=".TRUE."> <!-- 1h files -->
     	<file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
