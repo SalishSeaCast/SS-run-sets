@@ -118,7 +118,7 @@
 -->
   <context id="xios">
     <variable_definition>
-      <variable id="optimal_buffer_size"       type="string">memory</variable>
+      <variable id="optimal_buffer_size"       type="string">performance</variable>
       <variable id="buffer_size_factor"        type="double">1.0</variable>
       <variable id="print_file"                type="bool">false</variable>
       <variable id="info_level"                type="int" >10</variable>
