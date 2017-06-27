@@ -1,0 +1,115 @@
+&namlbc        !   lateral momentum boundary condition
+!-----------------------------------------------------------------------
+   rn_shlat    = 0.5     !  shlat = 0  !  0 < shlat < 2  !  shlat = 2  !  2 < shlat
+                         !  free slip  !   partial slip  !   no slip   ! strong slip
+&end
+
+
+&namcla        !   cross land advection new? might be cool for Active Pass etc
+!-----------------------------------------------------------------------
+&end
+
+
+&nam_tide      !   tide parameters (#ifdef key_tide)   see NEMO-3.6-code/NEMOGCM/NEMO/OPA_SRC/SBC/tideini.F90
+! Tidal parameters that we use to have to input are in OPA_SRC/SBC/tide.h90
+!-----------------------------------------------------------------------
+   ln_tide_pot   = .false.   !  use tidal potential forcing
+   rdttideramp   =    0.    !
+   clname(1)     =   'M2'   !  name of constituent
+   clname(2)     =   'S2'
+   clname(3)     =   'N2'
+   clname(4)     =   'K1'
+   clname(5)     =   'O1'
+   clname(6)     =   'Q1'
+   clname(7)     =   'K2'
+   clname(8)     =   'P1'
+&end
+
+
+&nambdy        !  unstructured open boundaries                          ("key_bdy")
+!-----------------------------------------------------------------------
+    nb_bdy         = 2                     !  number of open boundary sets According to merge namelist, only 1
+    ln_coords_file = .false., .false.      !  =T : read bdy coordinates from file
+    cn_dyn2d       = 'flather', 'flather'            !
+    nn_dyn2d_dta   =  3, 2                 !  = 0, bdy data are equal to the initial state
+                                           !  = 1, bdy data are read in 'bdydata   .nc' files
+                                           !  = 2, use tidal harmonic forcing data from files
+                                           !  = 3, use external data AND tidal harmonic forcing
+    cn_dyn3d      =  'orlanski_w_sponge', 'orlanski_w_sponge'
+    nn_dyn3d_dta  =  0, 0                  !  = 0, bdy data are equal to the initial state
+                                           !  = 1, bdy data are read in 'bdydata   .nc' files
+    cn_tra        =  'frs','frs'           !
+    nn_tra_dta    =  1, 1                  !  = 0, bdy data are equal to the initial state
+                                           !  = 1, bdy data are read in 'bdydata   .nc' files
+    ln_tra_dmp    =.false., .false.        !  open boudaries conditions for tracers
+    ln_dyn3d_dmp  =.false., .false.        !  open boundary condition for baroclinic velocities
+    rn_time_dmp   =  365., 365.            ! Damping time scale in days (nudging on orlanski inflow)
+    rn_time_dmp_out =  365., 365.          ! Outflow damping time scale (nudging on orlanski outflow)
+    rn_max_sponge = 50., 50.               ! max viscosity for sponge layer (m2/s)
+    nn_rimwidth   = 10, 10
+&end
+
+
+&nambdy_index ! open boundaries - definition ("key_bdy")
+!-----------------------------------------------------------------------
+    ctypebdy = 'W'
+    nbdyind   = 2     ! i-index for segment
+    nbdybeg   = 385   ! j-index for segment beginning
+    nbdyend   = 471   ! j-index for segment end
+&end
+
+
+&nambdy_dta      !  open boundaries - external data           ("key_bdy")
+!-----------------------------------------------------------------------
+!        !  file name             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
+!        !                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
+  bn_ssh = 'ssh/ssh',                1,                'sossheig', .true.,        .false.,  'daily',    '',        ''
+  bn_u2d = 'ssh/ssh',                1,                'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v2d = 'ssh/ssh',                1,                'vobtcrty', .true.,        .false.,  'daily',    '',        ''
+  bn_u3d = '',                      24,                'vozocrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v3d = '',                      24,                'vomecrty', .true.,        .false.,  'daily',    '',        ''
+  bn_tem = 'SalishSea_west_TEOS10', 168,               'votemper', .true.,        .true.,   'yearly',   '',        ''
+  bn_sal = 'SalishSea_west_TEOS10', 168,               'vosaline', .true.,        .true.,   'yearly',   '',        ''
+
+  cn_dir = 'open_boundaries/west/'
+&end
+
+&nambdy_tide     ! tidal forcing at open boundaries
+!-----------------------------------------------------------------------
+   filtide          = 'open_boundaries/west/tides/SalishSea_N36_AF_west_tide_'
+   ln_bdytide_2ddta = .false.
+   ln_bdytide_conj  = .false.
+&end
+
+
+&nambdy_index ! open boundaries - definition ("key_bdy")
+!-----------------------------------------------------------------------
+    ctypebdy  = 'N'
+    nbdyind   = 896  ! j-index for segment
+    nbdybeg   = 40   ! i-index for segment beginning
+    nbdyend   = 69   ! i-index for segment end
+&end
+
+
+&nambdy_dta      !  open boundaries - external data           ("key_bdy")
+!-----------------------------------------------------------------------
+!        !  file name             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
+!        !                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
+  bn_ssh = 'ssh/sshNorth',	           1,               'sossheig', .true.,        .false.,  'monthly',  '',        ''
+  bn_u2d = 'ssh/sshNorth',	           1,               'vobtcrtx', .true.,        .false.,  'monthly',  '',        ''
+  bn_v2d = 'ssh/sshNorth',	           1,               'vobtcrty', .true.,        .false.,  'monthly',  '',        ''
+  bn_u3d = '',                        24,               'vozocrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v3d = '',                        24,               'vomecrty', .true.,        .false.,  'daily',    '',        ''
+  bn_tem = 'SalishSea_north_TEOS10',  4380,             'votemper', .true.,        .true.,   'yearly',   '',        ''
+  bn_sal = 'SalishSea_north_TEOS10',  4380,             'vosaline', .true.,        .true.,   'yearly',   '',        ''
+
+  cn_dir = 'open_boundaries/north/'
+  ln_full_vel = .false.
+&end
+
+&nambdy_tide     ! tidal forcing at open boundaries
+!-----------------------------------------------------------------------
+   filtide          = 'open_boundaries/north/tides/SalishSea_N36_AF_North_tide_'
+   ln_bdytide_2ddta = .false.
+   ln_bdytide_conj  = .false.
+&end
