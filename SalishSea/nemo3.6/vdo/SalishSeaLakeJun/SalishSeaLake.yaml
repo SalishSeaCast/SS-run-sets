@@ -19,7 +19,7 @@ config_name: SalishSeaLake
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 1x7
+MPI decomposition: 4x12
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: JunS0.02
@@ -42,6 +42,7 @@ grid:
   # path above (make new files here)
   coordinates: coordinates_seagrid_SalishSea.nc
   bathymetry: bathy_downonegrid2.nc
+  land processor elimination: SalishSeaLake.csv
 
 forcing:
   # If relative, paths are taken from forcing path above (new intial stat file)

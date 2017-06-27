@@ -8,7 +8,7 @@
 #    Constrained to no solid precipitation
 #  SMELT biological model
 
-config_name: SalishSeaTest
+config_name: SalishSea
 
 # How is the domain to be distributed over the processors in the
 # i (longitude) and j (latitude) directions?
@@ -18,7 +18,7 @@ MPI decomposition: 8x18
 #MPI decomposition: 1x7
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: test_07may15
+run_id: with_patch
 walltime: 5:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: vdo@eoas.ubc.ca

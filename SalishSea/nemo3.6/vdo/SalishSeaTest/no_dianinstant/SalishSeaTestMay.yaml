@@ -18,7 +18,7 @@ MPI decomposition: 8x18
 #MPI decomposition: 1x7
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: test_07may6060_no_diainstant
+run_id: test_fixedat2
 walltime: 5:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: vdo@eoas.ubc.ca
