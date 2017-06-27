@@ -67,7 +67,8 @@
           <field field_ref="PON"      />
           <field field_ref="bSi"      />
           <field field_ref="TRA"       />
-          <field field_ref="MESZ"     />
+          <field field_ref="DIC"       />
+  	  <field field_ref="MESZ"     />
         </file>
      </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" enabled=".TRUE."/> <!-- 2h files -->
