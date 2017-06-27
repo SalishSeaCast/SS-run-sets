@@ -26,6 +26,7 @@
    sn_tracer(9)  = 'PON     ' , 'Small organic carbon Concentration     ',  'mol-C/L' ,  .false.     , .false.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(10) = 'bSi     ' , 'biogenic Silicate Concentration        ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(11) = 'TRA     ' , 'River Tracer                           ',  'mol-C/L' ,  .false.    , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(11) = 'DIC     ' , 'Dissolved inorganic Carbon             ',  'mol-C/L' ,  .false.    , .false.   ,  .false. ,  .false.  ,  .true.
    ln_trcdta = .true.
    ln_trcdmp = .false.
    /
@@ -46,7 +47,8 @@
    sn_trcdta(9)  = 'data_nuts_DIC.nc'    ,        -12        ,  'POC'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(10) = 'data_nuts_DIC.nc'    ,        -12        ,  'bSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(11) = 'data_nuts_DIC.nc'    ,        -12        ,  'bSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   
+   sn_trcdta(12) = 'data_nuts_DIC.nc'    ,        -12        ,  'PHY2'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , '' 
+  
    rn_trfac(1)   =  7.6e-6  !  -      -      -     -
    rn_trfac(2)   =  7.6e-6  !  -      -      -     -
    rn_trfac(3)   =  1.0e-6  !  multiplicative factor
@@ -58,7 +60,7 @@
    rn_trfac(9)   =  1.0  !  -      -      -     -
    rn_trfac(10)  =  1.0  !  -      -      -     -
    rn_trfac(11)  =  1.0  !  -      -    
-
+   rn_trfac(12)  =  1.0  !  -      -
 /
 !-----------------------------------------------------------------------
 &namtrc_run     !   run information
