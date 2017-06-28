@@ -47,7 +47,7 @@
    sn_trcdta(9)  = 'data_nuts_DIC.nc'    ,        -12        ,  'POC'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(10) = 'data_nuts_DIC.nc'    ,        -12        ,  'bSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(11) = 'data_nuts_DIC.nc'    ,        -12        ,  'bSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(12) = 'data_nuts_DIC.nc'    ,        -12        ,  'PHY2'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , '' 
+   sn_trcdta(12) = 'data_nuts_DIC.nc'    ,        -12        ,  'DIC'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , '' 
   
    rn_trfac(1)   =  7.6e-6  !  -      -      -     -
    rn_trfac(2)   =  7.6e-6  !  -      -      -     -
