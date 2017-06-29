@@ -26,7 +26,7 @@
    sn_tracer(9)  = 'PON     ' , 'Small organic carbon Concentration     ',  'mol-C/L' ,  .false.     , .false.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(10) = 'bSi     ' , 'biogenic Silicate Concentration        ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(11) = 'TRA     ' , 'River Tracer                           ',  'mol-C/L' ,  .false.    , .false.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(11) = 'DIC     ' , 'Dissolved inorganic Carbon             ',  'mol-C/L' ,  .false.    , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(12) = 'DIC     ' , 'Dissolved inorganic Carbon             ',  'mol-C/L' ,  .true.    , .false.   ,  .false. ,  .false.  ,  .true.
    ln_trcdta = .true.
    ln_trcdmp = .false.
    /
