@@ -3,12 +3,12 @@
 &namcfg     !   parameters of the configuration
 !-----------------------------------------------------------------------
    cp_cfg      =  "SalishSea"          !  name of the configuration
-   jp_cfg      =     120               !  resolution of the configuration [1/degrees]
-   jpidta      =     398               !  1st lateral dimension ( >= jpi )
-   jpjdta      =     898               !  2nd    "         "    ( >= jpj )
+   jp_cfg      =      40               !  resolution of the configuration [1/degrees]
+   jpidta      =     589               !  1st lateral dimension ( >= jpi )
+   jpjdta      =     538               !  2nd    "         "    ( >= jpj )
    jpkdta      =      40               !  number of levels      ( >= jpk )
-   jpiglo      =     398               !  1st dimension of global domain --> i =jpidta
-   jpjglo      =     898               !  2nd    -                  -    --> j =jpjdta
+   jpiglo      =     589               !  1st dimension of global domain --> i =jpidta
+   jpjglo      =     538               !  2nd    -                  -    --> j =jpjdta
    jperio      =       0               !  lateral cond. type (between 0 and 6)
                                        !  = 0 closed                 ;   = 1 cyclic East-West
                                        !  = 2 equatorial symmetric   ;   = 3 North fold T-point pivot
@@ -33,7 +33,7 @@
    rn_e3zps_min=    2.     !  partial step thickness is set larger than the minimum of
    rn_e3zps_rat=    0.5    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
                            !
-   rn_rdt      =   40.     !  time step for the dynamics (and tracer if nn_acc=0)
+   rn_rdt      =    10.    !  time step for the dynamics (and tracer if nn_acc=0)
    rn_atfp     =    0.1    !  asselin time filter parameter
    nn_acc      =    0      !  acceleration of convergence : =1      used, rdt < rdttra(k)
                            !                                =0, not used, rdt = rdttra
@@ -57,7 +57,7 @@
 !-----------------------------------------------------------------------
    ln_bt_fw      =    .TRUE.           !  Forward integration of barotropic equations
    ln_bt_av      =    .TRUE.           !  Time filtering of barotropic variables
-   ln_bt_nn_auto =    .TRUE.           !  Set nn_baro automatically to be just below
+   ln_bt_nn_auto =    .FALSE.          !  Set nn_baro automatically to be just below
                                        !  a user defined maximum courant number (rn_bt_cmax)
    nn_baro       =     20              !  Number of iterations of barotropic mode
                                        !  during rn_rdt seconds. Only used if ln_bt_nn_auto=F
@@ -73,10 +73,10 @@
 !-----------------------------------------------------------------------
 !              ! file name                       ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
 !              !                                 ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
- sn_tem  = 'Bathy201702_initial.nc',                -12,           'tn',   .false., .true.,  'yearly', '',        ''
- sn_sal  = 'Bathy201702_initial.nc',                -12,           'sn',   .false., .true.,  'yearly', '',        ''
+ sn_tem  = 'Bathy201702_initial_expanded.nc',       -12,           'tn',   .false., .true.,  'yearly', '',        ''
+ sn_sal  = 'Bathy201702_initial_expanded.nc',       -12,           'sn',   .false., .true.,  'yearly', '',        ''
 
- cn_dir        = 'initial_strat/'    ! directory containing initial condition files
+ cn_dir        = '1_initial_strat/'  ! directory containing initial condition files
  ln_tsd_init   = .true.              ! Initialisation of ocean T & S with T &S input data (T) or not (F)
  ln_tsd_tradmp = .false.             ! damping of ocean T & S toward T &S input data (T) or not (F)
 &end

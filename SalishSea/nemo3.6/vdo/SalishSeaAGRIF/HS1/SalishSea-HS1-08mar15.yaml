@@ -1,9 +1,9 @@
-# Hindcast with AGRIF for Baynes Sound 1
+# Hindcast with AGRIF for Haro Strait 1
 config_name: SalishSeaAGRIF
 MPI decomposition: 6x9
-run_id: HS1Sep
-walltime: 8:00:00
-email: vdo@eoas.ubc.ca
+run_id: HS1Mar
+walltime: 12:00:00
+email: mdunphy@eoas.ubc.ca
 
 paths:
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
@@ -22,9 +22,9 @@ grid:
 
 restart:
   # Parent
-  restart.nc: $HOME/MEOPAR/NEMO-forcing-MD/hindcast/28sep14/SalishSea_00025920_restart_expanded.nc
+  restart.nc: $HOME/MEOPAR/NEMO-forcing-MD/hindcast/07mar15/SalishSea_00382320_restart.nc
   AGRIF_1:
-    restart.nc: $HOME/MEOPAR/NEMO-forcing-HS1/1_SalishSea_00025920_restart_expanded.nc
+    restart.nc: $HOME/MEOPAR/NEMO-forcing-HS1/1_SalishSea_00382320_restart.nc
 
 forcing:
   # If relative, paths are taken from forcing path above
@@ -50,7 +50,7 @@ forcing:
 namelists:
   # Parent grid namelists
   namelist_cfg:
-    - namelist.time.cont
+    - namelist.time.08mar15
     - namelist.domain.40
     - namelist.surface.blue
     - namelist.lateral
@@ -63,8 +63,8 @@ namelists:
   # Zoom domain namelists
   AGRIF_1:
     namelist_cfg:
-      - 1_namelist.time.cont
-      - 1_namelist.domain.20.HS1
+      - 1_namelist.time.08mar15
+      - 1_namelist.domain.HS1.10
       - 1_namelist.surface.blue
       - 1_namelist.lateral
       - 1_namelist.bottom

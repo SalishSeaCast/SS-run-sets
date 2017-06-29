@@ -19,7 +19,7 @@
    ln_traldf_iso    =  .true.   ! isoneutral (needs "key_ldfslp")
    !
    rn_aeiv_0        =     0.    ! we have 0 eddy induced velocity coefficient [m2/s]
-   rn_aht_0         =     0.25  ! we have 10 horizontal eddy diffusivity for tracers [m2/s]
+   rn_aht_0         =    0.5    ! we have 10 horizontal eddy diffusivity for tracers [m2/s]
    ! Smagorinsky stuff here if you set the key
 &end
 
@@ -35,7 +35,7 @@
 !
     ln_traadv_tvd     = .false.
     ln_traadv_tvd_zts = .true.  ! TVD scheme with sub timestepping for vertical tracer advection
-    nn_traadv_tvd_zts =   10    !     number of sub-time steps for ln_traadv_tvd_zts=T
+    nn_traadv_tvd_zts =   40    !     number of sub-time steps for ln_traadv_tvd_zts=T
 &end
 
 

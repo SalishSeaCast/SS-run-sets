@@ -2,8 +2,8 @@
 config_name: SalishSeaAGRIF
 MPI decomposition: 6x9
 run_id: HS1Jun
-walltime: 8:00:00
-email: vdo@eoas.ubc.ca
+walltime: 12:00:00
+email: mdunphy@eoas.ubc.ca
 
 paths:
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
@@ -24,7 +24,7 @@ restart:
   # Parent
   restart.nc: $HOME/MEOPAR/NEMO-forcing-MD/hindcast/25jun15/SalishSea_00627120_restart.nc
   AGRIF_1:
-    restart.nc: $HOME/MEOPAR/NEMO-forcing-HS1/1_SalishSea_00627120_restart_expanded.nc
+    restart.nc: $HOME/MEOPAR/NEMO-forcing-HS1/1_SalishSea_00627120_restart.nc
 
 forcing:
   # If relative, paths are taken from forcing path above
@@ -50,7 +50,7 @@ forcing:
 namelists:
   # Parent grid namelists
   namelist_cfg:
-    - namelist.time.cont
+    - namelist.time.26jun15
     - namelist.domain.40
     - namelist.surface.blue
     - namelist.lateral
@@ -63,8 +63,8 @@ namelists:
   # Zoom domain namelists
   AGRIF_1:
     namelist_cfg:
-      - 1_namelist.time.cont
-      - 1_namelist.domain.20.HS1
+      - 1_namelist.time.26jun15
+      - 1_namelist.domain.HS1.10
       - 1_namelist.surface.blue
       - 1_namelist.lateral
       - 1_namelist.bottom
