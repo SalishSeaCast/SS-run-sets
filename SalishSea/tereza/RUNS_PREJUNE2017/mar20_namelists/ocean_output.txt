@@ -1,0 +1,1889 @@
+No. errors (search for EspaceRspaceR etc): 48
+
+
+
+    CNRS - NERC - Met OFFICE - MERCATOR-ocean - INGV - CMCC
+                        NEMO team
+             Ocean General Circulation Model
+                   version 3.6  (2015) 
+
+
+  mynode : mpi initialisation                                                    
+  ~~~~~~                                                                         
+     Namelist nammpp                                                             
+        mpi send type                      cn_mpi_send = I                       
+        size in bytes of exported buffer   nn_buffer   =            0            
+        processor grid extent in i         jpni =            1                   
+        processor grid extent in j         jpnj =            7                   
+        number of local domains           jpnij =            7                   
+        avoid use of mpi_allgather at the north fold  ln_nnogather =  F          
+             Immediate non-blocking send (isend)                                 
+
+AAAAAAAA
+
+
+ nemo_ctl: Control prints & Benchmark
+ ~~~~~~~ 
+    Namelist namctl
+       run control (for debugging)     ln_ctl     =  F
+       level of print                  nn_print   =            0
+       Start i indice for SUM control  nn_ictls   =            0
+       End i indice for SUM control    nn_ictle   =            0
+       Start j indice for SUM control  nn_jctls   =            0
+       End j indice for SUM control    nn_jctle   =            0
+       number of proc. following i     nn_isplt   =            1
+       number of proc. following j     nn_jsplt   =            1
+       benchmark parameter (0/1)       nn_bench   =            0
+       timing activated    (0/1)       nn_timing  =            0
+
+ namcfg  : configuration initialization through namelist read
+ ~~~~~~~ 
+    Namelist namcfg
+       configuration name              cp_cfg      = default
+       configuration zoom name         cp_cfz      = no zoom
+       configuration resolution        jp_cfg      =            0
+       1st lateral dimension ( >= jpi ) jpidta     =           10
+       2nd    "         "    ( >= jpj ) jpjdta     =           12
+       3nd    "         "               jpkdta     =           31
+       1st dimension of global domain in i jpiglo  =           10
+       2nd    -                  -    in j jpjglo  =           12
+       left bottom i index of the zoom (in data domain) jpizoom =            1
+       left bottom j index of the zoom (in data domain) jpizoom =            1
+       lateral cond. type (between 0 and 6) jperio =            0
+       use file attribute if exists as i/p j-start ln_use_jattr =  F
+
+ mpp_init : Message Passing MPI
+ ~~~~~~~~
+
+  mpp_init: defines mpp subdomains
+  ~~~~~~  ----------------------
+
+ iresti=           1  irestj=           3
+
+ jpni=           1  jpnj=           7
+
+  sum ilcit(i,1)=   10.000000000000000       jpiglo=          10
+  sum ilcit(1,j)=   12.000000000000000       jpjglo=          12
+
+
+     ****************
+     *              *   
+   7 *   10  x  3   *   
+     *          6   *         
+     *              *   
+     ****************
+     *              *   
+   6 *   10  x  3   *   
+     *          5   *         
+     *              *   
+     ****************
+     *              *   
+   5 *   10  x  3   *   
+     *          4   *         
+     *              *   
+     ****************
+     *              *   
+   4 *   10  x  3   *   
+     *          3   *         
+     *              *   
+     ****************
+     *              *   
+   3 *   10  x  4   *   
+     *          2   *         
+     *              *   
+     ****************
+     *              *   
+   2 *   10  x  4   *   
+     *          1   *         
+     *              *   
+     ****************
+     *              *   
+   1 *   10  x  4   *   
+     *          0   *         
+     *              *   
+     ****************
+             1             
+  nproc  =            0
+  nowe   =           -1  noea   =             1
+  nono   =            1  noso   =            -1
+  nbondi =            2
+  nbondj =           -1
+  npolj  =            0
+  nperio =            0
+  nlci   =           10
+  nlcj   =            4
+  nimpp  =            1
+  njmpp  =            1
+  nreci  =            2  npse   =            0
+  nrecj  =            2  npsw   =           -2
+  jpreci =            1  npne   =            2
+  jprecj =            1  npnw   =            0
+
+
+ mpp_init_ioipsl :   iloc  =           10           4
+ ~~~~~~~~~~~~~~~     iabsf =            1           1
+                     ihals =            0           0
+                     ihale =            0           1
+
+  phy_cst : initialization of ocean parameters and constants
+  ~~~~~~~
+        Domain info
+           dimension of model
+                  Local domain      Global domain       Data domain 
+               jpi     :      10   jpiglo  :      10   jpidta  :      10
+               jpj     :       4   jpjglo  :      12   jpjdta  :      12
+               jpk     :      31   jpk     :      31   jpkdta  :      31
+               jpij    :           40
+           mpp local domain info (mpp)
+              jpni    :            1    jpreci  :            1
+              jpnj    :            7    jprecj  :            1
+              jpnij   :            7
+           lateral domain boundary condition type : jperio  =            0
+
+        Constants
+
+           mathematical constant                 rpi =    3.1415926535897931     
+
+           day                                rday   =    86400.000000000000       s
+           sideral year                       rsiyea =    31558149.010110732       s
+           sideral day                        rsiday =    86164.099655911836       s
+           omega                              omega  =    7.2921150830460618E-005  s^-1
+
+           nb of months per year               raamo =    12.000000000000000       months
+           nb of hours per day                 rjjhh =    24.000000000000000       hours
+           nb of minutes per hour              rhhmm =    60.000000000000000       mn
+           nb of seconds per minute            rmmss =    60.000000000000000       s
+
+           earth radius                         ra   =    6371229.0000000000       m
+           gravity                              grav =    9.8066499999999994       m/s^2
+
+           triple point of temperature      rtt      =    273.16000000000003       K
+           freezing point of water          rt0      =    273.14999999999998       K
+           melting point of snow            rt0_snow =    273.14999999999998       K
+           melting point of ice             rt0_ice  =    273.05000000000001       K
+           reference density and heat capacity now defined in eosbn2.f90
+
+           thermal conductivity of the snow          =   0.22000000000000000       J/s/m/K
+           thermal conductivity of the ice           =    2.0343960000000001       J/s/m/K
+           fresh ice specific heat                   =    2093.0000000000000       J/kg/K
+           latent heat of fusion of fresh ice / snow =    333700.00000000000       J/kg
+           density times specific heat for snow      =    690690.00000000000       J/m^3/K
+           density times specific heat for ice       =    1883700.0000000000       J/m^3/K
+           volumetric latent heat fusion of sea ice  =    300330000.00000000       J/m
+           latent heat of sublimation of snow        =    2800000.0000000000       J/kg
+           volumetric latent heat fusion of snow     =    110121000.00000000       J/m^3
+           density of sea ice                        =    900.00000000000000       kg/m^3
+           density of snow                           =    330.00000000000000       kg/m^3
+           emissivity of snow or ice                 =   0.96999999999999997     
+           salinity of ice                           =    6.0000000000000000       psu
+           salinity of sea                           =    34.700000000000003       psu
+           latent heat of evaporation (water)        =    2500000.0000000000       J/m^3
+           correction factor for solar radiation     =   0.90000000000000002     
+           von Karman constant                       =   0.40000000000000002     
+           Stefan-Boltzmann constant                 =    5.6699999999999998E-008  J/s/m^2/K^4
+
+           conversion: degre ==> radian          rad =    1.7453292519943295E-002
+
+           smallest real computer value       rsmall =    1.1102230246251565E-016
+
+ eos_init : equation of state
+ ~~~~~~~~
+           Namelist nameos : set eos parameters
+              flag for eq. of state and N^2  nn_eos   =            0
+              model does not use Conservative Temperature
+
+           use of EOS-80 equation of state (pot. temp. and pract. salinity)
+
+           volumic mass of reference           rau0  =    1026.0000000000000       kg/m^3
+           1. / rau0                        r1_rau0  =    9.7465886939571145E-004  m^3/kg
+           ocean specific heat                 rcp   =    3991.8679571196299       J/Kelvin
+           rau0 * rcp                       rau0_rcp =    4095656.5240047402     
+           1. / ( rau0 * rcp )           r1_rau0_rcp =    2.4416109948160356E-007
+
+ dom_cfg : set the ocean configuration
+ ~~~~~~~ 
+    ocean model configuration used :   cp_cfg = default                                                                                                                                                                                                                                                          jp_cfg =            0
+    global domain lateral boundaries
+       jperio= 0, closed
+
+ dom_glo : domain: data / local 
+ ~~~~~~~ 
+           data input domain    : jpidta =           10  jpjdta =           12  jpkdta =           31
+           global or zoom domain: jpiglo =           10  jpjglo =           12  jpk    =           31
+           local domain         : jpi    =           10  jpj    =            4  jpk    =           31
+
+           south-west indices    jpizoom =            1  jpjzoom =            1
+
+           conversion local  ==> data i-index domain
+             1   2   3   4   5   6   7   8   9  10
+
+           conversion data   ==> local  i-index domain
+              starting index
+             1   2   3   4   5   6   7   8   9  10
+              ending index
+             1   2   3   4   5   6   7   8   9  10
+
+           conversion local  ==> data j-index domain
+             1   2   3   4
+
+           conversion data  ==> local j-index domain
+              starting index
+             1   2   3   4   5   5   5   5   5   5   5   5
+              ending index
+             1   2   3   4   4   4   4   4   4   4   4   4
+
+           zoom flags : 
+              lzoom   =  F  (T = zoom, F = global )
+              lzoom_e =  F  (T = forced closed east  boundary)
+              lzoom_w =  F  (T = forced closed west  boundary)
+              lzoom_s =  F  (T = forced closed South boundary)
+              lzoom_n =  F  (T = forced closed North boundary)
+
+ dom_init : domain initialization
+ ~~~~~~~~
+
+ dom_nam  : domain initialization through namelist read
+ ~~~~~~~ 
+    Namelist namrun
+       job number                      nn_no      =            0
+       experiment name for output      cn_exp     = SalishSea                                                                                                                                                                                                                                                       
+       file prefix restart input       cn_ocerst_in= restart                                                                                                                                                                                                                                                         
+       restart input directory         cn_ocerst_indir= .                                                                                                                                                                                                                                                               
+       file prefix restart output      cn_ocerst_out= restart                                                                                                                                                                                                                                                         
+       restart output directory        cn_ocerst_outdir= .                                                                                                                                                                                                                                                               
+       restart logical                 ln_rstart  =  F
+       start with forward time step    nn_euler   =            1
+       control of time step            nn_rstctl  =            0
+       number of the first time step   nn_it000   =            1
+       number of the last time step    nn_itend   =          100
+       initial calendar date aammjj    nn_date0   =     20020915
+       leap year calendar (0/1)        nn_leapy   =            1
+       initial state output            nn_istate  =            0
+       frequency of restart file       nn_stock   =         8640
+       frequency of output file        nn_write   =         5475
+       multi file dimgout              ln_dimgnnn =  F
+       mask land points                ln_mskland =  F
+       additional CF standard metadata ln_cfmeta  =  F
+       overwrite an existing file      ln_clobber =  T
+       NetCDF chunksize (bytes)        nn_chunksz =            0
+
+ ===>>> : W A R N I N G
+         ===============
+
+  ln_rstart =.FALSE., nn_euler is forced to 0                                                                                                                                                                                                                    
+
+ ===>>> : W A R N I N G
+         ===============
+
+  nstock =         8640  it is forced to          100                                                                                                                                                                                                            
+    The IOIPSL calendar is "gregorian", i.e. leap year
+
+ ===>>> : E R R O R
+         ===========
+
+ E R R O R :   misspelled variable in namelist namdom in configuration namelist iostat = 5010
+
+    Namelist namdom : space & time domain
+       flag read/compute bathymetry      nn_bathy     =            1
+       Depth (if =0 bathy=jpkm1)         rn_bathy     =    0.0000000000000000     
+       min depth of the ocean    (>0) or    rn_hmin   =    3.0000000000000000     
+       min number of ocean level (<0)       
+       minimum thickness of partial      rn_e3zps_min =    5.0000000000000000       (m)
+          step level                     rn_e3zps_rat =   0.20000000000000001     
+       create mesh/mask file(s)          nn_msh       =            0
+            = 0   no file created           
+            = 1   mesh_mask                 
+            = 2   mesh and mask             
+            = 3   mesh_hgr, msh_zgr and mask
+       ocean time step                       rn_rdt    =    10.000000000000000     
+       asselin time filter parameter         rn_atfp   =   0.10000000000000001     
+       acceleration of converge              nn_acc    =            0
+         nn_acc=1: surface tracer rdt        rn_rdtmin =    28800.000000000000     
+                   bottom  tracer rdt        rdtmax    =    28800.000000000000     
+                   depth of transition       rn_rdth   =    800.00000000000000     
+       suppression of closed seas (=0)       nn_closea =            0
+       online coarsening of dynamical fields ln_crs    =  F
+       type of horizontal mesh jphgr_msh           =            0
+       longitude of first raw and column T-point ppglam0 =    0.0000000000000000     
+       latitude  of first raw and column T-point ppgphi0 =   -35.000000000000000     
+       zonal      grid-spacing (degrees) ppe1_deg        =    1.0000000000000000     
+       meridional grid-spacing (degrees) ppe2_deg        =   0.50000000000000000     
+       zonal      grid-spacing (degrees) ppe1_m          =    5000.0000000000000     
+       meridional grid-spacing (degrees) ppe2_m          =    5000.0000000000000     
+       ORCA r4, r2 and r05 coefficients  ppsur           =   -4762.9614354630003     
+                                         ppa0            =    255.58049070440001     
+                                         ppa1            =    245.58132232489999     
+                                         ppkth           =    21.433361979379999     
+                                         ppacr           =    3.0000000000000000     
+       Minimum vertical spacing ppdzmin                  =    10.000000000000000     
+       Maximum depth pphmax                              =    5000.0000000000000     
+       Use double tanf function for vertical coordinates ldbletanh =  T
+       Double tanh function parameters ppa2              =    100.76092850000001     
+                                       ppkth2            =    48.029893719999997     
+                                       ppacr2            =    13.000000000000000     
+
+ ===>>> : W A R N I N G
+         ===============
+
+ W A R N I N G:  end of record or file while reading namelist namcla in configuration namelist iostat =   -1
+
+    Namelist namcla
+       cross land advection                 nn_cla    =            0
+
+    Namelist namnc4 - Netcdf4 chunking parameters
+       number of chunks in i-dimension      nn_nchunks_i   =            1
+       number of chunks in j-dimension      nn_nchunks_j   =            1
+       number of chunks in k-dimension      nn_nchunks_k   =            1
+       apply netcdf4/hdf5 chunking & compression ln_nc4zip =  T
+
+ dom_clo : closed seas 
+ ~~~~~~~
+
+ dom_hgr : define the horizontal mesh from ithe following par_oce parameters 
+ ~~~~~~~      type of horizontal mesh           jphgr_msh =            0
+              position of the first row and     ppglam0  =    0.0000000000000000     
+              column grid-point (degrees)       ppgphi0  =   -35.000000000000000     
+              zonal      grid-spacing (degrees) ppe1_deg =    1.0000000000000000     
+              meridional grid-spacing (degrees) ppe2_deg =   0.50000000000000000     
+              zonal      grid-spacing (meters)  ppe1_m   =    5000.0000000000000     
+              meridional grid-spacing (meters)  ppe2_m   =    5000.0000000000000     
+
+           curvilinear coordinate on the sphere read in "coordinate" file
+
+ hgr_read : read the horizontal coordinates
+ ~~~~~~~~      jpiglo =           10  jpjglo =           12  jpk =           31
+                     iom_nf90_open ~~~ open existing file: coordinates.nc in READ mode
+                    ---> coordinates.nc OK
+           read glamt (rec:      1) in coordinates.nc ok
+           read glamu (rec:      1) in coordinates.nc ok
+           read glamv (rec:      1) in coordinates.nc ok
+           read glamf (rec:      1) in coordinates.nc ok
+           read gphit (rec:      1) in coordinates.nc ok
+           read gphiu (rec:      1) in coordinates.nc ok
+           read gphiv (rec:      1) in coordinates.nc ok
+           read gphif (rec:      1) in coordinates.nc ok
+           read e1t (rec:      1) in coordinates.nc ok
+           read e1u (rec:      1) in coordinates.nc ok
+           read e1v (rec:      1) in coordinates.nc ok
+           read e1f (rec:      1) in coordinates.nc ok
+           read e2t (rec:      1) in coordinates.nc ok
+           read e2u (rec:      1) in coordinates.nc ok
+           read e2v (rec:      1) in coordinates.nc ok
+           read e2f (rec:      1) in coordinates.nc ok
+                     iom_close ~~~ close file: coordinates.nc ok
+
+           longitude and e1 scale factors
+           ------------------------------
+    1 -123.43  -123.43  -123.43  -123.43      397.1366832052      406.4552202241      407.4839087547      413.6050061510
+
+           latitude and e2 scale factors
+           -----------------------------
+    1   46.86    46.86    46.86    46.86      455.1627492966      455.1547891956      454.9603967540      454.9757095335
+
+ dom_zgr : vertical coordinate
+ ~~~~~~~
+           Namelist namzgr : set vertical coordinate
+              z-coordinate - full steps      ln_zco    =  F
+              z-coordinate - partial steps   ln_zps    =  T
+              s- or hybrid z-s-coordinate    ln_sco    =  F
+              ice shelf cavities             ln_isfcav =  F
+
+     zgr_z   : Reference vertical z-coordinates
+     ~~~~~~~
+            Value of coefficients for vertical mesh:
+                  zsur =   -4762.9614354630003     
+                  za0  =    255.58049070440001     
+                  za1  =    245.58132232489999     
+                  zkth =    21.433361979379999     
+                  zacr =    3.0000000000000000     
+  (Double tanh    za2  =    100.76092850000001     
+   parameters)    zkth2=    48.029893719999997     
+                  zacr2=    13.000000000000000     
+
+               Reference z-coordinate depth and scale factors:
+          level  gdept_1d  gdepw_1d  e3t_1d   e3w_1d  
+             1  3786.47     0.00   -90.60   -90.62
+             2  3695.88  3741.17   -90.58   -90.59
+             3  3605.31  3650.59   -90.55   -90.56
+             4  3514.79  3560.04   -90.51   -90.53
+             5  3424.30  3469.54   -90.46   -90.48
+             6  3333.87  3379.08   -90.40   -90.43
+             7  3243.51  3288.68   -90.32   -90.36
+             8  3153.24  3198.36   -90.21   -90.27
+             9  3063.10  3108.15   -90.05   -90.14
+            10  2973.16  3018.10   -89.80   -89.94
+            11  2883.55  2928.30   -89.38   -89.62
+            12  2794.50  2838.93   -88.64   -89.07
+            13  2706.46  2750.31   -87.31   -88.08
+            14  2620.26  2663.05   -84.83   -86.26
+            15  2537.51  2578.31   -80.19   -82.87
+            16  2461.20  2498.28   -71.54   -76.53
+            17  2396.82  2427.04   -55.68   -64.77
+            18  2353.85  2371.86   -27.76   -43.59
+            19  2347.21  2344.84    17.82    -7.48
+            20  2396.35  2363.53    83.66    48.33
+            21  2519.36  2447.82   163.62   122.69
+            22  2723.23  2611.39   242.52   204.27
+            23  2999.14  2853.24   306.02   276.75
+            24  3328.45  3158.39   349.36   330.12
+            25  3692.24  3507.05   375.89   364.37
+            26  4076.54  3882.48   391.28   384.65
+            27  4472.65  4273.49   400.16   396.31
+            28  4875.70  4673.51   405.54   403.15
+            29  5283.15  5078.98   409.15   407.49
+            30  5693.75  5488.10   411.97   410.62
+            31  6106.99  5900.05   414.49   413.24
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+ ===>>> : E R R O R
+         ===========
+
+ dom:zgr_z: e3w_1d or e3t_1d =< 0 
+
+     zgr_bat : defines level and meter bathymetry
+     ~~~~~~~
+                     iom_nf90_open ~~~ open existing file: bathy_meter.nc in READ mode
+                    ---> bathy_meter.nc OK
+           read Bathymetry (rec:      1) in bathy_meter.nc ok
+                     iom_close ~~~ close file: bathy_meter.nc ok
+ Minimum ocean depth:    2363.5330979453579       minimum number of ocean levels :           19
+
+     zgr_zps : z-coordinate with partial steps
+     ~~~~~~~ 
+               mbathy is recomputed : bathy_level file is NOT used
+
+ ===>>> : E R R O R
+         ===========
+
+     zgr_zps :   e r r o r   e3t_0 <= 0
+
+ ===>>> : E R R O R
+         ===========
+
+     zgr_zps :   e r r o r   e3w_0 <= 0
+
+     zgr_bat_ctl : check the bathymetry
+     ~~~~~~~~~~~
+
+                    suppress isolated ocean grid points
+                    -----------------------------------
+      no isolated ocean grid points
+  mbathy set to 0 along east and west boundary: nperio =            0
+  maximum number of ocean level =            0  < jpk-1
+  you can decrease jpk to            1
+
+     zgr_bot_level : ocean bottom k-index of T-, U-, V- and W-levels 
+     ~~~~~~~~~~~~~
+
+     zgr_top_level : ocean top k-index of T-, U-, V- and W-levels 
+     ~~~~~~~~~~~~~
+
+ dommsk : ocean mask 
+ ~~~~~~
+    Namelist namlbc
+       lateral momentum boundary cond.    rn_shlat  =   0.50000000000000000     
+       consistency with analytical form   ln_vorlat =  F
+    ocean lateral  partial-slip 
+
+ dom_vvl_init : Variable volume activated
+ ~~~~~~~~~~~~
+
+ ===>>> : W A R N I N G
+         ===============
+
+ W A R N I N G:  end of record or file while reading namelist nam_vvl in configuration namelist iostat =   -1
+
+ dom_vvl_ctl : choice/control of the variable vertical coordinate
+ ~~~~~~~~~~~
+            Namelist nam_vvl : chose a vertical coordinate
+               zstar                      ln_vvl_zstar   =  T
+               ztilde                     ln_vvl_ztilde  =  F
+               layer                      ln_vvl_layer   =  F
+               ztilde as zstar   ln_vvl_ztilde_as_zstar  =  F
+       ztilde near the equator    ln_vvl_zstar_at_eqtor  =  F
+            Namelist nam_vvl : thickness diffusion coefficient
+                                          rn_ahe3        =    0.0000000000000000     
+            Namelist nam_vvl : maximum e3t deformation fractional change
+                                          rn_zdef_max    =   0.90000000000000002     
+            Namelist nam_vvl : z-tilde to zstar restoration timescale (days)
+                                          rn_rst_e3t     =    30.000000000000000     
+            Namelist nam_vvl : z-tilde cutoff frequency of low-pass filter (days)
+                                          rn_lf_cutoff   =    5.0000000000000000     
+            Namelist nam_vvl : debug prints
+                                          ln_vvl_dbg     =  T
+
+               zstar vertical coordinate is used
+
+ dom_stp : time stepping setting
+ ~~~~~~~
+                synchronous time stepping
+                dynamics and tracer time step =    2.7777777777777779E-003  hours
+
+ dom_ctl : extrema of the masked scale factors
+ ~~~~~~~
+              e1t maxi: ********** at i =     0 j=     0
+              e1t mini: ********** at i =     0 j=     0
+              e2t maxi: ********** at i =     0 j=     0
+              e2t mini: ********** at i =     0 j=     0
+  
+ istate_ini : Initialization of the dynamics and tracers
+ ~~~~~~~~~~
+
+ dta_tsd_init : Temperature & Salinity data 
+ ~~~~~~~~~~~~ 
+    Namelist namtsd
+       Initialisation of ocean T & S with T &S input data   ln_tsd_init   =  T
+       damping of ocean T & S toward T &S input data        ln_tsd_tradmp =  F
+
+
+ dta_tsd : Temperature & Salinity data
+ ~~~~~~~
+           namtsd Namelist
+           list of files and frequency (>0: in hours ; <0 in months)
+                root filename: initial_strat/SS2_SoG0318_1y_temperature_nomask variable name: votemper
+                frequency:   -12.000000000000000       time interp:  F  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: initial_strat/SS2_SoG0318_1y_salinity_nomask variable name: vosaline
+                frequency:   -12.000000000000000       time interp:  F  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+  *** Info used values : 
+    date ndastp                                      :     20020914
+    number of elapsed days since the begining of run :    0.0000000000000000     
+
+ =======>> 1/2 time step before the start of the run DATE Y/M/D =   2002/ 9/14  nsec_day:   86395  nsec_week:  518395
+======>> time-step =       1      New day, DATE Y/M/D = 2002/09/15      nday_year = 258
+         nsec_year = 22204805   nsec_month = 1209605   nsec_day =     5
+   nsec_week =   518405
+                     iom_nf90_open ~~~ open existing file: initial_strat/SS2_SoG0318_1y_temperature_nomask.nc in READ mode
+                    ---> initial_strat/SS2_SoG0318_1y_temperature_nomask.nc OK
+           read votemper (rec:      1) in initial_strat/SS2_SoG0318_1y_temperature_nomask.nc ok
+                     iom_nf90_open ~~~ open existing file: initial_strat/SS2_SoG0318_1y_salinity_nomask.nc in READ mode
+                    ---> initial_strat/SS2_SoG0318_1y_salinity_nomask.nc OK
+           read vosaline (rec:      1) in initial_strat/SS2_SoG0318_1y_salinity_nomask.nc ok
+fld_read: var votemper kt =        1 ( 257.0001 days), Y/M/D = 2002/09/15, record:   0001 (days    0.0000 <->  365.0000)
+fld_read: var vosaline kt =        1 ( 257.0001 days), Y/M/D = 2002/09/15, record:   0001 (days    0.0000 <->  365.0000)
+  temperature Levitus 
+
+   level = 1
+
+
+        1
+   4   0.00
+   level =           15
+
+
+        1
+   4   0.00
+   level =           30
+
+
+        1
+   4   0.00
+
+  salinity Levitus 
+
+   level = 1
+
+
+        1
+   4   0.00
+   level =           15
+
+
+        1
+   4   0.00
+   level =           30
+
+
+        1
+   4   0.00
+
+ dta_tsd: deallocte T & S arrays as they are only use to initialize the run
+
+ tide_init : Initialization of the tidal components
+ ~~~~~~~~~ 
+
+ ===>>> : W A R N I N G
+         ===============
+
+ W A R N I N G:  end of record or file while reading namelist nam_tide in configuration namelist iostat =   -1
+
+ ===>>> : E R R O R
+         ===========
+
+ tide_init : No tidal components set in nam_tide
+    Namelist nam_tide
+       Apply astronomical potential : ln_tide_pot  = T
+                                      nb_harmo     =            0
+                                      ln_tide_ramp =  F
+                                      rdttideramp  =    0.0000000000000000     
+
+ sbc_init : surface boundary condition setting
+ ~~~~~~~~ 
+         Namelist namsbc (partly overwritten with CPP key setting)
+            frequency update of sbc (and ice)             nn_fsbc     =            1
+            Type of sbc : 
+               analytical formulation                     ln_ana      =  F
+               flux       formulation                     ln_flx      =  F
+               CLIO bulk  formulation                     ln_blk_clio =  F
+               CORE bulk  formulation                     ln_blk_core =  T
+               MFS  bulk  formulation                     ln_blk_mfs  =  F
+               ocean-atmosphere coupled formulation       ln_cpl      =  F
+               forced-coupled mixed formulation           ln_mixcpl   =  F
+               OASIS coupling (with atm or sas)           lk_oasis    =  F
+               components of your executable              nn_components =            0
+               Multicategory heat flux formulation (LIM3) nn_limflx   =           -1
+            Misc. options of sbc : 
+               Patm gradient added in ocean & ice Eqs.    ln_apr_dyn  =  T
+               ice management in the sbc (=0/1/2/3)       nn_ice      =            0
+               ice-ocean embedded/levitating (=0/1/2)     nn_ice_embd =            1
+               daily mean to diurnal cycle qsr            ln_dm2dc    =  F
+               runoff / runoff mouths                     ln_rnf      =  T
+               iceshelf formulation                       nn_isf      =            0
+               Sea Surface Restoring on SST and/or SSS    ln_ssr      =  F
+               FreshWater Budget control  (=0/1/2)        nn_fwb      =            0
+               closed sea (=0/1) (set in namdom)          nn_closea   =            0
+               n. of iterations if land-sea-mask applied  nn_lsm      =            0
+               Use of per-category fluxes (nn_limflx = -1) 
+
+               CORE bulk formulation
+
+ sbc_ssm : sea surface mean fields, nn_fsbc=1 : instantaneous values
+ ~~~~~~~ 
+           default initialisation of ss?_m arrays
+
+ ===>>> : E R R O R
+         ===========
+
+ E R R O R :   misspelled variable in namelist namsbc_rnf in configuration namelist iostat = 5010
+
+ sbc_rnf : runoff 
+ ~~~~~~~ 
+    Namelist namsbc_rnf
+       specific river mouths treatment            ln_rnf_mouth =  T
+       river mouth additional Kz                  rn_avt_rnf   =    1.0000000000000000E-003
+       depth of river mouth additional mixing     rn_hrnf      =    15.000000000000000     
+       multiplicative factor for runoff           rn_rfact     =    1.0000000000000000     
+
+           runoffs inflow read in a file
+
+ sbc_rnf_init : read runoffs data
+ ~~~~~~~~~~~~
+           namsbc_rnf Namelist
+           list of files and frequency (>0: in hours ; <0 in months)
+                root filename: rivers/rivers_month variable name: rorunoff
+                frequency:   -1.0000000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+
+           Specific treatment used in vicinity of river mouths :
+              - Increase Kz in surface layers (if rn_hrnf > 0 )
+                by    1.0000000000000000E-003  m2/s  over            2  w-levels
+              - set to zero SSS damping       (if ln_ssr=T)
+              - mixed upstream-centered       (if ln_traadv_cen2=T)
+
+ rnf_mouth : river mouth mask
+ ~~~~~~~~~ 
+
+ ===>>> : E R R O R
+         ===========
+
+                     iom_open ~~~
+ File rivers/runoff_1m_nomask.nc* not found
+
+ bdy_init : initialization of open boundaries
+ ~~~~~~~~
+
+ ===>>> : E R R O R
+         ===========
+
+ E R R O R :   misspelled variable in namelist nambdy in configuration namelist iostat = 5010
+          nambdy
+ Number of open boundary sets :            2
+  
+ ------ Open boundary data set            1 ------
+ Boundary defined in namelist.
+
+ Boundary conditions for barotropic solution:  
+       no open boundary condition
+
+ Boundary conditions for baroclinic velocities:  
+       no open boundary condition
+       NO relaxation on baroclinic velocities
+
+ Boundary conditions for temperature and salinity:  
+       no open boundary condition
+       NO T/S relaxation
+
+       Width of relaxation zone =           10
+
+  
+ ------ Open boundary data set            2 ------
+ Boundary defined in namelist.
+
+ Boundary conditions for barotropic solution:  
+
+ ===>>> : E R R O R
+         ===========
+
+ unrecognised value for cn_dyn2d
+       initial state used for bdy data
+
+ Boundary conditions for baroclinic velocities:  
+
+ ===>>> : E R R O R
+         ===========
+
+ unrecognised value for cn_dyn3d
+       initial state used for bdy data
+       NO relaxation on baroclinic velocities
+
+ Boundary conditions for temperature and salinity:  
+
+ ===>>> : E R R O R
+         ===========
+
+ unrecognised value for cn_tra
+       initial state used for bdy data
+       NO T/S relaxation
+
+       Width of relaxation zone =            0
+
+ No volume correction applied at open boundaries
+
+
+ ===>>> : E R R O R
+         ===========
+
+ E R R O R :   misspelled variable in namelist nambdy_index in configuration namelist iostat = 5010
+
+ ===>>> : E R R O R
+         ===========
+
+ ctypebdy must be N, S, E or W
+
+ ===>>> : E R R O R
+         ===========
+
+ E R R O R :   misspelled variable in namelist nambdy_index in configuration namelist iostat = 5010
+
+ ===>>> : E R R O R
+         ===========
+
+ ctypebdy must be N, S, E or W
+  
+ bdy_ctl_seg: Check analytical segments
+ ~~~~~~~~~~~~
+ Number of east  segments     :            0
+ Number of west  segments     :            0
+ Number of north segments     :            0
+ Number of south segments     :            0
+ **Look for segments corners  :
+ NO open boundary corner found
+
+ bdy_dta_ini : initialization of data at the open boundaries
+ ~~~~~~~~~~
+ 
+ Maximum number of files to open =           0
+ Maximum number of files to open =           0
+
+ bdy_dta : open boundary conditions
+ ~~~~~~~
+           nambdy_dta Namelist
+           list of files and frequency (>0: in hours ; <0 in months)
+
+ bdy_dta : open boundary conditions
+ ~~~~~~~
+           nambdy_dta Namelist
+           list of files and frequency (>0: in hours ; <0 in months)
+ ++++++ dta%ll_ssh =  F
+ ++++++ dta%ll_u2d =  F
+ ++++++ dta%ll_v2d =  F
+ ++++++ dta%ll_u3d =  F
+ ++++++ dta%ll_v3d =  F
+ ++++++ dta%ll_tem =  F
+ ++++++ dta%ll_sal =  F
+ ++++++ dta%ssh/u2d/u3d allocated space
+ ++++++ dta%u3d/v3d allocated space
+ ++++++ dta%tem/sal allocated space
+ ++++++ dta%ll_ssh =  F
+ ++++++ dta%ll_u2d =  F
+ ++++++ dta%ll_v2d =  F
+ ++++++ dta%ll_u3d =  F
+ ++++++ dta%ll_v3d =  F
+ ++++++ dta%ll_tem =  F
+ ++++++ dta%ll_sal =  F
+ ++++++ dta%ssh/u2d/u3d allocated space
+ ++++++ dta%u3d/v3d allocated space
+ ++++++ dta%tem/sal allocated space
+
+ bdytide_init : initialization of tidal harmonic forcing at open boundaries
+ ~~~~~~~~~~~~
+
+ ===>>> : W A R N I N G
+         ===============
+
+ W A R N I N G:  end of record or file while reading namelist namdyn_nept in configuration namelist iostat =   -1
+
+ dyn_nept_init : Simplified Neptune module
+ ~~~~~~~~~~~~~
+  -->   Reading namelist namdyn_nept parameters:
+        ln_neptsimp          =  F
+
+
+ zdf_init: vertical physics
+ ~~~~~~~~
+    Namelist namzdf : set vertical mixing mixing parameters
+       vertical eddy viscosity             rn_avm0   =    1.0000000000000001E-005
+       vertical eddy diffusivity           rn_avt0   =    1.0000000000000001E-005
+       constant background or profile      nn_avb    =            0
+       horizontal variation for avtb       nn_havtb  =            0
+       time splitting / backward scheme    ln_zdfexp =  F
+       number of time step                 nn_zdfexp =            3
+       enhanced vertical diffusion         ln_zdfevd =  F
+          applied on momentum (=1/0)       nn_evdm   =            1
+       vertical coefficient for evd        rn_avevd  =    10.000000000000000     
+       non-penetrative convection (npc)    ln_zdfnpc =  F
+       npc call  frequency                 nn_npc    =            1
+       npc print frequency                 nn_npcp   =          365
+
+    vertical mixing option :
+       GLS dependent eddy coefficients
+
+    convection :
+       use the GLS closure scheme
+
+ zdf_bfr_init : momentum bottom friction
+ ~~~~~~~~~~~~~
+    Namelist nam_bfr : set bottom friction parameters
+       quadratic bottom friction
+       friction coef.   rn_bfri2  =    5.0000000000000001E-003
+       Max. coef. (log case)   rn_bfri2_max  =   0.10000000000000001     
+       background tke   rn_bfeb2  =    2.5000000000000001E-003
+       log formulation   ln_bfr2d =  F
+       bottom roughness  rn_bfrz0 [m] =    3.0000000000000001E-003
+       implicit bottom friction switch                ln_bfrimp  =  T
+
+ ===>>> : E R R O R
+         ===========
+
+ E R R O R :   misspelled variable in namelist namzdf_gls in configuration namelist iostat = 5010
+
+ zdf_gls_init : gls turbulent closure scheme
+ ~~~~~~~~~~~~
+    Namelist namzdf_gls : set gls mixing parameters
+       minimum value of en                           rn_emin        =    9.9999999999999995E-007
+       minimum value of eps                          rn_epsmin      =    9.9999999999999998E-013
+       Limit dissipation rate under stable stratif.  ln_length_lim  =  T
+       Galperin limit (Standard: 0.53, Holt: 0.26)   rn_clim_galp   =   0.53000000000000003     
+       TKE Surface boundary condition                nn_bc_surf     =            1
+       TKE Bottom boundary condition                 nn_bc_bot      =            1
+       Modify psi Schmidt number (wb case)           ln_sigpsi      =  T
+       Craig and Banner coefficient                  rn_crban       =    100.00000000000000     
+       Charnock coefficient                          rn_charn       =    70000.000000000000     
+       Surface roughness formula                     nn_z0_met      =            2
+       Wave height frac. (used if nn_z0_met=2)       rn_frac_hs     =    1.3000000000000000     
+       Stability functions                           nn_stab_func   =            2
+       Type of closure                               nn_clos        =            1
+       Surface roughness (m)                         rn_hsro        =    2.0000000000000000E-002
+       Bottom roughness (m) (nambfr namelist)        rn_bfrz0       =    3.0000000000000001E-003
+ The choosen closure is k-eps
+ Stability functions from Canuto A
+
+ Limit values
+ ~~~~~~~~~~~~
+ Parameter  m =    1.5000000000000000     
+ Parameter  n =   -1.0000000000000000     
+ Parameter  p =    3.0000000000000000     
+ rpsi1   =    1.4399999999999999     
+ rpsi2   =    1.9199999999999999     
+ rpsi3m  =  -0.62900000000000000     
+ rpsi3p  =    1.0000000000000000     
+ rsc_tke =    1.0000000000000000     
+ rsc_psi =    1.2000000000000000     
+ rsc_psi0 =    2.0061728395061729     
+ rc0     =   0.52680000000000005     
+
+ Shear free turbulence parameters:
+ rcm_sf  =   0.73099999999999998     
+ ra_sf   =   -1.5000000000000004     
+ rl_sf   =   0.24342942450908961     
+
+  ===>>>> : Initialisation of en and mxln by background values
+
+ ldf_tra_init : lateral tracer physics
+ ~~~~~~~~~~~~ 
+    Namelist namtra_ldf : lateral mixing parameters (type, direction, coefficients)
+       laplacian operator            ln_traldf_lap   =  T
+       bilaplacian operator          ln_traldf_bilap =  F
+       iso-level                     ln_traldf_level =  F
+       horizontal (geopotential)     ln_traldf_hor   =  F
+       iso-neutral                   ln_traldf_iso   =  T
+       iso-neutral (Griffies)        ln_traldf_grif  =  F
+       Griffies strmfn diagnostics   ln_traldf_gdia  =  F
+       lateral eddy diffusivity      rn_aht_0        =    10.000000000000000     
+       background hor. diffusivity   rn_ahtb_0       =    0.0000000000000000     
+       eddy induced velocity coef.   rn_aeiv_0       =    0.0000000000000000     
+       maximum isoppycnal slope      rn_slpmax       =    1.0000000000000000E-002
+       pure lateral mixing in ML     ln_triad_iso    =  F
+       lateral mixing on bottom      ln_botmix_grif  =  F
+
+           tracer mixing coef. = constant (default option)
+           harmonic tracer diffusion (default)
+
+       constant eddy diffusivity coef.   ahtu = ahtv = ahtw = aht0 =    10.000000000000000     
+
+ ldf_dyn : lateral momentum physics
+ ~~~~~~~
+    Namelist namdyn_ldf : set lateral mixing parameters
+       laplacian operator                      ln_dynldf_lap   =  T
+       bilaplacian operator                    ln_dynldf_bilap =  F
+       iso-level                               ln_dynldf_level =  F
+       horizontal (geopotential)               ln_dynldf_hor   =  F
+       iso-neutral                             ln_dynldf_iso   =  T
+       horizontal laplacian eddy viscosity     rn_ahm_0_lap    =    15.000000000000000     
+       background viscosity                    rn_ahmb_0       =    0.0000000000000000     
+       horizontal bilaplacian eddy viscosity   rn_ahm_0_blp    =   -10000000000.000000     
+       upper limit for laplacian eddy visc     rn_ahm_m_lap    =    40000.000000000000     
+       upper limit for bilap eddy viscosity    rn_ahm_m_blp    =   -1000000000000.0000     
+    momentum mixing coef. = F( latitude, longitude)
+    harmonic momentum diff. (default)
+
+ ldf_dyn_c2d : 2d lateral eddy viscosity coefficient
+ ~~~~~~~~~~~
+               laplacian operator: ahm proportional to e1
+               maximum grid-spacing =    463.01395989897469       maximum value for ahm =    15.000000000000000     
+               Caution, as implemented now, the isopycnal part of momentum
+                  mixing use aht0 as eddy viscosity coefficient. Thus, it is
+                  uniform and you must be sure that your ahm is greater than
+                  aht0 everywhere in the model domain.
+
+ ldf_slp_init : direction of lateral mixing
+ ~~~~~~~~~~~~
+
+ ===>>> : W A R N I N G
+         ===============
+
+ W A R N I N G:  end of record or file while reading namelist namtra_qsr in configuration namelist iostat =   -1
+
+ tra_qsr_init : penetration of the surface solar radiation
+ ~~~~~~~~~~~~
+    Namelist namtra_qsr : set the parameter of penetration
+       Light penetration (T) or not (F)         ln_traqsr  =  T
+       RGB (Red-Green-Blue) light penetration   ln_qsr_rgb =  T
+       2 band               light penetration   ln_qsr_2bd =  F
+       bio-model            light penetration   ln_qsr_bio =  F
+       light penetration for ice-model LIM3     ln_qsr_ice =  T
+       RGB : Chl data (=1/2) or cst value (=0)  nn_chldta  =            1
+       RGB & 2 bands: fraction of light (rn_si1)    rn_abs =   0.57999999999999996     
+       RGB & 2 bands: shortess depth of extinction  rn_si0 =   0.34999999999999998     
+       2 bands: longest depth of extinction         rn_si1 =    23.000000000000000     
+
+          R-G-B   light penetration - 2D Chl data 
+
+ trc_oce_rgb : Initialisation of the optical look-up table
+ ~~~~~~~~~~~ 
+       RGB longest depth of extinction    r_si2 =    61.804697156983934     
+     jc =           1   Chl =    1.0000000000000000E-002   irgb =            1
+     jc =           2   Chl =    1.0999999999999999E-002   irgb =            2
+     jc =           3   Chl =    1.2999999999999999E-002   irgb =            3
+     jc =           4   Chl =    1.4000000000000000E-002   irgb =            4
+     jc =           5   Chl =    1.6000000000000000E-002   irgb =            5
+     jc =           6   Chl =    1.7999999999999999E-002   irgb =            6
+     jc =           7   Chl =    2.0000000000000000E-002   irgb =            7
+     jc =           8   Chl =    2.1999999999999999E-002   irgb =            8
+     jc =           9   Chl =    2.5000000000000001E-002   irgb =            9
+     jc =          10   Chl =    2.8000000000000001E-002   irgb =           10
+     jc =          11   Chl =    3.2000000000000001E-002   irgb =           11
+     jc =          12   Chl =    3.5000000000000003E-002   irgb =           12
+     jc =          13   Chl =    4.0000000000000001E-002   irgb =           13
+     jc =          14   Chl =    4.4999999999999998E-002   irgb =           14
+     jc =          15   Chl =    5.0000000000000003E-002   irgb =           15
+     jc =          16   Chl =    5.6000000000000001E-002   irgb =           16
+     jc =          17   Chl =    6.3000000000000000E-002   irgb =           17
+     jc =          18   Chl =    7.0999999999999994E-002   irgb =           18
+     jc =          19   Chl =    7.9000000000000001E-002   irgb =           19
+     jc =          20   Chl =    8.8999999999999996E-002   irgb =           20
+     jc =          21   Chl =   0.10000000000000001        irgb =           21
+     jc =          22   Chl =   0.11200000000000000        irgb =           22
+     jc =          23   Chl =   0.12600000000000000        irgb =           23
+     jc =          24   Chl =   0.14099999999999999        irgb =           24
+     jc =          25   Chl =   0.15800000000000000        irgb =           25
+     jc =          26   Chl =   0.17799999999999999        irgb =           26
+     jc =          27   Chl =   0.20000000000000001        irgb =           27
+     jc =          28   Chl =   0.22400000000000000        irgb =           28
+     jc =          29   Chl =   0.25100000000000000        irgb =           29
+     jc =          30   Chl =   0.28199999999999997        irgb =           30
+     jc =          31   Chl =   0.31600000000000000        irgb =           31
+     jc =          32   Chl =   0.35499999999999998        irgb =           32
+     jc =          33   Chl =   0.39800000000000002        irgb =           33
+     jc =          34   Chl =   0.44700000000000001        irgb =           34
+     jc =          35   Chl =   0.50100000000000000        irgb =           35
+     jc =          36   Chl =   0.56200000000000006        irgb =           36
+     jc =          37   Chl =   0.63100000000000001        irgb =           37
+     jc =          38   Chl =   0.70799999999999996        irgb =           38
+     jc =          39   Chl =   0.79400000000000004        irgb =           39
+     jc =          40   Chl =   0.89100000000000001        irgb =           40
+     jc =          41   Chl =    1.0000000000000000        irgb =           41
+     jc =          42   Chl =    1.1220000000000001        irgb =           42
+     jc =          43   Chl =    1.2589999999999999        irgb =           43
+     jc =          44   Chl =    1.4130000000000000        irgb =           44
+     jc =          45   Chl =    1.5850000000000000        irgb =           45
+     jc =          46   Chl =    1.7780000000000000        irgb =           46
+     jc =          47   Chl =    1.9950000000000001        irgb =           47
+     jc =          48   Chl =    2.2389999999999999        irgb =           48
+     jc =          49   Chl =    2.5120000000000000        irgb =           49
+     jc =          50   Chl =    2.8180000000000001        irgb =           50
+     jc =          51   Chl =    3.1619999999999999        irgb =           51
+     jc =          52   Chl =    3.5480000000000000        irgb =           52
+     jc =          53   Chl =    3.9809999999999999        irgb =           53
+     jc =          54   Chl =    4.4669999999999996        irgb =           54
+     jc =          55   Chl =    5.0119999999999996        irgb =           55
+     jc =          56   Chl =    5.6230000000000002        irgb =           56
+     jc =          57   Chl =    6.3099999999999996        irgb =           57
+     jc =          58   Chl =    7.0789999999999997        irgb =           58
+     jc =          59   Chl =    7.9429999999999996        irgb =           59
+     jc =          60   Chl =    8.9120000000000008        irgb =           60
+     jc =          61   Chl =    10.000000000000000        irgb =           61
+         level of light extinction =            1  ref depth =    3741.1673424742553       m
+
+         Chlorophyll read in a file
+
+ tra_qsr_init : Solar penetration function of read chlorophyll
+ ~~~~~~~~~~~~
+           namtra_qsr Namelist
+           list of files and frequency (>0: in hours ; <0 in months)
+                root filename: ./chlorophyll variable name: CHLA
+                frequency:   -1.0000000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+
+ tra_bbc : Bottom Boundary Condition (bbc), apply a Geothermal heating
+ ~~~~~~~   
+    Namelist nambbc : set bbc parameters
+       Apply a geothermal heating at ocean bottom   ln_trabbc     =  F
+       type of geothermal flux                      nn_geoflx     =            0
+       Constant geothermal flux value               rn_geoflx_cst =    8.6400000000000005E-002
+
+       *** no geothermal heat flux
+
+ ===>>> : E R R O R
+         ===========
+
+ E R R O R :   misspelled variable in namelist namtra_dmp in configuration namelist iostat = 5010
+
+ tra_dmp_init : T and S newtonian relaxation
+ ~~~~~~~
+    Namelist namtra_dmp : set relaxation parameters
+       Apply relaxation   or not       ln_tradmp =  F
+       mixed layer damping option      nn_zdmp   =            0
+       Damping file name               cn_resto  = resto.nc                                                                                                                                                                                                
+
+
+ tra_adv_init : choice/control of the tracer advection scheme
+ ~~~~~~~~~~~
+    Namelist namtra_adv : chose a advection scheme for tracers
+       2nd order advection scheme     ln_traadv_cen2    =  F
+       TVD advection scheme           ln_traadv_tvd     =  T
+       MUSCL  advection scheme        ln_traadv_muscl   =  F
+       MUSCL2 advection scheme        ln_traadv_muscl2  =  F
+       UBS    advection scheme        ln_traadv_ubs     =  F
+       QUICKEST advection scheme      ln_traadv_qck     =  F
+       upstream scheme within muscl   ln_traadv_msc_ups =  F
+       TVD advection scheme with zts  ln_traadv_tvd_zts =  F
+
+          TVD       scheme is used
+
+ ===>>> : W A R N I N G
+         ===============
+
+ W A R N I N G:  end of record or file while reading namelist namtra_adv_mle in configuration namelist iostat =   -1
+
+ tra_adv_mle_init : mixed layer eddy (MLE) advection acting on tracers
+ ~~~~~~~~~~~~~~~~
+    Namelist namtra_adv_mle : mixed layer eddy advection on tracers
+       use mixed layer eddy (MLE, i.e. Fox-Kemper param) (T/F)      ln_mle    =  T
+       MLE type: =0 standard Fox-Kemper ; =1 new formulation        nn_mle    =            1
+       magnitude of the MLE (typical value: 0.06 to 0.08)           rn_ce     =    5.9999999999999998E-002
+       scale of ML front (ML radius of deformation) (rn_mle=0)      rn_lf     =    5000.0000000000000      m
+       maximum time scale of MLE                    (rn_mle=0)      rn_time   =    172800.00000000000      s
+       reference latitude (degrees) of MLE coef.    (rn_mle=1)      rn_lat    =    20.000000000000000      deg
+       space interp. of MLD at u-(v-)pts (0=min,1=averaged,2=max)   nn_mld_uv =            0
+       =1 no MLE in case of convection ; =0 always MLE              nn_conv   =            0
+       Density difference used to define ML for FK              rn_rho_c_mle  =    1.0000000000000000E-002
+
+    Mixed Layer Eddy induced transport added to tracer advection
+    New formulation
+
+       ML buoyancy criteria =    9.5581384015594543E-005  m/s2 
+       associated ML density criteria defined in zdfmxl =    1.0000000000000000E-002 kg/m3
+
+ tra_ldf_init : lateral tracer diffusive operator
+ ~~~~~~~~~~~
+    Namelist namtra_ldf already read in ldftra module
+    see ldf_tra_init report for lateral mixing parameters
+
+
+           Rotated laplacian operator
+
+ tra:ldf_ano : lateral diffusion acting on the full fields
+ ~~~~~~~~~~~
+
+ tra_zdf_init : vertical tracer physics scheme
+ ~~~~~~~~~~~
+               Implicit (euler backward) scheme
+
+ dyn_adv_init : choice/control of the momentum advection scheme
+ ~~~~~~~~~~~
+        Namelist namdyn_adv : chose a advection formulation & scheme for momentum
+           Vector/flux form (T/F)                           ln_dynadv_vec  =  T
+           = 0 standard scheme  ; =1 Hollingsworth scheme   nn_dynkeg      =            0
+           2nd order centred advection scheme               ln_dynadv_cen2 =  F
+           3rd order UBS advection scheme                   ln_dynadv_ubs  =  F
+           Sub timestepping of vertical advection           ln_dynzad_zts  =  F
+
+          vector form : keg + zad + vor is used
+ with Centered standard keg scheme
+
+ dyn_vor_init : vorticity term : read namelist and control the consistency
+ ~~~~~~~~~~~~
+         Namelist namdyn_vor : choice of the vorticity term scheme
+            energy    conserving scheme                ln_dynvor_ene =  F
+            enstrophy conserving scheme                ln_dynvor_ens =  F
+            mixed enstrophy/energy conserving scheme   ln_dynvor_mix =  F
+            enstrophy and energy conserving scheme     ln_dynvor_een =  T
+            enstrophy and energy conserving scheme (old) ln_dynvor_een_old=  F
+
+          Vector form advection : vorticity = Coriolis + relative vorticity
+
+          vorticity scheme : energy and enstrophy conserving scheme
+
+ dyn_ldf_init : Choice of the lateral diffusive operator on dynamics
+ ~~~~~~~~~~~
+        Namelist nam_dynldf : set lateral mixing parameters (type, direction, coefficients)
+           laplacian operator          ln_dynldf_lap   =  T
+           bilaplacian operator        ln_dynldf_bilap =  F
+           iso-level                   ln_dynldf_level =  F
+           horizontal (geopotential)   ln_dynldf_hor   =  F
+           iso-neutral                 ln_dynldf_iso   =  T
+
+               rotated laplacian operator
+
+ dyn_hpg_init : hydrostatic pressure gradient initialisation
+ ~~~~~~~~~~~~
+    Namelist namdyn_hpg : choice of hpg scheme
+       z-coord. - full steps                             ln_hpg_zco    =  F
+       z-coord. - partial steps (interpolation)          ln_hpg_zps    =  F
+       s-coord. (standard jacobian formulation)          ln_hpg_sco    =  F
+       s-coord. (standard jacobian formulation) for isf  ln_hpg_isf    =  F
+       s-coord. (Density Jacobian: Cubic polynomial)     ln_hpg_djc    =  F
+       s-coord. (Pressure Jacobian: Cubic polynomial)    ln_hpg_prj    =  T
+       time stepping: centered (F) or semi-implicit (T)  ln_dynhpg_imp =  F
+
+ dyn_zdf_init : vertical dynamics physics scheme
+ ~~~~~~~~~~~
+               Implicit (euler backward) scheme
+
+ dyn_spg_init : choice of the surface pressure gradient scheme
+ ~~~~~~~~~~~
+      Explicit free surface                  lk_dynspg_exp =  F
+      Free surface with time splitting       lk_dynspg_ts  =  T
+      Filtered free surface cst volume       lk_dynspg_flt =  F
+
+ ===>>> : W A R N I N G
+         ===============
+
+ W A R N I N G:  end of record or file while reading namelist namsplit in configuration namelist iostat =   -1
+
+ dyn_spg_ts : split-explicit free surface
+ ~~~~~~~~~~
+      ln_ts_nn_auto=.true. Automatically set nn_baro 
+      Max. courant number allowed:   0.80000000000000004     
+      ln_bt_av=.true.  => Time averaging over nn_baro time steps is on 
+      ln_bt_fw=.true.  => Forward integration of barotropic variables 
+      Time filter choice, nn_bt_flt:            1
+            Boxcar: width = nn_baro
+  
+      nn_baro =            0
+      Barotropic time step [s] is :                  Infinity
+      Maximum Courant number is   :                       NaN
+
+      free surface with time splitting scheme
+
+ ===>>> : W A R N I N G
+         ===============
+
+ W A R N I N G:  end of record or file while reading namelist namberg in configuration namelist iostat =   -1
+
+ icbini :   Namelist namberg ln_icebergs = F , NO icebergs used
+ ~~~~~~~~ 
+
+ ===>>> : W A R N I N G
+         ===============
+
+ W A R N I N G:  end of record or file while reading namelist namsto in configuration namelist iostat =   -1
+
+ sto_par_init : stochastic parameterization
+ ~~~~~~~~~~~~
+    Namelist namsto : stochastic parameterization
+       restart stochastic parameters           ln_rststo     =  F
+       read seed of RNG from restart file      ln_rstseed    =  T
+       suffix of sto restart name (input)      cn_storst_in  = restart_sto                     
+       suffix of sto restart name (output)     cn_storst_out = restart_sto                     
+       stochastic equation of state            ln_sto_eos    =  F
+       number of degrees of freedom            nn_sto_eos    =            1
+       random walk horz. std (in grid points)  rn_eos_stdxy  =    1.3999999999999999     
+       random walk vert. std (in grid points)  rn_eos_stdz   =   0.69999999999999996     
+       random walk tcor (in timesteps)         rn_eos_tcor   =    1440.0000000000000     
+       order of autoregressive  processes      nn_eos_ord    =            1
+       passes of Laplacian filter              nn_eos_flt    =            0
+       limitation factor                       rn_eos_lim    =    2.0000000000000000     
+
+    stochastic parameterization :
+
+ trc_init : initial set up of the passive tracers
+ ~~~~~~~
+ trc_nam : read the passive tracer namelists
+ ~~~~~~~
+
+  Namelist : namtrc_run
+    time step freq. for passive tracer           nn_dttrc      =            1
+    restart  for passive tracer                  ln_rsttr      =  T
+    control of time step for passive tracer      nn_rsttr      =            0
+    first time step for pass. trac.              nittrc000     =            1
+    frequency of outputs for passive tracers     nn_writetrc   =            1
+    Use euler integration for TRC (y/n)          ln_top_euler  =  F
+  
+
+ trc_nam : read the passive tracer namelists
+ ~~~~~~~
+
+ trc_nam_dia : read the passive tracer diagnostics options
+ ~~~~~~~
+
+ trc_nam_dia : read the passive tracer diagnostics options
+ ~~~~~~~
+
+
+  Namelist : namtrc_dia
+     save additionnal diagnostics arrays         ln_diatrc   =  T
+     save additionnal biology diagnostics arrays ln_diabio   =  T
+     frequency of outputs for additional arrays  nn_writedia =         5475
+     frequency of outputs for biological trends  nn_writebio =           10
+  
+
+  trc_nam_trp: read namelist for tracer transport
+  ~~~~~~~~~~~
+
+ trc_adv_ctl : choice/control of the tracer advection scheme
+ ~~~~~~~~~~~
+    Namelist namtrc_adv : chose a advection scheme for tracers
+       2nd order advection scheme     ln_trcadv_cen2    =  F
+       TVD advection scheme           ln_trcadv_tvd     =  F
+       MUSCL  advection scheme        ln_trcadv_muscl   =  F
+       MUSCL2 advection scheme        ln_trcadv_muscl2  =  F
+       UBS    advection scheme        ln_trcadv_ubs     =  F
+       QUICKEST advection scheme      ln_trcadv_qck     =  F
+       TVD advection scheme with zts  ln_trcadv_tvd_zts =  T
+
+ trc:ldf_ctl : lateral tracer diffusive operator
+ ~~~~~~~~~~~
+    Namelist namtrc_ldf : set lateral mixing parameters (type, direction, coefficients)
+       laplacian operator                                 ln_trcldf_lap   =  T
+       bilaplacian operator                               ln_trcldf_bilap =  F
+       iso-level                                          ln_trcldf_level =  F
+       horizontal (geopotential)                          ln_trcldf_hor   =  F
+       iso-neutral                                        ln_trcldf_iso   =  T
+       diffusivity coefficient                                 rn_ahtrc_0 =    10.000000000000000     
+       background hor. diffusivity                             rn_ahtrb_0 =    0.0000000000000000     
+       enhanced zonal diffusivity                             rn_fact_lap =    1.0000000000000000     
+
+    Namelist namtrc_zdf : set vertical diffusion parameters
+       time splitting / backward scheme ln_trczdf_exp =  F
+       number of time step              nn_trczdf_exp =            3
+
+    Namelist namtrc_rad : treatment of negative concentrations
+       correct artificially negative concen. or not ln_trcrad =  T
+
+ trc_dmp : Passive tracers newtonian damping
+ ~~~~~~~
+    Namelist namtrc_dmp : set damping parameter
+       mixed layer damping option     nn_zdmp_tr =            1 (zoom: forced to 0)
+       Restoration coeff file    cn_resto_tr = resto_tr.nc                                                                                                                                                                                             
+
+  Namelist : namtrc
+    Read inputs data from file (y/n)             ln_trcdta     =  F
+    Damping of passive tracer (y/n)              ln_trcdmp     =  F
+    Restoring of tracer on closed seas           ln_trcdmp_clo =  F
+  
+   tracer nb :            1     short name : NO3                 
+   tracer nb :            2     short name : NH4                 
+   tracer nb :            3     short name : Si                  
+   tracer nb :            4     short name : DIAT                
+   tracer nb :            5     short name : PHY                 
+   tracer nb :            6     short name : MYRI                
+   tracer nb :            7     short name : MICZ                
+   tracer nb :            8     short name : DON                 
+   tracer nb :            9     short name : PON                 
+   tracer nb :           10     short name : bSi                 
+   tracer nb :           11     short name : TRA                 
+  
+
+   Read a restart file for passive tracer : restart_trc
+
+
+   All the passive tracers are initialised with constant values 
+
+
+     Passive Tracer  time step    rdttrc  =    10.000000000000000     
+
+
+ trc_nam_ice : Read the namelist for trc_ice
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  Sea ice tracers option (nn_ice_tr) :           -1
+  
+
+  trc_nam_pisces : read SMELT namelist
+  ~~~~~~~~~~~~~~
+           CFC not used
+           C14 not used
+           MY_TRC not used
+
+
+ trc_rst_cal : read the TOP restart file for calendar
+ ~~~~~~~~~~~~
+
+ ===>>> : E R R O R
+         ===========
+
+                     iom_open ~~~
+ File ./restart_trc.nc* not found
+  *** Info read in restart : 
+    previous time-step                               :            0
+  *** restart option
+  nn_rsttr = 0 : no control of nittrc000
+
+
+
+  p4z_ini :   SMELT biochemical model initialisation
+  ~~~~~~~~~~~~~~
+  Namelist : nampisbio
+     frequence pour la biologie                nrdttrc   =           1
+  nrdttrc not equal 1 not yet supported in SMELT
+  
+  Namelist parameters for sinking of biological material, nampissink
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   m/d  microphyto minimum sinking rate zz_w_sink_Pmicro_min*86400 =  0.50000000000000000     
+   m/d microphyto maximum sinking rate  zz_w_sink_Pmicro_max*86400 =   1.2000000000000000     
+   m/s PON detritus sinking rate        zz_w_sink_D_PON =   8.0000000000000007E-005
+   m/s  bio si detritus sinking rate    zz_w_sink_D_bSi =   8.0000000000000007E-005
+  
+  namelist : nampisopt 
+  ~~~~~~~~~~~~~~~~~ 
+       zzQ_o      =    1368.0000000000000     
+       zzalbedo   =   0.17999999999999999     
+       zzcf_value =    0.0000000000000000     
+       zzialpha   =    9.0999999999999998E-002
+       zzibeta    =    4.3299999999999998E-002
+       zzigamma   =    2.6199999999999998E-022
+       zzisigma   =    5.5000000000000000     
+       zzitheta   =   0.44500000000000001     
+       zzidl      =    2.5600000000000001     
+       zzN2chl    =    1.6000000000000001     
+  
+  Namelist parameters for phytoplankton growth, nampisprod
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  zz_rate_R_diat =   6.0000000000000002E-005
+  zz_rate_R_myri =   2.5000000000000001E-005
+  zz_rate_R_nano =   2.5000000000000001E-005
+  zz_rate_maxtemp_diat =   35.000000000000000     
+  zz_rate_maxtemp_myri =   35.000000000000000     
+  zz_rate_maxtemp_nano =   35.000000000000000     
+  zz_rate_temprange_diat =   5.0000000000000000     
+  zz_rate_temprange_myri =   5.0000000000000000     
+  zz_rate_temprange_nano =   5.0000000000000000     
+  zz_rate_Iopt_diat =   42.000000000000000     
+  zz_rate_Iopt_myri =   37.000000000000000     
+  zz_rate_Iopt_nano =   10.000000000000000     
+  zz_rate_gamma_diat =   0.0000000000000000     
+  zz_rate_gamma_myri =   0.0000000000000000     
+  zz_rate_gamma_nano =   0.0000000000000000     
+  zz_rate_K_Si_diat =  0.59999999999999998     
+  zz_rate_K_Si_myri =   0.0000000000000000     
+  zz_rate_K_Si_nano =   0.0000000000000000     
+  zz_rate_gamma_o_diat =   0.0000000000000000     
+  zz_rate_gamma_o_myri =   0.0000000000000000     
+  zz_rate_gamma_o_nano =   0.0000000000000000     
+  zz_rate_kapa_diat =   1.0000000000000000     
+  zz_rate_kapa_myri =  0.50000000000000000     
+  zz_rate_kapa_nano =  0.29999999999999999     
+  zz_rate_k_diat =   2.0000000000000000     
+  zz_rate_k_myri =  0.50000000000000000     
+  zz_rate_k_nano =  0.10000000000000001     
+  zz_rate_N_x_diat =   0.0000000000000000     
+  zz_rate_N_x_myri =   0.0000000000000000     
+  zz_rate_N_x_nano =   0.0000000000000000     
+  zz_rate_N_o_diat =   0.0000000000000000     
+  zz_rate_N_o_myri =   0.0000000000000000     
+  zz_rate_N_o_nano =   0.0000000000000000     
+  zz_rate_Si_ratio_diat =   2.0000000000000000     
+  zz_rate_Si_ratio_myri =   0.0000000000000000     
+  zz_rate_Si_ratio_nano =   0.0000000000000000     
+
+ ===>>> : W A R N I N G
+         ===============
+
+ W A R N I N G:  end of record or file while reading namelist nampissbc in reference namelist iostat =   -1
+
+ ===>>> : E R R O R
+         ===========
+
+ E R R O R :   misspelled variable in namelist nampissbc in configuration namelist iostat = 5010
+  
+  namelist : nampissbc 
+  ~~~~~~~~~~~~~~~~~ 
+     dust input from the atmosphere           ln_dust     =  F
+     Variable solubility of iron input        ln_solub    =  F
+     river input of nutrients                 ln_river    =  F
+     atmospheric deposition of n              ln_ndepo    =  F
+     Fe input from sediments                  ln_ironsed  =  F
+     Fe input from seaice                     ln_ironice  =  F
+     fe input from hydrothermal vents         ln_hydrofe  =  F
+     coastal release of iron                  sedfeinput  =    0.0000000000000000     
+     solubility of the dust                   dustsolub   =    0.0000000000000000     
+     Mineral Fe content of the dust           mfrac       =    0.0000000000000000     
+     Iron concentration in sea ice            icefeinput  =    0.0000000000000000     
+     sinking speed of the dust                wdust       =    0.0000000000000000     
+     nitrogen fixation rate                   nitrfix     =    0.0000000000000000     
+     nitrogen fixation sensitivty to light    diazolight  =    0.0000000000000000     
+     fe half-saturation cste for diazotrophs  concfediaz  =    0.0000000000000000     
+     Fe to 3He ratio assumed for vent iron supply hratio  =    0.0000000000000000     
+
+     Total input of elements from river supply
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+ ===>>> : W A R N I N G
+         ===============
+
+ W A R N I N G:  end of record or file while reading namelist nampisrem in configuration namelist iostat =   -1
+  
+  Namelist parameters for remineralization, nampisrem
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     remineralisation rate detritus->NH    zz_remin_NH    =   3.9999999999999998E-007
+     remineralization rate detritus->DON   zz_remin_D_DON =   2.3000000000000000E-006
+     remineralization rate detritus->PON   zz_remin_D_PON =   2.3000000000000000E-006
+     remineralization rate detritus->Si    zz_remin_D_bSi =   3.2399999999999999E-006
+  
+  Namelist parameters for phytoplankton mort, nampismort
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   picophyt natural mort                               zz_rate_pico_Rm  =   2.5000000000000002E-006
+   waste frac from picophyt natural mort to NH    zz_frac_waste_FNM_NH  =   0.0000000000000000     
+   waste frac from picophyt natural mort to DON   zz_frac_waste_FNM_DON =  0.47499999999999998     
+   waste frac from picophyt natural mort to PON   zz_frac_waste_FNM_PON =  0.47499999999999998     
+   waste frac picophyt natural mort to refractory zz_frac_waste_FNM_Ref =   5.0000000000000003E-002
+   waste frac from picophyt natural mort to bSi   zz_frac_waste_FNM_Bsi =   1.0000000000000000     
+   picophyt si/n ratio                            zz_rate_Si_ratio_nano =   0.0000000000000000     
+   picophyt natural mort                               zz_rate_myri_Rm  =   2.7000000000000000E-006
+   waste frac from picophyt natural mort to NH    zz_frac_waste_NNM_NH  =   0.0000000000000000     
+   waste frac from picophyt natural mort to DON   zz_frac_waste_NNM_DON =  0.47499999999999998     
+   waste frac from picophyt natural mort to PON   zz_frac_waste_NNM_PON =  0.47499999999999998     
+   waste frac picophyt natural mort to refractory zz_frac_waste_NNM_Ref =   5.0000000000000003E-002
+   waste frac from picophyt natural mort to bSi   zz_frac_waste_NNM_Bsi =   1.0000000000000000     
+   picophyt si/n ratio                            zz_rate_Si_ratio_myri =   0.0000000000000000     
+   micro-phyto natural mort                           zz_rate_micro_Rm  =   2.6500000000000000E-006
+   waste frac from microphyt natural mort to NH   zz_frac_waste_DNM_NH  =   0.0000000000000000     
+   waste frac from microphyt natural mort to DON  zz_frac_waste_DNM_DON =  0.47499999999999998     
+   waste frac from microphyt natural mort to PON  zz_frac_waste_DNM_PON =  0.47499999999999998     
+   waste frac microphyt natural mort to refractory zz_frac_waste_DNM_Ref=   5.0000000000000003E-002
+   waste frac from microphyt natural mort to bSi  zz_frac_waste_DNM_Bsi =   1.0000000000000000     
+   micro-phyto si/n ratio                        zz_rate_Si_ratio_diat =   2.0000000000000000     
+  
+  Namelist parameters for microzo, nampiszoo
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   uM N / s microzo natural mort @ 20 deg C            zz_rate_uzoo_Rm=   6.9999999999999997E-007
+   uM N / s microzo excretion rate @ 20 deg C        zz_rate_uzoo_excr=   4.9999999999999998E-008
+                                                  zz_frac_waste_ZNM_NH=   0.0000000000000000     
+                                                  zz_frac_waste_ZEX_NH=   1.0000000000000000     
+   uM N microzo total grazing limit             zz_rate_uzoo_PredSlope=  0.50000000000000000     
+   uM N microzo total grazing half sat const      zz_rate_uzoo_HalfSat=   1.2500000000000000     
+   microzo preference for micro-phyto           zz_rate_uzoo_MicroPref=  0.28000000000000003     
+   uM N miczo micphyt graz half sat const  zz_rate_uzoo_MicroPredslope=  0.29999999999999999     
+   uM N miczo micphyt grazing half sat const zz_rate_uzoo_MicroHalfSat=   1.0000000000000000     
+   microzo preference for nanophyto              zz_rate_uzoo_NanoPref=  0.17000000000000001     
+   uM N microzo nanophyt grazing limit      zz_rate_uzoo_NanoPredslope=  0.50000000000000000     
+   uM N microzo nanophyt graz half sat const  zz_rate_uzoo_NanoHalfSat=   1.0000000000000000     
+   microzo preference for picophyto              zz_rate_uzoo_PicoPref=  0.28000000000000003     
+   uM N microzo picophyt grazing limit      zz_rate_uzoo_PicoPredslope=  0.40000000000000002     
+   uM N microzo picophyt graz half sat const  zz_rate_uzoo_PicoHalfSat=   1.0000000000000000     
+   microzo preference for PON                    zz_rate_uzoo_PON_Pref=   8.9999999999999997E-002
+   uM N microzo microzo grazing limit       zz_rate_uzoo_PON_Predslope=  0.59999999999999998     
+   uM N microzo PON grazing half sat const    zz_rate_uzoo_PON_HalfSat=   2.0000000000000000     
+   microzo preference for microzo cannibalism      zz_rate_uzoo_Z_Pref=  0.17999999999999999     
+   uM N microzo microzo grazing limit         zz_rate_uzoo_Z_Predslope=  0.29999999999999999     
+   uM N microzo microzo grazing half sat const  zz_rate_uzoo_Z_HalfSat=  0.50000000000000000     
+   match SOG 0.600E-04  1/s micro-phyto max growth rate zz_rate_uzoo_R=   1.5000000000000000E-005
+   waste frac from microzo graz PON to NH         zz_frac_waste_PEZ_NH=   0.0000000000000000     
+   waste frac from microzo graz microphyt to NH   zz_frac_waste_DEZ_NH=   0.0000000000000000     
+   waste frac from microzo graz nanophyt to NH    zz_frac_waste_NEZ_NH=   0.0000000000000000     
+   waste frac from microzo graz picophyt to NH    zz_frac_waste_FEZ_NH=   0.0000000000000000     
+   waste frac from microzo excretion to NH        zz_frac_waste_ZEZ_NH=   0.0000000000000000     
+                                                      zz_rate_uZoo_eff=  0.59999999999999998     
+   waste frac from microzo natural mort to DON   zz_frac_waste_ZNM_DON=  0.47499999999999998     
+   waste frac from microzo excretion to DON      zz_frac_waste_ZEX_DON=   0.0000000000000000     
+   waste frac from microzo graz microphyt to DON zz_frac_waste_DEZ_DON=  0.50000000000000000     
+   waste frac from microzo graz picophyt to DON  zz_frac_waste_FEZ_DON=  0.50000000000000000     
+   waste frac from microzo graz nanophyt to DON  zz_frac_waste_NEZ_DON=  0.50000000000000000     
+   waste frac from microzo graz PON to DON       zz_frac_waste_PEZ_DON=   0.0000000000000000     
+   waste frac from microzo graz microzoo to DON  zz_frac_waste_ZEZ_DON=  0.50000000000000000     
+   waste frac from microzo natural mort to PON   zz_frac_waste_ZNM_PON=  0.47499999999999998     
+   waste frac from microzo excretion to PON      zz_frac_waste_ZEX_PON=   0.0000000000000000     
+   waste frac from microzo graz microphyt to PON zz_frac_waste_DEZ_PON=  0.50000000000000000     
+   waste frac from microzo graz picophyt to PON  zz_frac_waste_FEZ_PON=  0.50000000000000000     
+   waste frac from microzo graz nanophyt to PON  zz_frac_waste_NEZ_PON=  0.50000000000000000     
+   waste frac from microzo graz PON to PON       zz_frac_waste_PEZ_PON=   1.0000000000000000     
+   waste frac from microzo graz microzoo to PON  zz_frac_waste_ZEZ_PON=  0.50000000000000000     
+   waste frac from microzo natural mort to bSi   zz_frac_waste_ZNM_BSi=   0.0000000000000000     
+   waste frac from microzo excretion to bSi      zz_frac_waste_ZEX_Bsi=   0.0000000000000000     
+   waste frac from microzo graz microphyt to Bsi zz_frac_waste_DEZ_Bsi=   1.0000000000000000     
+   waste frac from microzo graz picophyt to Bsi  zz_frac_waste_FEZ_BSi=   1.0000000000000000     
+   waste frac from microzo graz nanophyt to Bsi  zz_frac_waste_NEZ_BSi=   1.0000000000000000     
+   waste frac from microzo graz PON to Bsi       zz_frac_waste_PEZ_BSi=   0.0000000000000000     
+   waste frac from microzo graz microzoo to Bsi  zz_frac_waste_ZEZ_BSi=   0.0000000000000000     
+   micro-phyto silicon/nitrogen ratio           zz_rate_micro_Si_ratio=   2.0000000000000000     
+   nano-phyto silicon/nitrogen ratio             zz_rate_nano_Si_ratio=   0.0000000000000000     
+   pico-phyto silicon/nitrogen ratio             zz_rate_pico_Si_ratio=   0.0000000000000000     
+  
+  Namelist parameters for M. rubrum grazing, nampismes
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 zz_rate_mesorub_R =   7.9999999999999996E-006
+     zz_rate_mesorub_PicoPredSlope =  0.40000000000000002     
+       zz_rate_mesorub_PicoHalfSat =   1.0000000000000000     
+               zz_rate_mesorub_eff =  0.59999999999999998     
+              zz_frac_waste_FEN_NH =   0.0000000000000000     
+             zz_frac_waste_FEN_DON =  0.50000000000000000     
+             zz_frac_waste_FEN_PON =  0.50000000000000000     
+             zz_frac_waste_FEN_BSi =   1.0000000000000000     
+  
+  Namelist parameters for mesozooplankton, nampismezo
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ uM N mesozoo background conc                zz_rate_mesozoo_winterconc=  0.36899999999999999     
+ uM N mesozoo relative summer conc           zz_rate_mesozoo_summerconc=   1.0000000000000000     
+ uM N magnitude of mesozoo summer conc peaks zz_rate_mesozoo_sumpeakval=  0.33900000000000002        0.0000000000000000        0.0000000000000000     
+ year-day times of mesozoo summer conc peaks zz_rate_mesozoo_sumpeakpos=   217.00000000000000        229.00000000000000        300.00000000000000     
+ year-day width of mesozoo summer conc peaks zz_rate_mesozoo_sumpeakwid=   114.00000000000000        51.600000000000001        40.000000000000000     
+ uM N/s mesozoo max ingestion @ 20 deg C     zz_rate_mesozoo_R=   1.3900000000000001E-005
+ uM N/s mesozoo natural mortality @ 20 deg C zz_rate_mesozoo_Rm=   2.3000000000000000E-006
+ uM N/s mesozoo excretion rate @ 20 deg C    zz_rate_mesozoo_excr=   1.3900000000000000E-006
+ uM N mesozoo total grazing limit            zz_rate_mesozoo_PredSlope=  0.50000000000000000     
+ uM N mesozoo total grazing half saturation  zz_rate_mesozoo_HalfSat=   1.0000000000000000     
+ mesozoo preference for diatoms              zz_rate_mesozoo_MicroPref=  0.25000000000000000     
+ uM N mesozoo diatom grazing limit           zz_rate_mesozoo_MicroPredslope=   0.0000000000000000     
+ uM N mesozoo diatom grazing half saturation zz_rate_mesozoo_MicroHalfSat=  0.20000000000000001     
+ mesozoo preference for nano-phyto           zz_rate_mesozoo_NanoPref=  0.25000000000000000     
+ uM N mesozoo nano-phyto grazing limit       zz_rate_mesozoo_NanoPredslope=  0.20000000000000001     
+ uM N mesozoo nano-phyto grazing half saturation const zz_rate_mesozoo_NanoHalfSat=   1.0000000000000000     
+ mesozoo preference for pico-phyto           zz_rate_mesozoo_PicoPref=  0.10000000000000001     
+ uM N mesozoo pico-phyto grazing limit       zz_rate_mesozoo_PicoPredslope=   0.0000000000000000     
+ uM N mesozoo pico-phyto grazing half saturation const zz_rate_mesozoo_PicoHalfSat=  0.40000000000000002     
+ mesozoo preference for PON                  zz_rate_mesozoo_PON_Pref=  0.19200000000000000     
+ uM N mesozoo PON feeding limit              zz_rate_mesozoo_PON_Predslope=   0.0000000000000000     
+ uM N mesozoo PON feeding half saturation const zz_rate_mesozoo_PON_HalfSat=  0.40000000000000002     
+ mesozoo preference for microzoo             zz_rate_mesozoo_Z_Pref=  0.30800000000000000     
+ uM N mesozoo microzoo grazing limit         zz_rate_mesozoo_Z_Predslope=  0.50000000000000000     
+ uM N mesozoo microzoo grazing half saturation const zz_rate_mesozoo_Z_HalfSat=   1.2000000000000000     
+ mesozo grazed mass assimilation efficiency  zz_rate_mesozoo_eff=  0.50000000000000000     
+ waste fraction from meso-zoo natural mortality to NH   zz_frac_waste_MNM_NH =   0.0000000000000000     
+ waste fraction from meso-zoo natural mortality to DON  zz_frac_waste_MNM_DON=  0.47499999999999998     
+ waste fraction from meso-zoo natural mortality to PON  zz_frac_waste_MNM_PON=  0.47499999999999998     
+ waste fraction from meso-zoo natural mortality to bSi  zz_frac_waste_MNM_BSi=   0.0000000000000000     
+ waste fraction from meso-zoo excretion to NH     zz_frac_waste_MEX_NH =   1.0000000000000000     
+ waste fraction from meso-zoo excretion to DON    zz_frac_waste_MEX_DON=   0.0000000000000000     
+ waste fraction from meso-zoo excretion to PON    zz_frac_waste_MEX_PON=   0.0000000000000000     
+ waste fraction from meso-zoo excretion to bSi    zz_frac_waste_MEX_Bsi=   0.0000000000000000     
+ waste fraction from mesozoo grazing PON to NH    zz_frac_waste_PEM_NH =   2.9999999999999999E-002
+ waste fraction from mesozoo grazing PON to DON   zz_frac_waste_PEM_DON=  0.20000000000000001     
+ waste fraction from mesozoo grazing PON to PON   zz_frac_waste_PEM_PON=  0.20000000000000001     
+ waste fraction from mesozoo grazing PON to Bsi   zz_frac_waste_PEM_BSi=   0.0000000000000000     
+ waste fraction from mesozoo grazing microphyto to NH   zz_frac_waste_DEM_NH =   2.9999999999999999E-002
+ waste fraction from mesozoo grazing microphyto to DON  zz_frac_waste_DEM_DON=  0.20000000000000001     
+ waste fraction from mesozoo grazing microphyto to PON  zz_frac_waste_DEM_PON=  0.20000000000000001     
+ waste fraction from mesozoo grazing microphyto to Bsi  zz_frac_waste_DEM_BSi=   1.0000000000000000     
+ waste fraction from mesozoo grazing picophyto to NH    zz_frac_waste_FEM_NH =   2.9999999999999999E-002
+ waste fraction from mesozoo grazing picophyto to DON   zz_frac_waste_FEM_DON=  0.20000000000000001     
+ waste fraction from mesozoo grazing picophyto to PON   zz_frac_waste_FEM_PON=  0.20000000000000001     
+ waste fraction from mesozoo grazing picophyto to Bsi   zz_frac_waste_FEM_BSi=   0.0000000000000000     
+ waste fraction from mesozoo grazing microzoo to NH     zz_frac_waste_ZEM_NH =   2.9999999999999999E-002
+ waste fraction from mesozoo grazing microzoo to DON    zz_frac_waste_ZEM_DON=  0.20000000000000001     
+ waste fraction from mesozoo grazing microzoo to PON    zz_frac_waste_ZEM_PON=  0.20000000000000001     
+ waste fraction from mesozoo grazing microzoo to Bsi    zz_frac_waste_ZEM_BSi=   0.0000000000000000     
+ waste fraction from mesozoo grazing nanophyto to NH    zz_frac_waste_NEM_NH =   2.9999999999999999E-002
+ waste fraction from mesozoo grazing nanophyto to DON   zz_frac_waste_NEM_DON=  0.20000000000000001     
+ waste fraction from mesozoo grazing nanophyto to PON   zz_frac_waste_NEM_PON=  0.20000000000000001     
+ waste fraction from mesozoo grazing nanophyto to Ref   zz_frac_waste_NEM_BSi=  0.56999999999999995     
+ micro-phyto silicon/nitrogen ratio    zz_rate_micro_Si_ratio=   2.0000000000000000     
+ nano-phyto silicon/nitrogen ratio      zz_rate_nano_Si_ratio=   0.0000000000000000     
+ pico-phyto silicon/nitrogen ratio      zz_rate_pico_Si_ratio=   0.0000000000000000     
+
+ Initialization of SMELT tracers done
+
+      file   : tracer.stat                                                                      open ok
+      unit   =           26
+      status = REPLACE
+      form   = FORMATTED
+      access = SEQUENTIAL
+
+  
+ trc_bc_init : Tracers Boundary Conditions (BC)
+ ~~~~~~~~~~~ 
+  
+   Total tracers to be initialized with SURFACE BCs data:  0
+   SURFACE BC data repository : ./
+  
+   Total tracers to be initialized with COASTAL BCs data:  0
+   COASTAL BC data repository : ./
+  
+   Total tracers to be initialized with OPEN BCs data: 11
+    #trc        NAME        Boundary     Mult.Fact.   OBC Settings
+      1                       OBC        0.403-312    frs          frs          
+      2                       OBC        0.679-316    frs          frs          
+      3                       OBC        0.170-312    frs          frs          
+      4                       OBC        0.395-322    frs          frs          
+      5                       OBC        0.695-309    frs          frs          
+      6                       OBC        0.695-309    frs          frs          
+      7                       OBC        0.695-309    frs          frs          
+      8                       OBC        0.494-323    frs          frs          
+      9                       OBC        0.000E+00    frs          frs          
+     10                       OBC        0.679-316    frs          frs          
+     11                       OBC        0.695-309    frs          frs          
+  
+   Boundary     1 -> NO damping of tracers
+   Boundary     2 -> NO damping of tracers
+   OPEN BC data repository : `gú    `ÎE  à Nÿ  !_±é €ÿÿß Nÿ                 `ÎE  €             ÐÂ÷    P           
+
+ ===>>> : W A R N I N G
+         ===============
+
+ W A R N I N G:  end of record or file while reading namelist nambdy_bc in reference namelist iostat =   -1
+
+ trc_bc_init : Passive tracer OBC data
+ ~~~~~~~~~~~
+           namtrc_bc Namelist
+           list of files and frequency (>0: in hours ; <0 in months)
+                root filename: ./open_boundaries/west/bioOBC_full_turb.nc variable name: NO3
+                frequency:    168.00000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/west/bioOBC_full_turb.nc variable name: NH4
+                frequency:    168.00000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/west/bioOBC_full_turb.nc variable name: Si
+                frequency:    168.00000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/west/bioOBC_full_turb.nc variable name: DIA
+                frequency:    168.00000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/west/bioOBC_full_turb.nc variable name: CRY
+                frequency:    168.00000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/west/bioOBC_full_turb.nc variable name: MYRI
+                frequency:    168.00000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/west/bioOBC_full_turb.nc variable name: MICZ
+                frequency:    168.00000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/west/bioOBC_full_turb.nc variable name: DON
+                frequency:    168.00000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/west/bioOBC_full_turb.nc variable name: PON
+                frequency:    168.00000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/west/bioOBC_full_turb.nc variable name: bSi
+                frequency:    168.00000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/west/bioOBC_full_turb.nc variable name: O2
+                frequency:    168.00000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+
+ ===>>> : W A R N I N G
+         ===============
+
+ W A R N I N G:  end of record or file while reading namelist nambdy_bc in reference namelist iostat =   -1
+
+ trc_bc_init : Passive tracer OBC data
+ ~~~~~~~~~~~
+           namtrc_bc Namelist
+           list of files and frequency (>0: in hours ; <0 in months)
+                root filename: ./open_boundaries/north/bioOBC_full_north_turb.nc variable name: NO3
+                frequency:    4380.0000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/north/bioOBC_full_north_turb.nc variable name: NH4
+                frequency:    4380.0000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/north/bioOBC_full_north_turb.nc variable name: Si
+                frequency:    4380.0000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/north/bioOBC_full_north_turb.nc variable name: DIA
+                frequency:    4380.0000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/north/bioOBC_full_north_turb.nc variable name: CRY
+                frequency:    4380.0000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/north/bioOBC_full_north_turb.nc variable name: MYRI
+                frequency:    4380.0000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/north/bioOBC_full_north_turb.nc variable name: MICZ
+                frequency:    4380.0000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/north/bioOBC_full_north_turb.nc variable name: DON
+                frequency:    4380.0000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/north/bioOBC_full_north_turb.nc variable name: PON
+                frequency:    4380.0000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/north/bioOBC_full_north_turb.nc variable name: bSi
+                frequency:    4380.0000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+                root filename: ./open_boundaries/north/bioOBC_full_north_turb.nc variable name: O2
+                frequency:    4380.0000000000000       time interp:  T  climatology:  T  weights    :  pairing    :  data type: yearly   land/sea mask:
+
+ trc_rst_read : read data in the TOP restart file
+ ~~~~~~~~~~~~
+
+
+           *** Total number of passive tracer jptra =           11
+           *** Total volume of ocean                =    0.0000000000000000     
+           *** Total inital content of all tracers 
+
+ tracer nb :  1      name :       NO3      initial content :  0.0000000000E+00
+ tracer nb :  2      name :       NH4      initial content :  0.0000000000E+00
+ tracer nb :  3      name :        Si      initial content :  0.0000000000E+00
+ tracer nb :  4      name :      DIAT      initial content :  0.0000000000E+00
+ tracer nb :  5      name :       PHY      initial content :  0.0000000000E+00
+ tracer nb :  6      name :      MYRI      initial content :  0.0000000000E+00
+ tracer nb :  7      name :      MICZ      initial content :  0.0000000000E+00
+ tracer nb :  8      name :       DON      initial content :  0.0000000000E+00
+ tracer nb :  9      name :       PON      initial content :  0.0000000000E+00
+ tracer nb : 10      name :       bSi      initial content :  0.0000000000E+00
+ tracer nb : 11      name :       TRA      initial content :  0.0000000000E+00
+
+
+
+ ===>>> : W A R N I N G
+         ===============
+
+ W A R N I N G:  end of record or file while reading namelist namptr in configuration namelist iostat =   -1
+
+ dia_ptr_init : poleward transport and msf initialization
+ ~~~~~~~~~~~~
+    Namelist namptr : set ptr parameters
+       Poleward heat & salt transport (T) or not (F)      ln_diaptr  =  F
+       Global (F) or glo/Atl/Pac/Ind/Indo-Pac basins      ln_subbas  =  F
+
+ dia_hsb_init : check the heat and salt budgets
+ ~~~~~~~~ 
+
+ ===>>> : W A R N I N G
+         ===============
+
+ W A R N I N G:  end of record or file while reading namelist namhsb in configuration namelist iostat =   -1
+
+ dia_hsb_init : check the heat and salt budgets
+ ~~~~~~~~~~~~
+    Namelist namhsb : set hsb parameters
+       Switch for hsb diagnostic (T) or not (F)  ln_diahsb  =  F
+
+
+ ===>>> : W A R N I N G
+         ===============
+
+ W A R N I N G:  end of record or file while reading namelist namtrd in configuration namelist iostat =   -1
+
+  trd_init : Momentum/Tracers trends
+  ~~~~~~~~~~
+    Namelist namtrd : set trends parameters
+       global domain averaged dyn & tra trends   ln_glo_trd  =  F
+       U & V trends: 3D output                   ln_dyn_trd  =  F
+       U & V trends: Mixed Layer averaged        ln_dyn_mxl  =  F
+       T & S trends: 3D output                   ln_tra_trd  =  F
+       T & S trends: Mixed Layer averaged        ln_tra_mxl  =  F
+       Kinetic   Energy trends                   ln_KE_trd   =  F
+       Potential Energy trends                   ln_PE_trd   =  F
+       Barotropic vorticity trends               ln_vor_trd  =  F
+       frequency of trends diagnostics (glo)     nn_trd      =          365
+ Euler time step switch is            0
+
+AAAAAAAA
+
+
+AAAAAAAA
+
+
+ ===>>> : E R R O R
+         ===========
+
+          37  error have been found
+                     iom_close ~~~ close file: initial_strat/SS2_SoG0318_1y_temperature_nomask.nc ok
+                     iom_close ~~~ close file: initial_strat/SS2_SoG0318_1y_salinity_nomask.nc ok

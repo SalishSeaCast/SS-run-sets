@@ -1,0 +1,9 @@
+# salishsea command processor run description for JPP case
+#
+# Salish Sea sub-domain with:
+#   * unstructured west and north open boundaries
+#   * NEMO calculated boundary coordinates
+#   * M2 tidal forcing
+
+paths:
+  NEMO-code: ../../NEMO-code
