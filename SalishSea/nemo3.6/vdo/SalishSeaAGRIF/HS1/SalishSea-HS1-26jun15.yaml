@@ -2,7 +2,7 @@
 config_name: SalishSeaAGRIF
 MPI decomposition: 6x9
 run_id: HS1Jun
-walltime: 12:00:00
+walltime: 8:00:00
 email: mdunphy@eoas.ubc.ca
 
 paths:
@@ -70,7 +70,7 @@ namelists:
       - 1_namelist.bottom
       - 1_namelist.tracer
       - 1_namelist.dynamics
-      - namelist.vertical
+      - 1_namelist.vertical
       - namelist.compute
       - 1_namelist.agrif
 
@@ -81,7 +81,7 @@ AGRIF:
 # Output settings. XMLs here are for the parent grid
 output:
   separate XIOS server: True
-  XIOS servers: 10
+  XIOS servers: 8
   iodefs: $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/iodefHS1.xml
   domaindefs: $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/domain_def.xml
   fielddefs: $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/hindcast/field_def.xml

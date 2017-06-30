@@ -1,6 +1,6 @@
 # Hindcast with AGRIF for Haro Strait 1
 config_name: SalishSeaAGRIF
-MPI decomposition: 6x9
+MPI decomposition: 8x10
 run_id: HS1Sep
 walltime: 8:00:00
 email: mdunphy@eoas.ubc.ca

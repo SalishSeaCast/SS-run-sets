@@ -1,7 +1,7 @@
 # Hindcast with AGRIF for Haro Strait 1
 config_name: SalishSeaAGRIF
 MPI decomposition: 6x9
-run_id: HS1Mar
+run_id: HS1_5Sep
 walltime: 8:00:00
 email: mdunphy@eoas.ubc.ca
 
@@ -22,9 +22,9 @@ grid:
 
 restart:
   # Parent
-  restart.nc: $HOME/MEOPAR/NEMO-forcing-MD/hindcast/07mar15/SalishSea_00382320_restart.nc
+  restart.nc: $HOME/MEOPAR/NEMO-forcing-MD/hindcast/28sep14/SalishSea_00025920_restart.nc
   AGRIF_1:
-    restart.nc: $HOME/MEOPAR/NEMO-forcing-HS1/1_SalishSea_00382320_restart.nc
+    restart.nc: $HOME/MEOPAR/NEMO-forcing-HS1/1_SalishSea_00025920_restart.nc
 
 forcing:
   # If relative, paths are taken from forcing path above
@@ -50,7 +50,7 @@ forcing:
 namelists:
   # Parent grid namelists
   namelist_cfg:
-    - namelist.time.08mar15
+    - namelist.time.24sep14
     - namelist.domain.40
     - namelist.surface.blue
     - namelist.lateral
@@ -63,13 +63,13 @@ namelists:
   # Zoom domain namelists
   AGRIF_1:
     namelist_cfg:
-      - 1_namelist.time.08mar15
+      - 1_namelist.time.24sep14
       - 1_namelist.domain.HS1.10
       - 1_namelist.surface.blue
       - 1_namelist.lateral
       - 1_namelist.bottom
-      - 1_namelist.tracer
-      - 1_namelist.dynamics
+      - 1_namelist.tracer.5
+      - 1_namelist.dynamics.5
       - 1_namelist.vertical
       - namelist.compute
       - 1_namelist.agrif
