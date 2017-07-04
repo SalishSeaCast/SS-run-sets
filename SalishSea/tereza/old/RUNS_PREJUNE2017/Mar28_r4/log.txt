@@ -1,0 +1,2 @@
+Run specifics: 
+wrote the p4z_car module in p4z_rem.F90 to update jpdic
