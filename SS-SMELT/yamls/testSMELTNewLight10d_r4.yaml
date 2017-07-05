@@ -49,7 +49,7 @@ forcing:
   bfr_coef.nc:
     link to: /home/eolson/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
   restart.nc:
-    1ink to: /home/eolson/MEOPAR/NewRuns/SMELTNewLight10d_r3/SalishSea_00425520_restart.nc
+    link to: /home/eolson/MEOPAR/NewRuns/SMELTNewLight10d_r3/SalishSea_00425520_restart.nc
   restart_trc.nc:
     link to: /home/eolson/MEOPAR/NewRuns/SMELTNewLight10d_r3/SalishSea_00425520_restart_trc.nc
 

@@ -17,7 +17,7 @@ config_name: SMELT
 MPI decomposition: 10x17
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: testNewLight_r2
+run_id: testNewLight_r5
 walltime: 20:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
@@ -49,9 +49,9 @@ forcing:
   bfr_coef.nc:
     link to: /home/eolson/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
   restart.nc:
-    link to: /home/eolson/MEOPAR/NewRuns/SMELTNewLight10d_r1/SalishSea_00382320_restart.nc
+    link to: /home/eolson/MEOPAR/NewRuns/SMELTNewLight10d_r4/SalishSea_00447120_restart.nc
   restart_trc.nc:
-    link to: /home/eolson/MEOPAR/NewRuns/SMELTNewLight10d_r1/SalishSea_00382320_restart_trc.nc
+    link to: /home/eolson/MEOPAR/NewRuns/SMELTNewLight10d_r4/SalishSea_00447120_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -63,7 +63,7 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/hndcstNMLs/namelist_cfg_10d_16feb15_r2
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/hndcstNMLs/namelist_cfg_10d_16feb15_r5
   namelist_top_cfg:
     - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_top_cfg
   namelist_smelt_cfg:
