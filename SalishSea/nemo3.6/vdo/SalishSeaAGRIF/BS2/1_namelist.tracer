@@ -35,7 +35,7 @@
 !
     ln_traadv_tvd     = .false.
     ln_traadv_tvd_zts = .true.  ! TVD scheme with sub timestepping for vertical tracer advection
-    nn_traadv_tvd_zts =   10    !     number of sub-time steps for ln_traadv_tvd_zts=T
+    nn_traadv_tvd_zts =   40    !     number of sub-time steps for ln_traadv_tvd_zts=T
 &end
 
 
