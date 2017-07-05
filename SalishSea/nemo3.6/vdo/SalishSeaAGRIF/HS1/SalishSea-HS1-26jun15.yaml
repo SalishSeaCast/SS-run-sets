@@ -1,7 +1,7 @@
 # Hindcast with AGRIF for Haro Strait 1
 config_name: SalishSeaAGRIF
 MPI decomposition: 6x9
-run_id: HS1Jun
+run_id: HS1-26jun15
 walltime: 12:00:00
 
 paths:
@@ -69,7 +69,7 @@ namelists:
       - 1_namelist.bottom
       - 1_namelist.tracer
       - 1_namelist.dynamics
-      - 1_namelist.vertical
+      - namelist.vertical
       - namelist.compute
       - 1_namelist.agrif
 
