@@ -1,9 +1,8 @@
-# Hindcast with AGRIF for Baynes Sound 1
+# Hindcast with AGRIF for Baynes Sound 2
 config_name: SalishSeaAGRIF
 MPI decomposition: 6x9
-run_id: 24sep14_BS2
+run_id: BS2-24sep14
 walltime: 12:00:00
-email: vdo@eoas.ubc.ca
 
 paths:
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
@@ -24,7 +23,7 @@ restart:
   # Parent
   restart.nc: $HOME/MEOPAR/NEMO-forcing-MD/hindcast/28sep14/SalishSea_00025920_restart.nc
   AGRIF_1:
-    restart.nc: $HOME/MEOPAR/NEMO-forcing-BS2/1_SalishSea_00025920_restart_expanded.nc
+    restart.nc: $HOME/MEOPAR/NEMO-forcing-BS2/1_SalishSea_00025920_restart.nc
 
 forcing:
   # If relative, paths are taken from forcing path above
@@ -64,7 +63,7 @@ namelists:
   AGRIF_1:
     namelist_cfg:
       - 1_namelist.time.24sep14
-      - 1_namelist.domain.20.BS2
+      - 1_namelist.domain.BS2.20
       - 1_namelist.surface.blue
       - 1_namelist.lateral
       - 1_namelist.bottom

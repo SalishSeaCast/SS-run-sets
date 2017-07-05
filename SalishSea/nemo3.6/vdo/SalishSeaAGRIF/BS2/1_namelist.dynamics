@@ -17,7 +17,7 @@
    ln_dynadv_cen2= .false. !  flux form - 2nd order centered scheme
    ln_dynadv_ubs = .false. !  flux form - 3rd order UBS      scheme
    ln_dynzad_zts = .true.  !  Use (T) sub timestepping for vertical momentum advection
-   nn_dynzad_zts =    10   !     number of sub-time steps for ln_dynzad_zts=T
+   nn_dynzad_zts =    40   !     number of sub-time steps for ln_dynzad_zts=T
 &end
 
 
