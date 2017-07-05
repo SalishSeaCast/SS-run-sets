@@ -6,8 +6,8 @@
 &namrun        !   Parameters of the run
 !-----------------------------------------------------------------------
    cn_exp      = "SalishSea"  ! experiment name
-   nn_it000    =    764641    ! first time step
-   nn_itend    =    781921    ! last time step (NEMO computes this)
+   nn_it000    =         1    ! first time step
+   nn_itend    =    999999    ! last time step (NEMO computes this)
    nn_date0    =  20150308    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
                               ! used to adjust tides to run date (regardless of restart control)
    nn_leapy    =       1      ! Leap year calendar (1) or not (0)
