@@ -1,9 +1,8 @@
 # Hindcast with AGRIF for Haro Strait 1
 config_name: SalishSeaAGRIF
-MPI decomposition: 8x10
+MPI decomposition: 6x9
 run_id: HS1Sep
 walltime: 12:00:00
-email: vdo@eoas.ubc.ca
 
 paths:
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
