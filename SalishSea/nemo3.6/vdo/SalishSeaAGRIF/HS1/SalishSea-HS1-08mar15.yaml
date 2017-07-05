@@ -2,8 +2,8 @@
 config_name: SalishSeaAGRIF
 MPI decomposition: 6x9
 run_id: HS1Mar
-walltime: 8:00:00
-email: mdunphy@eoas.ubc.ca
+walltime: 12:00:00
+email: vdo@eoas.ubc.ca
 
 paths:
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
