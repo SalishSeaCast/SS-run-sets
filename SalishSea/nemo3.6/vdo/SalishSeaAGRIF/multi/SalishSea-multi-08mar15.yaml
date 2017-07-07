@@ -1,6 +1,6 @@
 # Salish Sea with AGRIF for Haro Strait 1 and Baynes Sound 2
 config_name: SalishSeaAGRIF
-MPI decomposition: 6x11
+MPI decomposition: 8x11
 run_id: AGRIF-08mar15
 walltime: 12:00:00
 
@@ -103,7 +103,7 @@ AGRIF:
 # Output settings. XMLs here are for the parent grid
 output:
   separate XIOS server: True
-  XIOS servers: 6
+  XIOS servers: 8
   iodefs: $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/iodef.HS1BS2.xml
   domaindefs: $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/domain_def.xml
   fielddefs: $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/hindcast/field_def.xml
