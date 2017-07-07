@@ -2,7 +2,7 @@
 config_name: SalishSeaAGRIF
 MPI decomposition: 8x11
 run_id: AGRIF-26jun15
-walltime: 12:00:00
+walltime: 24:00:00
 
 paths:
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
