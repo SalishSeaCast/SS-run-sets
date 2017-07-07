@@ -262,4 +262,4 @@
 &nampiscarbon     !  Carbonate chemistry parameters (added- TJSJ)
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    zz_redfield_c_n = 6.625     ! Redfield ratio carbon to nitrogen
-   zz_redfield_p_n = 0.0625    ! Redfield ratio phosphorus to nitrogen  
+!   zz_remin_NH_walrus =  4.0e-7 ! why can't it get read in elsewhere? 
