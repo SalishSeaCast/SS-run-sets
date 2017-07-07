@@ -62,7 +62,7 @@ namelists:
   # Zoom domain namelists
   AGRIF_1:
     namelist_cfg:
-      - 1_namelist.time.26jun15
+      - 1_namelist.time.26jun15.10
       - 1_namelist.domain.HS1.10
       - 1_namelist.surface.blue
       - 1_namelist.lateral
