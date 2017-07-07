@@ -1,0 +1,104 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! NEMO/TOP1 CFG:   - tracer run information                (namtrc_run)
+!!               - tracer definition                     (namtrc    )
+!!               - tracer data initialisation            (namtrc_dta)
+!!               - tracer advection                      (namtrc_adv)
+!!               - tracer lateral diffusion              (namtrc_ldf)
+!!               - tracer vertical physics               (namtrc_zdf)
+!!               - tracer newtonian damping              (namtrc_dmp)
+!!               - dynamical tracer trends               (namtrc_trd)
+!!               - tracer output diagonstics             (namtrc_dia)
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+&namtrc_run     !   run information
+!-----------------------------------------------------------------------
+   nn_dttrc      =  1        !  time step frequency for passive sn_tracers
+   nn_writetrc   =  1      !  time step frequency for sn_tracer outputs
+   ln_top_euler  = .false.    !  use Euler time-stepping for TOP
+   ln_rsttr      = .false.  !  start from a restart file (T) or not (F)
+   nn_rsttr      =   0       !  restart control = 0 initial time step is not compared to the restart file value
+                           !                  = 1 do not use the value in the restart file
+                           !                  = 2 calendar parameters read in the restart file
+   cn_trcrst_in  = "restart_trc"   !  suffix of pass. sn_tracer restart name (input)
+   cn_trcrst_indir = "."           !  directory from which to read input passive tracer restarts
+   cn_trcrst_out = "restart_trc"   !  suffix of pass. sn_tracer restart name (output)
+   cn_trcrst_outdir = "."          !  directory to which to write output passive tracer restarts
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&namtrc     !   tracers definition
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!                !    name   !   title of the field      ! initial data ! initial data ! obc    !    sbc  !  cbc     ! save   !
+!                !           !                           !  units       ! from file    !                             ! or not ! 
+!                !           !                           !              ! or not       !                             !        !
+   sn_tracer(1)  = 'TUR1'    ,         'Fraser Tracer 1' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
+   sn_tracer(2)  = 'TUR2'    ,         'Fraser Tracer 2' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
+   sn_tracer(3)  = 'TUR3'    ,         'Fraser Tracer 3' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
+   sn_tracer(4)  = 'TUR4'    ,         'Fraser Tracer 4' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
+   sn_tracer(5)  = 'TUR5'    ,         'Fraser Tracer 5' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
+   sn_tracer(6)  = 'TUR6'    ,         'Fraser Tracer 6' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
+   sn_tracer(7)  = 'TUR7'    ,         'Fraser Tracer 7' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
+   sn_tracer(8)  = 'TUR8'    ,         'Fraser Tracer 8' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
+   sn_tracer(9)  = 'TUR9'    ,         'Fraser Tracer 9' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
+   sn_tracer(10) = 'TUR10'   ,         'Fraser Tracer 10',      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
+   ln_trcdta = .false.
+   ln_trcdmp = .false.
+   /
+!-----------------------------------------------------------------------
+&namtrc_bdy     ! bdy for passive tracers
+!-----------------------------------------------------------------------
+   cn_trc_dflt   =  'specified','specified' 
+   cn_trc        =  'specified','specified'          ! boundary condition type for passive tracers
+   nn_trcdmp_bdy = 0, 0
+/
+!-----------------------------------------------------------------------
+&namtrc_run     !   run information
+!-----------------------------------------------------------------------
+   ln_top_euler  = .false.    !  use Euler time-stepping for TOP
+/
+!-----------------------------------------------------------------------
+&namtrc     !   tracers definition
+!-----------------------------------------------------------------------
+/
+!-----------------------------------------------------------------------
+&namtrc_adv    !   advection scheme for passive tracer 
+!-----------------------------------------------------------------------
+   ln_trcadv_tvd = .false.
+   ln_trcadv_tvd_zts = .true.
+   ln_trcadv_qck = .false.
+/
+!-----------------------------------------------------------------------
+&namtrc_ldf    !   lateral diffusion scheme for passive tracer 
+!-----------------------------------------------------------------------
+!                               !  Type of the operator : 
+/
+!-----------------------------------------------------------------------
+&namtrc_zdf        !   vertical physics
+!-----------------------------------------------------------------------
+/
+!-----------------------------------------------------------------------
+&namtrc_rad        !  treatment of negative concentrations 
+!-----------------------------------------------------------------------
+/
+!-----------------------------------------------------------------------
+&namtrc_dmp    !   passive tracer newtonian damping   
+!-----------------------------------------------------------------------
+/
+!-----------------------------------------------------------------------
+&namtrc_ice       !    Representation of sea ice growth & melt effects
+!-----------------------------------------------------------------------
+/
+!-----------------------------------------------------------------------
+&namtrc_trd       !   diagnostics on tracer trends        ('key_trdtrc')
+!                          or mixed-layer trends          ('key_trdmld_trc')
+!----------------------------------------------------------------------
+/
+!-----------------------------------------------------------------------
+&namtrc_dia       !   parameters for passive tracer additional diagnostics
+!----------------------------------------------------------------------
+/
+!----------------------------------------------------------------------
+! namtrc_bc       !   data for boundary conditions
+!-----------------------------------------------------------------------
+&namtrc_bc
+   cn_dir_sbc        =  './'      !  root directory for the location of SURFACE data files
+   cn_dir_cbc        =  './'      !  root directory for the location of COASTAL data files
+/

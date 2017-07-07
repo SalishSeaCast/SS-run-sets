@@ -1,0 +1,109 @@
+!! Lateral boundary conditions
+!!
+&namlbc        !   lateral momentum boundary condition
+!-----------------------------------------------------------------------
+   rn_shlat    =     0.5   !  shlat = 0  !  0 < shlat < 2  !  shlat = 2  !  2 < shlat
+                           !  free slip  !   partial slip  !   no slip   ! strong slip
+   ln_vorlat   = .false.   !  consistency of vorticity boundary condition with analytical eqs.
+&end
+
+!-----------------------------------------------------------------------
+&nambdy        !  unstructured open boundaries                          ("key_bdy")
+!-----------------------------------------------------------------------
+    nb_bdy         = 2                 ! number of open boundary sets
+    ln_coords_file = .false., .false.  ! =T : read bdy coordinates from file
+    cn_coords_file = '', ''            ! bdy coordinates files
+    ln_mask_file   = .false.           ! =T : read mask from file
+    cn_mask_file   = ''                ! name of mask file (if ln_mask_file=.TRUE.)
+    nn_dyn2d       =  2, 2             ! boundary conditions for barotropic fields
+    nn_dyn2d_dta   =  3, 2             ! = 0, bdy data are equal to the initial state
+                                       ! = 1, bdy data are read in 'bdydata   .nc' files
+                                       ! = 2, use tidal harmonic forcing data from files
+                                       ! = 3, use external data AND tidal harmonic forcing
+    nn_dyn3d       =  3, 0             ! boundary conditions for baroclinic velocities
+    nn_dyn3d_dta   =  0, 0             ! = 0, bdy data are equal to the initial state
+                                       ! = 1, bdy data are read in 'bdydata   .nc' files
+    nn_tra         =  1, 1             ! boundary conditions for T and S
+    nn_tra_dta     =  1, 1             ! = 0, bdy data are equal to the initial state
+                                       ! = 1, bdy data are read in 'bdydata   .nc' files
+    nn_rimwidth    = 10,10             ! width of the relaxation zone
+    ln_vol         = .false.           ! total volume correction (see nn_volctl parameter)
+    nn_volctl      = 1                 ! = 0, the total water flux across open boundaries is zero
+&end
+
+&nambdy_index ! open boundaries - definition ("key_bdy")
+!-----------------------------------------------------------------------
+    nbdysege = 0    ! east boundary segments (0=closed)
+    nbdysegw = 1    ! west boundary segments
+    jpiwob   = 2    ! i-index for segment
+    jpjwdt   = 385  ! j-index for segment beginning
+    jpjwft   = 471  ! j-index for segment end
+    nbdysegn = 0    ! north boundary segments (0=closed)
+    nbdysegs = 0    ! south boundary segments (0=closed)
+&end
+
+&nambdy_index ! open boundaries - definition ("key_bdy")
+!-----------------------------------------------------------------------
+    nbdysege = 0    ! east boundary segments (0=closed)
+    nbdysegw = 0    ! west boundary segments
+    nbdysegn = 1    ! north boundary segments (0=closed)
+    jpjnob   = 897  ! j-index for segment
+    jpindt   =  33  ! i-index for segment start
+    jpinft   =  62  ! i-index for segment end
+    nbdysegs = 0    ! south boundary segments (0=closed)
+&end
+
+&nambdy_dta      !  open boundaries - external data           ("key_bdy")
+!-----------------------------------------------------------------------
+!         !  file name            ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
+!         !                       ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
+   bn_ssh = 'SS2_SSH_climatology',   -1,        'sossheig', .true.,  .true.,  'yearly',  '',        ''
+   bn_u2d = 'SS2_SSH_climatology',   -1,        'vobtcrtx', .true.,  .true.,  'yearly',  '',        ''
+   bn_v2d = 'SS2_SSH_climatology',   -1,        'vobtcrty', .true.,  .true.,  'yearly',  '',        ''
+   bn_u3d = '',                      24,        'vozocrtx', .true.,  .false., 'daily',   '',        ''
+   bn_v3d = '',                      24,        'vomecrty', .true.,  .false., 'daily',   '',        ''
+   bn_tem = 'SalishSea2_Masson_DC', 168,        'votemper', .true.,  .true.,  'yearly',  '',        ''
+   bn_sal = 'SalishSea2_Masson_DC', 168,        'vosaline', .true.,  .true.,  'yearly',  '',        ''
+
+   cn_dir = 'open_boundaries/west/'
+   ln_full_vel = .false.
+&end
+
+!-----------------------------------------------------------------------
+&nambdy_dta      !  open boundaries - external data           ("key_bdy")
+!-----------------------------------------------------------------------
+!         !  file name            ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
+!         !                       ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
+   bn_tem = 'SalishSea2_North_tra', 4380,       'votemper', .true.,  .true.,  'yearly',  '',        ''
+   bn_sal = 'SalishSea2_North_tra', 4380,       'vosaline', .true.,  .true.,  'yearly',  '',        ''
+   cn_dir = 'open_boundaries/north/'
+   ln_full_vel = .false.
+&end
+
+&nambdy_tide     ! tidal forcing at open boundaries
+!-----------------------------------------------------------------------
+   !!  file name root of tidal forcing files
+   filtide       = 'open_boundaries/west/tides/SalishSea2_RC_amp_west_tide_'
+   !!  names of tidal components used
+   tide_cpt(1) = 'K1'
+   tide_cpt(2) = 'M2'
+   !!  phase speeds of tidal components (deg/hour)
+   tide_speed(1) = 15.041069
+   tide_speed(2) = 28.984106
+   !!  adjust tidal harmonics for start date of run
+   ln_tide_date  = .true.
+&end
+
+&nambdy_tide     ! tidal forcing at open boundaries
+!-----------------------------------------------------------------------
+   !!  file name root of tidal forcing files
+   filtide       = 'open_boundaries/north/tides/SalishSea2_North_tide_'
+   !!  names of tidal components used
+   tide_cpt(1) = 'K1'
+   tide_cpt(2) = 'M2'
+   !!  phase speeds of tidal components (deg/hour)
+   tide_speed(1) = 15.041069
+   tide_speed(2) = 28.984106
+   !!  adjust tidal harmonics for start date of run
+   ln_tide_date  = .true.
+&end
