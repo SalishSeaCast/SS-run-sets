@@ -140,16 +140,16 @@
 !              !  file name      ! frequency (hours) ! variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !              !                 !  (if <0  months)  !   name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
    sn_trcobc(1) = 'bioOBCLOTS',              1,        'NO3',      .true.,  .false., 'daily',   '',        '',   ''
-   sn_trcobc(2) = 'bioOBCLOTS',              1,        'NH4',      .true.,  .false., 'daily',   '',        '',   ''
+   sn_trcobc(2) = 'bioOBC_const.nc',       -24,        'NH4',      .false., .true., 'yearly',   '',        '',   ''
    sn_trcobc(3) = 'bioOBCLOTS',              1,        'Si',       .true.,  .false., 'daily',   '',        '',   ''
-   sn_trcobc(4) = 'bioOBCLOTS',              1,        'DIA',      .true.,  .false., 'daily',   '',        '',   ''
-   sn_trcobc(5) = 'bioOBCLOTS',              1,        'CRY',      .true.,  .false., 'daily',   '',        '',   ''
-   sn_trcobc(6) = 'bioOBCLOTS',              1,        'MYRI',     .true.,  .false., 'daily',   '',        '',   ''
-   sn_trcobc(7) = 'bioOBCLOTS',              1,        'MICZ',     .true.,  .false., 'daily',   '',        '',   ''
-   sn_trcobc(8) = 'bioOBCLOTS',              1,        'DON',      .true.,  .false., 'daily',   '',        '',   ''
-   sn_trcobc(9) = 'bioOBCLOTS',              1,        'PON',      .true.,  .false., 'daily',   '',        '',   ''
-   sn_trcobc(10) = 'bioOBCLOTS',             1,        'bSi',      .true.,  .false., 'daily',   '',        '',   ''
-   sn_trcobc(11) = 'bioOBCLOTS',             1,        'tur',      .true.,  .false., 'daily',   '',        '',   ''
+   sn_trcobc(4) = 'bioOBC_const.nc',       -24,        'DIA',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(5) = 'bioOBC_const.nc',       -24,        'CRY',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(6) = 'bioOBC_const.nc',       -24,        'MYRI',     .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(7) = 'bioOBC_const.nc',       -24,        'MICZ',     .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(8) = 'bioOBC_const.nc',       -24,        'DON',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(9) = 'bioOBC_const.nc',       -24,        'PON',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(10) = 'bioOBC_const.nc',      -24,        'bSi',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(11) = 'bioOBC_const.nc',      -24,        'tur',      .false., .true., 'yearly',   '',        '',   ''
    cn_dir_obc        =  './open_boundaries/west/LiveOcean/bio/'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
    rn_trofac(2)   =  1.0  !  -      -      -     -
