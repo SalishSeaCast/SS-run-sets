@@ -17,7 +17,7 @@ config_name: SMELT
 MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: 05feb17_hindcast
+run_id: 05feb17_hindcast_LO
 walltime: 14:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
@@ -75,7 +75,7 @@ namelists:
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
-    - ./namelist_top_cfg_smelt_LO
+    - ./namelist_top_cfg_smelt
   namelist_smelt_cfg:
     - ./namelist_smelt_cfg
 
