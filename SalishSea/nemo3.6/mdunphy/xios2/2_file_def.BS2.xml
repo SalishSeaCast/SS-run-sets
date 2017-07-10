@@ -1,18 +1,17 @@
 <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="600s" min_digits="4">
 
   <file_group id="10min" output_freq="600s"  split_freq="1d" output_level="10" enabled=".TRUE.">         <!-- 10 min files -->
-    <file id="BaynesSound" name="1_BaynesSound" description="Baynes Sound Zoom 10min tides">
+    <file id="BaynesSound" name="2_BaynesSound" description="Baynes Sound Zoom 10min tides">
        <field_group id="BaynesSound" grid_ref="BaynesSound_grid">
           <field field_ref="ssh" name="sossheig"/>
        </field_group>
     </file>
-    <file id="EastDenmanIsland" name="1_EastDenmanIsland" description="East Denman Island Zoom 10min tides">
+    <file id="EastDenmanIsland" name="2_EastDenmanIsland" description="East Denman Island Zoom 10min tides">
        <field_group id="EastDenmanIsland" grid_ref="EastDenmanIsland_grid">
           <field field_ref="ssh" name="sossheig"/>
        </field_group>
     </file>
   </file_group>
-
 
   <file_group id="1h"  output_freq="1h"  split_freq="1d" output_level="10" enabled=".TRUE.">             <!-- 1h files -->
     <file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
