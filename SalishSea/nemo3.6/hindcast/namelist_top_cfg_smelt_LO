@@ -139,9 +139,9 @@
 !
 !              !  file name      ! frequency (hours) ! variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !              !                 !  (if <0  months)  !   name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
-   sn_trcobc(1) = 'bioOBCLOTS',              1,        'NO3',      .true.,  .false., 'daily',   '',        '',   ''
+   sn_trcobc(1) = 'LiveOcean/modified/bio/single_bio_LO',              24,        'NO3',      .true.,  .false., 'daily',   '',        '',   ''
    sn_trcobc(2) = 'bioOBC_const.nc',       -12,        'NH4',      .false., .true., 'yearly',   '',        '',   ''
-   sn_trcobc(3) = 'bioOBCLOTS',              1,        'Si',       .true.,  .false., 'daily',   '',        '',   ''
+   sn_trcobc(3) = 'LiveOcean/modified/bio/single_bio_LO',              24,        'Si',       .true.,  .false., 'daily',   '',        '',   ''
    sn_trcobc(4) = 'bioOBC_const.nc',       -12,        'DIA',      .false., .true., 'yearly',   '',        '',   ''
    sn_trcobc(5) = 'bioOBC_const.nc',       -12,        'CRY',      .false., .true., 'yearly',   '',        '',   ''
    sn_trcobc(6) = 'bioOBC_const.nc',       -12,        'MYRI',     .false., .true., 'yearly',   '',        '',   ''
@@ -150,7 +150,7 @@
    sn_trcobc(9) = 'bioOBC_const.nc',       -12,        'PON',      .false., .true., 'yearly',   '',        '',   ''
    sn_trcobc(10) = 'bioOBC_const.nc',      -12,        'bSi',      .false., .true., 'yearly',   '',        '',   ''
    sn_trcobc(11) = 'bioOBC_const.nc',      -12,        'tur',      .false., .true., 'yearly',   '',        '',   ''
-   cn_dir_obc        =  './open_boundaries/west/LiveOcean/bio/'      !  root directory for the location of OPEN data files
+   cn_dir_obc        =  './open_boundaries/west/'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
    rn_trofac(2)   =  1.0  !  -      -      -     -
    rn_trofac(3)   =  1.0  !  multiplicative factor

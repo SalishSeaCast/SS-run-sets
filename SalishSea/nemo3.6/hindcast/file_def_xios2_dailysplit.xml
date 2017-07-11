@@ -123,6 +123,16 @@
       <file_group id="2y"  output_freq="2y" output_level="10" enabled=".TRUE."/> <!-- real 2y files -->
       <file_group id="5y"  output_freq="5y" output_level="10" enabled=".TRUE."/> <!-- real 5y files -->
       <file_group id="10y" output_freq="10y" output_level="10" enabled=".TRUE."/> <!-- real 10y files -->
+
+      <file_group id="20min" output_freq="1200s" split_freq="1d" output_level="10" enabled=".TRUE."> <!-- 20 minute files -->
+        <file id="Slab_U" name="Slab_U" description="20min near surface U velocity">
+          <field field_ref="uoce" name="vozocrtx" grid_ref="two_straits_grid_U"/>
+        </file>
+        <file id="Slab_V" name="Slab_V" description="20min near surface V velocity">
+          <field field_ref="voce" name="vomecrty" grid_ref="two_straits_grid_V"/>
+        </file>
+      </file_group>
+
       <file_group id="10min" output_freq="600s" split_freq="1d" output_level="10" enabled=".TRUE."> <!-- 10 minute files -->
         <file id="PointAtkinson" name="PointAtkinson" description="10min interval SSH for tides">
           <field field_ref="ssh" name="sossheig" grid_ref="PointAtkinson_grid"/>
@@ -148,6 +158,43 @@
         <file id="SandHeads" name="SandHeads" description="10min interval SSH for tides">
           <field field_ref="ssh" name="sossheig" grid_ref="SandHeads_grid"/>
         </file>
+       <file id="BoundaryBay" name="BoundaryBay" description="10min interval SSH for tides">
+          <field field_ref="ssh" name="sossheig" grid_ref="BoundaryBay_grid"/>
+        </file>
+        <file id="VENUS_central" name="VENUS_central"  description="VENUS central 10 minutes">
+             <field field_ref="toce" name="votemper" grid_ref="VENUS_central_grid_T"/>
+             <field field_ref="soce" name="vosaline" grid_ref="VENUS_central_grid_T"/>
+             <field field_ref="uoce" name="vozocrtx" grid_ref="VENUS_central_grid_U"/>
+             <field field_ref="voce" name="vomecrty" grid_ref="VENUS_central_grid_V"/>
+        </file>
+        <file id="VENUS_central_gridded" name="VENUS_central_gridded"  description="VENUS central 10 minutes, 2x2 grid to unstagger velocities">
+             <field field_ref="toce" name="votemper" grid_ref="VENUS_central_gridded_grid_T"/>
+             <field field_ref="soce" name="vosaline" grid_ref="VENUS_central_gridded_grid_T"/>
+             <field field_ref="uoce" name="vozocrtx" grid_ref="VENUS_central_gridded_grid_U"/>
+             <field field_ref="voce" name="vomecrty" grid_ref="VENUS_central_gridded_grid_V"/>
+             <field field_ref="woce" name="vovecrtz" grid_ref="VENUS_central_gridded_grid_W"/>
+        </file>
+        <file id="VENUS_east" name="VENUS_east"  description="VENUS east 10 minutes">
+             <field field_ref="toce" name="votemper" grid_ref="VENUS_east_grid_T"/>
+             <field field_ref="soce" name="vosaline" grid_ref="VENUS_east_grid_T"/>
+             <field field_ref="uoce" name="vozocrtx" grid_ref="VENUS_east_grid_U"/>
+             <field field_ref="voce" name="vomecrty" grid_ref="VENUS_east_grid_V"/>
+        </file>
+        <file id="VENUS_east_gridded" name="VENUS_east_gridded"  description="VENUS east 10 minutes, 2x2 grid to unstagger velocities">
+             <field field_ref="toce" name="votemper" grid_ref="VENUS_east_gridded_grid_T"/>
+             <field field_ref="soce" name="vosaline" grid_ref="VENUS_east_gridded_grid_T"/>
+             <field field_ref="uoce" name="vozocrtx" grid_ref="VENUS_east_gridded_grid_U"/>
+             <field field_ref="voce" name="vomecrty" grid_ref="VENUS_east_gridded_grid_V"/>
+             <field field_ref="woce" name="vovecrtz" grid_ref="VENUS_east_gridded_grid_W"/>
+        </file>
+        <file id="VENUS_delta_gridded" name="VENUS_delta_gridded"  description="VENUS delta 10 minutes, 2x2 grid to unstagger velocities">
+             <field field_ref="toce" name="votemper" grid_ref="VENUS_delta_gridded_grid_T"/>
+             <field field_ref="soce" name="vosaline" grid_ref="VENUS_delta_gridded_grid_T"/>
+             <field field_ref="uoce" name="vozocrtx" grid_ref="VENUS_delta_gridded_grid_U"/>
+             <field field_ref="voce" name="vomecrty" grid_ref="VENUS_delta_gridded_grid_V"/>
+             <field field_ref="woce" name="vovecrtz" grid_ref="VENUS_delta_gridded_grid_W"/>
+        </file>
+
       </file_group>
 
    </file_definition>
