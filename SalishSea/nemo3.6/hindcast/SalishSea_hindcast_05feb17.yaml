@@ -14,11 +14,11 @@ config_name: SMELT
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 12x22
+MPI decomposition: 4x9
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: 05feb17_hindcast_LO
-walltime: 14:00:00
+run_id: 05feb17_hindcast
+walltime: 00:30:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
@@ -27,7 +27,7 @@ paths:
   NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /home/sallen/MEOPAR/XIOS2/
   forcing: /home/sallen/MEOPAR/NEMO-forcing/
-  runs directory: /home/sallen/MEOPAR/SalishSea/
+  runs directory: /global/scratch/sallen/SalishSea/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -51,8 +51,8 @@ forcing:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /home/sallen/MEOPAR/SalishSea/hindcast/26jan17/SalishSea_01937520_restart.nc
-  restart_trc.nc: /home/sallen/MEOPAR/SalishSea/hindcast/26jan17/SalishSea_01937520_restart_trc.nc
+  restart.nc: /global/scratch/sallen/SalishSea/hindcast/26jan17/SalishSea_01937520_restart.nc
+  restart_trc.nc: /global/scratch/sallen/SalishSea/hindcast/26jan17/SalishSea_01937520_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
