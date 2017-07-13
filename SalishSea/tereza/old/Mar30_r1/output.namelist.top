@@ -1,0 +1,11 @@
+&NAMTRC_RUN
+ NN_DTTRC=          1,
+ NN_WRITETRC=          1,
+ LN_RSTTR=F,
+ NN_RSTTR=          0,
+ LN_TOP_EULER=T,
+ CN_TRCRST_INDIR=".                                                                                                                                                                                                                                                               ",
+ CN_TRCRST_OUTDIR=".                                                                                                                                                                                                                                                               ",
+ CN_TRCRST_IN="restart_trc                                                                     ",
+ CN_TRCRST_OUT="restart_trc                                                                     ",
+ /

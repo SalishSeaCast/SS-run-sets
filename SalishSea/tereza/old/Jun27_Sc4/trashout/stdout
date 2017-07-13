@@ -1,0 +1,12 @@
+-> report :  Memory report : Context <nemo> : client side : total memory used for buffer 50000000 bytes
+-> report :  Memory report : Context <nemo> : server side : total memory used for buffer 50000000 bytes
+-> report : Performance report : Time spent for XIOS : 24.0007
+-> report : Performance report : Time spent in processing events : 5.98989
+-> report : Performance report : Ratio : 24.9571%
+-> report :  Performance report : total time spent for XIOS : 3.76565 s
+-> report :  Performance report : time spent for waiting free buffer : 0.0263777 s
+-> report :  Performance report : Ratio : 0.700482 %
+-> report :  Performance report : This ratio must be close to zero. Otherwise it may be usefull to increase buffer size or numbers of server
+-> report :  Memory report : Current buffer_size : 50000000
+-> report :  Memory report : Minimum buffer size required : 60778
+-> report :  Memory report : increasing it by a factor will increase performance, depending of the volume of data wrote in file at each time step of the file

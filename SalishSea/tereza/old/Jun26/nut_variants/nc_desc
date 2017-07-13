@@ -1,0 +1,3 @@
+The model is currently configured to run with nutrients defined by something called 'nutrients_dic.nc'
+
+So every time I run it I rename whatever I try to that, which gets confusing. so the original files & what they're named stay in this folder
