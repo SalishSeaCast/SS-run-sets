@@ -8,7 +8,7 @@
 #    Constrained to no solid precipitation
 #  SMELT biological model
 
-config_name: SMELT
+config_name: SMELT_c4
 
 # How is the domain to be distributed over the processors in the
 # i (longitude) and j (latitude) directions?
@@ -20,14 +20,14 @@ MPI decomposition: 12x22
 run_id: 21mar15
 walltime: 2:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
-email: sallen@eos.ubc.ca
+email: tjarnik@gmail.com
 
 paths:
   # If relative, paths are taken from current directory
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $HOME/MEOPAR/XIOS2/
   forcing: $HOME/MEOPAR/NEMO-forcing/
-  runs directory: /global/scratch/sallen/SalishSea/                                   # CHANGE THIS ONE for other users
+  runs directory: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/Orcinus_Sc4/          # CHANGE THIS ONE for other users
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
