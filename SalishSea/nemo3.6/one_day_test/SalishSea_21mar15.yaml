@@ -85,7 +85,7 @@ output:
   domaindefs: ../hindcast/domain_def_xios2.xml
   fielddefs: ../hindcast/field_def.xml
   separate XIOS server: True
-  XIOS servers: 2
+  XIOS servers: 1
 
 vcs revisions:
   hg: 
