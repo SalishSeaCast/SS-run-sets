@@ -56,7 +56,7 @@ forcing:
 namelists:
   # Parent grid namelists
   namelist_cfg:
-    - namelist.time.26jun15
+    - namelist.time
     - /results/nowcast-sys/SS-run-sets/SalishSea/nemo3.6/hindcast/namelist.domain
     - namelist.surface.blue
     - namelist.lateral
@@ -70,31 +70,31 @@ namelists:
   AGRIF_1:
     # Haro Strait
     namelist_cfg:
-      - namelist.time.26jun15.HS
-      - namelist.domain.HS.10
-      - namelist.surface.blue.HS
-      - namelist.lateral.subgrid
-      - namelist.bottom.nojetty
-      - namelist.tracer.subgrid.3
-      - namelist.dynamics.subgrid.3
+      - subgrids/HaroStrait/namelist.time.HS
+      - subgrids/HaroStrait/namelist.domain.HS.10
+      - subgrids/HaroStrait/namelist.surface.blue.HS
+      - sibgrids/namelist.lateral.subgrid
+      - sibgrids/namelist.bottom.nojetty
+      - sibgrids/namelist.tracer.subgrid.3
+      - sibgrids/namelist.dynamics.subgrid.3
       - /results/nowcast-sys/SS-run-sets/SalishSea/nemo3.6/namelist.vertical
       - /results/nowcast-sys/SS-run-sets/SalishSea/nemo3.6/namelist.compute
-      - namelist.agrif
+      - subgrids/namelist.agrif
 
   # Zoom domain namelists
   AGRIF_2:
     # Baynes Sound
     namelist_cfg:
-      - namelist.time.26jun15.BS
-      - namelist.domain.BS.20
-      - namelist.surface.blue.BS
-      - namelist.lateral.subgrid
-      - namelist.bottom.nojetty
-      - namelist.tracer.subgrid.3
-      - namelist.dynamics.subgrid.3
+      - subgrids/BaynesSound/namelist.time.BS
+      - subgrids/BaynesSound/namelist.domain.BS.20
+      - subgrids/BaynesSound/namelist.surface.blue.BS
+      - subgrids/namelist.lateral.subgrid
+      - subgrids/namelist.bottom.nojetty
+      - subgrids/namelist.tracer.subgrid.3
+      - subgrids/namelist.dynamics.subgrid.3
       - /results/nowcast-sys/SS-run-sets/SalishSea/nemo3.6/namelist.vertical
       - /results/nowcast-sys/SS-run-sets/SalishSea/nemo3.6/namelist.compute
-      - namelist.agrif
+      - subgrids/namelist.agrif
 
 # AGRIF grid definitions
 AGRIF:
@@ -105,15 +105,15 @@ output:
   separate XIOS server: True
   XIOS servers: 1
   iodefs: iodef.HS1BS2.xml
-  domaindefs: /results/nowcast-sys/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/domain_def.xml
+  domaindefs: /results/nowcast-sys/SS-run-sets/SalishSea/nemo3.6/hindcast/domain_def_xios2.xml
   fielddefs: /results/nowcast-sys/SS-run-sets/SalishSea/nemo3.6/hindcast/field_def.xml
-  filedefs: /results/nowcast-sys/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/file_def.xml
+  filedefs: /results/nowcast-sys/SS-run-sets/SalishSea/nemo3.6/hindcast/file_def_xios2.xml
   AGRIF_1:
-    domaindefs: /results/nowcast-sys/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/1_domain_def.HS1.xml
-    filedefs: /results/nowcast-sys/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/1_file_def.HS1.xml
+    domaindefs: subgrids/HaroStrait/domain_def.HS.xml
+    filedefs: subgrids/HaroStrait/file_def.HS.xml
   AGRIF_2:
-    domaindefs: /results/nowcast-sys/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/2_domain_def.BS2.xml
-    filedefs: /results/nowcast-sys/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/2_file_def.BS2.xml
+    domaindefs: subgrids/BaynesSound/domain_def.BS.xml
+    filedefs: subgrids/BaynesSound/file_def.BS.xml
 
 vcs revisions:
   hg:
