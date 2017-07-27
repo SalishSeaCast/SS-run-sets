@@ -68,6 +68,8 @@ namelists:
     - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_top_cfg
   namelist_smelt_cfg:
     - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_smelt_cfg
+  namelist_top_ref:
+    - /home/eolson/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SMELT/EXP00/namelist_top_ref
 
 output:
   # If relative, paths are taken from current directory
