@@ -90,7 +90,7 @@
   sn_rnf      = 'BS_rivers/rivers_mo_201702_BS',    -1,           'rodepth' ,  .true.,       .true.,  'yearly',   '',        ''
   sn_cnf      = '',                                    24,           'socoefr0',  .false.,      .true.,  'yearly',   '',        ''
   sn_s_rnf    = '',                                    24,           'rosaline',  .false.,      .true.,  'yearly',   '',        ''
-  sn_t_rnf    = 'BS_rivers/river_ConsTemp_mo_BS',   -1,           'rotemper',  .true.,       .true.,  'yearly',   '',        ''
+  sn_t_rnf    = 'BS_rivers/rivers_ConsTemp_mo_BS',   -1,           'rotemper',  .true.,       .true.,  'yearly',   '',        ''
   sn_dep_rnf  = 'BS_rivers/rivers_mo_201702_BS',    -1,           'rodepth' ,  .true.,       .true.,  'yearly',   '',        ''
 
   cn_dir       = './' !  root directory for the location of the runoff files
