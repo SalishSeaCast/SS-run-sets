@@ -1,7 +1,0 @@
-changset:   352:19a814b3660dff72d94f3d134144cd403b700638
-tag:        tip
-user:       Susan Allen <sallen@eos.ubc.c>
-date:       Tue Jul 11 11:21:44 2017 -07:00
-files:      open_boundaries/west/bioOBC_const.nc
-description:
-Put bioOBC_const (uniform western boundary biology except NO3, Si) into NEMO-forcing
