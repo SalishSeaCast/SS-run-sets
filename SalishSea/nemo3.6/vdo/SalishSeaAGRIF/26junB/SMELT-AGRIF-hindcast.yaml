@@ -1,0 +1,114 @@
+# Hindcast with AGRIF for Baynes Sound 1 + SMELT
+config_name: SMELTAGRIF
+MPI decomposition: 1x7
+run_id: smelt-agrif-hindcast
+walltime: 12:00:00
+email: mdunphy@eoas.ubc.ca
+
+paths:
+  NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $HOME/MEOPAR/XIOS2
+  forcing: $HOME/MEOPAR/NEMO-forcing/
+  runs directory: $HOME/MEOPAR/SalishSea/
+
+grid:
+  # If relative, paths are taken from the grid/ directory in the forcing
+  # path above
+  coordinates: coordinates_seagrid_SalishSea201702.nc
+  bathymetry: bathymetry_201702.nc
+  AGRIF_1:
+    coordinates: $HOME/MEOPAR/NEMO-forcing-BS1/1_coordinates_seagrid_SalishSea201702.nc
+    bathymetry: $HOME/MEOPAR/NEMO-forcing-BS1/1_bathymetry_201702.nc
+
+restart:
+  # Parent
+  restart.nc: $HOME/MEOPAR/NEMO-forcing-MD/hindcast/28sep14/SalishSea_00025920_restart_expanded.nc
+  restart_trc.nc: $HOME/MEOPAR/NEMO-forcing-MD/hindcast/28sep14/SalishSea_00025920_restart_trc.nc
+  AGRIF_1:
+    restart.nc: $HOME/MEOPAR/NEMO-forcing-BS1/1_SalishSea_00025920_restart_expanded.nc
+    restart_trc.nc: $HOME/MEOPAR/NEMO-forcing-BS1/1_SalishSea_00025920_restart_trc.nc
+
+forcing:
+  # If relative, paths are taken from forcing path above
+  #
+  # Parent grid forcing
+  #
+  NEMO-atmos:
+    link to: $HOME/MEOPAR/NEMO-forcing-MD/atmospheric/
+  open_boundaries:
+    link to: $HOME/MEOPAR/NEMO-forcing-MD/open_boundaries/
+  rivers:
+    link to: $HOME/MEOPAR/NEMO-forcing-MD/rivers/
+  bfr_coef.nc:
+    link to: grid/jetty_mask_bathy201702.nc
+  bio_climatology:
+    link to: rivers/bio_climatology
+  bio_open_boundaries:
+    link to: open_boundaries
+  #
+  # AGRIF inputs are specific to each subgrid and stored all in one directory
+  #
+  1_rivers: 
+    link to: $HOME/MEOPAR/NEMO-forcing-BS1/1_rivers/
+  1_NEMO-atmos:
+    link to: $HOME/MEOPAR/NEMO-forcing-BS1/1_atmospheric/
+  1_bio_climatology:
+    link to: $HOME/MEOPAR/NEMO-forcing-BS1/1_bio_climatology/
+
+namelists:
+  # Parent grid namelists
+  namelist_cfg:
+    - namelist.time.cont
+    - namelist.domain.40
+    - namelist.surface.green
+    - namelist.lateral
+    - namelist.bottom
+    - namelist.tracer
+    - namelist.dynamics
+    - namelist.vertical
+    - namelist.compute
+  namelist_smelt_cfg:
+    - namelist_smelt_cfg
+  namelist_top_cfg:
+    - namelist_top_cfg
+
+  # Zoom domain namelists
+  AGRIF_1:
+    namelist_cfg:
+      - 1_namelist.time.cont
+      - 1_namelist.domain.20
+      - 1_namelist.surface.green
+      - 1_namelist.lateral
+      - 1_namelist.bottom
+      - 1_namelist.tracer
+      - 1_namelist.dynamics
+      - namelist.vertical
+      - namelist.compute
+      - 1_namelist.agrif
+    namelist_smelt_cfg:
+      - 1_namelist_smelt_cfg
+    namelist_top_cfg:
+      - namelist_top_cfg
+
+# AGRIF grid definitions
+AGRIF:
+  fixed grids: $HOME/MEOPAR/NEMO-forcing-BS1/AGRIF_FixedGrids.in
+
+# Output settings. XMLs here are for the parent grid
+output:
+  separate XIOS server: True
+  XIOS servers: 1
+  iodefs: xios2/iodef.xml
+  domaindefs: xios2/domain_def.xml
+  fielddefs: ../hindcast/field_def.xml
+  filedefs: xios2/file_def_green.xml
+  AGRIF_1:
+    domaindefs: xios2/1_domain_def.xml
+    filedefs: xios2/1_file_def_green.xml
+
+vcs revisions:
+  hg:
+    - $HOME/MEOPAR/SS-run-sets
+    - $HOME/MEOPAR/SalishSeaCmd
+    - $HOME/MEOPAR/NEMO-Cmd
+

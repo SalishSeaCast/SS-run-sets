@@ -1,0 +1,9 @@
+!-----------------------------------------------------------------------
+&namagrif      !  AGRIF zoom                                            ("key_agrif")
+!-----------------------------------------------------------------------
+   nn_cln_update =    3    !  baroclinic update frequency
+   ln_spc_dyn    = .true.  !  use 0 as special value for dynamics
+   rn_sponge_tra =    5.0  !  coefficient for tracer   sponge layer [m2/s]
+   rn_sponge_dyn =    5.0  !  coefficient for dynamics sponge layer [m2/s]
+/
+

@@ -1,0 +1,17 @@
+syntax: glob
+*.nc
+*.nc.bz2
+*.nc.gz
+*.nc.xz
+date.file
+layout.dat
+nam_rebuild
+ocean.output
+stdout
+stderr
+opa
+server.exe
+solver.stat
+time.step
+timing.output
+/data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/old/**

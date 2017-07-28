@@ -1,0 +1,74 @@
+# salishsea command processor run description example for NEMO-3.6
+#
+# Salish Sea full domain with:
+#   Smoothed JdF mouth bathymetry
+#   S4-1 uniform initial T and S, depth corrected
+#   Open, unstructured western boundary across Strait of Juan de Fuca
+#     Tidal forcing at mouth of JdF
+#     Masson, depth corrected, open boundaries
+#   Open, unstructured northern boundary across Johnstone Strait
+#     Tidal forcing just north of Port Nelson
+#     Seasonal T and S forcing based on Thomson (1982)
+#  Rivers run-off forcing
+#  Atmospheric forcing with operational GEM2.5 model products
+#    Constrained to no solid precipitation
+
+config_name: SMELT_c4
+
+# How is the domain to be distributed over the processors in the
+# i (longitude) and j (latitude) directions?
+# These values are used to set the nammpp namelist jpni & jpnj values
+# and to set the number of processors and nodes in the PBS script
+MPI decomposition: 1x7
+
+# For runs on systems that use qsub/PBS/TORQUE
+run_id: tereza_debug
+walltime: 05:00:00
+# If missing, email address is set to ${USER}@eos.ubc.ca
+email: tjarnik@gmail.com
+
+paths:
+  # Absolute path to NEMO-code repository clone.
+  # You can use ~ or $HOME if you wish.
+  NEMO-code: /data/tjarniko/MEOPAR/NEMO-3.6-code/
+  NEMO code config: /data/tjarniko/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/
+  # If relative, paths below are taken from current directory
+  XIOS: /data/tjarniko/MEOPAR/XIOS/
+  forcing: /data/tjarniko/MEOPAR/NEMO-forcing/
+  runs directory: /data/tjarniko/MEOPAR/SalishSea/results/
+
+grid:
+  # If relative, paths are taken from the grid/ directory in the forcing
+  # path above
+  coordinates: coordinates_seagrid_SalishSea.nc
+  bathymetry: bathy_downonegrid2.nc
+
+forcing:
+  # If relative, paths are taken from forcing path above
+  NEMO-atmos:
+    link to: /results/forcing/atmospheric/GEM2.5/operational/
+  initial_strat:
+    link to: initial_strat/
+  open_boundaries:
+    link to: open_boundaries/
+  rivers:
+    link to: /data/tjarniko/MEOPAR/NEMO-forcing/rivers/
+  restart.nc:
+    link to: /data/tjarniko/MEOPAR/NEMO-forcing/restarts/SalishSea_00741600_restart.nc
+  restart_trc.nc: 
+    link to: /data/tjarniko/MEOPAR/NEMO-forcing/restarts/SalishSea_00741600_restart_trc_newVars2.nc
+namelists:
+  # If relative, paths are taken from current directory
+  namelist_cfg:
+    - /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/namelists/namelist_cfg2
+  namelist_top_cfg: 
+    - /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/namelists/namelist_top_cfg2
+  namelist_smelt_cfg:
+    - /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/namelists/namelist_smelt_cfg_E
+output:
+  # If relative, paths are taken from current directory
+  files: /data/tjarniko/MEOPAR/SS-run-sets/SS-SMELT/iofiles/iodef_bio_1hr_MESZ_new.xml
+  domain: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/domain_def.xml
+  fields: /data/tjarniko/MEOPAR/SS-run-sets/SS-SMELT/iofiles/field_def_MESZ_new.xml
+  separate XIOS server: True
+  XIOS servers: 1

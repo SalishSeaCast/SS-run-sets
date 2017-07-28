@@ -1,0 +1,82 @@
+<domain_definition>
+   <domain_group id="grid_T">
+      <domain id="grid_T" long_name="grid T"/>
+      <!-- VENUS -->
+      <domain id="VENUS_east_T"            domain_ref="grid_T"> <zoom_domain ibegin="284" jbegin="417" ni="1"  nj="1"  /> </domain>
+      <domain id="VENUS_central_T"         domain_ref="grid_T"> <zoom_domain ibegin="267" jbegin="425" ni="1"  nj="1"  /> </domain>
+      <domain id="VENUS_east_gridded_T"    domain_ref="grid_T"> <zoom_domain ibegin="283" jbegin="416" ni="2"  nj="2"  /> </domain>
+      <domain id="VENUS_central_gridded_T" domain_ref="grid_T"> <zoom_domain ibegin="266" jbegin="424" ni="2"  nj="2"  /> </domain>
+      <domain id="VENUS_delta_gridded_T"   domain_ref="grid_T"> <zoom_domain ibegin="284" jbegin="425" ni="2"  nj="2"  /> </domain>
+      <!-- CODAR -->
+      <domain id="CODAR_T"                 domain_ref="grid_T"> <zoom_domain ibegin="241" jbegin="381" ni="80" nj="80" /> </domain>
+      <!-- Tide Points -->
+      <domain id="PortRenfrew"             domain_ref="grid_T"> <zoom_domain ibegin="57"  jbegin="403" ni="1"  nj="1"  /> </domain>
+      <domain id="SheringhamPoint"         domain_ref="grid_T"> <zoom_domain ibegin="113" jbegin="331" ni="1"  nj="1"  /> </domain>
+      <domain id="Sooke"                   domain_ref="grid_T"> <zoom_domain ibegin="137" jbegin="314" ni="1"  nj="1"  /> </domain>
+      <domain id="PedderBay"               domain_ref="grid_T"> <zoom_domain ibegin="162" jbegin="296" ni="1"  nj="1"  /> </domain>
+      <domain id="Esquimalt"               domain_ref="grid_T"> <zoom_domain ibegin="191" jbegin="308" ni="1"  nj="1"  /> </domain>
+      <domain id="Victoria"                domain_ref="grid_T"> <zoom_domain ibegin="197" jbegin="299" ni="1"  nj="1"  /> </domain>
+      <domain id="CloverPoint"             domain_ref="grid_T"> <zoom_domain ibegin="200" jbegin="296" ni="1"  nj="1"  /> </domain>
+      <domain id="FinnertyCove"            domain_ref="grid_T"> <zoom_domain ibegin="217" jbegin="305" ni="1"  nj="1"  /> </domain>
+      <domain id="PortTownsend"            domain_ref="grid_T"> <zoom_domain ibegin="255" jbegin="204" ni="1"  nj="1"  /> </domain>
+      <domain id="FulfordHarbour"          domain_ref="grid_T"> <zoom_domain ibegin="230" jbegin="369" ni="1"  nj="1"  /> </domain>
+      <domain id="PatosIsland"             domain_ref="grid_T"> <zoom_domain ibegin="303" jbegin="342" ni="1"  nj="1"  /> </domain>
+      <domain id="TumboChannel"            domain_ref="grid_T"> <zoom_domain ibegin="284" jbegin="355" ni="1"  nj="1"  /> </domain>
+      <domain id="WhalerBay"               domain_ref="grid_T"> <zoom_domain ibegin="264" jbegin="386" ni="1"  nj="1"  /> </domain>
+      <domain id="BoundaryBay"             domain_ref="grid_T"> <zoom_domain ibegin="336" jbegin="398" ni="1"  nj="1"  /> </domain>
+      <domain id="Tsawwassen"              domain_ref="grid_T"> <zoom_domain ibegin="304" jbegin="394" ni="1"  nj="1"  /> </domain>
+      <domain id="SandHeads"               domain_ref="grid_T"> <zoom_domain ibegin="294" jbegin="427" ni="1"  nj="1"  /> </domain>
+      <domain id="PointGrey"               domain_ref="grid_T"> <zoom_domain ibegin="317" jbegin="454" ni="1"  nj="1"  /> </domain>
+      <domain id="PointAtkinson"           domain_ref="grid_T"> <zoom_domain ibegin="330" jbegin="469" ni="1"  nj="1"  /> </domain>
+      <domain id="GibsonsLanding"          domain_ref="grid_T"> <zoom_domain ibegin="301" jbegin="499" ni="1"  nj="1"  /> </domain>
+      <domain id="HalfmoonBay"             domain_ref="grid_T"> <zoom_domain ibegin="254" jbegin="551" ni="1"  nj="1"  /> </domain>
+      <domain id="IrvinesLanding"          domain_ref="grid_T"> <zoom_domain ibegin="249" jbegin="584" ni="1"  nj="1"  /> </domain>
+      <domain id="PowellRiver"             domain_ref="grid_T"> <zoom_domain ibegin="205" jbegin="664" ni="1"  nj="1"  /> </domain>
+      <domain id="Lund"                    domain_ref="grid_T"> <zoom_domain ibegin="187" jbegin="701" ni="1"  nj="1"  /> </domain>
+      <domain id="TwinIslets"              domain_ref="grid_T"> <zoom_domain ibegin="168" jbegin="723" ni="1"  nj="1"  /> </domain>
+      <domain id="CampbellRiver"           domain_ref="grid_T"> <zoom_domain ibegin="126" jbegin="743" ni="1"  nj="1"  /> </domain>
+      <domain id="CampbellRiverNorth"      domain_ref="grid_T"> <zoom_domain ibegin="126" jbegin="748" ni="1"  nj="1"  /> </domain>
+      <domain id="MaudeIslandE"            domain_ref="grid_T"> <zoom_domain ibegin="123" jbegin="771" ni="1"  nj="1"  /> </domain>
+      <domain id="NympheCove"              domain_ref="grid_T"> <zoom_domain ibegin="118" jbegin="774" ni="1"  nj="1"  /> </domain>
+      <domain id="SeymourNarrows"          domain_ref="grid_T"> <zoom_domain ibegin="121" jbegin="772" ni="1"  nj="1"  /> </domain>
+      <domain id="BrownBay"                domain_ref="grid_T"> <zoom_domain ibegin="122" jbegin="780" ni="1"  nj="1"  /> </domain>
+      <domain id="ChathamPoint"            domain_ref="grid_T"> <zoom_domain ibegin="131" jbegin="818" ni="1"  nj="1"  /> </domain>
+      <domain id="KelseyBay"               domain_ref="grid_T"> <zoom_domain ibegin="65"  jbegin="867" ni="1"  nj="1"  /> </domain>
+      <domain id="YorkeIsland"             domain_ref="grid_T"> <zoom_domain ibegin="67"  jbegin="878" ni="1"  nj="1"  /> </domain>
+      <domain id="Nanaimo"                 domain_ref="grid_T"> <zoom_domain ibegin="209" jbegin="485" ni="1"  nj="1"  /> </domain>
+      <domain id="NeahBay"                 domain_ref="grid_T"> <zoom_domain ibegin="16"  jbegin="385" ni="1"  nj="1"  /> </domain>
+      <domain id="CherryPoint"             domain_ref="grid_T"> <zoom_domain ibegin="343" jbegin="344" ni="1"  nj="1"  /> </domain>
+      <domain id="FridayHarbor"            domain_ref="grid_T"> <zoom_domain ibegin="268" jbegin="299" ni="1"  nj="1"  /> </domain>
+      <!-- Tide Points Baynes Sound-->
+      <domain id="BaynesSound"             domain_ref="grid_T"> <zoom_domain ibegin="125" jbegin="605" ni="1"  nj="1"  /> </domain>
+      <domain id="EastDenmanIsland"        domain_ref="grid_T"> <zoom_domain ibegin="136" jbegin="606" ni="1"  nj="1"  /> </domain>
+   </domain_group>
+
+   <domain_group id="grid_U">
+      <domain id="grid_U" long_name="grid U"/>
+      <!-- VENUS -->
+      <domain id="VENUS_east_U"            domain_ref="grid_U"> <zoom_domain ibegin="284" jbegin="417" ni="1"  nj="1"  /> </domain>
+      <domain id="VENUS_central_U"         domain_ref="grid_U"> <zoom_domain ibegin="267" jbegin="425" ni="1"  nj="1"  /> </domain>
+      <domain id="VENUS_east_gridded_U"    domain_ref="grid_U"> <zoom_domain ibegin="283" jbegin="416" ni="2"  nj="2"  /> </domain>
+      <domain id="VENUS_central_gridded_U" domain_ref="grid_U"> <zoom_domain ibegin="266" jbegin="424" ni="2"  nj="2"  /> </domain>
+      <domain id="VENUS_delta_gridded_U"   domain_ref="grid_U"> <zoom_domain ibegin="284" jbegin="425" ni="2"  nj="2"  /> </domain>
+      <!-- CODAR -->
+      <domain id="CODAR_U"                 domain_ref="grid_U"> <zoom_domain ibegin="241" jbegin="381" ni="80" nj="80" /> </domain>
+   </domain_group>
+
+   <domain_group id="grid_V">
+      <domain id="grid_V" long_name="grid V"/>
+      <!-- VENUS -->
+      <domain id="VENUS_east_V"            domain_ref="grid_V"> <zoom_domain ibegin="284" jbegin="417" ni="1"  nj="1"  /> </domain>
+      <domain id="VENUS_central_V"         domain_ref="grid_V"> <zoom_domain ibegin="267" jbegin="425" ni="1"  nj="1"  /> </domain>
+      <domain id="VENUS_east_gridded_V"    domain_ref="grid_V"> <zoom_domain ibegin="283" jbegin="416" ni="2"  nj="2"  /> </domain>
+      <domain id="VENUS_central_gridded_V" domain_ref="grid_V"> <zoom_domain ibegin="266" jbegin="424" ni="2"  nj="2"  /> </domain>
+      <domain id="VENUS_delta_gridded_V"   domain_ref="grid_V"> <zoom_domain ibegin="284" jbegin="425" ni="2"  nj="2"  /> </domain>
+      <!-- CODAR -->
+      <domain id="CODAR_V"                 domain_ref="grid_V"> <zoom_domain ibegin="241" jbegin="381" ni="80" nj="80" /> </domain>
+   </domain_group>
+
+   <domain id="grid_W" long_name="grid W"/>
+   <domain id="scalarpoint" long_name="scalar"/>
+</domain_definition>
+

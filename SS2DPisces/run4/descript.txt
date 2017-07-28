@@ -1,0 +1,5 @@
+based on run3
+closed domain
+no tides
+2 day run
+altered bio parameteris in namelist_pisces to try to increase growth rates

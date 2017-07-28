@@ -1,0 +1,5 @@
+based on run6
+closed domain
+no tides
+2 day run
+uses version of nemo compiled without key_bdy. still has weird boundary issue.
