@@ -17,7 +17,7 @@ config_name: SMELT
 MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: 17mar17_hindcast
+run_id: 27mar17_hindcast
 walltime: 18:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
@@ -51,8 +51,8 @@ forcing:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /global/scratch/sallen/SalishSea/hindcast/07mar17/SalishSea_02023920_restart.nc
-  restart_trc.nc: /global/scratch/sallen/SalishSea/hindcast/07mar17/SalishSea_02023920_restart_trc.nc
+  restart.nc: /global/scratch/sallen/SalishSea/hindcast/17mar17/SalishSea_02045520_restart.nc
+  restart_trc.nc: /global/scratch/sallen/SalishSea/hindcast/17mar17/SalishSea_02045520_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -65,7 +65,7 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist.time.17mar17
+    - ./namelist.time.27mar17
     - ./namelist.domain
     - ./namelist.surface.newrivers
     - ./namelist.lateral.LO
@@ -86,7 +86,7 @@ output:
   domaindefs: domain_def_xios2.xml
   fielddefs: field_def.xml
   separate XIOS server: True
-  XIOS servers: 3
+  XIOS servers: 2
 
 vcs revisions:
   hg: 
