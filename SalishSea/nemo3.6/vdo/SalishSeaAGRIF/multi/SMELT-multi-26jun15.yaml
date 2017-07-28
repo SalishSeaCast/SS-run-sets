@@ -1,7 +1,7 @@
 # SMELT with AGRIF for Haro Strait 1 and Baynes Sound 2
 config_name: SMELTAGRIF
 
-MPI decomposition: 3x4
+MPI decomposition: 9x14
 run_id: SMELT-AGRIF-26jun15
 walltime: 24:00:00
 
@@ -125,7 +125,7 @@ AGRIF:
 # Output settings. XMLs here are for the parent grid
 output:
   separate XIOS server: True
-  XIOS servers: 1
+  XIOS servers: 2
   iodefs: $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/iodef.HS1BS2.xml
   domaindefs: $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/domain_def.xml
   fielddefs: $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/hindcast/field_def.xml
