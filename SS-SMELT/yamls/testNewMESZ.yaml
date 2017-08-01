@@ -18,7 +18,7 @@ MPI decomposition: 10x17
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: testNewDiag
-walltime: 0:20:00
+walltime: 2:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 
@@ -63,13 +63,11 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/hndcstNMLs/namelist_cfg_2hr
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/hndcstNMLs/namelist_cfg
   namelist_top_cfg:
     - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_top_cfg
   namelist_smelt_cfg:
     - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_smelt_cfg
-  namelist_ref:
-    - /home/eolson/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SMELT/EXP00/namelist_ref
   namelist_top_ref:
     - /home/eolson/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SMELT/EXP00/namelist_top_ref
 
@@ -77,6 +75,6 @@ output:
   # If relative, paths are taken from current directory
   domain: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/domain_def.xml
   fields: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/field_def_newDiag.xml
-  files: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/iodef_newDiag.xml
+  files: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/iodef_bio_1hr_MESZ_new.xml
   separate XIOS server: True
   XIOS servers: 1
