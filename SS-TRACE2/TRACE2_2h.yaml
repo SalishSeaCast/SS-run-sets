@@ -12,7 +12,7 @@ MPI decomposition: 10x17
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: TRACE2
-walltime: 30:00:00
+walltime: 00:30:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 
@@ -61,7 +61,11 @@ namelists:
   namelist_trace2_cfg:
     - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/namelist_trace2_cfg
   namelist_trace2_ref:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/namelist_trace2_ref
+    - /home/eolson/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/TRACE2/EXP00/namelist_trace2_ref
+  namelist_ref:
+    - /home/eolson/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/TRACE2/EXP00/namelist_ref
+  namelist_top_ref:
+    - /home/eolson/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/TRACE2/EXP00/namelist_top_ref
 
 output:
   # If relative, paths are taken from current directory
