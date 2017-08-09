@@ -55,8 +55,8 @@
 !-----------------------------------------------------------------------
 &namsbc_core   !   namsbc_core  CORE bulk formulae
 !-----------------------------------------------------------------------
-!         !  file name  ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                ! rotation !
-!         !             !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename               ! pairing  !
+!         !  file name             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                                        ! rotation !
+!         !                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename                                       ! pairing  !
   sn_wndi = 'NEMO-atmos/ops',        1,                 'u_wind',    .true.,       .false.,  'daily',    'HS_NEMO-atmos/weights-gem2.5-ops_201702_HS.nc', 'Uwnd'
   sn_wndj = 'NEMO-atmos/ops',        1,                 'v_wind',    .true.,       .false.,  'daily',    'HS_NEMO-atmos/weights-gem2.5-ops_201702_HS.nc', 'Vwnd'
   sn_qsr  = 'NEMO-atmos/ops',        1,                 'solar',     .true.,       .false.,  'daily',    'HS_NEMO-atmos/weights-gem2.5-ops_201702_HS.nc', ''
@@ -67,10 +67,10 @@
   sn_snow = 'NEMO-atmos/no_snow',  -12,                 'snow',      .true.,       .true.,   'yearly',   'HS_NEMO-atmos/weights-gem2.5-ops_201702_HS.nc', ''
 
    cn_dir      = './'  !  root directory for the location of the bulk files
-   rn_zqt      = 2.               !  Air temperature and humidity reference height (m)
-   rn_vfac     = 1.               !  new feature, lets use (0. for comparison, then switch to 1)
-                                  !  multiplicative factor for ocean/ice velocity
-                                  !  in the calculation of the wind stress (0.=absolute winds or 1.=relative winds)
+   rn_zqt      = 2.    !  Air temperature and humidity reference height (m)
+   rn_vfac     = 1.    !  new feature, lets use (0. for comparison, then switch to 1)
+                       !  multiplicative factor for ocean/ice velocity
+                       !  in the calculation of the wind stress (0.=absolute winds or 1.=relative winds)
 &end
 
 !-----------------------------------------------------------------------
@@ -85,30 +85,30 @@
 !-----------------------------------------------------------------------
 &namsbc_rnf    !   runoffs namelist surface boundary condition
 !-----------------------------------------------------------------------
-!             !  file name         ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
-!             !                    !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
-  sn_rnf      = 'HS_rivers/rivers_mo_201702_HS',    -1,           'rorunoff' ,  .true.,       .true.,  'yearly',   '',        ''
-  sn_cnf      = '',                                    24,           'socoefr0',  .false.,      .true.,  'yearly',   '',        ''
-  sn_s_rnf    = '',                                    24,           'rosaline',  .false.,      .true.,  'yearly',   '',        ''
-  sn_t_rnf    = 'HS_rivers/rivers_ConsTemp_mo_HS',  -1,           'rotemper',  .true.,       .true.,  'yearly',   '',        ''
-  sn_dep_rnf  = 'HS_rivers/rivers_mo_201702_HS',    -1,           'rodepth' ,  .true.,       .true.,  'yearly',   '',        ''
+!             !  file name                        ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
+!             !                                   !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
+  sn_rnf      = 'HS_rivers/rivers_mo_201702_HS',    -1,                'rorunoff' , .true.,       .true.,  'yearly',   '',        ''
+  sn_cnf      = '',                                 24,                'socoefr0',  .false.,      .true.,  'yearly',   '',        ''
+  sn_s_rnf    = '',                                 24,                'rosaline',  .false.,      .true.,  'yearly',   '',        ''
+  sn_t_rnf    = 'HS_rivers/rivers_ConsTemp_mo_HS',  -1,                'rotemper',  .true.,       .true.,  'yearly',   '',        ''
+  sn_dep_rnf  = 'HS_rivers/rivers_mo_201702_HS',    -1,                'rodepth' ,  .true.,       .true.,  'yearly',   '',        ''
 
-  cn_dir       = './' !  root directory for the location of the runoff files
-  ln_rnf_mouth = .false.     !  specific treatment at rivers mouths
-  ln_rnf_depth = .true.      !  read in depth information for runoff
-  ln_rnf_tem   = .true.      !  read in temperature information for runoff
-  ln_rnf_sal   = .false.     !  read in salinity information for runoff
+  cn_dir       = './'     !  root directory for the location of the runoff files
+  ln_rnf_mouth = .false.  !  specific treatment at rivers mouths
+  ln_rnf_depth = .true.   !  read in depth information for runoff
+  ln_rnf_tem   = .true.   !  read in temperature information for runoff
+  ln_rnf_sal   = .false.  !  read in salinity information for runoff
 &end
 
 !-----------------------------------------------------------------------
 &namsbc_apr    !   Atmospheric pressure used as ocean forcing or in bulk
 !-----------------------------------------------------------------------
-!         !  file name     ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                ! rotation !
-!         !                !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename               ! pairing  !
-  sn_apr  = 'NEMO-atmos/ops',                 1,           'atmpres',   .true.,       .false.,  'daily',    'HS_NEMO-atmos/weights-gem2.5-ops_201702_HS.nc', ''
+!         !  file name       ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                                        ! rotation !
+!         !                  !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename                                       ! pairing  !
+  sn_apr  = 'NEMO-atmos/ops',  1,                 'atmpres',   .true.,       .false.,  'daily',    'HS_NEMO-atmos/weights-gem2.5-ops_201702_HS.nc', ''
 
-  cn_dir      = './' !  root directory for the location of the bulk files
-  ln_apr_obc  = .false.         !  inverse barometer added to OBC ssh data
+  cn_dir      = './'     !  root directory for the location of the bulk files
+  ln_apr_obc  = .false.  !  inverse barometer added to OBC ssh data
 &end
 
 
