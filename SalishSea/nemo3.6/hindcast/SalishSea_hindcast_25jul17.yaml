@@ -86,7 +86,7 @@ output:
   domaindefs: domain_def_xios2.xml
   fielddefs: field_def.xml
   separate XIOS server: True
-  XIOS servers: 5
+  XIOS servers: 4
 
 vcs revisions:
   hg: 
