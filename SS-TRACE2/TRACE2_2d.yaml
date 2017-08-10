@@ -1,14 +1,8 @@
 # salishsea command processor run description example for NEMO-3.6
 #
-# Salish Sea Long River Domain (#6) with:
-#     Tidal forcing
-#     Salinity and Temperate at Both open boundaries
-#  Rivers run-off forcing
-#  Atmospheric forcing with operational GEM2.5 model products
-#    Constrained to no solid precipitation
-#  SOG biological model
+# TRACE2 with sinking
 
-config_name: SMELT
+config_name: TRACE2
 
 # How is the domain to be distributed over the processors in the
 # i (longitude) and j (latitude) directions?
@@ -17,15 +11,15 @@ config_name: SMELT
 MPI decomposition: 10x17
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: testNewDiag
-walltime: 0:20:00
+run_id: TRACE2XIOS2
+walltime: 04:30:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 
 paths:
   # If relative, paths are taken from current directory
   NEMO code config: /home/eolson/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-  XIOS: /home/eolson/MEOPAR/XIOS/
+  XIOS: /home/eolson/MEOPAR/XIOS2/
   forcing: /home/eolson/MEOPAR/NEMO-forcing/
   runs directory: /global/scratch/eolson/ 
 
@@ -34,6 +28,7 @@ grid:
   # path above
   coordinates: coordinates_seagrid_SalishSea201702.nc
   bathymetry: bathymetry_201702.nc
+  land processor elimination: bathymetry_201702.csv
 
 forcing:
   # If relative, paths are taken from forcing path above
@@ -49,9 +44,8 @@ forcing:
   bfr_coef.nc:
     link to: /home/eolson/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
-restarts:
+restart:
   restart.nc: /home/eolson/MEOPAR/NEMO-forcing/restarts/SalishSea_00061200_restart.nc
-  restart_trc.nc: /home/eolson/MEOPAR/NEMO-forcing/restarts/SalishSea_00061200_restart_trc_zeroTRA.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -63,17 +57,21 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/hndcstNMLs/namelist_cfg_2hr
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/hndcstNMLs/namelist_cfg_2d
   namelist_top_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_top_cfg
-  namelist_smelt_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/nwcstNMLs/namelist_smelt_cfg
+    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/namelist_top_cfg
+  namelist_trace2_cfg:
+    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/namelist_trace2_cfg
 
 output:
   # If relative, paths are taken from current directory
-  iodefs: /home/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/hindcast/iodef_xios2.xml
-  filedefs: /home/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/hindcast/file_def_xios2_dailysplit.xml
+  iodefs: /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/iodef_trace2xios2.xml
+  filedefs: /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/file_def_trace2xios2.xml
   domaindefs: /home/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/hindcast/domain_def_xios2.xml
-  fielddefs: /home/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/hindcast/field_def.xml
+  fielddefs: /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/field_def.xml.TRACE2
   separate XIOS server: True
   XIOS servers: 1
+
+vcs revisions:
+  hg: 
+    - /home/eolson/MEOPAR/SS-run-sets
