@@ -29,16 +29,16 @@
 !                !    name   !   title of the field      ! initial data ! initial data ! obc    !    sbc  !  cbc     ! save   !
 !                !           !                           !  units       ! from file    !                             ! or not ! 
 !                !           !                           !              ! or not       !                             !        !
-   sn_tracer(1)  = 'TUR1'    ,         'Fraser Tracer 1' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
-   sn_tracer(2)  = 'TUR2'    ,         'Fraser Tracer 2' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
-   sn_tracer(3)  = 'TUR3'    ,         'Fraser Tracer 3' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
-   sn_tracer(4)  = 'TUR4'    ,         'Fraser Tracer 4' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
-   sn_tracer(5)  = 'TUR5'    ,         'Fraser Tracer 5' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
-   sn_tracer(6)  = 'TUR6'    ,         'Fraser Tracer 6' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
-   sn_tracer(7)  = 'TUR7'    ,         'Fraser Tracer 7' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
-   sn_tracer(8)  = 'TUR8'    ,         'Fraser Tracer 8' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
-   sn_tracer(9)  = 'TUR9'    ,         'Fraser Tracer 9' ,      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
-   sn_tracer(10) = 'TUR10'   ,         'Fraser Tracer 10',      'NTU'   ,     .false.  , .true. , .false. ,  .false. ,  .true.
+   sn_tracer(1)  = 'TUR1'    ,         'Fraser Tracer 1' ,      'NTU'   ,     .false.  , .false., .false. ,  .false. ,  .true.
+   sn_tracer(2)  = 'TUR2'    ,         'Fraser Tracer 2' ,      'NTU'   ,     .false.  , .false., .false. ,  .false. ,  .true.
+   sn_tracer(3)  = 'TUR3'    ,         'Fraser Tracer 3' ,      'NTU'   ,     .false.  , .false., .false. ,  .false. ,  .true.
+   sn_tracer(4)  = 'TUR4'    ,         'Fraser Tracer 4' ,      'NTU'   ,     .false.  , .false., .false. ,  .false. ,  .true.
+   sn_tracer(5)  = 'TUR5'    ,         'Fraser Tracer 5' ,      'NTU'   ,     .false.  , .false., .false. ,  .false. ,  .true.
+   sn_tracer(6)  = 'TUR6'    ,         'Fraser Tracer 6' ,      'NTU'   ,     .false.  , .false., .false. ,  .false. ,  .true.
+   sn_tracer(7)  = 'TUR7'    ,         'Fraser Tracer 7' ,      'NTU'   ,     .false.  , .false., .false. ,  .false. ,  .true.
+   sn_tracer(8)  = 'TUR8'    ,         'Fraser Tracer 8' ,      'NTU'   ,     .false.  , .false., .false. ,  .false. ,  .true.
+   sn_tracer(9)  = 'TUR9'    ,         'Fraser Tracer 9' ,      'NTU'   ,     .false.  , .false., .false. ,  .false. ,  .true.
+   sn_tracer(10) = 'TUR10'   ,         'Fraser Tracer 10',      'NTU'   ,     .false.  , .false., .false. ,  .false. ,  .true.
    ln_trcdta = .false.
    ln_trcdmp = .false.
    /
