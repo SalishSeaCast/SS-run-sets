@@ -17,7 +17,7 @@ config_name: SMELT
 MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: 25jul17O_hindcast
+run_id: 26jul17_hindcast
 walltime: 1:48:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
@@ -51,8 +51,8 @@ forcing:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /global/scratch/sallen/SalishSea/hindcast/15jul17/SalishSea_02304720_restart.nc
-  restart_trc.nc: /global/scratch/sallen/SalishSea/hindcast/15jul17/SalishSea_02304720_restart_trc.nc
+  restart.nc: /global/scratch/sallen/SalishSea/hindcast/25jul17/SalishSea_02306880_restart.nc
+  restart_trc.nc: /global/scratch/sallen/SalishSea/hindcast/25jul17/SalishSea_02306880_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -65,7 +65,7 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist.time.25jul17
+    - ./namelist.time.26jul17
     - ./namelist.domain
     - ./namelist.surface.newrivers
     - ./namelist.lateral.LO
