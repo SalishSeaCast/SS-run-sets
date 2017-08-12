@@ -24,30 +24,32 @@ import arrow
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('prevdate', help='Date of previous file like 06jan17')
+    parser.add_argument('adddays', help='how many days to step forward')
     args = parser.parse_args()
     date_prev = arrow.get(args.prevdate, 'DDMMMYY')
-    newdate = date_prev.replace(days=+10)
+    adays = int(args.adddays)
+    newdate = date_prev.replace(days=+adays)
 
     previous_namelist = 'namelist.time.'+date_prev.format('DDMMMYY').lower()
     new_namelist =  'namelist.time.'+newdate.format('DDMMMYY').lower()
-    make_namelist(previous_namelist, new_namelist, newdate)
+    make_namelist(previous_namelist, new_namelist, newdate, adays)
 
     previous_yaml = 'SalishSea_hindcast_'+date_prev.format('DDMMMYY').lower()+'.yaml'
     new_yaml = 'SalishSea_hindcast_'+newdate.format('DDMMMYY').lower()+'.yaml'
-    make_yaml(previous_yaml, new_yaml, newdate, date_prev, new_namelist)
+    make_yaml(previous_yaml, new_yaml, newdate, date_prev, new_namelist, adays)
 
 
-def make_namelist(previous_namelist, new_namelist, newdate):
+def make_namelist(previous_namelist, new_namelist, newdate, adays):
     fo = open(new_namelist, 'w')
     with open(previous_namelist) as fp:
         for line in fp:
             if 'first time step' in line:
                 pieces = line.split()
-                new_pieces = [str(int(piece)+2160*10) if piece.isdigit() else piece for piece in pieces]
+                new_pieces = [str(int(piece)+2160*adays) if piece.isdigit() else piece for piece in pieces]
                 print (' '.join(new_pieces), file=fo)
             elif 'last time step' in line:
                 pieces = line.split()
-                new_pieces = [str(int(piece)+2160*10) if piece.isdigit() else piece for piece in pieces]
+                new_pieces = [str(int(piece)+2160*adays) if piece.isdigit() else piece for piece in pieces]
                 print (' '.join(new_pieces), file=fo)
             elif 'START OF THIS SEGMENT' in line:
                 pieces = line.split()
@@ -60,7 +62,7 @@ def make_namelist(previous_namelist, new_namelist, newdate):
     fo.close()
 
 
-def make_yaml(previous_yaml, new_yaml, newdate, date_prev, new_namelist):
+def make_yaml(previous_yaml, new_yaml, newdate, date_prev, new_namelist, adays):
     fo = open(new_yaml, 'w')
     with open(previous_yaml) as fp:
         for line in fp:
@@ -70,7 +72,7 @@ def make_yaml(previous_yaml, new_yaml, newdate, date_prev, new_namelist):
                 pieces = line.split('_')
                 for index, piece in enumerate(pieces):
                     if piece.isdigit():
-                        pieces[index] = str(int(piece)+2160*10).zfill(8)
+                        pieces[index] = str(int(piece)+2160*adays).zfill(8)
                 newline = '_'.join(pieces)
                 pieces = newline.split('/')
                 pieces[-2] = date_prev.format('DDMMMYY').lower()
