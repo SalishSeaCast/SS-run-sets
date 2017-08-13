@@ -57,7 +57,7 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/hndcstNMLs/namelist_cfg_2hrNoBioLight
+    - /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/namelists/hndcstNMLs/namelist_cfg_2hr
   namelist_top_cfg:
     - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/namelist_top_cfg
   namelist_trace2_cfg:
