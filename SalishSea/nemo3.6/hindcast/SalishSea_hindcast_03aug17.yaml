@@ -27,7 +27,7 @@ paths:
   NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /home/sallen/MEOPAR/XIOS2/
   forcing: /home/sallen/MEOPAR/NEMO-forcing/
-  runs directory: /global/scratch/sallen/SalishSea/
+  runs directory: /home/sallen/SalishSea/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
