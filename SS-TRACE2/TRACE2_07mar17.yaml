@@ -6,9 +6,10 @@
 #  Rivers run-off forcing
 #  Atmospheric forcing with operational GEM2.5 model products
 #    Constrained to no solid precipitation
-#  SMELT biological model
+#  TRACE2 config
+#  1st run for sinking experiment
 
-config_name: SMELT
+config_name: TRACE2
 
 # How is the domain to be distributed over the processors in the
 # i (longitude) and j (latitude) directions?
@@ -17,17 +18,17 @@ config_name: SMELT
 MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: 07mar17_hindcast
+run_id: TRACE2start_07mar17
 walltime: 18:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
-email: sallen@eos.ubc.ca
+email: eolson@eoas.ubc.ca
 
 paths:
   # If relative, paths are taken from current directory
-  NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-  XIOS: /home/sallen/MEOPAR/XIOS2/
-  forcing: /home/sallen/MEOPAR/NEMO-forcing/
-  runs directory: /global/scratch/sallen/SalishSea/
+  NEMO code config: /home/eolson/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: /home/eolson/MEOPAR/XIOS2/
+  forcing: /home/eolson/MEOPAR/NEMO-forcing/
+  runs directory: /global/scratch/eolson/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -46,9 +47,9 @@ forcing:
   open_boundaries:
     link to: open_boundaries
   rivers:
-    link to: /home/sallen/MEOPAR/rivers
+    link to: rivers
   bfr_coef.nc:
-    link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
+    link to: /home/eolson/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
   restart.nc: /home/eolson/MEOPAR/NEMO-forcing/restarts/hindcast/SalishSea_02002320_restart.nc
@@ -64,21 +65,21 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - namelist_cfg_07mar17 
+    - ./namelist_cfg_07mar17 
   namelist_top_cfg:
-    - ./namelist_top_cfg_smelt_LO
-  namelist_smelt_cfg:
-    - ./namelist_smelt_cfg
+    - ./namelist_top_cfg
+  namelist_trace2_cfg:
+    - ./namelist_trace2_cfg
 
 output:
   # If relative, paths are taken from current directory
-  iodefs: iodef_xios2.xml
-  filedefs: file_def_xios2_dailysplit.xml
-  domaindefs: domain_def_xios2.xml
-  fielddefs: field_def.xml
+  iodefs: /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/iodef_trace2xios2.xml
+  filedefs: /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/file_def_trace2xios2.xml
+  domaindefs: /home/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/hindcast/domain_def_xios2.xml
+  fielddefs: /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/field_def.xml.TRACE2
   separate XIOS server: True
   XIOS servers: 1
 
 vcs revisions:
   hg: 
-    - /home/sallen/MEOPAR/SS-run-sets
+    - /home/eolson/MEOPAR/SS-run-sets
