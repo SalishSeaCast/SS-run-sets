@@ -40,7 +40,7 @@ grid:
 forcing:
   # If relative, paths are taken from forcing path above
   NEMO-atmos:
-    link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos
+    link to: /home/eolson/MEOPAR/NEMO-forcing/atmospheric
     check link:
       type: atmospheric
       namelist filename: namelist_cfg
