@@ -26,9 +26,10 @@ paths:
   # If relative, paths are taken from current directory
   NEMO code config: /ocean/eolson/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   NEMO-code: /ocean/eolson/MEOPAR/NEMO-3.6-code/
-  XIOS: /ocean/eolson/MEOPAR/XIOS/
+  XIOS: /ocean/eolson/MEOPAR/XIOS2/
   forcing: /ocean/eolson/MEOPAR/NEMO-forcing/
   runs directory: /data/eolson/MEOPAR/SS36runs/testdebug
+
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path above
@@ -75,8 +76,9 @@ namelists:
 
 output:
   # If relative, paths are taken from current directory
-  domain: /data/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/domain_def.xml
-  fields: /data/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/field_def_newDiag.xml
-  files: /data/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/iodef_newDiag_salish_X2.xml
+  iodefs: /data/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/hindcast/iodef_xios2.xml
+  filedefs: /data/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/hindcast/file_def_xios2_dailysplit.xml
+  domaindefs: /data/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/hindcast/domain_def_xios2.xml
+  fielddefs: /data/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/hindcast/field_def.xml
   separate XIOS server: True
   XIOS servers: 1
