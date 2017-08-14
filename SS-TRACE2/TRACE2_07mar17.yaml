@@ -69,7 +69,7 @@ namelists:
   namelist_top_cfg:
     - ./namelist_top_cfg
   namelist_trace2_cfg:
-    - ./namelist_trace2_cfg
+    - ./namelist_trace2_cfg_0
 
 output:
   # If relative, paths are taken from current directory
