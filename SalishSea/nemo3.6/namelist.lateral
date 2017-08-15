@@ -94,9 +94,9 @@
 !-----------------------------------------------------------------------
 !        !  file name                             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
 !        !                                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
-  bn_ssh = 'ssh/sshNorth',                             1,               'sossheig', .true.,        .false.,  'monthly',  '',        ''
-  bn_u2d = 'ssh/sshNorth',                             1,               'vobtcrtx', .true.,        .false.,  'monthly',  '',        ''
-  bn_v2d = 'ssh/sshNorth',                             1,               'vobtcrty', .true.,        .false.,  'monthly',  '',        ''
+  bn_ssh = '',                                         1,               'sossheig', .true.,        .false.,  'monthly',  '',        ''
+  bn_u2d = '',                                         1,               'vobtcrtx', .true.,        .false.,  'monthly',  '',        ''
+  bn_v2d = '',                                         1,               'vobtcrty', .true.,        .false.,  'monthly',  '',        ''
   bn_u3d = '',                                        24,               'vozocrtx', .true.,        .false.,  'daily',    '',        ''
   bn_v3d = '',                                        24,               'vomecrty', .true.,        .false.,  'daily',    '',        ''
   bn_tem = 'tracers/north/SalishSea_north_TEOS10',  4380,               'votemper', .true.,        .true.,   'yearly',   '',        ''
