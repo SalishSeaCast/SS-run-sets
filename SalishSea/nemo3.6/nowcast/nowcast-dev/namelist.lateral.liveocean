@@ -60,15 +60,15 @@
 
 &nambdy_dta      !  open boundaries - external data           ("key_bdy")
 !-----------------------------------------------------------------------
-!        !  file name                                 ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
-!        !                                            !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
-  bn_ssh = 'ssh/ssh',                                    1,                'sossheig', .true.,        .false.,  'daily',    '',        ''
-  bn_u2d = 'ssh/ssh',                                    1,                'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
-  bn_v2d = 'ssh/ssh',                                    1,                'vobtcrty', .true.,        .false.,  'daily',    '',        ''
-  bn_u3d = '',                                          24,                'vozocrtx', .true.,        .false.,  'daily',    '',        ''
-  bn_v3d = '',                                          24,                'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'open_boundaries/west/LiveOcean/single_LO',  24,                'votemper', .true.,        .false.,  'daily',    '',        ''
-  bn_sal = 'open_boundaries/west/LiveOcean/single_LO',  24,                'vosaline', .true.,        .false.,  'daily',    '',        ''
+!        !  file name            ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
+!        !                       !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
+  bn_ssh = 'ssh/ssh',               1,                'sossheig', .true.,        .false.,  'daily',    '',        ''
+  bn_u2d = 'ssh/ssh',               1,                'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v2d = 'ssh/ssh',               1,                'vobtcrty', .true.,        .false.,  'daily',    '',        ''
+  bn_u3d = '',                     24,                'vozocrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v3d = '',                     24,                'vomecrty', .true.,        .false.,  'daily',    '',        ''
+  bn_tem = 'LiveOcean/single_LO',  24,                'votemper', .true.,        .false.,  'daily',    '',        ''
+  bn_sal = 'LiveOcean/single_LO',  24,                'vosaline', .true.,        .false.,  'daily',    '',        ''
 
   cn_dir = './'
 &end
