@@ -75,7 +75,7 @@
 
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide          = 'open_boundaries/west/tides/DownbyOne2_N36_J_west_tide_'
+   filtide          = 'tides/west/DownbyOne2_N36_J_west_tide_'
    ln_bdytide_2ddta = .false.
    ln_bdytide_conj  = .false.
 &end
@@ -108,7 +108,7 @@
 
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide          = 'open_boundaries/north/tides/DownbyOne2_N36_J_North_tide_'
+   filtide          = 'tides/north/DownbyOne2_N36_J_North_tide_'
    ln_bdytide_2ddta = .false.
    ln_bdytide_conj  = .false.
 &end
