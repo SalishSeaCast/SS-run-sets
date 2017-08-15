@@ -63,9 +63,9 @@
 !-----------------------------------------------------------------------
 !        !  file name             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
 !        !                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
-  bn_ssh = 'ssh/obs/ssh',                1,                'sossheig', .true.,        .false.,  'daily',    '',        ''
-  bn_u2d = 'ssh/obs/ssh',                1,                'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
-  bn_v2d = 'ssh/obs/ssh',                1,                'vobtcrty', .true.,        .false.,  'daily',    '',        ''
+  bn_ssh = 'ssh/daily/ssh',                1,                'sossheig', .true.,        .false.,  'daily',    '',        ''
+  bn_u2d = 'ssh/daily/ssh',                1,                'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v2d = 'ssh/daily/ssh',                1,                'vobtcrty', .true.,        .false.,  'daily',    '',        ''
   bn_u3d = '',                      24,                'vozocrtx', .true.,        .false.,  'daily',    '',        ''
   bn_v3d = '',                      24,                'vomecrty', .true.,        .false.,  'daily',    '',        ''
   bn_tem = 'LiveOcean/modified/single_LO', 24,                'votemper', .true.,        .false.,   'daily',   '',        ''
