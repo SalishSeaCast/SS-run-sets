@@ -150,7 +150,7 @@
    sn_trcobc(9) = 'bioOBC_full.nc',              168,        'PON',      .true.,  .true.,  'yearly',   '',        '',   ''
    sn_trcobc(10) = 'bioOBC_full.nc',             168,        'bSi',      .true.,  .true.,  'yearly',   '',        '',   ''
    sn_trcobc(11) = 'bioOBC_full.nc',             168,        'O2',       .true.,  .true.,  'yearly',   '',        '',   ''
-   cn_dir_obc        =  'tracers/west/'      !  root directory for the location of OPEN data files
+   cn_dir_obc        =  './open_boundaries/west/'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
    rn_trofac(2)   =  1.0  !  -      -      -     -
    rn_trofac(3)   =  1.0  !  multiplicative factor
@@ -181,7 +181,7 @@
    sn_trcobc(9)  = 'bioOBC_full_north.nc',               4380,        'PON',      .true.,  .true.,  'yearly',   '',      '',   ''
    sn_trcobc(10) = 'bioOBC_full_north.nc',               4380,        'bSi',      .true.,  .true.,  'yearly',   '',      '',   ''
    sn_trcobc(11) = 'bioOBC_full_north.nc',               4380,        'O2',       .true.,  .true.,  'yearly',   '',      '',   ''
-   cn_dir_obc        =  'tracers/north/'      !  root directory for the location of OPEN data files
+   cn_dir_obc        =  './open_boundaries/north/'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
    rn_trofac(2)   =  1.0  !  -      -      -     -
    rn_trofac(3)   =  1.0  !  multiplicative factor
