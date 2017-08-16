@@ -24,8 +24,8 @@ email: eolson@eoas.ubc.ca
 
 paths:
   # If relative, paths are taken from current directory
-  NEMO code config: /home/eolson/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-  XIOS: /home/eolson/MEOPAR/XIOS/
+  NEMO code config: /home/eolson/MEOPAR/NEMO36_2/NEMOGCM/CONFIG
+  XIOS: /home/eolson/MEOPAR/XIOS2/
   forcing: /home/eolson/MEOPAR/NEMO-forcing/
   runs directory: /global/scratch/eolson/ 
 
