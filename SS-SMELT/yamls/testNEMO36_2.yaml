@@ -17,7 +17,7 @@ config_name: SMELT
 MPI decomposition: 10x17
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: testNewDiag
+run_id: testNEMO36_2
 walltime: 2:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
