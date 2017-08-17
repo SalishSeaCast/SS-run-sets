@@ -44,6 +44,8 @@ forcing:
     check link:
       type: atmospheric
       namelist filename: namelist_cfg
+  tides:
+    link to: tides
   tracers:
     link to: tracers
   rivers:
