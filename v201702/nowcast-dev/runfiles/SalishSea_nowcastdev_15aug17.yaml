@@ -44,12 +44,14 @@ forcing:
     check link:
       type: atmospheric
       namelist filename: namelist_cfg
+  rivers:
+    link to: /home/sallen/MEOPAR/rivers/daily
+  ssh:
+    link to: /home/sallen/MEOPAR/sshNeahBay
   tides:
     link to: tides
   tracers:
     link to: tracers
-  rivers:
-    link to: /home/sallen/MEOPAR/rivers/daily
   bfr_coef.nc:
     link to: /home/sallen/MEOPAR/new_NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
