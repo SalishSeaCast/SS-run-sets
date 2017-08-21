@@ -47,7 +47,7 @@ forcing:
   open_boundaries:
     link to: open_boundaries
   rivers:
-    link to: /home/sallen/MEOPAR/rivers
+    link to: /home/tjarnik/MEOPAR/NEMO-forcing/rivers #this is changed from /home/sallen/MEOPAR/rivers, which appears not to find the bio climatology file?
   bfr_coef.nc:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
   initial_strat:
