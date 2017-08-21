@@ -64,6 +64,8 @@
    ln_trcadv_tvd = .false.
    ln_trcadv_tvd_zts = .true.
    ln_trcadv_qck = .false.
+   nn_trcadv_tvd_zts =    20     !     number of sub time-steps for TVD ZTS
+
 /
 !-----------------------------------------------------------------------
 &namtrc_ldf    !   lateral diffusion scheme for passive tracer 
