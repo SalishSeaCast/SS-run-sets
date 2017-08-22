@@ -18,8 +18,8 @@ config_name: SalishSea
 MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: 14aug17_nowcast-dev
-walltime: 1:48:00
+run_id: 15aug17_nowcastdev
+walltime: 0:40:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
@@ -27,7 +27,7 @@ paths:
   # If relative, paths are taken from current directory
   NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /home/sallen/MEOPAR/XIOS2/
-  forcing: /home/sallen/MEOPAR/NEMO-forcing/
+  forcing: /home/sallen/MEOPAR/new_NEMO-forcing/
   runs directory: /home/sallen/SalishSea/
 
 grid:
@@ -44,15 +44,21 @@ forcing:
     check link:
       type: atmospheric
       namelist filename: namelist_cfg
-  open_boundaries:
-    link to: open_boundaries
+  LiveOcean:
+    link to: /home/sallen/MEOPAR/LiveOcean/modified
   rivers:
     link to: /home/sallen/MEOPAR/rivers/daily
+  ssh:
+    link to: /home/sallen/MEOPAR/sshNeahBay
+  tides:
+    link to: tides
+  tracers:
+    link to: tracers
   bfr_coef.nc:
-    link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
+    link to: /home/sallen/MEOPAR/new_NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /home/sallen/SalishSea/hindcast/13aug17/SalishSea_02347920_restart.nc
+  restart.nc: /home/sallen/SalishSea/hindcast/14aug17/SalishSea_02350080_restart.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -65,7 +71,7 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist.time.14aug17
+    - ./namelist.time.15aug17
     - ../../namelist.domain
     - ../namelist.surface
     - ../namelist.lateral
@@ -82,8 +88,12 @@ output:
   domaindefs: ../../domain_def.xml
   fielddefs: ../../field_def.xml
   separate XIOS server: True
-  XIOS servers: 1
+  XIOS servers: 2
 
 vcs revisions:
   hg: 
     - /home/sallen/MEOPAR/SS-run-sets
+    - /home/sallen/MEOPAR/new_NEMO-forcing/grid
+    - /home/sallen/MEOPAR/new_NEMO-forcing/rivers
+    - /home/sallen/MEOPAR/new_NEMO-forcing/tides
+    - /home/sallen/MEOPAR/new_NEMO-forcing/tracers
