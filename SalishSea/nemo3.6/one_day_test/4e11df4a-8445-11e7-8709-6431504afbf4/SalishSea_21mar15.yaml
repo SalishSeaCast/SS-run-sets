@@ -51,7 +51,7 @@ forcing:
   bfr_coef.nc:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
   initial_strat:
-    link to: /home/tjarnik/MEOPAR/NEMO-forcing/initial_strat
+    link to: /home/sallen/MEOPAR/NEMO-forcing/initial_strat
 
 
 namelists:
