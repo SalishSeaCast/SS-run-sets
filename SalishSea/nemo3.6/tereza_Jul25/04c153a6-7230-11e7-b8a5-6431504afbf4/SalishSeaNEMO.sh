@@ -10,15 +10,15 @@
 #PBS -m bea
 #PBS -M tjarnik@gmail.com
 # stdout and stderr file paths/names
-#PBS -o /home/tjarnik/MEOPAR/SalishSea/results/one_day_test/stdout
-#PBS -e /home/tjarnik/MEOPAR/SalishSea/results/one_day_test/stderr
+#PBS -o /home/tjarnik/MEOPAR/SalishSea/results/one_dasy_test2/stdout
+#PBS -e /home/tjarnik/MEOPAR/SalishSea/results/one_dasy_test2/stderr
 #PBS -l partition=QDR
 
 
 RUN_ID="21mar15"
 RUN_DESC="SalishSea_21mar15.yaml"
-WORK_DIR="/global/home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/bbb0c23a-6be7-11e7-9363-6431504adba6"
-RESULTS_DIR="/home/tjarnik/MEOPAR/SalishSea/results/one_day_test"
+WORK_DIR="/global/home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza_Jul25/04c153a6-7230-11e7-b8a5-6431504afbf4"
+RESULTS_DIR="/home/tjarnik/MEOPAR/SalishSea/results/one_dasy_test2"
 COMBINE="${PBS_O_HOME}/.local/bin/salishsea combine"
 DEFLATE="${PBS_O_HOME}/.local/bin/salishsea deflate"
 GATHER="${PBS_O_HOME}/.local/bin/salishsea gather"

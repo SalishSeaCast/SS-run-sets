@@ -27,7 +27,7 @@ paths:
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $HOME/MEOPAR/XIOS2/
   forcing: $HOME/MEOPAR/NEMO-forcing/
-  runs directory: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6 #/data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/Orcinus_Sc4/          # CHANGE THIS ONE for other users
+  runs directory: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza_Jul25 #/data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/Orcinus_Sc4/          # CHANGE THIS ONE for other users
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
