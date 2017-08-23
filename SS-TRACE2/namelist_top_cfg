@@ -39,7 +39,7 @@
    sn_tracer(8)  = 'TUR8'    ,         'Fraser Tracer 8' ,      'NTU'   ,     .true.   , .false., .false. ,  .false. ,  .true.
    sn_tracer(9)  = 'TUR9'    ,         'Fraser Tracer 9' ,      'NTU'   ,     .true.   , .false., .false. ,  .false. ,  .true.
    sn_tracer(10) = 'TUR10'   ,         'Fraser Tracer 10',      'NTU'   ,     .true.   , .false., .false. ,  .false. ,  .true.
-   ln_trcdta = .false.
+   ln_trcdta = .true. 
    ln_trcdmp = .false.
    /
 !-----------------------------------------------------------------------
