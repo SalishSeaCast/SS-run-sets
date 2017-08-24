@@ -50,6 +50,8 @@ forcing:
     link to: rivers
   bfr_coef.nc:
     link to: /home/eolson/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
+  initial_green:
+    link to: initial_green
 
 restart:
   restart.nc: /home/eolson/MEOPAR/NEMO-forcing/restarts/hindcast/SalishSea_02002320_restart.nc
