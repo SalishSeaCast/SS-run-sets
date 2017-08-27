@@ -18,7 +18,7 @@ MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: 12mar16_hindcast
-walltime: 14:00:00
+walltime: 18:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
@@ -86,7 +86,7 @@ output:
   domaindefs: domain_def_xios2.xml
   fielddefs: field_def.xml
   separate XIOS server: True
-  XIOS servers: 1
+  XIOS servers: 3
 
 vcs revisions:
   hg: 
