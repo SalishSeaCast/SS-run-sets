@@ -26,7 +26,7 @@
    ln_tfr2d    = .false.    !  horizontal variation of the top friction coef (read a 2D mask file )
    rn_tfrien   =    50.     !  local multiplying factor of tfr (ln_tfr2d=T)
 
-   ln_bfrimp   = .true.     !  implicit bottom friction (requires ln_zdfexp = .false. if true)
+   ln_bfrimp   = .false.     !  implicit bottom friction (requires ln_zdfexp = .false. if true)
    ln_loglayer = .true.    !  logarithmic formulation (non linear case)
 /
 !-----------------------------------------------------------------------
