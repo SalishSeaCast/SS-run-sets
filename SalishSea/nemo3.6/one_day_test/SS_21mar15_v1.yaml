@@ -66,14 +66,14 @@ namelists:
 
   namelist_cfg:
     - ./namelist.time.21mar15
-    - ../hindcast/namelist.domain
-    - ../hindcast/namelist.surface.newrivers
-    - ../hindcast/namelist.lateral.hindcast
-    - ../hindcast/namelist.bottom.jetty.a14
-    - ../hindcast/namelist.tracer.1
-    - ../hindcast/namelist.dynamics
-    - ../hindcast/namelist.vertical
-    - ../hindcast/namelist.compute
+    - ./namelist.domain
+    - ./namelist.surface.newrivers
+    - ./namelist.lateral.hindcast
+    - ./namelist.bottom.jetty.a14
+    - ./namelist.tracer.1
+    - ./namelist.dynamics
+    - ./namelist.vertical
+    - ./namelist.compute
   namelist_top_cfg:
     - /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/namelist_top_cfg
     #../hindcast/namelist_top_cfg_initial

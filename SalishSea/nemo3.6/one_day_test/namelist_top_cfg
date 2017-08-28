@@ -29,7 +29,7 @@
 !   sn_tracer(12) = 'DIC     ' , 'Dissolved inorganic Carbon             ',  'mol-C/L' ,  .true.    , .false.   ,  .false. ,  .false.  ,  .true.
 !   sn_tracer(13) = 'TA     ' , 'Total Alkalinity                       ',  'mol-C/L' ,  .true.    , .false.   ,  .false. ,  .false.  ,  .true.
 
-   ln_trcdta = .false.
+   ln_trcdta = .false. !read data from input file, or not
    ln_trcdmp = .false.
    /
 !-----------------------------------------------------------------------
