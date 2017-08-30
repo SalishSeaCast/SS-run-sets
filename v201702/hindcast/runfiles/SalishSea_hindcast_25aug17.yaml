@@ -58,8 +58,8 @@ forcing:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /home/sallen/SalishSea/hindcast/24aug17/SalishSea_02371680_restart.nc
-  restart_trc.nc: /home/sallen/SalishSea/hindcast/24aug17/SalishSea_02371680_restart_trc.nc
+  restart.nc: /home/sallen/SalishSea/nowcast-green/24aug17/SalishSea_02371680_restart.nc
+  restart_trc.nc: /home/sallen/SalishSea/nowcast-green/24aug17/SalishSea_02371680_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
