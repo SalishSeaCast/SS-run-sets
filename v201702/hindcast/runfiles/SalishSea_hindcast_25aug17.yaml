@@ -47,9 +47,9 @@ forcing:
   LiveOcean:
     link to: /home/sallen/MEOPAR/LiveOcean/modified
   ssh:
-    link to: /home/sallen/MEOPAR/sshNeahBay/obs
+    link to: /home/sallen/MEOPAR/sshNeahBay
   rivers:
-    link to: /home/sallen/MEOPAR/rivers
+    link to: /home/sallen/MEOPAR/rivers/daily
   tides:
     link to: tides
   tracers:
