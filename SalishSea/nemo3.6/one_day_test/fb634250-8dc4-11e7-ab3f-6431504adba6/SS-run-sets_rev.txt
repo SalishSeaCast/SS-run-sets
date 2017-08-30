@@ -1,0 +1,9 @@
+changset:   1402:a4ddc88121c6b773354696c217ee9cdaa0d4067d
+tag:        tip
+user:       Tereza <tjarnik@gmail.com>
+date:       Mon Aug 28 11:04:51 2017 -07:00
+files:      SalishSea/nemo3.6/one_day_test/namelist.bottom.jetty.a14 SalishSea/nemo3.6/one_day_test/.namelist_top_ref.swp
+description:
+turned off implicit bottom friction in namelist.bottom.jetty.a14
+uncommitted changes:
+M SalishSea/nemo3.6/one_day_test/SS_21mar15_v1.yaml
