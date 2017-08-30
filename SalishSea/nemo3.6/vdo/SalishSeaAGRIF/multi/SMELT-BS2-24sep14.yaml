@@ -1,6 +1,6 @@
 # Hindcast with AGRIF for Baynes Sound 2 + SMELT
 config_name: SMELTAGRIF
-MPI decomposition: 6x9
+MPI decomposition: 1x7
 run_id: BS2-24sep14-SMELT
 walltime: 12:00:00
 
@@ -96,7 +96,7 @@ AGRIF:
 # Output settings. XMLs here are for the parent grid
 output:
   separate XIOS server: True
-  XIOS servers: 6
+  XIOS servers: 1
   iodefs: $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/iodef.BS2.xml
   domaindefs: $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/domain_def.xml
   fielddefs: $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/hindcast/field_def.xml
