@@ -48,6 +48,7 @@
    ln_trcadv_qck     =  .false.  !  QUICKEST scheme
    ln_trcadv_msc_ups =  .false.  !  use upstream scheme within muscl
    ln_trcadv_tvd_zts =  .true.   !  TVD scheme zts
+   nn_trcadv_tvd_zts =    5      !     number of sub time-steps for TVD ZTS
 /
 !-----------------------------------------------------------------------
 &namtrc_ldf    !   lateral diffusion scheme for passive tracer 
