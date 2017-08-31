@@ -64,7 +64,7 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - ./namelist_cfg_07mar17_5d 
+    - ./namelist_cfg_07mar17_5d_2bnd
 
 output:
   # If relative, paths are taken from current directory
@@ -72,7 +72,7 @@ output:
   filedefs: /home/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/nowcast/file_def.xml 
   domaindefs: /home/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/nowcast/domain_def.xml
   fielddefs: /home/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/nowcast/file_def_xios2_blue.xml
-  XIOS server: True
+  separate XIOS server: True
   XIOS servers: 1
 
 vcs revisions:
