@@ -68,11 +68,11 @@ namelists:
 
 output:
   # If relative, paths are taken from current directory
-  iodefs: /home/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/nowcast/iodef_xios2.xml
-  filedefs: /home/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/nowcast/file_def.xml 
-  domaindefs: /home/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/nowcast/domain_def.xml
-  fielddefs: /home/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/nowcast/file_def_xios2_blue.xml
-  separate XIOS server: True
+  iodefs: ./iodef.xml.blue
+  filedefs: ./file_def.xml.blue
+  domaindefs: ./domain_def.xml.blue
+  fielddefs: ./field_def.xml.blue
+  XIOS server: True
   XIOS servers: 1
 
 vcs revisions:
