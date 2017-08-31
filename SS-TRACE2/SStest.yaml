@@ -72,7 +72,7 @@ output:
   filedefs: ./file_def.xml.blue
   domaindefs: ./domain_def.xml.blue
   fielddefs: ./field_def.xml.blue
-  XIOS server: True
+  separate XIOS server: True
   XIOS servers: 1
 
 vcs revisions:
