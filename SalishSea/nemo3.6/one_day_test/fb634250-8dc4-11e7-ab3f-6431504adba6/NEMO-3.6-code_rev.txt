@@ -1,6 +1,0 @@
-changset:   1005:fad7a2f7947c68785fc9f75bee43f3ccf35bc61b
-user:       Susan Allen <sallen@eos.ubc.ca>
-date:       Wed Aug 30 11:07:05 2017 -07:00
-files:      NEMOGCM/CONFIG/SHARED/namelist_ref
-description:
-Revert SHARED namelist_ref ... shouldn't be changed! change your EXP00 one in your CONFIG
