@@ -67,7 +67,7 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist_cfg_07mar17_5d 
+    - ./namelist_cfg_07mar17_5d_2bnd
   namelist_top_cfg:
     - ./namelist_top_cfg
   namelist_trace2_cfg:
