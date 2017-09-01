@@ -316,8 +316,8 @@ nn_date0 = 20170307 ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMEN
 !-----------------------------------------------------------------------
     ctypebdy  = 'N'
     nbdyind   = 896  ! i-index for segment
-    nbdybeg   = 40   ! j-index for segment beginning
-    nbdyend   = 72   ! j-index for segment end
+    nbdybeg   = 42   ! j-index for segment beginning
+    nbdyend   = 71   ! j-index for segment end
 &end
 
 
