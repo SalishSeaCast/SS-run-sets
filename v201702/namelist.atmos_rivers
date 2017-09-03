@@ -1,15 +1,15 @@
 !!======================================================================
 !!            ***  Surface Boundary Condition namelists  ***
 !!
-!! sets boundary conditions for surface features.  Note that this file
-!! only includes the subset of namelists we use and furthermore only
-!! the variables we typically change.
+!! sets boundary conditions for surface features and rivers.  Note that 
+!! this file only includes the subset of namelists we use and furthermore
+!! only the variables we typically change. Note that incoming solar 
+!! radiation has its own namelist file
 !!======================================================================
 !! Included namelists:
 !!   namsbc          surface boundary condition
 !!   namsbc_ana      analytical         formulation
 !!   namsbc_core     CORE bulk formulae formulation
-!!   namtra_qsr      penetrative solar radiation
 !!   namsbc_rnf      river runoffs
 !!   namsbc_apr      Atmospheric Pressure
 !!======================================================================
@@ -21,7 +21,6 @@
 !!   namsbc_sas      StAndalone Surface module
 !!   namsbc_isf      ice shelf melting/freezing
 !!   namsbc_ssr      sea surface restoring term (for T and/or S)
-!!   namsbc_alb      albedo parameters
 !!   namsbc_wave     external fields from wave model
 !!======================================================================
 !!
@@ -71,15 +70,6 @@
    rn_vfac     = 1.               !  new feature, lets use (0. for comparison, then switch to 1)
                                   !  multiplicative factor for ocean/ice velocity
                                   !  in the calculation of the wind stress (0.=absolute winds or 1.=relative winds)
-&end
-
-!-----------------------------------------------------------------------
-&namtra_qsr    !   penetrative solar radiation
-!-----------------------------------------------------------------------
-   ln_qsr_rgb  = .false.  !  RGB (Red-Green-Blue) light penetration
-   ln_qsr_2bd  = .false.   !  2 bands              light penetration
-   ln_qsr_bio  = .true.   !  bio-model light penetration
-   nn_chldta   = 0        !  RGB : Chl data (=1) or cst value (=0)
 &end
 
 !-----------------------------------------------------------------------
