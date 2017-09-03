@@ -77,7 +77,7 @@
 !-----------------------------------------------------------------------
 !             !  file name           ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
 !             !                      !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
-  sn_rnf      = 'rivers_month_201702',    24,           'rorunoff',  .true.,       .false., 'daily',    '',        ''
+  sn_rnf      = 'rivers_month_201702',    24,           'rorunoff',  .true.,       .true., 'daily',    '',        ''
   sn_cnf      = 'runoff_1m_nomask',        0,           'socoefr0',  .false.,      .true.,  'yearly',   '',        ''
   sn_s_rnf    = '',                       24,           'rosaline',  .false.,      .true.,  'yearly',   '',        ''
   sn_t_rnf    = 'rivers_ConsTemp_month',  -1,           'rotemper',  .true.,       .true.,  'yearly',   '',        ''
