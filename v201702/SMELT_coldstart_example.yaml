@@ -68,7 +68,8 @@ namelists:
   namelist_cfg:
     - ./namelist.time.12sep14
     - ./namelist.domain
-    - ./namelist.surface
+    - ./namelist.atmos_rivers
+    - ./namelist.light
     - ./namelist.lateral
     - ./namelist.bottom
     - ./namelist.tracer
