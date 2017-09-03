@@ -52,7 +52,7 @@ forcing:
     link to: /home/eolson/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /home/eolson/MEOPAR/NewRuns/TRACE2_2_15feb17/SalishSea_01980720_restart.nc
+  restart.nc: /home/eolson/MEOPAR/NewRuns/TRACE2_2_15feb17/SalishSea_021980720_restart.nc
   restart_trc.nc: /home/eolson/MEOPAR/NewRuns/TRACE2_2_15feb17/SalishSea_021980720_restart_trc.nc
 
 namelists:
