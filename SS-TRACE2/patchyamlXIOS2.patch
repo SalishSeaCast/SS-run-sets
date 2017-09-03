@@ -1,0 +1,19 @@
+*** TRACE2_2_05feb17.yaml.old	2017-09-02 18:53:11.000000000 -0700
+--- TRACE2_2_05feb17.yaml	2017-09-02 18:55:31.000000000 -0700
+***************
+*** 26,32 ****
+  paths:
+    # If relative, paths are taken from current directory
+    NEMO code config: /home/eolson/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+!   XIOS: /home/eolson/MEOPAR/XIOS2/
+    forcing: /home/eolson/MEOPAR/NEMO-forcing/
+    runs directory: /global/scratch/eolson/
+  
+--- 26,32 ----
+  paths:
+    # If relative, paths are taken from current directory
+    NEMO code config: /home/eolson/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+!   XIOS: /home/eolson/MEOPAR/XIOS-2/
+    forcing: /home/eolson/MEOPAR/NEMO-forcing/
+    runs directory: /global/scratch/eolson/
+  
