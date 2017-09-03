@@ -9,7 +9,7 @@
 #  No biology
 #  start from restart file
 
-config_name: SMELT
+config_name: SalishSea
 
 # How is the domain to be distributed over the processors in the
 # i (longitude) and j (latitude) directions?
