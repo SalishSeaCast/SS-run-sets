@@ -70,7 +70,7 @@
    rn_trfac(8)   =  1.0  !  -      -      -     -
    rn_trfac(9)   =  1.0  !  -      -      -     -
    rn_trfac(10)  =  1.0  !  -      -      -     -
-   cn_dir='./tracers/initial/'
+   cn_dir='tracers/initial/'
 /
 !-----------------------------------------------------------------------
 &namtrc_bdy     ! bdy for passive tracers
