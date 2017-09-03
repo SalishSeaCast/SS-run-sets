@@ -56,6 +56,9 @@ forcing:
     link to: $HOME/MEOPAR/grid/jetty_mask_bathy201702.nc
 
 restart:
+  # on Salish use /ocean/sallen/allen/research/myResults/v201702_examples/SMELT_v201702_example/12sep14/SalishSea_00002160_restart.nc
+  #               /ocean/sallen/allen/research/myResults/v201702_examples/SMELT_v201702_example/12sep14/SalishSea_00002160_restart_trc.nc
+  # on orcinus use:
   restart.nc: /home/sallen/SalishSea/SMELT_v201702_example/12sep14/SalishSea_00002160_restart.nc
   restart_trc.nc: /home/sallen/SalishSea/SMELT_v201702_example/12sep14/SalishSea_00002160_restart_trc.nc
 
