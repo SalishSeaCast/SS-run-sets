@@ -85,12 +85,10 @@
    ln_top_euler  = .false.    !  use Euler time-stepping for TOP
 /
 !-----------------------------------------------------------------------
-&namtrc     !   tracers definition
-!-----------------------------------------------------------------------
-/
-!-----------------------------------------------------------------------
 &namtrc_adv    !   advection scheme for passive tracer 
 !-----------------------------------------------------------------------
+   ln_trcadv_tvd_zts =  .true.   !  TVD scheme zts
+   nn_trcadv_tvd_zts =    20      !     number of sub time-steps for TVD ZTS
 /
 !-----------------------------------------------------------------------
 &namtrc_ldf    !   lateral diffusion scheme for passive tracer 
