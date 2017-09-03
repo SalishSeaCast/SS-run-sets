@@ -77,7 +77,8 @@ namelists:
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
-    - ./namelist_top_cfg_initial
+    - ./namelist_top_coldstart
+    - ./namelist_top_cfg
   namelist_smelt_cfg:
     - ./namelist_smelt_cfg
 
