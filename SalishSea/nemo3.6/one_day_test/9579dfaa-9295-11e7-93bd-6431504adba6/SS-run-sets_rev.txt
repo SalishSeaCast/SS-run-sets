@@ -1,0 +1,7 @@
+changset:   1453:f8d5d5e839bfb564e4e5c6e205006d42d82f9616
+tag:        tip
+user:       Tereza <tjarnik@gmail.com>
+date:       Thu Aug 31 20:35:45 2017 -07:00
+files:      SalishSea/nemo3.6/one_day_test/SS_21mar15_v1.yaml SalishSea/nemo3.6/one_day_test/namelist_top_cfg_initial
+description:
+removing namelist_top_cfg_initial - let's worry about error 1 independently?
