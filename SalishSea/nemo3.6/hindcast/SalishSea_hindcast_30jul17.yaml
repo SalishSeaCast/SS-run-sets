@@ -25,7 +25,7 @@ email: sallen@eos.ubc.ca
 paths:
   # If relative, paths are taken from current directory
   NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-  XIOS: /home/sallen/MEOPAR/XIOS2/
+  XIOS: /home/sallen/MEOPAR/XIOS-2/
   forcing: /home/sallen/MEOPAR/NEMO-forcing/
   runs directory: /home/sallen/SalishSea/
 
