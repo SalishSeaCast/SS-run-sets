@@ -51,8 +51,8 @@ forcing:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /global/scratch/sallen/SalishSea/hindcast/29jul17/SalishSea_02315520_restart.nc
-  restart_trc.nc: /global/scratch/sallen/SalishSea/hindcast/29jul17/SalishSea_02315520_restart_trc.nc
+  restart.nc: /home/sallen/MEOPAR/SalishSea/hindcast/29jul17/SalishSea_02315520_restart.nc
+  restart_trc.nc: /home/sallen/MEOPAR/SalishSea/hindcast/29jul17/SalishSea_02315520_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -91,3 +91,6 @@ output:
 vcs revisions:
   hg: 
     - /home/sallen/MEOPAR/SS-run-sets
+    - $HOME/MEOPAR/NEMO-Cmd
+    - $HOME/MEOPAR/SalishSeaCmd
+    - $HOME/MEOPAR/XIOS-ARCH
