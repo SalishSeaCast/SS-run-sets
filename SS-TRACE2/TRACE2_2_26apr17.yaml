@@ -19,7 +19,7 @@ MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: TRACE2_2_26apr17
-walltime: 22:00:00
+walltime: 12:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 
@@ -66,7 +66,7 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist_cfg_26apr17_smallstep 
+    - ./namelist_cfg_26apr17 
   namelist_top_cfg:
     - ./namelist_top_cfg_restart
   namelist_trace2_cfg:
