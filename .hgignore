@@ -16,4 +16,5 @@ solver.stat
 time.step
 timing.output
 /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/old/**
+/data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/old_runs/**
 /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/old_runs/**
