@@ -26,7 +26,7 @@ paths:
   # If relative, paths are taken from current directory
   NEMO-code: /data/tjarniko/MEOPAR/NEMO-3.6-code/
   NEMO code config: /data/tjarniko/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-  XIOS: /data/tjarniko/MEOPAR/XIOS2
+  XIOS: /data/tjarniko/MEOPAR/XIOS-2
   forcing: /data/tjarniko/MEOPAR/NEMO-forcing/
   runs directory: /data/tjarniko/MEOPAR/SalishSea/results
  #/data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/Orcinus_Sc4/          # CHANGE THIS ONE for other users
