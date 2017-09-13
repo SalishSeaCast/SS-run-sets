@@ -71,7 +71,7 @@ namelists:
     - ./namelist_cfg_05feb17 
   namelist_top_cfg:
     - ./namelist_top_cfg
-  namelist_trace2_cfg:
+  namelist_smelt_cfg:
     - ./namelist_smelt_cfg
 
 output:
