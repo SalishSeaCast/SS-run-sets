@@ -6,10 +6,10 @@
 #  Rivers run-off forcing
 #  Atmospheric forcing with operational GEM2.5 model products
 #    Constrained to no solid precipitation
-#  TRACE2 config
+#  SMELT config
 #  1st run for sinking experiment
 
-config_name: TRACE2
+config_name: SMELT
 
 # How is the domain to be distributed over the processors in the
 # i (longitude) and j (latitude) directions?
@@ -18,7 +18,7 @@ config_name: TRACE2
 MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: TRACE2_3_16apr17
+run_id: Light_0_16apr17
 walltime: 12:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
@@ -52,8 +52,8 @@ forcing:
     link to: /home/eolson/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /home/eolson/MEOPAR/NewRuns/TRACE2_3_06apr17/SalishSea_02088720_restart.nc
-  restart_trc.nc: /home/eolson/MEOPAR/NewRuns/TRACE2_3_06apr17/SalishSea_02088720_restart_trc.nc
+  restart.nc: /home/eolson/MEOPAR/NewRuns/Light_0_06apr17/SalishSea_02088720_restart.nc
+  restart_trc.nc: /home/eolson/MEOPAR/NewRuns/Light_0_06apr17/SalishSea_02088720_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -69,15 +69,15 @@ namelists:
     - ./namelist_cfg_16apr17 
   namelist_top_cfg:
     - ./namelist_top_cfg_restart
-  namelist_trace2_cfg:
-    - ./namelist_trace2_cfg_3
+  namelist_smelt_cfg:
+    - ./namelist_smelt_cfg
 
 output:
   # If relative, paths are taken from current directory
-  iodefs: /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/iodef_trace2xios2.xml
-  filedefs: /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/file_def_trace2xios2.xml
-  domaindefs: /home/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/hindcast/domain_def_xios2.xml
-  fielddefs: /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/field_def.xml.TRACE2
+  iodefs: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/lightTest/iodef.xml
+  filedefs: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/lightTest/file_def.xml
+  domaindefs: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/lightTest/domain_def.xml
+  fielddefs: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/lightTest/field_def.xml  
   separate XIOS server: True
   XIOS servers: 1
 

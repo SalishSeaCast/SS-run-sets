@@ -6,7 +6,7 @@
 #  Rivers run-off forcing
 #  Atmospheric forcing with operational GEM2.5 model products
 #    Constrained to no solid precipitation
-#  TRACE2 config
+#  SMELT config
 #  1st run for sinking experiment
 
 config_name: SMELT
