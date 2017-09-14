@@ -57,7 +57,7 @@ nn_date0 = 20170225 ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMEN
 &namdom        !   space and time domain (bathymetry, mesh, timestep)
 !-----------------------------------------------------------------------
    nn_bathy    =    1      !  compute (=0) or read (=1) the bathymetry file
-   nn_msh      =    1      !  create (=1) a mesh file or not (=0)
+   nn_msh      =    0      !  create (=1) a mesh file or not (=0)
    rn_hmin     =    3.     !  min depth of the ocean (>0) or min number of ocean level (<0)
    rn_e3zps_min=    2.     !  partial step thickness is set larger than the minimum of
    rn_e3zps_rat=    0.5    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
@@ -189,13 +189,9 @@ nn_date0 = 20170225 ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMEN
 &namtra_qsr    !   penetrative solar radiation
 !-----------------------------------------------------------------------
    ln_qsr_rgb  = .false.  !  RGB (Red-Green-Blue) light penetration
-   ln_qsr_2bd  = .true.    !  2 bands              light penetration
-   ln_qsr_bio  = .false.  !  bio-model light penetration
+   ln_qsr_2bd  = .false.   !  2 bands              light penetration
+   ln_qsr_bio  = .true.   !  bio-model light penetration
    nn_chldta   = 0        !  RGB : Chl data (=1) or cst value (=0)
-   rn_abs      =   0.70    !  RGB & 2 bands: fraction of light (rn_si1)
-   rn_si0      =   0.431    !  RGB & 2 bands: shortess depth of extinction
-   rn_si1      =   2.92    !  2 bands: longest depth of extinction
-
 &end
 
 !-----------------------------------------------------------------------
@@ -297,13 +293,13 @@ nn_date0 = 20170225 ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMEN
 !-----------------------------------------------------------------------
 !        !  file name             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
 !        !                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
-  bn_ssh = 'ssh/ssh',                1,                'sossheig', .true.,        .false.,  'daily',    '',        ''
-  bn_u2d = 'ssh/ssh',                1,                'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
-  bn_v2d = 'ssh/ssh',                1,                'vobtcrty', .true.,        .false.,  'daily',    '',        ''
+  bn_ssh = 'ssh/obs/ssh',                1,                'sossheig', .true.,        .false.,  'daily',    '',        ''
+  bn_u2d = 'ssh/obs/ssh',                1,                'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v2d = 'ssh/obs/ssh',                1,                'vobtcrty', .true.,        .false.,  'daily',    '',        ''
   bn_u3d = '',                      24,                'vozocrtx', .true.,        .false.,  'daily',    '',        ''
   bn_v3d = '',                      24,                'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'SalishSea_west_TEOS10', 168,                'votemper', .true.,        .true.,   'yearly',   '',        ''
-  bn_sal = 'SalishSea_west_TEOS10', 168,                'vosaline', .true.,        .true.,   'yearly',   '',        ''
+  bn_tem = 'LiveOcean/modified/single_LO', 24,                'votemper', .true.,        .false.,   'daily',   '',        ''
+  bn_sal = 'LiveOcean/modified/single_LO', 24,                'vosaline', .true.,        .false.,   'daily',   '',        ''
 
   cn_dir = 'open_boundaries/west/'
 &end
