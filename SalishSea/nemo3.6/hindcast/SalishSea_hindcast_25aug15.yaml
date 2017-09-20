@@ -82,7 +82,7 @@ namelists:
 output:
   # If relative, paths are taken from current directory
   iodefs: iodef_xios2.xml
-  filedefs: file_def_xios2_dailysplit.xml
+  filedefs: file_def_xios2_dailysplit_noslab.xml
   domaindefs: domain_def_xios2.xml
   fielddefs: field_def.xml
   separate XIOS server: True
