@@ -93,4 +93,4 @@ output:
 
 vcs revisions:
   hg: 
-    - /home/tjarnik/MEOPAR/SS-run-sets #changed it from sallen because it was complaining about no repo found
+    - ../../../../SS-run-sets/ #changed it from sallen because it was complaining about no repo found
