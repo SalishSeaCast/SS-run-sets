@@ -76,10 +76,10 @@ namelists:
     - ./namelist.vertical
     - ./namelist.compute
   namelist_top_cfg:
-    - /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/namelist_top_cfg
+    - ./namelist_top_cfg
     #../hindcast/namelist_top_cfg_initial
   namelist_smelt_cfg:
-    - /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/namelist_smelt_cfg_ORIG
+    - ./namelist_smelt_cfg_ORIG
     #- ../hindcast/namelist_smelt_cfg
 
 output:
