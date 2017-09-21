@@ -49,10 +49,10 @@ forcing:
     link to: open_boundaries/
   rivers:
     link to: /data/tjarniko/MEOPAR/NEMO-forcing/rivers/
-  restart.nc:
-    link to: /data/tjarniko/MEOPAR/NEMO-forcing/restarts/SalishSea_00741600_restart.nc
-  restart_trc.nc:
-    link to: /data/tjarniko/MEOPAR/NEMO-forcing/restarts/SalishSea_00741600_restart_trc_newVars2.nc
+#  restart.nc:
+#    link to: /data/tjarniko/MEOPAR/NEMO-forcing/restarts/SalishSea_00741600_restart.nc
+#  restart_trc.nc:
+#    link to: /data/tjarniko/MEOPAR/NEMO-forcing/restarts/SalishSea_00741600_restart_trc_newVars2.nc
 
 
 namelists:
