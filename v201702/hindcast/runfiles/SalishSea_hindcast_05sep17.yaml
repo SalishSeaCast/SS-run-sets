@@ -19,7 +19,7 @@ MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: 05sep17_hindcast
-walltime: 1:48:00
+walltime: 2:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
@@ -85,7 +85,7 @@ namelists:
   namelist_top_cfg:
     - ../namelist_top_cfg
   namelist_smelt_cfg:
-    - ../../namelist_smelt_cfg
+    - ../namelist_smelt_cfg
 
 output:
   # If relative, paths are taken from current directory
