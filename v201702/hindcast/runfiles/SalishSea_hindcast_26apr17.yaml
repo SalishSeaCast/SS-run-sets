@@ -83,7 +83,7 @@ namelists:
   namelist_top_cfg:
     - ../namelist_top_cfg_smelt
   namelist_smelt_cfg:
-    - ../../namelist_smelt_cfg
+    - ../namelist_smelt_cfg
 
 output:
   # If relative, paths are taken from current directory
