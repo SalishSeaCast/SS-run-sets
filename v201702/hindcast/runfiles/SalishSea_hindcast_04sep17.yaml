@@ -26,9 +26,9 @@ email: sallen@eos.ubc.ca
 paths:
   # If relative, paths are taken from current directory
   NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-  XIOS: /home/sallen/MEOPAR/XIOS2/
-  forcing: /home/sallen/MEOPAR/new_NEMO-forcing/
-  runs directory: /home/sallen/SalishSea/
+  XIOS: /home/sallen/MEOPAR/XIOS-2/
+  forcing: /home/sallen/MEOPAR/
+  runs directory: /global/scratch/sallen/SalishSea/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -47,7 +47,7 @@ forcing:
   LiveOcean:
     link to: /home/sallen/MEOPAR/LiveOcean/modified
   ssh:
-    link to: /home/sallen/MEOPAR/sshNeahBay
+    link to: /home/sallen/MEOPAR/sshNeahBay/obs
   rivers:
     link to: /home/sallen/MEOPAR/rivers/
   tides:
@@ -58,8 +58,8 @@ forcing:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /home/sallen/SalishSea/nowcast-green/03sep17/SalishSea_02393280_restart.nc
-  restart_trc.nc: /home/sallen/SalishSea/nowcast-green/03sep17/SalishSea_02393280_restart_trc.nc
+  restart.nc: /global/scratch/sallen/SalishSea/hindcast/03sep17/SalishSea_02393280_restart.nc
+  restart_trc.nc: /global/scratch/sallen/SalishSea/hindcast/03sep17/SalishSea_02393280_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -99,7 +99,7 @@ output:
 vcs revisions:
   hg: 
     - /home/sallen/MEOPAR/SS-run-sets
-    - /home/sallen/MEOPAR/new_NEMO-forcing/grid
-    - /home/sallen/MEOPAR/new_NEMO-forcing/rivers
-    - /home/sallen/MEOPAR/new_NEMO-forcing/tides
-    - /home/sallen/MEOPAR/new_NEMO-forcing/tracers
+    - /home/sallen/MEOPAR/grid
+    - /home/sallen/MEOPAR/rivers-climatology
+    - /home/sallen/MEOPAR/tides
+    - /home/sallen/MEOPAR/tracers
