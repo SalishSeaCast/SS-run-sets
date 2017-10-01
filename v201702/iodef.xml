@@ -112,6 +112,11 @@
      <!-- Tide Points Baynes Sound -->
      <grid id="BaynesSound_grid">             <domain domain_ref="BaynesSound"/>              </grid>
      <grid id="EastDenmanIsland_grid">        <domain domain_ref="EastDenmanIsland"/>         </grid>
+
+     <!-- Boundary Conditions for FVCOM -->
+     <grid id="FVCOM_grid_T">                 <domain domain_ref="FVCOM_T"/>                  </grid>
+     <grid id="FVCOM_grid_U">                 <domain domain_ref="FVCOM_U"/>                  </grid>
+     <grid id="FVCOM_grid_V">                 <domain domain_ref="FVCOM_V"/>                  </grid>
     </grid_definition>
 
   </context>
