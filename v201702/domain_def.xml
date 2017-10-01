@@ -50,6 +50,8 @@
       <!-- Tide Points Baynes Sound, not corrected for off-by-one, assumed correct-->
       <domain id="BaynesSound"             domain_ref="grid_T"> <zoom_domain ibegin="125" jbegin="605" ni="1"  nj="1"  /> </domain>
       <domain id="EastDenmanIsland"        domain_ref="grid_T"> <zoom_domain ibegin="136" jbegin="606" ni="1"  nj="1"  /> </domain>
+      <!-- Boundary Conditions for FVCOM -->
+      <domain id="FVCOM_T"                 domain_ref="grid_T"> <zoom_domain ibegin="225" jbegin="340" ni="144" nj="221" /> </domain>
    </domain_group>
 
    <domain_group id="grid_U">
@@ -64,6 +66,8 @@
       <domain id="CODAR_U"                 domain_ref="grid_U"> <zoom_domain ibegin="240" jbegin="380" ni="80" nj="80" /> </domain>
       <!-- Surface Slab -->
       <domain id="two_straits_U"           domain_ref="grid_U"> <zoom_domain ibegin="10"  jbegin="200" ni="355" nj="540" /> </domain>
+      <!-- Boundary Conditions for FVCOM -->
+      <domain id="FVCOM_U"                 domain_ref="grid_U"> <zoom_domain ibegin="225" jbegin="340" ni="144" nj="221" /> </domain>
    </domain_group>
 
    <domain_group id="grid_V">
@@ -78,6 +82,8 @@
       <domain id="CODAR_V"                 domain_ref="grid_V"> <zoom_domain ibegin="240" jbegin="380" ni="80" nj="80" /> </domain>
       <!-- Surface Slab -->
       <domain id="two_straits_V"           domain_ref="grid_V"> <zoom_domain ibegin="10"  jbegin="200" ni="355" nj="540" /> </domain>
+      <!-- Boundary Conditions for FVCOM -->
+      <domain id="FVCOM_V"                 domain_ref="grid_V"> <zoom_domain ibegin="225" jbegin="340" ni="144" nj="221" /> </domain>
    </domain_group>
 
    <domain_group id="grid_W">
