@@ -56,10 +56,6 @@ forcing:
   bfr_coef.nc:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
-restart:
-  restart.nc: /global/scratch/sallen/SalishSea/hindcast/16apr17/SalishSea_02110320_restart.nc
-  restart_trc.nc: /global/scratch/sallen/SalishSea/hindcast/16apr17/SalishSea_02110320_restart_trc.nc
-
 namelists:
   # The namelist section files in the lists below will be concatenated
   # to create a namelist file whose name is the key under which the files
@@ -71,8 +67,8 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist.time.26apr17_28apr17
-    - ../../namelist.domain
+    - ./namelist.time.26apr17_28apr17_init
+    - ../namelist.domain.init.26apr17
     - ../../namelist.light
     - ../namelist.atmos_rivers
     - ../namelist.lateral
@@ -82,7 +78,8 @@ namelists:
     - ../../namelist.vertical
     - ../../namelist.compute
   namelist_top_cfg:
-    - ../namelist_top_cfg
+    - ../../namelist_top_coldstart
+    - ../namelist_top_cfg_26apr17
   namelist_smelt_cfg:
     - ../namelist_smelt_cfg
 
