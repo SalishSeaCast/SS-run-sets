@@ -139,6 +139,15 @@
              <field field_ref="voce" name="vomecrty" grid_ref="VENUS_delta_gridded_grid_V"/>
              <field field_ref="woce" name="vovecrtz" grid_ref="VENUS_delta_gridded_grid_W"/>
         </file>
+        <file id="FVCOM_T" name="FVCOM_T" description="FVCOM boundary conditions, 10 minutes, ssh">
+	     <field field_ref="ssh" name="sossheig" grid_ref="FVCOM_grid_T"/>
+        </file>
+        <file id="FVCOM_U" name="FVCOM_U" description="FVCOM boundary conditions, 10 minutes, barotropic u">
+	     <field field_ref="ubar" name="ubarotropic" grid_ref="FVCOM_grid_U"/>
+        </file>
+        <file id="FVCOM_V" name="FVCOM_V" description="FVCOM boundary conditions, 10 minutes, barotropic v">
+	     <field field_ref="vbar" name="vbarotropic" grid_ref="FVCOM_grid_V"/>
+        </file>
 
       </file_group>
 
