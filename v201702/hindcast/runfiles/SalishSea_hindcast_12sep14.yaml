@@ -14,11 +14,11 @@ config_name: SMELT
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 12x22
+MPI decomposition: 4x9
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: hindcast-12sep14
-walltime: 01:42:00
+run_id: one
+walltime: 03:30:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 account: def-allen
