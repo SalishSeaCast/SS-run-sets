@@ -17,7 +17,7 @@ config_name: SMELT
 MPI decomposition: 15x32
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: eight
+run_id: eight_two
 walltime: 01:15:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
@@ -61,7 +61,7 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - ./namelist.time.12sep14
+    - ./namelist.time.1213sep14
     - ../../namelist.domain
     - ../../namelist.light
     - ../namelist.atmos_rivers
@@ -80,7 +80,7 @@ namelists:
 output:
   # If relative, paths are taken from current directory
   iodefs: ../../iodef.xml
-  filedefs: ../../file_def.xml
+  filedefs: ../file_def_comp_dailysplit.xml
   domaindefs: ../../domain_def.xml
   fielddefs: ../../field_def.xml
   separate XIOS server: True
