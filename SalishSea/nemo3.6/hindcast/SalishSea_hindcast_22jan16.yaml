@@ -18,7 +18,7 @@ MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: 22jan16_hindcast
-walltime: 18:30:00
+walltime: 19:30:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
@@ -51,8 +51,8 @@ forcing:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /home/sallen/SalishSea/hindcast/12jan16/SalishSea_01116720_restart.nc
-  restart_trc.nc: /home/sallen/SalishSea/hindcast/12jan16/SalishSea_01116720_restart_trc.nc
+  restart.nc: /global/scratch/sallen/SalishSea/hindcast/12jan16/SalishSea_01116720_restart.nc
+  restart_trc.nc: /global/scratch/sallen/SalishSea/hindcast/12jan16/SalishSea_01116720_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
