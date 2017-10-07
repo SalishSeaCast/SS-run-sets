@@ -65,7 +65,7 @@
   sn_prec = 'NEMO-ATMOS/ops',        1,                 'precip',    .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
   sn_snow = 'grid/no_snow',  -12,                 'snow',      .true.,       .true.,   'yearly',   'grid/weights-gem2.5-ops_201702.nc', ''
 
-   cn_dir      = 'my_atmos/'    !  root directory for the location of the bulk files
+   cn_dir      = './'    !  root directory for the location of the bulk files
    rn_zqt      = 2.               !  Air temperature and humidity reference height (m)
    rn_vfac     = 1.               !  new feature, lets use (0. for comparison, then switch to 1)
                                   !  multiplicative factor for ocean/ice velocity
@@ -83,7 +83,7 @@
   sn_t_rnf    = 'rivers-climatology/rivers_ConsTemp_month',  -1,                'rotemper', .true.,        .true.,  'yearly',   '',        ''
   sn_dep_rnf  = 'rivers-climatology/rivers_month_201702',    -1,                'rodepth' , .true.,        .true.,  'yearly',   '',        ''
 
-  cn_dir       = 'my_rivers/'  !  root directory for the location of the runoff files
+  cn_dir       = './'  !  root directory for the location of the runoff files
   ln_rnf_mouth = .false.    !  specific treatment at rivers mouths
   ln_rnf_depth = .true.     !  read in depth information for runoff
   ln_rnf_tem   = .true.     !  read in temperature information for runoff
@@ -97,7 +97,7 @@
 !         !                !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename               ! pairing  !
   sn_apr  = 'NEMO-ATMOS/ops',                 1,           'atmpres',   .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
 
-  cn_dir      = 'my_atmos/'  !  root directory for the location of the bulk files
+  cn_dir      = './'  !  root directory for the location of the bulk files
   ln_apr_obc  = .false.        !  inverse barometer added to OBC ssh data
 &end
 
