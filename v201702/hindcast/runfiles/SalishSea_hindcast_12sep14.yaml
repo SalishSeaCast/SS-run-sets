@@ -40,9 +40,6 @@ forcing:
   # If relative, paths are taken from forcing path above
   NEMO-atmos:
     link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
-    check link:
-      type: atmospheric
-      namelist filename: namelist_cfg
   rivers:
     link to: $PROJECT/SalishSea/forcing/rivers
   ssh:
