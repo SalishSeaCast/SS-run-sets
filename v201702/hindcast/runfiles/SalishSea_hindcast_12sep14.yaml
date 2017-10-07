@@ -38,12 +38,19 @@ grid:
 
 forcing:
   # If relative, paths are taken from forcing path above
-  my_atmos:
-    link to: $PROJECT/$USER/MEOPAR/my_atmos
-  my_rivers:
-    link to: $PROJECT//$USER/MEOPAR/my_rivers
+  NEMO-atmos:
+    link to: $PROJECT/SalishSea/forcing/GEM2.5/ops/NEMO-atmos
+    check link:
+      type: atmospheric
+      namelist filename: namelist_cfg
+  rivers:
+    link to: $PROJECT//$USER/MEOPAR/rivers
   ssh:
     link to: $PROJECT/SalishSea/forcing/sshNeahBay/hindcast
+  grid:
+    link to: $PROJECT/$USER/MEOPAR/grid
+  rivers-climatology:
+    link to  $PROJECT/$USER/MEOPAR/rivers-climatology
   tides:
     link to: $PROJECT/$USER/MEOPAR/tides
   tracers:
