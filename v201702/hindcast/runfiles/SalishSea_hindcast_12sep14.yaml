@@ -44,7 +44,7 @@ forcing:
       type: atmospheric
       namelist filename: namelist_cfg
   rivers:
-    link to: $PROJECT//$USER/MEOPAR/rivers
+    link to: $PROJECT/SalishSea/forcing/rivers
   ssh:
     link to: $PROJECT/SalishSea/forcing/sshNeahBay/hindcast
   grid:
