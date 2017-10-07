@@ -24,20 +24,16 @@ email: sallen@eos.ubc.ca
 
 paths:
   # If relative, paths are taken from current directory
-  NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-  XIOS: /home/sallen/MEOPAR/XIOS-2/
-  forcing: /home/sallen/MEOPAR/new_NEMO-forcing/
-  runs directory: /global/scratch/sallen/SalishSea/
+  NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $HOME/MEOPAR/XIOS-2/
+  runs directory: /global/scratch/$USER/SalishSea/
 
 grid:
-  # If relative, paths are taken from the grid/ directory in the forcing
-  # path above
-  coordinates: /home/sallen/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
-  bathymetry: /home/sallen/MEOPAR/grid/bathymetry_201702.nc
-  land processor elimination: /home/sallen/MEOPAR/grid/bathymetry_201702.csv
+  coordinates: $HOME/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  bathymetry: $HOME/MEOPAR/grid/bathymetry_201702b.nc
+  land processor elimination: $HOME/MEOPAR/grid/bathymetry_201702.csv
 
 forcing:
-  # If relative, paths are taken from forcing path above
   NEMO-atmos:
     link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos
     check link:
@@ -45,16 +41,20 @@ forcing:
       namelist filename: namelist_cfg
   LiveOcean:
     link to: /home/sallen/MEOPAR/LiveOcean/modified
+  grid:
+    link to: $HOME/MEOPAR/grid
   rivers:
     link to: /home/sallen/MEOPAR/rivers
   ssh:
     link to: /home/sallen/MEOPAR/sshNeahBay/obs
   tides:
-    link to: /home/sallen/MEOPAR/tides
+    link to: $HOME/MEOPAR/tides
   tracers:
-    link to: /home/sallen/MEOPAR/tracers
+    link to: $HOME/MEOPAR/tracers
+  rivers-climatology:
+    link to: $HOME/MEOPAR/rivers-climatology
   bfr_coef.nc:
-    link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
+    link to: $HOME/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -68,7 +68,7 @@ namelists:
 
   namelist_cfg:
     - ./namelist.time.26apr17_28apr17_init
-    - ../namelist.domain.init.26apr17
+    - ../namelist.domain.init_26apr17
     - ../../namelist.light
     - ../namelist.atmos_rivers
     - ../namelist.lateral
@@ -94,11 +94,11 @@ output:
 
 vcs revisions:
   hg: 
-    - /home/sallen/MEOPAR/SS-run-sets
+    - $HOME/MEOPAR/SS-run-sets
     - $HOME/MEOPAR/NEMO-Cmd
     - $HOME/MEOPAR/SalishSeaCmd
     - $HOME/MEOPAR/XIOS-ARCH
-    - /home/sallen/MEOPAR/grid
-    - /home/sallen/MEOPAR/rivers-climatology
-    - /home/sallen/MEOPAR/tides
-    - /home/sallen/MEOPAR/tracers
+    - $HOME/MEOPAR/grid
+    - $HOME/MEOPAR/rivers-climatology
+    - $HOME/MEOPAR/tides
+    - $HOME/MEOPAR/tracers
