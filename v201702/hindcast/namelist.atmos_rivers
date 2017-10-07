@@ -56,13 +56,13 @@
 !-----------------------------------------------------------------------
 !         !  file name  ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                ! rotation !
 !         !             !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename               ! pairing  !
-  sn_wndi = 'NEMO-ATMOS/ops',        1,                 'u_wind',    .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', 'Uwnd'
-  sn_wndj = 'NEMO-ATMOS/ops',        1,                 'v_wind',    .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', 'Vwnd'
-  sn_qsr  = 'NEMO-ATMOS/ops',        1,                 'solar',     .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
-  sn_qlw  = 'NEMO-ATMOS/ops',        1,                 'therm_rad', .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
-  sn_tair = 'NEMO-ATMOS/ops',        1,                 'tair',      .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
-  sn_humi = 'NEMO-ATMOS/ops',        1,                 'qair',      .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
-  sn_prec = 'NEMO-ATMOS/ops',        1,                 'precip',    .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
+  sn_wndi = 'NEMO-atmos/ops',        1,                 'u_wind',    .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', 'Uwnd'
+  sn_wndj = 'NEMO-atmos/ops',        1,                 'v_wind',    .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', 'Vwnd'
+  sn_qsr  = 'NEMO-atmos/ops',        1,                 'solar',     .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
+  sn_qlw  = 'NEMO-atmos/ops',        1,                 'therm_rad', .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
+  sn_tair = 'NEMO-atmos/ops',        1,                 'tair',      .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
+  sn_humi = 'NEMO-atmos/ops',        1,                 'qair',      .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
+  sn_prec = 'NEMO-atmos/ops',        1,                 'precip',    .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
   sn_snow = 'grid/no_snow',  -12,                 'snow',      .true.,       .true.,   'yearly',   'grid/weights-gem2.5-ops_201702.nc', ''
 
    cn_dir      = './'    !  root directory for the location of the bulk files
@@ -95,7 +95,7 @@
 !-----------------------------------------------------------------------
 !         !  file name     ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                ! rotation !
 !         !                !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename               ! pairing  !
-  sn_apr  = 'NEMO-ATMOS/ops',                 1,           'atmpres',   .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
+  sn_apr  = 'NEMO-atmos/ops',                 1,           'atmpres',   .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
 
   cn_dir      = './'  !  root directory for the location of the bulk files
   ln_apr_obc  = .false.        !  inverse barometer added to OBC ssh data
