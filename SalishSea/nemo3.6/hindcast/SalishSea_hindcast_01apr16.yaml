@@ -18,7 +18,7 @@ MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: 01apr16_hindcast
-walltime: 18:00:00
+walltime: 20:30:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: sallen@eos.ubc.ca
 
@@ -27,7 +27,7 @@ paths:
   NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /home/sallen/MEOPAR/XIOS2/
   forcing: /home/sallen/MEOPAR/NEMO-forcing/
-  runs directory: /home/sallen/MEOPAR/SalishSea/
+  runs directory: /global/scratch/sallen/SalishSea/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -51,8 +51,8 @@ forcing:
     link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /home/sallen/MEOPAR/SalishSea/hindcast/22mar16/SalishSea_01267920_restart.nc
-  restart_trc.nc: /home/sallen/MEOPAR/SalishSea/hindcast/22mar16/SalishSea_01267920_restart_trc.nc
+  restart.nc: /global/scratch/sallen/SalishSea/hindcast/22mar16/SalishSea_01267920_restart.nc
+  restart_trc.nc: /global/scratch/sallen/SalishSea/hindcast/22mar16/SalishSea_01267920_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -82,7 +82,7 @@ namelists:
 output:
   # If relative, paths are taken from current directory
   iodefs: iodef_xios2.xml
-  filedefs: file_def_xios2_dailysplit.xml
+  filedefs: file_def_xios2_dailysplit_noslab.xml
   domaindefs: domain_def_xios2.xml
   fielddefs: field_def.xml
   separate XIOS server: True
