@@ -47,7 +47,7 @@ forcing:
   grid:
     link to: $PROJECT/$USER/MEOPAR/grid
   initial_data_file.nc:
-    link to: $PROJECT/$USER/MEOPAR/tracers/Bathy201702_initial.nc
+    link to: $PROJECT/$USER/MEOPAR/tracers/initial/Bathy201702_initial.nc
   rivers-climatology:
     link to: $PROJECT/$USER/MEOPAR/rivers-climatology
   tides:
