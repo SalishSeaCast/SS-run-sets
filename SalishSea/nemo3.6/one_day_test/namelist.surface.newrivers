@@ -66,7 +66,7 @@
   sn_prec = 'ops',        1,                 'precip',    .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', ''
   sn_snow = 'no_snow',  -12,                 'snow',      .true.,       .true.,   'yearly',   'weights-gem2.5-ops_201702.nc', ''
 
-   cn_dir      = 'NEMO-atmos/'    !  root directory for the location of the bulk files
+   cn_dir      = './'    !  root directory for the location of the bulk files
    rn_zqt      = 2.               !  Air temperature and humidity reference height (m)
    rn_vfac     = 1.               !  new feature, lets use (0. for comparison, then switch to 1)
                                   !  multiplicative factor for ocean/ice velocity
