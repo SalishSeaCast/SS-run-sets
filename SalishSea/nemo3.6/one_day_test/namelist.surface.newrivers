@@ -64,7 +64,7 @@
   sn_tair = 'NEMO-atmos/ops',        1,                 'tair',      .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
   sn_humi = 'NEMO-atmos/ops',        1,                 'qair',      .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
   sn_prec = 'NEMO-atmos/ops',        1,                 'precip',    .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
-  sn_snow = 'grid/no_snow',  -12,                 'snow',      .true.,       .true.,   'yearly',   'weights-gem2.5-ops_201702.nc', ''
+  sn_snow = 'grid/no_snow',  -12,                 'snow',      .true.,       .true.,   'yearly',   'grid/weights-gem2.5-ops_201702.nc', ''
 
    cn_dir      = './'    !  root directory for the location of the bulk files
    rn_zqt      = 2.               !  Air temperature and humidity reference height (m)
