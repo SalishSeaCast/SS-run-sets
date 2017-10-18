@@ -51,6 +51,8 @@ forcing:
     link to: /data/tjarniko/MEOPAR/NEMO-forcing/rivers/
   bfr_coef.nc:
     link to: /data/tjarniko/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: /data/tjarniko/MEOPAR/NEMO-forcing/grid/
 #  restart.nc:
 #    link to: /data/tjarniko/MEOPAR/NEMO-forcing/restarts/SalishSea_00741600_restart.nc
 #  restart_trc.nc:
