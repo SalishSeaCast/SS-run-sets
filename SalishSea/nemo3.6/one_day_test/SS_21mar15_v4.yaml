@@ -91,7 +91,7 @@ output:
   iodefs: ../hindcast/iodef_xios2.xml
   filedefs: ../hindcast/file_def_xios2.xml
   domaindefs: ../hindcast/domain_def_xios2.xml
-  fielddefs: ../hindcast/field_def.xml
+  fielddefs: ./field_def.xml
   separate XIOS server: True
   XIOS servers: 1
 
