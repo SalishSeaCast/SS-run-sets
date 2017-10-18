@@ -105,7 +105,7 @@
 !-----------------------------------------------------------------------
 !         !  file name     ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                ! rotation !
 !         !                !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename               ! pairing  !
-  sn_apr  = 'ops',                 1,           'atmpres',   .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', ''
+  sn_apr  = 'NEMO-atmos/ops',                 1,           'atmpres',   .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
 
   cn_dir      = './'  !  root directory for the location of the bulk files
 
