@@ -57,14 +57,14 @@
 !-----------------------------------------------------------------------
 !         !  file name             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                                                   ! rotation !
 !         !                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename                                                  ! pairing  !
-  sn_wndi = 'NEMO-atmos/ops',        1,                 'u_wind',    .true.,       .false.,  'daily',    'grid/subgrids/HaroStrait/weights-gem2.5-ops_201702_HS.nc', 'Uwnd'
-  sn_wndj = 'NEMO-atmos/ops',        1,                 'v_wind',    .true.,       .false.,  'daily',    'grid/subgrids/HaroStrait/weights-gem2.5-ops_201702_HS.nc', 'Vwnd'
-  sn_qsr  = 'NEMO-atmos/ops',        1,                 'solar',     .true.,       .false.,  'daily',    'grid/subgrids/HaroStrait/weights-gem2.5-ops_201702_HS.nc', ''
-  sn_qlw  = 'NEMO-atmos/ops',        1,                 'therm_rad', .true.,       .false.,  'daily',    'grid/subgrids/HaroStrait/weights-gem2.5-ops_201702_HS.nc', ''
-  sn_tair = 'NEMO-atmos/ops',        1,                 'tair',      .true.,       .false.,  'daily',    'grid/subgrids/HaroStrait/weights-gem2.5-ops_201702_HS.nc', ''
-  sn_humi = 'NEMO-atmos/ops',        1,                 'qair',      .true.,       .false.,  'daily',    'grid/subgrids/HaroStrait/weights-gem2.5-ops_201702_HS.nc', ''
-  sn_prec = 'NEMO-atmos/ops',        1,                 'precip',    .true.,       .false.,  'daily',    'grid/subgrids/HaroStrait/weights-gem2.5-ops_201702_HS.nc', ''
-  sn_snow = 'NEMO-atmos/no_snow',  -12,                 'snow',      .true.,       .true.,   'yearly',   'grid/subgrids/HaroStrait/weights-gem2.5-ops_201702_HS.nc', ''
+  sn_wndi = 'NEMO-atmos/ops',        1,                 'u_wind',    .true.,       .false.,  'daily',    'HS_grid/weights-gem2.5-ops_201702_HS.nc', 'Uwnd'
+  sn_wndj = 'NEMO-atmos/ops',        1,                 'v_wind',    .true.,       .false.,  'daily',    'HS_grid/weights-gem2.5-ops_201702_HS.nc', 'Vwnd'
+  sn_qsr  = 'NEMO-atmos/ops',        1,                 'solar',     .true.,       .false.,  'daily',    'HS_grid/weights-gem2.5-ops_201702_HS.nc', ''
+  sn_qlw  = 'NEMO-atmos/ops',        1,                 'therm_rad', .true.,       .false.,  'daily',    'HS_grid/weights-gem2.5-ops_201702_HS.nc', ''
+  sn_tair = 'NEMO-atmos/ops',        1,                 'tair',      .true.,       .false.,  'daily',    'HS_grid/weights-gem2.5-ops_201702_HS.nc', ''
+  sn_humi = 'NEMO-atmos/ops',        1,                 'qair',      .true.,       .false.,  'daily',    'HS_grid/weights-gem2.5-ops_201702_HS.nc', ''
+  sn_prec = 'NEMO-atmos/ops',        1,                 'precip',    .true.,       .false.,  'daily',    'HS_grid/weights-gem2.5-ops_201702_HS.nc', ''
+  sn_snow = 'grid/no_snow',        -12,                 'snow',      .true.,       .true.,   'yearly',   'HS_grid/weights-gem2.5-ops_201702_HS.nc', ''
 
    cn_dir      = './'  !  root directory for the location of the bulk files
    rn_zqt      = 2.    !  Air temperature and humidity reference height (m)
@@ -78,7 +78,7 @@
 !-----------------------------------------------------------------------
 !         !  file name       ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                                                   ! rotation !
 !         !                  !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename                                                  ! pairing  !
-  sn_apr  = 'NEMO-atmos/ops',  1,                 'atmpres',   .true.,       .false.,  'daily',    'grid/subgrids/HaroStrait/weights-gem2.5-ops_201702_HS.nc', ''
+  sn_apr  = 'NEMO-atmos/ops',  1,                 'atmpres',   .true.,       .false.,  'daily',    'HS_grid/weights-gem2.5-ops_201702_HS.nc', ''
 
   cn_dir      = './'     !  root directory for the location of the bulk files
   ln_apr_obc  = .false.  !  inverse barometer added to OBC ssh data
@@ -89,13 +89,13 @@
 !-----------------------------------------------------------------------
 !             !  file name                 ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
 !             !                            !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
-  sn_rnf      = 'rivers_month_201702_HS',    -1,                'rorunoff',  .true.,       .true.,  'yearly',   '',        ''
+  sn_rnf      = 'HS_rivers-climatology/rivers_month_201702_HS',    -1,                'rorunoff',  .true.,       .true.,  'yearly',   '',        ''
   sn_cnf      = '',                          24,                'socoefr0',  .false.,      .true.,  'yearly',   '',        ''
   sn_s_rnf    = '',                          24,                'rosaline',  .false.,      .true.,  'yearly',   '',        ''
-  sn_t_rnf    = 'rivers_ConsTemp_month_HS',  -1,                'rotemper',  .true.,       .true.,  'yearly',   '',        ''
-  sn_dep_rnf  = 'rivers_month_201702_HS',    -1,                'rodepth' ,  .true.,       .true.,  'yearly',   '',        ''
+  sn_t_rnf    = 'HS_rivers-climatology/rivers_ConsTemp_month_HS',  -1,                'rotemper',  .true.,       .true.,  'yearly',   '',        ''
+  sn_dep_rnf  = 'HS_rivers-climatology/rivers_month_201702_HS',    -1,                'rodepth' ,  .true.,       .true.,  'yearly',   '',        ''
 
-  cn_dir       = 'HS_rivers-climatology/'  !  root directory for the location of the runoff files
+  cn_dir       = './'  !  root directory for the location of the runoff files
   ln_rnf_mouth = .false.                   !  specific treatment at rivers mouths
   ln_rnf_depth = .true.                    !  read in depth information for runoff
   ln_rnf_tem   = .true.                    !  read in temperature information for runoff
