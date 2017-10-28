@@ -1,0 +1,70 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! PISCES  (key_pisces) cfg namelist (see below for key_pisces_reduced)
+!!              1  - air-sea exchange                         (nampisext)
+!!              2  - biological parameters                    (nampisbio)
+!!              3  - parameters for nutrient limitations      (nampislim)    
+!!              4  - parameters for phytoplankton             (nampisprod,nampismort)
+!!              5  - parameters for zooplankton               (nampismes,nampiszoo)
+!!              6  - parameters for remineralization          (nampisrem)
+!!              7  - parameters for calcite chemistry         (nampiscal)
+!!              8  - parameters for inputs deposition         (nampissed)
+!!              9  - parameters for Kriest parameterization   (nampiskrp, nampiskrs)
+!!              10 - additional 2D/3D  diagnostics            (nampisdia)
+!!              11 - Damping                                  (nampisdmp)
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisbio     !   biological parameters
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisriv
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   wd1_1 = 0.8  ! sinking velocities, m/d
+   wd2_1 = 3.0
+   tur1_1 = 5.0 ! turbidities NTU 
+   tur2_1 = 20.0
+   wd1_2 = 0.9
+   wd2_2 = 3.0
+   tur1_2 = 5.0
+   tur2_2 = 20.0
+   wd1_3 = 1.0
+   wd2_3 = 3.0
+   tur1_3 = 5.0
+   tur2_3 = 20.0
+   wd1_4 = 1.1
+   wd2_4 = 3.0
+   tur1_4 = 5.0
+   tur2_4 =20.0
+   wd1_5 = 0.8
+   wd2_5 = 2.0
+   tur1_5 = 5.0
+   tur2_5 = 20.0
+   wd1_6 = 0.9
+   wd2_6 = 2.0
+   tur1_6 = 5.0
+   tur2_6 = 20.0
+   wd1_7 = 1.0
+   wd2_7 = 2.0
+   tur1_7 = 5.0
+   tur2_7 = 20.0
+   wd1_8 = 0.8
+   wd2_8 = 5.0
+   tur1_8 = 5.0
+   tur2_8 = 20.0
+   wd1_9 = 0.9
+   wd2_9 = 5.0
+   tur1_9 = 5.0
+   tur2_9 = 20.0
+   wd1_10 = 1.0
+   wd2_10 = 5.0
+   tur1_10 = 5.0
+   tur2_10 = 20.0
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampissbc
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!              !  file name          ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !                     !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename       !
+   sn_turb  ='river_turb/riverTurbDaily2',       24,           'turb',       .true., .false.,  'daily',    '',        '',        ''
+   cn_dir      = 'rivers/'  ! root directory for the location of the runoff files
+/
