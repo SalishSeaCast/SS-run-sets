@@ -68,7 +68,7 @@ namelists:
     - ./namelist.time.06jan17
     - ./namelist.domain
     - ./namelist.surface.newrivers
-    - ./namelist.lateral.hindcast
+    - ./namelist.lateral
     - ./namelist.bottom.jetty.a14
     - ./namelist.tracer.1
     - ./namelist.dynamics
