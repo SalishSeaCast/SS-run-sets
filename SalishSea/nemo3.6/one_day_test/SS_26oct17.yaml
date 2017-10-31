@@ -29,9 +29,9 @@ forcing:
   bfr_coef.nc:
     link to: /data/$USER/MEOPAR/grid/jetty_mask_bathy201702.nc
 
-restart:
-  restart.nc: /results/SalishSea/nowcast-green/25oct17/SalishSea_02505600_restart.nc
-  restart_trc.nc: /results/SalishSea/nowcast-green/25oct17/SalishSea_02505600_restart_trc.nc
+#restart:
+#  restart.nc: /results/SalishSea/nowcast-green/25oct17/SalishSea_02505600_restart.nc
+#  restart_trc.nc: /results/SalishSea/nowcast-green/25oct17/SalishSea_02505600_restart_trc.nc
 
 namelists:
   namelist_cfg:
