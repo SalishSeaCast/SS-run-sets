@@ -42,7 +42,7 @@ namtrc_run     !   run information
    sn_tracer(11) = 'TRA     ' , 'River Tracer                           ',  'mol-C/L' ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(12) = 'DIC     ' , 'Dissolved Inorganic Carbon               ',  'mol-C/L' ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(13) = 'TA     ' , 'Total Alkalinity                     ',  'mol-C/L' ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
-   ln_trcdta = .false.
+   ln_trcdta = .true.
    ln_trcdmp = .false.
    /
 !-----------------------------------------------------------------------
@@ -62,8 +62,8 @@ namtrc_run     !   run information
    sn_trcdta(9)  = 'initial_data_file.nc'    ,        -12        ,  'TRNPON'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(10) = 'initial_data_file.nc'    ,        -12        ,  'TRNbSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(11) = 'initial_data_file.nc'    ,        -12        ,  'TRNbSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-sn_trcdta(12) = 'initial_data_file.nc'    ,        -12        ,  'TRNNO3'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-sn_trcdta(13) = 'initial_data_file.nc'    ,        -12        ,  'TRNNO3'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+  sn_trcdta(12) = 'initial_data_file.nc'    ,        -12        ,  'TRNNO3'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+  sn_trcdta(13) = 'initial_data_file.nc'    ,        -12        ,  'TRNNO3'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    rn_trfac(1)   =  1.0  !  -      -      -     -
    rn_trfac(2)   =  1.0  !  -      -      -     -
    rn_trfac(3)   =  1.0  !  multiplicative factor
