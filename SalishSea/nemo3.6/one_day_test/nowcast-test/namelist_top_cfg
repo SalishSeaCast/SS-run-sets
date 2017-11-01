@@ -9,7 +9,16 @@
 !!               - dynamical tracer trends               (namtrc_trd)
 !!               - tracer output diagonstics             (namtrc_dia)
 !>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
+&namtrc_run     !   run information
+!-----------------------------------------------------------------------
+   nn_dttrc      =  1        !  time step frequency for passive sn_tracers
+   nn_writetrc   =  1      !  time step frequency for sn_tracer outputs
+   ln_top_euler  = .false.    !  use Euler time-stepping for TOP
+   ln_rsttr      = .false.   !  start from a restart file (T) or not (F)
+   nn_rsttr      =   1       !  restart control = 0 initial time step is not compared to the restart file value
+                           !                  = 1 do not use the value in the restart file
+                           !                  = 2 calendar parameters read in the restart file
+/
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &namtrc     !   tracers definition
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
