@@ -1,0 +1,104 @@
+# salishsea command processor for hindcast
+#
+# Salish Sea v201702 bathymetry
+#     Tidal forcing
+#     Salinity and Temperate at Both open boundaries
+#  Rivers run-off forcing, Fraser real-time
+#  Atmospheric forcing with operational GEM2.5 model products
+#    Constrained to no solid precipitation
+#  SMELT biological model
+
+config_name: SMELT
+
+# How is the domain to be distributed over the processors in the
+# i (longitude) and j (latitude) directions?
+# These values are used to set the nammpp namelist jpni & jpnj values
+# and to set the number of processors and nodes in the PBS script
+MPI decomposition: 12x22
+
+# For runs on systems that use qsub/PBS/TORQUE
+run_id: 26apr17_28apr17
+walltime: 6:00:00
+# If missing, email address is set to ${USER}@eos.ubc.ca
+email: sallen@eos.ubc.ca
+
+paths:
+  # If relative, paths are taken from current directory
+  NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $HOME/MEOPAR/XIOS-2/
+  runs directory: /global/scratch/$USER/SalishSea/
+
+grid:
+  coordinates: $HOME/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  bathymetry: $HOME/MEOPAR/grid/bathymetry_201702b.nc
+  land processor elimination: $HOME/MEOPAR/grid/bathymetry_201702.csv
+
+forcing:
+  NEMO-atmos:
+    link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos
+    check link:
+      type: atmospheric
+      namelist filename: namelist_cfg
+  LiveOcean:
+    link to: /home/sallen/MEOPAR/LiveOcean/modified
+  grid:
+    link to: $HOME/MEOPAR/grid
+  rivers:
+    link to: /home/sallen/MEOPAR/rivers
+  ssh:
+    link to: /home/sallen/MEOPAR/sshNeahBay/obs
+  tides:
+    link to: $HOME/MEOPAR/tides
+  tracers:
+    link to: $HOME/MEOPAR/tracers
+  rivers-climatology:
+    link to: $HOME/MEOPAR/rivers-climatology
+  bfr_coef.nc:
+    link to: $HOME/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
+
+namelists:
+  # The namelist section files in the lists below will be concatenated
+  # to create a namelist file whose name is the key under which the files
+  # are listed. The keys are the names of the namelist files that NEMO-3.6
+  # expects.
+  #
+  # The only required key is namelist_cfg.
+  #
+  # If relative, paths are taken from current directory
+
+  namelist_cfg:
+    - ./namelist.time.26apr17_28apr17_init
+    - ../namelist.domain.init_26apr17
+    - ../../namelist.light
+    - ../namelist.atmos_rivers
+    - ../namelist.lateral
+    - ../../namelist.bottom
+    - ../../namelist.tracer
+    - ../../namelist.dynamics
+    - ../../namelist.vertical
+    - ../../namelist.compute
+  namelist_top_cfg:
+    - ../../namelist_top_coldstart
+    - ../namelist_top_cfg_26apr17
+  namelist_smelt_cfg:
+    - ../namelist_smelt_cfg
+
+output:
+  # If relative, paths are taken from current directory
+  iodefs: ../../iodef.xml
+  filedefs: ../file_def_xios2_dailysplit.xml
+  domaindefs: ../../domain_def.xml
+  fielddefs: ../../field_def.xml
+  separate XIOS server: True
+  XIOS servers: 3
+
+vcs revisions:
+  hg: 
+    - $HOME/MEOPAR/SS-run-sets
+    - $HOME/MEOPAR/NEMO-Cmd
+    - $HOME/MEOPAR/SalishSeaCmd
+    - $HOME/MEOPAR/XIOS-ARCH
+    - $HOME/MEOPAR/grid
+    - $HOME/MEOPAR/rivers-climatology
+    - $HOME/MEOPAR/tides
+    - $HOME/MEOPAR/tracers

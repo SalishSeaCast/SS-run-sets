@@ -1,0 +1,110 @@
+&namlbc        !   lateral momentum boundary condition
+!-----------------------------------------------------------------------
+   rn_shlat    = 0.2     !  shlat = 0  !  0 < shlat < 2  !  shlat = 2  !  2 < shlat
+                         !  free slip  !   partial slip  !   no slip   ! strong slip
+&end
+
+
+&namcla        !   cross land advection new? might be cool for Active Pass etc
+!-----------------------------------------------------------------------
+&end
+
+
+&nam_tide      !   tide parameters (#ifdef key_tide)   see NEMO-3.6-code/NEMOGCM/NEMO/OPA_SRC/SBC/tideini.F90
+! Tidal parameters that we use to have to input are in OPA_SRC/SBC/tide.h90
+!-----------------------------------------------------------------------
+   ln_tide_pot   = .false.   !  use tidal potential forcing
+   rdttideramp   =    0.    !
+   clname(1)     =   'M2'   !  name of constituent
+   clname(2)     =   'S2'
+   clname(3)     =   'N2'
+   clname(4)     =   'K1'
+   clname(5)     =   'O1'
+   clname(6)     =   'Q1'
+   clname(7)     =   'K2'
+   clname(8)     =   'P1'
+&end
+
+
+&nambdy        !  unstructured open boundaries                          ("key_bdy")
+!-----------------------------------------------------------------------
+    nb_bdy         = 2                     !  number of open boundary sets According to merge namelist, only 1
+    ln_coords_file = .false., .false.      !  =T : read bdy coordinates from file
+    cn_dyn2d       = 'flather', 'flather'            !
+    nn_dyn2d_dta   =  2, 2                 !  = 0, bdy data are equal to the initial state
+                                           !  = 1, bdy data are read in 'bdydata   .nc' files
+                                           !  = 2, use tidal harmonic forcing data from files
+                                           !  = 3, use external data AND tidal harmonic forcing
+    cn_dyn3d      =  'none', 'none'
+    nn_dyn3d_dta  =  0, 0                  !  = 0, bdy data are equal to the initial state
+                                           !  = 1, bdy data are read in 'bdydata   .nc' files
+    cn_tra        =  'frs','frs'           !
+    nn_tra_dta    =  1, 1                  !  = 0, bdy data are equal to the initial state
+                                           !  = 1, bdy data are read in 'bdydata   .nc' files
+    nn_rimwidth   = 10, 10
+&end
+
+
+&nambdy_index ! open boundaries - definition ("key_bdy")
+!-----------------------------------------------------------------------
+    ctypebdy = 'W'
+    nbdyind   = 2     ! i-index for segment
+    nbdybeg   = 385   ! j-index for segment beginning
+    nbdyend   = 471   ! j-index for segment end
+&end
+
+
+&nambdy_dta      !  open boundaries - external data           ("key_bdy")
+!-----------------------------------------------------------------------
+!        !  file name             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
+!        !                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
+  bn_ssh = 'SS2_SSH_climatology',              -1,                'sossheig', .true.,        .true.,  'yearly',    '',        ''
+  bn_u2d = 'SS2_SSH_climatology',              -1,                'vobtcrtx', .true.,        .true.,  'yearly',    '',        ''
+  bn_v2d = 'SS2_SSH_climatology',              -1,                'vobtcrty', .true.,        .true.,  'yearly',    '',        ''
+  bn_u3d = '',                      24,                'vozocrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v3d = '',                      24,                'vomecrty', .true.,        .false.,  'daily',    '',        ''
+  bn_tem = 'LO',                    1,                'votemper', .true.,        .false.,   'daily',   '',        ''
+  bn_sal = 'LO',                    1,                'vosaline', .true.,        .false.,   'daily',   '',        ''
+
+  cn_dir = 'open_boundaries/west/'
+&end
+
+&nambdy_tide     ! tidal forcing at open boundaries
+!-----------------------------------------------------------------------
+   filtide          = 'open_boundaries/west/tides/SalishSea2_TS4_west_tide_'
+   ln_bdytide_2ddta = .false.
+   ln_bdytide_conj  = .false.
+&end
+
+
+&nambdy_index ! open boundaries - definition ("key_bdy")
+!-----------------------------------------------------------------------
+    ctypebdy  = 'N'
+    nbdyind   = 896  ! i-index for segment
+    nbdybeg   = 33   ! j-index for segment beginning
+    nbdyend   = 62   ! j-index for segment end
+&end
+
+
+&nambdy_dta      !  open boundaries - external data           ("key_bdy")
+!-----------------------------------------------------------------------
+!        !  file name             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
+!        !                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
+  bn_ssh = 'ssh/sshNorth',	           1,               'sossheig', .true.,        .false.,  'monthly',  '',        ''
+  bn_u2d = 'ssh/sshNorth',	           1,               'vobtcrtx', .true.,        .false.,  'monthly',  '',        ''
+  bn_v2d = 'ssh/sshNorth',	           1,               'vobtcrty', .true.,        .false.,  'monthly',  '',        ''
+  bn_u3d = '',                        24,               'vozocrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v3d = '',                        24,               'vomecrty', .true.,        .false.,  'daily',    '',        ''
+  bn_tem = 'SalishSea2_North_tra',  4380,               'votemper', .true.,        .true.,   'yearly',   '',        ''
+  bn_sal = 'SalishSea2_North_tra',  4380,               'vosaline', .true.,        .true.,   'yearly',   '',        ''
+
+  cn_dir = 'open_boundaries/north/'
+  ln_full_vel = .false.
+&end
+
+&nambdy_tide     ! tidal forcing at open boundaries
+!-----------------------------------------------------------------------
+   filtide          = 'open_boundaries/north/tides/SalishSea2_TS4_North_tide_'
+   ln_bdytide_2ddta = .false.
+   ln_bdytide_conj  = .false.
+&end

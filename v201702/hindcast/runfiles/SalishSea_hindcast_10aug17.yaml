@@ -1,0 +1,94 @@
+# salishsea command processor for hindcast
+#
+# Salish Sea v201702 bathymetry
+#     Tidal forcing
+#     Salinity and Temperate at Both open boundaries
+#     Live ocean at west
+#  Rivers run-off forcing, Fraser real-time
+#  Atmospheric forcing with operational GEM2.5 model products
+#    Constrained to no solid precipitation
+#  SMELT biological model
+
+config_name: SMELT
+
+# How is the domain to be distributed over the processors in the
+# i (longitude) and j (latitude) directions?
+# These values are used to set the nammpp namelist jpni & jpnj values
+# and to set the number of processors and nodes in the PBS script
+MPI decomposition: 12x22
+
+# For runs on systems that use qsub/PBS/TORQUE
+run_id: 10aug17_hindcast
+walltime: 1:48:00
+# If missing, email address is set to ${USER}@eos.ubc.ca
+email: sallen@eos.ubc.ca
+
+paths:
+  # If relative, paths are taken from current directory
+  NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: /home/sallen/MEOPAR/XIOS2/
+  forcing: /home/sallen/MEOPAR/NEMO-forcing/
+  runs directory: /home/sallen/SalishSea/
+
+grid:
+  # If relative, paths are taken from the grid/ directory in the forcing
+  # path above
+  coordinates: coordinates_seagrid_SalishSea201702.nc
+  bathymetry: bathymetry_201702.nc
+  land processor elimination: bathymetry_201702.csv
+
+forcing:
+  # If relative, paths are taken from forcing path above
+  NEMO-atmos:
+    link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos
+    check link:
+      type: atmospheric
+      namelist filename: namelist_cfg
+  open_boundaries:
+    link to: open_boundaries
+  rivers:
+    link to: /home/sallen/MEOPAR/rivers
+  bfr_coef.nc:
+    link to: /home/sallen/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
+
+restart:
+  restart.nc: /home/sallen/SalishSea/hindcast/09aug17/SalishSea_02339280_restart.nc
+  restart_trc.nc: /home/sallen/SalishSea/hindcast/09aug17/SalishSea_02339280_restart_trc.nc
+
+namelists:
+  # The namelist section files in the lists below will be concatenated
+  # to create a namelist file whose name is the key under which the files
+  # are listed. The keys are the names of the namelist files that NEMO-3.6
+  # expects.
+  #
+  # The only required key is namelist_cfg.
+  #
+  # If relative, paths are taken from current directory
+
+  namelist_cfg:
+    - ./namelist.time.10aug17
+    - ../../namelist.domain
+    - ../namelist.surface
+    - ../namelist.lateral
+    - ../../namelist.bottom
+    - ../../namelist.tracer
+    - ../../namelist.dynamics
+    - ../../namelist.vertical
+    - ../../namelist.compute
+  namelist_top_cfg:
+    - ../namelist_top_cfg_smelt_LO
+  namelist_smelt_cfg:
+    - ../../namelist_smelt_cfg
+
+output:
+  # If relative, paths are taken from current directory
+  iodefs: ../../iodef_xios2.xml
+  filedefs: ../../file_def_xios2.xml
+  domaindefs: ../../domain_def_xios2.xml
+  fielddefs: ../../field_def.xml
+  separate XIOS server: True
+  XIOS servers: 3
+
+vcs revisions:
+  hg: 
+    - /home/sallen/MEOPAR/SS-run-sets
