@@ -1,5 +1,5 @@
 run_id: 26oct17nowcast-dev
-config_name: SMELT_c4
+config_name: SMELT
 MPI decomposition: 1x7
 walltime: 06:00:00
 

@@ -15,7 +15,7 @@
    nn_writetrc   =  1      !  time step frequency for sn_tracer outputs
    ln_top_euler  = .false.    !  use Euler time-stepping for TOP
    ln_rsttr      = .false.   !  start from a restart file (T) or not (F)
-   nn_rsttr      =   0       !  restart control = 0 initial time step is not compared to the restart file value
+   nn_rsttr      =  0       !  restart control = 0 initial time step is not compared to the restart file value
                            !                  = 1 do not use the value in the restart file
                            !                  = 2 calendar parameters read in the restart file
 /
@@ -36,8 +36,7 @@
    sn_tracer(9)  = 'PON     ' , 'Small organic carbon Concentration     ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(10) = 'bSi     ' , 'biogenic Silicate Concentration        ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(11) = 'TRA     ' , 'River Tracer                           ',  'mol-C/L' ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(12) = 'DIC     ' , 'Dissolved Inorganic Carbon               ',  'mol-C/L' ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(13) = 'TA     ' , 'Total Alkalinity                     ',  'mol-C/L' ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(12) = 'DIC     ' , 'River Tracer                           ',  'mol-C/L' ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
    ln_trcdta = .true.
    ln_trcdmp = .false.
    /
@@ -58,8 +57,8 @@
    sn_trcdta(9)  = 'initial_data_file.nc'    ,        -12        ,  'TRNPON'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(10) = 'initial_data_file.nc'    ,        -12        ,  'TRNbSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(11) = 'initial_data_file.nc'    ,        -12        ,  'TRNbSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-  sn_trcdta(12) = 'initial_data_file.nc'    ,        -12        ,  'TRNNO3'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-  sn_trcdta(13) = 'initial_data_file.nc'    ,        -12        ,  'TRNNO3'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(12) = 'initial_data_file.nc'    ,        -12        ,  'TRNbSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+
    rn_trfac(1)   =  1.0  !  -      -      -     -
    rn_trfac(2)   =  1.0  !  -      -      -     -
    rn_trfac(3)   =  1.0  !  multiplicative factor
@@ -72,7 +71,6 @@
    rn_trfac(10)  =  1.0  !  -      -      -     -
    rn_trfac(11)  =  1.0  !  -      -      -     -
    rn_trfac(12)  =  1.0  !  -      -      -     -
-   rn_trfac(13)  =  1.0  !  -      -      -     -
    cn_dir='./'
 /
 !-----------------------------------------------------------------------
@@ -148,8 +146,7 @@
    sn_trcobc(9) = 'bioOBC_full2_west.nc',              168,        'PON',      .true.,  .true.,  'yearly',   '',        '',   ''
    sn_trcobc(10) = 'bioOBC_full2_west.nc',             168,        'bSi',      .true.,  .true.,  'yearly',   '',        '',   ''
    sn_trcobc(11) = 'bioOBC_full2_west.nc',             168,        'O2',       .true.,  .true.,  'yearly',   '',        '',   ''
-   sn_trcobc(12) = 'bioOBC_full2_west.nc',             168,        'NO3',       .true.,  .true.,  'yearly',   '',        '',   ''
-   sn_trcobc(13) = 'bioOBC_full2_west.nc',             168,        'NO3',       .true.,  .true.,  'yearly',   '',        '',   ''
+   sn_trcobc(12) = 'bioOBC_full2_west.nc',             168,        'bSi',       .true.,  .true.,  'yearly',   '',        '',   ''
    cn_dir_obc        =  './tracers/west/'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
    rn_trofac(2)   =  1.0  !  -      -      -     -
@@ -163,7 +160,6 @@
    rn_trofac(10)  =  1.0  !  -      -      -     -
    rn_trofac(11)  =  1.0  !  -      -      -     -
    rn_trofac(12)  =  1.0  !  -      -      -     -
-   rn_trofac(13)  =  1.0  !  -      -      -     -
 /
 !----------------------------------------------------------------------
 ! nambdy_bc       !   data for BDY boundary conditions: 2nd boundary
@@ -183,8 +179,7 @@
    sn_trcobc(9)  = 'bioOBC_full2_north.nc',               4380,        'PON',      .true.,  .true.,  'yearly',   '',      '',   ''
    sn_trcobc(10) = 'bioOBC_full2_north.nc',               4380,        'bSi',      .true.,  .true.,  'yearly',   '',      '',   ''
    sn_trcobc(11) = 'bioOBC_full2_north.nc',               4380,        'O2',       .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(12) = 'bioOBC_full2_north.nc',               4380,        'DIC',       .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(13) = 'bioOBC_full2_north.nc',               4380,        'TA',       .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(12) = 'bioOBC_full2_north.nc',               4380,        'bSi',       .true.,  .true.,  'yearly',   '',      '',   ''
    cn_dir_obc        =  './tracers/north/'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
    rn_trofac(2)   =  1.0  !  -      -      -     -
@@ -198,4 +193,4 @@
    rn_trofac(10)  =  1.0  !  -      -      -     -
    rn_trofac(11)  =  1.0  !  -      -      -     -
    rn_trofac(12)  =  1.0  !  -      -      -     -
-   rn_trofac(13)  =  1.0  !  -      -      -     -
+/
