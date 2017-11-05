@@ -55,7 +55,7 @@ namelists:
 output:
   XIOS servers: 1
   iodefs: /data/$USER/MEOPAR/SS-run-sets/v201702/iodef.xml
-  filedefs: /data/$USER/MEOPAR/SS-run-sets/v201702/file_def_blue.xml
+  filedefs: /data/$USER/MEOPAR/SS-run-sets/v201702/file_def.xml
   domaindefs: /data/$USER/MEOPAR/SS-run-sets/v201702/domain_def.xml
   fielddefs: /data/$USER/MEOPAR/SS-run-sets/v201702/field_def.xml
   separate XIOS server: true
