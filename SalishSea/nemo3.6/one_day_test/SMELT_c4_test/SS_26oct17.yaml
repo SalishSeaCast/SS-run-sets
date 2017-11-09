@@ -1,7 +1,7 @@
 run_id: 26oct17nowcast-dev
 config_name: SMELT_c4
 MPI decomposition: 1x7
-walltime: 06:00:00
+walltime: 09:59:00
 
 paths:
   NEMO code config: /data/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
@@ -55,9 +55,9 @@ namelists:
 output:
   XIOS servers: 1
   iodefs: /data/$USER/MEOPAR/SS-run-sets/v201702/iodef.xml
-  filedefs: /data/$USER/MEOPAR/SS-run-sets/v201702/file_def.xml
+  filedefs: ./file_def.xml
   domaindefs: /data/$USER/MEOPAR/SS-run-sets/v201702/domain_def.xml
-  fielddefs: /data/$USER/MEOPAR/SS-run-sets/v201702/field_def.xml
+  fielddefs: ./field_def.xml
   separate XIOS server: true
 
 vcs revisions:
