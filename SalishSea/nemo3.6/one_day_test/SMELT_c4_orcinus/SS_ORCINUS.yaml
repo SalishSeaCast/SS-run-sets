@@ -1,7 +1,7 @@
 run_id: 26oct17nowcast-dev
 config_name: SMELT_c4
 MPI decomposition: 12x22
-walltime: 2:00:00
+walltime: 14:00:00
 email: tjarnik@gmail.com
 
 paths:
@@ -10,62 +10,54 @@ paths:
   runs directory: /home/tjarnik/MEOPAR/runs
 
 grid:
-  coordinates: $HOME/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
-  bathymetry: $HOME/MEOPAR/grid/bathymetry_201702.nc
-  land processor elimination: $HOME/MEOPAR/grid/bathymetry_201702.csv
+  coordinates: $HOME/MEOPAR/NEMO-forcing/grid/coordinates_seagrid_SalishSea201702.nc
+  bathymetry: $HOME/MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
+  land processor elimination: $HOME/MEOPAR/NEMO-forcing/grid/bathymetry_201702.csv
 
 forcing:
   NEMO-atmos:
     link to: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos
-    check link:
-      type: atmospheric
-      namelist filename: namelist_cfg
+  grid:
+    link to: $HOME/MEOPAR/NEMO-forcing/grid
   open_boundaries:
-    link to: open_boundaries
+    link to: $HOME/MEOPAR/NEMO-forcing/open_boundaries
   rivers:
     link to: /home/tjarnik/MEOPAR/NEMO-forcing/rivers
+  rivers-climatology:
+    link to: /home/tjarnik/MEOPAR/rivers-climatology
+  tides:
+    link to: /home/tjarnik/MEOPAR/tides
   bfr_coef.nc:
-    link to: /home/tjarnik/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc #this does not exist. 
-  initial_strat:
-    link to: /home/tjarnik/MEOPAR/NEMO-forcing/initial_strat #changed to tjarnik from sallen - maybe this could help?
+    link to: /home/tjarnik/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc 
+  initial_data_file.nc:
+    link to: $HOME/MEOPAR/tracers/initial/Bathy201702_initial.nc
 
 
 namelists:
-  # The namelist section files in the lists below will be concatenated
-  # to create a namelist file whose name is the key under which the files
-  # are listed. The keys are the names of the namelist files that NEMO-3.6
-  # expects.
-  #
-  # The only required key is namelist_cfg.
-  #
-  # If relative, paths are taken from current directory
+    - ./namelist.time
+    - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.domain
+    - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.atmos_rivers
+    - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.light_blue
+    - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.lateral
+    - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.bottom
+    - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.tracer
+    - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.dynamics
+    - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.vertical
+    - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.compute
 
-  namelist_cfg:
-    - ./namelist.time.21mar15
-    - ./namelist.domain
-    - ./namelist.surface.newrivers
-    - ./namelist.lateral.hindcast
-    - ./namelist.bottom.jetty.a14
-    - ./namelist.tracer.1
-    - ./namelist.dynamics
-    - ./namelist.vertical
-    - ./namelist.compute
   namelist_top_cfg:
-    - /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/namelist_top_cfg
-    #../hindcast/namelist_top_cfg_initial
+    - ./namelist_top_cfg  
   namelist_smelt_cfg:
-    - /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/namelist_smelt_cfg_ORIG
-    #- ../hindcast/namelist_smelt_cfg
-
+    - ./namelist_smelt_cfg
 output:
   # If relative, paths are taken from current directory
   XIOS servers: 1
-  iodefs: ../hindcast/iodef_xios2.xml
-  filedefs: ../hindcast/file_def_xios2.xml
-  domaindefs: ../hindcast/domain_def_xios2.xml
-  fielddefs: ../hindcast/field_def.xml
+  iodefs: /home/tjarnik/MEOPAR/SS-run-sets/v201702/iodef.xml
+  filedefs: ./file_def.xml
+  domaindefs: /home/tjarnik/MEOPAR/SS-run-sets/v201702/domain_def.xml
+  fielddefs: ./field_def.xml
   separate XIOS server: True
 
 vcs revisions:
   hg: 
-    - /home/tjarnik/MEOPAR/SS-run-sets #changed it from sallen because it was complaining about no repo found
+    - /home/tjarnik/MEOPAR/SS-run-sets 
