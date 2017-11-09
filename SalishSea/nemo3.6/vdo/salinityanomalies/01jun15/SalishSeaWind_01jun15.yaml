@@ -13,7 +13,7 @@
 #  Atmospheric forcing with operational GEM2.5 model products
 #    Constrained to no solid precipitation
 
-config_name: SalishSea_TRC
+config_name: SalishSeaLake
 
 # How is the domain to be distributed over the processors in the
 # i (longitude) and j (latitude) directions?
@@ -63,7 +63,7 @@ restart:
 namelists:
   # If relative, paths are taken from current directory
   namelist_ref:
-    - $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea_TRC/EXP00/namelist_ref
+    - $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaLake/EXP00/namelist_ref
   namelist_cfg:
     - namelist.time.01jun15
     - namelist.domain
@@ -75,7 +75,7 @@ namelists:
     - namelist.vertical
     - namelist.compute
   namelist_top_ref:
-    - $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea_TRC/EXP00/namelist_top_ref
+    - $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaLake/EXP00/namelist_top_ref
   namelist_top_cfg:
     - namelist_top_cfg
 
