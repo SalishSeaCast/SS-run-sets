@@ -1,0 +1,26 @@
+!-----------------------------------------------------------------------
+&namtrc     !   tracers definition
+!-----------------------------------------------------------------------
+   ln_trcdta     =  .false.  !  Initialisation from data input file (T) or not (F)
+!
+!              !    name   !           title of the field              !   units    ! initial data ! save   !
+!              !           !                                           !            ! from file    ! or not !
+!              !           !                                           !            ! or not       !        !
+   sn_tracer(1)  = 'MYTRC' , 'my tracer                   ',  '1',   .false.    ,  .true.
+/
+!-----------------------------------------------------------------------
+&namtrc_adv    !   advection scheme for passive tracer
+!-----------------------------------------------------------------------
+   ln_trcadv_cen2    =  .false.  !  2nd order centered scheme
+   ln_trcadv_tvd     =  .false.  !  TVD scheme
+   ln_trcadv_muscl   =  .false.  !  MUSCL scheme
+   ln_trcadv_muscl2  =  .false.  !  MUSCL2 scheme + cen2 at boundaries
+   ln_trcadv_ubs     =  .false.  !  UBS scheme
+   ln_trcadv_qck     =  .false.  !  QUICKEST scheme
+   ln_trcadv_msc_ups =  .false.  !  use upstream scheme within muscl
+   ln_trcadv_tvd_zts =  .true.   !  TVD scheme zts
+   nn_trcadv_tvd_zts =    20     !     number of sub time-steps for TVD ZTS
+
+/
+
+
