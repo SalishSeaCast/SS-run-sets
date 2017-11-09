@@ -1,9 +1,0 @@
-changset:   951:48ce964ada593a6ccc903d621793c406f1fc56e7
-tag:        tip
-user:       Tereza <tjarnik@gmail.com>
-date:       Mon Jul 31 14:11:56 2017 -07:00
-files:      NEMOGCM/CONFIG/SMELT_c4/cpp_SMELT_c4.fcm
-description:
-branch merge
-uncommitted changes:
-M NEMOGCM/CONFIG/SMELT_c4/cpp_SMELT_c4.fcm
