@@ -65,7 +65,7 @@ namelists:
 output:
   # If relative, paths are taken from current directory
   XIOS servers: 1
-  iodefs: /home/tjarnik/MEOPAR/SS-run-sets/v201702/iodef.xml
+  iodefs: ./iodef.xml
   filedefs: ./file_def.xml
   domaindefs: /home/tjarnik/MEOPAR/SS-run-sets/v201702/domain_def.xml
   fielddefs: ./field_def.xml
