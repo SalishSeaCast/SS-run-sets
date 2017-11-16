@@ -35,7 +35,7 @@
    sn_tracer(8)  = 'DON     ' , 'Dissolved organic Concentration        ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(9)  = 'PON     ' , 'Small organic carbon Concentration     ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(10) = 'bSi     ' , 'biogenic Silicate Concentration        ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(11) = 'TRA     ' , 'River Tracer                           ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(11) = 'TRA     ' , 'River Tracer                           ',  'mol-C/L' ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(12) = 'DIC     ' , 'Dissolved Inorganic Carbon               ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(13) = 'TA     ' , 'Total Alkalinity                     ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
    ln_trcdta = .true.
