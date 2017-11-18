@@ -19,6 +19,7 @@
       <domain id="CloverPoint"             domain_ref="grid_T"> <zoom_domain ibegin="199" jbegin="295" ni="1"  nj="1"  /> </domain>
       <domain id="FinnertyCove"            domain_ref="grid_T"> <zoom_domain ibegin="216" jbegin="304" ni="1"  nj="1"  /> </domain>
       <domain id="PortTownsend"            domain_ref="grid_T"> <zoom_domain ibegin="254" jbegin="203" ni="1"  nj="1"  /> </domain>
+      <domain id="PatriciaBay"              domain_ref="grid_T"> <zoom_domain ibegin="214" jbegin="351" ni="1"  nj="1"  /> </domain>
       <domain id="FulfordHarbour"          domain_ref="grid_T"> <zoom_domain ibegin="229" jbegin="368" ni="1"  nj="1"  /> </domain>
       <domain id="PatosIsland"             domain_ref="grid_T"> <zoom_domain ibegin="302" jbegin="341" ni="1"  nj="1"  /> </domain>
       <domain id="TumboChannel"            domain_ref="grid_T"> <zoom_domain ibegin="283" jbegin="354" ni="1"  nj="1"  /> </domain>
@@ -26,7 +27,10 @@
       <domain id="BoundaryBay"             domain_ref="grid_T"> <zoom_domain ibegin="335" jbegin="397" ni="1"  nj="1"  /> </domain>
       <domain id="Tsawwassen"              domain_ref="grid_T"> <zoom_domain ibegin="303" jbegin="393" ni="1"  nj="1"  /> </domain>
       <domain id="SandHeads"               domain_ref="grid_T"> <zoom_domain ibegin="293" jbegin="426" ni="1"  nj="1"  /> </domain>
+      <domain id="WoodwardsLanding"        domain_ref="grid_T"> <zoom_domain ibegin="329" jbegin="414" ni="1"  nj="1"  /> </domain>
+      <domain id="NewWestminster"          domain_ref="grid_T"> <zoom_domain ibegin="363" jbegin="423" ni="1"  nj="1"  /> </domain>
       <domain id="PointGrey"               domain_ref="grid_T"> <zoom_domain ibegin="316" jbegin="453" ni="1"  nj="1"  /> </domain>
+      <domain id="SandyCove"               domain_ref="grid_T"> <zoom_domain ibegin="333" jbegin="468" ni="1"  nj="1"  /> </domain>
       <domain id="PointAtkinson"           domain_ref="grid_T"> <zoom_domain ibegin="329" jbegin="468" ni="1"  nj="1"  /> </domain>
       <domain id="GibsonsLanding"          domain_ref="grid_T"> <zoom_domain ibegin="300" jbegin="498" ni="1"  nj="1"  /> </domain>
       <domain id="HalfmoonBay"             domain_ref="grid_T"> <zoom_domain ibegin="253" jbegin="550" ni="1"  nj="1"  /> </domain>

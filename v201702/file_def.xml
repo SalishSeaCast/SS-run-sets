@@ -137,6 +137,18 @@
         <file id="PointAtkinson" name="PointAtkinson" description="10min interval SSH for tides">
           <field field_ref="ssh" name="sossheig" grid_ref="PointAtkinson_grid"/>
         </file>
+        <file id="SandyCove" name="SandyCove" description="10min interval SSH for tides">
+          <field field_ref="ssh" name="sossheig" grid_ref="SandyCove_grid"/>
+        </file>
+        <file id="NewWestminster" name="NewWestminster" description="10 min interval SSH for tides">
+          <field field_ref="ssh" name="sossheig" grid_ref="NewWestminster_grid"/>
+        </file>
+        <file id="WoodwardsLanding" name="WoodwardsLanding" description="10 min interval SSH for tides">
+          <field field_ref="ssh" name="sossheig" grid_ref="WoodwardsLanding_grid"/>
+        </file>
+        <file id="PatriciaBay" name="PatriciaBay" description="10 min interval SSH for tides">
+          <field field_ref="ssh" name="sossheig" grid_ref="PatriciaBay_grid"/>
+        </file>
         <file id="Victoria" name="Victoria" description="10min interval SSH for tides">
           <field field_ref="ssh" name="sossheig" grid_ref="Victoria_grid"/>
         </file>
@@ -148,6 +160,9 @@
         </file>
         <file id="NeahBay" name="NeahBay" description="10min interval SSH for tides">
           <field field_ref="ssh" name="sossheig" grid_ref="NeahBay_grid"/>
+        </file>
+        <file id="PortRenfrew" name="PortRenfrew" description="10min interval SSH for tides">
+          <field field_ref="ssh" name="sossheig" grid_ref="PortRenfrew_grid"/>
         </file>
         <file id="CherryPoint" name="CherryPoint" description="10min interval SSH for tides">
           <field field_ref="ssh" name="sossheig" grid_ref="CherryPoint_grid"/>
