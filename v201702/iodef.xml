@@ -64,12 +64,16 @@
      <grid id="FinnertyCove_grid">            <domain domain_ref="FinnertyCove"/>             </grid>
      <grid id="PortTownsend_grid">            <domain domain_ref="PortTownsend"/>             </grid>
      <grid id="FulfordHarbour_grid">          <domain domain_ref="FulfordHarbour"/>           </grid>
+     <grid id="PatriciaBay_grid">             <domain domain_ref="PatriciaBay"/>              </grid>
      <grid id="PatosIsland_grid">             <domain domain_ref="PatosIsland"/>              </grid>
      <grid id="TumboChannel_grid">            <domain domain_ref="TumboChannel"/>             </grid>
      <grid id="WhalerBay_grid">               <domain domain_ref="WhalerBay"/>                </grid>
      <grid id="Tsawwassen_grid">              <domain domain_ref="Tsawwassen"/>               </grid>
      <grid id="SandHeads_grid">               <domain domain_ref="SandHeads"/>                </grid>
+     <grid id="WoodwardsLanding_grid">        <domain domain_ref="WoodwardsLanding"/>         </grid>
+     <grid id="NewWestminster_grid">          <domain domain_ref="NewWestminster"/>           </grid>
      <grid id="PointGrey_grid">               <domain domain_ref="PointGrey"/>                </grid>
+     <grid id="SandCove_grid">                <domain domain_ref="SandyCove"/>                </grid>
      <grid id="PointAtkinson_grid">           <domain domain_ref="PointAtkinson"/>            </grid>
      <grid id="GibsonsLanding_grid">          <domain domain_ref="GibsonsLanding"/>           </grid>
      <grid id="HalfmoonBay_grid">             <domain domain_ref="HalfmoonBay"/>              </grid>
