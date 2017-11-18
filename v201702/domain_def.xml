@@ -10,12 +10,12 @@
       <!-- CODAR -->
       <domain id="CODAR_T"                 domain_ref="grid_T"> <zoom_domain ibegin="240" jbegin="380" ni="80" nj="80" /> </domain>
       <!-- Tide Points -->
-      <domain id="PortRenfrew"             domain_ref="grid_T"> <zoom_domain ibegin="56"  jbegin="402" ni="1"  nj="1"  /> </domain>
+      <domain id="PortRenfrew"             domain_ref="grid_T"> <zoom_domain ibegin="61"  jbegin="401" ni="1"  nj="1"  /> </domain>
       <domain id="SheringhamPoint"         domain_ref="grid_T"> <zoom_domain ibegin="112" jbegin="330" ni="1"  nj="1"  /> </domain>
       <domain id="Sooke"                   domain_ref="grid_T"> <zoom_domain ibegin="136" jbegin="313" ni="1"  nj="1"  /> </domain>
       <domain id="PedderBay"               domain_ref="grid_T"> <zoom_domain ibegin="161" jbegin="295" ni="1"  nj="1"  /> </domain>
       <domain id="Esquimalt"               domain_ref="grid_T"> <zoom_domain ibegin="190" jbegin="307" ni="1"  nj="1"  /> </domain>
-      <domain id="Victoria"                domain_ref="grid_T"> <zoom_domain ibegin="196" jbegin="298" ni="1"  nj="1"  /> </domain>
+      <domain id="Victoria"                domain_ref="grid_T"> <zoom_domain ibegin="196" jbegin="302" ni="1"  nj="1"  /> </domain>
       <domain id="CloverPoint"             domain_ref="grid_T"> <zoom_domain ibegin="199" jbegin="295" ni="1"  nj="1"  /> </domain>
       <domain id="FinnertyCove"            domain_ref="grid_T"> <zoom_domain ibegin="216" jbegin="304" ni="1"  nj="1"  /> </domain>
       <domain id="PortTownsend"            domain_ref="grid_T"> <zoom_domain ibegin="254" jbegin="203" ni="1"  nj="1"  /> </domain>
