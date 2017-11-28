@@ -103,6 +103,12 @@
         <file id="Nanaimo" name="Nanaimo" description="10min interval SSH for tides">
           <field field_ref="ssh" name="sossheig" grid_ref="Nanaimo_grid"/>
         </file>
+        <file id="HalfmoonBay" name="HalfmoonBay" description="10min interval SSH for tides">
+          <field field_ref="ssh" name="sossheig" grid_ref="HalfmoonBay_grid"/>
+        </file>
+        <file id="Squamish" name="Squamish" description="10min interval SSH for tides">
+          <field field_ref="ssh" name="sossheig" grid_ref="Squamish_grid"/>
+        </file>
         <file id="NeahBay" name="NeahBay" description="10min interval SSH for tides">
           <field field_ref="ssh" name="sossheig" grid_ref="NeahBay_grid"/>
         </file>
