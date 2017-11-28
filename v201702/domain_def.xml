@@ -24,7 +24,7 @@
       <domain id="PatosIsland"             domain_ref="grid_T"> <zoom_domain ibegin="302" jbegin="341" ni="1"  nj="1"  /> </domain>
       <domain id="TumboChannel"            domain_ref="grid_T"> <zoom_domain ibegin="283" jbegin="354" ni="1"  nj="1"  /> </domain>
       <domain id="WhalerBay"               domain_ref="grid_T"> <zoom_domain ibegin="263" jbegin="385" ni="1"  nj="1"  /> </domain>
-      <domain id="BoundaryBay"             domain_ref="grid_T"> <zoom_domain ibegin="335" jbegin="397" ni="1"  nj="1"  /> </domain>
+      <domain id="BoundaryBay"             domain_ref="grid_T"> <zoom_domain ibegin="335" jbegin="380" ni="1"  nj="1"  /> </domain>
       <domain id="Tsawwassen"              domain_ref="grid_T"> <zoom_domain ibegin="303" jbegin="393" ni="1"  nj="1"  /> </domain>
       <domain id="SandHeads"               domain_ref="grid_T"> <zoom_domain ibegin="293" jbegin="426" ni="1"  nj="1"  /> </domain>
       <domain id="WoodwardsLanding"        domain_ref="grid_T"> <zoom_domain ibegin="329" jbegin="414" ni="1"  nj="1"  /> </domain>
@@ -32,8 +32,9 @@
       <domain id="PointGrey"               domain_ref="grid_T"> <zoom_domain ibegin="316" jbegin="453" ni="1"  nj="1"  /> </domain>
       <domain id="SandyCove"               domain_ref="grid_T"> <zoom_domain ibegin="333" jbegin="468" ni="1"  nj="1"  /> </domain>
       <domain id="PointAtkinson"           domain_ref="grid_T"> <zoom_domain ibegin="329" jbegin="468" ni="1"  nj="1"  /> </domain>
+      <domain id="Squamish"                domain_ref="grid_T"> <zoom_domain ibegin="389" jbegin="532" ni="1"  nj="1"  /> </domain>
       <domain id="GibsonsLanding"          domain_ref="grid_T"> <zoom_domain ibegin="300" jbegin="498" ni="1"  nj="1"  /> </domain>
-      <domain id="HalfmoonBay"             domain_ref="grid_T"> <zoom_domain ibegin="253" jbegin="550" ni="1"  nj="1"  /> </domain>
+      <domain id="HalfmoonBay"             domain_ref="grid_T"> <zoom_domain ibegin="254" jbegin="549" ni="1"  nj="1"  /> </domain>
       <domain id="IrvinesLanding"          domain_ref="grid_T"> <zoom_domain ibegin="248" jbegin="583" ni="1"  nj="1"  /> </domain>
       <domain id="PowellRiver"             domain_ref="grid_T"> <zoom_domain ibegin="204" jbegin="663" ni="1"  nj="1"  /> </domain>
       <domain id="Lund"                    domain_ref="grid_T"> <zoom_domain ibegin="186" jbegin="700" ni="1"  nj="1"  /> </domain>
@@ -50,7 +51,7 @@
       <domain id="Nanaimo"                 domain_ref="grid_T"> <zoom_domain ibegin="208" jbegin="484" ni="1"  nj="1"  /> </domain>
       <domain id="NeahBay"                 domain_ref="grid_T"> <zoom_domain ibegin="15"  jbegin="384" ni="1"  nj="1"  /> </domain>
       <domain id="CherryPoint"             domain_ref="grid_T"> <zoom_domain ibegin="342" jbegin="343" ni="1"  nj="1"  /> </domain>
-      <domain id="FridayHarbor"            domain_ref="grid_T"> <zoom_domain ibegin="267" jbegin="298" ni="1"  nj="1"  /> </domain>
+      <domain id="FridayHarbor"            domain_ref="grid_T"> <zoom_domain ibegin="267" jbegin="300" ni="1"  nj="1"  /> </domain>
       <!-- Tide Points Baynes Sound, not corrected for off-by-one, assumed correct-->
       <domain id="BaynesSound"             domain_ref="grid_T"> <zoom_domain ibegin="125" jbegin="605" ni="1"  nj="1"  /> </domain>
       <domain id="EastDenmanIsland"        domain_ref="grid_T"> <zoom_domain ibegin="136" jbegin="606" ni="1"  nj="1"  /> </domain>
