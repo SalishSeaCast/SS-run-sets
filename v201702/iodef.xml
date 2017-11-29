@@ -73,7 +73,7 @@
      <grid id="WoodwardsLanding_grid">        <domain domain_ref="WoodwardsLanding"/>         </grid>
      <grid id="NewWestminster_grid">          <domain domain_ref="NewWestminster"/>           </grid>
      <grid id="PointGrey_grid">               <domain domain_ref="PointGrey"/>                </grid>
-     <grid id="SandCove_grid">                <domain domain_ref="SandyCove"/>                </grid>
+     <grid id="SandyCove_grid">                <domain domain_ref="SandyCove"/>                </grid>
      <grid id="Squamish_grid">                <domain domain_ref="Squamish"/>                 </grid>
      <grid id="PointAtkinson_grid">           <domain domain_ref="PointAtkinson"/>            </grid>
      <grid id="GibsonsLanding_grid">          <domain domain_ref="GibsonsLanding"/>           </grid>
