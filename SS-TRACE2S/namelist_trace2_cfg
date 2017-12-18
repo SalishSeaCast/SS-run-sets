@@ -19,16 +19,46 @@
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisriv
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-   Wd1 = 0.1   ! sinking velocities, m/d
-   Wd2 = 0.14
-   Wd3 = 0.18
-   Wd4 = 0.22
-   Wd5 = 0.26
-   Wd6 = 0.3
-   Wd7 = 0.35
-   Wd8 = 0.4
-   Wd9 = 0.45
-   Wd10= 0.5
+   wlo_1 = 1.0   ! min sinking velocities, m/d
+   wlo_2 = 1.0
+   wlo_3 = 1.0
+   wlo_4 = 1.0
+   wlo_5 = 1.0
+   wlo_6 = 0.8
+   wlo_7 = 1.2
+   wlo_8 = 1.0
+   wlo_9 = 1.0
+   wlo_10 = 1.0
+   whi_1 = 1.7   ! increase in sinking velocities, m/d
+   whi_2 = 1.7
+   whi_3 = 1.7
+   whi_4 = 1.7
+   whi_5 = 1.7
+   whi_6 = 1.7
+   whi_7 = 1.7
+   whi_8 = 1.5
+   whi_9 = 2.0
+   whi_10 = 3.0
+   wid_1 = 0.5   ! spread factor
+   wid_2 = 0.5
+   wid_3 = 0.5
+   wid_4 = 0.5
+   wid_5 = 0.5
+   wid_6 = 0.5
+   wid_7 = 0.5
+   wid_8 = 0.5
+   wid_9 = 0.5
+   wid_10 = 0.5
+   sthresh_1 = 5  ! salinity threshold
+   sthresh_2 = 7
+   sthresh_3 = 9
+   sthresh_4 = 12
+   sthresh_5 = 15
+   sthresh_6 = 7
+   sthresh_7 = 7
+   sthresh_8 = 7
+   sthresh_9 = 7
+   sthresh_10 = 7
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampissbc
