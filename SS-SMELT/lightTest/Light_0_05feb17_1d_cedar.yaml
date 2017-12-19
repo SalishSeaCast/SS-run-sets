@@ -27,29 +27,29 @@ paths:
   # If relative, paths are taken from current directory
   NEMO code config: $MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $MEOPAR/XIOS-2/
-  forcing: $PROJECT/SalishSea/forcing/
+  forcing: $MEOPAR/NEMO-forcing/
   runs directory: $SCRATCH/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path above
-  coordinates: $MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  coordinates: coordinates_seagrid_SalishSea201702.nc
   bathymetry: bathymetry_201702_old.nc
   land processor elimination: bathymetry_201702.csv
 
 forcing:
   # If relative, paths are taken from forcing path above
   NEMO-atmos:
-    link to: atmospheric/GEM2.5/operational
+    link to: NEMO-atmos
     check link:
       type: atmospheric
       namelist filename: namelist_cfg
   open_boundaries:
-    link to: $PROJECT/SalishSea/forcing
+    link to: open_boundaries
   rivers:
     link to: rivers
   bfr_coef.nc:
-    link to: $MEOPAR/grid/jetty_mask_bathy201702.nc
+    link to: grid/jetty_mask_bathy201702.nc
 
 restart:
   restart.nc: /home/eolson/MEOPAR/NEMO-forcing/restarts/hindcast/SalishSea_01937520_restart.nc
@@ -66,18 +66,18 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist_cfg_05feb17_1d_cedar 
+    - ./namelist_cfg_05feb17_1d 
   namelist_top_cfg:
-    - ./namelist_top_cfg_cedar
+    - ./namelist_top_cfg
   namelist_smelt_cfg:
-    - ./namelist_smelt_cfg_cedar
+    - ./namelist_smelt_cfg
 
 output:
   # If relative, paths are taken from current directory
-  iodefs: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/lightTest/iodef.xml
-  filedefs: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/lightTest/file_def.xml
-  domaindefs: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/lightTest/domain_def.xml
-  fielddefs: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/lightTest/field_def.xml
+  iodefs: iodef.xml
+  filedefs: file_def.xml
+  domaindefs: domain_def.xml
+  fielddefs: field_def.xml
   separate XIOS server: True
   XIOS servers: 1
 
