@@ -15,20 +15,20 @@ config_name: TRACE2SC
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 12x22
+MPI decomposition: 16x39
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: TRACE2SC_06may17
-walltime: 12:00:00
+walltime: 6:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 
 paths:
   # If relative, paths are taken from current directory
-  NEMO code config: /home/eolson/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-  XIOS: /home/eolson/MEOPAR/XIOS-2/
-  forcing: /home/eolson/MEOPAR/NEMO-forcing/
-  runs directory: /global/scratch/eolson/
+  NEMO code config: $MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $MEOPAR/XIOS-2/
+  forcing: $MEOPAR/NEMO-forcing/
+  runs directory: $SCRATCH/
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -40,7 +40,7 @@ grid:
 forcing:
   # If relative, paths are taken from forcing path above
   NEMO-atmos:
-    link to: /home/eolson/MEOPAR/NEMO-forcing/atmospheric
+    link to: NEMO-atmos
     check link:
       type: atmospheric
       namelist filename: namelist_cfg
@@ -49,11 +49,11 @@ forcing:
   rivers:
     link to: rivers
   bfr_coef.nc:
-    link to: /home/eolson/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
+    link to: grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /home/eolson/MEOPAR/NewRuns/TRACE2SC_26apr17/SalishSea_02131920_restart.nc
-  restart_trc.nc: /home/eolson/MEOPAR/NewRuns/TRACE2SC_26apr17/SalishSea_02131920_restart_trc.nc
+  restart.nc: $SCRATCH/TRACE2SC_26apr17/SalishSea_02131920_restart.nc
+  restart_trc.nc: $SCRATCH/TRACE2SC_26apr17/SalishSea_02131920_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -74,13 +74,13 @@ namelists:
 
 output:
   # If relative, paths are taken from current directory
-  iodefs: /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/iodef_trace2xios2.xml
-  filedefs: /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/file_def_trace2xios2.xml
-  domaindefs: /home/eolson/MEOPAR/SS-run-sets/SalishSea/nemo3.6/hindcast/domain_def_xios2.xml
-  fielddefs: /home/eolson/MEOPAR/SS-run-sets/SS-TRACE2/field_def.xml.TRACE2
+  iodefs: iodef_trace2xios2.xml
+  filedefs: file_def_trace2xios2.xml
+  domaindefs: domain_def_xios2.xml
+  fielddefs: field_def.xml.TRACE2
   separate XIOS server: True
   XIOS servers: 1
 
 vcs revisions:
   hg: 
-    - /home/eolson/MEOPAR/SS-run-sets
+    - $MEOPAR/SS-run-sets
