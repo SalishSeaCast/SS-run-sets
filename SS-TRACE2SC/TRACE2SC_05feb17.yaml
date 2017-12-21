@@ -50,6 +50,8 @@ forcing:
     link to: rivers
   bfr_coef.nc:
     link to: grid/jetty_mask_bathy201702.nc
+  initial_green:
+    link to: tracers/initial
 
 restart:
   restart.nc: $MEOPAR/NEMO-forcing/restarts/hindcast/SalishSea_01937520_restart.nc
