@@ -1,0 +1,70 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! PISCES  (key_pisces) cfg namelist (see below for key_pisces_reduced)
+!!              1  - air-sea exchange                         (nampisext)
+!!              2  - biological parameters                    (nampisbio)
+!!              3  - parameters for nutrient limitations      (nampislim)    
+!!              4  - parameters for phytoplankton             (nampisprod,nampismort)
+!!              5  - parameters for zooplankton               (nampismes,nampiszoo)
+!!              6  - parameters for remineralization          (nampisrem)
+!!              7  - parameters for calcite chemistry         (nampiscal)
+!!              8  - parameters for inputs deposition         (nampissed)
+!!              9  - parameters for Kriest parameterization   (nampiskrp, nampiskrs)
+!!              10 - additional 2D/3D  diagnostics            (nampisdia)
+!!              11 - Damping                                  (nampisdmp)
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisbio     !   biological parameters
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisriv
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   wlo_1 = 1.0   ! min sinking velocities, m/d
+   wlo_2 = 1.0
+   wlo_3 = 1.0
+   wlo_4 = 1.0
+   wlo_5 = 1.0
+   wlo_6 = 0.8
+   wlo_7 = 1.2
+   wlo_8 = 1.0
+   wlo_9 = 1.0
+   wlo_10 = 1.0
+   whi_1 = 1.7   ! increase in sinking velocities, m/d
+   whi_2 = 1.7
+   whi_3 = 1.7
+   whi_4 = 1.7
+   whi_5 = 1.7
+   whi_6 = 1.7
+   whi_7 = 1.7
+   whi_8 = 1.5
+   whi_9 = 2.0
+   whi_10 = 3.0
+   wid_1 = 0.5   ! spread factor
+   wid_2 = 0.5
+   wid_3 = 0.5
+   wid_4 = 0.5
+   wid_5 = 0.5
+   wid_6 = 0.5
+   wid_7 = 0.5
+   wid_8 = 0.5
+   wid_9 = 0.5
+   wid_10 = 0.5
+   sthresh_1 = 5  ! salinity threshold
+   sthresh_2 = 7
+   sthresh_3 = 9
+   sthresh_4 = 12
+   sthresh_5 = 15
+   sthresh_6 = 7
+   sthresh_7 = 7
+   sthresh_8 = 7
+   sthresh_9 = 7
+   sthresh_10 = 7
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampissbc
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!              !  file name          ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !                     !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename       !
+   sn_turb  ='river_turb/riverTurbDaily2',       24,           'turb',       .true., .false.,  'daily',    '',        '',        ''
+   cn_dir      = 'rivers/'  ! root directory for the location of the runoff files
+/
