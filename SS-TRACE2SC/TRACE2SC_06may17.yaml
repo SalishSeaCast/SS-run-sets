@@ -52,8 +52,8 @@ forcing:
     link to: grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: $SCRATCH/TRACE2SC_26apr17/SalishSea_02131920_restart.nc
-  restart_trc.nc: $SCRATCH/TRACE2SC_26apr17/SalishSea_02131920_restart_trc.nc
+  restart.nc: $SCRATCH/results/TRACE2SC_26apr17/SalishSea_02131920_restart.nc
+  restart_trc.nc: $SCRATCH/results/TRACE2SC_26apr17/SalishSea_02131920_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
