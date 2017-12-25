@@ -53,7 +53,7 @@ forcing:
 
 restart:
   restart.nc: $SCRATCH/results/TRACE2SC_17mar17/SalishSea_02045520_restart.nc
-  restart_trc.nc: $SCRATCH/resultsTRACE2SC_17mar17/SalishSea_02045520_restart_trc.nc
+  restart_trc.nc: $SCRATCH/results/TRACE2SC_17mar17/SalishSea_02045520_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
