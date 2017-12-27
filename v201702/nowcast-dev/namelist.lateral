@@ -46,7 +46,7 @@
     rn_time_dmp   =  365., 365.            ! Damping time scale in days (nudging on orlanski inflow)
     rn_time_dmp_out =  365., 365.          ! Outflow damping time scale (nudging on orlanski outflow)
     rn_max_sponge = 50., 50.               ! max viscosity for sponge layer (m2/s)
-    nn_rimwidth   = 8, 10                  ! reduce western to 8 wide because Strait expands and our files aren't wide enough
+    nn_rimwidth   = 10, 10                  ! rim depth for FRS
 &end
 
 
@@ -54,8 +54,8 @@
 !-----------------------------------------------------------------------
     ctypebdy = 'W'
     nbdyind   = 2     ! i-index for segment
-    nbdybeg   = 381   ! j-index for segment beginning
-    nbdyend   = 467   ! j-index for segment end
+    nbdybeg   = 380   ! j-index for segment beginning
+    nbdyend   = 470   ! j-index for segment end
 &end
 
 
@@ -76,7 +76,7 @@
 
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide          = 'tides/west/SalishSea_N36_AF_west_tide_'
+   filtide          = 'tides/west/SalishSea_N36_long_west_tide_'
    ln_bdytide_2ddta = .false.
    ln_bdytide_conj  = .false.
 &end
