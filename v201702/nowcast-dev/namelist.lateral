@@ -54,7 +54,7 @@
 !-----------------------------------------------------------------------
     ctypebdy = 'W'
     nbdyind   = 2     ! i-index for segment
-    nbdybeg   = 380   ! j-index for segment beginning
+    nbdybeg   = 376   ! j-index for segment beginning
     nbdyend   = 470   ! j-index for segment end
 &end
 
