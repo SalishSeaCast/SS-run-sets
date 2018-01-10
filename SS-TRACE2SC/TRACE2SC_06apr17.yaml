@@ -19,7 +19,7 @@ MPI decomposition: 16x39
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: TRACE2SC_06apr17
-walltime: 6:00:00
+walltime: 3:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 
