@@ -6,7 +6,7 @@
 #  Rivers run-off forcing
 #  Atmospheric forcing with operational GEM2.5 model products
 #    Constrained to no solid precipitation
-#  SMELT config
+#  TRACE2 config
 #  1st run for sinking experiment
 
 config_name: SMELT
@@ -18,7 +18,7 @@ config_name: SMELT
 MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: Light_0_15feb17
+run_id: Light_0_25feb17
 walltime: 12:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
@@ -52,10 +52,8 @@ forcing:
     link to: /home/eolson/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /home/eolson/MEOPAR/NewRuns/Light_0_05feb17/SalishSea_01959120_restart.nc
-  restart_trc.nc: /home/eolson/MEOPAR/NewRuns/Light_0_05feb17/SalishSea_01959120_restart_trc.nc
-#  restart.nc: /global/scratch/eolson/Light_0_05feb17/SalishSea_01959120_restart.nc
-#  restart_trc.nc: /global/scratch/eolson/Light_0_05feb17/SalishSea_01959120_restart_trc.nc
+  restart.nc: /global/scratch/eolson/Light_0_25feb17_0/SalishSea_01991520_restart.nc
+  restart_trc.nc: /global/scratch/eolson/Light_0_25feb17_0/SalishSea_01991520_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -68,7 +66,7 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist_cfg_15feb17 
+    - ./namelist_cfg_25feb17 
   namelist_top_cfg:
     - ./namelist_top_cfg_restart
   namelist_smelt_cfg:
