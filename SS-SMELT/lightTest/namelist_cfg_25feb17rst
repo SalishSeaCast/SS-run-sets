@@ -8,7 +8,7 @@
    cn_exp      = "SalishSea"  ! experience name
 nn_it000 = 1991521 ! first time step
 nn_itend = 2002320 ! last time step (std 108001 day = 110160 re: rn_rdt in &namdom)
-nn_date0 = 20170225 ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
+nn_date0 = 20170302 ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
                               ! used to adjust tides to run date (regardless of restart control)
    nn_leapy    =       1      ! Leap year calendar (1) or not (0)
    ln_rstart   =  .true.     ! start from rest (F) or from a restart file (T)
