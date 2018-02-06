@@ -19,7 +19,7 @@ MPI decomposition: 16x39
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: Light_0_06apr17
-walltime: 4:00:00
+walltime: 8:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 
