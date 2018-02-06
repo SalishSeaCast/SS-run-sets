@@ -15,11 +15,11 @@ config_name: SMELT
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 16x39
+MPI decomposition: 12x22
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: Light_0_06may17
-walltime: 8:00:00
+run_id: Light_0_05feb17rst
+walltime: 12:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 
@@ -52,8 +52,10 @@ forcing:
     link to: /home/eolson/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /global/scratch/eolson/Light_0_26apr17/SalishSea_02131920_restart.nc
-  restart_trc.nc: /global/scratch/eolson/Light_0_26apr17/SalishSea_02131920_restart_trc.nc
+  restart.nc: /home/eolson/MEOPAR/NewRuns/Light_0_05feb17_0/SalishSea_01948320_restart.nc
+  restart_trc.nc: /home/eolson/MEOPAR/NewRuns/Light_0_05feb17_0/SalishSea_01948320_restart_trc.nc
+#  restart.nc: /global/scratch/eolson/Light_0_05feb17/SalishSea_01959120_restart.nc
+#  restart_trc.nc: /global/scratch/eolson/Light_0_05feb17/SalishSea_01959120_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -66,7 +68,7 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist_cfg_06may17 
+    - ./namelist_cfg_05feb17rst 
   namelist_top_cfg:
     - ./namelist_top_cfg_restart
   namelist_smelt_cfg:
