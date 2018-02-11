@@ -18,7 +18,7 @@ config_name: SMELT
 MPI decomposition: 16x39
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: Light_rev_17mar17
+run_id: Light_0_07mar17
 walltime: 12:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
@@ -52,8 +52,8 @@ forcing:
     link to: /home/eolson/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
 
 restart:
-  restart.nc: /global/scratch/eolson/Light_rev_07mar17/SalishSea_02023920_restart.nc
-  restart_trc.nc: /global/scratch/eolson/Light_rev_07mar17/SalishSea_02023920_restart_trc.nc
+  restart.nc: /global/scratch/eolson/Light_0_07mar17_0/SalishSea_02013120_restart.nc
+  restart_trc.nc: /global/scratch/eolson/Light_0_07mar17_0/SalishSea_02013120_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -66,7 +66,7 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist_cfg_17mar17 
+    - ./namelist_cfg_07mar17rst
   namelist_top_cfg:
     - ./namelist_top_cfg_restart
   namelist_smelt_cfg:
