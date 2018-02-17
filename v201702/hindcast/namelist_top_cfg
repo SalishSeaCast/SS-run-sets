@@ -94,9 +94,9 @@
 !
 !              !  file name      ! frequency (hours) ! variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !              !                 !  (if <0  months)  !   name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
-   sn_trcobc(1) = 'LiveOcean/bio/single_bio_LO',         24,        'NO3',      .true.,  .false., 'daily',   '',        '',   ''
+   sn_trcobc(1) = 'LiveOcean/LiveOcean_v201712',         24,        'NO3',      .true.,  .false., 'daily',   '',        '',   ''
    sn_trcobc(2) = 'tracers/west/bioOBC_const.nc',       -12,        'NH4',      .false., .true., 'yearly',   '',        '',   ''
-   sn_trcobc(3) = 'LiveOcean/bio/single_bio_LO',         24,        'Si',       .true.,  .false., 'daily',   '',        '',   ''
+   sn_trcobc(3) = 'LiveOcean/LiveOcean_v201712',         24,        'Si',       .true.,  .false., 'daily',   '',        '',   ''
    sn_trcobc(4) = 'tracers/west/bioOBC_const.nc',       -12,        'DIA',      .false., .true., 'yearly',   '',        '',   ''
    sn_trcobc(5) = 'tracers/west/bioOBC_const.nc',       -12,        'CRY',      .false., .true., 'yearly',   '',        '',   ''
    sn_trcobc(6) = 'tracers/west/bioOBC_const.nc',       -12,        'MYRI',     .false., .true., 'yearly',   '',        '',   ''
