@@ -1,7 +1,6 @@
 !!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-!! NEMO/TOP1 CFG:   - tracer run information                (namtrc_run)
+!! NEMO/TOP1 CFG:
 !!               - tracer definition                     (namtrc    )
-!!               - tracer data initialisation            (namtrc_dta)
 !!               - tracer advection                      (namtrc_adv)
 !!               - tracer lateral diffusion              (namtrc_ldf)
 !!               - tracer vertical physics               (namtrc_zdf)
@@ -9,21 +8,6 @@
 !!               - dynamical tracer trends               (namtrc_trd)
 !!               - tracer output diagonstics             (namtrc_dia)
 !>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-&namtrc_run     !   run information
-!-----------------------------------------------------------------------
-   nn_dttrc      =  1        !  time step frequency for passive sn_tracers
-   nn_writetrc   =  1      !  time step frequency for sn_tracer outputs
-   ln_top_euler  = .false.    !  use Euler time-stepping for TOP
-   ln_rsttr      = .true.   !  start from a restart file (T) or not (F)
-   nn_rsttr      =   0       !  restart control = 0 initial time step is not compared to the restart file value
-                           !                  = 1 do not use the value in the restart file
-                           !                  = 2 calendar parameters read in the restart file
-   cn_trcrst_in  = "restart_trc"   !  suffix of pass. sn_tracer restart name (input)
-   cn_trcrst_indir = "."           !  directory from which to read input passive tracer restarts
-   cn_trcrst_out = "restart_trc"   !  suffix of pass. sn_tracer restart name (output)
-   cn_trcrst_outdir = "."          !  directory to which to write output passive tracer restarts
-/
-!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &namtrc     !   tracers definition
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 !                !    name   !           title of the field              ! initial data ! initial data ! obc    !    sbc  !  cbc    ! save   !
@@ -43,35 +27,6 @@
    ln_trcdta = .true.
    ln_trcdmp = .false.
    /
-!-----------------------------------------------------------------------
-&namtrc_dta      !    Initialisation from data input file
-!-----------------------------------------------------------------------
-!
-!                !  file name               ! frequency (hours) ! variable   ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
-!                !                          !  (if <0  months)  !   name     !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
-   sn_trcdta(1)  = 'initial_data_file.nc'    ,        -12        ,  'TRNNO3'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(2)  = 'initial_data_file.nc'    ,        -12        ,  'TRNNH4'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(3)  = 'initial_data_file.nc'    ,        -12        ,  'TRNSi'      ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(4)  = 'initial_data_file.nc'    ,        -12        ,  'TRNDIAT'    ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(5)  = 'initial_data_file.nc'    ,        -12        ,  'TRNPHY'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(6)  = 'initial_data_file.nc'    ,        -12        ,  'TRNMYRI'    ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(7)  = 'initial_data_file.nc'    ,        -12        ,  'TRNMICZ'    ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(8)  = 'initial_data_file.nc'    ,        -12        ,  'TRNDON'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(9)  = 'initial_data_file.nc'    ,        -12        ,  'TRNPON'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(10) = 'initial_data_file.nc'    ,        -12        ,  'TRNbSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-
-   rn_trfac(1)   =  1.0  !  -      -      -     -
-   rn_trfac(2)   =  1.0  !  -      -      -     -
-   rn_trfac(3)   =  1.0  !  multiplicative factor
-   rn_trfac(4)   =  1.0  !  -      -      -     -
-   rn_trfac(5)   =  1.0  !  -      -      -     -
-   rn_trfac(6)   =  1.0  !  -      -      -     -
-   rn_trfac(7)   =  1.0  !  -      -      -     -
-   rn_trfac(8)   =  1.0  !  -      -      -     -
-   rn_trfac(9)   =  1.0  !  -      -      -     -
-   rn_trfac(10)  =  1.0  !  -      -      -     -
-   cn_dir='./'
-/
 !-----------------------------------------------------------------------
 &namtrc_bdy     ! bdy for passive tracers
 !-----------------------------------------------------------------------
