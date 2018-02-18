@@ -22,6 +22,7 @@ run_id: Light_0_05feb17
 walltime: 3:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
+account: rrg-allen
 
 paths:
   # If relative, paths are taken from current directory
