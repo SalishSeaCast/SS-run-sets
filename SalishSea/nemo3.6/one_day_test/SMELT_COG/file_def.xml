@@ -42,6 +42,7 @@
           <field field_ref="MESZ"           name="mesozooplankton"/>
           <field field_ref="DIC"            name="dissolved_inorganic_carbon"/>
           <field field_ref="TA"             name="total_alkalinity"/>
+          <field field_ref="O2"             name="dissolved oxygen"/>
         </file>
      </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 2h files -->
@@ -98,7 +99,8 @@
           <field field_ref="TRA"            name="Fraser_tracer"/>
           <field field_ref="MESZ"           name="mesozooplankton"/>
           <field field_ref="DIC"            name="dissolved_inorganic_carbon"/>
-          <field field_ref="TA"             name="total_alkalinity"/>
+          <field field_ref="TA"             name="total_alkalinity"/
+          <field field_ref="O2"             name="dissolved_oxygen"/>>
         </file>
         <file id="file7" name_suffix="_dia2_T" description="smelt diagnostics B" >
           <field field_ref="GRMESZDIAT"      />
