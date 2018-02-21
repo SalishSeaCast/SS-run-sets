@@ -786,9 +786,11 @@
        <field id="NH4"          long_name="Ammonium Concentration"              standard_name="mole_concentration_of_ammonium_in_sea_water"  unit="mmol m-3" />
        <field id="NH4_E3T"      long_name="NH4 * E3T"                                unit="mmol/m2"  > NH4 * e3t </field >
        <field id="DIC"          long_name="Dissolved Inorganic C Concentration" standard_name="mole_concentration_of_dissolved_inorganic_carbon_in_sea_water"   unit="mmol m-3" />
-       <field id="DIC_E3T"      long_name="DIC * E3T"                                unit="mmol/m2"  > NO3 * e3t </field >
+       <field id="DIC_E3T"      long_name="DIC * E3T"                                unit="mmol/m2"  > DIC * e3t </field >
        <field id="TA"          long_name="Total Alkalinity Concentration"              standard_name="sea_water_alkalinity_expressed_as_mole_equivalent"  unit="mmol m-3" />
-       <field id="TA_E3T"      long_name="TA * E3T"                                unit="mmol/m2"  > NH4 * e3t </field >
+       <field id="TA_E3T"      long_name="TA * E3T"                                unit="mmol/m2"  > TA * e3t </field >
+      <field id="O2"          long_name="Total Alkalinity Concentration"              standard_name="dissolved_oxygen_expressed_as_mole_equivalent"  unit="mmol m-3" />
+      <field id="O2_E3T"      long_name="O2 * E3T"                                unit="mmol/m2"  > O2 * e3t </field >
 
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
        <field id="Num"         long_name="Number of organic particles"              unit="1" />
