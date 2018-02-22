@@ -1,0 +1,80 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! PISCES  (key_pisces) cfg namelist (see below for key_pisces_reduced)
+!!              1  - air-sea exchange                         (nampisext)
+!!              2  - biological parameters                    (nampisbio)
+!!              3  - parameters for nutrient limitations      (nampislim)    
+!!              4  - parameters for phytoplankton             (nampisprod,nampismort)
+!!              5  - parameters for zooplankton               (nampismes,nampiszoo)
+!!              6  - parameters for remineralization          (nampisrem)
+!!              7  - parameters for calcite chemistry         (nampiscal)
+!!              8  - parameters for inputs deposition         (nampissed)
+!!              9  - parameters for Kriest parameterization   (nampiskrp, nampiskrs)
+!!              10 - additional 2D/3D  diagnostics            (nampisdia)
+!!              11 - Damping                                  (nampisdmp)
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisbio     !   biological parameters
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisriv
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   Wd(1)= 0.6 ! sinking velocities, m/d
+   Wd(2)= 0.6
+   Wd(3)= 0.6
+   Wd(4)= 0.6
+   Wd(5)= 0.6
+   Wd(6)= 0.7
+   Wd(7)= 0.7
+   Wd(8)= 0.7
+   Wd(9)= 0.7
+   Wd(10)= 0.7
+   alpha_C(1) = 0.000001 ! transfer factor 1/(d NTU)
+   alpha_C(2) = 0.000005
+   alpha_C(3) = 0.00001
+   alpha_C(4) = 0.00005
+   alpha_C(5) = 0.0001
+   alpha_C(6) = 0.000001
+   alpha_C(7) = 0.000005
+   alpha_C(8) = 0.00001
+   alpha_C(9) = 0.00005
+   alpha_C(10) = 0.0005
+   beta_S(1) = 0 ! Sdep transfer (1/d)
+   beta_S(2) = 0 ! Sdep transfer (1/d)
+   beta_S(3) = 0 ! Sdep transfer (1/d)
+   beta_S(4) = 0 ! Sdep transfer (1/d)
+   beta_S(5) = 0 ! Sdep transfer (1/d)
+   beta_S(6) = 0 ! Sdep transfer (1/d)
+   beta_S(7) = 0 ! Sdep transfer (1/d)
+   beta_S(8) = 0 ! Sdep transfer (1/d)
+   beta_S(9) = 0 ! Sdep transfer (1/d)
+   beta_S(10) = 0 ! Sdep transfer (1/d)
+   sigma_S(1) = 0.5 ! spread factor
+   sigma_S(2) = 0.5 ! spread factor
+   sigma_S(3) = 0.5 ! spread factor
+   sigma_S(4) = 0.5 ! spread factor
+   sigma_S(5) = 0.5 ! spread factor
+   sigma_S(6) = 0.5 ! spread factor
+   sigma_S(7) = 0.5 ! spread factor
+   sigma_S(8) = 0.5 ! spread factor
+   sigma_S(9) = 0.5 ! spread factor
+   sigma_S(10) = 0.5 ! spread factor
+   S0(1) = 50.0 ! salinity threshold
+   S0(2) = 50.0 ! salinity threshold
+   S0(3) = 50.0 ! salinity threshold
+   S0(4) = 50.0 ! salinity threshold
+   S0(5) = 50.0 ! salinity threshold
+   S0(6) = 50.0 ! salinity threshold
+   S0(7) = 50.0 ! salinity threshold
+   S0(8) = 50.0 ! salinity threshold
+   S0(9) = 50.0 ! salinity threshold
+   S0(10) = 50.0 ! salinity threshold
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampissbc
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!              !  file name          ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !                     !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename       !
+   sn_turb  ='river_turb/riverTurbDaily2',       24,           'turb',       .true., .false.,  'daily',    '',        '',        ''
+   cn_dir      = 'rivers/'  ! root directory for the location of the runoff files
+/

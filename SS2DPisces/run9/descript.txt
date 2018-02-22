@@ -1,0 +1,6 @@
+based on run6
+closed domain
+no tides
+2 day run
+RGB light model on
+enable atmospheric forcing for light

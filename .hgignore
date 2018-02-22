@@ -1,0 +1,20 @@
+syntax: glob
+*.nc
+*.nc.bz2
+*.nc.gz
+*.nc.xz
+date.file
+layout.dat
+nam_rebuild
+ocean.output
+stdout
+stderr
+opa
+*.exe
+server.exe
+solver.stat
+time.step
+timing.output
+/data/tjarniko/MEOPAR/SS-run-sets/SalishSea/tereza/old/**
+/data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/old_runs/**
+/home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/old_runs/**

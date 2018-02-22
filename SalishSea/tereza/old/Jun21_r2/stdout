@@ -1,0 +1,10 @@
+-> report :  Performance report : total time spent for XIOS : 0.000152826 s
+-> report :  Performance report : time spent for waiting free buffer : 0 s
+-> report :  Performance report : Ratio : 0 %
+-> report :  Performance report : This ratio must be close to zero. Otherwise it may be usefull to increase buffer size or numbers of server
+-> report :  Memory report : Current buffer_size : 50000000
+-> report :  Memory report : Minimum buffer size required : 0
+-> report :  Memory report : increasing it by a factor will increase performance, depending of the volume of data wrote in file at each time step of the file
+-> report : Performance report : Time spent for XIOS : 0.0953739
+-> report : Performance report : Time spent in processing events : 0
+-> report : Performance report : Ratio : 0%
