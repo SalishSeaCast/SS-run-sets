@@ -9,7 +9,7 @@
 #  TRACE2 config
 #  1st run for sinking experiment
 
-config_name: TRACE2SC
+config_name: SMELT
 
 # How is the domain to be distributed over the processors in the
 # i (longitude) and j (latitude) directions?
@@ -18,8 +18,8 @@ config_name: TRACE2SC
 MPI decomposition: 16x39
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: TRACE2SC_05feb17
-walltime: 18:00:00
+run_id: spring2015_06feb15_s
+walltime: 3:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 
@@ -54,7 +54,8 @@ forcing:
     link to: tracers/initial
 
 restart:
-  restart.nc: $MEOPAR/NEMO-forcing/restarts/hindcast/SalishSea_01937520_restart.nc
+  restart.nc: $MEOPAR/NEMO-forcing/restarts/nowcastgreen_201802/SalishSea_00317520_restart.nc
+  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/nowcastgreen_201802/SalishSea_00317520_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -67,18 +68,18 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist_cfg_05feb17 
+    - ./namelist_cfg_06feb15 
   namelist_top_cfg:
     - ./namelist_top_cfg
-  namelist_trace2_cfg:
-    - ./namelist_trace2_cfg
+  namelist_smelt_cfg:
+    - ./namelist_smelt_cfg
 
 output:
   # If relative, paths are taken from current directory
-  iodefs: iodef_trace2xios2.xml
-  filedefs: file_def_trace2xios2.xml
-  domaindefs: domain_def_xios2.xml
-  fielddefs: field_def.xml.TRACE2
+  iodefs: iodef.xml
+  filedefs: file_def.xml
+  domaindefs: domain_def.xml
+  fielddefs: field_def.xml
   separate XIOS server: True
   XIOS servers: 1
 
