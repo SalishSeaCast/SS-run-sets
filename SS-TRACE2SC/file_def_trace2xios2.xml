@@ -5,7 +5,7 @@
 =                                         put the variables you want...                                    =
 ============================================================================================================
     -->
-    <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4">
+    <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4" split_freq="10d" split_freq_format= "%y%mo%d">
       <file_group id="1ts" output_freq="1ts"  output_level="10" compression_level="4" enabled=".TRUE."/> <!-- 1 time step files -->
       <file_group id="1h" output_freq="1h" output_level="10" compression_level="4" enabled=".TRUE."> <!-- 1h files -->
     	<file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
