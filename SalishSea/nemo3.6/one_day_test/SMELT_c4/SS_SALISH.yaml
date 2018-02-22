@@ -29,7 +29,7 @@ forcing:
   bfr_coef.nc:
     link to: /data/$USER/MEOPAR/grid/jetty_mask_bathy201702.nc
   initial_data_file.nc:
-    link to: /data/$USER/MEOPAR/tracers/initial/Bathy201702_initial.nc
+    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/SMELT_c4/init_DICTA_Jan17B.nc
 #restart:
 #  restart.nc: /results/SalishSea/nowcast-green/25oct17/SalishSea_02505600_restart.nc
 #  restart_trc.nc: /results/SalishSea/nowcast-green/25oct17/SalishSea_02505600_restart_trc.nc
@@ -54,10 +54,10 @@ namelists:
 
 output:
   XIOS servers: 1
-  iodefs: /data/$USER/MEOPAR/SS-run-sets/v201702/iodef.xml
-  filedefs: /data/$USER/MEOPAR/SS-run-sets/v201702/file_def.xml
+  iodefs: ./iodef.xml
+  filedefs: ./file_def.xml
   domaindefs: /data/$USER/MEOPAR/SS-run-sets/v201702/domain_def.xml
-  fielddefs: /data/$USER/MEOPAR/SS-run-sets/v201702/field_def.xml
+  fielddefs: ./field_def.xml
   separate XIOS server: true
 
 vcs revisions:
