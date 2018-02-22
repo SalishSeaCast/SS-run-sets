@@ -18,8 +18,8 @@ config_name: TRACE2SC
 MPI decomposition: 16x39
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: TRACE2SC_05feb17
-walltime: 18:00:00
+run_id: TRACE2SC_17mar17
+walltime: 12:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 
@@ -50,11 +50,10 @@ forcing:
     link to: rivers
   bfr_coef.nc:
     link to: grid/jetty_mask_bathy201702.nc
-  initial_green:
-    link to: tracers/initial
 
 restart:
-  restart.nc: $MEOPAR/NEMO-forcing/restarts/hindcast/SalishSea_01937520_restart.nc
+  restart.nc: $SCRATCH/results/TRACE2SC_05feb17_long/SalishSea_02023920_restart.nc
+  restart_trc.nc: $SCRATCH/results/TRACE2SC_05feb17_long/SalishSea_02023920_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -67,9 +66,9 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist_cfg_05feb17 
+    - ./namelist_cfg_17mar17_long 
   namelist_top_cfg:
-    - ./namelist_top_cfg
+    - ./namelist_top_cfg_restart
   namelist_trace2_cfg:
     - ./namelist_trace2_cfg
 
