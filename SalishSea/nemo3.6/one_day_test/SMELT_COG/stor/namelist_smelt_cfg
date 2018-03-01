@@ -38,7 +38,6 @@
    sn_rivertra  ='bio/rivers_bio_tracers',      24,                 'tur',       .true.,       .true.,  'daily',    '',        '',        ''
    sn_riverdic  ='bio/rivers_bio_tracers',      24,                 'no3',       .true.,       .true.,  'daily',    '',        '',        ''
    sn_riverta  ='bio/rivers_bio_tracers',      24,                 'no3',       .true.,       .true.,  'daily',    '',        '',        ''
-   sn_rivero2  ='bio/rivers_bio_tracers',      24,                 'no3',       .true.,       .true.,  'daily',    '',        '',        ''
    cn_dir       = 'rivers-climatology/'  ! root directory for the location of the runoff files
    ln_river = .true.
    ln_turb = .false.
@@ -85,7 +84,6 @@
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    zz_redfield_c_n = 6.625     ! Redfield ratio carbon to nitrogen
    zz_redfield_p_n = 0.0625    ! Redfield ratio phosphorus to nitrogen
-   zz_redfield_o_n = 9.3750    ! Redfield ratio oxygen to nitrogen
 /
 
 
