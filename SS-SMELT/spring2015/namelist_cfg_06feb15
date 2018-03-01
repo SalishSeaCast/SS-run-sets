@@ -11,7 +11,7 @@
    nn_date0    =  20150206    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
                               ! used to adjust tides to run date (regardless of restart control)
    nn_leapy    =       1      ! Leap year calendar (1) or not (0)
-   ln_rstart   =  .true.     ! start from rest (F) or from a restart file (T)
+   ln_rstart   =   .true.     ! start from rest (F) or from a restart file (T)
    nn_euler    =       1      !  = 0 : start with forward time step if ln_rstart=T
    nn_rstctl   =       1      ! restart control => activated only if ln_rstart = T
                               !   = 0 nn_date0 read in namelist
@@ -21,9 +21,11 @@
                               !   = 2 nn_date0 read in restart
                               !       nn_it000 check consistency between namelist and restart
    nn_istate   =       0      ! output the initial state (1) or not (0)
-   nn_stock    =   10800      ! frequency of creation of a restart file (modulo referenced to 1)
    ln_cfmeta   =  .true.      !  output additional data to netCDF files required for compliance with the CF metadata standard
    ln_clobber  =  .true.      ! clobber (overwrite) an existing file
+
+   ln_rst_list  = .true.       !  output restarts at list of times using nn_stocklist (T) or at set frequency with nn_stock (F)
+   nn_stocklist = 2736720, 0, 0, 0, 0, 0, 0, 0, 0, 0  ! List of timesteps when a restart file is to be written
 &end
 
 
@@ -102,9 +104,9 @@
 !-----------------------------------------------------------------------
 !              ! file name                       ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
 !              !                                 ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
- sn_tem  = 'Bathy201702_initial.nc',                -12,           'tn',   .false., .true.,  'yearly', '',        ''
- sn_sal  = 'Bathy201702_initial.nc',                -12,           'sn',   .false., .true.,  'yearly', '',        ''
- cn_dir        = 'initial_strat/'  ! directory containing initial condition files
+ sn_tem  = 'initial_data_file.nc',                -12,           'tn',   .false., .true.,  'yearly', '',        ''
+ sn_sal  = 'initial_data_file.nc',                -12,           'sn',   .false., .true.,  'yearly', '',        ''
+ cn_dir        = './'              ! directory containing initial condition files
  ln_tsd_init   = .true.            ! Initialisation of ocean T & S with T &S input data (T) or not (F)
  ln_tsd_tradmp = .false.           ! damping of ocean T & S toward T &S input data (T) or not (F)
 &end
@@ -113,15 +115,15 @@
 !!======================================================================
 !!            ***  Surface Boundary Condition namelists  ***
 !!
-!! sets boundary conditions for surface features.  Note that this file
-!! only includes the subset of namelists we use and furthermore only
-!! the variables we typically change.
+!! sets boundary conditions for surface features and rivers.  Note that
+!! this file only includes the subset of namelists we use and furthermore
+!! only the variables we typically change. Note that incoming solar
+!! radiation has its own namelist file
 !!======================================================================
 !! Included namelists:
 !!   namsbc          surface boundary condition
 !!   namsbc_ana      analytical         formulation
 !!   namsbc_core     CORE bulk formulae formulation
-!!   namtra_qsr      penetrative solar radiation
 !!   namsbc_rnf      river runoffs
 !!   namsbc_apr      Atmospheric Pressure
 !!======================================================================
@@ -133,7 +135,6 @@
 !!   namsbc_sas      StAndalone Surface module
 !!   namsbc_isf      ice shelf melting/freezing
 !!   namsbc_ssr      sea surface restoring term (for T and/or S)
-!!   namsbc_alb      albedo parameters
 !!   namsbc_wave     external fields from wave model
 !!======================================================================
 !!
@@ -186,24 +187,15 @@
 &end
 
 !-----------------------------------------------------------------------
-&namtra_qsr    !   penetrative solar radiation
-!-----------------------------------------------------------------------
-   ln_qsr_rgb  = .false.  !  RGB (Red-Green-Blue) light penetration
-   ln_qsr_2bd  = .false.   !  2 bands              light penetration
-   ln_qsr_bio  = .true.   !  bio-model light penetration
-   nn_chldta   = 0        !  RGB : Chl data (=1) or cst value (=0)
-&end
-
-!-----------------------------------------------------------------------
 &namsbc_rnf    !   runoffs namelist surface boundary condition
 !-----------------------------------------------------------------------
-!             !  file name         ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
-!             !                    !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
-  sn_rnf      = 'R201702DFraCElse',        24,          'rorunoff',  .true.,       .false., 'daily',    '',        ''
-  sn_cnf      = 'runoff_1m_nomask',        0,           'socoefr0',  .false.,      .true.,  'yearly',   '',        ''
-  sn_s_rnf    = '',                       24,           'rosaline',  .false.,      .true.,  'yearly',   '',        ''
-  sn_t_rnf    = 'rivers_ConsTemp_month',  -1,           'rotemper',  .true.,       .true.,  'yearly',   '',        ''
-  sn_dep_rnf  = 'rivers_month_201702',  -1,             'rodepth' ,  .true.,       .true.,  'yearly',   '',        ''
+!             !  file name              ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
+!             !                         !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
+  sn_rnf      = 'R201702DFraCElse',       24,                'rorunoff', .true.,        .false., 'daily',    '',        ''
+  sn_cnf      = ''                 ,       0,                'socoefr0', .false.,       .true.,  'yearly',   '',        ''
+  sn_s_rnf    = '',                       24,                'rosaline', .false.,       .true.,  'yearly',   '',        ''
+  sn_t_rnf    = 'rivers_ConsTemp_month',  -1,                'rotemper', .true.,        .true.,  'yearly',   '',        ''
+  sn_dep_rnf  = 'rivers_month_201702',    -1,                'rodepth' , .true.,        .true.,  'yearly',   '',        ''
 
   cn_dir       = 'rivers/'  !  root directory for the location of the runoff files
   ln_rnf_mouth = .false.    !  specific treatment at rivers mouths
@@ -221,6 +213,35 @@
 
   cn_dir      = 'NEMO-atmos/'  !  root directory for the location of the bulk files
   ln_apr_obc  = .false.        !  inverse barometer added to OBC ssh data
+&end
+
+
+
+
+
+
+!!======================================================================
+!!   ***  Incoming Solar Radiation Boundary Condition namelists  ***
+!!
+!! sets incoming light and its penetration. Note that this file
+!! only includes the subset of namelists we use and furthermore only
+!! the variables we typically change.
+!!======================================================================
+!! Included namelists:
+!!   namtra_qsr      penetrative solar radiation
+!!======================================================================
+!! Not included namelists:
+!!   namsbc_alb      albedo parameters
+!!======================================================================
+!!
+!!
+!-----------------------------------------------------------------------
+&namtra_qsr    !   penetrative solar radiation
+!-----------------------------------------------------------------------
+   ln_qsr_rgb  = .false.  !  RGB (Red-Green-Blue) light penetration
+   ln_qsr_2bd  = .false.   !  2 bands              light penetration
+   ln_qsr_bio  = .true.   !  bio-model light penetration
+   nn_chldta   = 0        !  RGB : Chl data (=1) or cst value (=0)
 &end
 
 
@@ -276,7 +297,7 @@
     rn_time_dmp   =  365., 365.            ! Damping time scale in days (nudging on orlanski inflow)
     rn_time_dmp_out =  365., 365.          ! Outflow damping time scale (nudging on orlanski outflow)
     rn_max_sponge = 50., 50.               ! max viscosity for sponge layer (m2/s)
-    nn_rimwidth   = 10, 10
+    nn_rimwidth   = 10, 10                  ! rim depth for FRS
 &end
 
 
@@ -284,8 +305,8 @@
 !-----------------------------------------------------------------------
     ctypebdy = 'W'
     nbdyind   = 2     ! i-index for segment
-    nbdybeg   = 385   ! j-index for segment beginning
-    nbdyend   = 471   ! j-index for segment end
+    nbdybeg   = 376   ! j-index for segment beginning
+    nbdyend   = 470   ! j-index for segment end
 &end
 
 
@@ -298,15 +319,15 @@
   bn_v2d = 'ssh/hindcast/ssh',                1,                'vobtcrty', .true.,        .false.,  'daily',    '',        ''
   bn_u3d = '',                      24,                'vozocrtx', .true.,        .false.,  'daily',    '',        ''
   bn_v3d = '',                      24,                'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'SalishSea_west_TEOS10', 168,                'votemper', .true.,        .true.,   'yearly',   '',        ''
-  bn_sal = 'SalishSea_west_TEOS10', 168,                'vosaline', .true.,        .true.,   'yearly',   '',        ''
+  bn_tem = 'SalishSea_west_TEOS10',   168,                'votemper', .true.,        .true.,  'yearly',   '',        ''
+  bn_sal = 'SalishSea_west_TEOS10',   168,                'vosaline', .true.,        .true.,  'yearly',   '',        ''
 
   cn_dir = 'open_boundaries/west/'
 &end
 
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide          = 'open_boundaries/west/tides/SalishSea_N36_AF_west_tide_'
+   filtide          = 'tides/west/SalishSea_N36_long_west_tide_'
    ln_bdytide_2ddta = .false.
    ln_bdytide_conj  = .false.
 &end
@@ -316,22 +337,22 @@
 !-----------------------------------------------------------------------
     ctypebdy  = 'N'
     nbdyind   = 896  ! i-index for segment
-    nbdybeg   = 40   ! j-index for segment beginning
-    nbdyend   = 72   ! j-index for segment end
+    nbdybeg   = 42   ! j-index for segment beginning
+    nbdyend   = 71   ! j-index for segment end
 &end
 
 
 &nambdy_dta      !  open boundaries - external data           ("key_bdy")
 !-----------------------------------------------------------------------
-!        !  file name             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
-!        !                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
-  bn_ssh = 'ssh/sshNorth',	           1,               'sossheig', .true.,        .false.,  'monthly',  '',        ''
-  bn_u2d = 'ssh/sshNorth',	           1,               'vobtcrtx', .true.,        .false.,  'monthly',  '',        ''
-  bn_v2d = 'ssh/sshNorth',	           1,               'vobtcrty', .true.,        .false.,  'monthly',  '',        ''
-  bn_u3d = '',                        24,               'vozocrtx', .true.,        .false.,  'daily',    '',        ''
-  bn_v3d = '',                        24,               'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'SalishSea_north_TEOS10',  4380,               'votemper', .true.,        .true.,   'yearly',   '',        ''
-  bn_sal = 'SalishSea_north_TEOS10',  4380,               'vosaline', .true.,        .true.,   'yearly',   '',        ''
+!        !  file name                             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
+!        !                                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
+  bn_ssh = '',                                         1,              'sossheig', .true.,        .false.,  'monthly',  '',        ''
+  bn_u2d = '',                                         1,              'vobtcrtx', .true.,        .false.,  'monthly',  '',        ''
+  bn_v2d = '',                                         1,              'vobtcrty', .true.,        .false.,  'monthly',  '',        ''
+  bn_u3d = '',                                        24,              'vozocrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v3d = '',                                        24,              'vomecrty', .true.,        .false.,  'daily',    '',        ''
+  bn_tem = 'SalishSea_north_TEOS10',  4380,              'votemper', .true.,        .true.,   'yearly',   '',        ''
+  bn_sal = 'SalishSea_north_TEOS10',  4380,              'vosaline', .true.,        .true.,   'yearly',   '',        ''
 
   cn_dir = 'open_boundaries/north/'
   ln_full_vel = .false.
@@ -339,7 +360,7 @@
 
 &nambdy_tide     ! tidal forcing at open boundaries
 !-----------------------------------------------------------------------
-   filtide          = 'open_boundaries/north/tides/SalishSea_N36_AF_North_tide_'
+   filtide          = 'tides/north/SalishSea_N36_AF_North_tide_'
    ln_bdytide_2ddta = .false.
    ln_bdytide_conj  = .false.
 &end
@@ -432,6 +453,7 @@
 !
     ln_traadv_tvd     = .false.
     ln_traadv_tvd_zts = .true.  ! TVD scheme with sub timestepping for vertical tracer advection
+    nn_traadv_tvd_zts=     20      !     number of sub-time steps for ln_traadv_tvd_zts=T
 &end
 
 
@@ -461,6 +483,7 @@
    ln_dynadv_cen2= .false. !  flux form - 2nd order centered scheme
    ln_dynadv_ubs = .false. !  flux form - 3rd order UBS      scheme
    ln_dynzad_zts = .true.  !  Use (T) sub timestepping for vertical momentum advection
+   nn_dynzad_zts =   20    !     number of sub-time steps for ln_dynzad_zts=T
 &end
 
 
@@ -504,7 +527,7 @@
    ln_dynldf_hor    =  .true.  !  horizontal (geopotential)   (require "key_ldfslp" in s-coord.)
    ln_dynldf_iso    =  .false.   !  iso-neutral                 (require "key_ldfslp")
    !                            !  Coefficient
-   rn_ahm_0_lap     =   1.1     !  horizontal laplacian eddy viscosity   [m2/s]
+   rn_ahm_0_lap     =   1.5     !  horizontal laplacian eddy viscosity   [m2/s]
    rn_ahmb_0        =     0.    !  background eddy viscosity for ldf_iso [m2/s]
    rn_ahm_0_blp     =  -1.0e+10 !  horizontal bilaplacian eddy viscosity [m4/s]
    rn_cmsmag_1      =     3.    !  constant in laplacian Smagorinsky viscosity
@@ -554,9 +577,9 @@
                            !  buffer blocking send or immediate non-blocking sends, resp.
    nn_buffer   =   0       !  size in bytes of exported buffer ('B' case), 0 no exportation
    ln_nnogather=  .false.  !  activate code to avoid mpi_allgather use at the northfold
-   jpni        =   12       !  jpni   number of processors following i (set automatically if < 1)
-   jpnj        =   22       !  jpnj   number of processors following j (set automatically if < 1)
-   jpnij       =   155       !  jpnij  number of local domains (set automatically if < 1)
+   jpni        =   9       !  jpni   number of processors following i (set automatically if < 1)
+   jpnj        =   19       !  jpnj   number of processors following j (set automatically if < 1)
+   jpnij       =   111       !  jpnij  number of local domains (set automatically if < 1)
 &end
 
 
