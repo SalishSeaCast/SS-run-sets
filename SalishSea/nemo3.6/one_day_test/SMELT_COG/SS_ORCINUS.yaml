@@ -1,8 +1,8 @@
-config_name: SMELT_c4
+config_name: SMELT_COG
 MPI decomposition: 12x22
 walltime: 14:00:00
 run_id: 26oct17nowcast-dev
-config_name: SMELT_c4
+config_name: SMELT_COG
 email: tjarnik@gmail.com
 
 paths:
@@ -35,7 +35,7 @@ forcing:
   tracers:
     link to: $HOME/MEOPAR/tracers
   initial_data_file.nc:
-    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/SMELT_c4/init_DICTA_Jan17B.nc
+    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/SMELT_c4/init_DICTA_Jan17C.nc
   open_boundaries:
     link to: open_boundaries
   bfr_coef.nc:
