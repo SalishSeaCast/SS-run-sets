@@ -1,6 +1,6 @@
 config_name: SMELT_COG
 MPI decomposition: 12x22
-walltime: 14:00:00
+walltime: 22:00:00
 run_id: 26oct17nowcast-dev
 config_name: SMELT_COG
 email: tjarnik@gmail.com
@@ -35,7 +35,7 @@ forcing:
   tracers:
     link to: $HOME/MEOPAR/tracers
   initial_data_file.nc:
-    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/SMELT_c4/init_DICTA_Jan17C.nc
+    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/SMELT_COG30day/init_DICTA_Jan17D.nc
   open_boundaries:
     link to: open_boundaries
   bfr_coef.nc:
@@ -47,7 +47,7 @@ forcing:
 
 namelists:
    namelist_cfg:
-    - ./namelist.time
+    - ./namelist.time1
     - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.domain
     - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.atmos_rivers
     - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.light_blue
