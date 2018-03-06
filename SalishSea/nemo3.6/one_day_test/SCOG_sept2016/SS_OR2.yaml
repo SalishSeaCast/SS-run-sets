@@ -61,7 +61,7 @@ namelists:
     - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.compute
 
    namelist_top_cfg:
-    - ./namelist_top_cfg  
+    - ./namelist_top_cfg_RES 
    namelist_smelt_cfg:
     - ./namelist_smelt_cfg
 output:
