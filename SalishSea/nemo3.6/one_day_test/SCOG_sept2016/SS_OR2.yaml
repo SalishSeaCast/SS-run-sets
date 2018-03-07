@@ -45,7 +45,11 @@ forcing:
   initial_strat:
     link to: /home/tjarnik/MEOPAR/NEMO-forcing/initial_strat
 
-
+restart:
+  restart.nc:
+    link to: /home/tjarnik/results/mar5_sept2016_1/SalishSea_00021601_restart.nc
+  restart_trc.nc:
+    link to: /home/tjarnik/results/mar5_sept2016_1/SalishSea_00021600_restart_trc.nc
 
 namelists:
    namelist_cfg:
