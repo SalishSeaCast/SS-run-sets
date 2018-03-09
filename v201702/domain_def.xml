@@ -96,6 +96,8 @@
       <domain id="VENUS_east_gridded_W"    domain_ref="grid_W"> <zoom_domain ibegin="282" jbegin="415" ni="2"  nj="2"  /> </domain>
       <domain id="VENUS_central_gridded_W" domain_ref="grid_W"> <zoom_domain ibegin="265" jbegin="423" ni="2"  nj="2"  /> </domain>
       <domain id="VENUS_delta_gridded_W"   domain_ref="grid_W"> <zoom_domain ibegin="283" jbegin="424" ni="2"  nj="2"  /> </domain>
+      <!-- Boundary Conditions for FVCOM -->
+      <domain id="FVCOM_W"                 domain_ref="grid_W"> <zoom_domain ibegin="225" jbegin="340" ni="144" nj="221" /> </domain>
    </domain_group>
 
 
