@@ -161,13 +161,20 @@
              <field field_ref="woce" name="vovecrtz" grid_ref="VENUS_delta_gridded_grid_W"/>
         </file>
         <file id="FVCOM_T" name="FVCOM_T" description="FVCOM boundary conditions, 10 minutes, ssh">
-	     <field field_ref="ssh" name="sossheig" operation="instant" grid_ref="FVCOM_grid_T"/>
+          <field field_ref="ssh" name="sossheig" operation="instant" grid_ref="FVCOM_grid_T_2D"/>
+          <field field_ref="toce" name="cons_temp" operation="instant" grid_ref="FVCOM_grid_T_3D"/>
+          <field field_ref="soce" name="ref_salinity" operation="instant" grid_ref="FVCOM_grid_T_3D"/>
         </file>
-        <file id="FVCOM_U" name="FVCOM_U" description="FVCOM boundary conditions, 10 minutes, barotropic u">
-	     <field field_ref="ubar" name="ubarotropic" operation="instant" grid_ref="FVCOM_grid_U"/>
+        <file id="FVCOM_U" name="FVCOM_U" description="FVCOM boundary conditions, 10 minutes, barotropic and 3d u">
+          <field field_ref="ubar" name="ubarotropic" operation="instant" grid_ref="FVCOM_grid_U_2D"/>
+          <field field_ref="uoce" name="uvelocity" operation="instant" grid_ref="FVCOM_grid_U_3D"/>
         </file>
-        <file id="FVCOM_V" name="FVCOM_V" description="FVCOM boundary conditions, 10 minutes, barotropic v">
-	     <field field_ref="vbar" name="vbarotropic" operation="instant" grid_ref="FVCOM_grid_V"/>
+        <file id="FVCOM_V" name="FVCOM_V" description="FVCOM boundary conditions, 10 minutes, barotropic and 3d v">
+          <field field_ref="vbar" name="vbarotropic" operation="instant" grid_ref="FVCOM_grid_V_2D"/>
+          <field field_ref="voce" name="vvelocity" operation="instant" grid_ref="FVCOM_grid_V_3D"/>
+        </file>
+        <file id="FVCOM_W" name="FVCOM_W" description="FVCOM boundary conditions, 10 minutes, 3d w">
+          <field field_ref="woce" name="wvelocity" operation="instant" grid_ref="FVCOM_grid_W_3D"/>
         </file>
 
       </file_group>
