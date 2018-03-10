@@ -64,7 +64,8 @@
       <domain id="CODAR_U"                 domain_ref="grid_U"> <zoom_domain ibegin="241" jbegin="381" ni="80" nj="80" /> </domain>
       <!-- Surface Slab -->
       <domain id="two_straits_U"           domain_ref="grid_U"> <zoom_domain ibegin="10"  jbegin="200" ni="355" nj="540" /> </domain>
-
+      <!-- Boundary -->
+      <domain id="WB_U"                    domain_ref="grid_U"> <zoom_domain ibegin="1" jbegin="370" ni="10"  nj="120"  /> </domain>
    </domain_group>
 
    <domain_group id="grid_V">
@@ -79,6 +80,8 @@
       <domain id="CODAR_V"                 domain_ref="grid_V"> <zoom_domain ibegin="241" jbegin="381" ni="80" nj="80" /> </domain>
       <!-- Surface Slab -->
       <domain id="two_straits_V"           domain_ref="grid_V"> <zoom_domain ibegin="10"  jbegin="200" ni="355" nj="540" /> </domain>
+      <!-- Boundary -->
+      <domain id="NB_V"                    domain_ref="grid_V"> <zoom_domain ibegin="30" jbegin="888" ni="30"  nj="10"  /> </domain>
    </domain_group>
 
    <domain_group id="grid_W">

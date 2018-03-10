@@ -108,6 +108,9 @@
      <!-- Two Straits -->
      <grid id="two_straits_grid_U">           <domain domain_ref="two_straits_U"/> <axis axis_ref="nearsurface_U"/> </grid>
      <grid id="two_straits_grid_V">           <domain domain_ref="two_straits_V"/> <axis axis_ref="nearsurface_V"/> </grid>
+     <!-- Boundaries -->
+     <grid id="WB_grid_U">           <domain domain_ref="WB_U"/> <axis id="depthu"/> </grid>
+     <grid id="NB_grid_V">           <domain domain_ref="NB_V"/> <axis id="depthv"/> </grid>
 
      <!-- Tide Points Baynes Sound -->
      <grid id="BaynesSound_grid">             <domain domain_ref="BaynesSound"/>              </grid>
