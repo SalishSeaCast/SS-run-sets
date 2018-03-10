@@ -41,30 +41,30 @@
           <field field_ref="MESZ"           name="mesozooplankton"/>
         </file>
         <file id="file6" name_suffix="_WB_tran_U" description="biogeochemical U transports" >
-          <field field_ref="NO3_UT"        grid_ref="WB_U"/> 
-          <field field_ref="NH4_UT"        grid_ref="WB_U"/>
-          <field field_ref="Si_UT"         grid_ref="WB_U"/>
-          <field field_ref="DIAT_UT"       grid_ref="WB_U"/>
-          <field field_ref="PHY_UT"        grid_ref="WB_U"/>
-          <field field_ref="MYRI_UT"       grid_ref="WB_U"/>
-          <field field_ref="MICZ_UT"       grid_ref="WB_U"/>
-          <field field_ref="DON_UT"        grid_ref="WB_U"/>
-          <field field_ref="PON_UT"        grid_ref="WB_U"/>
-          <field field_ref="bSi_UT"        grid_ref="WB_U"/>
-          <field field_ref="TRA_UT"        grid_ref="WB_U"/>
+          <field field_ref="NO3_UT"        grid_ref="WB_grid_U"/> 
+          <field field_ref="NH4_UT"        grid_ref="WB_grid_U"/>
+          <field field_ref="Si_UT"         grid_ref="WB_grid_U"/>
+          <field field_ref="DIAT_UT"       grid_ref="WB_grid_U"/>
+          <field field_ref="PHY_UT"        grid_ref="WB_grid_U"/>
+          <field field_ref="MYRI_UT"       grid_ref="WB_grid_U"/>
+          <field field_ref="MICZ_UT"       grid_ref="WB_grid_U"/>
+          <field field_ref="DON_UT"        grid_ref="WB_grid_U"/>
+          <field field_ref="PON_UT"        grid_ref="WB_grid_U"/>
+          <field field_ref="bSi_UT"        grid_ref="WB_grid_U"/>
+          <field field_ref="TRA_UT"        grid_ref="WB_grid_U"/>
         </file>
         <file id="file7" name_suffix="_NB_tran_V" description="biogeochemical V transports" >
-          <field field_ref="NO3_VT"        grid_ref="NB_V"/> 
-          <field field_ref="NH4_VT"        grid_ref="NB_V"/>
-          <field field_ref="Si_VT"         grid_ref="NB_V"/>
-          <field field_ref="DIAT_VT"       grid_ref="NB_V"/>
-          <field field_ref="PHY_VT"        grid_ref="NB_V"/>
-          <field field_ref="MYRI_VT"       grid_ref="NB_V"/>
-          <field field_ref="MICZ_VT"       grid_ref="NB_V"/>
-          <field field_ref="DON_VT"        grid_ref="NB_V"/>
-          <field field_ref="PON_VT"        grid_ref="NB_V"/>
-          <field field_ref="bSi_VT"        grid_ref="NB_V"/>
-          <field field_ref="TRA_VT"        grid_ref="NB_V"/>
+          <field field_ref="NO3_VT"        grid_ref="NB_grid_V"/> 
+          <field field_ref="NH4_VT"        grid_ref="NB_grid_V"/>
+          <field field_ref="Si_VT"         grid_ref="NB_grid_V"/>
+          <field field_ref="DIAT_VT"       grid_ref="NB_grid_V"/>
+          <field field_ref="PHY_VT"        grid_ref="NB_grid_V"/>
+          <field field_ref="MYRI_VT"       grid_ref="NB_grid_V"/>
+          <field field_ref="MICZ_VT"       grid_ref="NB_grid_V"/>
+          <field field_ref="DON_VT"        grid_ref="NB_grid_V"/>
+          <field field_ref="PON_VT"        grid_ref="NB_grid_V"/>
+          <field field_ref="bSi_VT"        grid_ref="NB_grid_V"/>
+          <field field_ref="TRA_VT"        grid_ref="NB_grid_V"/>
         </file>
      </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 2h files -->
