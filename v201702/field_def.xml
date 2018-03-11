@@ -804,6 +804,50 @@
        <field id="C14B_E3T"    long_name="C14B * E3T"                               unit="m"  > C14B * e3t </field >
      </field_group>
 
+     <!-- SMELT Advective Transports of Tracers - U Grid  -->
+     <field_group id="tran_U" grid_ref="grid_U_3D">
+       <field id="TRA_UT"   long_name="Fraser River Turbidity Tracer - U Transport"       standard_name="TRA_u_dy_dz"      unit="NTU m3 s-1" />
+       <field id="PON_UT"   long_name="Particulate Organic N Concentration - U Transport" standard_name="PON_u_dy_dz"      unit="mmol s-1" />
+       <field id="Si_UT"    long_name="Silicon Concentration - U Transport"               standard_name="Si_u_dy_dz"       unit="mmol s-1" />
+       <field id="PHY_UT"   long_name="Flagellates Concentration - U Transport"           standard_name="PHY_u_dy_dz"      unit="mmol s-1" />
+       <field id="MICZ_UT"  long_name="Microzooplankton Concentration - U Transport"      standard_name="MICZ_u_dy_dz"     unit="mmol s-1" />
+       <field id="DON_UT"   long_name="Dissolved Organic N Concentration - U Transport"   standard_name="DON_u_dy_dz"      unit="mmol s-1" />
+       <field id="DIAT_UT"  long_name="Diatoms Concentration - U Transport"               standard_name="DIAT_u_dy_dz"     unit="mmol s-1" />
+       <field id="MYRI_UT"  long_name="Mesodinium rubrum Concentration - U Transport"     standard_name="MYRI_u_dy_dz"     unit="mmol s-1" />
+       <field id="bSi_UT"   long_name="Biogenic Silicon Concentration - U Transport"      standard_name="bSi_u_dy_dz"      unit="mmol s-1" />
+       <field id="NO3_UT"   long_name="Nitrate Concentration - U Transport"               standard_name="NO3_u_dy_dz"      unit="mmol s-1" />
+       <field id="NH4_UT"   long_name="Ammonium Concentration - U Transport"              standard_name="NH4_u_dy_dz"      unit="mmol s-1" />
+     </field_group>
+
+     <!-- SMELT Advective Transports of Tracers - V Grid  -->
+     <field_group id="tran_V" grid_ref="grid_V_3D">
+       <field id="TRA_VT"   long_name="Fraser River Turbidity Tracer - V Transport"       standard_name="TRA_v_dx_dz"      unit="NTU m3 s-1" />
+       <field id="PON_VT"   long_name="Particulate Organic N Concentration - V Transport" standard_name="PON_v_dx_dz"      unit="mmol s-1" />
+       <field id="Si_VT"    long_name="Silicon Concentration - V Transport"               standard_name="Si_v_dx_dz"       unit="mmol s-1" />
+       <field id="PHY_VT"   long_name="Flagellates Concentration - V Transport"           standard_name="PHY_v_dx_dz"      unit="mmol s-1" />
+       <field id="MICZ_VT"  long_name="Microzooplankton Concentration - V Transport"      standard_name="MICZ_v_dx_dz"     unit="mmol s-1" />
+       <field id="DON_VT"   long_name="Dissolved Organic N Concentration - V Transport"   standard_name="DON_v_dx_dz"      unit="mmol s-1" />
+       <field id="DIAT_VT"  long_name="Diatoms Concentration - V Transport"               standard_name="DIAT_v_dx_dz"     unit="mmol s-1" />
+       <field id="MYRI_VT"  long_name="Mesodinium rubrum Concentration - V Transport"     standard_name="MYRI_v_dx_dz"     unit="mmol s-1" />
+       <field id="bSi_VT"   long_name="Biogenic Silicon Concentration - V Transport"      standard_name="bSi_v_dx_dz"      unit="mmol s-1" />
+       <field id="NO3_VT"   long_name="Nitrate Concentration - V Transport"               standard_name="NO3_v_dx_dz"      unit="mmol s-1" />
+       <field id="NH4_VT"   long_name="Ammonium Concentration - V Transport"              standard_name="NH4_v_dx_dz"      unit="mmol s-1" />
+     </field_group>
+
+     <!-- SMELT Advective Transports of Tracers - W Grid  -->
+     <field_group id="tran_W" grid_ref="grid_W_3D">
+       <field id="TRA_WT"   long_name="Fraser River Turbidity Tracer - W Transport"       standard_name="TRA_w_dy_dx"      unit="NTU m3 s-1" />
+       <field id="PON_WT"   long_name="Particulate Organic N Concentration - W Transport" standard_name="PON_w_dy_dx"      unit="mmol s-1" />
+       <field id="Si_WT"    long_name="Silicon Concentration - W Transport"               standard_name="Si_w_dy_dx"       unit="mmol s-1" />
+       <field id="PHY_WT"   long_name="Flagellates Concentration - W Transport"           standard_name="PHY_w_dy_dx"      unit="mmol s-1" />
+       <field id="MICZ_WT"  long_name="Microzooplankton Concentration - W Transport"      standard_name="MICZ_w_dy_dx"     unit="mmol s-1" />
+       <field id="DON_WT"   long_name="Dissolved Organic N Concentration - W Transport"   standard_name="DON_w_dy_dx"      unit="mmol s-1" />
+       <field id="DIAT_WT"  long_name="Diatoms Concentration - W Transport"               standard_name="DIAT_w_dy_dx"     unit="mmol s-1" />
+       <field id="MYRI_WT"  long_name="Mesodinium rubrum Concentration - W Transport"     standard_name="MYRI_w_dy_dx"     unit="mmol s-1" />
+       <field id="bSi_WT"   long_name="Biogenic Silicon Concentration - W Transport"      standard_name="bSi_w_dy_dx"      unit="mmol s-1" />
+       <field id="NO3_WT"   long_name="Nitrate Concentration - W Transport"               standard_name="NO3_w_dy_dx"      unit="mmol s-1" />
+       <field id="NH4_WT"   long_name="Ammonium Concentration - W Transport"              standard_name="NH4_w_dy_dx"      unit="mmol s-1" />
+     </field_group>
      <!-- PISCES additional diagnostics on T grid  -->
 
      <field_group id="diad_T" grid_ref="grid_T_3D">
