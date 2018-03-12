@@ -65,7 +65,7 @@
       <!-- Surface Slab -->
       <domain id="two_straits_U"           domain_ref="grid_U"> <zoom_domain ibegin="10"  jbegin="200" ni="355" nj="540" /> </domain>
       <!-- Boundary -->
-      <domain id="WB_U"                    domain_ref="grid_U"> <zoom_domain ibegin="1" jbegin="370" ni="10"  nj="120"  /> </domain>
+      <domain id="WB_U"                    domain_ref="grid_U"> <zoom_domain ibegin="1" jbegin="370" ni="20"  nj="120"  /> </domain>
    </domain_group>
 
    <domain_group id="grid_V">
@@ -81,7 +81,7 @@
       <!-- Surface Slab -->
       <domain id="two_straits_V"           domain_ref="grid_V"> <zoom_domain ibegin="10"  jbegin="200" ni="355" nj="540" /> </domain>
       <!-- Boundary -->
-      <domain id="NB_V"                    domain_ref="grid_V"> <zoom_domain ibegin="30" jbegin="888" ni="30"  nj="10"  /> </domain>
+      <domain id="NB_V"                    domain_ref="grid_V"> <zoom_domain ibegin="40" jbegin="878" ni="30"  nj="20"  /> </domain>
    </domain_group>
 
    <domain_group id="grid_W">
