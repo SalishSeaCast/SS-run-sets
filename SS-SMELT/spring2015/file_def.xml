@@ -39,7 +39,6 @@
           <field field_ref="bSi"            name="biogenic_silicon"/>
           <field field_ref="TRA"            name="Fraser_tracer"/>
           <field field_ref="MESZ"           name="mesozooplankton"/>
-          <field field_ref="e3t"           />
         </file>
         <file id="file6" name_suffix="_WB_tran_U" description="biogeochemical U transports" >
           <field field_ref="NO3_UT"        grid_ref="WB_grid_U"/> 
