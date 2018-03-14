@@ -14,7 +14,7 @@
    nn_dttrc      =  1        !  time step frequency for passive sn_tracers
    nn_writetrc   =  1      !  time step frequency for sn_tracer outputs
    ln_top_euler  = .false.    !  use Euler time-stepping for TOP
-   ln_rsttr      = .false.   !  start from a restart file (T) or not (F)
+   ln_rsttr      = .true.   !  start from a restart file (T) or not (F)
    nn_rsttr      =   0       !  restart control = 0 initial time step is not compared to the restart file value
                            !                  = 1 do not use the value in the restart file
                            !                  = 2 calendar parameters read in the restart file
@@ -58,9 +58,9 @@
    sn_trcdta(8)  = 'initial_data_file.nc'    ,        -12        ,  'TRNDON'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(9)  = 'initial_data_file.nc'    ,        -12        ,  'TRNPON'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(10) = 'initial_data_file.nc'    ,        -12        ,  'TRNbSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-  sn_trcdta(12) = 'initial_data_file.nc'    ,        -12        ,  'TRNDIC'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-  sn_trcdta(13) = 'initial_data_file.nc'    ,        -12        ,  'TRNTA'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(14) = 'initial_data_file.nc'    ,        -12        ,  'TRNNO3'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(12) = 'initial_data_file2.nc'    ,        -12        ,  'TRNDIC'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(13) = 'initial_data_file2.nc'    ,        -12        ,  'TRNTA'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(14) = 'initial_data_file2.nc'    ,        -12        ,  'TRNNO3'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    rn_trfac(1)   =  1.0  !  -      -      -     -
    rn_trfac(2)   =  1.0  !  -      -      -     -
    rn_trfac(3)   =  1.0  !  multiplicative factor
