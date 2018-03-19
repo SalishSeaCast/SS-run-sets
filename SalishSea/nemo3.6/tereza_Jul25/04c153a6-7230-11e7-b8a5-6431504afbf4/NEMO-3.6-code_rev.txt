@@ -1,7 +1,0 @@
-changset:   925:b1f610f8f5626579fda9a6a7513b6f1bee8ace98
-tag:        tip
-user:       Michael Dunphy <mdunphy@eoas.ubc.ca>
-date:       Thu Jul 13 13:38:27 2017 -07:00
-files:      NEMOGCM/CONFIG/mackenzie03/MY_SRC/sbcisf.F90 NEMOGCM/CONFIG/mackenzie03agrif/MY_SRC/sbcisf.F90
-description:
-Symlink sbcisf.F90 from SalishSea/MY_SRC in {mackenzie03,mackenzie03agrif}/MY_SRC
