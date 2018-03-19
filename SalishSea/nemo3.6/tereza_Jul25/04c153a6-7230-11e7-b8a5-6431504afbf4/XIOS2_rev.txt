@@ -1,7 +1,0 @@
-changset:   4:98a8fd0c50344b9fa6b9d044e0fbdd67d8a121cd
-tag:        tip
-user:       Doug Latornell <dlatornell@eoas.ubc.ca>
-date:       Sun Apr 23 18:45:49 2017 -07:00
-files:      .hgignore
-description:
-Don't track build products files and directories.
