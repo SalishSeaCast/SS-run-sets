@@ -148,7 +148,7 @@
    sn_trcobc(11) = 'tr_westDICTA.nc',             168,        'O2',       .true.,  .true.,  'yearly',   '',        '',   ''
    sn_trcobc(12) = 'tr_westDICTA.nc',             168,        'DIC',       .true.,  .true.,  'yearly',   '',        '',   ''
    sn_trcobc(13) = 'tr_westDICTA.nc',             168,        'TA',       .true.,  .true.,  'yearly',   '',        '',   ''
-   cn_dir_obc        =  './'      !  root directory for the location of OPEN data files
+   cn_dir_obc        =  '/data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SMELT_COG_withlocalBC/'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
    rn_trofac(2)   =  1.0  !  -      -      -     -
    rn_trofac(3)   =  1.0  !  multiplicative factor
@@ -183,7 +183,7 @@
    sn_trcobc(11) = 'tr_northDICTA.nc',               4380,        'O2',       .true.,  .true.,  'yearly',   '',      '',   ''
    sn_trcobc(12) = 'tr_northDICTA.nc',               4380,        'DIC',       .true.,  .true.,  'yearly',   '',      '',   ''
    sn_trcobc(13) = 'tr_northDICTA.nc',               4380,        'TA',       .true.,  .true.,  'yearly',   '',      '',   ''
-   cn_dir_obc        =  './'      !  root directory for the location of OPEN data files
+   cn_dir_obc        =  '/data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SMELT_COG_withlocalBC/'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
    rn_trofac(2)   =  1.0  !  -      -      -     -
    rn_trofac(3)   =  1.0  !  multiplicative factor
