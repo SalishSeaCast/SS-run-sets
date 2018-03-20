@@ -35,9 +35,9 @@ forcing:
   tracers:
     link to: $HOME/MEOPAR/tracers
   initial_data_file.nc:
-    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/SMELT_c4/init_DICTA_Jan17B.nc
+    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SMELT_COG_withlocalBC/init_DICTA_Jan17D.nc
   open_boundaries:
-    link to: open_boundaries
+    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SMELT_COG_withlocalBC
   bfr_coef.nc:
     link to: /home/tjarnik/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc #this does not exist.
   initial_strat:

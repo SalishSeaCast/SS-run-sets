@@ -35,9 +35,9 @@ forcing:
   tracers:
     link to: $HOME/MEOPAR/tracers
   initial_data_file.nc:
-    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/SCOG_sept2016/Init_PhysBio_02sept16.nc
+    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SCOG_sept2016/PhysBio_2sep16.nc
   initial_data_file2.nc:
-    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/SCOG_sept2016/init_DICTA_Jan17D.nc
+    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SCOG_sept2016/init_DICTA_Jan17D.nc
   open_boundaries:
     link to: open_boundaries
   bfr_coef.nc:
