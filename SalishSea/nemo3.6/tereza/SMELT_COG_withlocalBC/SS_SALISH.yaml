@@ -22,6 +22,8 @@ forcing:
     link to: /data/$USER/MEOPAR/rivers
   rivers-climatology:
     link to: /data/$USER/MEOPAR/rivers-climatology
+  open_boundaries:
+    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SMELT_COG_withlocalBC
   tides:
     link to: /data/$USER/MEOPAR/tides
   tracers:
@@ -29,7 +31,7 @@ forcing:
   bfr_coef.nc:
     link to: /data/$USER/MEOPAR/grid/jetty_mask_bathy201702.nc
   initial_data_file.nc:
-    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/one_day_test/SMELT_c4/init_DICTA_Jan17B.nc
+    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SMELT_COG_withlocalBC/init_DICTA_Jan17D.nc
 #restart:
 #  restart.nc: /results/SalishSea/nowcast-green/25oct17/SalishSea_02505600_restart.nc
 #  restart_trc.nc: /results/SalishSea/nowcast-green/25oct17/SalishSea_02505600_restart_trc.nc
