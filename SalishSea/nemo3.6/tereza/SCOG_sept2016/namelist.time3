@@ -6,7 +6,7 @@
 &namrun        !   Parameters of the run
 !-----------------------------------------------------------------------
    cn_exp      = "SalishSea"  ! experience name
-   nn_it000    =       43200  ! first time step
+   nn_it000    =       43201  ! first time step
    nn_itend    =       64800  ! last time step (std 1 day = 2160 re: rn_rdt=40 in &namdom)
    nn_date0    =  20160921    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
                               ! used to adjust tides to run date (regardless of restart control)
