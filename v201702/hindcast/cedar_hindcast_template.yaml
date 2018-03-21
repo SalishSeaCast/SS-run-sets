@@ -1,9 +1,26 @@
+# salishsea command processor run description file template for
+# SalishSeaCast automation hindcast SMELT runs on cedar
+
 email: sallen@eoas.ubc.ca,dlatornell@eoas.ubc.ca
 account: rrg-allen
 MPI decomposition: 16x39
 config_name: SMELT
 run_id: ddmmmyyhindcast
 walltime: 11:30:00
+
+paths:
+  NEMO code config: $PROJECT/SalishSea/hindcast-sys/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $PROJECT/SalishSea/hindcast-sys/XIOS-2
+  runs directory: /scratch/dlatorne/hindcast
+
+grid:
+  bathymetry: $PROJECT/SalishSea/hindcast-sys/grid/bathymetry_201702.nc
+  coordinates: $PROJECT/SalishSea/hindcast-sys/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $PROJECT/SalishSea/hindcast-sys/grid/bathymetry_201702.csv
+
+restart:
+  restart.nc: /scratch/dlatorne/hindcast/ddmmmyy/SalishSea_nnnnnnnn_restart.nc
+  restart_trc.nc: /scratch/dlatorne/hindcast/ddmmmyy/SalishSea_nnnnnnnn_restart_trc.nc
 
 forcing:
   LiveOcean:
@@ -29,11 +46,6 @@ forcing:
     link to: $PROJECT/SalishSea/hindcast-sys/tides
   tracers:
     link to: $PROJECT/SalishSea/hindcast-sys/tracers
-
-grid:
-  bathymetry: $PROJECT/SalishSea/hindcast-sys/grid/bathymetry_201702.nc
-  coordinates: $PROJECT/SalishSea/hindcast-sys/grid/coordinates_seagrid_SalishSea201702.nc
-  land processor elimination: $PROJECT/SalishSea/hindcast-sys/grid/bathymetry_201702.csv
 
 namelists:
   namelist_cfg:
@@ -61,20 +73,10 @@ output:
   iodefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/iodef.xml
   separate XIOS server: true
 
-paths:
-  NEMO code config: $PROJECT/SalishSea/hindcast-sys/NEMO-3.6-code/NEMOGCM/CONFIG
-  XIOS: $PROJECT/SalishSea/hindcast-sys/XIOS-2
-  runs directory: /scratch/dlatorne/hindcast
-
-restart:
-  restart.nc: /scratch/dlatorne/hindcast/31dec17/SalishSea_02650320_restart.nc
-  restart_trc.nc: /scratch/dlatorne/hindcast/31dec17/SalishSea_02650320_restart_trc.nc
-
 vcs revisions:
   hg:
   - $PROJECT/SalishSea/hindcast-sys/grid
   - $PROJECT/SalishSea/hindcast-sys/NEMO-Cmd
-  - $PROJECT/SalishSea/hindcast-sys/NEMO_Nowcast
   - $PROJECT/SalishSea/hindcast-sys/rivers-climatology
   - $PROJECT/SalishSea/hindcast-sys/SalishSeaCmd
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets
