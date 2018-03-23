@@ -1,0 +1,72 @@
+run_id: 26oct17nowcast-dev
+config_name: SMELT_c4
+MPI decomposition: 1x7
+walltime: 06:00:00
+
+paths:
+  NEMO code config: /data/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: /data/$USER/MEOPAR/XIOS-2
+  runs directory: /data/$USER/MEOPAR/runs
+
+grid:
+  bathymetry: /data/$USER/MEOPAR/grid/bathymetry_201702.nc
+  coordinates: /data/$USER/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: false
+
+forcing:
+  NEMO-atmos:
+    link to: /results/forcing/atmospheric/GEM2.5/operational
+  grid:
+    link to: /data/$USER/MEOPAR/grid
+  rivers:
+    link to: /data/$USER/MEOPAR/rivers
+  rivers-climatology:
+    link to: /data/$USER/MEOPAR/rivers-climatology
+  tides:
+    link to: /data/$USER/MEOPAR/tides
+  tracers:
+    link to: /data/$USER/MEOPAR/tracers
+  bfr_coef.nc:
+    link to: /data/$USER/MEOPAR/grid/jetty_mask_bathy201702.nc
+  initial_data_file.nc:
+    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SCOG_ALLTS_LBC/init_DICTA_Jan17D.nc
+#restart:
+#  restart.nc: /results/SalishSea/nowcast-green/25oct17/SalishSea_02505600_restart.nc
+#  restart_trc.nc: /results/SalishSea/nowcast-green/25oct17/SalishSea_02505600_restart_trc.nc
+
+namelists:
+  namelist_cfg:
+  - ./namelist.time_allTS
+  - /data/$USER/MEOPAR/SS-run-sets/v201702/namelist.domain
+  - /data/$USER/MEOPAR/SS-run-sets/v201702/namelist.atmos_rivers
+  - /data/$USER/MEOPAR/SS-run-sets/v201702/namelist.light_blue
+  - /data/$USER/MEOPAR/SS-run-sets/v201702/namelist.lateral
+  - /data/$USER/MEOPAR/SS-run-sets/v201702/namelist.bottom
+  - /data/$USER/MEOPAR/SS-run-sets/v201702/namelist.tracer
+  - /data/$USER/MEOPAR/SS-run-sets/v201702/namelist.dynamics
+  - /data/$USER/MEOPAR/SS-run-sets/v201702/namelist.vertical
+  - /data/$USER/MEOPAR/SS-run-sets/v201702/namelist.compute
+
+  namelist_top_cfg:
+    - ./namelist_top_cfg
+  namelist_smelt_cfg:
+    - ./namelist_smelt_cfg
+
+output:
+  XIOS servers: 1
+  iodefs: ./iodef.xml
+  filedefs: ./file_def_allTS.xml
+  domaindefs: /data/$USER/MEOPAR/SS-run-sets/v201702/domain_def.xml
+  fielddefs: ./field_def.xml
+  separate XIOS server: true
+
+vcs revisions:
+  hg:
+  - /data/$USER/MEOPAR/grid
+  - /data/$USER/MEOPAR/NEMO-Cmd
+  - /data/$USER/MEOPAR/rivers-climatology
+  - /data/$USER/MEOPAR/SalishSeaCmd
+  - /data/$USER/MEOPAR/SS-run-sets
+  - /data/$USER/MEOPAR/tides
+  - /data/$USER/MEOPAR/tracers
+  - /data/$USER/MEOPAR/XIOS-ARCH
