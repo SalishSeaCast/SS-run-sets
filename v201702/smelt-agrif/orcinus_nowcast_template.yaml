@@ -18,6 +18,7 @@ AGRIF:
   fixed grids: /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/AGRIF_FixedGrids_MULTI.in
 
 grid:
+  land processor elimination: False
   # Full domain
   coordinates: /home/dlatorne/nowcast-agrif-sys/grid/coordinates_seagrid_SalishSea201702.nc
   bathymetry: /home/dlatorne/nowcast-agrif-sys/grid/bathymetry_201702.nc
