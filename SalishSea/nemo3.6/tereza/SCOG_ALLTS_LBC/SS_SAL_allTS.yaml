@@ -1,5 +1,5 @@
 run_id: 26oct17nowcast-dev
-config_name: SMELT_c4
+config_name: SMELT_COG
 MPI decomposition: 1x7
 walltime: 06:00:00
 
@@ -7,6 +7,7 @@ paths:
   NEMO code config: /data/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /data/$USER/MEOPAR/XIOS-2
   runs directory: /data/$USER/MEOPAR/runs
+  forcing: /data/$USER/MEOPAR/NEMO-forcing
 
 grid:
   bathymetry: /data/$USER/MEOPAR/grid/bathymetry_201702.nc
@@ -29,7 +30,7 @@ forcing:
   bfr_coef.nc:
     link to: /data/$USER/MEOPAR/grid/jetty_mask_bathy201702.nc
   initial_data_file.nc:
-    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/Init_PhysBio_02sept16.nc
+    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/PhysBio_02sep16.nc
   initial_data_file2.nc:
     link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/init_DICTA_Jan17D.nc
   open_boundaries:
