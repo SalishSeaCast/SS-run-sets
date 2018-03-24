@@ -1,16 +1,19 @@
-run_id: 26oct17nowcast-dev
 config_name: SMELT_COG
 MPI decomposition: 1x7
 walltime: 06:00:00
+run_id: 01sept16nowcast-dev
+config_name: SMELT_COG
+email: tjarnik@gmail.com
 
 paths:
   NEMO code config: /data/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /data/$USER/MEOPAR/XIOS-2
   runs directory: /data/$USER/MEOPAR/runs
+  forcing: /data/$USER/MEOPAR/NEMO-forcing
 
 grid:
-  bathymetry: /data/$USER/MEOPAR/grid/bathymetry_201702.nc
   coordinates: /data/$USER/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  bathymetry: /data/$USER/MEOPAR/grid/bathymetry_201702.nc
   land processor elimination: false
 
 forcing:
@@ -29,14 +32,20 @@ forcing:
   bfr_coef.nc:
     link to: /data/$USER/MEOPAR/grid/jetty_mask_bathy201702.nc
   initial_data_file.nc:
-    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SMELT_c4/init_DICTA_Jan17B.nc
+    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/PhysBio_02sep16.nc
+  initial_data_file2.nc:
+    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/init_DICTA_Jan17D.nc
+  open_boundaries:
+    link to: open_boundaries
+  initial_strat:
+    link to: /data/tjarniko/MEOPAR/NEMO-forcing/initial_strat
 #restart:
 #  restart.nc: /results/SalishSea/nowcast-green/25oct17/SalishSea_02505600_restart.nc
 #  restart_trc.nc: /results/SalishSea/nowcast-green/25oct17/SalishSea_02505600_restart_trc.nc
 
 namelists:
   namelist_cfg:
-  - ./namelist.time
+  - ./namelist.time_allTS
   - /data/$USER/MEOPAR/SS-run-sets/v201702/namelist.domain
   - /data/$USER/MEOPAR/SS-run-sets/v201702/namelist.atmos_rivers
   - /data/$USER/MEOPAR/SS-run-sets/v201702/namelist.light_blue
@@ -55,7 +64,7 @@ namelists:
 output:
   XIOS servers: 1
   iodefs: ./iodef.xml
-  filedefs: ./file_def.xml
+  filedefs: ./file_def_allTS.xml
   domaindefs: /data/$USER/MEOPAR/SS-run-sets/v201702/domain_def.xml
   fielddefs: ./field_def.xml
   separate XIOS server: true
