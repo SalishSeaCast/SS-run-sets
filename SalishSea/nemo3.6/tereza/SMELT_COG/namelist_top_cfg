@@ -58,9 +58,9 @@
    sn_trcdta(8)  = 'initial_data_file.nc'    ,        -12        ,  'TRNDON'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(9)  = 'initial_data_file.nc'    ,        -12        ,  'TRNPON'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(10) = 'initial_data_file.nc'    ,        -12        ,  'TRNbSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-  sn_trcdta(12) = 'initial_data_file.nc'    ,        -12        ,  'TRNDIC'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-  sn_trcdta(13) = 'initial_data_file.nc'    ,        -12        ,  'TRNTA'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(14) = 'initial_data_file.nc'    ,        -12        ,  'TRNNO3'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+  sn_trcdta(12) = 'initial_data_file2.nc'    ,        -12        ,  'TRNDIC'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+  sn_trcdta(13) = 'initial_data_file2.nc'    ,        -12        ,  'TRNTA'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(14) = 'initial_data_file2.nc'    ,        -12        ,  'TRNO2'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    rn_trfac(1)   =  1.0  !  -      -      -     -
    rn_trfac(2)   =  1.0  !  -      -      -     -
    rn_trfac(3)   =  1.0  !  multiplicative factor
