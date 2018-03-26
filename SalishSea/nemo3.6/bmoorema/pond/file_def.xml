@@ -1,0 +1,58 @@
+    <!--
+============================================================================================================
+=                                           output files definition                                        =
+=                                            Define your own files                                         =
+=                                         put the variables you want...                                    =
+============================================================================================================
+    -->
+    <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4">
+      <file_group id="1h" output_freq="1h"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 1h files -->
+        <file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
+          <field field_ref="ssh"            name="sossheig"/>
+          <field field_ref="toce"           name="votemper"/>
+          <field field_ref="soce"           name="vosaline"/>
+          <field field_ref="bfN2"           name="buoy_n2"/>
+          <field field_ref="mldr10_1"       name="mixed_depth"/>
+        </file>
+        <file id="file2" name_suffix="_grid_U" description="ocean U grid variables" >
+          <field field_ref="uoce"           name="vozocrtx"  />
+        </file>
+	    <file id="file3" name_suffix="_grid_V" description="ocean V grid variables" >
+          <field field_ref="voce"           name="vomecrty"  />
+        </file>
+	    <file id="file4" name_suffix="_grid_W" description="ocean W grid variables" >
+          <field field_ref="woce"           name="vovecrtz" />
+          <field field_ref="avt"            name="vert_eddy_diff" />
+          <field field_ref="avm"            name="vert_eddy_visc" />
+          <field field_ref="eps" name="dissipation"/>
+        </file>
+        <file id="file5" name_suffix="_ptrc_T" description="T grid passive tracers" >
+          <field field_ref="MYTRC1"           name="mytracer1" />
+        </file>
+      </file_group>
+
+      <file_group id="1d" output_freq="1d"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 1d files -->
+        <file id="file6" name_suffix="_grid_T" description="ocean T grid variables" >
+          <field field_ref="ssh"            name="sossheig"/>
+          <field field_ref="toce"           name="votemper"/>
+          <field field_ref="soce"           name="vosaline"/>
+          <field field_ref="bfN2"           name="buoy_n2"/>
+          <field field_ref="mldr10_1"       name="mixed_depth"/>
+        </file>
+        <file id="file7" name_suffix="_grid_U" description="ocean U grid variables" >
+          <field field_ref="uoce"           name="vozocrtx"  />
+        </file>
+	    <file id="file8" name_suffix="_grid_V" description="ocean V grid variables" >
+          <field field_ref="voce"           name="vomecrty"  />
+        </file>
+	    <file id="file9" name_suffix="_grid_W" description="ocean W grid variables" >
+          <field field_ref="woce"           name="vovecrtz" />
+          <field field_ref="avt"            name="vert_eddy_diff" />
+          <field field_ref="avm"            name="vert_eddy_visc" />
+          <field field_ref="eps" name="dissipation"/>
+        </file>
+        <file id="file10" name_suffix="_ptrc_T" description="T grid passive tracers" >
+          <field field_ref="MYTRC1"           name="mytracer1" />
+        </file>
+      </file_group>
+    </file_definition>
