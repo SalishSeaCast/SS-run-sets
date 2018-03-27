@@ -1,7 +1,9 @@
-run_id: 26oct17nowcast-dev
 config_name: SMELT_COG
 MPI decomposition: 1x7
 walltime: 06:00:00
+run_id: 01sept16nowcast-dev
+config_name: SMELT_COG
+email: tjarnik@gmail.com
 
 paths:
   NEMO code config: /data/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
@@ -10,8 +12,8 @@ paths:
   forcing: /data/$USER/MEOPAR/NEMO-forcing
 
 grid:
-  bathymetry: /data/$USER/MEOPAR/grid/bathymetry_201702.nc
   coordinates: /data/$USER/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  bathymetry: /data/$USER/MEOPAR/grid/bathymetry_201702.nc
   land processor elimination: false
 
 forcing:
@@ -35,6 +37,8 @@ forcing:
     link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/init_DICTA_Jan17D.nc
   open_boundaries:
     link to: open_boundaries
+  initial_strat:
+    link to: /data/tjarniko/MEOPAR/NEMO-forcing/initial_strat
 #restart:
 #  restart.nc: /results/SalishSea/nowcast-green/25oct17/SalishSea_02505600_restart.nc
 #  restart_trc.nc: /results/SalishSea/nowcast-green/25oct17/SalishSea_02505600_restart_trc.nc
@@ -53,7 +57,7 @@ namelists:
   - /data/$USER/MEOPAR/SS-run-sets/v201702/namelist.compute
 
   namelist_top_cfg:
-    - ./namelist_top_cfg_salish
+    - ./namelist_top_cfg
   namelist_smelt_cfg:
     - ./namelist_smelt_cfg
 

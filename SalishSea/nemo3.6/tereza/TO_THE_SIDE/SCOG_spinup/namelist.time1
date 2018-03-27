@@ -6,9 +6,9 @@
 &namrun        !   Parameters of the run
 !-----------------------------------------------------------------------
    cn_exp      = "SalishSea"  ! experience name
-   nn_it000    =      2505601  ! first time step
-   nn_itend    =      2505701  ! last time step (std 1 day = 2160 re: rn_rdt=40 in &namdom)
-   nn_date0    =  20171026    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
+   nn_it000    =           1  ! first time step
+   nn_itend    =       21601  ! last time step (std 1 day = 2160 re: rn_rdt=40 in &namdom)
+   nn_date0    =  20160901    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
                               ! used to adjust tides to run date (regardless of restart control)
    nn_leapy    =       1      ! Leap year calendar (1) or not (0)
    ln_rstart   =  .false.     ! start from rest (F) or from a restart file (T)
@@ -20,7 +20,7 @@
                               !       nn_it000 check consistency between namelist and restart
                               !   = 2 nn_date0 read in restart
                               !       nn_it000 check consistency between namelist and restart
-   nn_istate   =       1      ! output the initial state (1) or not (0)
+   nn_istate   =       0      ! output the initial state (1) or not (0)
    nn_stock    =    2160      ! frequency of creation of a restart file (modulo referenced to 1)
    ln_cfmeta   =  .true.      !  output additional data to netCDF files required for compliance with the CF metadata standard
    ln_clobber  =  .true.      ! clobber (overwrite) an existing file
