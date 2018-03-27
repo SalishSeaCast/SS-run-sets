@@ -35,9 +35,9 @@ forcing:
   tracers:
     link to: $HOME/MEOPAR/tracers
   initial_data_file.nc:
-    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SCOG_sept2016/Init_PhysBio_02sept16.nc
+    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/PhysBio_02sep16.nc
   initial_data_file2.nc:
-    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SCOG_sept2016/init_DICTA_Jan17D.nc
+    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/init_DICTA_Mar27B.nc
   open_boundaries:
     link to: open_boundaries
   bfr_coef.nc:
@@ -45,11 +45,15 @@ forcing:
   initial_strat:
     link to: /home/tjarnik/MEOPAR/NEMO-forcing/initial_strat
 
-
+restart:
+  restart.nc:
+    /home/tjarnik/results/mar7_sept2016_2/SalishSea_00043200_restart.nc
+  restart_trc.nc:
+    /home/tjarnik/results/mar7_sept2016_2/SalishSea_00043200_restart_trc.nc
 
 namelists:
    namelist_cfg:
-    - ./namelist.time1
+    - ./namelist.time3
     - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.domain
     - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.atmos_rivers
     - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.light_blue
@@ -61,7 +65,7 @@ namelists:
     - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.compute
 
    namelist_top_cfg:
-    - ./namelist_top_cfg  
+    - ./namelist_top_cfg_RES 
    namelist_smelt_cfg:
     - ./namelist_smelt_cfg
 output:
