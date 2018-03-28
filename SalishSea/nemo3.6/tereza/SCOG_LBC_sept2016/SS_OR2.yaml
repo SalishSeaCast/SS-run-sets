@@ -47,9 +47,9 @@ forcing:
 
 restart:
   restart.nc:
-    /home/tjarnik/results/mar7_sept2016_1/SalishSea_00021600_restart.nc
+    /home/tjarnik/results/mar27_30d1/SalishSea_00021600_restart.nc
   restart_trc.nc:
-    /home/tjarnik/results/mar7_sept2016_1/SalishSea_00021600_restart_trc.nc
+    /home/tjarnik/results/mar27_30d1/SalishSea_00021600_restart_trc.nc
 
 namelists:
    namelist_cfg:
