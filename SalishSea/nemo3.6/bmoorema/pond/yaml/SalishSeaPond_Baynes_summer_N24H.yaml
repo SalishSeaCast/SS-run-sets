@@ -8,17 +8,17 @@ config_name: SalishSeaLake
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 1x7
+MPI decomposition: 12x24
 
 # For runs on systems that use qsub/PBS/TORQUE
 #
 # If relative, paths are taken from current directory
-run_id: SalishSea_pond
+run_id: SalishSeaPond_Baynes_summer_N24H
 # Maximum run time requested/allowed for job
 # Too low and you job will be terminated before it finishes
 # Too high and you will have to wait longer on the queue for your job to start
 # You have to experiment to find the "just right" value
-walltime: 2:00:00
+walltime: 00:30:00
 # Email address to send job begin, end, and abort notifications to
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: bmoorema@eoas.ubc.ca
@@ -32,13 +32,13 @@ paths:
   XIOS: $HOME/MEOPAR/XIOS-2
   # Directory in which to create temporary run directories
   # Typically NOT inside a version control repository
-  runs directory: $HOME/MEOPAR/Results/pond
+  runs directory: $HOME/MEOPAR/Results/SalishSeaPond_Baynes_summer_N24H
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path below
-  coordinates: $HOME/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
-  bathymetry: $HOME/MEOPAR/grid/pond_bathy201702.nc
+  coordinates: $HOME/MEOPAR/grid/idealized/coordinates_seagrid_pond.nc
+  bathymetry: $HOME/MEOPAR/grid/idealized/bathymetry_pond_Baynes.nc
   # Optional path/filename for land processor elimination MPI-LPE mapping
   # file that matches bathymetry;
   # If "land processor elimination:" key is absent or has the value "False",
@@ -61,13 +61,8 @@ forcing:
   # If relative, paths are taken from forcing path above
   grid:
     link to: $HOME/MEOPAR/grid
-  NEMO-atmos:
-    link to: /results/forcing/atmospheric/GEM2.5/operational
-    check link:
-      type: atmospheric
-      namelist filename: namelist_cfg
   initial_strat:
-    link to: $HOME/MEOPAR/tracers/initial
+    link to: $HOME/MEOPAR/tracers/initial/idealized
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -79,24 +74,24 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-    - namelist.time
-    - namelist.domain
-    - namelist.atmos_rivers
-    - namelist.light
-    - namelist.bottom
-    - namelist.tracer
-    - namelist.dynamics
-    - namelist.vertical
-    - namelist.compute
+    - ../namelist.time
+    - ../namelist.domain.summer
+    - ../namelist.atmos_rivers.N24H
+    - ../namelist.light
+    - ../namelist.bottom
+    - ../namelist.tracer
+    - ../namelist.dynamics
+    - ../namelist.vertical
+    - ../namelist.compute
   namelist_top_cfg:
-    - namelist_top_cfg
+    - ../namelist_top_cfg
 
 output:
   # If relative, paths are taken from current directory
-  iodefs: iodef.xml
-  filedefs: file_def.xml
-  domaindefs: domain_def.xml
-  fielddefs: field_def.xml
+  iodefs: ../iodef.xml
+  filedefs: ../file_def.xml
+  domaindefs: ../domain_def.xml
+  fielddefs: ../field_def.xml
   separate XIOS server: True
   XIOS servers: 1
 

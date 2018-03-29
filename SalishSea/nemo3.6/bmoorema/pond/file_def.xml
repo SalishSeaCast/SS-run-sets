@@ -28,6 +28,11 @@
         </file>
         <file id="file5" name_suffix="_ptrc_T" description="T grid passive tracers" >
           <field field_ref="MYTRC1"           name="mytracer1" />
+          <field field_ref="MYTRC2"           name="mytracer2" />
+          <field field_ref="MYTRC3"           name="mytracer3" />
+          <field field_ref="MYTRC4"           name="mytracer4" />
+          <field field_ref="MYTRC5"           name="mytracer5" />
+          <field field_ref="MYTRC6"           name="mytracer6" />
         </file>
       </file_group>
 
@@ -53,6 +58,11 @@
         </file>
         <file id="file10" name_suffix="_ptrc_T" description="T grid passive tracers" >
           <field field_ref="MYTRC1"           name="mytracer1" />
+          <field field_ref="MYTRC2"           name="mytracer2" />
+          <field field_ref="MYTRC3"           name="mytracer3" />
+          <field field_ref="MYTRC4"           name="mytracer4" />
+          <field field_ref="MYTRC5"           name="mytracer5" />
+          <field field_ref="MYTRC6"           name="mytracer6" />
         </file>
       </file_group>
     </file_definition>

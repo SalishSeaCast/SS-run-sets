@@ -1,0 +1,107 @@
+# salishsea command processor run description example for NEMO-3.6
+
+# Name of the NEMO-3.6 configuration to use for the run;
+# i.e. your NEMO-3.6-code/NEMOGCM/CONFIG/ configuration directory
+config_name: SalishSeaLake
+
+# How is the domain to be distributed over the processors in the
+# i (longitude) and j (latitude) directions?
+# These values are used to set the nammpp namelist jpni & jpnj values
+# and to set the number of processors and nodes in the PBS script
+MPI decomposition: 12x24
+
+# For runs on systems that use qsub/PBS/TORQUE
+#
+# If relative, paths are taken from current directory
+run_id: SalishSeaPond_BaynesDenman_winter_N24H
+# Maximum run time requested/allowed for job
+# Too low and you job will be terminated before it finishes
+# Too high and you will have to wait longer on the queue for your job to start
+# You have to experiment to find the "just right" value
+walltime: 00:30:00
+# Email address to send job begin, end, and abort notifications to
+# If missing, email address is set to ${USER}@eos.ubc.ca
+email: bmoorema@eoas.ubc.ca
+
+paths:
+  # Absolute path to NEMO-3.6 CONFIG/ directory.
+  # You can use ~, $USER, $HOME if you wish.
+  NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  # If relative, paths below are taken from current directory
+  # You can use ~, $USER, $HOME if you wish.
+  XIOS: $HOME/MEOPAR/XIOS-2
+  # Directory in which to create temporary run directories
+  # Typically NOT inside a version control repository
+  runs directory: $HOME/MEOPAR/Results/SalishSeaPond_BaynesDenman_winter_N24H
+
+grid:
+  # If relative, paths are taken from the grid/ directory in the forcing
+  # path below
+  coordinates: $HOME/MEOPAR/grid/idealized/coordinates_seagrid_pond.nc
+  bathymetry: $HOME/MEOPAR/grid/idealized/bathymetry_pond_BaynesDenman.nc
+  # Optional path/filename for land processor elimination MPI-LPE mapping
+  # file that matches bathymetry;
+  # If "land processor elimination:" key is absent or has the value "False",
+  # land processor elimination is disabled
+  land processor elimination: false
+
+forcing:
+  # The keys below are the names of symlinks that will be created.
+  # The targets of those symlinks will be the paths named by the associated
+  # "link to:" keys;
+  # e.g. a symlink named NEMO-atmos will be created to
+  # /results/forcing/atmospheric/GEM2.5/operational/
+  #
+  # The keys are directory names that you use as "cn_dir" values in your
+  # namelists.
+  #
+  # You only need to include keys that are used in the namelist(s) for
+  # your run.
+  #
+  # If relative, paths are taken from forcing path above
+  grid:
+    link to: $HOME/MEOPAR/grid
+  initial_strat:
+    link to: $HOME/MEOPAR/tracers/initial/idealized
+
+namelists:
+  # The namelist section files in the lists below will be concatenated
+  # to create a namelist file whose name is the key under which the files
+  # are listed. The keys are the names of the namelist files that NEMO-3.6
+  # expects.
+  #
+  # The only required key is namelist_cfg.
+  #
+  # If relative, paths are taken from current directory
+  namelist_cfg:
+    - ../namelist.time
+    - ../namelist.domain.winter
+    - ../namelist.atmos_rivers.N24H
+    - ../namelist.light
+    - ../namelist.bottom
+    - ../namelist.tracer
+    - ../namelist.dynamics
+    - ../namelist.vertical
+    - ../namelist.compute
+  namelist_top_cfg:
+    - ../namelist_top_cfg
+
+output:
+  # If relative, paths are taken from current directory
+  iodefs: ../iodef.xml
+  filedefs: ../file_def.xml
+  domaindefs: ../domain_def.xml
+  fielddefs: ../field_def.xml
+  separate XIOS server: True
+  XIOS servers: 1
+
+vcs revisions:
+  hg:
+    - $HOME/MEOPAR/SS-run-sets
+    - $HOME/MEOPAR/grid
+    - $HOME/MEOPAR/rivers-climatology
+    - $HOME/MEOPAR/tides
+    - $HOME/MEOPAR/tracers
+    - $HOME/MEOPAR/NEMO-Cmd
+    - $HOME/MEOPAR/SalishSeaCmd
+    - $HOME/MEOPAR/XIOS-ARCH
