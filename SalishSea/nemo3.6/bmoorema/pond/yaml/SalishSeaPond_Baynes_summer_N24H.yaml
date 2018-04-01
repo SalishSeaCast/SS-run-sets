@@ -37,7 +37,7 @@ paths:
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path below
-  coordinates: $HOME/MEOPAR/grid/idealized/coordinates_seagrid_pond.nc
+  coordinates: $HOME/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
   bathymetry: $HOME/MEOPAR/grid/idealized/bathymetry_pond_Baynes.nc
   # Optional path/filename for land processor elimination MPI-LPE mapping
   # file that matches bathymetry;
