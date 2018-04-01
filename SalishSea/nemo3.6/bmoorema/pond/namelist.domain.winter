@@ -4,11 +4,13 @@
 !-----------------------------------------------------------------------
    cp_cfg      =  "SalishSeaLake"      !  name of the configuration
    jp_cfg      =     120               !  resolution of the configuration [1/degrees]
-   jpidta      =     133               !  1st lateral dimension ( >= jpi )
-   jpjdta      =     512               !  2nd    "         "    ( >= jpj )
+   jpidta      =     398               !  1st lateral dimension ( >= jpi )
+   jpjdta      =     898               !  2nd    "         "    ( >= jpj )
    jpkdta      =      40               !  number of levels      ( >= jpk )
    jpiglo      =     133               !  1st dimension of global domain --> i =jpidta
    jpjglo      =     512               !  2nd    -                  -    --> j =jpjdta
+   jpizoom     =     127               !  left bottom (i,j) indices of the zoom
+   jpjzoom     =     315               !  in data domain indices
    jperio      =       0               !  lateral cond. type (between 0 and 6)
                                        !  = 0 closed                 ;   = 1 cyclic East-West
                                        !  = 2 equatorial symmetric   ;   = 3 North fold T-point pivot
