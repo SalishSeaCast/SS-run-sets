@@ -32,7 +32,7 @@ paths:
   XIOS: $HOME/MEOPAR/XIOS-2
   # Directory in which to create temporary run directories
   # Typically NOT inside a version control repository
-  runs directory: $HOME/MEOPAR/Results/SalishSeaPond_BaynesDenman_summer_S24H
+  runs directory: $SCRATCH/Results/SalishSeaPond_BaynesDenman_summer_S24H
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
