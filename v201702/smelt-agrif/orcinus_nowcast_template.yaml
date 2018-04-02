@@ -55,8 +55,6 @@ forcing:
     link to: /home/dlatorne/nowcast-agrif-sys/runs/rivers
   rivers-climatology:
     link to: /home/dlatorne/nowcast-agrif-sys/rivers-climatology/
-  river_turb:
-    link to: /home/dlatorne/nowcast-agrif-sys/runs/rivers/river_turb
   ssh:
     link to: /home/dlatorne/nowcast-agrif-sys/runs/ssh/
   tides:
