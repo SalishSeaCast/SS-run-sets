@@ -73,8 +73,8 @@
 !-----------------------------------------------------------------------
 !        ! file name                       ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
 !        !                                 ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
- sn_tem  = 'BS_initial_data_file.nc',       -12,          'tn',      .false.,  .true., 'yearly', '',        ''
- sn_sal  = 'BS_initial_data_file.nc',       -12,          'sn',      .false.,  .true., 'yearly', '',        ''
+ sn_tem  = 'HS_initial_data_file.nc',       -12,          'tn',      .false.,  .true., 'yearly', '',        ''
+ sn_sal  = 'HS_initial_data_file.nc',       -12,          'sn',      .false.,  .true., 'yearly', '',        ''
 
  cn_dir        = './'  ! directory containing initial condition files
  ln_tsd_init   = .true.              ! Initialisation of ocean T & S with T &S input data (T) or not (F)
