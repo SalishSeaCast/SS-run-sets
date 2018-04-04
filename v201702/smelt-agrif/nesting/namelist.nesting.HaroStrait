@@ -1,0 +1,69 @@
+! NEMO AGRIF nesting tools namelist for Haro Strait sub-grid
+
+&input_output
+    iom_activated = true
+&end
+
+&coarse_grid_files
+    parent_coordinate_file = '/results/nowcast-sys/grid/coordinates_seagrid_SalishSea201702.nc'
+    parent_meshmask_file = '/results/nowcast-sys/grid/mesh_mask201702.nc'
+&end
+
+&bathymetry
+&end
+
+&nesting
+    imin = 177
+    imax = 372
+    jmin = 225
+    jmax = 403
+    rho  = 3
+    rhot = 2
+    bathy_update = false
+    updated_parent_file = ''
+&end
+
+&vertical_grid
+    ppkth     = 25.
+    ppacr     = 3.
+    ppdzmin   = 1.
+    pphmax    = 428.
+    psur      = 0.0
+    pa0       = 0.0
+    pa1       = 0.0
+    N         = 40
+    ldbletanh = .FALSE.
+    ppa2      = 0.0
+    ppkth2    = 0.0
+    ppacr2    = 0.0
+&end
+
+&partial_cells
+    partial_steps = true
+    parent_bathy_meter = '/results/nowcast-sys/grid/bathymetry_201702.nc'
+    parent_batmet_name = 'Bathymetry'
+    e3zps_min = 2.
+    e3zps_rat = 0.5
+&end
+
+&nemo_coarse_grid
+&end
+
+&forcing_files
+&end
+
+&interp
+&end
+
+&restart
+    restart_file = '/results/SalishSea/nowcast-green/19aug17/SalishSea_02360880_restart.nc'
+    shlat = 0
+    dimg = false
+    dimg_output_file = ''
+    adatrj = 360.25
+    interp_type = 'bilinear'
+&end
+
+&restart_trc
+    restart_trc_file = '/results/SalishSea/nowcast-green/19aug17/SalishSea_02360880_restart_trc.nc'
+&end
