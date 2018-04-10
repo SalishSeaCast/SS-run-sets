@@ -34,12 +34,15 @@ grid:
 restart:
   # Full domain
   restart.nc: /global/scratch/dlatorne/agrif-runs/ddmmmyy/SalishSea_nnnnnnnn_restart.nc
+  restart_trc.nc: /global/scratch/dlatorne/agrif-runs/ddmmmyy/SalishSea_nnnnnnnn_restart_trc.nc
   AGRIF_1:
     # Haro Strait sub-domain
     restart.nc: /global/scratch/dlatorne/agrif-runs/ddmmmyy/HaroStrait_SalishSea_nnnnnnnn_restart.nc
+    restart_trc.nc: /global/scratch/dlatorne/agrif-runs/ddmmmyy/HaroStrait_SalishSea_nnnnnnnn_restart_trc.nc
   AGRIF_2:
     # Baynes Sound sub-domain
     restart.nc: /global/scratch/dlatorne/agrif-runs/ddmmmyy/BaynesSound_SalishSea_nnnnnnnn_restart.nc
+    restart_trc.nc: /global/scratch/dlatorne/agrif-runs/ddmmmyy/BaynesSound_SalishSea_nnnnnnnn_restart_trc.nc
 
 forcing:
   # Full domain
