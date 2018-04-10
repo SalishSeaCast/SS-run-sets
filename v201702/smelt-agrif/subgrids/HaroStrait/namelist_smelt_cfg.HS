@@ -30,8 +30,8 @@
    sn_riverpoc  = 'HS_rivers-climatology/bio/rivers_bio_tracers',    24,               'pon',       .true.,       .true.,  'daily',    '',        '',        ''
    sn_riverdsi  = 'HS_rivers-climatology/bio/rivers_bio_tracers',    24,               'bsi',       .true.,       .true.,  'daily',    '',        '',        ''
    sn_rivertra  = 'HS_rivers-climatology/bio/rivers_bio_tracers',    24,               'tur',       .true.,       .true.,  'daily',    '',        '',        ''
-   sn_turb      = 'riverTurbDaily2',                                 24,               'turb',      .true.,       .false., 'daily',    '',        '',        ''
+   ! sn_turb      = 'riverTurbDaily2',                                 24,               'turb',      .true.,       .false., 'daily',    '',        '',        ''
    cn_dir       = './'  ! root directory for the location of the runoff files
    ln_river = .true.
-   ln_turb = .true.
+   ln_turb = .false.
 &end
