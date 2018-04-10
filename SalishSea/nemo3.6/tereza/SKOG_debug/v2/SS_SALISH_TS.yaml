@@ -32,9 +32,9 @@ forcing:
   bfr_coef.nc:
     link to: /data/$USER/MEOPAR/grid/jetty_mask_bathy201702.nc
   initial_data_file.nc:
-    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SKOG_debug/v1/Init_PhysBio_02sept16.nc
+    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SKOG_debug/Init_PhysBio_02sept16.nc
   initial_data_file2.nc:
-    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SKOG_debug/v1/init_DICTA_Mar27B.nc
+    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SKOG_debug/init_DICTA_Mar27B.nc
   open_boundaries:
     link to: open_boundaries
   initial_strat:
