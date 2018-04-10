@@ -13,26 +13,6 @@
 !!              11 - Damping                                  (nampisdmp)
 !>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-&nampisatm     !  Atmospheric prrssure 
-!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-!              !  file name   ! frequency (hours) ! variable   ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
-!              !              !  (if <0  months)  !   name     !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
-   sn_patm     = 'presatm'    ,     -1            , 'patm'     ,  .true.      , .true. ,   'yearly'  , ''       , ''
-   cn_dir      = './'     !  root directory for the location of the dynamical files
-!
-   ln_presatm  = .false.   ! constant atmopsheric pressure (F) or from a file (T)
-/
-!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-&nampisext     !   air-sea exchange
-!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-   ln_co2int  =  .false. ! read atm pco2 from a file (T) or constant (F)
-   atcco2     =  287.    ! Constant value atmospheric pCO2 - ln_co2int = F
-   clname     =  'atcco2.txt'  ! Name of atm pCO2 file - ln_co2int = T
-   nn_offset  =  0       ! Offset model-data start year - ln_co2int = T
-!                        ! If your model year is iyy, nn_offset=(years(1)-iyy) 
-!                        ! then the first atmospheric CO2 record read is at years(1)
-/
-!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisbio     !   biological parameters
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 /
@@ -107,5 +87,25 @@
    zz_redfield_p_n = 0.0625    ! Redfield ratio phosphorus to nitrogen
    zz_redfield_o_n = 9.3750    ! Redfield ratio oxygen to nitrogen
 /
-
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisatm     !  Atmospheric prrssure 
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!              !  file name   ! frequency (hours) ! variable   ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
+!              !              !  (if <0  months)  !   name     !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
+   sn_patm     = 'presatm'    ,     -1            , 'patm'     ,  .true.      , .true. ,   'yearly'  , ''       , ''
+   cn_dir      = './'     !  root directory for the location of the dynamical files
+!
+   ln_presatm  = .false.   ! constant atmopsheric pressure (F) or from a file (T)
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisext     !   air-sea exchange
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   ln_co2int  =  .false. ! read atm pco2 from a file (T) or constant (F)
+   atcco2     =  287.    ! Constant value atmospheric pCO2 - ln_co2int = F
+   clname     =  'atcco2.txt'  ! Name of atm pCO2 file - ln_co2int = T
+   nn_offset  =  0       ! Offset model-data start year - ln_co2int = T
+!                        ! If your model year is iyy, nn_offset=(years(1)-iyy) 
+!                        ! then the first atmospheric CO2 record read is at years(1)
+/
+!
 
