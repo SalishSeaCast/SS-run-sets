@@ -1,118 +1,87 @@
-    <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="600s" min_digits="4">
-      <file_group id="10min" output_freq="600s"  output_level="10" enabled=".FALSE."> </file_group> <!-- 10 min files -->
+    <!--
+============================================================================================================
+=                                           output files definition                                        =
+=                                            Define your own files                                         =
+=                                         put the variables you want...                                    =
+============================================================================================================
+    -->
+<file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1h" min_digits="4">
 
-      <file_group id="30min" output_freq="1800s" output_level="10" compression_level="4" enabled=".TRUE.">                <!-- 30 min files -->
-        <file id="Esquimalt" name="1_Esquimalt" description="30min interval SSH for tides">
-          <field_group id="Esquimalt" grid_ref="Esquimalt_grid">
-             <field field_ref="ssh" name="sossheig"/>
-          </field_group>
-        </file>
-        <file id="Victoria" name="1_Victoria" description="30min interval SSH for tides">
-          <field_group id="Victoria" grid_ref="Victoria_grid">
-             <field field_ref="ssh" name="sossheig"/>
-          </field_group>
-        </file>
-        <file id="CloverPoint" name="1_CloverPoint" description="30min interval SSH for tides">
-          <field_group id="CloverPoint" grid_ref="CloverPoint_grid">
-             <field field_ref="ssh" name="sossheig"/>
-          </field_group>
-        </file>
-        <file id="FinnertyCove" name="1_FinnertyCove" description="30min interval SSH for tides">
-          <field_group id="FinnertyCove" grid_ref="FinnertyCove_grid">
-             <field field_ref="ssh" name="sossheig"/>
-          </field_group>
-        </file>
-        <file id="FulfordHarbour" name="1_FulfordHarbour" description="30min interval SSH for tides">
-          <field_group id="FulfordHarbour" grid_ref="FulfordHarbour_grid">
-             <field field_ref="ssh" name="sossheig"/>
-          </field_group>
-        </file>
-        <file id="PatosIsland" name="1_PatosIsland" description="30min interval SSH for tides">
-          <field_group id="PatosIsland" grid_ref="PatosIsland_grid">
-             <field field_ref="ssh" name="sossheig"/>
-          </field_group>
-        </file>
-        <file id="TumboChannel" name="1_TumboChannel" description="30min interval SSH for tides">
-          <field_group id="TumboChannel" grid_ref="TumboChannel_grid">
-             <field field_ref="ssh" name="sossheig"/>
-          </field_group>
-        </file>
-        <file id="WhalerBay" name="1_WhalerBay" description="30min interval SSH for tides">
-          <field_group id="WhalerBay" grid_ref="WhalerBay_grid">
-             <field field_ref="ssh" name="sossheig"/>
-          </field_group>
-        </file>
-      </file_group>
+  <file_group id="1h"  output_freq="1h" output_level="10" compression_level="4" enabled=".TRUE.">
 
-      <file_group id="1h"  output_freq="1h" output_level="10" compression_level="4" enabled=".TRUE.">              <!-- 1h files -->
-        <file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
-          <field field_ref="ssh"  name="sossheig"/>
-          <field field_ref="toce" name="votemper"/>
-          <field field_ref="soce" name="vosaline"/>
-        </file>
-        <file id="file2" name_suffix="_grid_U" description="ocean U grid variables" >
-          <field field_ref="uoce" name="vozocrtx"  />
-        </file>
-        <file id="file3" name_suffix="_grid_V" description="ocean V grid variables" >
-          <field field_ref="voce" name="vomecrty"  />
-        </file>
-        <file id="file4" name_suffix="_grid_W" description="ocean W grid variables" >
-          <field field_ref="woce" name="vovecrtz" />
-        </file>
-      </file_group>
-
-      <file_group id="2h"  output_freq="2h"  output_level="10" enabled=".FALSE."> </file_group> <!-- 2h files -->
-      <file_group id="3h"  output_freq="3h"  output_level="10" enabled=".FALSE."> </file_group> <!-- 3h files -->
-      <file_group id="4h"  output_freq="4h"  output_level="10" enabled=".FALSE."> </file_group> <!-- 4h files -->
-      <file_group id="6h"  output_freq="6h"  output_level="10" enabled=".FALSE."> </file_group> <!-- 6h files -->
-
-      <file_group id="1d"  output_freq="1d" output_level="10" compression_level="4" enabled=".TRUE.">                <!-- 1d files -->
-        <file id="file5" name_suffix="_grid_T" description="ocean T grid variables" >
-          <field field_ref="ssh"  name="sossheig"/>
-          <field field_ref="toce" name="votemper"/>
-          <field field_ref="soce" name="vosaline"/>
-        </file>
-        <file id="file6" name_suffix="_grid_U" description="ocean U grid variables" >
-          <field field_ref="uoce" name="vozocrtx"  />
-        </file>
-        <file id="file7" name_suffix="_grid_V" description="ocean V grid variables" >
-          <field field_ref="voce" name="vomecrty"  />
-        </file>
-        <file id="file8" name_suffix="_grid_W" description="ocean W grid variables" >
-      <field field_ref="woce" name="vovecrtz" />
+    <file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
+      <field field_ref="ssh"  name="sossheig"/>
+      <field field_ref="toce" name="votemper"/>
+      <field field_ref="soce" name="vosaline"/>
+      <field field_ref="rhop" name="sigma0"/>
     </file>
-  </file_group>
 
-  <!-- 1 time step files -->
-  <file_group id="1ts" name="@expname@_1TS_@startdate@_@enddate@" output_freq="1ts" output_level="10" enabled=".FALSE.">
-    <file id="file9" name_suffix="_grid_T" description="ocean T grid variables" >
-      <field field_ref="ssh"  name="sossheig" operation="instant"/>
-      <field field_ref="toce" name="votemper" operation="instant"/>
-      <field field_ref="soce" name="vosaline" operation="instant"/>
-      <field field_ref="e3t"  name="vovvle3t" operation="instant"/>
-    </file>
-    <file id="file10" name_suffix="_grid_U" description="ocean U grid variables" >
+    <file id="file2" name_suffix="_grid_U" description="ocean U grid variables" >
       <field field_ref="uoce" name="vozocrtx"  />
     </file>
-    <file id="file11" name_suffix="_grid_V" description="ocean V grid variables" >
+
+    <file id="file3" name_suffix="_grid_V" description="ocean V grid variables" >
       <field field_ref="voce" name="vomecrty"  />
     </file>
-    <file id="file12" name_suffix="_grid_W" description="ocean W grid variables" >
-          <field field_ref="woce" name="vovecrtz" />
-        </file>
-      </file_group>
 
-      <file_group id="3d"  output_freq="3d"  output_level="10" enabled=".FALSE."> </file_group> <!-- 3d files -->
-      <file_group id="5d"  output_freq="5d"  output_level="10" enabled=".FALSE."> </file_group> <!-- 5d files -->
-      <file_group id="1m"  output_freq="1mo" output_level="10" enabled=".FALSE."> </file_group> <!-- real monthly files -->
-      <file_group id="2m"  output_freq="2mo" output_level="10" enabled=".FALSE."> </file_group> <!-- real 2m files -->
-      <file_group id="3m"  output_freq="3mo" output_level="10" enabled=".FALSE."> </file_group> <!-- real 3m files -->
-      <file_group id="4m"  output_freq="4mo" output_level="10" enabled=".FALSE."> </file_group> <!-- real 4m files -->
-      <file_group id="6m"  output_freq="6mo" output_level="10" enabled=".FALSE."> </file_group> <!-- real 6m files -->
-      <file_group id="1y"  output_freq="1y"  output_level="10" enabled=".FALSE."> </file_group> <!-- real yearly files -->
-      <file_group id="2y"  output_freq="2y"  output_level="10" enabled=".FALSE."> </file_group> <!-- real 2y files -->
-      <file_group id="5y"  output_freq="5y"  output_level="10" enabled=".FALSE."> </file_group> <!-- real 5y files -->
-      <file_group id="10y" output_freq="10y" output_level="10" enabled=".FALSE."> </file_group> <!-- real 10y files -->
+    <file id="file4" name_suffix="_grid_W" description="ocean W grid variables" >
+      <field field_ref="woce" name="vovecrtz" />
+    </file>
 
-   </file_definition>
+    <file id="file5" name_suffix="_ptrc_T" description="biogeochemical variables" >
+      <field field_ref="NO3"            name="nitrate"/>
+      <field field_ref="NH4"            name="ammonium"/>
+      <field field_ref="Si"             name="silicon"/>
+      <field field_ref="DIAT"           name="diatoms"/>
+      <field field_ref="PHY"            name="flagellates"/>
+      <field field_ref="MYRI"           name="ciliates"/>
+      <field field_ref="MICZ"           name="microzooplankton"/>
+      <field field_ref="DON"            name="dissolved_organic_nitrogen"/>
+      <field field_ref="PON"            name="particulate_organic_nitrogen"/>
+      <field field_ref="bSi"            name="biogenic_silicon"/>
+      <field field_ref="TRA"            name="Fraser_tracer"/>
+      <field field_ref="MESZ"           name="mesozooplankton"/>
+    </file>
+
+  </file_group>
+
+  <file_group id="1d"  output_freq="1d" output_level="10" compression_level="4" enabled=".TRUE.">
+
+    <file id="file6" name_suffix="_grid_T" description="ocean T grid variables" >
+      <field field_ref="ssh"  name="sossheig"/>
+      <field field_ref="toce" name="votemper"/>
+      <field field_ref="soce" name="vosaline"/>
+      <field field_ref="rhop" name="sigma0"/>
+    </file>
+
+    <file id="file7" name_suffix="_grid_U" description="ocean U grid variables" >
+      <field field_ref="uoce" name="vozocrtx"  />
+    </file>
+
+    <file id="file8" name_suffix="_grid_V" description="ocean V grid variables" >
+      <field field_ref="voce" name="vomecrty"  />
+    </file>
+
+    <file id="file9" name_suffix="_grid_W" description="ocean W grid variables" >
+      <field field_ref="woce" name="vovecrtz" />
+    </file>
+
+    <file id="file10" name_suffix="_ptrc_T" description="biogeochemical variables" >
+      <field field_ref="NO3"            name="nitrate"/>
+      <field field_ref="NH4"            name="ammonium"/>
+      <field field_ref="Si"             name="silicon"/>
+      <field field_ref="DIAT"           name="diatoms"/>
+      <field field_ref="PHY"            name="flagellates"/>
+      <field field_ref="MYRI"           name="ciliates"/>
+      <field field_ref="MICZ"           name="microzooplankton"/>
+      <field field_ref="DON"            name="dissolved_organic_nitrogen"/>
+      <field field_ref="PON"            name="particulate_organic_nitrogen"/>
+      <field field_ref="bSi"            name="biogenic_silicon"/>
+      <field field_ref="TRA"            name="Fraser_tracer"/>
+      <field field_ref="MESZ"           name="mesozooplankton"/>
+    </file>
+
+  </file_group>
+
+</file_definition>
 

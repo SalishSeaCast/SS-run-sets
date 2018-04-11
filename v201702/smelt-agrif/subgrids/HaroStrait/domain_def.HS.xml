@@ -1,35 +1,18 @@
    <domain_definition>
       <domain_group id="grid_T">
          <domain id="grid_T" long_name="grid T"/>
-         <!-- CODAR -->
-         <domain id="CODAR_T"                 domain_ref="grid_T"> <zoom_domain ibegin="192" jbegin="468" ni="80" nj="80" /> </domain>
-         <!-- Tide Points -->
-         <domain id="Esquimalt"               domain_ref="grid_T"> <zoom_domain ibegin="42" jbegin="249" ni="1"  nj="1"  /> </domain>
-         <domain id="Victoria"                domain_ref="grid_T"> <zoom_domain ibegin="62" jbegin="225" ni="1"  nj="1"  /> </domain>
-         <domain id="CloverPoint"             domain_ref="grid_T"> <zoom_domain ibegin="69" jbegin="212" ni="1"  nj="1"  /> </domain>
-         <domain id="FinnertyCove"            domain_ref="grid_T"> <zoom_domain ibegin="120" jbegin="240" ni="1"  nj="1"  /> </domain>
-         <domain id="FulfordHarbour"          domain_ref="grid_T"> <zoom_domain ibegin="159" jbegin="432" ni="1"  nj="1"  /> </domain>
-         <domain id="PatosIsland"             domain_ref="grid_T"> <zoom_domain ibegin="378" jbegin="351" ni="1"  nj="1"  /> </domain>
-         <domain id="TumboChannel"            domain_ref="grid_T"> <zoom_domain ibegin="321" jbegin="390" ni="1"  nj="1"  /> </domain>
-         <domain id="WhalerBay"               domain_ref="grid_T"> <zoom_domain ibegin="261" jbegin="483" ni="1"  nj="1"  /> </domain>
-         <domain id="BoundaryBay"             domain_ref="grid_T"> <zoom_domain ibegin="477" jbegin="516" ni="1"  nj="1"  /> </domain>
-         <domain id="CherryPoint"             domain_ref="grid_T"> <zoom_domain ibegin="497" jbegin="357" ni="1"  nj="1"  /> </domain>
-         <domain id="FridayHarbor"            domain_ref="grid_T"> <zoom_domain ibegin="273" jbegin="222" ni="1"  nj="1"  /> </domain>
       </domain_group>
 
       <domain_group id="grid_U">
          <domain id="grid_U" long_name="grid U"/>
-         <!-- CODAR -->
-         <domain id="CODAR_U"                 domain_ref="grid_U"> <zoom_domain ibegin="192" jbegin="468" ni="80" nj="80" /> </domain>
       </domain_group>
 
       <domain_group id="grid_V">
          <domain id="grid_V" long_name="grid V"/>
-         <!-- CODAR -->
-         <domain id="CODAR_V"                 domain_ref="grid_V"> <zoom_domain ibegin="192" jbegin="468" ni="80" nj="80" /> </domain>
       </domain_group>
 
-      <domain id="grid_W" long_name="grid W"/>
-      <domain id="scalarpoint" long_name="scalar"/>
+      <domain_group id="grid_W">
+         <domain id="grid_W" long_name="grid W"/>
+      </domain_group>
    </domain_definition>
 
