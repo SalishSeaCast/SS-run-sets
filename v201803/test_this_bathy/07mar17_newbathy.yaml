@@ -1,0 +1,74 @@
+email: sallen@eoas.ubc.ca
+MPI decomposition: 16x39
+config_name: SalishSea
+run_id: 07mar17newbathy
+walltime: 04:30:00
+
+forcing:
+  LiveOcean:
+    link to: $PROJECT/SalishSea/forcing/LiveOcean
+  NEMO-atmos:
+    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
+  initial_data_file.nc:
+    link to: $PROJECT/allen//MEOPAR/sea_initial/Bathy201803p_06mar17.nc
+  bfr_coef.nc:
+    link to: $PROJECT/allen/MEOPAR/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: $PROJECT/allen/MEOPAR/grid
+  rivers:
+    link to: $PROJECT/SalishSea/forcing/rivers
+  rivers-climatology:
+    link to: $PROJECT/allen/MEOPAR/rivers-climatology
+  river_turb:
+    link to: $PROJECT/SalishSea/forcing/rivers/river_turb
+  ssh:
+    link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
+  tides:
+    link to: $PROJECT/allen/MEOPAR/tides
+  tracers:
+    link to: $PROJECT/allen/MEOPAR/tracers
+
+grid:
+  bathymetry: $PROJECT/allen/MEOPAR/sea_initial/bathymetry_201803b.nc
+  coordinates: $PROJECT/allen/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $PROJECT/allen/MEOPAR/sea_initial/bathymetry_201803.csv
+
+namelists:
+  namelist_cfg:
+  - ./namelist.time.07mar17
+  - $PROJECT/allen/MEOPAR/SS-run-sets/v201702/namelist.domain
+  - ./namelist.atmos_rivers_201803
+  - $PROJECT/allen/MEOPAR/SS-run-sets/v201702/namelist.light_blue
+  - $PROJECT/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist.lateral
+  - $PROJECT/allen/MEOPAR/SS-run-sets/v201702/namelist.bottom
+  - $PROJECT/allen/MEOPAR/SS-run-sets/v201702/namelist.tracer
+  - $PROJECT/allen/MEOPAR/SS-run-sets/v201702/namelist.dynamics
+  - $PROJECT/allen/MEOPAR/SS-run-sets/v201702/namelist.vertical
+  - $PROJECT/allen/MEOPAR/SS-run-sets/v201702/namelist.compute
+
+output:
+  XIOS servers: 1
+  domaindefs: $PROJECT/allen/MEOPAR/SS-run-sets/v201702/domain_def.xml
+  fielddefs: $PROJECT/allen/MEOPAR/SS-run-sets/v201702/field_def.xml
+  filedefs: ./file_def_blue_dailysplit.xml
+  iodefs: $PROJECT/allen/MEOPAR/SS-run-sets/v201702/iodef.xml
+  separate XIOS server: true
+
+paths:
+  NEMO code config: $PROJECT/allen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $PROJECT/allen/MEOPAR/XIOS-2
+  runs directory: $SCRATCH/
+
+vcs revisions:
+  hg:
+  - $PROJECT/allen/MEOPAR/grid
+  - $PROJECT/allen/MEOPAR/NEMO-Cmd
+  - $PROJECT/allen/MEOPAR/NEMO_Nowcast
+  - $PROJECT/allen/MEOPAR/rivers-climatology
+  - $PROJECT/allen/MEOPAR/SalishSeaCmd
+  - $PROJECT/allen/MEOPAR/SS-run-sets
+  - $PROJECT/allen/MEOPAR/tides
+  - $PROJECT/allen/MEOPAR/tracers
+  - $PROJECT/allen/MEOPAR/tools
+  - $PROJECT/allen/MEOPAR/XIOS-ARCH
+
