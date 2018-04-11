@@ -47,12 +47,34 @@
 &end
 
 &nemo_coarse_grid
+    jpizoom = 1
+    jpjzoom = 1
 &end
 
 &forcing_files
+    FLX_FILES =
+    '/results/nowcast-sys/rivers-climatology/bio/rivers_bio_tracers_m08d19.nc',
+    '/results/nowcast-sys/rivers-climatology/bio/rivers_bio_tracers_m08d20.nc',
+    '/results/nowcast-sys/rivers-climatology/bio/rivers_bio_tracers_m08d21.nc',
 &end
 
 &interp
+    VAR_INTERP =
+    'rorunoff/bilinear',
+    'rodepth/bilinear',
+    'rotemper/bilinear',
+    'no3/bilinear',
+    'nh4/bilinear',
+    'sil/bilinear',
+    'dia/bilinear',
+    'phy/bilinear',
+    'mes/bilinear',
+    'zoo/bilinear',
+    'don/bilinear',
+    'pon/bilinear',
+    'bsi/bilinear',
+    'oxy/bilinear'
+    'tur/bilinear'
 &end
 
 &restart
