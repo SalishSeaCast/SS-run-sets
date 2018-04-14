@@ -2,7 +2,7 @@ email: sallen@eoas.ubc.ca
 MPI decomposition: 16x39
 config_name: SalishSea
 run_id: 07mar17charnock
-walltime: 04:30:00
+walltime: 05:00:00
 
 forcing:
   LiveOcean:

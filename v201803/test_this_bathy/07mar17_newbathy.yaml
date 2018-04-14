@@ -2,7 +2,7 @@ email: sallen@eoas.ubc.ca
 MPI decomposition: 16x39
 config_name: SalishSea
 run_id: 07mar17newbathy
-walltime: 04:30:00
+walltime: 05:00:00
 
 forcing:
   LiveOcean:
@@ -63,12 +63,10 @@ vcs revisions:
   hg:
   - $PROJECT/allen/MEOPAR/grid
   - $PROJECT/allen/MEOPAR/NEMO-Cmd
-  - $PROJECT/allen/MEOPAR/NEMO_Nowcast
   - $PROJECT/allen/MEOPAR/rivers-climatology
   - $PROJECT/allen/MEOPAR/SalishSeaCmd
   - $PROJECT/allen/MEOPAR/SS-run-sets
   - $PROJECT/allen/MEOPAR/tides
   - $PROJECT/allen/MEOPAR/tracers
-  - $PROJECT/allen/MEOPAR/tools
   - $PROJECT/allen/MEOPAR/XIOS-ARCH
 
