@@ -55,6 +55,7 @@
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampiszoo     !   parameters for microzooplankton
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_uzoo_R               = 1.50E-05   !match SOG 0.600E-04      ! 1/s micro-phyto maximum growth rate # Hitchcock 1980, 1.4 d-1 for T. nordenskelii at 10degrees/
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisdia     !   additional 2D/3D tracers diagnostics
@@ -77,6 +78,8 @@
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampissink     !  Sinking of bio groups
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_w_sink_D_PON = 5.6e-5      ! m/s PON detritus sinking rate # 70% of Jeffery quoting Dune and Bacon
+   zz_w_sink_D_bSi = 5.6e-5      ! m/s  biogenic silicon detritus sinking rate # 70% to balance Si in SS-SMELT
 /
 
 
