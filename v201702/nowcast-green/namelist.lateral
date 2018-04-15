@@ -13,7 +13,7 @@
 &nam_tide      !   tide parameters (#ifdef key_tide)   see NEMO-3.6-code/NEMOGCM/NEMO/OPA_SRC/SBC/tideini.F90
 ! Tidal parameters that we use to have to input are in OPA_SRC/SBC/tide.h90
 !-----------------------------------------------------------------------
-   ln_tide_pot   = .false.   !  use tidal potential forcing
+   ln_tide_pot   = .false.  !  use tidal potential forcing
    rdttideramp   =    0.    !
    clname(1)     =   'M2'   !  name of constituent
    clname(2)     =   'S2'
@@ -46,7 +46,7 @@
     rn_time_dmp   =  365., 365.            ! Damping time scale in days (nudging on orlanski inflow)
     rn_time_dmp_out =  365., 365.          ! Outflow damping time scale (nudging on orlanski outflow)
     rn_max_sponge = 50., 50.               ! max viscosity for sponge layer (m2/s)
-    nn_rimwidth   = 10, 10                  ! rim depth for FRS
+    nn_rimwidth   = 10, 10                 ! rim depth for FRS
 &end
 
 
@@ -61,15 +61,15 @@
 
 &nambdy_dta      !  open boundaries - external data           ("key_bdy")
 !-----------------------------------------------------------------------
-!        !  file name             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
-!        !                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
-  bn_ssh = 'ssh/ssh',                1,                'sossheig', .true.,        .false.,  'daily',    '',        ''
-  bn_u2d = 'ssh/ssh',                1,                'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
-  bn_v2d = 'ssh/ssh',                1,                'vobtcrty', .true.,        .false.,  'daily',    '',        ''
-  bn_u3d = '',                      24,                'vozocrtx', .true.,        .false.,  'daily',    '',        ''
-  bn_v3d = '',                      24,                'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'LiveOcean/LiveOcean_v201712',   24,                'votemper', .true.,        .false.,  'daily',   '',        ''
-  bn_sal = 'LiveOcean/LiveOcean_v201712',   24,                'vosaline', .true.,        .false.,  'daily',   '',        ''
+!        !  file name                    ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
+!        !                               !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
+  bn_ssh = 'ssh/ssh',                        1,               'sossheig', .true.,        .false.,  'daily',    '',        ''
+  bn_u2d = 'ssh/ssh',                        1,               'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v2d = 'ssh/ssh',                        1,               'vobtcrty', .true.,        .false.,  'daily',    '',        ''
+  bn_u3d = '',                              24,               'vozocrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v3d = '',                              24,               'vomecrty', .true.,        .false.,  'daily',    '',        ''
+  bn_tem = 'LiveOcean/LiveOcean_v201712',   24,               'votemper', .true.,        .false.,  'daily',    '',        ''
+  bn_sal = 'LiveOcean/LiveOcean_v201712',   24,               'vosaline', .true.,        .false.,  'daily',    '',        ''
 
   cn_dir = './'
 &end
