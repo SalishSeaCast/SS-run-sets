@@ -95,8 +95,7 @@ namelists:
   namelist_smelt_cfg:
   - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist_smelt_cfg
   namelist_top_cfg:
-  - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist_top_restart
-  - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist_top_cfg_origAh
+  - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist_top_cfg
 
   AGRIF_1:
     # Haro Strait sub-domain
@@ -115,7 +114,6 @@ namelists:
     namelist_smelt_cfg:
     - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/HaroStrait/namelist_smelt_cfg.HS
     namelist_top_cfg:
-    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist_top_restart
     - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist_top_cfg
 
   AGRIF_2:
@@ -135,7 +133,6 @@ namelists:
     namelist_smelt_cfg:
     - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/BaynesSound/namelist_smelt_cfg.BS
     namelist_top_cfg:
-    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist_top_restart
     - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist_top_cfg
 
 output:
