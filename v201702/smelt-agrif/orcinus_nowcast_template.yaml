@@ -137,7 +137,7 @@ namelists:
 
 output:
   separate XIOS server: True
-  XIOS servers: 1
+  XIOS servers: 3
   # Full domain
   iodefs: /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/iodef.HS1BS2.xml
   domaindefs: /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/domain_def.xml
