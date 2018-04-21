@@ -1,0 +1,7 @@
+changset:   12:7cc1ac73ebfa6e8ab22d768d47d6e81a4e643765
+tag:        tip
+user:       Susan Allen <sallen@eos.ubc.ca>
+date:       Sat Oct 07 19:17:00 2017 -07:00
+files:      initial/Bathy201702_05oct17.nc
+description:
+Add 05oct17 initial file (as this is new start of nowcast)
