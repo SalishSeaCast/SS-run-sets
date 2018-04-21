@@ -1,0 +1,7 @@
+changset:   13:8a4711873c448cf1e76b4a9db4fe3a0b79b28a25
+tag:        tip
+user:       Doug Latornell <djl@douglatornell.ca>
+date:       Tue Oct 03 15:19:40 2017 -07:00
+files:      README.rst
+description:
+Fix typo.

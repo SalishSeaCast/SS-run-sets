@@ -1,0 +1,7 @@
+changset:   31:71122bbcddfe91aa31164668cc7e47a07b469467
+tag:        tip
+user:       Susan Allen <sallen@eos.ubc.ca>
+date:       Fri Oct 27 08:59:09 2017 -07:00
+files:      UBC-EOAS/arch-GCC_SALISH.fcm
+description:
+Put absolute paths for mpicc and mpif90 in SALISH arch file
