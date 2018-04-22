@@ -21,7 +21,7 @@
                               !   = 2 nn_date0 read in restart
                               !       nn_it000 check consistency between namelist and restart
    nn_istate   =       0      ! output the initial state (1) or not (0)
-   nn_stock    =    4320      ! frequency of creation of a restart file (modulo referenced to 1)
+   nn_stock    =    8640      ! frequency of creation of a restart file (modulo referenced to 1)
    ln_cfmeta   =  .true.      !  output additional data to netCDF files required for compliance with the CF metadata standard
    ln_clobber  =  .true.      ! clobber (overwrite) an existing file
 &end
