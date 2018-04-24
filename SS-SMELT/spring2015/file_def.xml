@@ -13,12 +13,15 @@
           <field field_ref="toce"           name="votemper"/>
           <field field_ref="soce"           name="vosaline"/>
           <field field_ref="mldr10_1"       name="mixed_depth"/>
+	  <field field_ref="e3t"/>
         </file>
     	<file id="file2" name_suffix="_grid_U" description="ocean U grid variables" >
           <field field_ref="uoce"           name="vozocrtx"  />
+          <field field_ref="e3u" />
         </file>
 	    <file id="file3" name_suffix="_grid_V" description="ocean V grid variables" >
           <field field_ref="voce"           name="vomecrty"  />
+          <field field_ref="e3v" />
         </file>
 	    <file id="file4" name_suffix="_grid_W" description="ocean W grid variables" >
           <field field_ref="woce"           name="vovecrtz" />
@@ -40,35 +43,9 @@
           <field field_ref="TRA"            name="Fraser_tracer"/>
           <field field_ref="MESZ"           name="mesozooplankton"/>
         </file>
-        <file id="file6" name_suffix="_WB_tran_U" description="biogeochemical U transports" >
-          <field field_ref="NO3_UT"        grid_ref="WB_grid_U"/> 
-          <field field_ref="NH4_UT"        grid_ref="WB_grid_U"/>
-          <field field_ref="Si_UT"         grid_ref="WB_grid_U"/>
-          <field field_ref="DIAT_UT"       grid_ref="WB_grid_U"/>
-          <field field_ref="PHY_UT"        grid_ref="WB_grid_U"/>
-          <field field_ref="MYRI_UT"       grid_ref="WB_grid_U"/>
-          <field field_ref="MICZ_UT"       grid_ref="WB_grid_U"/>
-          <field field_ref="DON_UT"        grid_ref="WB_grid_U"/>
-          <field field_ref="PON_UT"        grid_ref="WB_grid_U"/>
-          <field field_ref="bSi_UT"        grid_ref="WB_grid_U"/>
-          <field field_ref="TRA_UT"        grid_ref="WB_grid_U"/>
-        </file>
-        <file id="file7" name_suffix="_NB_tran_V" description="biogeochemical V transports" >
-          <field field_ref="NO3_VT"        grid_ref="NB_grid_V"/> 
-          <field field_ref="NH4_VT"        grid_ref="NB_grid_V"/>
-          <field field_ref="Si_VT"         grid_ref="NB_grid_V"/>
-          <field field_ref="DIAT_VT"       grid_ref="NB_grid_V"/>
-          <field field_ref="PHY_VT"        grid_ref="NB_grid_V"/>
-          <field field_ref="MYRI_VT"       grid_ref="NB_grid_V"/>
-          <field field_ref="MICZ_VT"       grid_ref="NB_grid_V"/>
-          <field field_ref="DON_VT"        grid_ref="NB_grid_V"/>
-          <field field_ref="PON_VT"        grid_ref="NB_grid_V"/>
-          <field field_ref="bSi_VT"        grid_ref="NB_grid_V"/>
-          <field field_ref="TRA_VT"        grid_ref="NB_grid_V"/>
-        </file>
      </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 2h files -->
-        <file id="file8" name_suffix="_dia1_T" description="smelt diagnostics A" >
+        <file id="file6" name_suffix="_dia1_T" description="smelt diagnostics A" >
           <field field_ref="PAR"      />
           <field field_ref="PPDIAT"      />
           <field field_ref="PPPHY"       />
