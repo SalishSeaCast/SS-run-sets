@@ -19,6 +19,12 @@
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisprod     !   parameters for phytoplankton growth
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_maxtemp_diat      = 26.0         !: deg C
+   zz_rate_maxtemp_myri      = 31.0         !: deg C
+   zz_rate_maxtemp_nano      = 31.0         !: deg C
+   zz_rate_temprange_diat    = 14.0          !: deg C
+   zz_rate_temprange_myri    = 13.0          !: deg C
+   zz_rate_temprange_nano    = 13.0          !: deg C
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampissbc
