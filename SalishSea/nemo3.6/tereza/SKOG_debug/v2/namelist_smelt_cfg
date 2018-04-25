@@ -101,6 +101,7 @@
 &nampisext     !   air-sea exchange
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    ln_co2int  =  .false. ! read atm pco2 from a file (T) or constant (F)
+   ln_co2sys  =  .false. ! run the co2sys module or the original PISCES module
    atcco2     =  287.    ! Constant value atmospheric pCO2 - ln_co2int = F
    clname     =  'atcco2.txt'  ! Name of atm pCO2 file - ln_co2int = T
    nn_offset  =  0       ! Offset model-data start year - ln_co2int = T
