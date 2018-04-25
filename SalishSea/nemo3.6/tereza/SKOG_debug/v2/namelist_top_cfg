@@ -37,8 +37,10 @@
    sn_tracer(10) = 'bSi     ' , 'biogenic Silicate Concentration        ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(11) = 'TRA     ' , 'River Tracer                           ',  'mol-C/L' ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(12) = 'DIC     ' , 'Dissolved Inorganic Carbon             ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(13) = 'TA     ' , 'Total Alkalinity                        ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(14) = 'O2     ' , 'Dissolved Oxygen                        ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(13) = 'TA      ' , 'Total Alkalinity                       ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(14) = 'O2      ' , 'Dissolved Oxygen                       ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(15) = 'O2flx   ' , 'Oxygen Flux                            ',  'mol/m2/S' ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(16) = 'CO2flx  ' , 'CO2 Flux                               ',  'mol/m2/S' ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
    ln_trcdta = .true.
    ln_trcdmp = .false.
    /
@@ -58,8 +60,8 @@
    sn_trcdta(8)  = 'initial_data_file.nc'    ,        -12        ,  'TRNDON'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(9)  = 'initial_data_file.nc'    ,        -12        ,  'TRNPON'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(10) = 'initial_data_file.nc'    ,        -12        ,  'TRNbSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-  sn_trcdta(12) = 'initial_data_file2.nc'    ,        -12        ,  'TRNDIC'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-  sn_trcdta(13) = 'initial_data_file2.nc'    ,        -12        ,  'TRNTA'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(12) = 'initial_data_file2.nc'    ,        -12        ,  'TRNDIC'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
+   sn_trcdta(13) = 'initial_data_file2.nc'    ,        -12        ,  'TRNTA'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(14) = 'initial_data_file2.nc'    ,        -12        ,  'TRNO2'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    rn_trfac(1)   =  1.0  !  -      -      -     -
    rn_trfac(2)   =  1.0  !  -      -      -     -
