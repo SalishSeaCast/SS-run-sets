@@ -45,6 +45,7 @@
           <field field_ref="O2"             name="dissolved_oxygen"/>
           <field field_ref="O2flx"          name="oxygen_flux"/>
           <field field_ref="CO2flx"         name="co2_flux"/>
+          <field field_ref="oce_co2"         name="co2_flux alloc"/>
         </file>
      </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 2h files -->
