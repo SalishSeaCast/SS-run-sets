@@ -102,6 +102,7 @@
           <field field_ref="DIC"            name="dissolved_inorganic_carbon"/>
           <field field_ref="TA"             name="total_alkalinity"/>
           <field field_ref="O2"             name="dissolved_oxygen"/>
+          <field field_ref="oce_co2"         name="co2_flux alloc"/>
         </file>
         <file id="file7" name_suffix="_dia2_T" description="smelt diagnostics B" >
           <field field_ref="GRMESZDIAT"      />
