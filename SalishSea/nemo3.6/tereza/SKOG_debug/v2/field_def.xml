@@ -791,10 +791,6 @@
        <field id="TA_E3T"      long_name="TA * E3T"                                unit="mmol/m2"  > TA * e3t </field >
        <field id="O2"          long_name="Dissolved Oxygen Concentration"              standard_name="dissolved_oxygen_expressed_as_mole_equivalent"  unit="mmol m-3" />
        <field id="O2_E3T"      long_name="O2 * E3T"                                unit="mmol/m2"  > O2 * e3t </field >
-       <field id="O2flx"          long_name="Oxygen air-sea flux"              standard_name="oxygen_air_sea_flux_expressed_as_mole_equivalent"  unit="mmol m-2 s-2" />
-       <field id="O2flx_E3T"      long_name="O2 * E3T"                                unit="mmol/m2"  > O2 * e3t </field >
-       <field id="CO2flx"          long_name="CO2 air-sea flux"              standard_name="carbon_dioxide_air_sea_fluxexpressed_as_mole_equivalent"  unit="mmol m-2 s-2" />
-       <field id="CO2flx_E3T"      long_name="CO2flx * E3T"                                unit="mmol/m2"  > O2 * e3t </field >
        <field id="oce_co2"          long_name="CO2 air-sea flux allocated"         standard_name="carbon_dioxide_air_sea_fluxexpressed_as_mole_equivalent"  unit="mmol m-2 s-2" />
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
        <field id="Num"         long_name="Number of organic particles"              unit="1" />
@@ -830,8 +826,6 @@
        <field id="DIC_UT"   long_name="Dissolved Inorganic Carbon - U Transport"          standard_name="DIC_u_dy_dz"      unit="mmol s-1" />
        <field id="TA_UT"    long_name="Total Alkalinity Concentration - U Transport"               standard_name="TA_u_dy_dz"       unit="mmol s-1" />
        <field id="O2_UT"    long_name="Oxygen Concentration - U Transport"              standard_name="O2_u_dy_dz"       unit="mmol s-1" />
-       <field id="O2flx_UT"    long_name="Oxygen flux  Concentration - U Transport"              standard_name="O2flx_u_dy_dz"       unit="mmol s-1" />
-       <field id="CO2flx_UT"    long_name="CO2 flux  Concentration - U Transport"              standard_name="CO2flx_u_dy_dz"       unit="mmol s-1" />
      </field_group>
 
      <!-- SMELT Advective Transports of Tracers - V Grid  -->
@@ -850,8 +844,6 @@
        <field id="DIC_VT"   long_name="Dissolved Inorganic Carbon - V Transport"          standard_name="DIC_v_dx_dz"      unit="mmol s-1" />
        <field id="TA_VT"    long_name="Total Alkalinity Concentration - V Transport"      standard_name="TA_v_dy_dz"       unit="mmol s-1" />
        <field id="O2_VT"    long_name="Oxygen Concentration - V Transport"                standard_name="O2_v_dy_dz"       unit="mmol s-1" />
-       <field id="O2flx_VT"    long_name="Oxygen flux  Concentration - V Transport"       standard_name="O2flx_v_dy_dz"    unit="mmol s-1" />
-       <field id="CO2flx_VT"    long_name="CO2 flux  Concentration - V Transport"         standard_name="CO2flx_v_dy_dz"   unit="mmol s-1" />
      </field_group>
 
      <!-- SMELT Advective Transports of Tracers - W Grid  -->
@@ -870,8 +862,6 @@
        <field id="DIC_WT"   long_name="Dissolved Inorganic Carbon - W Transport"          standard_name="DIC_w_dy_dx"      unit="mmol s-1" />
        <field id="TA_WT"    long_name="Nitrate Concentration - W Transport"               standard_name="TA_w_dy_dx"       unit="mmol s-1" />
        <field id="O2_WT"    long_name="Ammonium Concentration - W Transport"              standard_name="O2_w_dy_dx"       unit="mmol s-1" />
-       <field id="O2flx_WT"    long_name="Oxygen flux  Concentration - W Transport"       standard_name="O2flx_w_dy_dz"    unit="mmol s-1" />
-       <field id="CO2flx_WT"    long_name="CO2 flux  Concentration - W Transport"         standard_name="CO2flx_w_dy_dz"   unit="mmol s-1" />
      </field_group>
      <!-- PISCES additional diagnostics on T grid  -->
 
