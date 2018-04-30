@@ -39,8 +39,6 @@
    sn_riverdic  ='bio/rivers_bio_tracers',      24,                 'no3',       .true.,       .true.,  'daily',    '',        '',        ''
    sn_riverta  ='bio/rivers_bio_tracers',      24,                 'no3',       .true.,       .true.,  'daily',    '',        '',        ''
    sn_rivero2  ='bio/rivers_bio_tracers',      24,                 'no3',       .true.,       .true.,  'daily',    '',        '',        ''
-   sn_riveroflx  ='bio/rivers_bio_tracers',      24,                 'no3',       .true.,       .true.,  'daily',    '',        '',        ''
-   sn_rivercflx  ='bio/rivers_bio_tracers',      24,                 'no3',       .true.,       .true.,  'daily',    '',        '',        ''
    cn_dir       = 'rivers-climatology/'  ! root directory for the location of the runoff files
    ln_river = .true.
    ln_turb = .false.

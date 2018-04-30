@@ -39,8 +39,6 @@
    sn_tracer(12) = 'DIC     ' , 'Dissolved Inorganic Carbon             ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(13) = 'TA      ' , 'Total Alkalinity                       ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(14) = 'O2      ' , 'Dissolved Oxygen                       ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(15) = 'O2flx   ' , 'Oxygen Flux                            ',  'mol/m2/S' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(16) = 'CO2flx  ' , 'CO2 Flux                               ',  'mol/m2/S' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
    ln_trcdta = .true.
    ln_trcdmp = .false.
    /
@@ -63,8 +61,6 @@
    sn_trcdta(12) = 'initial_data_file2.nc'    ,        -12        ,  'TRNDIC'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(13) = 'initial_data_file2.nc'    ,        -12        ,  'TRNTA'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    sn_trcdta(14) = 'initial_data_file2.nc'    ,        -12        ,  'TRNO2'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(15) = 'initial_data_file2.nc'    ,        -12        ,  'TRNO2'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-   sn_trcdta(16) = 'initial_data_file2.nc'    ,        -12        ,  'TRNO2'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
    rn_trfac(1)   =  1.0  !  -      -      -     -
    rn_trfac(2)   =  1.0  !  -      -      -     -
    rn_trfac(3)   =  1.0  !  multiplicative factor
@@ -78,8 +74,6 @@
    rn_trfac(12)  =  1.0  !  -      -      -     -
    rn_trfac(13)  =  1.0  !  -      -      -     -
    rn_trfac(14)  =  1.0  !  -      -      -     -
-   rn_trfac(15)  =  1.0  !  -      -      -     -
-   rn_trfac(16)  =  1.0  !  -      -      -     -
    cn_dir='./'
 /
 !-----------------------------------------------------------------------
@@ -158,8 +152,6 @@
    sn_trcobc(12) = 'tr_westDICTA.nc',             168,        'DIC',       .true.,  .true.,  'yearly',   '',        '',   ''
    sn_trcobc(13) = 'tr_westDICTA.nc',             168,        'TA',       .true.,  .true.,  'yearly',   '',        '',   ''
    sn_trcobc(14) = 'tr_westDICTA.nc',             168,        'O2',       .true.,  .true.,  'yearly',   '',        '',   ''
-   sn_trcobc(15) = 'tr_westDICTA.nc',             168,        'O2',       .true.,  .true.,  'yearly',   '',        '',   ''
-   sn_trcobc(16) = 'tr_westDICTA.nc',             168,        'O2',       .true.,  .true.,  'yearly',   '',        '',   ''
    cn_dir_obc        =  '/data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
    rn_trofac(2)   =  1.0  !  -      -      -     -
@@ -175,8 +167,6 @@
    rn_trofac(12)  =  1.0  !  -      -      -     -
    rn_trofac(13)  =  1.0  !  -      -      -     -
    rn_trofac(14)  =  1.0  !  -      -      -     -
-   rn_trofac(15)  =  1.0  !  -      -      -     -
-   rn_trofac(16)  =  1.0  !  -      -      -     -
 /
 !----------------------------------------------------------------------
 ! nambdy_bc       !   data for BDY boundary conditions: 2nd boundary
@@ -199,8 +189,6 @@
    sn_trcobc(12) = 'tr_northDICTA.nc',               4380,        'DIC',       .true.,  .true.,  'yearly',   '',      '',   ''
    sn_trcobc(13) = 'tr_northDICTA.nc',               4380,        'TA',       .true.,  .true.,  'yearly',   '',      '',   ''
    sn_trcobc(14) = 'tr_northDICTA.nc',               4380,        'O2',       .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(15) = 'tr_northDICTA.nc',               4380,        'O2',       .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(16) = 'tr_northDICTA.nc',               4380,        'O2',       .true.,  .true.,  'yearly',   '',      '',   ''
    cn_dir_obc        =  '/data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
    rn_trofac(2)   =  1.0  !  -      -      -     -
@@ -216,5 +204,3 @@
    rn_trofac(12)  =  1.0  !  -      -      -     -
    rn_trofac(13)  =  1.0  !  -      -      -     -
    rn_trofac(14)  =  1.0  !  -      -      -     -
-   rn_trofac(15)  =  1.0  !  -      -      -     -  
-   rn_trofac(16)  =  1.0  !  -      -      -     -
