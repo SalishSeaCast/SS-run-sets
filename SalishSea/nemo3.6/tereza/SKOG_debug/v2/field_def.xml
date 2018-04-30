@@ -795,6 +795,8 @@
        <field id="O2flx_E3T"      long_name="O2 * E3T"                                unit="mmol/m2"  > O2 * e3t </field >
        <field id="CO2flx"          long_name="CO2 air-sea flux"              standard_name="carbon_dioxide_air_sea_fluxexpressed_as_mole_equivalent"  unit="mmol m-2 s-2" />
        <field id="CO2flx_E3T"      long_name="CO2flx * E3T"                                unit="mmol/m2"  > O2 * e3t </field >
+       <field id="oce_co2"          long name="oceanic co2 flux"                            unit="mmol/m2/s" >
+
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
        <field id="Num"         long_name="Number of organic particles"              unit="1" />
        <field id="Num_E3T"     long_name="Num * E3T"                                unit="m"  > Num * e3t </field >
