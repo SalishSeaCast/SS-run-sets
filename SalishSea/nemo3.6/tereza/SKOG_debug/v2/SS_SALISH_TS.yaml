@@ -1,5 +1,5 @@
 config_name: SKOG
-MPI decomposition: 1x7
+MPI decomposition: 12x22
 walltime: 06:00:00
 run_id: 01sept16nowcast-dev
 config_name: SKOG
