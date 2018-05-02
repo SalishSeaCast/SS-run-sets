@@ -1,0 +1,68 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! PISCES  (key_pisces) cfg namelist (see below for key_pisces_reduced)
+!!              1  - air-sea exchange                         (nampisext)
+!!              2  - biological parameters                    (nampisbio)
+!!              3  - parameters for nutrient limitations      (nampislim)    
+!!              4  - parameters for phytoplankton             (nampisprod,nampismort)
+!!              5  - parameters for zooplankton               (nampismes,nampiszoo)
+!!              6  - parameters for remineralization          (nampisrem)
+!!              7  - parameters for calcite chemistry         (nampiscal)
+!!              8  - parameters for inputs deposition         (nampissed)
+!!              9  - parameters for Kriest parameterization   (nampiskrp, nampiskrs)
+!!              10 - additional 2D/3D  diagnostics            (nampisdia)
+!!              11 - Damping                                  (nampisdmp)
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisbio     !   biological parameters
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisriv
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   Wd(1)= 0.0 ! sinking velocities, m/d
+   Wd(2)= 0.0
+   Wd(3)= 1.0
+   Wd(4)= 1.0
+   Wd(5)= 0.0
+   Wd(6)= 0.0
+   Wd(7)= 0.0
+   Wd(8)= 1.0
+   Wd(9)= 1.0
+   Wd(10)= 0.0
+   alpha(3) = 0.0
+   alpha(4) = 0.0
+   alpha(5) = 1.6e-6
+   alpha(6) = 0.0
+   alpha(7) = 0.0
+   alpha(8) = 0.0
+   alpha(9) = 0.0
+   alpha(10)= 1.6e-6
+   indk(1) = 3 ! integer k index vertical extent
+   indk(2) = 12
+   indk(3) = 3
+   indk(4) = 12
+   indk(5) = 12
+   indk(6) = 3
+   indk(7) = 12
+   indk(8) = 3
+   indk(9) = 12
+   indk(10) = 12
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampissbc
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!              !  file name          ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !                     !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename       !
+   sn_river1  ='coccTest',         24,            'sooke',       .true.,      .false.,  'daily', '',        '',        ''
+   sn_river2  ='coccTest',         24,            'sooke',       .true.,      .false.,  'daily', '',        '',        ''
+   sn_river3  ='coccTest'          24,            'sooke',       .true.,      .false.,  'daily', '',        '',        ''
+   sn_river4  ='coccTest',         24,            'sooke',       .true.,      .false.,  'daily', '',        '',        ''
+   sn_river5  ='coccTest',         24,            'sooke',       .true.,      .false.,  'daily', '',        '',        ''
+   sn_river6  ='coccTest',         24,            'north',       .true.,      .false.,  'daily', '',        '',        ''
+   sn_river7  ='coccTest',         24,            'north',       .true.,      .false.,  'daily', '',        '',        ''
+   sn_river8  ='coccTest',         24,            'north',       .true.,      .false.,  'daily', '',        '',        ''
+   sn_river9  ='coccTest',         24,            'north',       .true.,      .false.,  'daily', '',        '',        ''
+   sn_river10  ='coccTest',         24,           'north',       .true.,      .false.,  'daily', '',        '',        ''
+   sn_turb  ='river_turb/riverTurbDaily2',       24,           'turb',       .true., .false.,  'daily',    '',        '',        ''
+   cn_dir      = 'rivers/'  ! root directory for the location of the runoff files
+/
