@@ -9,7 +9,7 @@
 #  TRACE2 config
 #  1st run for sinking experiment
 
-config_name: TRACE2_COC
+config_name: TRACE2_COCC
 
 # How is the domain to be distributed over the processors in the
 # i (longitude) and j (latitude) directions?
@@ -18,7 +18,7 @@ config_name: TRACE2_COC
 MPI decomposition: 16x39
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: TRACE2_COC_test
+run_id: test 
 walltime: 18:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
@@ -40,7 +40,7 @@ grid:
 forcing:
   # If relative, paths are taken from forcing path above
   NEMO-atmos:
-    link to: atmospheric
+    link to: NEMO-atmos
     check link:
       type: atmospheric
       namelist filename: namelist_cfg
@@ -51,16 +51,14 @@ forcing:
   bfr_coef.nc:
     link to: grid/jetty_mask_bathy201702.nc
   initial_green:
-    link to: tracers/initial
-  surface:
-    link to: surface
-  tides:
-    link to: tides
+    link to: initial_green
   tracers:
     link to: tracers
+  tides:
+    link to: tides
 
 restart:
-  restart.nc: $MEOPAR/NEMO-forcing/surface/coccs/SalishSea_01419120_restart.nc
+  restart.nc: $MEOPAR/NEMO-forcing/restarts/hindcast/SalishSea_01937520_restart.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -73,11 +71,11 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist_cfg_10jun16_short 
+    - ./namelist_cfg_05feb17_5day
   namelist_top_cfg:
     - ./namelist_top_cfg
   namelist_trace2_cfg:
-    - ./namelist_trace2_cfg_coc
+    - ./namelist_trace2_cfg
 
 output:
   # If relative, paths are taken from current directory
