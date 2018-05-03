@@ -1,5 +1,5 @@
 config_name: SKOG
-MPI decomposition: 12x22
+MPI decomposition: 1x7
 walltime: 06:00:00
 run_id: 01sept16nowcast-dev
 config_name: SKOG
@@ -64,7 +64,7 @@ namelists:
 output:
   XIOS servers: 1
   iodefs: ./iodef.xml
-  filedefs: ./file_def_allTS.xml
+  filedefs: ./file_def.xml
   domaindefs: /data/$USER/MEOPAR/SS-run-sets/v201702/domain_def.xml
   fielddefs: ./field_def.xml
   separate XIOS server: true
