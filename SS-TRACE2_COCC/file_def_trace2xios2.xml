@@ -33,7 +33,7 @@
           <field field_ref="TUR3"    name="sooke3"/>
           <field field_ref="TUR4"    name="sooke4"/>
           <field field_ref="TUR5"    name="sooke5"/>
-          <field field_ref="TUR6"    name="sooke1"/>
+          <field field_ref="TUR6"    name="north1"/>
           <field field_ref="TUR7"    name="north2"/>
           <field field_ref="TUR8"    name="north3"/>
           <field field_ref="TUR9"    name="north4"/>
