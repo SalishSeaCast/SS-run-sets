@@ -63,6 +63,5 @@
    sn_river8  ='coccTest',         24,            'north',       .true.,      .false.,  'daily', '',        '',        ''
    sn_river9  ='coccTest',         24,            'north',       .true.,      .false.,  'daily', '',        '',        ''
    sn_river10  ='coccTest',         24,           'north',       .true.,      .false.,  'daily', '',        '',        ''
-   sn_turb  ='river_turb/riverTurbDaily2',       24,           'turb',       .true., .false.,  'daily',    '',        '',        ''
    cn_dir      = 'rivers/'  ! root directory for the location of the runoff files
 /
