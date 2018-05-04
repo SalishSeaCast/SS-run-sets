@@ -36,7 +36,7 @@ forcing:
   initial_data_file2.nc:
     link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/SKOG_debug/init_DICTA_Mar27B.nc
   open_boundaries:
-    link to: open_boundaries
+    link to: cn_dir_obc
   initial_strat:
     link to: /data/tjarniko/MEOPAR/NEMO-forcing/initial_strat
 #restart:
