@@ -29,7 +29,9 @@
    Wd(8)= 1.0
    Wd(9)= 1.0
    Wd(10)= 0.0
-   alpha(3) = 0.0 ! decay rate: ln2 is in code; this is 1/tau.5 in days
+   alpha(1) = 0.0 ! decay rate: ln2 is in code; this is 1/tau.5 in days
+   alpha(2) = 0.0
+   alpha(3) = 0.0 
    alpha(4) = 0.0
    alpha(5) = .2
    alpha(6) = 0.0
