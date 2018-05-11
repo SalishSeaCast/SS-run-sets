@@ -1,7 +1,7 @@
 config_name: SKOG
 MPI decomposition: 12x22
 walltime: 22:00:00
-run_id: 01sept16nowcast-dev
+run_id: SKOG_a3
 config_name: SKOG
 email: tjarnik@gmail.com
 
@@ -35,9 +35,9 @@ forcing:
   tracers:
     link to: $HOME/MEOPAR/tracers
   initial_data_file.nc:
-    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/init_DICTAOXY_May04.nc
+    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/init_DICTAOXY_010116.nc
   initial_data_file2.nc:
-    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/init_DICTAOXY_May04.nc
+    link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/init_DICTAOXY_010116.nc
   open_boundaries:
     link to: /home/tjarnik/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/
   bfr_coef.nc:
@@ -47,9 +47,9 @@ forcing:
 
 restart:
   restart.nc:
-    /global/scratch/tjarnik/may07_30d2/SalishSea_00043200_restart.nc
+    /global/scratch/tjarnik/may10_a2/SalishSea_00064800_restart.nc
   restart_trc.nc:
-    /global/scratch/tjarnik/may07_30d2/SalishSea_00043200_restart_trc.nc
+    /global/scratch/tjarnik/may10_a2/SalishSea_00064800_restart_trc.nc 
 
 namelists:
    namelist_cfg:
