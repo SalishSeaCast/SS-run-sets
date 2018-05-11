@@ -1,7 +1,7 @@
 config_name: SKOG
 MPI decomposition: 12x22
 walltime: 22:00:00
-run_id: SKOG_a1
+run_id: SKOG_a8
 config_name: SKOG
 email: tjarnik@gmail.com
 
@@ -45,11 +45,15 @@ forcing:
   initial_strat:
     link to: /home/tjarnik/MEOPAR/NEMO-forcing/initial_strat
 
-
-
+restart:
+  restart.nc:
+    /global/scratch/tjarnik/may10_a7/SalishSea_00226800_restart.nc
+  restart_trc.nc:
+    /global/scratch/tjarnik/may10_a7/SalishSea_00226800_restart_trc.nc
+  
 namelists:
    namelist_cfg:
-    - ./namelist.time1
+    - ./namelist.time8
     - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.domain
     - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.atmos_rivers
     - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.light_blue
@@ -61,7 +65,7 @@ namelists:
     - /home/tjarnik/MEOPAR/SS-run-sets/v201702/namelist.compute
 
    namelist_top_cfg:
-    - ./namelist_top_cfg  
+    - ./namelist_top_cfg_RES 
    namelist_smelt_cfg:
     - ./namelist_smelt_cfg
 output:
