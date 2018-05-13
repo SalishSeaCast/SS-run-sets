@@ -53,9 +53,9 @@
 
 &forcing_files
     FLX_FILES =
-    '/results/nowcast-sys/rivers-climatology/bio/rivers_bio_tracers_m08d19.nc',
-    '/results/nowcast-sys/rivers-climatology/bio/rivers_bio_tracers_m08d20.nc',
-    '/results/nowcast-sys/rivers-climatology/bio/rivers_bio_tracers_m08d21.nc',
+    '/results/nowcast-sys/rivers-climatology/bio/rivers_bio_tracers_m05d12.nc',
+    '/results/nowcast-sys/rivers-climatology/bio/rivers_bio_tracers_m05d13.nc',
+    '/results/nowcast-sys/rivers-climatology/bio/rivers_bio_tracers_m05d14.nc',
 &end
 
 &interp
@@ -78,7 +78,7 @@
 &end
 
 &restart
-    restart_file = '/results/SalishSea/nowcast-green/19aug17/SalishSea_02360880_restart.nc'
+    restart_file = '/results/SalishSea/nowcast-green/12may18/SalishSea_02935440_restart.nc'
     shlat = 0
     dimg = false
     dimg_output_file = ''
@@ -87,5 +87,5 @@
 &end
 
 &restart_trc
-    restart_trc_file = '/results/SalishSea/nowcast-green/19aug17/SalishSea_02360880_restart_trc.nc'
+    restart_trc_file = '/results/SalishSea/nowcast-green/12may18/SalishSea_02935440_restart_trc.nc'
 &end
