@@ -22,7 +22,6 @@ run_id: spring2015_0NNnut
 walltime: 48:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
-account: rrg-allen
 
 paths:
   # If relative, paths are taken from current directory
@@ -81,7 +80,7 @@ namelists:
 
 output:
   # If relative, paths are taken from current directory
-  iodefs: iodef.xml
+  iodefs: iodef.xml.Orc
   filedefs: file_def.xml
   domaindefs: domain_def.xml
   fielddefs: field_def.xml
