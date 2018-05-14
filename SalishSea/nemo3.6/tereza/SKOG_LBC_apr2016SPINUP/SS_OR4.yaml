@@ -47,9 +47,9 @@ forcing:
 
 restart:
   restart.nc:
-    /global/scratch/tjarnik/may10_a3/SalishSea_00097200_restart.nc
+    /global/scratch/tjarnik/may10_a3/SKOG_00097200_restart.nc
   restart_trc.nc:
-    /global/scratch/tjarnik/may10_a3/SalishSea_00097200_restart_trc.nc
+    /global/scratch/tjarnik/may10_a3/SKOG_00097200_restart_trc.nc
 
 namelists:
    namelist_cfg:
