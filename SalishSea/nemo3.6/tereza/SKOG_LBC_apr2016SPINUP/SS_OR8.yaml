@@ -1,6 +1,6 @@
 config_name: SKOG
 MPI decomposition: 12x22
-walltime: 22:00:00
+walltime: 29:00:00
 run_id: SKOG_a8
 config_name: SKOG
 email: tjarnik@gmail.com
