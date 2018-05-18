@@ -36,7 +36,7 @@
    sn_riversil  ='bio_climatology/rivers_bio_tracers',         24,            'sil',       .true.,      .true.,  'daily', '',        '',        ''
    sn_riverdia  ='bio_climatology/rivers_bio_tracers',         24,            'dia',       .true.,      .true.,  'daily', '',        '',        ''
    sn_riverphy  ='bio_climatology/rivers_bio_tracers',         24,            'phy',       .true.,      .true.,  'daily', '',        '',        ''
-   sn_rivermes  ='bio_climatology/rivers_bio_tracers',         24,            'mes',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_rivermes  ='bio_climatology/rivers_bio_tracers',         24,            'tur',       .true.,      .true.,  'daily', '',        '',        ''
    sn_riverzoo  ='bio_climatology/rivers_bio_tracers',         24,            'zoo',       .true.,      .true.,  'daily', '',        '',        ''
    sn_riverdoc  ='bio_climatology/rivers_bio_tracers',         24,            'don',       .true.,      .true.,  'daily', '',        '',        ''
    sn_riverpoc  ='bio_climatology/rivers_bio_tracers',         24,            'pon',       .true.,      .true.,  'daily', '',        '',        ''
