@@ -1,0 +1,8 @@
+To use this directory as a test run, you need to copy or link the ssh file
+into openboundaries.  On the ocean system:
+
+in NEMO-forcing/open_boundaries/west/ssh/
+ln -s /results/forcing/sshNeahBay/obs/ssh_y2015m06d12.nc
+
+on orcinus you can copy or link it from:
+sallen/MEOPAR/NEMO-forcing/open_boundaries/west/ssh

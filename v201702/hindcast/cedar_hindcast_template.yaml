@@ -1,0 +1,86 @@
+# salishsea command processor run description file template for
+# SalishSeaCast automation hindcast SMELT runs on cedar
+
+email: sallen@eoas.ubc.ca,dlatornell@eoas.ubc.ca
+account: rrg-allen
+MPI decomposition: 16x39
+config_name: SMELT
+run_id: ddmmmyyhindcast
+walltime: 11:30:00
+
+paths:
+  NEMO code config: $PROJECT/SalishSea/hindcast-sys/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $PROJECT/SalishSea/hindcast-sys/XIOS-2
+  runs directory: /scratch/dlatorne/hindcast
+
+grid:
+  bathymetry: $PROJECT/SalishSea/hindcast-sys/grid/bathymetry_201702.nc
+  coordinates: $PROJECT/SalishSea/hindcast-sys/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $PROJECT/SalishSea/hindcast-sys/grid/bathymetry_201702.csv
+
+restart:
+  restart.nc: /scratch/dlatorne/hindcast/ddmmmyy/SalishSea_nnnnnnnn_restart.nc
+  restart_trc.nc: /scratch/dlatorne/hindcast/ddmmmyy/SalishSea_nnnnnnnn_restart_trc.nc
+
+forcing:
+  LiveOcean:
+    link to: $PROJECT/SalishSea/forcing/LiveOcean
+  NEMO-atmos:
+    # check link:
+    #   namelist filename: namelist_cfg
+    #   type: atmospheric
+    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
+  bfr_coef.nc:
+    link to: $PROJECT/SalishSea/hindcast-sys/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: $PROJECT/SalishSea/hindcast-sys/grid
+  rivers:
+    link to: $PROJECT/SalishSea/forcing/rivers
+  rivers-climatology:
+    link to: $PROJECT/SalishSea/hindcast-sys/rivers-climatology
+  river_turb:
+    link to: $PROJECT/SalishSea/forcing/rivers/river_turb
+  ssh:
+    link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
+  tides:
+    link to: $PROJECT/SalishSea/hindcast-sys/tides
+  tracers:
+    link to: $PROJECT/SalishSea/hindcast-sys/tracers
+
+namelists:
+  namelist_cfg:
+  - $PROJECT/SalishSea/hindcast-sys/runs/namelist.time
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.domain
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist.atmos_rivers
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.light
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist.lateral
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.bottom
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.tracer
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.dynamics
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.vertical
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.compute
+  namelist_smelt_cfg:
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_smelt_cfg
+  namelist_top_cfg:
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_top_restart
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_top_cfg_origAh
+
+output:
+  XIOS servers: 1
+  domaindefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/domain_def.xml
+  fielddefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/field_def.xml
+  filedefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/file_def_dailysplit.xml
+  iodefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/iodef.xml
+  separate XIOS server: true
+
+vcs revisions:
+  hg:
+  - $PROJECT/SalishSea/hindcast-sys/grid
+  - $PROJECT/SalishSea/hindcast-sys/NEMO-Cmd
+  - $PROJECT/SalishSea/hindcast-sys/rivers-climatology
+  - $PROJECT/SalishSea/hindcast-sys/SalishSeaCmd
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets
+  - $PROJECT/SalishSea/hindcast-sys/tides
+  - $PROJECT/SalishSea/hindcast-sys/tracers
+  - $PROJECT/SalishSea/hindcast-sys/tools
+  - $PROJECT/SalishSea/hindcast-sys/XIOS-ARCH

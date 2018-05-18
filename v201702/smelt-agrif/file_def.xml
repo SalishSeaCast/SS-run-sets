@@ -1,0 +1,49 @@
+    <!--
+============================================================================================================
+=                                           output files definition                                        =
+=                                            Define your own files                                         =
+=                                         put the variables you want...                                    =
+============================================================================================================
+    -->
+<file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@">
+
+  <file_group id="1d" output_freq="1d" output_level="10" compression_level="4" enabled=".TRUE.">
+
+    <file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
+      <field field_ref="ssh"  name="sossheig"/>
+      <field field_ref="toce" name="votemper"/>
+      <field field_ref="soce" name="vosaline"/>
+      <field field_ref="rhop" name="sigma0"/>
+    </file>
+
+    <file id="file2" name_suffix="_grid_U" description="ocean U grid variables" >
+      <field field_ref="uoce" name="vozocrtx"  />
+    </file>
+
+    <file id="file3" name_suffix="_grid_V" description="ocean V grid variables" >
+      <field field_ref="voce" name="vomecrty"  />
+    </file>
+
+    <file id="file4" name_suffix="_grid_W" description="ocean W grid variables" >
+      <field field_ref="woce" name="vovecrtz" />
+    </file>
+
+    <file id="file5" name_suffix="_ptrc_T" description="biogeochemical variables" >
+      <field field_ref="NO3"  name="nitrate"/>
+      <field field_ref="NH4"  name="ammonium"/>
+      <field field_ref="Si"   name="silicon"/>
+      <field field_ref="DIAT" name="diatoms"/>
+      <field field_ref="PHY"  name="flagellates"/>
+      <field field_ref="MYRI" name="ciliates"/>
+      <field field_ref="MICZ" name="microzooplankton"/>
+      <field field_ref="DON"  name="dissolved_organic_nitrogen"/>
+      <field field_ref="PON"  name="particulate_organic_nitrogen"/>
+      <field field_ref="bSi"  name="biogenic_silicon"/>
+      <field field_ref="TRA"  name="Fraser_tracer"/>
+      <field field_ref="MESZ" name="mesozooplankton"/>
+    </file>
+
+  </file_group>
+
+</file_definition>
+

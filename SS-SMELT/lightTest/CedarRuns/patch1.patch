@@ -1,0 +1,38 @@
+--- Light_0_15feb17.old	2018-01-25 20:07:20.000000000 -0800
++++ Light_15feb17.yaml	2018-01-25 20:07:05.000000000 -0800
+@@ -18 +18 @@
+-MPI decomposition: 12x22
++MPI decomposition: 16x39
+@@ -22 +22 @@
+-walltime: 12:00:00
++walltime: 3:00:00
+@@ -28,4 +28,4 @@
+-  NEMO code config: /home/eolson/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+-  XIOS: /home/eolson/MEOPAR/XIOS-2/
+-  forcing: /home/eolson/MEOPAR/NEMO-forcing/
+-  runs directory: /global/scratch/eolson/
++  NEMO code config: $MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
++  XIOS: $MEOPAR/XIOS-2/
++  forcing: $MEOPAR/NEMO-forcing/
++  runs directory: $SCRATCH/
+@@ -37 +37 @@
+-  bathymetry: bathymetry_201702.nc
++  bathymetry: bathymetry_201702_old.nc
+@@ -43 +43 @@
+-    link to: /home/eolson/MEOPAR/NEMO-forcing/atmospheric
++    link to: NEMO-atmos
+@@ -52 +52 @@
+-    link to: /home/eolson/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
++    link to: grid/jetty_mask_bathy201702.nc
+@@ -77,4 +77,4 @@
+-  iodefs: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/lightTest/iodef.xml
+-  filedefs: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/lightTest/file_def.xml
+-  domaindefs: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/lightTest/domain_def.xml
+-  fielddefs: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/lightTest/field_def.xml  
++  iodefs: iodef.xml
++  filedefs: file_def.xml
++  domaindefs: domain_def.xml
++  fielddefs: field_def.xml  
+@@ -86 +86 @@
+-    - /home/eolson/MEOPAR/SS-run-sets
++    - $MEOPAR/SS-run-sets

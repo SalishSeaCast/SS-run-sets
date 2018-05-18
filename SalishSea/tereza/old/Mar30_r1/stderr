@@ -1,0 +1,18 @@
+At line 851 of file /data/tjarniko/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SMELT_c5/BLD/ppsrc/nemo/fldread.f90
+Fortran runtime error: End of record
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 23682 on
+node salish.eos.ubc.ca exiting improperly. There are two reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+--------------------------------------------------------------------------

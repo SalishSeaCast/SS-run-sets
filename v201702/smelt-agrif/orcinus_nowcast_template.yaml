@@ -1,0 +1,164 @@
+# salishsea command processor run description file template for
+# SalishSeaCast automation nowcast SMELT AGRIF runs on orcinus
+# with Haro Strait as sub-grid #1 and Baynes Sound as sub-grid #2
+
+email: sallen@eoas.ubc.ca,dlatornell@eoas.ubc.ca
+MPI decomposition: 16x39
+config_name: SMELTAGRIF
+run_id: ddmmmyynowcast-agrif
+walltime: 11:30:00
+
+paths:
+  NEMO code config: /home/dlatorne/nowcast-agrif-sys/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: /home/dlatorne/nowcast-agrif-sys/XIOS-2
+  runs directory: /global/scratch/dlatorne/nowcast-agrif/
+
+# AGRIF grid definitions
+AGRIF:
+  fixed grids: /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/AGRIF_FixedGrids_MULTI.in
+
+grid:
+  land processor elimination: False
+  # Full domain
+  coordinates: /home/dlatorne/nowcast-agrif-sys/grid/coordinates_seagrid_SalishSea201702.nc
+  bathymetry: /home/dlatorne/nowcast-agrif-sys/grid/bathymetry_201702.nc
+  AGRIF_1:
+    # Haro Strait sub-domain
+    coordinates: /home/dlatorne/nowcast-agrif-sys/grid/subgrids/HaroStrait/coordinates_seagrid_SalishSea201702_HS.nc
+    bathymetry: /home/dlatorne/nowcast-agrif-sys/grid/subgrids/HaroStrait/bathymetry_201702_HS.nc
+  AGRIF_2:
+    # Baynes Sound sub-domain
+    coordinates: /home/dlatorne/nowcast-agrif-sys/grid/subgrids/BaynesSound/coordinates_seagrid_SalishSea201702_BS.nc
+    bathymetry: /home/dlatorne/nowcast-agrif-sys/grid/subgrids/BaynesSound/bathymetry_201702_BS.nc
+
+restart:
+  # Full domain
+  restart.nc: /global/scratch/dlatorne/agrif-runs/ddmmmyy/SalishSea_nnnnnnnn_restart.nc
+  restart_trc.nc: /global/scratch/dlatorne/agrif-runs/ddmmmyy/SalishSea_nnnnnnnn_restart_trc.nc
+  AGRIF_1:
+    # Haro Strait sub-domain
+    restart.nc: /global/scratch/dlatorne/agrif-runs/ddmmmyy/HaroStrait_SalishSea_nnnnnnnn_restart.nc
+    restart_trc.nc: /global/scratch/dlatorne/agrif-runs/ddmmmyy/HaroStrait_SalishSea_nnnnnnnn_restart_trc.nc
+  AGRIF_2:
+    # Baynes Sound sub-domain
+    restart.nc: /global/scratch/dlatorne/agrif-runs/ddmmmyy/BaynesSound_SalishSea_nnnnnnnn_restart.nc
+    restart_trc.nc: /global/scratch/dlatorne/agrif-runs/ddmmmyy/BaynesSound_SalishSea_nnnnnnnn_restart_trc.nc
+
+forcing:
+  # Full domain
+  LiveOcean:
+    link to: /home/dlatorne/nowcast-agrif-sys/runs/LiveOcean/
+  NEMO-atmos:
+    link to: /home/dlatorne/nowcast-agrif-sys/runs/NEMO-atmos/
+  bfr_coef.nc:
+    link to: /home/dlatorne/nowcast-agrif-sys/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: /home/dlatorne/nowcast-agrif-sys/grid/
+  rivers:
+    link to: /home/dlatorne/nowcast-agrif-sys/runs/rivers
+  rivers-climatology:
+    link to: /home/dlatorne/nowcast-agrif-sys/rivers-climatology/
+  ssh:
+    link to: /home/dlatorne/nowcast-agrif-sys/runs/ssh/
+  tides:
+    link to: /home/dlatorne/nowcast-agrif-sys/tides/
+  tracers:
+    link to: /home/dlatorne/nowcast-agrif-sys/tracers/
+  # Haro Strait sub-domain
+  1_HS_NEMO-atmos:
+    link to: /home/dlatorne/nowcast-agrif-sys/runs/NEMO-atmos/
+  1_HS_grid:
+    link to: /home/dlatorne/nowcast-agrif-sys/grid/subgrids/HaroStrait/
+  1_HS_rivers-climatology:
+    link to: /home/dlatorne/nowcast-agrif-sys/rivers-climatology/subgrids/HaroStrait/
+  # Baynes Sound sub-domain
+  2_BS_NEMO-atmos:
+    link to: /home/dlatorne/nowcast-agrif-sys/runs/NEMO-atmos/
+  2_BS_grid:
+    link to: /home/dlatorne/nowcast-agrif-sys/grid/subgrids/BaynesSound/
+  2_BS_rivers-climatology:
+    link to: /home/dlatorne/nowcast-agrif-sys/rivers-climatology/subgrids/BaynesSound/
+
+namelists:
+  # Full domain
+  namelist_cfg:
+    - /home/dlatorne/nowcast-agrif-sys/runs/namelist.time
+    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist.domain
+    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist.atmos_rivers
+    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist.light
+    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist.lateral
+    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist.bottom
+    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist.tracer
+    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist.dynamics
+    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist.vertical
+    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist.compute
+  namelist_smelt_cfg:
+  - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist_smelt_cfg
+  namelist_top_cfg:
+  - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist_top_cfg
+
+  AGRIF_1:
+    # Haro Strait sub-domain
+    namelist_cfg:
+      - /home/dlatorne/nowcast-agrif-sys/runs/namelist.time.HS
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/HaroStrait/namelist.domain.HS.10
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/HaroStrait/namelist.atmos_rivers.HS
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist.light
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/namelist.lateral.subgrid
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/namelist.bottom.nojetty
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/namelist.tracer.subgrid.3
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/namelist.dynamics.subgrid.3
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist.vertical
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist.compute
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/namelist.agrif
+    namelist_smelt_cfg:
+    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/HaroStrait/namelist_smelt_cfg.HS
+    namelist_top_cfg:
+    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist_top_cfg
+
+  AGRIF_2:
+    # Baynes Sound sub-domain
+    namelist_cfg:
+      - /home/dlatorne/nowcast-agrif-sys/runs/namelist.time.BS
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/BaynesSound/namelist.domain.BS.20
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/BaynesSound/namelist.atmos_rivers.BS
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist.light
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/namelist.lateral.subgrid
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/namelist.bottom.nojetty
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/namelist.tracer.subgrid.3
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/namelist.dynamics.subgrid.3
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist.vertical
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist.compute
+      - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/namelist.agrif
+    namelist_smelt_cfg:
+    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/BaynesSound/namelist_smelt_cfg.BS
+    namelist_top_cfg:
+    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/namelist_top_cfg
+
+output:
+  separate XIOS server: True
+  XIOS servers: 3
+  # Full domain
+  iodefs: /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/iodef.HS1BS2.xml
+  domaindefs: /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/domain_def.xml
+  fielddefs: /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/field_def.xml
+  filedefs: /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/file_def.xml
+  AGRIF_1:
+    # Haro Strait sub-domain
+    domaindefs: /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/HaroStrait/domain_def.HS.xml
+    filedefs: /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/HaroStrait/file_def.HS.xml
+  AGRIF_2:
+    # Baynes Sound sub-domain
+    domaindefs: /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/BaynesSound/domain_def.BS.xml
+    filedefs: /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/BaynesSound/file_def.BS.xml
+
+vcs revisions:
+  hg:
+    - /home/dlatorne/nowcast-agrif-sys/grid
+    - /home/dlatorne/nowcast-agrif-sys/NEMO-Cmd
+    - /home/dlatorne/nowcast-agrif-sys/rivers-climatology
+    - /home/dlatorne/nowcast-agrif-sys/SalishSeaCmd
+    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets
+    - /home/dlatorne/nowcast-agrif-sys/tides
+    - /home/dlatorne/nowcast-agrif-sys/tracers
+    - /home/dlatorne/nowcast-agrif-sys/XIOS-ARCH

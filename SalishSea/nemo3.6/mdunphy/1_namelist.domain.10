@@ -1,0 +1,82 @@
+!! Domain configuration
+!!
+&namcfg     !   parameters of the configuration
+!-----------------------------------------------------------------------
+   cp_cfg      =  "SalishSea"          !  name of the configuration
+   jp_cfg      =      40               !  resolution of the configuration [1/degrees]
+   jpidta      =      94               !  1st lateral dimension ( >= jpi )
+   jpjdta      =     199               !  2nd    "         "    ( >= jpj )
+   jpkdta      =      31               !  number of levels      ( >= jpk )
+   jpiglo      =      94               !  1st dimension of global domain --> i =jpidta
+   jpjglo      =     199               !  2nd    -                  -    --> j =jpjdta
+   jperio      =       0               !  lateral cond. type (between 0 and 6)
+                                       !  = 0 closed                 ;   = 1 cyclic East-West
+                                       !  = 2 equatorial symmetric   ;   = 3 North fold T-point pivot
+                                       !  = 4 cyclic East-West AND North fold T-point pivot
+                                       !  = 5 North fold F-point pivot
+                                       !  = 6 cyclic East-West AND North fold F-point pivot
+&end
+
+
+&namzgr        !   vertical coordinates
+!-----------------------------------------------------------------------
+   ln_zco      = .false.   !  z-coordinate - full    steps   (T/F)      ("key_zco" may also be defined)
+   ln_zps      = .true.    !  z-coordinate - partial steps   (T/F)
+&end
+
+
+&namdom        !   space and time domain (bathymetry, mesh, timestep)
+!-----------------------------------------------------------------------
+   nn_bathy    =    1      !  compute (=0) or read (=1) the bathymetry file
+   nn_msh      =    1      !  create (=1) a mesh file or not (=0)
+   rn_hmin     =    3.     !  min depth of the ocean (>0) or min number of ocean level (<0)
+   rn_e3zps_min=    2.     !  partial step thickness is set larger than the minimum of
+   rn_e3zps_rat=    0.5    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
+                           !
+   rn_rdt      =    10.    !  time step for the dynamics (and tracer if nn_acc=0)
+   rn_atfp     =    0.1    !  asselin time filter parameter
+   nn_acc      =    0      !  acceleration of convergence : =1      used, rdt < rdttra(k)
+                           !                                =0, not used, rdt = rdttra
+   rn_rdtmin   =   300.    !  minimum time step on tracers (used if nn_acc=1)
+   rn_rdtmax   =   300.    !  maximum time step on tracers (used if nn_acc=1)
+   rn_rdth     =   300.    !  depth variation of tracer time step  (used if nn_acc=1)
+
+! grid information (was in par file)
+   ppsur       = 999999.
+   ppa0        = 999999.
+   ppa1        = 999999.
+   ppkth       = 25.
+   ppacr       =  3.
+   ppdzmin     =  1.
+   pphmax      = 428.
+   ldbletanh   = .FALSE.   ! do not use double tanh
+&end
+
+
+&namsplit      !   time splitting parameters                            ("key_dynspg_ts")
+!-----------------------------------------------------------------------
+   ln_bt_fw      =    .TRUE.           !  Forward integration of barotropic equations
+   ln_bt_av      =    .TRUE.           !  Time filtering of barotropic variables
+   ln_bt_nn_auto =    .TRUE.           !  Set nn_baro automatically to be just below
+                                       !  a user defined maximum courant number (rn_bt_cmax)
+   nn_baro       =     20              !  Number of iterations of barotropic mode
+                                       !  during rn_rdt seconds. Only used if ln_bt_nn_auto=F
+   rn_bt_cmax    =    0.6              !  Maximum courant number allowed if ln_bt_nn_auto=T
+   nn_bt_flt     =    1                !  Time filter choice
+                                       !  = 0 None
+                                       !  = 1 Boxcar over   nn_baro barotropic steps
+                                       !  = 2 Boxcar over 2*nn_baro     "        "
+&end
+
+
+&namtsd        !   data : Temperature  & Salinity
+!-----------------------------------------------------------------------
+!              ! file name                       ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
+!              !                                 ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
+ sn_tem  = 'Bathy201702_initial_expanded.nc',       -12,           'tn',   .false., .true.,  'yearly', '',        ''
+ sn_sal  = 'Bathy201702_initial_expanded.nc',       -12,           'sn',   .false., .true.,  'yearly', '',        ''
+
+ cn_dir        = '1_initial_strat/'  ! directory containing initial condition files
+ ln_tsd_init   = .true.              ! Initialisation of ocean T & S with T &S input data (T) or not (F)
+ ln_tsd_tradmp = .false.             ! damping of ocean T & S toward T &S input data (T) or not (F)
+&end

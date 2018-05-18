@@ -1,0 +1,17 @@
+List of configuration folders and descriptions:
+
+Non-config folders:
+INIT_NC/:  easy place to put all local initfiles
+OLD_LIKELY_UNNECESSARY/: old stuff. poke around in at own risk
+
+(FX = functioning run, NR = never run, PR = problem run ) 
+SCOG_ALLTS_LBC:/ [PR] -
+SCOG_LBC_sept2016:/ [PR] -
+SCOG_sept2016:/ [FX] - works! 30day run for orcinus, no local bc
+SCOG_spinup:/ [NR] - plan to run 90 day spinup run
+SMELT_c4:/ [FX] -
+SMELT_COG:/ [FX] - 
+SMELT_COG_withlocalBC:/ [PR] -
+SCOG_1seg_sept2016:/ [NR] - subset of fxning SCOG_sept2016 for comparison with SCOG_LBC_sept2016
+
+
