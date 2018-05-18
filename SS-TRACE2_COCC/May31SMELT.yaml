@@ -18,8 +18,8 @@ config_name: SMELT
 MPI decomposition: 11x17
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: spring2015_0NNut
-walltime: 96:00:00
+run_id: COCCbio
+walltime: 168:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 
@@ -34,7 +34,7 @@ grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path above
   coordinates: coordinates_seagrid_SalishSea201702.nc
-  bathymetry: bathymetry_201702_old.nc
+  bathymetry: bathymetry_201702.nc
   land processor elimination: bathymetry_201702.csv
 
 forcing:
@@ -51,15 +51,15 @@ forcing:
   bfr_coef.nc:
     link to: grid/jetty_mask_bathy201702.nc
   initial_green:
-    link to: tracers/initial
-  tides:
-    link to: tides
+    link to: initial_green
   tracers:
     link to: tracers
+  tides:
+    link to: tides
 
 restart:
-  restart.nc: $MEOPAR/NEMO-forcing/restarts/nowcastgreen_201802/SalishSea_00317520_restart.nc
-  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/nowcastgreen_201802/SalishSea_00317520_restart_trc.nc
+  restart.nc: $MEOPAR/NEMO-forcing/surface/coccs/SalishSea_01397520_restart.nc
+  restart_trc.nc: $MEOPAR/NEMO-forcing/surface/coccs/SalishSea_01397520_20160531_restart_trc_Edit.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -72,18 +72,18 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist_cfg_06feb15_6mon_Orc 
+    - ./namelist_cfg_31may16
   namelist_top_cfg:
-    - ./namelist_top_cfg_0NNut
-  namelist_smelt_cfg:
-    - ./namelist_smelt_cfg_KhT
+    - ./namelist_top_cfg_COCCbio
+  namelist_trace2_cfg:
+    - ./namelist_smelt_cfg_COCCbio
 
 output:
   # If relative, paths are taken from current directory
-  iodefs: iodef.xml.Orc
-  filedefs: file_def.xml
-  domaindefs: domain_def.xml
-  fielddefs: field_def.xml
+  iodefs: iodef_trace2xios2.xml.orcinus
+  filedefs: file_def_trace2xios2.xml
+  domaindefs: domain_def_xios2.xml
+  fielddefs: field_def.xml.TRACE2
   separate XIOS server: True
   XIOS servers: 1
 

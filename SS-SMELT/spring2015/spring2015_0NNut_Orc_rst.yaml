@@ -15,11 +15,11 @@ config_name: SMELT
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 11x17
+MPI decomposition: 16x39
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: spring2015_0NNut
-walltime: 96:00:00
+walltime: 48:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 
@@ -58,8 +58,8 @@ forcing:
     link to: tracers
 
 restart:
-  restart.nc: $MEOPAR/NEMO-forcing/restarts/nowcastgreen_201802/SalishSea_00317520_restart.nc
-  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/nowcastgreen_201802/SalishSea_00317520_restart_trc.nc
+  restart.nc: /global/scratch/eolson/spring2015_0NNut_Orc/SalishSea_00382320_restart.nc
+  restart_trc.nc: /global/scratch/eolson/spring2015_0NNut_Orc/SalishSea_00382320_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -72,7 +72,7 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist_cfg_06feb15_6mon_Orc 
+    - ./namelist_cfg_06feb15_6mon_Orc_rst 
   namelist_top_cfg:
     - ./namelist_top_cfg_0NNut
   namelist_smelt_cfg:
