@@ -15,7 +15,7 @@ config_name: SMELTC
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 11x17
+MPI decomposition: 16x39
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: COCCbio
@@ -75,15 +75,15 @@ namelists:
     - ./namelist_cfg_31may16
   namelist_top_cfg:
     - ./namelist_top_cfg_COCCbio
-  namelist_trace2_cfg:
+  namelist_smelt_cfg:
     - ./namelist_smelt_cfg_COCCbio
 
 output:
   # If relative, paths are taken from current directory
-  iodefs: iodef_trace2xios2.xml.orcinus
-  filedefs: file_def_trace2xios2.xml
-  domaindefs: domain_def_xios2.xml
-  fielddefs: field_def.xml.TRACE2
+  iodefs: ../SS-SMELT/spring2015/iodef.xml.Orc 
+  filedefs: ../SS-SMELT/spring2015/file_def.xml
+  domaindefs: ../SS-SMELT/spring2015/domain_def.xml
+  fielddefs: ../SS-SMELT/spring2015/field_def.xml
   separate XIOS server: True
   XIOS servers: 1
 
