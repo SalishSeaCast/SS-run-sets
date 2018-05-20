@@ -9,7 +9,7 @@
 #  TRACE2 config
 #  1st run for sinking experiment
 
-config_name: SMELT
+config_name: SMELTC
 
 # How is the domain to be distributed over the processors in the
 # i (longitude) and j (latitude) directions?
