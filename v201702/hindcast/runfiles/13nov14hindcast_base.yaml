@@ -37,7 +37,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - /home/allen/MEOPAR/runs/namelist.time.13nov14
+  - ./namelist.time.13nov14
   - /home/allen/MEOPAR/SS-run-sets/v201702/namelist.domain
   - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist.atmos_rivers
   - /home/allen/MEOPAR/SS-run-sets/v201702/namelist.light
@@ -64,7 +64,7 @@ output:
 paths:
   NEMO code config: /home/allen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /home/allen/MEOPAR/XIOS-2
-  runs directory: $SCRATCH/hindcast
+  runs directory: $SCRATCH/
 
 vcs revisions:
   hg:
