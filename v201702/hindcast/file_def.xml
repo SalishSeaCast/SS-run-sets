@@ -39,7 +39,7 @@
           <field field_ref="TRA"            name="Fraser_tracer"/>
           <field field_ref="MESZ"           name="mesozooplankton"/>
         </file>
-	<file id="Taux" name_suffix="_aux_T" description="auxilary variables">
+	<file id="file13" name_suffix="_aux_T" description="auxilary variables">
 	  <field field_ref="PAR"      name="photosynthetic_available_radiation"/>
 	  <field field_ref="rhop"     name="potential_density_sigma"/>
 	  <field field_ref="e3t"      name="T_cell_thickness"/>
@@ -96,7 +96,7 @@
           <field field_ref="TRA"            name="Fraser_tracer"/>
           <field field_ref="MESZ"           name="mesozooplankton"/>
         </file>
-	<file id="Taux2" name_suffix="_aux_T" description="auxilary variables">
+	<file id="file14" name_suffix="_aux_T" description="auxilary variables">
 	  <field field_ref="PAR"      name="photosynthetic_available_radiation"/>
 	  <field field_ref="rhop"     name="potential_density_sigma"/>
 	  <field field_ref="e3t"      name="T_cell_thickness"/>
