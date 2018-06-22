@@ -15,11 +15,11 @@ config_name: SMELT
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 16x39
+MPI decomposition: 11x17
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: spring2015_diatHS
-walltime: 12:00:00
+run_id: diatHS6_rstAug2
+walltime: 96:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 account: rrg-allen
@@ -59,8 +59,8 @@ forcing:
     link to: tracers
 
 restart:
-  restart.nc: $SCRATCH/results/spring2015_diatHS/SalishSea_00879120_restart.nc
-  restart_trc.nc: $SCRATCH/results/spring2015_diatHS/SalishSea_00879120_restart_trc.nc
+  restart.nc: /scratch/eolson/results/spring2015_diatHS6_rstAug/SalishSea_00749520_restart.nc
+  restart_trc.nc: /scratch/eolson/results/spring2015_diatHS6_rstAug/SalishSea_00749520_restart_trc.nc 
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -73,16 +73,16 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist_cfg_diatHSrst
+    - ./namelist_cfg_rstAug2
   namelist_top_cfg:
     - ./namelist_top_cfg
   namelist_smelt_cfg:
-    - ./namelist_smelt_cfg_diatHS
+    - ./namelist_smelt_cfg_diatHS6
 
 output:
   # If relative, paths are taken from current directory
   iodefs: iodef.xml
-  filedefs: file_def.xml.noGrid
+  filedefs: file_def.xml
   domaindefs: domain_def.xml
   fielddefs: field_def.xml
   separate XIOS server: True
