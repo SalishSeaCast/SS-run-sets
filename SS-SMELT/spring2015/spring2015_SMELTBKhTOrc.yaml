@@ -76,7 +76,7 @@ namelists:
   namelist_top_cfg:
     - ./namelist_top_cfg
   namelist_smelt_cfg:
-    - ./namelist_smelt_cfg_KhT
+    - ./namelist_smelt_cfg_KhT_B
 
 output:
   # If relative, paths are taken from current directory
