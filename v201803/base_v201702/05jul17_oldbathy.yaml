@@ -2,7 +2,7 @@ email: sallen@eoas.ubc.ca
 MPI decomposition: 16x39
 config_name: SalishSea
 run_id: 05jul17oldbathy
-walltime: 05:00:00
+walltime: 04:00:00
 
 forcing:
   LiveOcean:
@@ -27,7 +27,7 @@ forcing:
     link to: $PROJECT/allen/MEOPAR/tracers
 
 restart:
-  restart.nc: /scratch/allen/oldbathy_201702/05jun17/SalishSea_02261520_restart.nc
+  restart.nc: /scratch/allen/oldbathy_newN/05jun17/SalishSea_02261520_restart.nc
 
 grid:
   bathymetry: $PROJECT/allen/MEOPAR/grid/bathymetry_201702.nc
