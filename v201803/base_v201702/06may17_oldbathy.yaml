@@ -27,7 +27,7 @@ forcing:
     link to: $PROJECT/allen/MEOPAR/tracers
 
 restart:
-  restart.nc: /scratch/allen/oldbathy_201702/06apr17one/SalishSea_02131920_restart.nc
+  restart.nc: /scratch/allen/oldbathy_newN/06apr17/SalishSea_02131920_restart.nc
 
 grid:
   bathymetry: $PROJECT/allen/MEOPAR/grid/bathymetry_201702.nc
