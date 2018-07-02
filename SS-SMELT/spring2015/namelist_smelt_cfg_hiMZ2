@@ -59,8 +59,7 @@
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    zz_rate_mesozoo_winterconc = 0.39                   #uM N mesozooplankton background concentration
    zz_rate_mesozoo_sumpeakval =  0.42, 0.0,  0.0     #uM N magnitude of mesozooplankton summer concentration peaks
-   zz_rate_mesozoo_sumpeakwid = 217.0,  155.00, 218.0  # year-days widths of mesozooplankton summer concentration peaks,0)
-   zz_rate_mesozoo_sumpeakpos = 100.00, 155.000, 218.00 # year-day times of mesozooplankton summer concentration peaks
+   zz_rate_mesozoo_sumpeakwid = 100.0,  155.00, 218.0  # year-days widths of mesozooplankton summer concentration peaks,0)
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampiszoo     !   parameters for microzooplankton
