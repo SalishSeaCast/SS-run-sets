@@ -19,6 +19,13 @@
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisprod     !   parameters for phytoplankton growth
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_maxtemp_diat      = 26.0         !: deg C
+   zz_rate_maxtemp_myri      = 31.0         !: deg C
+   zz_rate_maxtemp_nano      = 31.0         !: deg C
+   zz_rate_temprange_diat    = 14.0          !: deg C
+   zz_rate_temprange_myri    = 13.0          !: deg C
+   zz_rate_temprange_nano    = 13.0          !: deg C
+   zz_rate_K_Si_diat         = 1.2         !:
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampissbc
@@ -55,7 +62,7 @@
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampiszoo     !   parameters for microzooplankton
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-   zz_rate_uzoo_R               = 1.50E-05   !match SOG 0.600E-04      ! 1/s micro-phyto maximum growth rate # Hitchcock 1980, 1.4 d-1 for T. nordenskelii at 10degrees/
+   zz_rate_uzoo_R               = 1.8E-05   !match SOG 0.600E-04      ! 1/s micro-phyto maximum growth rate # Hitchcock 1980, 1.4 d-1 for T. nordenskelii at 10degrees/
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisdia     !   additional 2D/3D tracers diagnostics
