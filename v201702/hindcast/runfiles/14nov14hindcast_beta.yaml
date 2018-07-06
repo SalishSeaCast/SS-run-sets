@@ -1,19 +1,16 @@
 email: sallen@eoas.ubc.ca
 account: rrg-allen
-MPI decomposition: 18x37
+MPI decomposition: 16x39
+# MPI decomposition: 11x20
 config_name: SMELT
-run_id: 13nov14hindcast_newinitial
-walltime: 00:35:00
+run_id: 14nov14hindcast
+walltime: 04:30:00
 
 forcing:
   LiveOcean:
     link to: $PROJECT/SalishSea/forcing/LiveOcean
   NEMO-atmos:
     link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
-  initial_data_file.nc:
-    link to: /home/allen/MEOPAR/tracers/initial/Bathy201702_12nov14.nc
-  initial_bio_data_file.nc:
-    link to: /home/allen/MEOPAR/tracers/initial/BioIC_SMELT_v20180706.nc
   bfr_coef.nc:
     link to: /home/allen/MEOPAR/grid/jetty_mask_bathy201702.nc
   grid:
@@ -31,6 +28,10 @@ forcing:
   tracers:
     link to: /home/allen/MEOPAR/tracers
 
+restart:
+  restart.nc: /scratch/dlatorne/hindcast/13nov14/SalishSea_00002160_restart.nc
+  restart_trc.nc: /scratch/dlatorne/hindcast/13nov14/SalishSea_00002160_restart_trc.nc
+  
 grid:
   bathymetry: /home/allen/MEOPAR/grid/bathymetry_201702.nc
   coordinates: /home/allen/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
@@ -38,7 +39,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.13nov14
+  - ./namelist.time.14nov14
   - /home/allen/MEOPAR/SS-run-sets/v201702/namelist.domain
   - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist.atmos_rivers
   - /home/allen/MEOPAR/SS-run-sets/v201702/namelist.light
@@ -51,14 +52,14 @@ namelists:
   namelist_smelt_cfg:
   - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_cfg
   namelist_top_cfg:
-  - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_coldstart
+  - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_restart
   - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_cfg
 
 output:
   XIOS servers: 1
   domaindefs: /home/allen/MEOPAR/SS-run-sets/v201702/domain_def.xml
   fielddefs: /home/allen/MEOPAR/SS-run-sets/v201702/field_def.xml
-  filedefs: /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/file_def.xml
+  filedefs: /home/allen/MEOPAR/SS-run-sets/v201702/file_def_dailysplit.xml
   iodefs: /home/allen/MEOPAR/SS-run-sets/v201702/iodef.xml
   separate XIOS server: true
 
