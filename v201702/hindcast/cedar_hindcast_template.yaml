@@ -55,7 +55,7 @@ namelists:
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.light
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist.lateral
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.bottom
-  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.tracer
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist.tracer
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.dynamics
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.vertical
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.compute
