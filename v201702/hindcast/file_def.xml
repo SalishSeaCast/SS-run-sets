@@ -40,9 +40,9 @@
           <field field_ref="MESZ"           name="mesozooplankton"/>
         </file>
 	<file id="file13" name_suffix="_aux_T" description="auxilary variables">
-	  <field field_ref="PAR"      name="photosynthetic_available_radiation"/>
-	  <field field_ref="rhop"     name="potential_density_sigma"/>
-	  <field field_ref="e3t"      name="T_cell_thickness"/>
+	  <field field_ref="PAR"      name="PAR"/>
+	  <field field_ref="rhop"     name="sigma_theta"/>
+	  <field field_ref="e3t"      name="e3t"/>
 	</file>  
      </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 2h files -->
@@ -53,10 +53,6 @@
           <field field_ref="PPDIATNO3"      />
           <field field_ref="PPPHYNO3"     />
           <field field_ref="PPMRUBNO3"     />
-          <field field_ref="HetMRub"      />
-          <field field_ref="MORTPHY"      />
-          <field field_ref="MORTMRUB"      />
-          <field field_ref="MORTDIAT"      />
           <field field_ref="TQ10"       />
         </file>
      </file_group>
@@ -103,6 +99,10 @@
 	</file>  
 
         <file id="file7" name_suffix="_dia2_T" description="smelt diagnostics B" >
+          <field field_ref="HetMRub"      />
+          <field field_ref="MORTPHY"      />
+          <field field_ref="MORTMRUB"      />
+          <field field_ref="MORTDIAT"      />
           <field field_ref="GRMESZDIAT"      />
           <field field_ref="GRMESZMRUB"      />
           <field field_ref="GRMESZPHY"      />
