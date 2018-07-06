@@ -3,8 +3,8 @@ account: rrg-allen
 MPI decomposition: 16x39
 # MPI decomposition: 11x20
 config_name: SMELT
-run_id: 13nov14hindcast_newsmelt
-walltime: 01:15:00
+run_id: 13nov14hindcast_newinitial
+walltime: 00:35:00
 
 forcing:
   LiveOcean:
@@ -12,7 +12,9 @@ forcing:
   NEMO-atmos:
     link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
   initial_data_file.nc:
-    link to: /home/allen/MEOPAR/sea_initial/v201702b/Bathy201702_12nov14.nc
+    link to: /home/allen/MEOPAR/tracers/initial/Bathy201702_12nov14.nc
+  initial_bio_data_file.nc:
+    link to: /home/sallen/MEOPAR/tracers/initial/BioIC_SMELT_v20180706.nc
   bfr_coef.nc:
     link to: /home/allen/MEOPAR/grid/jetty_mask_bathy201702.nc
   grid:
