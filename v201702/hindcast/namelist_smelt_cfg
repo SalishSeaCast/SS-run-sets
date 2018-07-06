@@ -53,11 +53,15 @@
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-&nampismes     !   parameters for mesozooplankton
+&nampismes     !   parameters for M. rubrum
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_mesorub_R               = 0.9e-5
 /
-&nampismezo     !   parameters for microzooplankton
+&nampismezo     !   parameters for mesozooplankton
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_mesozoo_winterconc = 0.42                   ! uM N mesozooplankton background concentration
+   zz_rate_mesozoo_sumpeakval =  0.42, 0.0,  0.0       ! uM N magnitude of mesozooplankton summer concentration peaks
+   zz_rate_mesozoo_sumpeakwid = 80.0,  155.00, 218.0  ! year-days widths of mesozooplankton summer concentration peaks,0)
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampiszoo     !   parameters for microzooplankton
