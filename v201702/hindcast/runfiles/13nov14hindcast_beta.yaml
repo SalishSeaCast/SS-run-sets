@@ -50,7 +50,7 @@ namelists:
   - /home/allen/MEOPAR/SS-run-sets/v201702/namelist.vertical
   - /home/allen/MEOPAR/SS-run-sets/v201702/namelist.compute
   namelist_smelt_cfg:
-  - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_cfg_highzoo
+  - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_cfg
   namelist_top_cfg:
   - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_coldstart
   - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_cfg
