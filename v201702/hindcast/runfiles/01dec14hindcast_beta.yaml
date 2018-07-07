@@ -2,8 +2,8 @@ email: sallen@eoas.ubc.ca
 account: rrg-allen
 MPI decomposition: 15x44
 config_name: SMELT
-run_id: good_sky_14nov14
-walltime: 04:30:00
+run_id: 01dec14hindcast
+walltime: 08:15:00
 
 forcing:
   LiveOcean:
@@ -28,9 +28,9 @@ forcing:
     link to: /home/allen/MEOPAR/tracers
 
 restart:
-  restart.nc: /scratch/allen/beta_sky/13nov14/SalishSea_00002160_restart.nc
-  restart_trc.nc: /scratch/allen/beta_sky/13nov14/SalishSea_00002160_restart_trc.nc
-  
+  restart.nc: /scratch/dlatorne/hindcast/14nov14/SalishSea_00038880_restart.nc
+  restart_trc.nc: /scratch/dlatorne/hindcast/14nov14/SalishSea_00038880_restart_trc.nc
+
 grid:
   bathymetry: /home/allen/MEOPAR/grid/bathymetry_201702.nc
   coordinates: /home/allen/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
@@ -38,7 +38,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.14nov14
+  - ./namelist.time.01dec14
   - /home/allen/MEOPAR/SS-run-sets/v201702/namelist.domain
   - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist.atmos_rivers
   - /home/allen/MEOPAR/SS-run-sets/v201702/namelist.light
