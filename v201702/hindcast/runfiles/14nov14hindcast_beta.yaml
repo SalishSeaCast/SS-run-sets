@@ -1,9 +1,8 @@
 email: sallen@eoas.ubc.ca
 account: rrg-allen
-MPI decomposition: 16x39
-# MPI decomposition: 11x20
+MPI decomposition: 15x44
 config_name: SMELT
-run_id: 14nov14hindcast
+run_id: sky_14nov14
 walltime: 04:30:00
 
 forcing:
