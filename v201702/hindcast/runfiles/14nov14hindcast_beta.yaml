@@ -1,8 +1,8 @@
 email: sallen@eoas.ubc.ca
 account: rrg-allen
-MPI decomposition: 15x44
+MPI decomposition: 18x37
 config_name: SMELT
-run_id: sky_14nov14
+run_id: good_sky_14nov14
 walltime: 04:30:00
 
 forcing:
@@ -28,8 +28,8 @@ forcing:
     link to: /home/allen/MEOPAR/tracers
 
 restart:
-  restart.nc: /scratch/allen/beta_newbiol_s/13nov14/SalishSea_00002160_restart.nc
-  restart_trc.nc: /scratch/allen/beta_newbiol_s/13nov14/SalishSea_00002160_restart_trc.nc
+  restart.nc: /scratch/allen/beta_sky/13nov14/SalishSea_00002160_restart.nc
+  restart_trc.nc: /scratch/allen/beta_sky/13nov14/SalishSea_00002160_restart_trc.nc
   
 grid:
   bathymetry: /home/allen/MEOPAR/grid/bathymetry_201702.nc
