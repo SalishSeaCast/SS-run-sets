@@ -28,8 +28,8 @@ forcing:
     link to: /home/allen/MEOPAR/tracers
 
 restart:
-  restart.nc: /scratch/dlatorne/hindcast/13nov14/SalishSea_00002160_restart.nc
-  restart_trc.nc: /scratch/dlatorne/hindcast/13nov14/SalishSea_00002160_restart_trc.nc
+  restart.nc: /scratch/allen/beta_newbiol_s/13nov14/SalishSea_00002160_restart.nc
+  restart_trc.nc: /scratch/allen/beta_newbiol_s/13nov14/SalishSea_00002160_restart_trc.nc
   
 grid:
   bathymetry: /home/allen/MEOPAR/grid/bathymetry_201702.nc
