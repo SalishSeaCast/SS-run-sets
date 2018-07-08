@@ -63,8 +63,8 @@ namelists:
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_smelt_cfg
   namelist_top_cfg:
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_top_restart
-  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_top_cfg_origAh
-
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_top_cfg
+  
 output:
   XIOS servers: 1
   domaindefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/domain_def.xml
