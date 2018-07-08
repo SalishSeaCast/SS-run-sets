@@ -18,8 +18,8 @@ config_name: SMELT
 MPI decomposition: 16x39
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: spring2015_hiMZ
-walltime: 20:00:00
+run_id: slowPPrst3
+walltime: 24:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 
@@ -58,10 +58,8 @@ forcing:
     link to: tracers
 
 restart:
-  restart.nc: /global/scratch/eolson/spring2015_hiMZ/SalishSea_00447120_restart.nc
-  restart_trc.nc: /global/scratch/eolson/spring2015_hiMZ/SalishSea_00447120_restart_trc.nc
-#  restart.nc: $MEOPAR/NEMO-forcing/restarts/nowcastgreen_201802/SalishSea_00317520_restart.nc
-#  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/nowcastgreen_201802/SalishSea_00317520_restart_trc.nc
+  restart.nc: /global/scratch/eolson/spring2015_slowPPrst2/SalishSea_00771120_restart.nc
+  restart_trc.nc: /global/scratch/eolson/spring2015_slowPPrst2/SalishSea_00771120_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -74,11 +72,11 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist_cfg_20150407
+    - ./namelist_cfg_20150904 
   namelist_top_cfg:
     - ./namelist_top_cfg
   namelist_smelt_cfg:
-    - ./namelist_smelt_cfg_hiMZ
+    - ./namelist_smelt_cfg_slowPP
 
 output:
   # If relative, paths are taken from current directory
