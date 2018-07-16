@@ -785,7 +785,12 @@
        <field id="NO3_E3T"      long_name="NO3 * E3T"                                unit="mmol/m2"  > NO3 * e3t </field >
        <field id="NH4"          long_name="Ammonium Concentration"              standard_name="mole_concentration_of_ammonium_in_sea_water"  unit="mmol m-3" />
        <field id="NH4_E3T"      long_name="NH4 * E3T"                                unit="mmol/m2"  > NH4 * e3t </field >
-
+       <field id="DIC"          long_name="Dissolved Inorganic C Concentration" standard_name="mole_concentration_of_dissolved_inorganic_carbon_in_sea_water"   unit="mmol m-3" />
+       <field id="DIC_E3T"      long_name="DIC * E3T"                                unit="mmol/m2"  > DIC * e3t </field >
+       <field id="TA"          long_name="Total Alkalinity Concentration"              standard_name="sea_water_alkalinity_expressed_as_mole_equivalent"  unit="mmol m-3" />
+       <field id="TA_E3T"      long_name="TA * E3T"                                unit="mmol/m2"  > TA * e3t </field >
+       <field id="O2"          long_name="Dissolved Oxygen Concentration"              standard_name="dissolved_oxygen_expressed_as_mole_equivalent"  unit="mmol m-3" />
+       <field id="O2_E3T"      long_name="O2 * E3T"                                unit="mmol/m2"  > O2 * e3t </field >
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
        <field id="Num"         long_name="Number of organic particles"              unit="1" />
        <field id="Num_E3T"     long_name="Num * E3T"                                unit="m"  > Num * e3t </field >
@@ -817,6 +822,9 @@
        <field id="bSi_UT"   long_name="Biogenic Silicon Concentration - U Transport"      standard_name="bSi_u_dy_dz"      unit="mmol s-1" />
        <field id="NO3_UT"   long_name="Nitrate Concentration - U Transport"               standard_name="NO3_u_dy_dz"      unit="mmol s-1" />
        <field id="NH4_UT"   long_name="Ammonium Concentration - U Transport"              standard_name="NH4_u_dy_dz"      unit="mmol s-1" />
+       <field id="DIC_UT"   long_name="Dissolved Inorganic Carbon - U Transport"          standard_name="DIC_u_dy_dz"      unit="mmol s-1" />
+       <field id="TA_UT"    long_name="Total Alkalinity Concentration - U Transport"               standard_name="TA_u_dy_dz"       unit="mmol s-1" />
+       <field id="O2_UT"    long_name="Oxygen Concentration - U Transport"              standard_name="O2_u_dy_dz"       unit="mmol s-1" />
      </field_group>
 
      <!-- SMELT Advective Transports of Tracers - V Grid  -->
@@ -832,6 +840,9 @@
        <field id="bSi_VT"   long_name="Biogenic Silicon Concentration - V Transport"      standard_name="bSi_v_dx_dz"      unit="mmol s-1" />
        <field id="NO3_VT"   long_name="Nitrate Concentration - V Transport"               standard_name="NO3_v_dx_dz"      unit="mmol s-1" />
        <field id="NH4_VT"   long_name="Ammonium Concentration - V Transport"              standard_name="NH4_v_dx_dz"      unit="mmol s-1" />
+       <field id="DIC_VT"   long_name="Dissolved Inorganic Carbon - V Transport"          standard_name="DIC_v_dx_dz"      unit="mmol s-1" />
+       <field id="TA_VT"    long_name="Total Alkalinity Concentration - V Transport"      standard_name="TA_v_dy_dz"       unit="mmol s-1" />
+       <field id="O2_VT"    long_name="Oxygen Concentration - V Transport"                standard_name="O2_v_dy_dz"       unit="mmol s-1" />
      </field_group>
 
      <!-- SMELT Advective Transports of Tracers - W Grid  -->
@@ -847,6 +858,9 @@
        <field id="bSi_WT"   long_name="Biogenic Silicon Concentration - W Transport"      standard_name="bSi_w_dy_dx"      unit="mmol s-1" />
        <field id="NO3_WT"   long_name="Nitrate Concentration - W Transport"               standard_name="NO3_w_dy_dx"      unit="mmol s-1" />
        <field id="NH4_WT"   long_name="Ammonium Concentration - W Transport"              standard_name="NH4_w_dy_dx"      unit="mmol s-1" />
+       <field id="DIC_WT"   long_name="Dissolved Inorganic Carbon - W Transport"          standard_name="DIC_w_dy_dx"      unit="mmol s-1" />
+       <field id="TA_WT"    long_name="Nitrate Concentration - W Transport"               standard_name="TA_w_dy_dx"       unit="mmol s-1" />
+       <field id="O2_WT"    long_name="Ammonium Concentration - W Transport"              standard_name="O2_w_dy_dx"       unit="mmol s-1" />
      </field_group>
      <!-- PISCES additional diagnostics on T grid  -->
 
