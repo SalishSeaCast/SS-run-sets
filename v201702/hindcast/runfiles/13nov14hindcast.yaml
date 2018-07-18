@@ -58,7 +58,7 @@ namelists:
     - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_physics
   namelist_smelt_cfg:
     - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_biology
-    - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_rivers.skog
+    - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_rivers.SKOG
     - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_skog
 
 output:
