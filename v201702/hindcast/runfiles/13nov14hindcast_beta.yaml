@@ -1,8 +1,8 @@
 email: sallen@eoas.ubc.ca
 account: rrg-allen
 MPI decomposition: 16x41
-config_name: SMELT
-run_id: 13nov14_northTS
+config_name: SalishSeaCast
+run_id: 13nov14_SSC
 walltime: 00:35:00
 
 forcing:
