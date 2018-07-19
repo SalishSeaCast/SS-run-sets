@@ -69,7 +69,6 @@
    rn_trofac(12)  =  1.0  !  -      -      -     -
    rn_trofac(13)  =  1.0  !  -      -      -     -
    rn_trofac(14)  =  1.0  !  -      -      -     -
-
 /
 !----------------------------------------------------------------------
 &nambdy_bc       !   data for BDY boundary conditions: 2nd boundary
@@ -103,6 +102,9 @@
    rn_trofac(9)   =  1.0  !  -      -      -     -
    rn_trofac(10)  =  1.0  !  -      -      -     -
    rn_trofac(11)  =  1.0  !  -      -      -     -
+   rn_trofac(12)  =  1.0  !  -      -      -     -
+   rn_trofac(13)  =  1.0  !  -      -      -     -
+   rn_trofac(14)  =  1.0  !  -      -      -     -
 /
 
 
