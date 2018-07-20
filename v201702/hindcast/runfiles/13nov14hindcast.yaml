@@ -15,7 +15,7 @@ forcing:
   initial_bio_data_file.nc:
     link to: /home/allen/MEOPAR/tracers/initial/BioIC_SMELT_v20180706.nc
   initial_car_data_file.nc:
-    link to: /home/allen/MEOPAR/sea_initial/v201702b/init_DICTAOXY_May04.nc
+    link to: /home/allen/MEOPAR/tracers/initial/init_DICTAOXY_May04.nc
 
   bfr_coef.nc:
     link to: /home/allen/MEOPAR/grid/jetty_mask_bathy201702.nc
@@ -72,7 +72,7 @@ output:
 paths:
   NEMO code config: /home/allen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /home/allen/MEOPAR/XIOS-2
-  runs directory: $SCRATCH/
+  runs directory: /scratch/dlatorne/hindcast
 
 vcs revisions:
   hg:
