@@ -81,8 +81,7 @@ namelists:
     - $HOME/MEOPAR/SS-run-sets/v201702/namelist.compute
   namelist_top_cfg:
     - $HOME/MEOPAR/SS-run-sets/v201702/namelist_top_coldstart
-    - $HOME/MEOPAR/SS-run-sets/v201702/namelist_top_cfg
-    - $HOME/MEOPAR/SS-run-sets/v201702/MYTRC/namelist_TRC_cfg
+    - $HOME/MEOPAR/SS-run-sets/v201702/MYTRC/namelist_top_cfg_TRC
   namelist_smelt_cfg:
     - $HOME/MEOPAR/SS-run-sets/v201702/namelist_smelt_cfg
 
