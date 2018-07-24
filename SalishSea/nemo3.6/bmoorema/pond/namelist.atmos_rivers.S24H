@@ -52,8 +52,8 @@
    rn_vtau0    =   0.1     !  uniform value for the j-stress
    nn_tau000   =   0       !  timestep to start wind ramp up
    nn_tau001   =   540     !  timestep of peak wind
-   nn_tau002   =   2700    !  timestep to begin wind rampdown
-   nn_tau003   =   3240    !  timestep to end wind ramp down
+   nn_tau002   =   7020    !  timestep to begin wind rampdown
+   nn_tau003   =   7560    !  timestep to end wind ramp down
    y_utau      =   0.      !  y point where y=rn_utau0
    y0u         =   0.      !  y point where y=0 for utau
    y_vtau      =   0.      !  y point where y=rn_vtau0
