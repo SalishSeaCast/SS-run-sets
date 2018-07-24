@@ -42,8 +42,8 @@
       <field field_ref="MESZ"           name="mesozooplankton"/>
     </file>
 	<file id="file6" name_suffix="_trc20m_T" description="passive tracer 20 m" >
-      <field field_ref="MYTRC1"         name="first 20 m upwelling tracer" grid_ref="trc20m_grid"/>
-      <field field_ref="MYTRC2"         name="second 20 m upwelling tracer" grid_ref="trc20m_grid"/>
+      <field field_ref="MYTRC1"         name="mytracer1" grid_ref="trc20m_grid"/>
+      <field field_ref="MYTRC2"         name="mytracer2" grid_ref="trc20m_grid"/>
     </file>
   </file_group>
   <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 2h files -->
