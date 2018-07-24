@@ -803,8 +803,7 @@
        <field id="C14B"     long_name="Bomb C14 Concentration"                      unit="1"         />
        <field id="C14B_E3T"    long_name="C14B * E3T"                               unit="m"  > C14B * e3t </field >
        <!-- Tracer fields with key_my_trc -->
-       <field id="MYTRC1"      long_name="First 20 m upwelling tracer"              unit="1" />
-       <field id="MYTRC2"      long_name="Second 20 m upwelling tracer"             unit="1" />
+       <field id="MYTRC1"      long_name="20 m upwelling tracer"                    unit="1" />
      </field_group>
 
      <!-- SMELT Advective Transports of Tracers - U Grid  -->
