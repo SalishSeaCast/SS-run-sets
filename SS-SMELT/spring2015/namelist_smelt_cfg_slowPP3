@@ -28,10 +28,6 @@
    zz_rate_temprange_diat    = 14.0          !: deg C
    zz_rate_temprange_myri    = 13.0          !: deg C
    zz_rate_temprange_nano    = 13.0          !: deg C
-   zz_rate_R_diat            = 0.580E-04    !: 1/s
-   zz_rate_R_myri            = 0.220E-04    !: 1/s
-   zz_rate_R_nano            = 0.220E-04    !: 1/s
-
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampissbc
