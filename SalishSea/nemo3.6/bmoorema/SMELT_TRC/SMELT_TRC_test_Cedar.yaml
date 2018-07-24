@@ -15,11 +15,11 @@ config_name: SMELT_TRC
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 8x18
+MPI decomposition: 11x23
 
 # For runs on systems that use qsub/PBS/TORQUE
 run_id: SMELT_TRC_test
-walltime: 01:00:00
+walltime: 03:00:00
 # If email statement commented out, email address is set to ${USER}@eos.ubc.ca
 # email: you@example.com
 
