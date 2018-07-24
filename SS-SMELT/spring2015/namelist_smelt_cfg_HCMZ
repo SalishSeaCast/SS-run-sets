@@ -100,6 +100,7 @@
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    zz_w_sink_D_PON = 9.e-5       ! m/s PON detritus sinking rate # Jeffery quoting Dune and Bacon
    zz_w_sink_D_bSi = 9.e-5       ! m/s  biogenic silicon detritus sinking rate # match NO3 particles
+   zz_alpha_b = 0.7
 /
 
 
