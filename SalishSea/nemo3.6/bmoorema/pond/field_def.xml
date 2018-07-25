@@ -787,28 +787,23 @@
        <field id="NH4_E3T"      long_name="NH4 * E3T"                                unit="mmol/m2"  > NH4 * e3t </field >
 
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
-       <field id="Num"         long_name="Number of organic particles"              unit="1" />
-       <field id="Num_E3T"     long_name="Num * E3T"                                unit="m"  > Num * e3t </field >
+       <field id="Num"          long_name="Number of organic particles"              unit="1" />
+       <field id="Num_E3T"      long_name="Num * E3T"                                unit="m"  > Num * e3t </field >
 
        <!-- PISCES light : variables available with key_pisces_reduced -->
-       <field id="DET"         long_name="Detritus"                                 unit="mmol-N/m3" />
-       <field id="DET_E3T"     long_name="DET * E3T"                                unit="mmol-N/m2"  > DET * e3t </field >
-       <field id="DOM"         long_name="Dissolved Organic Matter"                 unit="mmol-N/m3" />
-       <field id="DOM_E3T"     long_name="DOM * E3T"                                unit="mmol-N/m2"  > DOM * e3t </field >
+       <field id="DET"          long_name="Detritus"                                 unit="mmol-N/m3" />
+       <field id="DET_E3T"      long_name="DET * E3T"                                unit="mmol-N/m2"  > DET * e3t </field >
+       <field id="DOM"          long_name="Dissolved Organic Matter"                 unit="mmol-N/m3" />
+       <field id="DOM_E3T"      long_name="DOM * E3T"                                unit="mmol-N/m2"  > DOM * e3t </field >
 
        <!-- CFC11 : variables available with key_cfc -->
-       <field id="CFC11"       long_name="CFC-11 Concentration"                     unit="umol/m3" />
-       <field id="CFC11_E3T"   long_name="CFC11 * E3T"                              unit="umol/m2"  > CFC11 * e3t </field >
+       <field id="CFC11"        long_name="CFC-11 Concentration"                     unit="umol/m3" />
+       <field id="CFC11_E3T"    long_name="CFC11 * E3T"                              unit="umol/m2"  > CFC11 * e3t </field >
        <!-- Bomb C14 : variables available with key_c14b -->
-       <field id="C14B"     long_name="Bomb C14 Concentration"                      unit="1"         />
-       <field id="C14B_E3T"    long_name="C14B * E3T"                               unit="m"  > C14B * e3t </field >
+       <field id="C14B"         long_name="Bomb C14 Concentration"                   unit="1"         />
+       <field id="C14B_E3T"     long_name="C14B * E3T"                               unit="m"  > C14B * e3t </field >
        <!-- Tracer fields with key_my_trc -->
-       <field id="MYTRC1"       long_name="Tracer concentration"                     unit="1" />
-       <field id="MYTRC2"       long_name="Tracer concentration"                     unit="1" />
-       <field id="MYTRC3"       long_name="Tracer concentration"                     unit="1" />
-       <field id="MYTRC4"       long_name="Tracer concentration"                     unit="1" />
-       <field id="MYTRC5"       long_name="Tracer concentration"                     unit="1" />
-       <field id="MYTRC6"       long_name="Tracer concentration"                     unit="1" />
+       <field id="MYTRC1"       long_name="Upwelling tracer concentration"           unit="1" />
      </field_group>
 
      <!-- PISCES additional diagnostics on T grid  -->
