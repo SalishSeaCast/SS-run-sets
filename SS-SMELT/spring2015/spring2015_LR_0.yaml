@@ -18,7 +18,7 @@ config_name: SMELT
 MPI decomposition: 16x39
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: spring2015_HCMZ_0
+run_id: spring2015_LR_0
 walltime: 12:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
@@ -76,7 +76,7 @@ namelists:
   namelist_top_cfg:
     - ./namelist_top_cfg
   namelist_smelt_cfg:
-    - ./namelist_smelt_cfg_HCMZ
+    - ./namelist_smelt_cfg_LR
 
 output:
   # If relative, paths are taken from current directory
