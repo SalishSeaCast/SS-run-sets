@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN="LR"
+NEWRUN="slowPP3HI"
 OLDRUN="HCMZ"
 
 echo "working dir: $(pwd)"
