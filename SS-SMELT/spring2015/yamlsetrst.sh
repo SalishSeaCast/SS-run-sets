@@ -1,4 +1,5 @@
 #!/bin/bash
+NEWRUN="slowPP3HI"
 TEST="$(salishsea run --skylake spring2015_${NEWRUN}_1rst.yaml $SCRATCH/results/spring2015_${NEWRUN}_1 2>&1)"
 echo $TEST
 if [[ $TEST != *"ERROR"* ]]; then
