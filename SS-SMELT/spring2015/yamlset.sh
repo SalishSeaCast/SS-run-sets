@@ -1,6 +1,6 @@
 #!/bin/bash
-NEWRUN="slowPP3HI"
-OLDRUN="slowPP4HI"
+NEWRUN="slowPP4HI"
+OLDRUN="slowPP3HI"
 
 echo "working dir: $(pwd)"
 
