@@ -1,6 +1,6 @@
 #!/bin/bash
-NEWRUN="slowPP4HI"
-OLDRUN="slowPP3HI"
+NEWRUN="slowPP5HI"
+OLDRUN="slowPP4HI"
 
 echo "working dir: $(pwd)"
 
@@ -29,31 +29,31 @@ else
 fi
 echo $JID
 TEST=0
-TEST="$(salishsea run --skylake --waitjob ${JID} --nocheck-initial-conditions spring2015_${NEWRUN}_2.yaml $SCRATCH/results/spring2015_${NEWRUN}_2 2>&1)"
-echo $TEST
-JID=0
-if [[ $TEST != *"ERROR"* ]]; then
-   JID=${TEST##* }
-else
-  exit
-fi
-TEST=0
-TEST="$(salishsea run --skylake --waitjob ${JID} --nocheck-initial-conditions spring2015_${NEWRUN}_3.yaml $SCRATCH/results/spring2015_${NEWRUN}_3 2>&1)"
-echo $TEST
-JID=0
-if [[ $TEST != *"ERROR"* ]]; then
-   JID=${TEST##* }
-else
-  exit
-fi
-TEST=0
-TEST="$(salishsea run --skylake --waitjob ${JID} --nocheck-initial-conditions spring2015_${NEWRUN}_4.yaml $SCRATCH/results/spring2015_${NEWRUN}_4 2>&1)"
-echo $TEST
-JID=0
-if [[ $TEST != *"ERROR"* ]]; then
-   JID=${TEST##* }
-else
-  exit
-fi
+#TEST="$(salishsea run --skylake --waitjob ${JID} --nocheck-initial-conditions spring2015_${NEWRUN}_2.yaml $SCRATCH/results/spring2015_${NEWRUN}_2 2>&1)"
+#echo $TEST
+#JID=0
+#if [[ $TEST != *"ERROR"* ]]; then
+#   JID=${TEST##* }
+#else
+#  exit
+#fi
+#TEST=0
+#TEST="$(salishsea run --skylake --waitjob ${JID} --nocheck-initial-conditions spring2015_${NEWRUN}_3.yaml $SCRATCH/results/spring2015_${NEWRUN}_3 2>&1)"
+#echo $TEST
+#JID=0
+#if [[ $TEST != *"ERROR"* ]]; then
+#   JID=${TEST##* }
+#else
+#  exit
+#fi
+#TEST=0
+#TEST="$(salishsea run --skylake --waitjob ${JID} --nocheck-initial-conditions spring2015_${NEWRUN}_4.yaml $SCRATCH/results/spring2015_${NEWRUN}_4 2>&1)"
+#echo $TEST
+#JID=0
+#if [[ $TEST != *"ERROR"* ]]; then
+#   JID=${TEST##* }
+#else
+#  exit
+#fi
 echo "Ended run at $(date)"
 exit

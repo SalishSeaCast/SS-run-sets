@@ -282,7 +282,7 @@
     nb_bdy         = 2                     !  number of open boundary sets According to merge namelist, only 1
     ln_coords_file = .false., .false.      !  =T : read bdy coordinates from file
     cn_dyn2d       = 'flather', 'flather'            !
-    nn_dyn2d_dta   =  3, 3                 !  = 0, bdy data are equal to the initial state
+    nn_dyn2d_dta   =  3, 2                 !  = 0, bdy data are equal to the initial state
                                            !  = 1, bdy data are read in 'bdydata   .nc' files
                                            !  = 2, use tidal harmonic forcing data from files
                                            !  = 3, use external data AND tidal harmonic forcing
@@ -346,13 +346,13 @@
 !-----------------------------------------------------------------------
 !        !  file name                             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
 !        !                                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
-  bn_ssh = 'ssh/hindcast/ssh',                                         1,              'sossheig', .true.,        .false.,  'daily',  '',        ''
-  bn_u2d = 'ssh/hindcast/ssh',                                         1,              'vobtcrtx', .true.,        .false.,  'daily',  '',        ''
-  bn_v2d = 'ssh/hindcast/ssh',                                         1,              'vobtcrty', .true.,        .false.,  'daily',  '',        ''
+  bn_ssh = '',                                         1,              'sossheig', .true.,        .false.,  'monthly',  '',        ''
+  bn_u2d = '',                                         1,              'vobtcrtx', .true.,        .false.,  'monthly',  '',        ''
+  bn_v2d = '',                                         1,              'vobtcrty', .true.,        .false.,  'monthly',  '',        ''
   bn_u3d = '',                                        24,              'vozocrtx', .true.,        .false.,  'daily',    '',        ''
   bn_v3d = '',                                        24,              'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'Dosser_north_TEOS10',  -1,              'votemper', .true.,        .true.,   'yearly',   '',        ''
-  bn_sal = 'Dosser_north_TEOS10',  -1,              'vosaline', .true.,        .true.,   'yearly',   '',        ''
+  bn_tem = 'SalishSea_north_TEOS10',  4380,              'votemper', .true.,        .true.,   'yearly',   '',        ''
+  bn_sal = 'SalishSea_north_TEOS10',  4380,              'vosaline', .true.,        .true.,   'yearly',   '',        ''
 
   cn_dir = 'open_boundaries/north/'
   ln_full_vel = .false.
@@ -437,7 +437,7 @@
    ln_traldf_iso    =  .true.   ! isoneutral (needs "key_ldfslp")
    !
    rn_aeiv_0        =     0.    ! we have 0 eddy induced velocity coefficient [m2/s]
-   rn_aht_0         =     1.5   ! we have 10 horizontal eddy diffusivity for tracers [m2/s]
+   rn_aht_0         =     1.    ! we have 10 horizontal eddy diffusivity for tracers [m2/s]
    ! Smagorinsky stuff here if you set the key
 &end
 

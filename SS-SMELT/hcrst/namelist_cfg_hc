@@ -6,9 +6,9 @@
 &namrun        !   Parameters of the run
 !-----------------------------------------------------------------------
    cn_exp      = "SalishSea"  ! experience name
-   nn_it000    =    172801    ! first time step
-   nn_itend    =    185760    ! last time step (std 1 day = 2160 re: rn_rdt=40 in &namdom)
-   nn_date0    =  20150201    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
+   nn_it000    =    233281    ! first time step
+   nn_itend    =    300240    ! last time step (std 1 day = 2160 re: rn_rdt=40 in &namdom)
+   nn_date0    =  20150301    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
                               ! used to adjust tides to run date (regardless of restart control)
    nn_leapy    =       1      ! Leap year calendar (1) or not (0)
    ln_rstart   =   .true.     ! start from rest (F) or from a restart file (T)
@@ -23,9 +23,9 @@
    nn_istate   =       0      ! output the initial state (1) or not (0)
    ln_cfmeta   =  .true.      !  output additional data to netCDF files required for compliance with the CF metadata standard
    ln_clobber  =  .true.      ! clobber (overwrite) an existing file
-   nn_stock    =   2160       ! restart interval
-   ln_rst_list  = .false.      !  output restarts at list of times using nn_stocklist (T) or at set frequency with nn_stock (F)
-   nn_stocklist = 2736720, 0, 0, 0, 0, 0, 0, 0, 0, 0  ! List of timesteps when a restart file is to be written
+
+   ln_rst_list  = .true.       !  output restarts at list of times using nn_stocklist (T) or at set frequency with nn_stock (F)
+   nn_stocklist = 254880, 276480, 300240, 0, 0, 0, 0, 0, 0, 0  ! List of timesteps when a restart file is to be written
 &end
 
 
@@ -170,16 +170,16 @@
 !-----------------------------------------------------------------------
 !         !  file name  ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                ! rotation !
 !         !             !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename               ! pairing  !
-  sn_wndi = 'ops',        1,                 'u_wind',    .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', 'Uwnd'
-  sn_wndj = 'ops',        1,                 'v_wind',    .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', 'Vwnd'
-  sn_qsr  = 'ops',        1,                 'solar',     .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', ''
-  sn_qlw  = 'ops',        1,                 'therm_rad', .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', ''
-  sn_tair = 'ops',        1,                 'tair',      .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', ''
-  sn_humi = 'ops',        1,                 'qair',      .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', ''
-  sn_prec = 'ops',        1,                 'precip',    .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', ''
-  sn_snow = 'no_snow',  -12,                 'snow',      .true.,       .true.,   'yearly',   'weights-gem2.5-ops_201702.nc', ''
+  sn_wndi = 'NEMO-atmos/ops',        1,                 'u_wind',    .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', 'Uwnd'
+  sn_wndj = 'NEMO-atmos/ops',        1,                 'v_wind',    .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', 'Vwnd'
+  sn_qsr  = 'NEMO-atmos/ops',        1,                 'solar',     .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
+  sn_qlw  = 'NEMO-atmos/ops',        1,                 'therm_rad', .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
+  sn_tair = 'NEMO-atmos/ops',        1,                 'tair',      .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
+  sn_humi = 'NEMO-atmos/ops',        1,                 'qair',      .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
+  sn_prec = 'NEMO-atmos/ops',        1,                 'precip',    .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
+  sn_snow = 'grid/no_snow',  -12,                 'snow',      .true.,       .true.,   'yearly',   'grid/weights-gem2.5-ops_201702.nc', ''
 
-   cn_dir      = 'NEMO-atmos/'    !  root directory for the location of the bulk files
+   cn_dir      = './'    !  root directory for the location of the bulk files
    rn_zqt      = 2.               !  Air temperature and humidity reference height (m)
    rn_vfac     = 1.               !  new feature, lets use (0. for comparison, then switch to 1)
                                   !  multiplicative factor for ocean/ice velocity
@@ -191,13 +191,13 @@
 !-----------------------------------------------------------------------
 !             !  file name              ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
 !             !                         !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
-  sn_rnf      = 'R201702DFraCElse',       24,                'rorunoff', .true.,        .false., 'daily',    '',        ''
+  sn_rnf      = 'rivers/R201702DFraCElse',       24,                'rorunoff', .true.,        .false., 'daily',    '',        ''
   sn_cnf      = ''                 ,       0,                'socoefr0', .false.,       .true.,  'yearly',   '',        ''
   sn_s_rnf    = '',                       24,                'rosaline', .false.,       .true.,  'yearly',   '',        ''
-  sn_t_rnf    = 'rivers_ConsTemp_month',  -1,                'rotemper', .true.,        .true.,  'yearly',   '',        ''
-  sn_dep_rnf  = 'rivers_month_201702',    -1,                'rodepth' , .true.,        .true.,  'yearly',   '',        ''
+  sn_t_rnf    = 'rivers-climatology/rivers_ConsTemp_month',  -1,                'rotemper', .true.,        .true.,  'yearly',   '',        ''
+  sn_dep_rnf  = 'rivers-climatology/rivers_month_201702',    -1,                'rodepth' , .true.,        .true.,  'yearly',   '',        ''
 
-  cn_dir       = 'rivers/'  !  root directory for the location of the runoff files
+  cn_dir       = './'  !  root directory for the location of the runoff files
   ln_rnf_mouth = .false.    !  specific treatment at rivers mouths
   ln_rnf_depth = .true.     !  read in depth information for runoff
   ln_rnf_tem   = .true.     !  read in temperature information for runoff
@@ -209,9 +209,9 @@
 !-----------------------------------------------------------------------
 !         !  file name     ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                ! rotation !
 !         !                !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename               ! pairing  !
-  sn_apr  = 'ops',                 1,           'atmpres',   .true.,       .false.,  'daily',    'weights-gem2.5-ops_201702.nc', ''
+  sn_apr  = 'NEMO-atmos/ops',                 1,           'atmpres',   .true.,       .false.,  'daily',    'grid/weights-gem2.5-ops_201702.nc', ''
 
-  cn_dir      = 'NEMO-atmos/'  !  root directory for the location of the bulk files
+  cn_dir      = './'  !  root directory for the location of the bulk files
   ln_apr_obc  = .false.        !  inverse barometer added to OBC ssh data
 &end
 
@@ -264,7 +264,7 @@
 &nam_tide      !   tide parameters (#ifdef key_tide)   see NEMO-3.6-code/NEMOGCM/NEMO/OPA_SRC/SBC/tideini.F90
 ! Tidal parameters that we use to have to input are in OPA_SRC/SBC/tide.h90
 !-----------------------------------------------------------------------
-   ln_tide_pot   = .false.   !  use tidal potential forcing
+   ln_tide_pot   = .false.  !  use tidal potential forcing
    rdttideramp   =    0.    !
    clname(1)     =   'M2'   !  name of constituent
    clname(2)     =   'S2'
@@ -297,7 +297,7 @@
     rn_time_dmp   =  365., 365.            ! Damping time scale in days (nudging on orlanski inflow)
     rn_time_dmp_out =  365., 365.          ! Outflow damping time scale (nudging on orlanski outflow)
     rn_max_sponge = 50., 50.               ! max viscosity for sponge layer (m2/s)
-    nn_rimwidth   = 10, 10                  ! rim depth for FRS
+    nn_rimwidth   = 10, 10                 ! rim depth for FRS
 &end
 
 
@@ -305,24 +305,24 @@
 !-----------------------------------------------------------------------
     ctypebdy = 'W'
     nbdyind   = 2     ! i-index for segment
-    nbdybeg   = 385   ! j-index for segment beginning
-    nbdyend   = 471   ! j-index for segment end
+    nbdybeg   = 376   ! j-index for segment beginning
+    nbdyend   = 470   ! j-index for segment end
 &end
 
 
 &nambdy_dta      !  open boundaries - external data           ("key_bdy")
 !-----------------------------------------------------------------------
-!        !  file name             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
-!        !                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
-  bn_ssh = 'ssh/hindcast/ssh',                1,                'sossheig', .true.,        .false.,  'daily',    '',        ''
-  bn_u2d = 'ssh/hindcast/ssh',                1,                'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
-  bn_v2d = 'ssh/hindcast/ssh',                1,                'vobtcrty', .true.,        .false.,  'daily',    '',        ''
-  bn_u3d = '',                      24,                'vozocrtx', .true.,        .false.,  'daily',    '',        ''
-  bn_v3d = '',                      24,                'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'SalishSea_west_TEOS10',   168,                'votemper', .true.,        .true.,  'yearly',   '',        ''
-  bn_sal = 'SalishSea_west_TEOS10',   168,                'vosaline', .true.,        .true.,  'yearly',   '',        ''
+!        !  file name                    ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
+!        !                               !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
+  bn_ssh = 'ssh/ssh',                        1,               'sossheig', .true.,        .false.,  'daily',    '',        ''
+  bn_u2d = 'ssh/ssh',                        1,               'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v2d = 'ssh/ssh',                        1,               'vobtcrty', .true.,        .false.,  'daily',    '',        ''
+  bn_u3d = '',                              24,               'vozocrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v3d = '',                              24,               'vomecrty', .true.,        .false.,  'daily',    '',        ''
+  bn_tem = 'LiveOcean/LiveOcean_v201712',   24,               'votemper', .true.,        .false.,  'daily',    '',        ''
+  bn_sal = 'LiveOcean/LiveOcean_v201712',   24,               'vosaline', .true.,        .false.,  'daily',    '',        ''
 
-  cn_dir = 'open_boundaries/west/'
+  cn_dir = './'
 &end
 
 &nambdy_tide     ! tidal forcing at open boundaries
@@ -346,15 +346,15 @@
 !-----------------------------------------------------------------------
 !        !  file name                             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
 !        !                                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
-  bn_ssh = 'ssh/hindcast/ssh',                                         1,              'sossheig', .true.,        .false.,  'daily',  '',        ''
-  bn_u2d = 'ssh/hindcast/ssh',                                         1,              'vobtcrtx', .true.,        .false.,  'daily',  '',        ''
-  bn_v2d = 'ssh/hindcast/ssh',                                         1,              'vobtcrty', .true.,        .false.,  'daily',  '',        ''
-  bn_u3d = '',                                        24,              'vozocrtx', .true.,        .false.,  'daily',    '',        ''
-  bn_v3d = '',                                        24,              'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'Dosser_north_TEOS10',  -1,              'votemper', .true.,        .true.,   'yearly',   '',        ''
-  bn_sal = 'Dosser_north_TEOS10',  -1,              'vosaline', .true.,        .true.,   'yearly',   '',        ''
+  bn_ssh = 'ssh/ssh',                             1,              'sossheig', .true.,        .false.,  'daily',    '',        ''
+  bn_u2d = 'ssh/ssh',                             1,              'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v2d = 'ssh/ssh',                             1,              'vobtcrty', .true.,        .false.,  'daily',    '',        ''
+  bn_u3d = '',                                   24,              'vozocrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v3d = '',                                   24,              'vomecrty', .true.,        .false.,  'daily',    '',        ''
+  bn_tem = 'tracers/north/Dosser_north_TEOS10',  -1,              'votemper', .true.,        .true.,   'yearly',   '',        ''
+  bn_sal = 'tracers/north/Dosser_north_TEOS10',  -1,              'vosaline', .true.,        .true.,   'yearly',   '',        ''
 
-  cn_dir = 'open_boundaries/north/'
+  cn_dir = './'
   ln_full_vel = .false.
 &end
 
@@ -437,7 +437,7 @@
    ln_traldf_iso    =  .true.   ! isoneutral (needs "key_ldfslp")
    !
    rn_aeiv_0        =     0.    ! we have 0 eddy induced velocity coefficient [m2/s]
-   rn_aht_0         =     1.5   ! we have 10 horizontal eddy diffusivity for tracers [m2/s]
+   rn_aht_0         =     1.5    ! we have 10 horizontal eddy diffusivity for tracers [m2/s]
    ! Smagorinsky stuff here if you set the key
 &end
 
@@ -577,9 +577,9 @@
                            !  buffer blocking send or immediate non-blocking sends, resp.
    nn_buffer   =   0       !  size in bytes of exported buffer ('B' case), 0 no exportation
    ln_nnogather=  .false.  !  activate code to avoid mpi_allgather use at the northfold
-   jpni        =   9       !  jpni   number of processors following i (set automatically if < 1)
-   jpnj        =   19       !  jpnj   number of processors following j (set automatically if < 1)
-   jpnij       =   111       !  jpnij  number of local domains (set automatically if < 1)
+   jpni        =   16       !  jpni   number of processors following i (set automatically if < 1)
+   jpnj        =   41       !  jpnj   number of processors following j (set automatically if < 1)
+   jpnij       =   328       !  jpnij  number of local domains (set automatically if < 1)
 &end
 
 
