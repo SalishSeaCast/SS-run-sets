@@ -18,8 +18,8 @@ config_name: SMELT
 MPI decomposition: 16x39
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: hcrst
-walltime: 4:00:00
+run_id: spring2015_slowPP5HI_3
+walltime: 12:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
 
@@ -34,7 +34,7 @@ grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path above
   coordinates: coordinates_seagrid_SalishSea201702.nc
-  bathymetry: bathymetry_201702.nc
+  bathymetry: bathymetry_201702_old.nc
   land processor elimination: bathymetry_201702.csv
 
 forcing:
@@ -58,8 +58,8 @@ forcing:
     link to: tracers
 
 restart:
-  restart.nc: $MEOPAR/NEMO-forcing/restarts/hindcast_v1/SalishSea_00172800_restart.nc
-  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/hindcast_v1/SalishSea_00172800_restart_trc.nc
+  restart.nc: /scratch/eolson/results/spring2015_slowPP5HI_2/SalishSea_00706320_restart.nc
+  restart_trc.nc: /scratch/eolson/results/spring2015_slowPP5HI_2/SalishSea_00706320_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -72,18 +72,18 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist_cfg
+    - ./namelist_cfg_20150805_2mon
   namelist_top_cfg:
     - ./namelist_top_cfg
   namelist_smelt_cfg:
-    - ./namelist_smelt_cfg
+    - ./namelist_smelt_cfg_slowPP5HI
 
 output:
   # If relative, paths are taken from current directory
-  iodefs: ../spring2015/iodef.xml
-  filedefs: ../spring2015/file_def.xml.noGridnoDia
-  domaindefs: ../spring2015/domain_def.xml
-  fielddefs: ../spring2015/field_def.xml
+  iodefs: iodef.xml
+  filedefs: file_def.xml.noGridnoDia
+  domaindefs: domain_def.xml
+  fielddefs: field_def.xml
   separate XIOS server: True
   XIOS servers: 1
 
