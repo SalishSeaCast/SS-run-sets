@@ -1,14 +1,6 @@
 #!/bin/bash
-<<<<<<< variant A
-NEWRUN="slowPP5HI"
-OLDRUN="slowPP4HI"
->>>>>>> variant B
 NEWRUN="LLR2"
 OLDRUN="HCMZ"
-####### Ancestor
-NEWRUN="LLR"
-OLDRUN="HCMZ"
-======= end
 
 echo "working dir: $(pwd)"
 
