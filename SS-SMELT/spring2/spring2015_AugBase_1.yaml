@@ -18,7 +18,7 @@ config_name: SMELT
 MPI decomposition: 16x39
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: spring2015_AugBase_2
+run_id: spring2015_AugBase_1
 walltime: 12:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
@@ -58,8 +58,8 @@ forcing:
     link to: tracers
 
 restart:
-  restart.nc: /scratch/eolson/results/spring2015_AugBase_1/SalishSea_00576720_restart.nc
-  restart_trc.nc: /scratch/eolson/results/spring2015_AugBase_1/SalishSea_00576720_restart_trc.nc
+  restart.nc: /scratch/eolson/results/spring2015_AugBase_0/SalishSea_00447120_restart.nc
+  restart_trc.nc: /scratch/eolson/results/spring2015_AugBase_0/SalishSea_00447120_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -72,9 +72,9 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist_cfg_20150606_2mon
+    - ./namelist_cfg_hc_20150407_2mon
   namelist_top_cfg:
-    - ./namelist_top_cfg
+    - ./namelist_top_cfg_hc
   namelist_smelt_cfg:
     - ./namelist_smelt_cfg_AugBase
   namelist_smelt_ref:
