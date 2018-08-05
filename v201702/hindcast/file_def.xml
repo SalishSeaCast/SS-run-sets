@@ -46,10 +46,8 @@
 	  <field field_ref="DIC"      name="dissolved_inorganic_carbon"/>
           <field field_ref="TA"       name="total_alkalinity"/>
           <field field_ref="O2"       name="dissolved_oxygen"/>
-	</file>  
-     </file_group>
-      <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 2h files -->
-        <file id="file6" name_suffix="_dia1_T" description="smelt diagnostics A" >
+	</file>
+	<file id="file6" name_suffix="_prod_T" description="smelt diagnostics A" >
           <field field_ref="PPDIAT"      />
           <field field_ref="PPPHY"       />
           <field field_ref="PPMRUB"     />
@@ -58,6 +56,8 @@
           <field field_ref="PPMRUBNO3"     />
           <field field_ref="TQ10"       />
         </file>
+     </file_group>
+      <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 2h files -->
      </file_group>
       <file_group id="3h" output_freq="3h"  output_level="10" enabled=".TRUE."/> <!-- 3h files -->
       <file_group id="4h" output_freq="4h"  output_level="10" enabled=".FALSE."/> <!-- 4h files -->

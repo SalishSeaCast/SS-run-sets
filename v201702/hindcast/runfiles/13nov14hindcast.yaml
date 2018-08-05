@@ -15,7 +15,7 @@ forcing:
   initial_bio_data_file.nc:
     link to: /home/allen/MEOPAR/tracers/initial/BioIC_SMELT_v20180706.nc
   initial_car_data_file.nc:
-    link to: /home/allen/MEOPAR/tracers/initial/init_DICTAOXY_May04.nc
+    link to: /home/allen/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
   bfr_coef.nc:
     link to: /home/allen/MEOPAR/grid/jetty_mask_bathy201702.nc
