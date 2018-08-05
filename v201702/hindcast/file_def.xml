@@ -96,9 +96,9 @@
           <field field_ref="MESZ"           name="mesozooplankton"/>
         </file>
 	<file id="file14" name_suffix="_carp_T" description="auxilary variables">
-	  <field field_ref="PAR"      name="photosynthetic_available_radiation"/>
-	  <field field_ref="rhop"     name="potential_density_sigma"/>
-	  <field field_ref="e3t"      name="T_cell_thickness"/>
+	  <field field_ref="PAR"      name="PAR"/>
+	  <field field_ref="rhop"     name="sigma_theta"/>
+	  <field field_ref="e3t"      name="e3t"/>
 	  <field field_ref="DIC"            name="dissolved_inorganic_carbon"/>
           <field field_ref="TA"             name="total_alkalinity"/>
           <field field_ref="O2"             name="dissolved_oxygen"/>

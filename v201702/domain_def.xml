@@ -19,7 +19,7 @@
       <domain id="CloverPoint"             domain_ref="grid_T"> <zoom_domain ibegin="199" jbegin="295" ni="1"  nj="1"  /> </domain>
       <domain id="FinnertyCove"            domain_ref="grid_T"> <zoom_domain ibegin="216" jbegin="304" ni="1"  nj="1"  /> </domain>
       <domain id="PortTownsend"            domain_ref="grid_T"> <zoom_domain ibegin="254" jbegin="203" ni="1"  nj="1"  /> </domain>
-      <domain id="PatriciaBay"              domain_ref="grid_T"> <zoom_domain ibegin="214" jbegin="351" ni="1"  nj="1"  /> </domain>
+      <domain id="PatriciaBay"             domain_ref="grid_T"> <zoom_domain ibegin="214" jbegin="351" ni="1"  nj="1"  /> </domain>
       <domain id="FulfordHarbour"          domain_ref="grid_T"> <zoom_domain ibegin="229" jbegin="368" ni="1"  nj="1"  /> </domain>
       <domain id="PatosIsland"             domain_ref="grid_T"> <zoom_domain ibegin="302" jbegin="341" ni="1"  nj="1"  /> </domain>
       <domain id="TumboChannel"            domain_ref="grid_T"> <zoom_domain ibegin="283" jbegin="354" ni="1"  nj="1"  /> </domain>
@@ -57,6 +57,8 @@
       <domain id="EastDenmanIsland"        domain_ref="grid_T"> <zoom_domain ibegin="136" jbegin="606" ni="1"  nj="1"  /> </domain>
       <!-- Boundary Conditions for FVCOM -->
       <domain id="FVCOM_T"                 domain_ref="grid_T"> <zoom_domain ibegin="225" jbegin="340" ni="144" nj="221" /> </domain>
+      <!-- Passive tracer below 20 m -->
+      <domain id="trc20m"                  domain_ref="grid_T"> <zoom_domain ibegin="100" jbegin="300" ni="298" nj="598" /> </domain>
    </domain_group>
 
    <domain_group id="grid_U">

@@ -54,7 +54,7 @@ namelists:
 
   namelist_top_cfg:
     - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_coldstart.SKOG
-    - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_TracerDefAndBdy.SKOG
+    - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_TracerDefAndBdy.SKOG.upTrac
     - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_physics
   namelist_smelt_cfg:
     - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_biology
@@ -63,7 +63,7 @@ namelists:
 
 output:
   XIOS servers: 1
-  filedefs: /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/file_def.xml
+  filedefs: /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/file_def_upTrac.xml
   domaindefs: /home/allen/MEOPAR/SS-run-sets/v201702/domain_def.xml
   fielddefs: /home/allen/MEOPAR/SS-run-sets/v201702/field_def.xml
   iodefs: /home/allen/MEOPAR/SS-run-sets/v201702/iodef.xml
