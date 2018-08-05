@@ -34,6 +34,8 @@
       <!-- Surface Slab -->
       <axis id="nearsurface_U" long_name="Top 5 U levels" axis_ref="depthu"> <zoom_axis begin="0" n="5" /> </axis>
       <axis id="nearsurface_V" long_name="Top 5 V levels" axis_ref="depthv"> <zoom_axis begin="0" n="5" /> </axis>
+      <!-- Surface Slab -->
+      <axis id="deptht_20m" long_name="Top 20 T levels" axis_ref="deptht"> <zoom_axis begin="0" n="27" /> </axis>
    </axis_definition>
 
    <domain_definition src="./domain_def.xml"/>
@@ -73,7 +75,7 @@
      <grid id="WoodwardsLanding_grid">        <domain domain_ref="WoodwardsLanding"/>         </grid>
      <grid id="NewWestminster_grid">          <domain domain_ref="NewWestminster"/>           </grid>
      <grid id="PointGrey_grid">               <domain domain_ref="PointGrey"/>                </grid>
-     <grid id="SandyCove_grid">                <domain domain_ref="SandyCove"/>                </grid>
+     <grid id="SandyCove_grid">               <domain domain_ref="SandyCove"/>                </grid>
      <grid id="Squamish_grid">                <domain domain_ref="Squamish"/>                 </grid>
      <grid id="PointAtkinson_grid">           <domain domain_ref="PointAtkinson"/>            </grid>
      <grid id="GibsonsLanding_grid">          <domain domain_ref="GibsonsLanding"/>           </grid>
@@ -126,6 +128,9 @@
      <grid id="FVCOM_grid_U_3D"> <domain domain_ref="FVCOM_U"/> <axis id="depthu" /> </grid>
      <grid id="FVCOM_grid_V_3D"> <domain domain_ref="FVCOM_V"/> <axis id="depthv" /> </grid>
      <grid id="FVCOM_grid_W_3D"> <domain domain_ref="FVCOM_W"/> <axis id="depthw" /> </grid>
+
+     <!-- Passive tracer below 20 m -->
+     <grid id="trc20m_grid"> <domain domain_ref="trc20m"/> <axis axis_ref="deptht_20m"/> </grid>
     </grid_definition>
 
   </context>
