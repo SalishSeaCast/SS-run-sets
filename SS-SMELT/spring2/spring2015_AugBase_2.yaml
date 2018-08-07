@@ -34,7 +34,7 @@ grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path above
   coordinates: coordinates_seagrid_SalishSea201702.nc
-  bathymetry: bathymetry_201702_old.nc
+  bathymetry: bathymetry_201702.nc
   land processor elimination: bathymetry_201702.csv
 
 forcing:
@@ -58,8 +58,8 @@ forcing:
     link to: tracers
 
 restart:
-  restart.nc: /scratch/eolson/results/spring2015_AugBase_1/SalishSea_00576720_restart.nc
-  restart_trc.nc: /scratch/eolson/results/spring2015_AugBase_1/SalishSea_00576720_restart_trc.nc
+  restart.nc: /scratch/eolson/results/spring2015_AugBase_1/SalishSea_00442800_restart.nc
+  restart_trc.nc: /scratch/eolson/results/spring2015_AugBase_1/SalishSea_00442800_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
