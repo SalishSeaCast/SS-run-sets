@@ -56,7 +56,7 @@
           <field field_ref="PPMRUBNO3"     />
           <field field_ref="TQ10"       />
         </file>
-	<file id="file15" name_suffix="_upTr_T" description="passive tracer 20 m" >
+	<file id="file15" name_suffix="_mtrc_T" description="passive tracer 20 m" >
           <field field_ref="MYTRC1"         name="tracer20m" grid_ref="trc20m_grid"/>
         </file>
      </file_group>
