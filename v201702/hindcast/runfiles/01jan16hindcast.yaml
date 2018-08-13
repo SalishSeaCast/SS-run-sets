@@ -2,7 +2,7 @@ email: sallen@eoas.ubc.ca
 account: rrg-allen
 MPI decomposition: 16x41
 config_name: SalishSeaCast
-run_id: 01jan15hindcast
+run_id: 01jan16hindcast
 walltime: 08:30:00
 
 forcing:
@@ -26,13 +26,12 @@ forcing:
     link to: /home/allen/MEOPAR/tides
   tracers:
     link to: /home/allen/MEOPAR/tracers
+  initial_data_file.nc:
+    link to: /scratch/dlatorne/hindcast/01dec15/SalishSea_00894240_restart.nc
   initial_bio_data_file.nc:
     link to: /home/allen/MEOPAR/sea_initial/v201702b/hcrstEdit.nc
   initial_car_data_file.nc:
     link to: /home/allen/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
-
-restart:
-  restart.nc: /scratch/dlatorne/hindcast/01dec15/SalishSea_00894240_restart.nc
 
 grid:
   bathymetry: /home/allen/MEOPAR/grid/bathymetry_201702.nc
