@@ -1,5 +1,5 @@
 email: sallen@eoas.ubc.ca
-account: rrg-allen
+account: def-allen
 MPI decomposition: 16x41
 config_name: SalishSeaCast
 run_id: 13nov14_hindcast
@@ -53,13 +53,13 @@ namelists:
   - /home/allen/MEOPAR/SS-run-sets/v201702/namelist.compute
 
   namelist_top_cfg:
-    - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_coldstart.SKOG
-    - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_TracerDefAndBdy.SKOG.upTrac
-    - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_physics
+  - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_coldstart.SKOG
+  - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_TracerDefAndBdy.SKOG.upTrac
+  - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_physics
   namelist_smelt_cfg:
-    - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_biology
-    - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_rivers.SKOG
-    - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_skog
+  - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_biology
+  - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_rivers.SKOG
+  - /home/allen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_skog
 
 output:
   XIOS servers: 1
