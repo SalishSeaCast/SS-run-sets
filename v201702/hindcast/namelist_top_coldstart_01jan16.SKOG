@@ -49,6 +49,7 @@
    rn_trfac(8)   =  1.0  !  -      -      -     -
    rn_trfac(9)   =  1.0  !  -      -      -     -
    rn_trfac(10)  =  1.0  !  -      -      -     -
+   rn_trfac(11)  =  1.0  !  -      -      -     -
    rn_trfac(12)  =  1.0  !  -      -      -     -
    rn_trfac(13)  =  1.0  !  -      -      -     -
    rn_trfac(14)  =  1.0  !  -      -      -     -
