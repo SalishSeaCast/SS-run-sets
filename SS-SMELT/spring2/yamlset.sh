@@ -1,14 +1,14 @@
 #!/bin/bash
-NEWRUN="A2Base"
-#OLDRUN="HCMZ"
+NEWRUN="R5"
+OLDRUN="Augase"
 
-#echo "working dir: $(pwd)"
+echo "working dir: $(pwd)"
 
-#sed "s/$OLDRUN/$NEWRUN/" "spring2015_${OLDRUN}_0.yaml" > "spring2015_${NEWRUN}_0.yaml"
-#sed "s/$OLDRUN/$NEWRUN/" "spring2015_${OLDRUN}_1.yaml" > "spring2015_${NEWRUN}_1.yaml"
-#sed "s/$OLDRUN/$NEWRUN/" "spring2015_${OLDRUN}_2.yaml" > "spring2015_${NEWRUN}_2.yaml"
-#sed "s/$OLDRUN/$NEWRUN/" "spring2015_${OLDRUN}_3.yaml" > "spring2015_${NEWRUN}_3.yaml"
-#sed "s/$OLDRUN/$NEWRUN/" "spring2015_${OLDRUN}_4.yaml" > "spring2015_${NEWRUN}_4.yaml"
+sed "s/$OLDRUN/$NEWRUN/" "spring2015_${OLDRUN}_0.yaml" > "spring2015_${NEWRUN}_0.yaml"
+sed "s/$OLDRUN/$NEWRUN/" "spring2015_${OLDRUN}_1.yaml" > "spring2015_${NEWRUN}_1.yaml"
+sed "s/$OLDRUN/$NEWRUN/" "spring2015_${OLDRUN}_2.yaml" > "spring2015_${NEWRUN}_2.yaml"
+sed "s/$OLDRUN/$NEWRUN/" "spring2015_${OLDRUN}_3.yaml" > "spring2015_${NEWRUN}_3.yaml"
+sed "s/$OLDRUN/$NEWRUN/" "spring2015_${OLDRUN}_4.yaml" > "spring2015_${NEWRUN}_4.yaml"
 
 TEST="$(salishsea run --skylake spring2015_${NEWRUN}_0.yaml $SCRATCH/results/spring2015_${NEWRUN}_0 2>&1)"
 echo $TEST
