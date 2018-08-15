@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN="AugBase"
+NEWRUN="M5"
 #OLDRUN="HCMZ"
 
 #echo "working dir: $(pwd)"
