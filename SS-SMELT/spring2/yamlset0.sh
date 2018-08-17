@@ -1,6 +1,6 @@
 #!/bin/bash
-NEWRUN="R5"
-OLDRUN="A2Base"
+NEWRUN="Q6"
+OLDRUN="R5"
 
 #echo "working dir: $(pwd)"
 
