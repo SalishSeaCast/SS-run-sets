@@ -65,14 +65,14 @@ namelists:
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_smelt_skog
   namelist_top_cfg:
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_top_restart
-  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_top_TracerDefAndBdy.SKOG.uptrac
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_top_TracerDefAndBdy.SKOG
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_top_physics
   
 output:
   XIOS servers: 1
   domaindefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/domain_def.xml
   fielddefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/field_def.xml
-  filedefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/file_def_dailysplit_upTrac.xml
+  filedefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/file_def_dailysplit.xml
   iodefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/iodef.xml
   separate XIOS server: true
 
