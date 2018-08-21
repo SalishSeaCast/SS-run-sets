@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN="Q9"
+NEWRUN="Aug2"
 OLDRUN="Q6"
 
 #echo "working dir: $(pwd)"
