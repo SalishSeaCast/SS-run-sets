@@ -1,12 +1,12 @@
-# salishsea command processor run description file template for
+# salishsea command processor run description coldstart file for
 # SalishSeaCast automation hindcast SMELT runs on cedar
 
 email: sallen@eoas.ubc.ca,dlatornell@eoas.ubc.ca
 account: rrg-allen
 MPI decomposition: 16x41
 config_name: SalishSeaCast
-run_id: ddmmmyyhindcast
-walltime: 8:30:00
+run_id: 01jan17hindcast
+walltime: 3:00:00
 
 paths:
   NEMO code config: $PROJECT/SalishSea/hindcast-sys/NEMO-3.6-code/NEMOGCM/CONFIG
@@ -17,10 +17,6 @@ grid:
   bathymetry: $PROJECT/SalishSea/hindcast-sys/grid/bathymetry_201702.nc
   coordinates: $PROJECT/SalishSea/hindcast-sys/grid/coordinates_seagrid_SalishSea201702.nc
   land processor elimination: $PROJECT/SalishSea/hindcast-sys/grid/bathymetry_201702.csv
-
-restart:
-  restart.nc: /scratch/dlatorne/hindcast/ddmmmyy/SalishSea_nnnnnnnn_restart.nc
-  restart_trc.nc: /scratch/dlatorne/hindcast/ddmmmyy/SalishSea_nnnnnnnn_restart_trc.nc
 
 forcing:
   LiveOcean:
@@ -46,10 +42,17 @@ forcing:
     link to: $PROJECT/SalishSea/hindcast-sys/tides
   tracers:
     link to: $PROJECT/SalishSea/hindcast-sys/tracers
+  initial_data_file.nc:
+    link to: /scratch/dlatorne/hindcast/21dec16/SalishSea_01684800_restart.nc
+  initial_bio_data_file.nc:
+    link to: /scratch/dlatorne/hindcast/21dec16/SalishSea_01684800_restart_trc.nc
+  initial_car_data_file.nc:
+    link to: /scratch/dlatorne/hindcast/21dec16/SalishSea_01684800_restart_trc.nc
+  
 
 namelists:
   namelist_cfg:
-  - $PROJECT/SalishSea/hindcast-sys/runs/namelist.time
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/runfiles/namelist.time.01jan17
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.domain
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist.atmos_rivers
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.light
@@ -64,8 +67,8 @@ namelists:
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_smelt_rivers.SKOG
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_smelt_skog
   namelist_top_cfg:
-  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_top_restart
-  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_top_TracerDefAndBdy.SKOG.upTrac
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_top_coldstart_01jan16.SKOG
+  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_top_TracerDefAndBdy.SKOG.upTrac.01jan16
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist_top_physics
   
 output:
