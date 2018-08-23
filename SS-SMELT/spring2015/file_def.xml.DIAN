@@ -35,7 +35,6 @@
           <field field_ref="PPMRUBNO3"    />
           <field field_ref="VMIXNO3"      />
           <field field_ref="VMIXNO3B"     />
-          <field field_ref="VMIXNO3C"     />
           <field field_ref="VMIXNO3PLUS"  />
           <field field_ref="ULDFNO3"      />
           <field field_ref="VLDFNO3"      />
