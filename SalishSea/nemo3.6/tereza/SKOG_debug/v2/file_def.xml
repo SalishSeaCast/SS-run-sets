@@ -101,9 +101,17 @@
           <field field_ref="MESZ"           name="mesozooplankton"/>
           <field field_ref="DIC"            name="dissolved_inorganic_carbon"/>
           <field field_ref="TA"             name="total_alkalinity"/>
-          <field field_ref="O2"             name="dissolved_oxygen"/>
-          <field field_ref="oce_co2"         name="co2_flux alloc"/>
-          <field field_ref="oce_o2"         name="o2_flux alloc"/>
+          <field field_ref="oce_co2"         name="oce_co2"/>
+          <field field_ref="f_fco2atm"         name="f_fco2atm"/>
+          <field field_ref="f_pco2atm"        name="f_pco2atm"/>
+          <field field_ref="f_schmidtco2"    name="f_schmidtco2"/>
+          <field field_ref="f_kwco2"            name="f_kwco2"/>
+          <field field_ref="f_K0"                  name="f_K0"/>
+          <field field_ref="f_co2starair"       name="f_co2starair" />
+          <field field_ref="f_co2flux"           name="f_co2flux" />
+          <field field_ref="f_dpco2"             name="f_dpco2" />
+
+
         </file>
         <file id="file7" name_suffix="_dia2_T" description="smelt diagnostics B" >
           <field field_ref="GRMESZDIAT"      />
