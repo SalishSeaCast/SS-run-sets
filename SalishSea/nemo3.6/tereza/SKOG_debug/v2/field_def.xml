@@ -793,14 +793,26 @@
        <field id="O2_E3T"      long_name="O2 * E3T"                                unit="mmol/m2"  > O2 * e3t </field >
        <field id="oce_co2"          long_name="CO2 air-sea flux allocated"         standard_name="carbon_dioxide_flux_mole_equivalent"  unit="mmol m-2 s-2" grid_ref="grid_T_2D" />
        <field id="oce_o2"          long_name="O2 air-sea flux allocated"         standard_name="oxygen_air_sea_flux_as_mole_equivalent"  unit="mmol m-2 s-2" grid_ref="grid_T_2D" />
-       <field id="f_fco2atm"        long_name="f"         standard_name="f"  unit="fill" grid_ref="grid_T_2D" />
-       <field id="f_pco2atm"        long_name="f"         standard_name="f"  unit="fill" grid_ref="grid_T_2D" />
-       <field id="f_schmidtco2"          long_name="f"         standard_name="f"  unit="fill" grid_ref="grid_T_2D" />
-       <field id="f_kwco2"          long_name="f"         standard_name="f"  unit="fill" grid_ref="grid_T_2D" />
-       <field id="f_K0"          long_name="f"         standard_name="f"  unit="fill" grid_ref="grid_T_2D" />
-       <field id="f_co2starair"          long_name="f"         standard_name="f"  unit="fill" grid_ref="grid_T_2D" />
-       <field id="f_co2flux"          long_name="f"         standard_name="f"  unit="fill" grid_ref="grid_T_2D" />
-       <field id="f_dpco2"          long_name="f"         standard_name="f"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_ph"        long_name="f_ph"         standard_name="f_ph"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_pco2w"        long_name= "f_pco2w"         standard_name="f_pco2w"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_fco2w"        long_name="f_fco2w"         standard_name="f_fco2w"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_co2w"        long_name="f_co2w"         standard_name="f_co2w"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_hco3"        long_name="f_hco3"         standard_name="f_hco3"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_co3"        long_name="f_co3"         standard_name="f_co3"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_omarg"        long_name="f_omarg"         standard_name="f_omarg"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_omcal"        long_name="f_omcal"         standard_name="f_omcal"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_BetaD"        long_name="f_BetaD"         standard_name="f_BetaD"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_rhosw"        long_name="f_rhosw"         standard_name="f_rhosw"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_opres"        long_name="f_opres"         standard_name="f_opres"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_insitut"        long_name="f_insitut"         standard_name="f_insitut"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_pco2atm"        long_name="f_pco2atm"         standard_name="f_pco2atm"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_fco2atm"        long_name="f_fco2atm"         standard_name="f_fco2atm"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_schmidtco2"        long_name="f_schmidtco2"         standard_name="f_schmidtco2"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_kwco2"        long_name="f_kwco2"         standard_name="f_kwco2"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_K0"        long_name="f_K0"         standard_name="f_K0"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_co2starair"        long_name="f_co2starair"         standard_name="f"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_co2flux"        long_name="f_co2flux"         standard_name="f"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_dpco2"        long_name="f_dpco2"         standard_name="f_dpco2"  unit="fill" grid_ref="grid_T_2D" />
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
        <field id="Num"         long_name="Number of organic particles"              unit="1" />
        <field id="Num_E3T"     long_name="Num * E3T"                                unit="m"  > Num * e3t </field >
