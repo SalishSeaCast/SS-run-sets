@@ -817,7 +817,7 @@
        <field id="bSi_UT"   long_name="Biogenic Silicon Concentration - U Transport"      standard_name="bSi_u_dy_dz"      unit="mmol s-1" />
        <field id="NO3_UT"   long_name="Nitrate Concentration - U Transport"               standard_name="NO3_u_dy_dz"      unit="mmol s-1" />
        <field id="NH4_UT"   long_name="Ammonium Concentration - U Transport"              standard_name="NH4_u_dy_dz"      unit="mmol s-1" />
-       <field id="ULDFNO3"  long_name="X dir lateral mix"              standard_name="NO3mixx"      unit="mmol/m2/s" />
+       <field id="ULDFNO3"  long_name="X dir lateral mix"                                 standard_name="NO3mixx"          unit="mmol/m2/s" />
      </field_group>
 
      <!-- SMELT Advective Transports of Tracers - V Grid  -->
@@ -833,7 +833,7 @@
        <field id="bSi_VT"   long_name="Biogenic Silicon Concentration - V Transport"      standard_name="bSi_v_dx_dz"      unit="mmol s-1" />
        <field id="NO3_VT"   long_name="Nitrate Concentration - V Transport"               standard_name="NO3_v_dx_dz"      unit="mmol s-1" />
        <field id="NH4_VT"   long_name="Ammonium Concentration - V Transport"              standard_name="NH4_v_dx_dz"      unit="mmol s-1" />
-       <field id="VLDFNO3"  long_name="Y dir lateral mix"              standard_name="NO3mixy"      unit="mmol/m2/s" />
+       <field id="VLDFNO3"  long_name="Y dir lateral mix"                                 standard_name="NO3mixy"          unit="mmol/m2/s" />
      </field_group>
 
      <!-- SMELT Advective Transports of Tracers - W Grid  -->
@@ -849,10 +849,11 @@
        <field id="bSi_WT"   long_name="Biogenic Silicon Concentration - W Transport"      standard_name="bSi_w_dy_dx"      unit="mmol s-1" />
        <field id="NO3_WT"   long_name="Nitrate Concentration - W Transport"               standard_name="NO3_w_dy_dx"      unit="mmol s-1" />
        <field id="NH4_WT"   long_name="Ammonium Concentration - W Transport"              standard_name="NH4_w_dy_dx"      unit="mmol s-1" />
-       <field id="VMIXNO3"     long_name="upward no3 flux due to vert mixing"      unit="mmol N/m2/s"             />
-       <field id="VMIXNO3B"    long_name="upward no3 flux due to vert mixing"      unit="mmol N/m2/s"             />
-       <field id="VMIXNO3PLUS" long_name="VMIXNO3 plus partial iso horiz mix"      unit="mmol N/m2/s"             />
-       <field id="WLDFNO3"     long_name="vert component of sloping lateral mix"   unit="mmol N/m2/s"             />
+       <field id="VMIXNO3"     long_name="upward no3 flux due to vert mixing"             standard_name="NO3mix"           unit="mmol N/m2/s" />
+       <field id="VMIXNO3B"    long_name="upward no3 flux due to vert mixing"             standard_name="NO3mixB"          unit="mmol N/m2/s" />
+       <field id="VMIXNO3C"    long_name="partial iso horiz mix no3"                      standard_name="NO3mixB"          unit="mmol N/m2/s" />
+       <field id="VMIXNO3PLUS" long_name="VMIXNO3 plus partial iso horiz mix"             standard_name="NO3mixP"          unit="mmol N/m2/s" />
+       <field id="WLDFNO3"     long_name="vert component of sloping lateral mix"          standard_name="NO3LDFW"          unit="mmol N/m2/s" />
      </field_group>
      <!-- PISCES additional diagnostics on T grid  -->
 
