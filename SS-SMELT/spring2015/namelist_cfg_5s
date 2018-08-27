@@ -7,7 +7,7 @@
 !-----------------------------------------------------------------------
    cn_exp      = "SalishSea"  ! experience name
    nn_it000    =    317521    ! first time step
-   nn_itend    =    317610    ! last time step (std 1 day = 2160 re: rn_rdt in &namdom)
+   nn_itend    =    318420    ! last time step (std 1 day = 2160 re: rn_rdt in &namdom)
    nn_date0    =  20150206    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
                               ! used to adjust tides to run date (regardless of restart control)
    nn_leapy    =       1      ! Leap year calendar (1) or not (0)
@@ -68,7 +68,7 @@
    rn_e3zps_min=    2.     !  partial step thickness is set larger than the minimum of
    rn_e3zps_rat=    0.5    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
                            !
-   rn_rdt      =   40.     !  time step for the dynamics (and tracer if nn_acc=0)
+   rn_rdt      =    4.     !  time step for the dynamics (and tracer if nn_acc=0)
    rn_atfp     =    0.1    !  asselin time filter parameter
    nn_acc      =    0      !  acceleration of convergence : =1      used, rdt < rdttra(k)
                            !                                =0, not used, rdt = rdttra
