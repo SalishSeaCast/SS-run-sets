@@ -836,24 +836,23 @@
        <field id="VLDFNO3"  long_name="Y dir lateral mix"                                 standard_name="NO3mixy"          unit="mmol/m2/s" />
      </field_group>
 
-     <!-- SMELT Advective Transports of Tracers - W Grid  -->
+     <!-- SMELT Advective and Diffusive Transports of Tracers - W Grid  -->
      <field_group id="tran_W" grid_ref="grid_W_3D">
-       <field id="TRA_WT"   long_name="Fraser River Turbidity Tracer - W Transport"       standard_name="TRA_w_dy_dx"      unit="NTU m3 s-1" />
-       <field id="PON_WT"   long_name="Particulate Organic N Concentration - W Transport" standard_name="PON_w_dy_dx"      unit="mmol s-1" />
-       <field id="Si_WT"    long_name="Silicon Concentration - W Transport"               standard_name="Si_w_dy_dx"       unit="mmol s-1" />
-       <field id="PHY_WT"   long_name="Flagellates Concentration - W Transport"           standard_name="PHY_w_dy_dx"      unit="mmol s-1" />
-       <field id="MICZ_WT"  long_name="Microzooplankton Concentration - W Transport"      standard_name="MICZ_w_dy_dx"     unit="mmol s-1" />
-       <field id="DON_WT"   long_name="Dissolved Organic N Concentration - W Transport"   standard_name="DON_w_dy_dx"      unit="mmol s-1" />
-       <field id="DIAT_WT"  long_name="Diatoms Concentration - W Transport"               standard_name="DIAT_w_dy_dx"     unit="mmol s-1" />
-       <field id="MYRI_WT"  long_name="Mesodinium rubrum Concentration - W Transport"     standard_name="MYRI_w_dy_dx"     unit="mmol s-1" />
-       <field id="bSi_WT"   long_name="Biogenic Silicon Concentration - W Transport"      standard_name="bSi_w_dy_dx"      unit="mmol s-1" />
-       <field id="NO3_WT"   long_name="Nitrate Concentration - W Transport"               standard_name="NO3_w_dy_dx"      unit="mmol s-1" />
-       <field id="NH4_WT"   long_name="Ammonium Concentration - W Transport"              standard_name="NH4_w_dy_dx"      unit="mmol s-1" />
-       <field id="VMIXNO3"     long_name="upward no3 flux due to vert mixing"             standard_name="NO3mix"           unit="mmol N/m2/s" />
-       <field id="VMIXNO3B"    long_name="upward no3 flux due to vert mixing"             standard_name="NO3mixB"          unit="mmol N/m2/s" />
-       <field id="VMIXNO3C"    long_name="partial iso horiz mix no3"                      standard_name="NO3mixB"          unit="mmol N/m2/s" />
-       <field id="VMIXNO3PLUS" long_name="VMIXNO3 plus partial iso horiz mix"             standard_name="NO3mixP"          unit="mmol N/m2/s" />
-       <field id="WLDFNO3"     long_name="vert component of sloping lateral mix"          standard_name="NO3LDFW"          unit="mmol N/m2/s" />
+       <field id="TRA_WT"   long_name="Fraser River Turbidity Tracer - W Transport"        standard_name="TRA_w_dy_dx"      unit="NTU m3 s-1" />
+       <field id="PON_WT"   long_name="Particulate Organic N Concentration - W Transport"  standard_name="PON_w_dy_dx"      unit="mmol s-1" />
+       <field id="Si_WT"    long_name="Silicon Concentration - W Transport"                standard_name="Si_w_dy_dx"       unit="mmol s-1" />
+       <field id="PHY_WT"   long_name="Flagellates Concentration - W Transport"            standard_name="PHY_w_dy_dx"      unit="mmol s-1" />
+       <field id="MICZ_WT"  long_name="Microzooplankton Concentration - W Transport"       standard_name="MICZ_w_dy_dx"     unit="mmol s-1" />
+       <field id="DON_WT"   long_name="Dissolved Organic N Concentration - W Transport"    standard_name="DON_w_dy_dx"      unit="mmol s-1" />
+       <field id="DIAT_WT"  long_name="Diatoms Concentration - W Transport"                standard_name="DIAT_w_dy_dx"     unit="mmol s-1" />
+       <field id="MYRI_WT"  long_name="Mesodinium rubrum Concentration - W Transport"      standard_name="MYRI_w_dy_dx"     unit="mmol s-1" />
+       <field id="bSi_WT"   long_name="Biogenic Silicon Concentration - W Transport"       standard_name="bSi_w_dy_dx"      unit="mmol s-1" />
+       <field id="NO3_WT"   long_name="Nitrate Concentration - W Transport"                standard_name="NO3_w_dy_dx"      unit="mmol s-1" />
+       <field id="NH4_WT"   long_name="Ammonium Concentration - W Transport"               standard_name="NH4_w_dy_dx"      unit="mmol s-1" />
+       <field id="VMIXNO3"  long_name="upward no3 flux due to vert mixing with horiz comp" standard_name="vNO3mix"          unit="mmol N/m2/s" />
+       <field id="VMIXNO3H" long_name="explicit est of horiz contrib to VMIXNO3"           standard_name="vNO3mixH"         unit="mmol N/m2/s" />
+       <field id="AVSH"     long_name="sloping horizontal contrib to avs"                  standard_name="avs_horiz"        unit="m2/s" />
+       <field id="WLDFNO3"     long_name="vert component of sloping lateral mix"           standard_name="NO3LDFW"          unit="mmol N/m2/s" />
      </field_group>
      <!-- PISCES additional diagnostics on T grid  -->
 

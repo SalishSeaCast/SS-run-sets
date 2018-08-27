@@ -14,9 +14,8 @@
           <field field_ref="avm"            name="vert_eddy_visc" />
           <field field_ref="eps" name="dissipation"/>
           <field field_ref="VMIXNO3"      />
-          <field field_ref="VMIXNO3B"     />
-          <field field_ref="VMIXNO3C"     />
-          <field field_ref="VMIXNO3PLUS"  />
+          <field field_ref="AVSH"      />
+          <field field_ref="VMIXNO3H"     />
           <field field_ref="WLDFNO3" />      
         </file>
         <file id="file2" name_suffix="_grid_U" description="ocean U grid variables" >
