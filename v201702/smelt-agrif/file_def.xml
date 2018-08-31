@@ -7,6 +7,16 @@
     -->
 <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@">
 
+  <file_group id="1h" output_freq="1h" output_level="10" compression_level="4" enabled=".TRUE.">
+    <file id="BaynesSoundSurfaceTracers" name="BaynesSoundSurface_grid_T" description="surface tracer variables" >
+      <field field_ref="toce" name="votemper" grid_ref="BaynesSoundAGRIF_T"/>
+      <field field_ref="soce" name="vosaline" grid_ref="BaynesSoundAGRIF_T"/>
+      <field field_ref="NO3"  name="nitrate" grid_ref="BaynesSoundAGRIF_T"/>
+      <field field_ref="DIAT" name="diatoms" grid_ref="BaynesSoundAGRIF_T"/>
+    </file>
+  </file_group>
+
+
   <file_group id="1d" output_freq="1d" output_level="10" compression_level="4" enabled=".TRUE.">
 
     <file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
