@@ -47,6 +47,7 @@
           <field field_ref="f_pco2w"      name="f_pco2w"/>
           <field field_ref="f_omarg"      name="f_omarg"/>
           <field field_ref="f_co2flux"      name="f_co2flux" />
+          <field field_ref="wind_mag"      name="wind_mag" />
        </file>
      </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 2h files -->
@@ -109,6 +110,7 @@
           <field field_ref="f_pco2w"      name="f_pco2w"/>
           <field field_ref="f_omarg"      name="f_omarg"/>
           <field field_ref="f_co2flux"        name="f_co2flux" />
+          <field field_ref="wind_mag"      name="wind_mag" />
          </file>
         <file id="file7" name_suffix="_dia2_T" description="smelt diagnostics B" >
           <field field_ref="GRMESZDIAT"      />
