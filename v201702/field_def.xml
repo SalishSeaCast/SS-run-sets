@@ -811,7 +811,7 @@
        <field id="MYTRC1"      long_name="20 m upwelling tracer"                    unit="1" />
      </field_group>
 
-     <!-- SMELT Advective Transports of Tracers - U Grid  -->
+     <!-- SMELT Advective and Diffusive Transports of Tracers - U Grid  -->
      <field_group id="tran_U" grid_ref="grid_U_3D">
        <field id="TRA_UT"   long_name="Fraser River Turbidity Tracer - U Transport"       standard_name="TRA_u_dy_dz"      unit="NTU m3 s-1" />
        <field id="PON_UT"   long_name="Particulate Organic N Concentration - U Transport" standard_name="PON_u_dy_dz"      unit="mmol s-1" />
@@ -827,9 +827,10 @@
        <field id="DIC_UT"   long_name="Dissolved Inorganic Carbon - U Transport"          standard_name="DIC_u_dy_dz"      unit="mmol s-1" />
        <field id="TA_UT"    long_name="Total Alkalinity Concentration - U Transport"               standard_name="TA_u_dy_dz"       unit="mmol s-1" />
        <field id="O2_UT"    long_name="Oxygen Concentration - U Transport"              standard_name="O2_u_dy_dz"       unit="mmol s-1" />
+       <field id="ULDFNO3"  long_name="X dir lateral mix"                                 standard_name="NO3mixx"          unit="mmol/m2/s" />
      </field_group>
 
-     <!-- SMELT Advective Transports of Tracers - V Grid  -->
+     <!-- SMELT Advective and Diffusive Transports of Tracers - V Grid  -->
      <field_group id="tran_V" grid_ref="grid_V_3D">
        <field id="TRA_VT"   long_name="Fraser River Turbidity Tracer - V Transport"       standard_name="TRA_v_dx_dz"      unit="NTU m3 s-1" />
        <field id="PON_VT"   long_name="Particulate Organic N Concentration - V Transport" standard_name="PON_v_dx_dz"      unit="mmol s-1" />
@@ -845,9 +846,10 @@
        <field id="DIC_VT"   long_name="Dissolved Inorganic Carbon - V Transport"          standard_name="DIC_v_dx_dz"      unit="mmol s-1" />
        <field id="TA_VT"    long_name="Total Alkalinity Concentration - V Transport"      standard_name="TA_v_dy_dz"       unit="mmol s-1" />
        <field id="O2_VT"    long_name="Oxygen Concentration - V Transport"                standard_name="O2_v_dy_dz"       unit="mmol s-1" />
+       <field id="VLDFNO3"  long_name="Y dir lateral mix"                                 standard_name="NO3mixy"          unit="mmol/m2/s" />
      </field_group>
 
-     <!-- SMELT Advective Transports of Tracers - W Grid  -->
+     <!-- SMELT Advective and Diffusive Transports of Tracers - W Grid  -->
      <field_group id="tran_W" grid_ref="grid_W_3D">
        <field id="TRA_WT"   long_name="Fraser River Turbidity Tracer - W Transport"       standard_name="TRA_w_dy_dx"      unit="NTU m3 s-1" />
        <field id="PON_WT"   long_name="Particulate Organic N Concentration - W Transport" standard_name="PON_w_dy_dx"      unit="mmol s-1" />
@@ -860,6 +862,10 @@
        <field id="bSi_WT"   long_name="Biogenic Silicon Concentration - W Transport"      standard_name="bSi_w_dy_dx"      unit="mmol s-1" />
        <field id="NO3_WT"   long_name="Nitrate Concentration - W Transport"               standard_name="NO3_w_dy_dx"      unit="mmol s-1" />
        <field id="NH4_WT"   long_name="Ammonium Concentration - W Transport"              standard_name="NH4_w_dy_dx"      unit="mmol s-1" />
+       <field id="VMIXNO3"  long_name="upward no3 flux due to vert mixing with horiz comp" standard_name="vNO3mix"          unit="mmol N/m2/s" />
+       <field id="VMIXNO3H" long_name="explicit est of horiz contrib to VMIXNO3"          standard_name="vNO3mixH"         unit="mmol N/m2/s" />
+       <field id="AVSH"     long_name="sloping horizontal contrib to avs"                 standard_name="avs_horiz"        unit="m2/s" />
+       <field id="WLDFNO3"  long_name="vert component of sloping lateral mix"             standard_name="NO3LDFW"          unit="mmol N/m2/s" />
        <field id="DIC_WT"   long_name="Dissolved Inorganic Carbon - W Transport"          standard_name="DIC_w_dy_dx"      unit="mmol s-1" />
        <field id="TA_WT"    long_name="Nitrate Concentration - W Transport"               standard_name="TA_w_dy_dx"       unit="mmol s-1" />
        <field id="O2_WT"    long_name="Ammonium Concentration - W Transport"              standard_name="O2_w_dy_dx"       unit="mmol s-1" />
