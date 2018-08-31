@@ -1,0 +1,7 @@
+changset:   545:c371b38c40d7c2b0167047002e9216e95dbd2e5c
+tag:        tip
+user:       Doug Latornell <djl@douglatornell.ca>
+date:       Sat Oct 28 16:29:16 2017 -07:00
+files:      docs/development.rst docs/index.rst setup.py
+description:
+Update development docs re: yapf and Python 3.6 as primary dev version.

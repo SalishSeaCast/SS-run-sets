@@ -1,0 +1,24 @@
+# Bash script to make namelist_cfg by concatenating namelist section files
+#
+# run as:
+# bash {path-to-this-directory}/make_namelist_cfg
+#
+# e.g. bash $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/make_namelist_cfg
+
+HERE=$(dirname $0)
+ABOVE=$HERE/..
+cat \
+  ${HERE}/namelist.time.stronglog \
+  ${HERE}/namelist.domain.stronglog \
+  ${HERE}/namelist.surface \
+  ${HERE}/namelist.lateral \
+  ${HERE}/namelist.bottom.stronglog \
+  ${ABOVE}/namelist.tracer \
+  ${ABOVE}/namelist.dynamics \
+  ${ABOVE}/namelist.vertical \
+  ${ABOVE}/namelist.diagnostics \
+  ${HERE}/namelist.misc.stronglog \
+> namelist_cfg
+
+echo 'roawrrr! Strong Log Layer'
+
