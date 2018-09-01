@@ -80,7 +80,7 @@ namelists:
 
 output:
   # If relative, paths are taken from current directory
-  iodefs: iodef.xml.Orc
+  iodefs: iodef.xml.Orc.dian
   filedefs: file_def_dailysplit_upTrac.xml.dian
   domaindefs: ../../v201702/domain_def.xml.dian
   fielddefs: ../../v201702/field_def.xml
