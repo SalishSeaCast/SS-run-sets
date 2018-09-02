@@ -22,15 +22,27 @@
           <field field_ref="TRA"            name="Fraser_tracer"/>
           <field field_ref="MESZ"           name="mesozooplankton"/>
         </file>
-        <file id="file16" name_suffix="_dian" description="reduced domain N transports" >
+        <file id="file16" name_suffix="_dian_U" description="reduced domain N transports" >
           <field field_ref="NO3_UT"        grid_ref="NSOG_U_grid"/> 
           <field field_ref="ULDFNO3"       grid_ref="NSOG_U_grid"/>
+        </file>
+        <file id="file19" name_suffix="_dian_V" description="reduced domain N transports" >
           <field field_ref="NO3_VT"        grid_ref="NSOG_V_grid"/> 
           <field field_ref="VLDFNO3"       grid_ref="NSOG_V_grid"/>
+        </file>
+        <file id="file20" name_suffix="_dian_W" description="reduced domain N transports" >
           <field field_ref="NO3_WT"        grid_ref="NSOG_W_grid"/> 
           <field field_ref="VMIXNO3"       grid_ref="NSOG_W_grid"/> 
-          <field field_ref="AVSH"          grid_ref="NSOG_W"/> 
-          <field field_ref="WLDFNO3"       grid_ref="NSOG_W"/> 
+          <field field_ref="AVSH"          grid_ref="NSOG_W_grid"/> 
+          <field field_ref="WLDFNO3"       grid_ref="NSOG_W_grid"/> 
+        </file>
+        <file id="file17" name_suffix="_dian" description="section 1 N transports" >
+          <field field_ref="NO3_VT"        grid_ref="TV1_grid"/> 
+          <field field_ref="VLDFNO3"       grid_ref="TV1_grid"/>
+        </file>
+        <file id="file18" name_suffix="_dian" description="section 2 N transports" >
+          <field field_ref="NO3_VT"        grid_ref="TV2_grid"/> 
+          <field field_ref="VLDFNO3"       grid_ref="TV2_grid"/>
         </file>
       </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" split_freq="1d" compression_level="4" enabled=".TRUE."/> <!-- 2h files -->
