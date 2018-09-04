@@ -36,11 +36,11 @@
           <field field_ref="AVSH"          grid_ref="NSOG_W_grid"/> 
           <field field_ref="WLDFNO3"       grid_ref="NSOG_W_grid"/> 
         </file>
-        <file id="file17" name_suffix="_dian" description="section 1 N transports" >
+        <file id="file17" name_suffix="_VT1" description="section 1 N transports" >
           <field field_ref="NO3_VT"        grid_ref="TV1_grid"/> 
           <field field_ref="VLDFNO3"       grid_ref="TV1_grid"/>
         </file>
-        <file id="file18" name_suffix="_dian" description="section 2 N transports" >
+        <file id="file18" name_suffix="_VT2" description="section 2 N transports" >
           <field field_ref="NO3_VT"        grid_ref="TV2_grid"/> 
           <field field_ref="VLDFNO3"       grid_ref="TV2_grid"/>
         </file>
