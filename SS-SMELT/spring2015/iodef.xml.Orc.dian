@@ -114,7 +114,7 @@
      <grid id="EastDenmanIsland_grid">        <domain domain_ref="EastDenmanIsland"/>         </grid>
 
      <!-- Northern Strait and Transports -->
-     <grid id="NSOG_T_grid"> <domain domain_ref="NSOG_T" /> <axis id="deptht" /> </grid>
+     <grid id="NSOG_T_grid"> <domain domain_ref="NSOG_T"/> <axis id="deptht" /> </grid>
      <grid id="NSOG_U_grid"> <domain domain_ref="NSOG_U" /> <axis id="depthu" /> </grid>
      <grid id="NSOG_V_grid"> <domain domain_ref="NSOG_V" /> <axis id="depthv" /> </grid>
      <grid id="NSOG_W_grid"> <domain domain_ref="NSOG_W" /> <axis id="depthw" /> </grid>
