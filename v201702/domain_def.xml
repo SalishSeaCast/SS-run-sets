@@ -59,6 +59,8 @@
       <domain id="FVCOM_T"                 domain_ref="grid_T"> <zoom_domain ibegin="225" jbegin="340" ni="144" nj="221" /> </domain>
       <!-- Passive tracer below 20 m -->
       <domain id="trc20m"                  domain_ref="grid_T"> <zoom_domain ibegin="100" jbegin="300" ni="298" nj="598" /> </domain>
+      <!-- Northern Strait for Nitrate Analysis -->
+      <domain id="NSOG_T"                  domain_ref="grid_T"> <zoom_domain ibegin="112" jbegin="644" ni="97" nj="130" /> </domain>
    </domain_group>
 
    <domain_group id="grid_U">
@@ -75,6 +77,8 @@
       <domain id="two_straits_U"           domain_ref="grid_U"> <zoom_domain ibegin="10"  jbegin="200" ni="355" nj="540" /> </domain>
       <!-- Boundary Conditions for FVCOM -->
       <domain id="FVCOM_U"                 domain_ref="grid_U"> <zoom_domain ibegin="225" jbegin="340" ni="144" nj="221" /> </domain>
+      <!-- Northern Strait for Nitrate Analysis -->
+      <domain id="NSOG_U"                  domain_ref="grid_U"> <zoom_domain ibegin="112" jbegin="644" ni="97" nj="130" /> </domain>
    </domain_group>
 
    <domain_group id="grid_V">
@@ -91,6 +95,10 @@
       <domain id="two_straits_V"           domain_ref="grid_V"> <zoom_domain ibegin="10"  jbegin="200" ni="355" nj="540" /> </domain>
       <!-- Boundary Conditions for FVCOM -->
       <domain id="FVCOM_V"                 domain_ref="grid_V"> <zoom_domain ibegin="225" jbegin="340" ni="144" nj="221" /> </domain>
+      <!-- Northern Strait for Nitrate Analysis -->
+      <domain id="NSOG_V"                  domain_ref="grid_V"> <zoom_domain ibegin="112" jbegin="644" ni="97" nj="130" /> </domain>
+      <domain id="TV1"                      domain_ref="grid_V"> <zoom_domain ibegin="50" jbegin="883" ni="26" nj="1" /> </domain>
+      <domain id="TV2"                      domain_ref="grid_V"> <zoom_domain ibegin="122" jbegin="792" ni="67" nj="1" /> </domain>
    </domain_group>
 
    <domain_group id="grid_W">
@@ -100,9 +108,9 @@
       <domain id="VENUS_delta_gridded_W"   domain_ref="grid_W"> <zoom_domain ibegin="283" jbegin="424" ni="2"  nj="2"  /> </domain>
       <!-- Boundary Conditions for FVCOM -->
       <domain id="FVCOM_W"                 domain_ref="grid_W"> <zoom_domain ibegin="225" jbegin="340" ni="144" nj="221" /> </domain>
+      <!-- Northern Strait for Nitrate Analysis -->
+      <domain id="NSOG_W"                  domain_ref="grid_W"> <zoom_domain ibegin="112" jbegin="644" ni="97" nj="130" /> </domain>
    </domain_group>
-
-
 
    <domain id="scalarpoint" long_name="scalar"/>
 </domain_definition>
