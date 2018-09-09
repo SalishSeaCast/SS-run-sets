@@ -6,18 +6,19 @@
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 !               !  file name                                  ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !               !                                             !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
-   sn_riverno3  = 'rivers-climatology/bio/rivers_bio_tracers',    24,               'no3',       .true.,       .true.,  'daily',    '',        '',        ''
-   sn_rivernh4  = 'rivers-climatology/bio/rivers_bio_tracers',    24,               'nh4',       .true.,       .true.,  'daily',    '',        '',        ''
-   sn_riversil  = 'rivers-climatology/bio/rivers_bio_tracers',    24,               'sil',       .true.,       .true.,  'daily',    '',        '',        ''
-   sn_riverdia  = 'rivers-climatology/bio/rivers_bio_tracers',    24,               'dia',       .true.,       .true.,  'daily',    '',        '',        ''
-   sn_riverphy  = 'rivers-climatology/bio/rivers_bio_tracers',    24,               'phy',       .true.,       .true.,  'daily',    '',        '',        ''
-   sn_rivermes  = 'rivers-climatology/bio/rivers_bio_tracers',    24,               'mes',       .true.,       .true.,  'daily',    '',        '',        ''
-   sn_riverzoo  = 'rivers-climatology/bio/rivers_bio_tracers',    24,               'zoo',       .true.,       .true.,  'daily',    '',        '',        ''
-   sn_riverdoc  = 'rivers-climatology/bio/rivers_bio_tracers',    24,               'don',       .true.,       .true.,  'daily',    '',        '',        ''
-   sn_riverpoc  = 'rivers-climatology/bio/rivers_bio_tracers',    24,               'pon',       .true.,       .true.,  'daily',    '',        '',        ''
-   sn_riverdsi  = 'rivers-climatology/bio/rivers_bio_tracers',    24,               'bsi',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riverno3  = 'rivers-climatology/bio/R201809_bioClim',       24,               'no3',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_rivernh4  = 'rivers-climatology/bio/R201809_bioConst',     -12,               'nh4',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riversil  = 'rivers-climatology/bio/R201809_bioClim',       24,               'sil',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riverdia  = 'rivers-climatology/bio/R201809_bioConst',     -12,               'dia',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverphy  = 'rivers-climatology/bio/R201809_bioConst',     -12,               'phy',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_rivermes  = 'rivers-climatology/bio/R201809_bioConst',     -12,               'mes',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverzoo  = 'rivers-climatology/bio/R201809_bioConst',     -12,               'zoo',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverdoc  = 'rivers-climatology/bio/R201809_bioConst',     -12,               'don',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverpoc  = 'rivers-climatology/bio/R201809_bioConst',     -12,               'pon',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverdsi  = 'rivers-climatology/bio/R201809_bioConst',     -12,               'bsi',       .false.,      .true.,  'yearly',   '',        '',        ''
    sn_rivertra  = 'rivers-climatology/bio/rivers_bio_tracers',    24,               'tur',       .true.,       .true.,  'daily',    '',        '',        ''
    sn_turb      = 'river_turb/riverTurbDaily2',                   24,               'turb',      .true.,       .false., 'daily',    '',        '',        ''
+
    cn_dir       = './'  ! root directory for the location of the runoff files
    ln_river = .true.
    ln_turb = .true.
