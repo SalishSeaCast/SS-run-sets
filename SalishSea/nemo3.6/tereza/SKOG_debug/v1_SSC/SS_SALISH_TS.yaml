@@ -1,8 +1,7 @@
 config_name: SalishSeaCast
 MPI decomposition: 1x7
-walltime: 06:00:00
+walltime: 02:00:00
 run_id: 01sept16nowcast-dev
-config_name: SKOG
 email: tjarnik@gmail.com
 
 paths:
