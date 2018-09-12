@@ -6,7 +6,7 @@ email: tjarnik@gmail.com
 
 forcing:
   LiveOcean:
-    link to: //data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC
+    link to: /results/forcing/LiveOcean/boundary_conditions/
   NEMO-atmos:
     link to: /results/forcing/atmospheric/GEM2.5/operational
   bfr_coef.nc:
@@ -32,6 +32,8 @@ forcing:
   initial_car_data_file.nc:
     link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/SalishSea_01684800_restart_trc.nc
 
+
+
 grid:
   bathymetry: /data/tjarniko/MEOPAR/grid/bathymetry_201702.nc
   coordinates: /data/tjarniko/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
@@ -55,7 +57,7 @@ namelists:
   - ./hindcast/namelist_smelt_skog
   namelist_top_cfg:
   - ./hindcast/namelist_top_coldstart_01jan16.SKOG
-  - ./namelist_top_TracerDefAndBdy.SKOG.upTrac.01jan16
+  - ./namelist_top_TDBorig
   - ./hindcast/namelist_top_physics
 
 output:
