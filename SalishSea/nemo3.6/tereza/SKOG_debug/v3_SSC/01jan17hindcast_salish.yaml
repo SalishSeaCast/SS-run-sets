@@ -2,7 +2,6 @@ MPI decomposition: 1x7
 config_name: SalishSeaCast
 run_id: test
 walltime: 02:00:00
-email: tjarnik@gmail.com
 
 forcing:
   LiveOcean:
@@ -60,15 +59,15 @@ namelists:
 output:
   XIOS servers: 1
   domaindefs: /home/sallen/MEOPAR/SS-run-sets/v201702/domain_def.xml
-  fielddefs: /home/sallen/MEOPAR/SS-run-sets/v201702/field_def.xml
-  filedefs: /home/sallen/MEOPAR/SS-run-sets/v201702/hindcast/file_def_dailysplit_upTrac.xml
+  fielddefs: ./field_def.xml
+  filedefs: ./file_def.xml
   iodefs: /home/sallen/MEOPAR/SS-run-sets/v201702/iodef.xml
   separate XIOS server: true
 
 paths:
   NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /home/sallen/MEOPAR/XIOS-2
-  runs directory: /data/tjarniko/results
+  runs directory: /data/tjarniko/results/
 
 vcs revisions:
   hg:
