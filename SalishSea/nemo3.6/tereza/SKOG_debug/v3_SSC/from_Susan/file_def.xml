@@ -46,28 +46,6 @@
 	  <field field_ref="DIC"      name="dissolved_inorganic_carbon"/>
           <field field_ref="TA"       name="total_alkalinity"/>
           <field field_ref="O2"       name="dissolved_oxygen"/>
-          <field field_ref="wind_mag"      name="wind_mag" />
-          <field field_ref="f_ph"      name="f_ph"/>
-          <field field_ref="f_pco2w"      name="f_pco2w"/>
-          <field field_ref="f_fco2w"      name="f_fco2w"/>
-          <field field_ref="f_co2w"      name="f_co2w"/>
-          <field field_ref="f_hco3"      name="f_hco3"/>
-          <field field_ref="f_co3"      name="f_co3"/>
-          <field field_ref="f_omarg"      name="f_omarg"/>
-          <field field_ref="f_omcal"      name="f_omcal"/>
-          <field field_ref="f_BetaD"      name="f_BetaD"/>
-          <field field_ref="f_rhosw"      name="f_rhosw"/>
-          <field field_ref="f_opres"      name="f_opres"/>
-          <field field_ref="f_insitut"      name="f_insitut"/>
-          <field field_ref="f_pco2atm"      name="f_pco2atm"/>
-          <field field_ref="f_fco2atm"      name="f_fco2atm"/>
-          <field field_ref="f_schmidtco2"   name="f_schmidtco2"/>
-          <field field_ref="f_kwco2"        name="f_kwco2"/>
-          <field field_ref="f_K0"           name="f_K0"/>
-          <field field_ref="f_co2starair"   name="f_co2starair" />
-          <field field_ref="f_co2flux"      name="f_co2flux" />
-          <field field_ref="f_dpco2"        name="f_dpco2" />
-
 	</file>
         <file id="file6" name_suffix="_prod_T" description="smelt diagnostics A" >
           <field field_ref="PPDIAT"      />
@@ -127,27 +105,6 @@
 	  <field field_ref="DIC"            name="dissolved_inorganic_carbon"/>
           <field field_ref="TA"             name="total_alkalinity"/>
           <field field_ref="O2"             name="dissolved_oxygen"/>
-          <field field_ref="wind_mag"      name="wind_mag" />
-          <field field_ref="f_ph"      name="f_ph"/>
-          <field field_ref="f_pco2w"      name="f_pco2w"/>
-          <field field_ref="f_fco2w"      name="f_fco2w"/>
-          <field field_ref="f_co2w"      name="f_co2w"/>
-          <field field_ref="f_hco3"      name="f_hco3"/>
-          <field field_ref="f_co3"      name="f_co3"/>
-          <field field_ref="f_omarg"      name="f_omarg"/>
-          <field field_ref="f_omcal"      name="f_omcal"/>
-          <field field_ref="f_BetaD"      name="f_BetaD"/>
-          <field field_ref="f_rhosw"      name="f_rhosw"/>
-          <field field_ref="f_opres"      name="f_opres"/>
-          <field field_ref="f_insitut"      name="f_insitut"/>
-          <field field_ref="f_pco2atm"      name="f_pco2atm"/>
-          <field field_ref="f_fco2atm"      name="f_fco2atm"/>
-          <field field_ref="f_schmidtco2"   name="f_schmidtco2"/>
-          <field field_ref="f_kwco2"        name="f_kwco2"/>
-          <field field_ref="f_K0"           name="f_K0"/>
-          <field field_ref="f_co2starair"   name="f_co2starair" />
-          <field field_ref="f_co2flux"      name="f_co2flux" />
-          <field field_ref="f_dpco2"        name="f_dpco2" />
 	</file>  
 
         <file id="file7" name_suffix="_dia2_T" description="smelt diagnostics B" >
