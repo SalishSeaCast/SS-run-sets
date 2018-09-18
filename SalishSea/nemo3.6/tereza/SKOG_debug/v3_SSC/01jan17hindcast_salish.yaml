@@ -65,7 +65,7 @@ output:
   separate XIOS server: true
 
 paths:
-  NEMO code config: /home/sallen/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  NEMO code config: /data/tjarniko/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /home/sallen/MEOPAR/XIOS-2
   runs directory: /data/tjarniko/results/
 
