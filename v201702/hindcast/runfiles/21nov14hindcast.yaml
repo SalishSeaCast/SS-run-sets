@@ -10,12 +10,6 @@ forcing:
     link to: $PROJECT/SalishSea/forcing/LiveOcean
   NEMO-atmos:
     link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
-  initial_data_file.nc:
-    link to: $PROJECT/SalishSea/tracers/initial/Bathy201702_12nov14.nc
-  initial_bio_data_file.nc:
-    link to: $PROJECT/SalishSea/tracers/initial/BioIC_SMELT_v20180706.nc
-  initial_car_data_file.nc:
-    link to: $PROJECT/SalishSea/tracers/initial/init_DICTAOXY_072718.nc
 
   bfr_coef.nc:
     link to: $PROJECT/SalishSea/grid/jetty_mask_bathy201702.nc
@@ -34,6 +28,10 @@ forcing:
   tracers:
     link to: $PROJECT/SalishSea/tracers
 
+restart:
+  restart.nc: /scratch/dlatorne/hindcast/13nov14/SalishSea_00015120_restart.nc
+  restart_trc.nc: /scratch/dlatorne/hindcast/13nov14/SalishSea_00015120_restart_trc.nc
+  
 grid:
   bathymetry: $PROJECT/SalishSea/grid/bathymetry_201702.nc
   coordinates: $PROJECT/SalishSea/grid/coordinates_seagrid_SalishSea201702.nc
@@ -41,7 +39,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.13nov14
+  - ./namelist.time.21nov14
   - $PROJECT/SalishSea/SS-run-sets/v201702/namelist.domain
   - $PROJECT/SalishSea/SS-run-sets/v201702/hindcast/namelist.atmos_rivers
   - $PROJECT/SalishSea/SS-run-sets/v201702/namelist.light
@@ -53,7 +51,7 @@ namelists:
   - $PROJECT/SalishSea/SS-run-sets/v201702/namelist.compute
 
   namelist_top_cfg:
-  - $PROJECT/SalishSea/SS-run-sets/v201702/hindcast/namelist_top_coldstart.SKOG
+  - $PROJECT/SalishSea/SS-run-sets/v201702/hindcast/namelist_top_restart
   - $PROJECT/SalishSea/SS-run-sets/v201702/hindcast/namelist_top_TracerDefAndBdy.SKOG.upTrac
   - $PROJECT/SalishSea/SS-run-sets/v201702/hindcast/namelist_top_physics
   namelist_smelt_cfg:
