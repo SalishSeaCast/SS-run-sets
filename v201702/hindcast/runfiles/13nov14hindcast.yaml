@@ -63,7 +63,7 @@ namelists:
 
 output:
   XIOS servers: 1
-  filedefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/file_def_upTrac_dian.xml
+  filedefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/file_def_dailysplit_upTrac_dian.xml
   domaindefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/domain_def.xml
   fielddefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/field_def.xml
   iodefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/iodef.xml
