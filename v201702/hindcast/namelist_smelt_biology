@@ -1,21 +1,11 @@
 !!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 !! PISCES  (key_pisces) config namelist (see below for key_pisces_reduced)
-!!              1  - air-sea exchange                         (nampisext)
-!!              2  - biological parameters                    (nampisbio)
-!!              3  - parameters for nutrient limitations      (nampislim)    
 !!              4  - parameters for phytoplankton             (nampisprod,nampismort)
-!!              5  - parameters for zooplankton               (nampismes,nampiszoo)
+!!              5  - parameters for zooplankton               (nampismes, nampismezo, nampiszoo)
 !!              6  - parameters for remineralization          (nampisrem)
-!!              7  - parameters for calcite chemistry         (nampiscal)
-!!              8  - parameters for inputs deposition         (nampissed)
-!!              9  - parameters for Kriest parameterization   (nampiskrp, nampiskrs)
-!!              10 - additional 2D/3D  diagnostics            (nampisdia)
-!!              11 - Damping                                  (nampisdmp)
+!!              7 - optical model                             (nampisopt)
+!!              11 - Sinking                                  (nampissink)
 !>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-&nampisbio     !   biological parameters
-!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-/
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisprod     !   parameters for phytoplankton growth
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -193,35 +183,9 @@
    zz_remin_D_bSi  =  2.9e-6
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-&nampisdia     !   additional 2D/3D tracers diagnostics 
-!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-!              !    name   !           title of the field          !     units      !
-!              !           !                                       !                !  
-/
-!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-&nampisdmp     !  Damping 
-!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-/
-!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-&nampismass     !  Mass conservation
-!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-/
-!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisopt     !  Light attenuation
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-      zzialpha = 0.091
-      zzibeta = 0.0433
-      zzigamma = 2.62e-22
-      zzisigma = 5.5
-      zzitheta = 0.445
-      zzidl = 2.56
       zzN2chl = 2.000
-/
-!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-&nampisriv     !   river tracer parameters
-!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-   Wd      = 1.0      ! sediment sinking velocity, m/d
-   alpha_C = 0.0001 ! transfer factor 1/(d NTU)
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampissink     !  Sinking of bio groups
