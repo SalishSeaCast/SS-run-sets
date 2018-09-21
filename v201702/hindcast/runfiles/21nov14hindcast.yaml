@@ -7,22 +7,22 @@ walltime: 03:30:00
 
 forcing:
   LiveOcean:
-    link to: $PROJECT/SalishSea/hindcast-sys/forcing/LiveOcean
+    link to: $PROJECT/SalishSea/forcing/LiveOcean
   NEMO-atmos:
-    link to: $PROJECT/SalishSea/hindcast-sys/forcing/atmospheric/GEM2.5/operational
+    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
 
   bfr_coef.nc:
     link to: $PROJECT/SalishSea/hindcast-sys/grid/jetty_mask_bathy201702.nc
   grid:
     link to: $PROJECT/SalishSea/hindcast-sys/grid
   rivers:
-    link to: $PROJECT/SalishSea/hindcast-sys/forcing/rivers
+    link to: $PROJECT/SalishSea/forcing/rivers
   rivers-climatology:
     link to: $PROJECT/SalishSea/hindcast-sys/rivers-climatology
   river_turb:
-    link to: $PROJECT/SalishSea/hindcast-sys/forcing/rivers/river_turb
+    link to: $PROJECT/SalishSea/forcing/rivers/river_turb
   ssh:
-    link to: $PROJECT/SalishSea/hindcast-sys/forcing/sshNeahBay/obs
+    link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
   tides:
     link to: $PROJECT/SalishSea/hindcast-sys/tides
   tracers:
