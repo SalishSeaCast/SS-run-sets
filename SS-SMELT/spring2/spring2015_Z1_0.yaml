@@ -47,7 +47,7 @@ forcing:
   open_boundaries:
     link to: open_boundaries
   rivers:
-    link to: rivers
+    link to: $MEOPAR/NEMO-forcing
   bfr_coef.nc:
     link to: grid/jetty_mask_bathy201702.nc
   initial_green:
