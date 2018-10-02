@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN="Z1"
+NEWRUN="NoMZME"
 OLDRUN="T3"
 
 #echo "working dir: $(pwd)"
