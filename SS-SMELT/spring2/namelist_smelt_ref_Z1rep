@@ -1,5 +1,5 @@
 !!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-!! PISCES  (key_pisces) config namelist (see below for key_pisces_reduced)
+!! PISCES  (key_pisces) reference namelist (see below for key_pisces_reduced)
 !!              1  - air-sea exchange                         (nampisext)
 !!              2  - biological parameters                    (nampisbio)
 !!              3  - parameters for nutrient limitations      (nampislim)    
@@ -53,21 +53,21 @@
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    zz_rate_pico_Rm         = 0.040E-05 ! pico-phyto natural mortality
    zz_frac_waste_FNM_NH    = 0.05      ! waste fraction from pico-phyto natural mortality to NH
-   zz_frac_waste_FNM_DON   = 0.460     ! waste fraction from pico-phyto natural mortality to DON
-   zz_frac_waste_FNM_PON   = 0.460     ! waste fraction from pico-phyto natural mortality to PON
+   zz_frac_waste_FNM_DON   = 0.450     ! waste fraction from pico-phyto natural mortality to DON
+   zz_frac_waste_FNM_PON   = 0.450     ! waste fraction from pico-phyto natural mortality to PON
    zz_frac_waste_FNM_Ref   = 0.02      ! waste fraction from pico-phyto natural mort to refractory
    zz_frac_waste_FNM_Bsi   = 1.0       ! waste fraction from pico-phyto natural mortality to bSi
    zz_rate_myri_Rm         = 0.075E-05  ! pico-phyto natural mortality
    zz_frac_waste_NNM_NH    = 0.05       ! waste fraction from M. rubrum natural mortality to NH
-   zz_frac_waste_NNM_DON   = 0.460      ! waste fraction from M. rubrum natural mortality to DON
-   zz_frac_waste_NNM_PON   = 0.460      ! waste fraction from M. rubrum natural mortality to PON
+   zz_frac_waste_NNM_DON   = 0.450      ! waste fraction from M. rubrum natural mortality to DON
+   zz_frac_waste_NNM_PON   = 0.450      ! waste fraction from M. rubrum natural mortality to PON
    zz_frac_waste_NNM_Ref   = 0.02       ! waste fraction from M. rubrum natural mort to refractory
    zz_frac_waste_NNM_Bsi   = 1.0        ! waste fraction from M. rubrum natural mortality to bSi
    zz_rate_micro_Rm        = 0.060E-05 ! micro-phyto natural mortality
    zz_frac_waste_DNM_NH    = 0.05      ! waste fraction from micro-phyto natural mortality to NH
-   zz_frac_waste_DNM_DON   = 0.460     ! waste fraction from micro-phyto natural mortality to DON
-   zz_frac_waste_DNM_PON   = 0.460     ! waste fraction from micro-phyto natural mortality to PON
-   zz_frac_waste_DNM_Ref   = 0.02      ! waste fraction from micro-phyto natural mort to refractory
+   zz_frac_waste_DNM_DON   = 0.450     ! waste fraction from micro-phyto natural mortality to DON
+   zz_frac_waste_DNM_PON   = 0.450     ! waste fraction from micro-phyto natural mortality to PON
+   zz_frac_waste_DNM_Ref   = 0.05      ! waste fraction from micro-phyto natural mort to refractory
    zz_frac_waste_DNM_Bsi   = 1.        ! waste fraction from micro-phyto natural mortality to bSi
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -78,8 +78,8 @@
    zz_rate_mesorub_PicoHalfSat     = 1.0               !:
    zz_rate_mesorub_eff             = 0.6               !:
    zz_frac_waste_FEN_NH            = 0.05              !:waste fraction from mesorub grazing picophyto to NH
-   zz_frac_waste_FEN_DON           = 0.460             ! waste fraction from mesorub grazing picophyto to DON
-   zz_frac_waste_FEN_PON           = 0.460             ! waste fraction from mesorub grazing picophyto to PON
+   zz_frac_waste_FEN_DON           = 0.450             ! waste fraction from mesorub grazing picophyto to DON
+   zz_frac_waste_FEN_PON           = 0.450             ! waste fraction from mesorub grazing picophyto to PON
    zz_frac_waste_FEN_BSi           = 1.0               ! waste fraction from mesorub grazing picophyto to Bsi
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -110,10 +110,10 @@
    zz_rate_mesozoo_Z_Pref           = 0.285       !      mesozooplankton preference for microzooplankton
    zz_rate_mesozoo_Z_Predslope      = 0.500       ! uM N mesozooplankton microzooplankton grazing limit
    zz_rate_mesozoo_Z_HalfSat        = 1.200       ! uM N mesozooplankton microzoo grazing half saturation const
-   zz_rate_mesozoo_eff              = 0.50        ! mesozooplankton grazed mass assimilation efficiency
+   zz_rate_mesozoo_eff              = 0.60        ! mesozooplankton grazed mass assimilation efficiency
    zz_frac_waste_MNM_NH             = 0.05          ! waste fraction from mesozoo natural mortality to NH
-   zz_frac_waste_MNM_DON            = 0.460       ! waste fraction from mesozoo natural mortality to DON
-   zz_frac_waste_MNM_PON            = 0.460       ! waste fraction from mesozoo natural mortality to PON
+   zz_frac_waste_MNM_DON            = 0.450       ! waste fraction from mesozoo natural mortality to DON
+   zz_frac_waste_MNM_PON            = 0.450       ! waste fraction from mesozoo natural mortality to PON
    zz_frac_waste_MEX_NH             = 0.25        ! waste fraction from mesozoo excretion to NH
    zz_frac_waste_MEX_DON            = 0.25        ! waste fraction from mesozoo excretion to DON
    zz_frac_waste_MEX_PON            = 0.5         ! waste fraction from mesozoo excretion to PON
@@ -121,19 +121,19 @@
    zz_frac_waste_PEM_DON            = 0.0         ! waste fraction from mesozoo grazing PON to DON
    zz_frac_waste_PEM_PON            = 1.0         ! waste fraction from mesozoo grazing PON to PON
    zz_frac_waste_DEM_NH             = 0.05        ! waste fraction from mesozoo grazing microphyto to NH #  Alain, excretion rate to growth rate
-   zz_frac_waste_DEM_DON            = 0.460       ! waste fraction from mesozoo grazing microphyto to DON# Denman and Pena about 1/2 to dissolved
-   zz_frac_waste_DEM_PON            = 0.460       ! waste fraction from mesozoo grazing microphyto to PON
+   zz_frac_waste_DEM_DON            = 0.450       ! waste fraction from mesozoo grazing microphyto to DON# Denman and Pena about 1/2 to dissolved
+   zz_frac_waste_DEM_PON            = 0.450       ! waste fraction from mesozoo grazing microphyto to PON
    zz_frac_waste_DEM_BSi            = 1.0         ! waste fraction from mesozoo grazing microphyto to PON
    zz_frac_waste_FEM_NH             = 0.05        ! waste fraction from mesozoo grazing picophyto to NH
-   zz_frac_waste_FEM_DON            = 0.460       ! waste fraction from mesozoo grazing picophyto to DON
-   zz_frac_waste_FEM_PON            = 0.460       ! waste fraction from mesozoo grazing picophyto to PON
+   zz_frac_waste_FEM_DON            = 0.450       ! waste fraction from mesozoo grazing picophyto to DON
+   zz_frac_waste_FEM_PON            = 0.450       ! waste fraction from mesozoo grazing picophyto to PON
    zz_frac_waste_FEM_BSi            = 1.0         ! waste fraction from mesozoo grazing picophyto to Bsi
    zz_frac_waste_ZEM_NH             = 0.05        ! waste fraction from mesozoo grazing microzoo to NH
-   zz_frac_waste_ZEM_DON            = 0.460       ! waste fraction from mesozoo grazing microzoo to DON
-   zz_frac_waste_ZEM_PON            = 0.460       ! waste fraction from mesozoo grazing microzoo to PON
+   zz_frac_waste_ZEM_DON            = 0.450       ! waste fraction from mesozoo grazing microzoo to DON
+   zz_frac_waste_ZEM_PON            = 0.450       ! waste fraction from mesozoo grazing microzoo to PON
    zz_frac_waste_NEM_NH             = 0.05        ! waste fraction from mesozoo grazing M. rubrum to NH
-   zz_frac_waste_NEM_DON            = 0.460       ! waste fraction from mesozoo grazing M. rubrum to DON
-   zz_frac_waste_NEM_PON            = 0.460       ! waste fraction from mesozoo grazing M. rubrum to PON
+   zz_frac_waste_NEM_DON            = 0.450       ! waste fraction from mesozoo grazing M. rubrum to DON
+   zz_frac_waste_NEM_PON            = 0.450       ! waste fraction from mesozoo grazing M. rubrum to PON
    zz_frac_waste_NEM_BSi            = 1.0         ! waste fraction from mesozoo grazing M. rubrum to BSi
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -164,23 +164,23 @@
    zz_frac_waste_PEZ_DON        = 0.0        !waste fraction from microzoo grazing PON to DON
    zz_frac_waste_PEZ_PON        = 1.0        !waste fraction from microzoo grazing PON to PON
    zz_frac_waste_DEZ_NH         = 0.05       ! waste fraction from microzoo grazing microphyto to NH
-   zz_frac_waste_DEZ_DON        = 0.460      !waste fraction from microzoo grazing microphyto to DON
-   zz_frac_waste_DEZ_PON        = 0.460      !waste fraction from microzoo grazing microphyto to PON
+   zz_frac_waste_DEZ_DON        = 0.450      !waste fraction from microzoo grazing microphyto to DON
+   zz_frac_waste_DEZ_PON        = 0.450      !waste fraction from microzoo grazing microphyto to PON
    zz_frac_waste_DEZ_Bsi        = 1.         !waste fraction from microzoo grazing microphyto to Bsi
    zz_frac_waste_NEZ_NH         = 0.05       ! waste fraction from microzoo grazing M. rubrum to NH
-   zz_frac_waste_NEZ_DON        = 0.460      !waste fraction from microzoo grazing M. rubrum to DON
-   zz_frac_waste_NEZ_PON        = 0.460      !waste fraction from microzoo grazing M. rubrum to PON
+   zz_frac_waste_NEZ_DON        = 0.450      !waste fraction from microzoo grazing M. rubrum to DON
+   zz_frac_waste_NEZ_PON        = 0.450      !waste fraction from microzoo grazing M. rubrum to PON
    zz_frac_waste_NEZ_BSi        = 1.         !waste fraction from microzoo grazing M. rubrum to Bsi
    zz_frac_waste_FEZ_NH         = 0.05       ! waste fraction from microzoo grazing picophyto to NH
-   zz_frac_waste_FEZ_DON        = 0.460      !waste fraction from microzoo grazing picophyto to DON
-   zz_frac_waste_FEZ_PON        = 0.460      !waste fraction from microzoo grazing picophyto to PON
+   zz_frac_waste_FEZ_DON        = 0.450      !waste fraction from microzoo grazing picophyto to DON
+   zz_frac_waste_FEZ_PON        = 0.450      !waste fraction from microzoo grazing picophyto to PON
    zz_frac_waste_FEZ_BSi        = 1.         !waste fraction from microzoo grazing picophyto to Bsi
    zz_frac_waste_ZEZ_NH         = 0.05       ! waste fraction from microzoo grazing microzoo to NH
-   zz_frac_waste_ZEZ_DON        = 0.460      !waste fraction from microzoo grazing microzoo to DON
-   zz_frac_waste_ZEZ_PON        = 0.460      !waste fraction from microzoo grazing microzoo to PON
+   zz_frac_waste_ZEZ_DON        = 0.450      !waste fraction from microzoo grazing microzoo to DON
+   zz_frac_waste_ZEZ_PON        = 0.450      !waste fraction from microzoo grazing microzoo to PON
    zz_frac_waste_ZNM_NH         = 0.05       !waste fraction from micro-zoo natural mortality to DON
-   zz_frac_waste_ZNM_DON        = 0.460      !waste fraction from micro-zoo natural mortality to DON
-   zz_frac_waste_ZNM_PON        = 0.460      !waste fraction from micro-zoo natural mortality to PON
+   zz_frac_waste_ZNM_DON        = 0.450      !waste fraction from micro-zoo natural mortality to DON
+   zz_frac_waste_ZNM_PON        = 0.450      !waste fraction from micro-zoo natural mortality to PON
    zz_frac_waste_ZEX_NH         = 0.25       !waste fraction from micro-zoo excretion to DON
    zz_frac_waste_ZEX_DON        = 0.25       !waste fraction from micro-zoo excretion to DON
    zz_frac_waste_ZEX_PON        = 0.5        !waste fraction from micro-zoo excretion to PON
@@ -189,8 +189,8 @@
 &nampisrem     !   parameters for remineralization
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    zz_remin_NH     =  4.0e-7
-   zz_remin_D_DON  =  2.3e-6
-   zz_remin_D_PON  =  2.3e-6
+   zz_remin_D_DON  =  2.1e-6
+   zz_remin_D_PON  =  2.1e-6
    zz_remin_D_bSi  =  2.8e-6
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -202,10 +202,12 @@
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisdmp     !  Damping 
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   ln_pisdmp    =  .false.     !  Relaxation fo some tracers to a mean value
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampismass     !  Mass conservation
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   ln_check_mass =  .false.    !  Check mass conservation
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisopt     !  Light attenuation
@@ -232,6 +234,6 @@
    zz_w_sink_D_PON = 1.1e-4      ! m/s PON detritus sinking rate # Jeffery quoting Dune and Bacon
    zz_w_sink_D_bSi = 1.1e-4      ! m/s  biogenic silicon detritus sinking rate # match NO3 particles
    zz_alpha_b_Si = 0.85           ! fraction of bottom flux resuspended in bottom cell
-   zz_alpha_b_N = 0.25           ! fraction of bottom flux resuspended in bottom cell
-   zz_alpha_b_T = 0.5           ! fraction of bottom flux resuspended in bottom cell
+   zz_alpha_b_N = 0.85           ! fraction of bottom flux resuspended in bottom cell
+   zz_alpha_b_T = 0.85           ! fraction of bottom flux resuspended in bottom cell
 /
