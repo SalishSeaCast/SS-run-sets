@@ -46,5 +46,14 @@ if [[ $TEST != *"ERROR"* ]]; then
 else
   exit
 fi
+TEST=0
+TEST="$(salishsea run --waitjob ${JID} --nocheck-initial-conditions spring2015_${NEWRUN}_5.yaml $SCRATCH/results/spring2015_${NEWRUN}_5 2>&1)"
+echo $TEST
+JID=0
+if [[ $TEST != *"ERROR"* ]]; then
+   JID=${TEST##* }
+else
+  exit
+fi
 echo "Ended run at $(date)"
 exit
