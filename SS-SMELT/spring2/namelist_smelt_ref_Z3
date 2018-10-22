@@ -22,7 +22,7 @@
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    zz_rate_R_diat            = 4.80E-05    !: 1/s
    zz_rate_R_myri            = 1.60E-05    !: 1/s
-   zz_rate_R_nano            = 1.60E-05    !: 1/s
+   zz_rate_R_nano            = 1.40E-05    !: 1/s
    zz_rate_maxtemp_diat      = 26.0         !: deg C
    zz_rate_maxtemp_myri      = 31.0         !: deg C
    zz_rate_maxtemp_nano      = 31.0         !: deg C
@@ -91,8 +91,8 @@
    zz_rate_mesozoo_sumpeakpos = 135.0, 208.0, 296.0    ! year-day times of mesozooplankton summer concentration peaks
    zz_rate_mesozoo_alpha            = 1.0         ! 0 to 1. alpha = 0: spatially uniform mesozoo; alpha = 1: mesozoo proportional to prey
    zz_rate_mesozoo_R                = 1.39e-5     ! uM N / s mesozooplankton maximum ingestion rate @ 20 deg C
-   zz_rate_mesozoo_Rm               = 2.3e-6      ! uM N / s mesozooplankton natural mortality rate @ 20 deg C
-   zz_rate_mesozoo_excr             = 1.39e-6     ! uM N / s mesozooplankton excretion rate @ 20 deg C
+   zz_rate_mesozoo_Rm               = 0.          ! uM N / s mesozooplankton natural mortality rate @ 20 deg C
+   zz_rate_mesozoo_excr             = 0.          ! uM N / s mesozooplankton excretion rate @ 20 deg C
    zz_rate_mesozoo_PredSlope        = 0.500       ! uM N mesozooplankton total grazing limit
    zz_rate_mesozoo_HalfSat          = 1.000       ! uM N mesozooplankton total grazing half saturation constant
    zz_rate_mesozoo_MicroPref        = 0.285       !      mesozooplankton preference for diatoms
