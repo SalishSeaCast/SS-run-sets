@@ -22,7 +22,7 @@
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    zz_rate_R_diat            = 4.80E-05    !: 1/s
    zz_rate_R_myri            = 1.60E-05    !: 1/s
-   zz_rate_R_nano            = 1.40E-05    !: 1/s
+   zz_rate_R_nano            = 1.50E-05    !: 1/s
    zz_rate_maxtemp_diat      = 26.0         !: deg C
    zz_rate_maxtemp_myri      = 31.0         !: deg C
    zz_rate_maxtemp_nano      = 31.0         !: deg C
@@ -158,7 +158,7 @@
    zz_rate_uzoo_Z_Pref          = 0.180      ! microzooplankton preference for microzoo cannibalism
    zz_rate_uzoo_Z_Predslope     = 0.300      ! uM N microzooplankton microzoo grazing limit
    zz_rate_uzoo_Z_HalfSat       = 0.500      ! uM N microzooplankton microzoo grazing half saturation const
-   zz_rate_uzoo_R               = 1.75E-05   ! 1/s micro-phyto maximum growth rate # Hitchcock 1980, 1.4 d-1 for T. nordenskelii at 10degrees
+   zz_rate_uzoo_R               = 1.85E-05   ! 1/s micro-phyto maximum growth rate # Hitchcock 1980, 1.4 d-1 for T. nordenskelii at 10degrees
    zz_rate_uZoo_eff             = 0.6        ! match SOG
    zz_frac_waste_PEZ_NH         = 0.0        ! waste fraction from microzoo grazing PON to NH
    zz_frac_waste_PEZ_DON        = 0.0        !waste fraction from microzoo grazing PON to DON
