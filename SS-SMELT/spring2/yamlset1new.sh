@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN="Z3"
+NEWRUN="Z3LL"
 
 TEST="$(salishsea run spring2015_${NEWRUN}_0.yaml $SCRATCH/results/spring2015_${NEWRUN}_0 2>&1)"
 echo $TEST
