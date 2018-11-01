@@ -58,8 +58,8 @@ forcing:
     link to: tracers
 
 restart:
-  restart.nc: /scratch/eolson/results/spring2015_Z3_0/SalishSea_00270000_restart.nc
-  restart_trc.nc: /scratch/eolson/results/spring2015_Z3_0/SalishSea_00270000_restart_trc.nc
+  restart.nc: /scratch/eolson/results/spring2015_Z3_0a/SalishSea_00270000_restart.nc
+  restart_trc.nc: /scratch/eolson/results/spring2015_Z3_0a/SalishSea_00270000_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
