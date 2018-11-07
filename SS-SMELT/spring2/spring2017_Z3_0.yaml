@@ -60,7 +60,7 @@ forcing:
     link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
 
 restart:
-  restart.nc: /scratch/eolson/results/spring2017_Z3_m1/SalishSea_01760400_restart.nc
+  restart.nc: /scratch/eolson/results/spring2017_Z3LL_m1/SalishSea_01760400_restart.nc
   restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/hindcast_v1/SalishSea_00183600_restart_trc.nc
 
 namelists:
