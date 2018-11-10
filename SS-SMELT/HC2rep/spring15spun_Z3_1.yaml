@@ -1,4 +1,4 @@
-run_id: spring15spun_Z3_0
+run_id: spring15spun_Z3_1
 config_name: SMELT
 account: rrg-allen
 email: eolson@eoas.ubc.ca
@@ -39,12 +39,12 @@ forcing:
     link to: $PROJECT/SalishSea/hindcast-sys/tracers
 
 restart:
-  restart.nc: $MEOPAR/NEMO-forcing/restarts/hc2/11jan15/SalishSea_00125280_restart.nc
-  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/hc2/11jan16/SalishSea_00913680_restart_trc.nc
+  restart.nc: $SCRATCH/results/spring15spun_Z3_0/SalishSea_00254880_restart.nc
+  restart_trc.nc: $SCRATCH/results/spring15spun_Z3_0/SalishSea_00254880_restart_trc.nc
 
 namelists:
   namelist_cfg:
-  - ./namelist_cfg_11jan15_2mon
+  - ./namelist_cfg_12mar15_2mon
   namelist_top_cfg:
   - ./namelist_top_cfg
   namelist_smelt_cfg:
