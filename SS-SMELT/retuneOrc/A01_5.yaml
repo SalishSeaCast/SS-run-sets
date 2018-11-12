@@ -18,7 +18,7 @@ config_name: SMELT
 MPI decomposition: 8x18
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: A01_2
+run_id: A01_5
 walltime: 24:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
@@ -58,8 +58,8 @@ forcing:
     link to: tracers
 
 restart:
-  restart.nc: $SCRATCH/A0_1/SalishSea_00254880_restart.nc
-  restart_trc.nc: $SCRATCH/A0_1/SalishSea_00254880_restart_trc.nc
+  restart.nc: $SCRATCH/A0_4/SalishSea_00319680_restart.nc
+  restart_trc.nc: $SCRATCH/A0_4/SalishSea_00319680_restart_trc.nc
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -72,7 +72,7 @@ namelists:
   # If relative, paths are taken from current directory
 
   namelist_cfg:
-    - ./namelist_cfg_12mar15_10d
+    - ./namelist_cfg_11apr15_10d
   namelist_top_cfg:
     - ./namelist_top_cfg
   namelist_smelt_ref:
