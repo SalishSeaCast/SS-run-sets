@@ -18,7 +18,7 @@ config_name: SMELT
 MPI decomposition: 8x18
 
 # For runs on systems that use qsub/PBS/TORQUE
-run_id: A0_1
+run_id: A01_1
 walltime: 24:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: eolson@eoas.ubc.ca
