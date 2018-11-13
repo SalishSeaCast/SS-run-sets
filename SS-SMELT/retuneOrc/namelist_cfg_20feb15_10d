@@ -298,7 +298,7 @@
     rn_time_dmp   =  365., 365.            ! Damping time scale in days (nudging on orlanski inflow)
     rn_time_dmp_out =  365., 365.          ! Outflow damping time scale (nudging on orlanski outflow)
     rn_max_sponge = 50., 50.               ! max viscosity for sponge layer (m2/s)
-    nn_rimwidth   = 8, 8                   ! rim depth for FRS
+    nn_rimwidth   = 10, 10                 ! rim depth for FRS
 &end
 
 
@@ -315,15 +315,14 @@
 !-----------------------------------------------------------------------
 !        !  file name             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
 !        !                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
-  bn_ssh = 'ssh/ssh',                1,                'sossheig', .true.,        .false.,  'daily',    '',        ''
-  bn_u2d = 'ssh/ssh',                1,                'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
-  bn_v2d = 'ssh/ssh',                1,                'vobtcrty', .true.,        .false.,  'daily',    '',        ''
+  bn_ssh = 'open_boundaries/west/ssh/ssh',                1,                'sossheig', .true.,        .false.,  'daily',    '',        ''
+  bn_u2d = 'open_boundaries/west/ssh/ssh',                1,                'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v2d = 'open_boundaries/west/ssh/ssh',                1,                'vobtcrty', .true.,        .false.,  'daily',    '',        ''
   bn_u3d = '',                      24,                'vozocrtx', .true.,        .false.,  'daily',    '',        ''
   bn_v3d = '',                      24,                'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'SalishSea_west_TEOS10',   168,                'votemper', .true.,        .true.,  'yearly',   '',        ''
-  bn_sal = 'SalishSea_west_TEOS10',   168,                'vosaline', .true.,        .true.,  'yearly',   '',        ''
-
-  cn_dir = 'open_boundaries/west/'
+  bn_tem = 'LiveOcean/LiveOcean_v201712',   24,               'votemper', .true.,        .false.,  'daily',    '',        ''
+  bn_sal = 'LiveOcean/LiveOcean_v201712',   24,               'vosaline', .true.,        .false.,  'daily',    '',        ''
+  cn_dir = './'
 &end
 
 &nambdy_tide     ! tidal forcing at open boundaries
