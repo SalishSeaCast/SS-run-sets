@@ -1,7 +1,7 @@
 run_id: A02_3
 config_name: SMELT
 email: eolson@eoas.ubc.ca
-MPI decomposition: 8x18
+MPI decomposition: 12x2812x2812x2812x2812x2812x2812x2812x2812x2812x2812x2812x28
 walltime: 24:00:00
 
 paths:
