@@ -5,6 +5,7 @@ TEST="$(salishsea run ${NEWRUN}_0.yaml $SCRATCH/results/${NEWRUN}_0 2>&1)"
 echo $TEST
 if [[ $TEST != *"ERROR"* ]]; then
    JID=${TEST##* }
+   JID=${JID%.orca2.ibb}
 else
   exit
 fi
@@ -15,6 +16,7 @@ echo $TEST
 JID=0
 if [[ $TEST != *"ERROR"* ]]; then
    JID=${TEST##* }
+   JID=${JID%.orca2.ibb}
 else
   exit
 fi
@@ -25,6 +27,7 @@ echo $TEST
 JID=0
 if [[ $TEST != *"ERROR"* ]]; then
    JID=${TEST##* }
+   JID=${JID%.orca2.ibb}
 else
   exit
 fi
@@ -34,6 +37,7 @@ echo $TEST
 JID=0
 if [[ $TEST != *"ERROR"* ]]; then
    JID=${TEST##* }
+   JID=${JID%.orca2.ibb}
 else
   exit
 fi
@@ -43,6 +47,7 @@ echo $TEST
 JID=0
 if [[ $TEST != *"ERROR"* ]]; then
    JID=${TEST##* }
+   JID=${JID%.orca2.ibb}
 else
   exit
 fi
