@@ -38,8 +38,8 @@ forcing:
     link to: $MEOPAR/NEMO-forcing-new/tracers
 
 restart:
-  restart.nc: $SCRATCH/A02new_1/SalishSea_00254880_restart.nc
-  restart_trc.nc: $SCRATCH/A02new_1/SalishSea_00254880_restart_trc.nc
+  restart.nc: $SCRATCH/results/A02_1/SalishSea_00254880_restart.nc
+  restart_trc.nc: $SCRATCH/results/A02_1/SalishSea_00254880_restart_trc.nc
 
 namelists:
   namelist_cfg:
