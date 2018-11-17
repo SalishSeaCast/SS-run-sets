@@ -1,7 +1,7 @@
 #!/bin/bash
-NEWRUN="Z3"
+NEWRUN="Z5"
 
-TEST="$(salishsea run spring15spun_${NEWRUN}_0b.yaml $SCRATCH/results/spring15spun_${NEWRUN}_0 2>&1)"
+TEST="$(salishsea run spring15spun_${NEWRUN}_0.yaml $SCRATCH/results/spring15spun_${NEWRUN}_0 2>&1)"
 echo $TEST
 if [[ $TEST != *"ERROR"* ]]; then
    JID=${TEST##* }
