@@ -4,6 +4,8 @@ OLDRUN="B01"
 
 #echo "working dir: $(pwd)"
 
+sed "s/$OLDRUN/$NEWRUN/" "${OLDRUN}_m2.yaml" > "${NEWRUN}_m2.yaml"
+sed "s/$OLDRUN/$NEWRUN/" "${OLDRUN}_m1.yaml" > "${NEWRUN}_m1.yaml"
 sed "s/$OLDRUN/$NEWRUN/" "${OLDRUN}_0.yaml" > "${NEWRUN}_0.yaml"
 sed "s/$OLDRUN/$NEWRUN/" "${OLDRUN}_1.yaml" > "${NEWRUN}_1.yaml"
 sed "s/$OLDRUN/$NEWRUN/" "${OLDRUN}_2.yaml" > "${NEWRUN}_2.yaml"
