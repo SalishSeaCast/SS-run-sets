@@ -1,4 +1,4 @@
-run_id: B01_1
+run_id: B01_m1
 config_name: SMELT
 email: eolson@eoas.ubc.ca
 MPI decomposition: 12x26
