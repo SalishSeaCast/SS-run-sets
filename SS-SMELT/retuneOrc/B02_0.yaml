@@ -1,4 +1,4 @@
-run_id: B01_0
+run_id: B02_0
 config_name: SMELT
 email: eolson@eoas.ubc.ca
 MPI decomposition: 12x26
@@ -38,8 +38,8 @@ forcing:
     link to: $MEOPAR/NEMO-forcing-new/tracers
 
 restart:
-  restart.nc: $SCRATCH/results/B01_m1/SalishSea_00211680_restart.nc
-  restart_trc.nc: $SCRATCH/results/B01_m1/SalishSea_00211680_restart_trc.nc
+  restart.nc: $SCRATCH/results/B02_m1/SalishSea_00211680_restart.nc
+  restart_trc.nc: $SCRATCH/results/B02_m1/SalishSea_00211680_restart_trc.nc
 
 namelists:
   namelist_cfg:
@@ -49,7 +49,7 @@ namelists:
   namelist_smelt_cfg:
   - ./namelist_smelt_cfg_Base
   namelist_smelt_ref:
-  - ./namelist_smelt_ref_B01
+  - ./namelist_smelt_ref_B02
 
 output:
   domaindefs: ../spring2/domain_def.xml
