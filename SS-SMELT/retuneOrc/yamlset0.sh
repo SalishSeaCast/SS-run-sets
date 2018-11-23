@@ -1,6 +1,6 @@
 #!/bin/bash
-NEWRUN="B02"
-OLDRUN="B01"
+NEWRUN="B03"
+OLDRUN="B02"
 
 #echo "working dir: $(pwd)"
 
