@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN="Z5"
+NEWRUN="Ztest"
 
 TEST="$(salishsea run spring15spun_${NEWRUN}_0.yaml $SCRATCH/results/spring15spun_${NEWRUN}_0 2>&1)"
 echo $TEST
