@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN="B03"
+NEWRUN="B04"
 
 TEST="$(salishsea run ${NEWRUN}_m2.yaml $SCRATCH/results/${NEWRUN}_m2 2>&1)"
 echo $TEST
@@ -65,6 +65,16 @@ else
 fi
 TEST=0
 TEST="$(salishsea run --waitjob ${JID} --nocheck-initial-conditions ${NEWRUN}_4.yaml $SCRATCH/results/${NEWRUN}_4 2>&1)"
+echo $TEST
+JID=0
+if [[ $TEST != *"ERROR"* ]]; then
+   JID=${TEST##* }
+   JID=${JID%.orca2.ibb}
+else
+  exit
+fi
+TEST=0
+TEST="$(salishsea run --waitjob ${JID} --nocheck-initial-conditions ${NEWRUN}_5.yaml $SCRATCH/results/${NEWRUN}_5 2>&1)"
 echo $TEST
 JID=0
 if [[ $TEST != *"ERROR"* ]]; then
