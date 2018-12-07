@@ -6,8 +6,8 @@
 &namrun        !   Parameters of the run
 !-----------------------------------------------------------------------
    cn_exp      = "SalishSea"  ! experience name
-   nn_it000    =      15121    ! first time step
-   nn_itend    =      36720    ! last time step (std 1 day = 2160 re: rn_rdt=40 in &namdom)
+   nn_it000    =      17281    ! first time step
+   nn_itend    =      38880    ! last time step (std 1 day = 2160 re: rn_rdt=40 in &namdom)
    nn_date0    =  20141121    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
                               ! used to adjust tides to run date (regardless of restart control)
    nn_leapy    =       1      ! Leap year calendar (1) or not (0)
@@ -25,5 +25,5 @@
    ln_clobber  =  .true.      ! clobber (overwrite) an existing file
 
    ln_rst_list  = .true.       !  output restarts at list of times using nn_stocklist (T) or at set frequency with nn_stock (F)
-   nn_stocklist = 36720, 0, 0, 0, 0, 0, 0, 0, 0, 0  ! List of timesteps when a restart file is to be written
+   nn_stocklist = 38880, 0, 0, 0, 0, 0, 0, 0, 0, 0  ! List of timesteps when a restart file is to be written
 &end
