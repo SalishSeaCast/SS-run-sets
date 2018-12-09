@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN="orig"
+NEWRUN="B06"
 
 TEST="$(salishsea run ${NEWRUN}_m2.yaml $SCRATCH/results/${NEWRUN}_m2 2>&1)"
 echo $TEST
