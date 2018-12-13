@@ -1,8 +1,8 @@
-run_id: spring15spun_Z7_25
+run_id: spring15spun_Z7_5
 config_name: SMELT
-account: rrg-allen
+account: def-allen
 email: eolson@eoas.ubc.ca
-MPI decomposition: 14x39
+MPI decomposition: 16x39
 walltime: 12:00:00
 
 paths:
@@ -36,7 +36,7 @@ forcing:
   tides:
     link to: $PROJECT/SalishSea/hindcast-sys/tides
   tracers:
-    link to: $PROJECT/SalishSea/hindcast-sys/tracers
+    link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
   restart.nc: $SCRATCH/results/spring15spun_Z7_24/SalishSea_01550880_restart.nc
@@ -55,7 +55,7 @@ namelists:
 output:
   domaindefs: ../spring2/domain_def.xml
   fielddefs: ../spring2/field_def.xml
-  filedefs: ../spring2/file_def.xml.noGridnoDia
+  filedefs: file_def.xml.attached
   iodefs: ../spring2/iodef.xml
   separate XIOS server: true
   XIOS servers: 1
