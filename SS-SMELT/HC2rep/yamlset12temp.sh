@@ -1,9 +1,9 @@
 #!/bin/bash
 NEWRUN="Z6"
 
-sed "s/rrg-allen/def-allen/" "spring15spun_${NEWRUN}_23.yaml" > "spring15spun_${NEWRUN}_23d.yaml"
-sed "s/rrg-allen/def-allen/" "spring15spun_${NEWRUN}_24.yaml" > "spring15spun_${NEWRUN}_24d.yaml"
-sed "s/rrg-allen/def-allen/" "spring15spun_${NEWRUN}_25.yaml" > "spring15spun_${NEWRUN}_25d.yaml"
+#sed "s/rrg-allen/def-allen/" "spring15spun_${NEWRUN}_23.yaml" > "spring15spun_${NEWRUN}_23d.yaml"
+#sed "s/rrg-allen/def-allen/" "spring15spun_${NEWRUN}_24.yaml" > "spring15spun_${NEWRUN}_24d.yaml"
+#sed "s/rrg-allen/def-allen/" "spring15spun_${NEWRUN}_25.yaml" > "spring15spun_${NEWRUN}_25d.yaml"
 
 
 TEST="$(salishsea run spring15spun_${NEWRUN}_23d.yaml $SCRATCH/results/spring15spun_${NEWRUN}_23 2>&1)"
