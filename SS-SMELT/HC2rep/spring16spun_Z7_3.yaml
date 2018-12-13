@@ -55,7 +55,7 @@ namelists:
 output:
   domaindefs: ../spring2/domain_def.xml
   fielddefs: ../spring2/field_def.xml
-  filedefs: file_def.xmlR.attached
+  filedefs: file_def.xml.attached
   iodefs: ../spring2/iodef.xml
   separate XIOS server: false
   XIOS servers: 1
