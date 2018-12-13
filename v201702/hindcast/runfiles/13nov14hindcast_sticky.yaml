@@ -2,14 +2,16 @@ email: sallen@eoas.ubc.ca
 account: def-allen
 MPI decomposition: 14x39
 config_name: SalishSeaCast_Blue
-run_id: 01mar15_hindcast_blue
-walltime: 03:00:00
+run_id: sticky_13nov14
+walltime: 01:00:00
 
 forcing:
   LiveOcean:
     link to: $PROJECT/SalishSea/forcing/LiveOcean
   NEMO-atmos:
     link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
+  initial_data_file.nc:
+    link to: $PROJECT/SalishSea/hindcast-sys/tracers/initial/Bathy201702_12nov14.nc
 
   bfr_coef.nc:
     link to: $PROJECT/SalishSea/hindcast-sys/grid/jetty_mask_bathy201702.nc
@@ -19,8 +21,6 @@ forcing:
     link to: $PROJECT/SalishSea/forcing/rivers
   rivers-climatology:
     link to: $PROJECT/SalishSea/hindcast-sys/rivers-climatology
-  river_turb:
-    link to: $PROJECT/SalishSea/forcing/rivers/river_turb
   ssh:
     link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
   tides:
@@ -28,9 +28,6 @@ forcing:
   tracers:
     link to: $PROJECT/SalishSea/hindcast-sys/tracers
 
-restart:
-  restart.nc: /scratch/allen/hindcast/01feb15_blue/SalishSea_00233280_restart.nc
-  
 grid:
   bathymetry: $PROJECT/SalishSea/hindcast-sys/grid/bathymetry_201702.nc
   coordinates: $PROJECT/SalishSea/hindcast-sys/grid/coordinates_seagrid_SalishSea201702.nc
@@ -38,27 +35,28 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.01mar15_month
+  - ./namelist.time.13nov14
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.domain
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist.atmos_rivers
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.light_blue
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist.lateral
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.bottom
-  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/namelist.tracer
-  - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.dynamics
+  - $HOME/MEOPAR/SS-run-sets/v201702/hindcast/namelist.tracer_sticky
+  - $HOME/MEOPAR/SS-run-sets/v201702/hindcast/namelist.dynamics_sticky
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.vertical
   - $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/namelist.compute
 
 output:
-  filedefs: ../file_def_dailysplit_blue_attached.xml
+  XIOS servers: 1
+  filedefs: ../file_def_dailysplit_blue.xml
   domaindefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/domain_def.xml
   fielddefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/field_def.xml
   iodefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/iodef.xml
-  separate XIOS server: false
+  separate XIOS server: true
 
 paths:
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-  XIOS: $HOME/MEOPAR/XIOS-2
+  XIOS: $PROJECT/SalishSea/hindcast-sys/XIOS-2
   runs directory: /scratch/allen/hindcast
 
 vcs revisions:
