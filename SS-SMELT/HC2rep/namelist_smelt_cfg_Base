@@ -25,9 +25,9 @@
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 !              !  file name          ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !              !                     !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
-   sn_riverno3  = 'rivers-climatology/bio/R201812_bioClim',       24,               'no3',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riverno3  = 'rivers-climatology/bio/R201809_2_bioClim',       24,               'no3',       .true.,       .true.,  'daily',    '',        '',        ''
    sn_rivernh4  = 'rivers-climatology/bio/R201812_bioConst',     -12,               'nh4',       .false.,      .true.,  'yearly',   '',        '',        ''
-   sn_riversil  = 'rivers-climatology/bio/R201812_bioClim',       24,               'sil',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riversil  = 'rivers-climatology/bio/R201809_2_bioClim',       24,               'sil',       .true.,       .true.,  'daily',    '',        '',        ''
    sn_riverdia  = 'rivers-climatology/bio/R201812_bioConst',     -12,               'dia',       .false.,      .true.,  'yearly',   '',        '',        ''
    sn_riverphy  = 'rivers-climatology/bio/R201812_bioConst',     -12,               'phy',       .false.,      .true.,  'yearly',   '',        '',        ''
    sn_rivermes  = 'rivers-climatology/bio/R201812_bioConst',     -12,               'mes',       .false.,      .true.,  'yearly',   '',        '',        ''
