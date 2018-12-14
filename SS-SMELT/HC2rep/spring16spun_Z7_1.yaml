@@ -39,8 +39,8 @@ forcing:
     link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
-  restart.nc: $SCRATCH/results/spring15spun_Z7_20/SalishSea_01032480_restart.nc
-  restart_trc.nc: $SCRATCH/results/spring15spun_Z7_20/SalishSea_01032480_restart_trc.nc
+  restart.nc: $SCRATCH/results/spring16spun_Z7_0/SalishSea_01032480_restart.nc
+  restart_trc.nc: $SCRATCH/results/spring16spun_Z7_0/SalishSea_01032480_restart_trc.nc
 
 namelists:
   namelist_cfg:
