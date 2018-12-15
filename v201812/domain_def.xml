@@ -1,0 +1,117 @@
+<domain_definition>
+   <domain_group id="grid_T">
+      <domain id="grid_T" long_name="grid T"/>
+      <!-- VENUS -->
+      <domain id="VENUS_east_T"            domain_ref="grid_T"> <zoom_domain ibegin="283" jbegin="416" ni="1"  nj="1"  /> </domain>
+      <domain id="VENUS_central_T"         domain_ref="grid_T"> <zoom_domain ibegin="266" jbegin="424" ni="1"  nj="1"  /> </domain>
+      <domain id="VENUS_east_gridded_T"    domain_ref="grid_T"> <zoom_domain ibegin="282" jbegin="415" ni="2"  nj="2"  /> </domain>
+      <domain id="VENUS_central_gridded_T" domain_ref="grid_T"> <zoom_domain ibegin="265" jbegin="423" ni="2"  nj="2"  /> </domain>
+      <domain id="VENUS_delta_gridded_T"   domain_ref="grid_T"> <zoom_domain ibegin="283" jbegin="424" ni="2"  nj="2"  /> </domain>
+      <!-- CODAR -->
+      <domain id="CODAR_T"                 domain_ref="grid_T"> <zoom_domain ibegin="240" jbegin="380" ni="80" nj="80" /> </domain>
+      <!-- Tide Points -->
+      <domain id="PortRenfrew"             domain_ref="grid_T"> <zoom_domain ibegin="61"  jbegin="401" ni="1"  nj="1"  /> </domain>
+      <domain id="SheringhamPoint"         domain_ref="grid_T"> <zoom_domain ibegin="112" jbegin="330" ni="1"  nj="1"  /> </domain>
+      <domain id="Sooke"                   domain_ref="grid_T"> <zoom_domain ibegin="136" jbegin="313" ni="1"  nj="1"  /> </domain>
+      <domain id="PedderBay"               domain_ref="grid_T"> <zoom_domain ibegin="161" jbegin="295" ni="1"  nj="1"  /> </domain>
+      <domain id="Esquimalt"               domain_ref="grid_T"> <zoom_domain ibegin="190" jbegin="307" ni="1"  nj="1"  /> </domain>
+      <domain id="Victoria"                domain_ref="grid_T"> <zoom_domain ibegin="196" jbegin="302" ni="1"  nj="1"  /> </domain>
+      <domain id="CloverPoint"             domain_ref="grid_T"> <zoom_domain ibegin="199" jbegin="295" ni="1"  nj="1"  /> </domain>
+      <domain id="FinnertyCove"            domain_ref="grid_T"> <zoom_domain ibegin="216" jbegin="304" ni="1"  nj="1"  /> </domain>
+      <domain id="PortTownsend"            domain_ref="grid_T"> <zoom_domain ibegin="254" jbegin="203" ni="1"  nj="1"  /> </domain>
+      <domain id="PatriciaBay"             domain_ref="grid_T"> <zoom_domain ibegin="214" jbegin="351" ni="1"  nj="1"  /> </domain>
+      <domain id="FulfordHarbour"          domain_ref="grid_T"> <zoom_domain ibegin="229" jbegin="368" ni="1"  nj="1"  /> </domain>
+      <domain id="PatosIsland"             domain_ref="grid_T"> <zoom_domain ibegin="302" jbegin="341" ni="1"  nj="1"  /> </domain>
+      <domain id="TumboChannel"            domain_ref="grid_T"> <zoom_domain ibegin="283" jbegin="354" ni="1"  nj="1"  /> </domain>
+      <domain id="WhalerBay"               domain_ref="grid_T"> <zoom_domain ibegin="263" jbegin="385" ni="1"  nj="1"  /> </domain>
+      <domain id="BoundaryBay"             domain_ref="grid_T"> <zoom_domain ibegin="335" jbegin="380" ni="1"  nj="1"  /> </domain>
+      <domain id="Tsawwassen"              domain_ref="grid_T"> <zoom_domain ibegin="303" jbegin="393" ni="1"  nj="1"  /> </domain>
+      <domain id="SandHeads"               domain_ref="grid_T"> <zoom_domain ibegin="293" jbegin="426" ni="1"  nj="1"  /> </domain>
+      <domain id="WoodwardsLanding"        domain_ref="grid_T"> <zoom_domain ibegin="329" jbegin="414" ni="1"  nj="1"  /> </domain>
+      <domain id="NewWestminster"          domain_ref="grid_T"> <zoom_domain ibegin="363" jbegin="423" ni="1"  nj="1"  /> </domain>
+      <domain id="PointGrey"               domain_ref="grid_T"> <zoom_domain ibegin="316" jbegin="453" ni="1"  nj="1"  /> </domain>
+      <domain id="SandyCove"               domain_ref="grid_T"> <zoom_domain ibegin="333" jbegin="468" ni="1"  nj="1"  /> </domain>
+      <domain id="PointAtkinson"           domain_ref="grid_T"> <zoom_domain ibegin="329" jbegin="468" ni="1"  nj="1"  /> </domain>
+      <domain id="Squamish"                domain_ref="grid_T"> <zoom_domain ibegin="389" jbegin="532" ni="1"  nj="1"  /> </domain>
+      <domain id="GibsonsLanding"          domain_ref="grid_T"> <zoom_domain ibegin="300" jbegin="498" ni="1"  nj="1"  /> </domain>
+      <domain id="HalfmoonBay"             domain_ref="grid_T"> <zoom_domain ibegin="254" jbegin="549" ni="1"  nj="1"  /> </domain>
+      <domain id="IrvinesLanding"          domain_ref="grid_T"> <zoom_domain ibegin="248" jbegin="583" ni="1"  nj="1"  /> </domain>
+      <domain id="PowellRiver"             domain_ref="grid_T"> <zoom_domain ibegin="204" jbegin="663" ni="1"  nj="1"  /> </domain>
+      <domain id="Lund"                    domain_ref="grid_T"> <zoom_domain ibegin="186" jbegin="700" ni="1"  nj="1"  /> </domain>
+      <domain id="TwinIslets"              domain_ref="grid_T"> <zoom_domain ibegin="167" jbegin="722" ni="1"  nj="1"  /> </domain>
+      <domain id="CampbellRiver"           domain_ref="grid_T"> <zoom_domain ibegin="125" jbegin="742" ni="1"  nj="1"  /> </domain>
+      <domain id="CampbellRiverNorth"      domain_ref="grid_T"> <zoom_domain ibegin="125" jbegin="747" ni="1"  nj="1"  /> </domain>
+      <domain id="MaudeIslandE"            domain_ref="grid_T"> <zoom_domain ibegin="122" jbegin="770" ni="1"  nj="1"  /> </domain>
+      <domain id="NympheCove"              domain_ref="grid_T"> <zoom_domain ibegin="117" jbegin="773" ni="1"  nj="1"  /> </domain>
+      <domain id="SeymourNarrows"          domain_ref="grid_T"> <zoom_domain ibegin="120" jbegin="771" ni="1"  nj="1"  /> </domain>
+      <domain id="BrownBay"                domain_ref="grid_T"> <zoom_domain ibegin="121" jbegin="779" ni="1"  nj="1"  /> </domain>
+      <domain id="ChathamPoint"            domain_ref="grid_T"> <zoom_domain ibegin="130" jbegin="817" ni="1"  nj="1"  /> </domain>
+      <domain id="KelseyBay"               domain_ref="grid_T"> <zoom_domain ibegin="64"  jbegin="866" ni="1"  nj="1"  /> </domain>
+      <domain id="YorkeIsland"             domain_ref="grid_T"> <zoom_domain ibegin="66"  jbegin="877" ni="1"  nj="1"  /> </domain>
+      <domain id="Nanaimo"                 domain_ref="grid_T"> <zoom_domain ibegin="208" jbegin="484" ni="1"  nj="1"  /> </domain>
+      <domain id="NeahBay"                 domain_ref="grid_T"> <zoom_domain ibegin="15"  jbegin="384" ni="1"  nj="1"  /> </domain>
+      <domain id="CherryPoint"             domain_ref="grid_T"> <zoom_domain ibegin="342" jbegin="343" ni="1"  nj="1"  /> </domain>
+      <domain id="FridayHarbor"            domain_ref="grid_T"> <zoom_domain ibegin="267" jbegin="300" ni="1"  nj="1"  /> </domain>
+      <!-- Tide Points Baynes Sound, not corrected for off-by-one, assumed correct-->
+      <domain id="BaynesSound"             domain_ref="grid_T"> <zoom_domain ibegin="125" jbegin="605" ni="1"  nj="1"  /> </domain>
+      <domain id="EastDenmanIsland"        domain_ref="grid_T"> <zoom_domain ibegin="136" jbegin="606" ni="1"  nj="1"  /> </domain>
+      <!-- Boundary Conditions for FVCOM -->
+      <domain id="FVCOM_T"                 domain_ref="grid_T"> <zoom_domain ibegin="225" jbegin="340" ni="144" nj="221" /> </domain>
+      <!-- Passive tracer below 20 m -->
+      <domain id="trc20m"                  domain_ref="grid_T"> <zoom_domain ibegin="100" jbegin="300" ni="298" nj="598" /> </domain>
+      <!-- Northern Strait for Nitrate Analysis -->
+      <domain id="NSOG_T"                  domain_ref="grid_T"> <zoom_domain ibegin="112" jbegin="644" ni="97" nj="130" /> </domain>
+   </domain_group>
+
+   <domain_group id="grid_U">
+      <domain id="grid_U" long_name="grid U"/>
+      <!-- VENUS -->
+      <domain id="VENUS_east_U"            domain_ref="grid_U"> <zoom_domain ibegin="283" jbegin="416" ni="1"  nj="1"  /> </domain>
+      <domain id="VENUS_central_U"         domain_ref="grid_U"> <zoom_domain ibegin="266" jbegin="424" ni="1"  nj="1"  /> </domain>
+      <domain id="VENUS_east_gridded_U"    domain_ref="grid_U"> <zoom_domain ibegin="282" jbegin="415" ni="2"  nj="2"  /> </domain>
+      <domain id="VENUS_central_gridded_U" domain_ref="grid_U"> <zoom_domain ibegin="265" jbegin="423" ni="2"  nj="2"  /> </domain>
+      <domain id="VENUS_delta_gridded_U"   domain_ref="grid_U"> <zoom_domain ibegin="283" jbegin="424" ni="2"  nj="2"  /> </domain>
+      <!-- CODAR -->
+      <domain id="CODAR_U"                 domain_ref="grid_U"> <zoom_domain ibegin="240" jbegin="380" ni="80" nj="80" /> </domain>
+      <!-- Surface Slab -->
+      <domain id="two_straits_U"           domain_ref="grid_U"> <zoom_domain ibegin="10"  jbegin="200" ni="355" nj="540" /> </domain>
+      <!-- Boundary Conditions for FVCOM -->
+      <domain id="FVCOM_U"                 domain_ref="grid_U"> <zoom_domain ibegin="225" jbegin="340" ni="144" nj="221" /> </domain>
+      <!-- Northern Strait for Nitrate Analysis -->
+      <domain id="NSOG_U"                  domain_ref="grid_U"> <zoom_domain ibegin="112" jbegin="644" ni="97" nj="130" /> </domain>
+   </domain_group>
+
+   <domain_group id="grid_V">
+      <domain id="grid_V" long_name="grid V"/>
+      <!-- VENUS -->
+      <domain id="VENUS_east_V"            domain_ref="grid_V"> <zoom_domain ibegin="283" jbegin="416" ni="1"  nj="1"  /> </domain>
+      <domain id="VENUS_central_V"         domain_ref="grid_V"> <zoom_domain ibegin="266" jbegin="424" ni="1"  nj="1"  /> </domain>
+      <domain id="VENUS_east_gridded_V"    domain_ref="grid_V"> <zoom_domain ibegin="282" jbegin="415" ni="2"  nj="2"  /> </domain>
+      <domain id="VENUS_central_gridded_V" domain_ref="grid_V"> <zoom_domain ibegin="265" jbegin="423" ni="2"  nj="2"  /> </domain>
+      <domain id="VENUS_delta_gridded_V"   domain_ref="grid_V"> <zoom_domain ibegin="283" jbegin="424" ni="2"  nj="2"  /> </domain>
+      <!-- CODAR -->
+      <domain id="CODAR_V"                 domain_ref="grid_V"> <zoom_domain ibegin="240" jbegin="380" ni="80" nj="80" /> </domain>
+      <!-- Surface Slab -->
+      <domain id="two_straits_V"           domain_ref="grid_V"> <zoom_domain ibegin="10"  jbegin="200" ni="355" nj="540" /> </domain>
+      <!-- Boundary Conditions for FVCOM -->
+      <domain id="FVCOM_V"                 domain_ref="grid_V"> <zoom_domain ibegin="225" jbegin="340" ni="144" nj="221" /> </domain>
+      <!-- Northern Strait for Nitrate Analysis -->
+      <domain id="NSOG_V"                  domain_ref="grid_V"> <zoom_domain ibegin="112" jbegin="644" ni="97" nj="130" /> </domain>
+      <domain id="TV1"                      domain_ref="grid_V"> <zoom_domain ibegin="50" jbegin="883" ni="26" nj="1" /> </domain>
+      <domain id="TV2"                      domain_ref="grid_V"> <zoom_domain ibegin="122" jbegin="792" ni="67" nj="1" /> </domain>
+   </domain_group>
+
+   <domain_group id="grid_W">
+      <domain id="grid_W" long_name="grid W"/>
+      <domain id="VENUS_east_gridded_W"    domain_ref="grid_W"> <zoom_domain ibegin="282" jbegin="415" ni="2"  nj="2"  /> </domain>
+      <domain id="VENUS_central_gridded_W" domain_ref="grid_W"> <zoom_domain ibegin="265" jbegin="423" ni="2"  nj="2"  /> </domain>
+      <domain id="VENUS_delta_gridded_W"   domain_ref="grid_W"> <zoom_domain ibegin="283" jbegin="424" ni="2"  nj="2"  /> </domain>
+      <!-- Boundary Conditions for FVCOM -->
+      <domain id="FVCOM_W"                 domain_ref="grid_W"> <zoom_domain ibegin="225" jbegin="340" ni="144" nj="221" /> </domain>
+      <!-- Northern Strait for Nitrate Analysis -->
+      <domain id="NSOG_W"                  domain_ref="grid_W"> <zoom_domain ibegin="112" jbegin="644" ni="97" nj="130" /> </domain>
+   </domain_group>
+
+   <domain id="scalarpoint" long_name="scalar"/>
+</domain_definition>
+
