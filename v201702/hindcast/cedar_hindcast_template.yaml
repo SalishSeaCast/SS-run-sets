@@ -6,7 +6,7 @@ account: rrg-allen
 MPI decomposition: 16x41
 config_name: SalishSeaCast
 run_id: ddmmmyyhindcast
-walltime: 8:30:00
+walltime: 12:00:00
 
 paths:
   NEMO code config: $PROJECT/SalishSea/hindcast-sys/NEMO-3.6-code/NEMOGCM/CONFIG
@@ -72,9 +72,9 @@ output:
   XIOS servers: 1
   domaindefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/domain_def.xml
   fielddefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/field_def.xml
-  filedefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/file_def_dailysplit_upTrac_dian.xml
+  filedefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/hindcast/file_def_mf_dailysplit_upTrac_dian.xml
   iodefs: $PROJECT/SalishSea/hindcast-sys/SS-run-sets/v201702/iodef.xml
-  separate XIOS server: true
+  separate XIOS server: false
 
 vcs revisions:
   hg:
