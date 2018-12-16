@@ -149,7 +149,7 @@
    zz_rate_uzoo_Z_Predslope     = 0.300      ! uM N microzooplankton microzoo grazing limit
    zz_rate_uzoo_Z_HalfSat       = 0.500      ! uM N microzooplankton microzoo grazing half saturation const
    zz_rate_uzoo_R               = 2.06E-05   ! 1/s micro-phyto maximum growth rate # Hitchcock 1980, 1.4 d-1 for T. nordenskelii at 10degrees
-o   zz_rate_uZoo_eff             = 0.6        ! match SOG
+   zz_rate_uZoo_eff             = 0.6        ! match SOG
    zz_frac_waste_PEZ_NH         = 0.0        ! waste fraction from microzoo grazing PON to NH
    zz_frac_waste_PEZ_DON        = 0.0        !waste fraction from microzoo grazing PON to DON
    zz_frac_waste_PEZ_PON        = 1.0        !waste fraction from microzoo grazing PON to PON
