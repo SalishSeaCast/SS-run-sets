@@ -129,7 +129,7 @@
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampiszoo     !   parameters for microzooplankton
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-  zz_rate_uzoo_Rm              = 0.500E-06  !uM N / s microzooplankton natural mortality rate @ 20 deg C
+   zz_rate_uzoo_Rm              = 0.500E-06  !uM N / s microzooplankton natural mortality rate @ 20 deg C
    zz_rate_uzoo_excr            = 0.500E-07  !uM N / s microzooplankton excretion rate @ 20 deg C
    zz_rate_uzoo_PredSlope       = 0.500      ! uM N microzooplankton total grazing limit
    zz_rate_uzoo_HalfSat         = 1.250      ! uM N microzooplankton total grazing half saturation constant
