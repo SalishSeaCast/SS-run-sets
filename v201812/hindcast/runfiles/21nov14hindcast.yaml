@@ -1,8 +1,8 @@
 email: sallen@eoas.ubc.ca
 account: rrg-allen
-MPI decomposition: 14x39
+MPI decomposition: 16x41
 config_name: SalishSeaCast
-run_id: 13nov14_hindcast
+run_id: 21nov14_hindcast
 walltime: 06:00:00
 
 forcing:
@@ -10,12 +10,6 @@ forcing:
     link to: $PROJECT/SalishSea/forcing/LiveOcean
   NEMO-atmos:
     link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
-  initial_data_file.nc:
-    link to: $HOME/MEOPAR/tracers/initial/Bathy201702_12nov14.nc
-  initial_bio_data_file.nc:
-    link to: $HOME/MEOPAR/tracers/initial/BioIC_SMELT_v20180706.nc
-  initial_car_data_file.nc:
-    link to: /scratch/dlatorne/hindcast/01nov15/SalishSea_00781920_restart_trc.nc
 
   bfr_coef.nc:
     link to: $HOME/MEOPAR/grid/jetty_mask_bathy201702.nc
@@ -34,6 +28,10 @@ forcing:
   tracers:
     link to: $HOME/MEOPAR/tracers
 
+restart:
+  restart.nc: /scratch/dlatorne/hindcast_201812/13nov14/SalishSea_00017280_restart.nc
+  restart_trc.nc: /scratch/dlatorne/hindcast_201812/13nov14/SalishSea_00017280_restart_trc.nc
+
 grid:
   bathymetry: $HOME/MEOPAR/grid/bathymetry_201702.nc
   coordinates: $HOME/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
@@ -41,7 +39,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.13nov14
+  - ./namelist.time.21nov14
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.domain
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.light
@@ -53,7 +51,7 @@ namelists:
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.compute
 
   namelist_top_cfg:
-  - $HOME/MEOPAR/SS-run-sets/v201812/namelist_top_coldstart
+  - $HOME/MEOPAR/SS-run-sets/v201812/namelist_top_restart
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist_top_TracerDefAndBdy
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist_top_physics
   namelist_smelt_cfg:
