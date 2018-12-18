@@ -76,6 +76,6 @@
  sn_tem  =     'initial_strat/summer2016_pond.nc',     -12,        'tn',   .false., .true.,  'yearly', '',        ''
  sn_sal  =     'initial_strat/summer2016_pond.nc',     -12,        'sn',   .false., .true.,  'yearly', '',        ''
  cn_dir        = './'              ! directory containing initial condition files
- ln_tsd_init   = .true.            ! Initialisation of ocean T & S with T & S input data (T) or not (F)
+ ln_tsd_init   = .false.           ! Initialisation of ocean T & S with T & S input data (T) or not (F)
  ln_tsd_tradmp = .false.           ! damping of ocean T & S toward T & S input data (T) or not (F)
 &end
