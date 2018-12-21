@@ -2,8 +2,8 @@ email: sallen@eoas.ubc.ca
 account: rrg-allen
 MPI decomposition: 16x41
 config_name: SalishSeaCast
-run_id: 21nov14_oneday
-walltime: 03:00:00
+run_id: 22nov14_hindcast
+walltime: 06:00:00
 
 forcing:
   LiveOcean:
@@ -29,8 +29,8 @@ forcing:
     link to: $HOME/MEOPAR/tracers
 
 restart:
-  restart.nc: $HOME/MEOPAR/SalishSea_00017280_restart.nc
-  restart_trc.nc: $HOME/MEOPAR/SalishSea_00017280_restart_trc.nc
+  restart.nc: $HOME/21nov14_oneday/SalishSea_00019440_restart.nc
+  restart_trc.nc: $HOME/21nov14_oneday/SalishSea_00017280_restart_trc.nc
 
 grid:
   bathymetry: $HOME/MEOPAR/grid/bathymetry_201702.nc
@@ -39,7 +39,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.21nov14_oneday
+  - ./namelist.time.22nov14
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.domain
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.light
@@ -65,13 +65,13 @@ output:
   domaindefs: $HOME/MEOPAR/SS-run-sets/v201812/domain_def.xml
   fielddefs: $HOME/MEOPAR/SS-run-sets/v201812/field_def.xml
   iodefs: $HOME/MEOPAR/SS-run-sets/v201812/iodef.xml
-  separate XIOS server: true
+  separate XIOS server: false
 
 paths:
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $HOME/MEOPAR/XIOS-2
-  runs directory: $HOME/MEOPAR
-
+  runs directory: $HOME/MEOPAR/SalishSea
+  
 vcs revisions:
   hg:
   - $HOME/MEOPAR/grid
