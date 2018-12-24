@@ -70,7 +70,7 @@ output:
 paths:
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $HOME/MEOPAR/XIOS-2
-  runs directory: $HOME/MEOPAR
+  runs directory: $SCRATCH
 
 vcs revisions:
   hg:
