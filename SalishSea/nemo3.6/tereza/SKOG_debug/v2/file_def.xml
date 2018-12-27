@@ -64,6 +64,7 @@
           <field field_ref="f_co2starair"   name="f_co2starair" />
           <field field_ref="f_co2flux"      name="f_co2flux" />
           <field field_ref="f_dpco2"        name="f_dpco2" />
+          <field field_ref="oce_o2"        name="oce_o2" />
        </file>
      </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 2h files -->
@@ -143,6 +144,7 @@
           <field field_ref="f_co2starair"   name="f_co2starair" />
           <field field_ref="f_co2flux"      name="f_co2flux" />
           <field field_ref="f_dpco2"        name="f_dpco2" />
+          <field field_ref="oce_o2"        name="oce_o2" />
          </file>
         <file id="file7" name_suffix="_dia2_T" description="smelt diagnostics B" >
           <field field_ref="GRMESZDIAT"      />
