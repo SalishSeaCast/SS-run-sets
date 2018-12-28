@@ -2,7 +2,7 @@ email: sallen@eoas.ubc.ca
 account: def-allen
 MPI decomposition: 16x41
 config_name: SalishSeaCast
-run_id: 01feb15_hindcast
+run_id: 21feb15_hindcast
 walltime: 06:00:00
 
 forcing:
@@ -29,8 +29,8 @@ forcing:
     link to: $HOME/MEOPAR/tracers
 
 restart:
-  restart.nc: $SCRATCH/hindcast_v201812/21jan15/SalishSea_00961200_restart.nc
-  restart_trc.nc: $SCRATCH/hindcast_v201812/21jan15/SalishSea_00961200_restart_trc.nc
+  restart.nc: $SCRATCH/hindcast_v201812/11feb15/SalishSea_01004400_restart.nc
+  restart_trc.nc: $SCRATCH/hindcast_v201812/11feb15/SalishSea_01004400_restart_trc.nc
 
 grid:
   bathymetry: $HOME/MEOPAR/grid/bathymetry_201702.nc
@@ -39,7 +39,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.01feb15
+  - ./namelist.time.21feb15
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.domain
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.light
