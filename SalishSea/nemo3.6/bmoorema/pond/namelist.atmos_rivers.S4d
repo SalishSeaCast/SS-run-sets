@@ -49,11 +49,11 @@
 &namsbc_ana    !   analytical surface boundary condition
 !-----------------------------------------------------------------------
    rn_utau0    =   0.      !  uniform value for the i-stress
-   rn_vtau0    =   -0.1    !  uniform value for the j-stress
+   rn_vtau0    =   0.1     !  uniform value for the j-stress
    nn_tau000   =   0       !  timestep to start wind ramp up
-   nn_tau001   =   540     !  timestep of peak wind
-   nn_tau002   =   7020    !  timestep to begin wind rampdown
-   nn_tau003   =   7560    !  timestep to end wind ramp down
+   nn_tau001   =   540     !  timestep of peak wind (6 hr)
+   nn_tau002   =   9180    !  timestep to begin wind rampdown (4 d)
+   nn_tau003   =   9720    !  timestep to end wind ramp down (6 hr)
    y_utau      =   0.      !  y point where y=rn_utau0
    y0u         =   0.      !  y point where y=0 for utau
    y_vtau      =   0.      !  y point where y=rn_vtau0
