@@ -8,12 +8,12 @@ config_name: SalishSeaIdeal
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 5x19
+MPI decomposition: 7x23
 
 # For runs on systems that use qsub/PBS/TORQUE
 #
 # If relative, paths are taken from current directory
-run_id: SalishSeaPond_basic_summer_S24H
+run_id: SalishSeaPond_bottom10x_S4d
 # Maximum run time requested/allowed for job
 # Too low and you job will be terminated before it finishes
 # Too high and you will have to wait longer on the queue for your job to start
@@ -32,7 +32,7 @@ paths:
   XIOS: $HOME/MEOPAR/XIOS-2
   # Directory in which to create temporary run directories
   # Typically NOT inside a version control repository
-  runs directory: $SCRATCH/Results/SalishSeaPond/SalishSeaPond_basic_summer_S24H
+  runs directory: $SCRATCH/Results/Pond/SalishSeaPond_bottom10x_S4d
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -76,11 +76,11 @@ namelists:
   namelist_cfg:
     - ../namelist.time
     - ../namelist.domain.summer
-    - ../namelist.atmos_rivers.S24H
+    - ../namelist.atmos_rivers.S4d
     - ../namelist.light
-    - ../namelist.bottom
+    - ../namelist.bottom.10x
     - ../namelist.tracer
-    - ../namelist.dynamics
+    - ../namelist.dynamics.base
     - ../namelist.vertical
     - ../namelist.compute
   namelist_top_cfg:
