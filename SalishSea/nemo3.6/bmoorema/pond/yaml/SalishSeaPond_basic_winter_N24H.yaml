@@ -2,13 +2,13 @@
 
 # Name of the NEMO-3.6 configuration to use for the run;
 # i.e. your NEMO-3.6-code/NEMOGCM/CONFIG/ configuration directory
-config_name: SalishSeaLake
+config_name: SalishSeaIdeal
 
 # How is the domain to be distributed over the processors in the
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 12x24
+MPI decomposition: 7x23
 
 # For runs on systems that use qsub/PBS/TORQUE
 #
@@ -18,7 +18,7 @@ run_id: SalishSeaPond_basic_winter_N24H
 # Too low and you job will be terminated before it finishes
 # Too high and you will have to wait longer on the queue for your job to start
 # You have to experiment to find the "just right" value
-walltime: 00:30:00
+walltime: 03:00:00
 # Email address to send job begin, end, and abort notifications to
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: bmoorema@eoas.ubc.ca
@@ -32,12 +32,12 @@ paths:
   XIOS: $HOME/MEOPAR/XIOS-2
   # Directory in which to create temporary run directories
   # Typically NOT inside a version control repository
-  runs directory: $SCRATCH/Results/SalishSeaPond_basic_winter_N24H
+  runs directory: $SCRATCH/Results/Pond/SalishSeaPond_basic_winter_N24H
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path below
-  coordinates: $HOME/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  coordinates: $HOME/MEOPAR/grid/idealized/coordinates_pond_basic.nc
   bathymetry: $HOME/MEOPAR/grid/idealized/bathymetry_pond_basic.nc
   # Optional path/filename for land processor elimination MPI-LPE mapping
   # file that matches bathymetry;
