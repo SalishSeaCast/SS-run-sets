@@ -8,7 +8,7 @@ config_name: SalishSeaIdeal
 # i (longitude) and j (latitude) directions?
 # These values are used to set the nammpp namelist jpni & jpnj values
 # and to set the number of processors and nodes in the PBS script
-MPI decomposition: 7x23
+MPI decomposition: 5x29
 
 # For runs on systems that use qsub/PBS/TORQUE
 #
