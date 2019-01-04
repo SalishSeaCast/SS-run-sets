@@ -48,7 +48,7 @@
    ppkth       = 25.
    ppacr       =  3.
    ppdzmin     =  1.
-   pphmax      = 200.
+   pphmax      = 400.
    ldbletanh   = .FALSE.   ! do not use double tanh
 &end
 
