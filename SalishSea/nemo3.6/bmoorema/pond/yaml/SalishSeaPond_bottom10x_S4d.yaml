@@ -18,7 +18,7 @@ run_id: SalishSeaPond_bottom10x_S4d
 # Too low and you job will be terminated before it finishes
 # Too high and you will have to wait longer on the queue for your job to start
 # You have to experiment to find the "just right" value
-walltime: 02:00:00
+walltime: 01:00:00
 # Email address to send job begin, end, and abort notifications to
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: bmoorema@eoas.ubc.ca
