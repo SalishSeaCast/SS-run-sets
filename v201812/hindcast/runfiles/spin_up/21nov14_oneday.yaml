@@ -1,6 +1,6 @@
 email: sallen@eoas.ubc.ca
 account: rrg-allen
-MPI decomposition: 14x39
+MPI decomposition: 16x41
 config_name: SalishSeaCast
 run_id: oneday_21nov14
 walltime: 06:00:00
@@ -65,7 +65,7 @@ output:
   domaindefs: $HOME/MEOPAR/SS-run-sets/v201812/domain_def.xml
   fielddefs: $HOME/MEOPAR/SS-run-sets/v201812/field_def.xml
   iodefs: $HOME/MEOPAR/SS-run-sets/v201812/iodef.xml
-  separate XIOS server: true
+  separate XIOS server: false
 
 paths:
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
