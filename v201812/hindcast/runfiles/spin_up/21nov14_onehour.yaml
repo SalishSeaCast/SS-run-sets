@@ -1,9 +1,9 @@
 email: sallen@eoas.ubc.ca
-account: rrg-allen
-MPI decomposition: 14x39
+account: def-allen
+MPI decomposition: 8x18
 config_name: SalishSeaCast
-run_id: oneday_21nov14
-walltime: 06:00:00
+run_id: two_21nov14
+walltime: 00:15:00
 
 forcing:
   LiveOcean:
@@ -39,7 +39,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.21nov14_oneday
+  - ./namelist.time.21nov14_onehour
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.domain
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.light
