@@ -1,4 +1,4 @@
-run_id: par16_A1_0
+run_id: par16_A2_0
 config_name: parSMELT
 account: def-allen
 email: eolson@eoas.ubc.ca
@@ -50,14 +50,14 @@ namelists:
   namelist_smelt_cfg:
   - ./namelist_smelt_cfg_Base
   namelist_smelt_ref:
-  - ./namelist_smelt_ref_A1
+  - ./namelist_smelt_ref_A2
 
 output:
   domaindefs: ./iofiles/domain_def.xml
   fielddefs: ./iofiles/field_def.xml
-  filedefs: ./iofiles/file_def.xml.attached
+  filedefs: ./iofiles/file_def.xml
   iodefs: ./iofiles/iodef.xml
-  separate XIOS server: false
+  separate XIOS server: true
   XIOS servers: 1
 vcs revisions:
   hg:

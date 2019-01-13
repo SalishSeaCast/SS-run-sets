@@ -1,5 +1,5 @@
-run_id: par16_A1_0
-config_name: parSMELT
+run_id: spring15_R1_0
+config_name: SMELT
 account: def-allen
 email: eolson@eoas.ubc.ca
 MPI decomposition: 16x39
@@ -39,26 +39,27 @@ forcing:
     link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
-  restart.nc: $MEOPAR/NEMO-forcing/restarts/Z5_5/SalishSea_00902880_restart.nc
-  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/Z5_5/SalishSea_00902880_restart_trc.nc
+  restart.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01jan15/SalishSea_00894240_restart.nc
+  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01jan15/SalishSea_00894240_restart_trc.nc
 
 namelists:
   namelist_cfg:
-  - ./namelistOPA/namelist_cfg_06jan16_50d
+  - ./namelist_cfg_01jan15_50d
   namelist_top_cfg:
   - ./namelist_top_cfg
   namelist_smelt_cfg:
   - ./namelist_smelt_cfg_Base
   namelist_smelt_ref:
-  - ./namelist_smelt_ref_A1
+  - ./namelist_smelt_ref_R1
 
 output:
-  domaindefs: ./iofiles/domain_def.xml
-  fielddefs: ./iofiles/field_def.xml
-  filedefs: ./iofiles/file_def.xml.attached
-  iodefs: ./iofiles/iodef.xml
+  domaindefs: ../spring2/domain_def.xml
+  fielddefs: ../spring2/field_def.xml
+  filedefs: ../HC2rep/file_def.xml.attached
+  iodefs: ../spring2/iodef.xml
   separate XIOS server: false
   XIOS servers: 1
+
 vcs revisions:
   hg:
   - $MEOPAR/SS-run-sets
