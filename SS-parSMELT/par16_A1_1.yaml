@@ -1,4 +1,4 @@
-run_id: par16_A1_0
+run_id: par16_A1_1
 config_name: parSMELT
 account: def-allen
 email: eolson@eoas.ubc.ca
@@ -39,12 +39,12 @@ forcing:
     link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
-  restart.nc: $MEOPAR/NEMO-forcing/restarts/Z5_5/SalishSea_00902880_restart.nc
-  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/Z5_5/SalishSea_00902880_restart_trc.nc
+  restart.nc: $SCRATCH/results/par16_A1_0/SalishSea_01010880_restart.nc
+  restart_trc.nc: $SCRATCH/results/par16_A1_0/SalishSea_01010880_restart_trc.nc
 
 namelists:
   namelist_cfg:
-  - ./namelistOPA/namelist_cfg_06jan16_50d
+  - ./namelistOPA/namelist_cfg_25feb16_50d
   namelist_top_cfg:
   - ./namelist_top_cfg
   namelist_smelt_cfg:
