@@ -69,7 +69,7 @@
           <field field_ref="zflu16"        name="zflu16" />
           <field field_ref="of_patm"        name="of_patm" />
           <field field_ref="of_chemo2"        name="of_chemo2" />
-          <field field_ref="of_tmask"        name="of_tmask" />
+          <!field field_ref="of_tmask"        name="of_tmask" />
           <field field_ref="of_zkgo2"        name="of_zkgo2" />
        </file>
      </file_group>
@@ -155,7 +155,7 @@
           <field field_ref="zflu16"        name="zflu16" />
           <field field_ref="of_patm"        name="of_patm" />
           <field field_ref="of_chemo2"        name="of_chemo2" />
-          <field field_ref="of_tmask"        name="of_tmask" />
+          <!field field_ref="of_tmask"        name="of_tmask" />
           <field field_ref="of_zkgo2"        name="of_zkgo2" />
          </file>
         <file id="file7" name_suffix="_dia2_T" description="smelt diagnostics B" >
