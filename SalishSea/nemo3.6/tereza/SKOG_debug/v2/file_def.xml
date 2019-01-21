@@ -69,8 +69,9 @@
           <field field_ref="zflu16"        name="zflu16" />
           <field field_ref="of_patm"        name="of_patm" />
           <field field_ref="of_chemo2"        name="of_chemo2" />
-          <!field field_ref="of_tmask"        name="of_tmask" />
+          <field field_ref="of_chemc"        name="of_chemc" />
           <field field_ref="of_zkgo2"        name="of_zkgo2" />
+          <field field_ref="of_zkgco2"     name="of_zkgco2" />
        </file>
      </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 2h files -->
@@ -155,8 +156,9 @@
           <field field_ref="zflu16"        name="zflu16" />
           <field field_ref="of_patm"        name="of_patm" />
           <field field_ref="of_chemo2"        name="of_chemo2" />
-          <!field field_ref="of_tmask"        name="of_tmask" />
+          <field field_ref="of_chemc"        name="of_chemc" />
           <field field_ref="of_zkgo2"        name="of_zkgo2" />
+          <field field_ref="of_zkgco2"      name="of_zkgco2" />
          </file>
         <file id="file7" name_suffix="_dia2_T" description="smelt diagnostics B" >
           <field field_ref="GRMESZDIAT"      />
