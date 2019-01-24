@@ -817,7 +817,6 @@
        <field id="zfld16"        long_name="zfld16"         standard_name="zfld16"  unit="fill" grid_ref="grid_T_2D" />
        <field id="zflu16"        long_name="zflu16"         standard_name="zfld16"  unit="fill" grid_ref="grid_T_2D" />
        <field id="of_patm"        long_name="of_patm"         standard_name="of_patm"  unit="fill" grid_ref="grid_T_2D" />
-       <!field id="of_tmask"        long_name="of_tmask"         standard_name="of_tmask"  unit="fill" grid_ref="grid_T_2D" />
        <field id="of_zkgco2"        long_name="of_tmask"         standard_name="of_tmask"  unit="fill" grid_ref="grid_T_2D" /> 
        <field id="of_zkgo2"        long_name="of_tmask"         standard_name="of_tmask"  unit="fill" grid_ref="grid_T_2D" />
        <field id="of_chemo2"        long_name="of_chemo2"         standard_name="of_chemo2"  unit="fill" grid_ref="grid_T_2D"/>
