@@ -1,83 +1,84 @@
-email: tjarnik@gmail.com
-MPI decomposition: 1x7
+email: sallen@eoas.ubc.ca
+account: def-allen
+MPI decomposition: 11x23
 config_name: SalishSeaCast
 run_id: three_21nov14
-walltime: 06:15:00
-
-paths:
-  NEMO code config: /data/$USER//MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-  XIOS: /data/$USER/MEOPAR/XIOS-2
-  forcing: /data/$USER/MEOPAR/NEMO-forcing
-  runs directory: /data/$USER/MEOPAR/runs
+walltime: 00:15:00
 
 forcing:
+  LiveOcean:
+    link to: $PROJECT/SalishSea/forcing/LiveOcean
   NEMO-atmos:
-    link to: /results/forcing/atmospheric/GEM2.5/operational
-  grid:
-    link to: /data/$USER/MEOPAR/grid
-  rivers:
-    link to: /data/$USER/MEOPAR/rivers
-  rivers-climatology:
-    link to: /data/$USER/MEOPAR/rivers-climatology
-  tides:
-    link to: /data/$USER/MEOPAR/tides
-  tracers:
-    link to: /data/$USER/MEOPAR/tracers
+    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
+
   bfr_coef.nc:
-    link to: /data/$USER/MEOPAR/grid/jetty_mask_bathy201702.nc
-  initial_data_file.nc:
-    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/init_DICTAOXY_Jan172019.nc
-  initial_data_file2.nc:
-    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/init_DICTAOXY_Jan172019.nc
-  open_boundaries:
-    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/
-  initial_strat:
-    link to: /data/tjarniko/MEOPAR/NEMO-forcing/initial_strat
+    link to: $HOME/MEOPAR/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: $HOME/MEOPAR/grid
+  rivers:
+    link to: $PROJECT/SalishSea/forcing/rivers
+  rivers-climatology:
+    link to: $HOME/MEOPAR/rivers-climatology
+  river_turb:
+    link to: $PROJECT/SalishSea/forcing/rivers/river_turb
+  ssh:
+    link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
+  tides:
+    link to: $HOME/MEOPAR/tides
+  tracers:
+    link to: $HOME/MEOPAR/tracers
 
-
+restart:
+  restart.nc: $SCRATCH/hindcast_v201812/spin_up/13nov14/SalishSea_00017280_restart.nc
+  restart_trc.nc: $SCRATCH/hindcast_v201812/spin_up/13nov14/SalishSea_00017280_restart_trc.nc
 
 grid:
-  bathymetry: /data/$USER/MEOPAR/grid/bathymetry_201702.nc
-  coordinates: /data/$USER/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
-  land processor elimination: false
+  bathymetry: $HOME/MEOPAR/grid/bathymetry_201702.nc
+  coordinates: $HOME/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $HOME/MEOPAR/grid/bathymetry_201702.csv
 
 namelists:
   namelist_cfg:
   - ./namelist.time.21nov14_onehour
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist.domain
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist.light
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist.lateral
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist.bottom
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist.tracer
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist.dynamics
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist.vertical
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist.compute
+  - $HOME/MEOPAR/SS-run-sets/v201812/namelist.domain
+  - $HOME/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
+  - $HOME/MEOPAR/SS-run-sets/v201812/namelist.light
+  - $HOME/MEOPAR/SS-run-sets/v201812/namelist.lateral
+  - $HOME/MEOPAR/SS-run-sets/v201812/namelist.bottom
+  - $HOME/MEOPAR/SS-run-sets/v201812/namelist.tracer
+  - $HOME/MEOPAR/SS-run-sets/v201812/namelist.dynamics
+  - $HOME/MEOPAR/SS-run-sets/v201812/namelist.vertical
+  - $HOME/MEOPAR/SS-run-sets/v201812/namelist.compute
 
   namelist_top_cfg:
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist_top_restart
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist_top_TracerDefAndBdy
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist_top_physics
+  - $HOME/MEOPAR/SS-run-sets/v201812/namelist_top_restart
+  - $HOME/MEOPAR/SS-run-sets/v201812/namelist_top_TracerDefAndBdy
+  - $HOME/MEOPAR/SS-run-sets/v201812/namelist_top_physics
   namelist_smelt_cfg:
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist_smelt_biology
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist_smelt_rivers
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist_smelt_skog
+  - $HOME/MEOPAR/SS-run-sets/v201812/namelist_smelt_biology
+  - $HOME/MEOPAR/SS-run-sets/v201812/namelist_smelt_rivers
+  - $HOME/MEOPAR/SS-run-sets/v201812/namelist_smelt_skog
 
 output:
   XIOS servers: 1
-  filedefs: /data/$USER/MEOPAR/SS-run-sets/v201812/hindcast/file_def_dailysplit.xml
-  domaindefs: /data/$USER/MEOPAR/SS-run-sets/v201812/domain_def.xml
-  fielddefs: /data/$USER/MEOPAR/SS-run-sets/v201812/field_def.xml
-  iodefs: /data/$USER/MEOPAR/SS-run-sets/v201812/iodef.xml
+  filedefs: $HOME/MEOPAR/SS-run-sets/v201812/hindcast/file_def_dailysplit.xml
+  domaindefs: $HOME/MEOPAR/SS-run-sets/v201812/domain_def.xml
+  fielddefs: $HOME/MEOPAR/SS-run-sets/v201812/field_def.xml
+  iodefs: $HOME/MEOPAR/SS-run-sets/v201812/iodef.xml
   separate XIOS server: true
+
+paths:
+  NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $HOME/MEOPAR/XIOS-2
+  runs directory: $SCRATCH
 
 vcs revisions:
   hg:
-  - /data/$USER/MEOPAR/grid
-  - /data/$USER/MEOPAR/NEMO-Cmd
-  - /data/$USER/MEOPAR/rivers-climatology
-  - /data/$USER/MEOPAR/SalishSeaCmd
-  - /data/$USER/MEOPAR/SS-run-sets
-  - /data/$USER/MEOPAR/tides
-  - /data/$USER/MEOPAR/tracers
-  - /data/$USER/MEOPAR/XIOS-ARCH
+  - $HOME/MEOPAR/grid
+  - $HOME/MEOPAR/NEMO-Cmd
+  - $HOME/MEOPAR/rivers-climatology
+  - $HOME/MEOPAR/SalishSeaCmd
+  - $HOME/MEOPAR/SS-run-sets
+  - $HOME/MEOPAR/tides
+  - $HOME/MEOPAR/tracers
+  - $HOME/MEOPAR/XIOS-ARCH
