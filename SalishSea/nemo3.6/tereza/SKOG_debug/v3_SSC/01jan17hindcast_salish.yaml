@@ -25,11 +25,11 @@ forcing:
   tracers:
     link to: /home/sallen/MEOPAR/tracers
   initial_data_file.nc:
-    link to: /results/SalishSea/hindcast/31dec16/SalishSea_01684800_restart.nc
+    link to: /results/SalishSea/hindcast.201812/31dec15/SalishSea_01682640_restart.nc
   initial_bio_data_file.nc:
-    link to: /results/SalishSea/hindcast/31dec16/SalishSea_01684800_restart_trc.nc
+    link to: /results/SalishSea/hindcast.201812/31dec15/SalishSea_01682640_restart_trc.nc
   initial_car_data_file.nc:
-    link to: /results/SalishSea/hindcast/31dec16/SalishSea_01684800_restart_trc.nc
+    link to: /results/SalishSea/hindcast.201812/31dec15/SalishSea_01682640_restart_trc.nc
 
 grid:
   bathymetry: /home/sallen/MEOPAR/grid/bathymetry_201702.nc
@@ -38,19 +38,19 @@ grid:
 namelists:
   namelist_cfg:
   - ./namelist.time.01jan17
-  - /home/sallen/MEOPAR/SS-run-sets/v201702/namelist.domain
-  - /home/sallen/MEOPAR/SS-run-sets/v201702/hindcast/namelist.atmos_rivers
-  - /home/sallen/MEOPAR/SS-run-sets/v201702/namelist.light
-  - /home/sallen/MEOPAR/SS-run-sets/v201702/hindcast/namelist.lateral
-  - /home/sallen/MEOPAR/SS-run-sets/v201702/namelist.bottom
-  - /home/sallen/MEOPAR/SS-run-sets/v201702/hindcast/namelist.tracer
-  - /home/sallen/MEOPAR/SS-run-sets/v201702/namelist.dynamics
-  - /home/sallen/MEOPAR/SS-run-sets/v201702/namelist.vertical
-  - /home/sallen/MEOPAR/SS-run-sets/v201702/namelist.compute
+  - /home/sallen/MEOPAR/SS-run-sets/v201812/namelist.domain
+  - /home/sallen/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
+  - /home/sallen/MEOPAR/SS-run-sets/v201812/namelist.light
+  - /home/sallen/MEOPAR/SS-run-sets/v201812/namelist.lateral
+  - /home/sallen/MEOPAR/SS-run-sets/v201812/namelist.bottom
+  - /home/sallen/MEOPAR/SS-run-sets/v201812/namelist.tracer
+  - /home/sallen/MEOPAR/SS-run-sets/v201812/namelist.dynamics
+  - /home/sallen/MEOPAR/SS-run-sets/v201812/namelist.vertical
+  - /home/sallen/MEOPAR/SS-run-sets/v201812/namelist.compute
   namelist_smelt_cfg:
-  - /home/sallen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_biology
-  - /home/sallen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_rivers.SKOG
-  - /home/sallen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_smelt_skog
+  - /home/sallen/MEOPAR/SS-run-sets/v201812/namelist_smelt_biology
+  - /home/sallen/MEOPAR/SS-run-sets/v201812/namelist_smelt_rivers
+  - /home/sallen/MEOPAR/SS-run-sets/v201812/namelist_smelt_skog
   namelist_top_cfg:
   - /home/sallen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_coldstart_01jan16.SKOG
   - /home/sallen/MEOPAR/SS-run-sets/v201702/hindcast/namelist_top_TracerDefAndBdy.SKOG.upTrac.01jan16
