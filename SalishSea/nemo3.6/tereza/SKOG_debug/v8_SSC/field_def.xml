@@ -791,8 +791,8 @@
        <field id="TA_E3T"      long_name="TA * E3T"                                unit="mmol/m2"  > TA * e3t </field >
        <field id="O2"          long_name="Dissolved Oxygen Concentration"              standard_name="dissolved_oxygen_expressed_as_mole_equivalent"  unit="mmol m-3" />
        <field id="O2_E3T"      long_name="O2 * E3T"                                unit="mmol/m2"  > O2 * e3t </field >
-       <field id="oce_co2"          long_name="CO2 air-sea flux allocated"         standard_name="carbon_dioxide_flux_mole_equivalent"  unit="mmol m-2 s-2" grid_ref="grid_T_2D" />
-       <field id="oce_o2"          long_name="O2 air-sea flux allocated"         standard_name="oxygen_air_sea_flux_as_mole_equivalent"  unit="mmol m-2 s-2" grid_ref="grid_T_2D" />
+
+       <!-- SKOG outputs -->
        <field id="f_ph"        long_name="f_ph"         standard_name="f_ph"  unit="fill" grid_ref="grid_T_2D" />
        <field id="f_pco2w"        long_name= "f_pco2w"         standard_name="f_pco2w"  unit="fill" grid_ref="grid_T_2D" />
        <field id="f_fco2w"        long_name="f_fco2w"         standard_name="f_fco2w"  unit="fill" grid_ref="grid_T_2D" />
@@ -814,14 +814,7 @@
        <field id="f_co2flux"        long_name="f_co2flux"         standard_name="f"  unit="fill" grid_ref="grid_T_2D" />
        <field id="f_dpco2"        long_name="f_dpco2"         standard_name="f_dpco2"  unit="fill" grid_ref="grid_T_2D" />
        <field id="wind_mag"        long_name="wind_mag"         standard_name="wind_mag"  unit="fill" grid_ref="grid_T_2D" />
-       <field id="zfld16"        long_name="zfld16"         standard_name="zfld16"  unit="fill" grid_ref="grid_T_2D" />
-       <field id="zflu16"        long_name="zflu16"         standard_name="zfld16"  unit="fill" grid_ref="grid_T_2D" />
-       <field id="of_patm"        long_name="of_patm"         standard_name="of_patm"  unit="fill" grid_ref="grid_T_2D" />
-       <field id="of_zkgco2"        long_name="of_tmask"         standard_name="of_tmask"  unit="fill" grid_ref="grid_T_2D" /> 
-       <field id="of_zkgo2"        long_name="of_tmask"         standard_name="of_tmask"  unit="fill" grid_ref="grid_T_2D" />
-       <field id="of_chemo2"        long_name="of_chemo2"         standard_name="of_chemo2"  unit="fill" grid_ref="grid_T_2D"/>
-       <field id="of_chemc"        long_name="of_chemc"         standard_name="of_chemc"  unit="fill" grid_ref="grid_T_2D"/>
-      <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
+       <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
        <field id="Num"         long_name="Number of organic particles"              unit="1" />
        <field id="Num_E3T"     long_name="Num * E3T"                                unit="m"  > Num * e3t </field >
 
@@ -837,9 +830,11 @@
        <!-- Bomb C14 : variables available with key_c14b -->
        <field id="C14B"     long_name="Bomb C14 Concentration"                      unit="1"         />
        <field id="C14B_E3T"    long_name="C14B * E3T"                               unit="m"  > C14B * e3t </field >
+       <!-- Tracer fields with key_my_trc -->
+       <field id="MYTRC1"      long_name="20 m upwelling tracer"                    unit="1" />
      </field_group>
 
-     <!-- SMELT Advective Transports of Tracers - U Grid  -->
+     <!-- SMELT Advective and Diffusive Transports of Tracers - U Grid  -->
      <field_group id="tran_U" grid_ref="grid_U_3D">
        <field id="TRA_UT"   long_name="Fraser River Turbidity Tracer - U Transport"       standard_name="TRA_u_dy_dz"      unit="NTU m3 s-1" />
        <field id="PON_UT"   long_name="Particulate Organic N Concentration - U Transport" standard_name="PON_u_dy_dz"      unit="mmol s-1" />
@@ -855,9 +850,10 @@
        <field id="DIC_UT"   long_name="Dissolved Inorganic Carbon - U Transport"          standard_name="DIC_u_dy_dz"      unit="mmol s-1" />
        <field id="TA_UT"    long_name="Total Alkalinity Concentration - U Transport"               standard_name="TA_u_dy_dz"       unit="mmol s-1" />
        <field id="O2_UT"    long_name="Oxygen Concentration - U Transport"              standard_name="O2_u_dy_dz"       unit="mmol s-1" />
+       <field id="ULDFNO3"  long_name="X dir lateral mix"                                 standard_name="NO3mixx"          unit="mmol/m2/s" />
      </field_group>
 
-     <!-- SMELT Advective Transports of Tracers - V Grid  -->
+     <!-- SMELT Advective and Diffusive Transports of Tracers - V Grid  -->
      <field_group id="tran_V" grid_ref="grid_V_3D">
        <field id="TRA_VT"   long_name="Fraser River Turbidity Tracer - V Transport"       standard_name="TRA_v_dx_dz"      unit="NTU m3 s-1" />
        <field id="PON_VT"   long_name="Particulate Organic N Concentration - V Transport" standard_name="PON_v_dx_dz"      unit="mmol s-1" />
@@ -873,9 +869,10 @@
        <field id="DIC_VT"   long_name="Dissolved Inorganic Carbon - V Transport"          standard_name="DIC_v_dx_dz"      unit="mmol s-1" />
        <field id="TA_VT"    long_name="Total Alkalinity Concentration - V Transport"      standard_name="TA_v_dy_dz"       unit="mmol s-1" />
        <field id="O2_VT"    long_name="Oxygen Concentration - V Transport"                standard_name="O2_v_dy_dz"       unit="mmol s-1" />
+       <field id="VLDFNO3"  long_name="Y dir lateral mix"                                 standard_name="NO3mixy"          unit="mmol/m2/s" />
      </field_group>
 
-     <!-- SMELT Advective Transports of Tracers - W Grid  -->
+     <!-- SMELT Advective and Diffusive Transports of Tracers - W Grid  -->
      <field_group id="tran_W" grid_ref="grid_W_3D">
        <field id="TRA_WT"   long_name="Fraser River Turbidity Tracer - W Transport"       standard_name="TRA_w_dy_dx"      unit="NTU m3 s-1" />
        <field id="PON_WT"   long_name="Particulate Organic N Concentration - W Transport" standard_name="PON_w_dy_dx"      unit="mmol s-1" />
@@ -888,6 +885,10 @@
        <field id="bSi_WT"   long_name="Biogenic Silicon Concentration - W Transport"      standard_name="bSi_w_dy_dx"      unit="mmol s-1" />
        <field id="NO3_WT"   long_name="Nitrate Concentration - W Transport"               standard_name="NO3_w_dy_dx"      unit="mmol s-1" />
        <field id="NH4_WT"   long_name="Ammonium Concentration - W Transport"              standard_name="NH4_w_dy_dx"      unit="mmol s-1" />
+       <field id="VMIXNO3"  long_name="upward no3 flux due to vert mixing with horiz comp" standard_name="vNO3mix"          unit="mmol N/m2/s" />
+       <field id="VMIXNO3H" long_name="explicit est of horiz contrib to VMIXNO3"          standard_name="vNO3mixH"         unit="mmol N/m2/s" />
+       <field id="AVSH"     long_name="sloping horizontal contrib to avs"                 standard_name="avs_horiz"        unit="m2/s" />
+       <field id="WLDFNO3"  long_name="vert component of sloping lateral mix"             standard_name="NO3LDFW"          unit="mmol N/m2/s" />
        <field id="DIC_WT"   long_name="Dissolved Inorganic Carbon - W Transport"          standard_name="DIC_w_dy_dx"      unit="mmol s-1" />
        <field id="TA_WT"    long_name="Nitrate Concentration - W Transport"               standard_name="TA_w_dy_dx"       unit="mmol s-1" />
        <field id="O2_WT"    long_name="Ammonium Concentration - W Transport"              standard_name="O2_w_dy_dx"       unit="mmol s-1" />
