@@ -1,4 +1,4 @@
-    <!--
+<!--
 ============================================================================================================
 =                                           output files definition                                        =
 =                                            Define your own files                                         =
@@ -7,15 +7,13 @@
     -->
     <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4">
       <file_group id="1h" output_freq="1h"  output_level="10" enabled=".TRUE."/> <!-- 1 time step files -->
-      <file_group id="1ts" output_freq="1ts"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 1h files -->
-    	<file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
+      <file_group id="1ts" output_freq="1ts"  output_level="10" split_freq="1d" enabled=".TRUE."> <!-- 1h files -->
+        <file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
           <field field_ref="ssh"            name="sossheig"/>
           <field field_ref="toce"           name="votemper"/>
           <field field_ref="soce"           name="vosaline"/>
-          <field field_ref="bfN2"           name="buoy_n2"/>
-          <field field_ref="mldr10_1"       name="mixed_depth"/>
         </file>
-    	<file id="file2" name_suffix="_grid_U" description="ocean U grid variables" >
+          <file id="file2" name_suffix="_grid_U" description="ocean U grid variables" >
           <field field_ref="uoce"           name="vozocrtx"  />
         </file>
 	    <file id="file3" name_suffix="_grid_V" description="ocean V grid variables" >
@@ -25,7 +23,7 @@
           <field field_ref="woce"           name="vovecrtz" />
           <field field_ref="avt"            name="vert_eddy_diff" />
           <field field_ref="avm"            name="vert_eddy_visc" />
-          <field field_ref="eps" name="dissipation"/>
+          <field field_ref="eps"            name="dissipation"/>
         </file>
         <file id="file5" name_suffix="_ptrc_T" description="biogeochemical variables" >
           <field field_ref="NO3"            name="nitrate"/>
@@ -38,41 +36,64 @@
           <field field_ref="DON"            name="dissolved_organic_nitrogen"/>
           <field field_ref="PON"            name="particulate_organic_nitrogen"/>
           <field field_ref="bSi"            name="biogenic_silicon"/>
-          <field field_ref="TRA"            name="Fraser_tracer"/>
           <field field_ref="MESZ"           name="mesozooplankton"/>
-          <field field_ref="DIC"            name="dissolved_inorganic_carbon"/>
-          <field field_ref="TA"             name="total_alkalinity"/>
-          <field field_ref="O2"             name="dissolved_oxygen"/>
-          <field field_ref="f_co2flux"      name="f_co2flux" />
-       </file>
-     </file_group>
-      <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 2h files -->
-        <file id="file6" name_suffix="_dia1_T" description="smelt diagnostics A" >
-          <field field_ref="PAR"      />
+        </file>
+	<file id="file21" name_suffix="_turb_T" description="turbidity">
+          <field field_ref="TRA"            name="Fraser_tracer"/>
+	</file>
+	<file id="file13" name_suffix="_carp_T" description="auxilary variables">
+          <field field_ref="PAR"      name="PAR"/>
+          <field field_ref="rhop"     name="sigma_theta"/>
+          <field field_ref="e3t"      name="e3t"/>
+          <field field_ref="DIC"      name="dissolved_inorganic_carbon"/>
+          <field field_ref="TA"       name="total_alkalinity"/>
+          <field field_ref="O2"       name="dissolved_oxygen"/>
+        </file>
+        <file id="file6" name_suffix="_prod_T" description="smelt diagnostics A" >
           <field field_ref="PPDIAT"      />
           <field field_ref="PPPHY"       />
           <field field_ref="PPMRUB"     />
           <field field_ref="PPDIATNO3"      />
           <field field_ref="PPPHYNO3"     />
           <field field_ref="PPMRUBNO3"     />
-          <field field_ref="HetMRub"      />
-          <field field_ref="MORTPHY"      />
-          <field field_ref="MORTMRUB"      />
-          <field field_ref="MORTDIAT"      />
           <field field_ref="TQ10"       />
         </file>
-     </file_group>
+        <file id="file15" name_suffix="_mtrc_T" description="passive tracer 20 m" >
+          <field field_ref="MYTRC1"         name="tracer20m" grid_ref="trc20m_grid"/>
+        </file>
+        <file id="file16" name_suffix="_dian_U" description="reduced domain N transports" >
+          <field field_ref="NO3_UT"        grid_ref="NSOG_U_grid"/>
+          <field field_ref="ULDFNO3"       grid_ref="NSOG_U_grid"/>
+        </file>
+        <file id="file19" name_suffix="_dian_V" description="reduced domain N transports" >
+          <field field_ref="NO3_VT"        grid_ref="NSOG_V_grid"/>
+          <field field_ref="VLDFNO3"       grid_ref="NSOG_V_grid"/>
+        </file>
+        <file id="file20" name_suffix="_dian_W" description="reduced domain N transports" >
+          <field field_ref="NO3_WT"        grid_ref="NSOG_W_grid"/>
+          <field field_ref="VMIXNO3"       grid_ref="NSOG_W_grid"/>
+          <field field_ref="AVSH"          grid_ref="NSOG_W_grid"/>
+          <field field_ref="WLDFNO3"       grid_ref="NSOG_W_grid"/>
+        </file>
+        <file id="file17" name_suffix="_VT1" description="section 1 N transports" >
+          <field field_ref="NO3_VT"        grid_ref="TV1_grid"/>
+          <field field_ref="VLDFNO3"       grid_ref="TV1_grid"/>
+        </file>
+        <file id="file18" name_suffix="_VT2" description="section 2 N transports" >
+          <field field_ref="NO3_VT"        grid_ref="TV2_grid"/>
+          <field field_ref="VLDFNO3"       grid_ref="TV2_grid"/>
+        </file>
+      </file_group>
+      <file_group id="2h" output_freq="2h"  output_level="10" split_freq="1d" enabled=".TRUE."> <!-- 2h files -->
+      </file_group>
       <file_group id="3h" output_freq="3h"  output_level="10" enabled=".TRUE."/> <!-- 3h files -->
       <file_group id="4h" output_freq="4h"  output_level="10" enabled=".FALSE."/> <!-- 4h files -->
       <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."/> <!-- 6h files -->
-
-      <file_group id="1d" output_freq="1d"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 1d files -->
-    	<file id="file8" name_suffix="_grid_T" description="ocean T grid variables" >
+      <file_group id="1d" output_freq="1d"  output_level="10" split_freq="1d" enabled=".TRUE."> <!-- 1d files -->
+        <file id="file8" name_suffix="_grid_T" description="ocean T grid variables" >
           <field field_ref="ssh"            name="sossheig"/>
           <field field_ref="toce"           name="votemper"/>
           <field field_ref="soce"           name="vosaline"/>
-          <field field_ref="bfN2"           name="buoy_n2"/>
-          <field field_ref="mldr10_1"       name="mixed_depth"/>
         </file>
     	<file id="file9" name_suffix="_grid_U" description="ocean U grid variables" >
           <field field_ref="uoce"           name="vozocrtx"  />
@@ -99,12 +120,21 @@
           <field field_ref="bSi"            name="biogenic_silicon"/>
           <field field_ref="TRA"            name="Fraser_tracer"/>
           <field field_ref="MESZ"           name="mesozooplankton"/>
+        </file>
+        <file id="file14" name_suffix="_carp_T" description="auxilary variables">
+          <field field_ref="PAR"      name="PAR"/>
+          <field field_ref="rhop"     name="sigma_theta"/>
+          <field field_ref="e3t"      name="e3t"/>
           <field field_ref="DIC"            name="dissolved_inorganic_carbon"/>
           <field field_ref="TA"             name="total_alkalinity"/>
           <field field_ref="O2"             name="dissolved_oxygen"/>
-          <field field_ref="f_co2flux"      name="f_co2flux" />
-         </file>
+          <field field_ref="f_co2flux"      name="co2_flux_mmol_m2_s" />
+        </file>  
         <file id="file7" name_suffix="_dia2_T" description="smelt diagnostics B" >
+          <field field_ref="HetMRub"      />
+          <field field_ref="MORTPHY"      />
+          <field field_ref="MORTMRUB"      />
+          <field field_ref="MORTDIAT"      />
           <field field_ref="GRMESZDIAT"      />
           <field field_ref="GRMESZMRUB"      />
           <field field_ref="GRMESZPHY"      />
@@ -116,23 +146,19 @@
           <field field_ref="GRMICZPON"      />
           <field field_ref="GRMICZMICZ"      />
         </file>
-
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
       <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE."/>  <!-- 5d files -->
-
       <file_group id="1m" output_freq="1mo" output_level="10" enabled=".TRUE."/> <!-- real monthly files -->
       <file_group id="2m" output_freq="2mo" output_level="10" enabled=".TRUE."/> <!-- real 2m files -->
       <file_group id="3m" output_freq="3mo" output_level="10" enabled=".TRUE."/> <!-- real 3m files -->
       <file_group id="4m" output_freq="4mo" output_level="10" enabled=".TRUE."/> <!-- real 4m files -->
       <file_group id="6m" output_freq="6mo" output_level="10" enabled=".TRUE."/> <!-- real 6m files -->
-
       <file_group id="1y"  output_freq="1y" output_level="10" enabled=".TRUE."/> <!-- real yearly files -->
       <file_group id="2y"  output_freq="2y" output_level="10" enabled=".TRUE."/> <!-- real 2y files -->
       <file_group id="5y"  output_freq="5y" output_level="10" enabled=".TRUE."/> <!-- real 5y files -->
       <file_group id="10y" output_freq="10y" output_level="10" enabled=".TRUE."/> <!-- real 10y files -->
-
-      <file_group id="20min" output_freq="1200s" output_level="10" compression_level="4" enabled=".TRUE."> <!-- 20 minute files -->
+      <file_group id="20min" output_freq="1200s" output_level="10" split_freq="1d" enabled=".TRUE."> <!-- 20 minute files -->
         <file id="Slab_U" name="Slab_U" description="20min near surface U velocity">
           <field field_ref="uoce" name="vozocrtx" grid_ref="two_straits_grid_U"/>
         </file>
@@ -140,10 +166,21 @@
           <field field_ref="voce" name="vomecrty" grid_ref="two_straits_grid_V"/>
         </file>
       </file_group>
-
-      <file_group id="10min" output_freq="600s" output_level="10" compression_level="4" enabled=".TRUE."> <!-- 10 minute files -->
+      <file_group id="10min" output_freq="600s" output_level="10" split_freq="1d" enabled=".TRUE."> <!-- 10 minute files -->
         <file id="PointAtkinson" name="PointAtkinson" description="10min interval SSH for tides">
           <field field_ref="ssh" name="sossheig" grid_ref="PointAtkinson_grid"/>
+        </file>
+        <file id="SandyCove" name="SandyCove" description="10min interval SSH for tides">
+          <field field_ref="ssh" name="sossheig" grid_ref="SandyCove_grid"/>
+        </file>
+        <file id="NewWestminster" name="NewWestminster" description="10 min interval SSH for tides">
+          <field field_ref="ssh" name="sossheig" grid_ref="NewWestminster_grid"/>
+        </file>
+        <file id="WoodwardsLanding" name="WoodwardsLanding" description="10 min interval SSH for tides">
+          <field field_ref="ssh" name="sossheig" grid_ref="WoodwardsLanding_grid"/>
+        </file>
+        <file id="PatriciaBay" name="PatriciaBay" description="10 min interval SSH for tides">
+          <field field_ref="ssh" name="sossheig" grid_ref="PatriciaBay_grid"/>
         </file>
         <file id="Victoria" name="Victoria" description="10min interval SSH for tides">
           <field field_ref="ssh" name="sossheig" grid_ref="Victoria_grid"/>
@@ -154,8 +191,17 @@
         <file id="Nanaimo" name="Nanaimo" description="10min interval SSH for tides">
           <field field_ref="ssh" name="sossheig" grid_ref="Nanaimo_grid"/>
         </file>
+        <file id="HalfmoonBay" name="HalfmoonBay" description="10min interval SSH for tides">
+          <field field_ref="ssh" name="sossheig" grid_ref="HalfmoonBay_grid"/>
+        </file>
+        <file id="Squamish" name="Squamish" description="10min interval SSH for tides">
+          <field field_ref="ssh" name="sossheig" grid_ref="Squamish_grid"/>
+        </file>
         <file id="NeahBay" name="NeahBay" description="10min interval SSH for tides">
           <field field_ref="ssh" name="sossheig" grid_ref="NeahBay_grid"/>
+        </file>
+        <file id="PortRenfrew" name="PortRenfrew" description="10min interval SSH for tides">
+          <field field_ref="ssh" name="sossheig" grid_ref="PortRenfrew_grid"/>
         </file>
         <file id="CherryPoint" name="CherryPoint" description="10min interval SSH for tides">
           <field field_ref="ssh" name="sossheig" grid_ref="CherryPoint_grid"/>
@@ -166,7 +212,7 @@
         <file id="SandHeads" name="SandHeads" description="10min interval SSH for tides">
           <field field_ref="ssh" name="sossheig" grid_ref="SandHeads_grid"/>
         </file>
-       <file id="BoundaryBay" name="BoundaryBay" description="10min interval SSH for tides">
+        <file id="BoundaryBay" name="BoundaryBay" description="10min interval SSH for tides">
           <field field_ref="ssh" name="sossheig" grid_ref="BoundaryBay_grid"/>
         </file>
         <file id="VENUS_central" name="VENUS_central"  description="VENUS central 10 minutes">
@@ -201,6 +247,22 @@
              <field field_ref="uoce" name="vozocrtx" grid_ref="VENUS_delta_gridded_grid_U"/>
              <field field_ref="voce" name="vomecrty" grid_ref="VENUS_delta_gridded_grid_V"/>
              <field field_ref="woce" name="vovecrtz" grid_ref="VENUS_delta_gridded_grid_W"/>
+        </file>
+	        <file id="FVCOM_T" name="FVCOM_T" description="FVCOM boundary conditions, 10 minutes, ssh">
+          <field field_ref="ssh" name="sossheig" operation="instant" grid_ref="FVCOM_grid_T_2D"/>
+          <field field_ref="toce" name="cons_temp" operation="instant" grid_ref="FVCOM_grid_T_3D"/>
+          <field field_ref="soce" name="ref_salinity" operation="instant" grid_ref="FVCOM_grid_T_3D"/>
+        </file>
+        <file id="FVCOM_U" name="FVCOM_U" description="FVCOM boundary conditions, 10 minutes, barotropic and 3d u">
+          <field field_ref="ubar" name="ubarotropic" operation="instant" grid_ref="FVCOM_grid_U_2D"/>
+          <field field_ref="uoce" name="uvelocity" operation="instant" grid_ref="FVCOM_grid_U_3D"/>
+        </file>
+        <file id="FVCOM_V" name="FVCOM_V" description="FVCOM boundary conditions, 10 minutes, barotropic and 3d v">
+          <field field_ref="vbar" name="vbarotropic" operation="instant" grid_ref="FVCOM_grid_V_2D"/>
+          <field field_ref="voce" name="vvelocity" operation="instant" grid_ref="FVCOM_grid_V_3D"/>
+        </file>
+        <file id="FVCOM_W" name="FVCOM_W" description="FVCOM boundary conditions, 10 minutes, 3d w">
+          <field field_ref="woce" name="wvelocity" operation="instant" grid_ref="FVCOM_grid_W_3D"/>
         </file>
 
       </file_group>
