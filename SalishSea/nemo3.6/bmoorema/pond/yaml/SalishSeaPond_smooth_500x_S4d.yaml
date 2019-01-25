@@ -13,7 +13,7 @@ MPI decomposition: 5x19
 # For runs on systems that use qsub/PBS/TORQUE
 #
 # If relative, paths are taken from current directory
-run_id: SalishSeaPond_ahm5x_S4d
+run_id: SalishSeaPond_smooth_500x_S4d
 # Maximum run time requested/allowed for job
 # Too low and you job will be terminated before it finishes
 # Too high and you will have to wait longer on the queue for your job to start
@@ -32,13 +32,13 @@ paths:
   XIOS: $HOME/MEOPAR/XIOS-2
   # Directory in which to create temporary run directories
   # Typically NOT inside a version control repository
-  runs directory: $SCRATCH/Results/Pond/SalishSeaPond_ahm5x_S4d
+  runs directory: $SCRATCH/Results/Pond/SalishSeaPond_smooth_500x_S4d
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path below
-  coordinates: $HOME/MEOPAR/grid/idealized/coordinates_pond_basic.nc
-  bathymetry: $HOME/MEOPAR/grid/idealized/bathymetry_pond_basic.nc
+  coordinates: $HOME/MEOPAR/grid/idealized/coordinates_pond.nc
+  bathymetry: $HOME/MEOPAR/grid/idealized/bathymetry_pond_smooth.nc
   # Optional path/filename for land processor elimination MPI-LPE mapping
   # file that matches bathymetry;
   # If "land processor elimination:" key is absent or has the value "False",
@@ -61,8 +61,6 @@ forcing:
   # If relative, paths are taken from forcing path above
   grid:
     link to: $HOME/MEOPAR/grid
-  initial_strat:
-    link to: $HOME/MEOPAR/tracers/initial/idealized
 
 namelists:
   # The namelist section files in the lists below will be concatenated
@@ -75,12 +73,12 @@ namelists:
   # If relative, paths are taken from current directory
   namelist_cfg:
     - ../namelist.time
-    - ../namelist.domain.summer
+    - ../namelist.domain
     - ../namelist.atmos_rivers.S4d
     - ../namelist.light
-    - ../namelist.bottom.base
+    - ../namelist.bottom.500x
     - ../namelist.tracer
-    - ../namelist.dynamics.5x
+    - ../namelist.dynamics
     - ../namelist.vertical
     - ../namelist.compute
   namelist_top_cfg:
