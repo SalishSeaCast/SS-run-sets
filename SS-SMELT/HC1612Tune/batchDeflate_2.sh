@@ -1,15 +1,16 @@
 #!/bin/bash
 
-#SBATCH --job-name=deflate
+#SBATCH --job-name=deflate2
 #SBATCH --time=3:00:00
+#SBATCH --mem=1000M
 #SBATCH --mail-user=eolson@eoas.ubc.ca
 #SBATCH --mail-type=ALL
-#SBATCH --account=def-allen
+#SBATCH --account=rrg-allen
 # stdout and stderr file paths/names
-#SBATCH --output=/scratch/eolson/results/GLSsummer15_0/stdout_deflate
-#SBATCH --error=/scratch/eolson/results/GLSsummer15_0/stderr_deflate
+#SBATCH --output=/scratch/eolson/results/spring15_R2_2/stdout_deflate
+#SBATCH --error=/scratch/eolson/results/spring15_R2_2/stderr_deflate
 
-PATH=$/scratch/eolson/results/spring15_R2_0/
+PATH=$/scratch/eolson/results/spring15_R2_2/
 
 echo "started at $(date)"
 module load nco/4.6.6
