@@ -39,17 +39,6 @@
           <field field_ref="TRA"            name="Fraser_tracer"/>
           <field field_ref="MESZ"           name="mesozooplankton"/>
         </file>
-        <file id="file13" name_suffix="_carp_T" description="auxilary variables">
-          <field field_ref="PAR"      name="PAR"/>
-          <field field_ref="rhop"     name="sigma_theta"/>
-          <field field_ref="e3t"      name="e3t"/>
-          <field field_ref="DIC"      name="dissolved_inorganic_carbon"/>
-          <field field_ref="TA"       name="total_alkalinity"/>
-          <field field_ref="O2"       name="dissolved_oxygen"/>
-        </file>
-        <file id="file15" name_suffix="_mtrc_T" description="passive tracer 20 m" >
-          <field field_ref="MYTRC1"         name="tracer20m" grid_ref="trc20m_grid"/>
-        </file>
       </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 2h files -->
       </file_group>
@@ -95,53 +84,6 @@
           <field field_ref="DIC"            name="dissolved_inorganic_carbon"/>
           <field field_ref="TA"             name="total_alkalinity"/>
           <field field_ref="O2"             name="dissolved_oxygen"/>
-        </file>
-        <file id="file6" name_suffix="_prod_T" description="smelt diagnostics A" >
-          <field field_ref="PPDIAT"      />
-          <field field_ref="PPPHY"       />
-          <field field_ref="PPMRUB"     />
-          <field field_ref="PPDIATNO3"      />
-          <field field_ref="PPPHYNO3"     />
-          <field field_ref="PPMRUBNO3"     />
-          <field field_ref="TQ10"       />
-        </file>
-        <file id="file7" name_suffix="_dia2_T" description="smelt diagnostics B" >
-          <field field_ref="HetMRub"      />
-          <field field_ref="MORTPHY"      />
-          <field field_ref="MORTMRUB"      />
-          <field field_ref="MORTDIAT"      />
-          <field field_ref="GRMESZDIAT"      />
-          <field field_ref="GRMESZMRUB"      />
-          <field field_ref="GRMESZPHY"      />
-          <field field_ref="GRMESZPON"      />
-          <field field_ref="GRMESZMICZ"       />
-          <field field_ref="GRMICZDIAT"      />
-          <field field_ref="GRMICZMRUB"       />
-          <field field_ref="GRMICZPHY"      />
-          <field field_ref="GRMICZPON"      />
-          <field field_ref="GRMICZMICZ"      />
-        </file>
-        <file id="file16" name_suffix="_dian_U" description="reduced domain N transports" >
-          <field field_ref="NO3_UT"        grid_ref="NSOG_U_grid"/>
-          <field field_ref="ULDFNO3"       grid_ref="NSOG_U_grid"/>
-        </file>
-        <file id="file19" name_suffix="_dian_V" description="reduced domain N transports" >
-          <field field_ref="NO3_VT"        grid_ref="NSOG_V_grid"/>
-          <field field_ref="VLDFNO3"       grid_ref="NSOG_V_grid"/>
-        </file>
-        <file id="file20" name_suffix="_dian_W" description="reduced domain N transports" >
-          <field field_ref="NO3_WT"        grid_ref="NSOG_W_grid"/>
-          <field field_ref="VMIXNO3"       grid_ref="NSOG_W_grid"/>
-          <field field_ref="AVSH"          grid_ref="NSOG_W_grid"/>
-          <field field_ref="WLDFNO3"       grid_ref="NSOG_W_grid"/>
-        </file>
-        <file id="file17" name_suffix="_VT1" description="section 1 N transports" >
-          <field field_ref="NO3_VT"        grid_ref="TV1_grid"/>
-          <field field_ref="VLDFNO3"       grid_ref="TV1_grid"/>
-        </file>
-        <file id="file18" name_suffix="_VT2" description="section 2 N transports" >
-          <field field_ref="NO3_VT"        grid_ref="TV2_grid"/>
-          <field field_ref="VLDFNO3"       grid_ref="TV2_grid"/>
         </file>
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
