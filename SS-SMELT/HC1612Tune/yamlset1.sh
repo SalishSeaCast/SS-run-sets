@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN="R2"
+NEWRUN="R3"
 PREFIX=spring15
 
 TEST="$(salishsea run ${PREFIX}_${NEWRUN}_0.yaml $SCRATCH/results/${PREFIX}_${NEWRUN}_0 2>&1)"
