@@ -73,7 +73,7 @@ namelists:
   # If relative, paths are taken from current directory
   namelist_cfg:
     - ../namelist.time
-    - ../namelist.domain.summer
+    - ../namelist.domain
     - ../namelist.atmos_rivers.S4d
     - ../namelist.light
     - ../namelist.bottom.base
