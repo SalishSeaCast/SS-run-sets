@@ -15,7 +15,7 @@ LOC1=/scratch/eolson/results/spring15_R3_0/
 echo "started at $(date)"
 module load nco/4.6.6
 
-for i in ${LOC1}_SalishSea_1h_*.nc
+for i in ${LOC1}SalishSea_1h_*.nc
 do
    filenew=$(echo $i|cut -d'.' -f 1)
    nccopy -s -4 -d4 $i $filenew'_sm.nc'
