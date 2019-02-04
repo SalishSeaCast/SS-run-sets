@@ -1,4 +1,4 @@
-run_id: spring15_R3_0
+run_id: spring15_R3_7
 config_name: SMELT
 account: rrg-allen
 email: eolson@eoas.ubc.ca
@@ -36,15 +36,15 @@ forcing:
   tides:
     link to: $PROJECT/SalishSea/hindcast-sys/tides
   tracers:
-    link to: $MEOPAR/NEMO-forcing/tracers
+    link to: $PROJECT/SalishSea/hindcast-sys/tracers
 
 restart:
-  restart.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01jan15/SalishSea_00894240_restart.nc
-  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01jan15/SalishSea_00894240_restart_trc.nc
+  restart.nc: $SCRATCH/results/spring15_R3_6/SalishSea_01650240_restart.nc
+  restart_trc.nc: $SCRATCH/results/spring15_R3_6/SalishSea_01650240_restart_trc.nc
 
 namelists:
   namelist_cfg:
-  - ./namelist_cfg_01jan15_50d
+  - ./namelist_cfg_17dec15_50d
   namelist_top_cfg:
   - ./namelist_top_cfg
   namelist_smelt_cfg:
@@ -59,7 +59,6 @@ output:
   iodefs: ../spring2/iodef.xml
   separate XIOS server: false
   XIOS servers: 1
-
 vcs revisions:
   hg:
   - $MEOPAR/SS-run-sets
