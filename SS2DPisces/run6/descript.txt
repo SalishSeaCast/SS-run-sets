@@ -1,0 +1,5 @@
+based on run2
+closed domain
+no tides
+2 day run
+altered namelist from run3 to try to enable RGB penetrative solar radiation. 

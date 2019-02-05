@@ -1,0 +1,73 @@
+!! Surface boundary conditions
+!!
+&namsbc        !   Surface Boundary Condition (surface module)
+!-----------------------------------------------------------------------
+   nn_fsbc     = 1         !  frequency of surface boundary condition computation
+                           !     (also = the frequency of sea-ice model call)
+   ln_ana      = .false.   !  analytical formulation (T => fill namsbc_ana )
+   ln_flx      = .false.   !  flux formulation       (T => fill namsbc_flx )
+   ln_blk_clio = .false.   !  CLIO bulk formulation                     (T => fill namsbc_clio)
+   ln_blk_core = .true.    !  CORE bulk formulation                     (T => fill namsbc_core)
+   ln_blk_mfs  = .false.   !  MFS bulk formulation                      (T => fill namsbc_mfs )
+   ln_cpl      = .false.   !  Coupled formulation                       (T => fill namsbc_cpl )
+   ln_apr_dyn  = .true.    !  Patm gradient added in ocean & ice Eqs.   (T => fill namsbc_apr )
+   nn_ice      = 0         !  =0 no ice boundary condition   ,
+                           !  =1 use observed ice-cover      ,
+                           !  =2 ice-model used                         ("key_lim3" or "key_lim2)
+   ln_dm2dc    = .false.   !  daily mean to diurnal cycle on short wave
+   ln_rnf      = .true.    !  runoffs                                   (T => fill namsbc_rnf)
+   ln_ssr      = .false.   !  Sea Surface Restoring on T and/or S       (T => fill namsbc_ssr)
+   nn_fwb      = 0         !  FreshWater Budget: =0 unchecked
+                           !     =1 global mean of e-p-r set to zero at each time step
+                           !     =2 annual global mean of e-p-r set to zero
+                           !     =3 global emp set to zero and spread out over erp area
+   ln_cdgw = .false.       !  Neutral drag coefficient read from wave model (T => fill namsbc_wave)
+&end
+
+&namsbc_core   !   namsbc_core  CORE bulk formulae
+!-----------------------------------------------------------------------
+!         !  file name  ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights            ! rotation !
+!         !             ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename           ! pairing  !
+   sn_wndi = 'u10',       1,          'u_wind',    .true., .false., 'daily',  'weights-CGRF.nc',   'Uwnd'
+   sn_wndj = 'v10',       1,          'v_wind',    .true., .false., 'daily',  'weights-CGRF.nc',   'Vwnd'
+   sn_qsr  = 'qsw',       1,          'solar',     .true., .false., 'daily',  'weights-CGRF.nc',   ''
+   sn_qlw  = 'qlw',       1,          'therm_rad', .true., .false., 'daily',  'weights-CGRF.nc',   ''
+   sn_tair = 't2',        1,          'tair',      .true., .false., 'daily',  'weights-CGRF.nc',   ''
+   sn_humi = 'q2',        1,          'qair',      .true., .false., 'daily',  'weights-CGRF.nc',   ''
+   sn_prec = 'precip',    1,          'precip',    .true., .false., 'daily',  'weights-CGRF.nc',   ''
+   sn_snow = 'no_snow', -12,          'snow',      .true., .true.,  'yearly', 'weights-CGRF.nc',   ''
+
+   cn_dir      = '/home/nksoonti/MEOPAR/CGRF/NEMO-atmos/'  ! directory containing atmospheric forcing files
+   ln_2m       = .true.         ! air temperature and humidity referenced at 2m (T) instead 10m (F)
+&end
+
+&namsbc_apr    !   Atmospheric pressure used as ocean forcing or in bulk
+!-----------------------------------------------------------------------
+!         ! file name ! freq (hr)  ! variable !  time  !  clim  ! period ! weights          ! rotation !
+!         !           ! (<0 == mo) !   name   ! interp !  (T/F) !        ! filename         ! pairing  !
+   sn_apr = 'slp_corr',     1,       'atmpres', .true.,  .false., 'daily', 'weights-CGRF.nc', ''
+
+   cn_dir      = '/home/nksoonti/MEOPAR/CGRF/NEMO-atmos/'  ! directory containing atmospheric forcing files
+   ln_apr_obc  = .true.         ! inverse barometer added to OBC ssh data
+&end
+
+&namsbc_rnf    !   runoffs namelist surface boundary condition
+!-----------------------------------------------------------------------
+!              !  file name         ! freq (hr)  ! variable  !  time  !  clim  ! period  ! weights  ! rotation !
+!              !                    ! (<0 == mo) !   name    ! interp !  (T/F) !         ! filename ! pairing  !
+   sn_rnf      = 'rivers_month',     -1,          'rorunoff', .true.,  .true.,  'yearly', '',        ''
+   sn_cnf      = 'runoff_1m_nomask',  0,          'socoefr0', .false., .true.,  'yearly', '',        ''
+   sn_s_rnf    = '',                 24,          'rosaline', .false., .true.,  'yearly', '',        ''
+   sn_t_rnf    = '',                 24,          'rotemper', .false., .true.,  'yearly', '',        ''
+   sn_dep_rnf  = 'rivers_2m_month',     -1,          'rodepth' , .true.,  .true.,  'yearly', '',        ''
+
+   cn_dir       = 'rivers/'  ! directory containing rivers run-off forcing files
+   ln_rnf_emp   = .false.    ! runoffs included into precipitation field (T) or into a file (F)
+   ln_rnf_mouth = .false.    ! specific treatment at rivers mouths
+   rn_hrnf      =  15.e0     ! depth over which enhanced vertical mixing is used
+   rn_avt_rnf   =   1.e-3    ! value of the additional vertical mixing coef. [m2/s]
+   rn_rfact     =   1.e0     ! multiplicative factor for runoff
+   ln_rnf_depth = .true.     ! read in depth information for runoff
+   ln_rnf_tem   = .false.    ! read in temperature information for runoff
+   ln_rnf_sal   = .false.    ! read in salinity information for runoff
+&end
