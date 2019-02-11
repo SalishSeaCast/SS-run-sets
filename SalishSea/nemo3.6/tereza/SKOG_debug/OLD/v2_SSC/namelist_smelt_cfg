@@ -1,0 +1,121 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! PISCES  (key_pisces) cfg namelist (see below for key_pisces_reduced)
+!!              1  - phytoplankton growth                     (nampisprod)
+!!              2  - M. rubrum                                (nampismes)
+!!              3  - Mesozooplankton                          (nampismezo)
+!!              4  - Microzooplankton                         (nampiszoo)
+!!              5  - Remineralization                         (nampisrem)
+!!              6 -  Sinking                                  (nampissink)
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisprod     !   parameters for phytoplankton growth
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_maxtemp_diat      = 26.0         !: deg C
+   zz_rate_maxtemp_myri      = 31.0         !: deg C
+   zz_rate_maxtemp_nano      = 31.0         !: deg C
+   zz_rate_temprange_diat    = 14.0          !: deg C
+   zz_rate_temprange_myri    = 13.0          !: deg C
+   zz_rate_temprange_nano    = 13.0          !: deg C
+   zz_rate_K_Si_diat         = 1.2         !:
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampismes     !   parameters for M. rubrum
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_mesorub_R               = 0.9e-5
+/
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+&nampismezo     !   parameters for mesozooplankton
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_mesozoo_winterconc = 0.42                   ! uM N mesozooplankton background concentration
+   zz_rate_mesozoo_sumpeakval =  0.42, 0.0,  0.0       ! uM N magnitude of mesozooplankton summer concentration peaks
+   zz_rate_mesozoo_sumpeakwid = 80.0,  155.00, 218.0  ! year-days widths of mesozooplankton summer concentration peaks,0)
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampiszoo     !   parameters for microzooplankton
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_uzoo_R               = 1.9E-05
+   zz_rate_uzoo_MicroPref       = 0.260      ! microzooplankton preference for diatoms
+   zz_rate_uzoo_PicoPref        = 0.300      ! microzooplankton preference for flagellates
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisrem     !   parameters for remineralization
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_remin_D_DON  =  2.5e-6
+   zz_remin_D_PON  =  2.5e-6
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampissink     !  Sinking of bio groups
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_w_sink_D_PON = 9.e-5      ! m/s PON detritus sinking rate # 70% of Jeffery quoting Dune and Bacon
+   zz_w_sink_D_bSi = 9.e-5      ! m/s  biogenic silicon detritus sinking rate # 70% to balance Si in SS-SMELT
+   zz_alpha_b = 0.8
+/
+
+
+
+
+
+
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! SMELT  (key_pisces) Rivers
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampissbc
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!               !  file name                                  ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!               !                                             !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_riverno3  = 'rivers-climatology/bio/R201809_bioClim',       24,               'no3',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_rivernh4  = 'rivers-climatology/bio/R201809_bioConst',     -12,               'nh4',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riversil  = 'rivers-climatology/bio/R201809_bioClim',       24,               'sil',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riverdia  = 'rivers-climatology/bio/R201809_bioConst',     -12,               'dia',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverphy  = 'rivers-climatology/bio/R201809_bioConst',     -12,               'phy',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_rivermes  = 'rivers-climatology/bio/R201809_bioConst',     -12,               'mes',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverzoo  = 'rivers-climatology/bio/R201809_bioConst',     -12,               'zoo',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverdoc  = 'rivers-climatology/bio/R201809_bioConst',     -12,               'don',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverpoc  = 'rivers-climatology/bio/R201809_bioConst',     -12,               'pon',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverdsi  = 'rivers-climatology/bio/R201809_bioConst',     -12,               'bsi',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_rivertra  = 'rivers-climatology/bio/rivers_bio_tracers',    24,               'tur',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_turb      = 'river_turb/riverTurbDaily2',                   24,               'turb',      .true.,       .false., 'daily',    '',        '',        ''
+   sn_riverdic  = 'rivers-climatology/skog/rivers_skog_tracers',  24,               'dic',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riverta   = 'rivers-climatology/skog/rivers_skog_tracers',  24,               'ta',        .true.,       .true.,  'daily',    '',        '',        ''
+   sn_rivero2   = 'rivers-climatology/bio/rivers_bio_tracers',    24,               'oxy',       .true.,       .true.,  'daily',    '',        '',        ''
+
+   cn_dir       = './'  ! root directory for the location of the runoff files
+   ln_river = .true.
+   ln_turb = .true.
+/
+
+
+
+
+
+
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! SKOG  (key_skog) cfg namelist (see below for key_pisces_reduced)
+!!              1  - carbon chemistry                         (nampiscarbon)
+!!              2  - air-sea exchange                         (nampisext)
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampiscarbon     ! Carbonate chemistry parameters (added- TJSJ, walrus)
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_redfield_c_n = 6.625     ! Redfield ratio carbon to nitrogen
+   zz_redfield_p_n = 0.0625    ! Redfield ratio phosphorus to nitrogen
+   zz_redfield_o_n = 9.3750    ! Redfield ratio oxygen to nitrogen
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisext     !   air-sea exchange
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   ln_co2int  =  .false. ! read atm pco2 from a file (T) or constant (F)
+   ln_co2sys  =  .false. ! run the co2sys module or the original PISCES module
+   atcco2     =  287.    ! Constant value atmospheric pCO2 - ln_co2int = F
+   clname     =  'atcco2.txt'  ! Name of atm pCO2 file - ln_co2int = T
+   nn_offset  =  0       ! Offset model-data start year - ln_co2int = T
+!                        ! If your model year is iyy, nn_offset=(years(1)-iyy) 
+!                        ! then the first atmospheric CO2 record read is at years(1)
+/
+
+
+
+
+
+
