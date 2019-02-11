@@ -1,0 +1,56 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! PISCES  (key_pisces) cfg namelist (see below for key_pisces_reduced)
+!!              1  - phytoplankton growth                     (nampisprod)
+!!              2  - M. rubrum                                (nampismes)
+!!              3  - Mesozooplankton                          (nampismezo)
+!!              4  - Microzooplankton                         (nampiszoo)
+!!              5  - Remineralization                         (nampisrem)
+!!              6 -  Sinking                                  (nampissink)
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisprod     !   parameters for phytoplankton growth
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_maxtemp_diat      = 26.0         !: deg C
+   zz_rate_maxtemp_myri      = 31.0         !: deg C
+   zz_rate_maxtemp_nano      = 31.0         !: deg C
+   zz_rate_temprange_diat    = 14.0          !: deg C
+   zz_rate_temprange_myri    = 13.0          !: deg C
+   zz_rate_temprange_nano    = 13.0          !: deg C
+   zz_rate_K_Si_diat         = 1.2         !:
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampismes     !   parameters for M. rubrum
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_mesorub_R               = 0.9e-5
+/
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+&nampismezo     !   parameters for mesozooplankton
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_mesozoo_winterconc = 0.42                   ! uM N mesozooplankton background concentration
+   zz_rate_mesozoo_sumpeakval =  0.42, 0.0,  0.0       ! uM N magnitude of mesozooplankton summer concentration peaks
+   zz_rate_mesozoo_sumpeakwid = 80.0,  155.00, 218.0  ! year-days widths of mesozooplankton summer concentration peaks,0)
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampiszoo     !   parameters for microzooplankton
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_uzoo_R               = 1.9E-05
+   zz_rate_uzoo_MicroPref       = 0.260      ! microzooplankton preference for diatoms
+   zz_rate_uzoo_PicoPref        = 0.300      ! microzooplankton preference for flagellates
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisrem     !   parameters for remineralization
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_remin_D_DON  =  2.5e-6
+   zz_remin_D_PON  =  2.5e-6
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampissink     !  Sinking of bio groups
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_w_sink_D_PON = 9.e-5      ! m/s PON detritus sinking rate # 70% of Jeffery quoting Dune and Bacon
+   zz_w_sink_D_bSi = 9.e-5      ! m/s  biogenic silicon detritus sinking rate # 70% to balance Si in SS-SMELT
+   zz_alpha_b = 0.8
+/
+
+
+
+
