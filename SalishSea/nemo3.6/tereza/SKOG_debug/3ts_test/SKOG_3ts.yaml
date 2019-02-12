@@ -61,7 +61,7 @@ namelists:
   - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist_top_TracerDefAndBdy
   - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist_top_physics
   namelist_smelt_cfg:
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist_smelt_biology
+  - ./namelist_smelt_biology
   - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist_smelt_rivers
   - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist_smelt_skog
 
