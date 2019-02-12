@@ -7,10 +7,10 @@
 #SBATCH --mail-type=ALL
 #SBATCH --account=def-allen
 # stdout and stderr file paths/names
-#SBATCH --output=/scratch/eolson/results/spring15_R3_6/stdout_deflate
-#SBATCH --error=/scratch/eolson/results/spring15_R3_6/stderr_deflate
+#SBATCH --output=/scratch/eolson/results/spring15_R3_7/stdout_deflate
+#SBATCH --error=/scratch/eolson/results/spring15_R3_7/stderr_deflate
 
-LOC1=/scratch/eolson/results/spring15_R3_6/
+LOC1=/scratch/eolson/results/spring15_R3_7/
 
 echo "started at $(date)"
 module load nco/4.6.6
