@@ -85,12 +85,16 @@
 
 &namtsa        !   analytical : Temperature  & Salinity
 !-----------------------------------------------------------------------
-rn_tini_surf   =   3.                  !  Initial surface temperature
-rn_tini_decay  =  -0.15                !  Initial temperature decay
-rn_tini_slope  =   0.003               !  Initial temperature slope
-rn_tini_deep   =   9.                  !  Initial deep temperature
-rn_sini_surf   = -20.                  !  Initial surface salinity
-rn_sini_decay  =  -0.3                 !  Initial salinity decay
-rn_sini_slope  =   0.003               !  Initial salinity slope
-rn_sini_deep   =  30.                  !  Initial deep salinity
+rn_tini_surf     =     4.                  !  Initial surface temperature
+rn_tini_surfint  =  2000.                  !  Initial surface temperature
+rn_tini_surf0    =     0.                  !  Initial surface temperature
+rn_tini_decay    =    -0.1                 !  Initial temperature decay
+rn_tini_slope    =     0.003               !  Initial temperature slope
+rn_tini_deep     =     9.                  !  Initial deep temperature
+rn_sini_surf     =   -12.                  !  Initial surface salinity
+rn_sini_surfint  =   800.                  !  Initial surface salinity
+rn_sini_surf0    =     0.                  !  Initial surface salinity
+rn_sini_decay    =    -0.06                !  Initial salinity decay
+rn_sini_slope    =     0.003               !  Initial salinity slope
+rn_sini_deep     =    30.                  !  Initial deep salinity
 &end
