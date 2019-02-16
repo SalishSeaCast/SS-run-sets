@@ -1,0 +1,7 @@
+changset:   1798:67b1a35765a064f83ad642960d7dc1292cbcc753
+tag:        tip
+user:       Susan Allen <sallen@eos.ubc.ca>
+date:       Wed Apr 18 12:28:59 2018 -07:00
+files:      v201702/nowcast-green/namelist_smelt_cfg
+description:
+Correct typo in namelist_smelt_cfg (nowcast-green)

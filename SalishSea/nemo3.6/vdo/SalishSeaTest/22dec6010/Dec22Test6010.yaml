@@ -1,0 +1,86 @@
+# salishsea command processor run description example for NEMO-3.6
+#
+# Salish Sea Deepened Long River Domain (down by one) with:
+#     Tidal forcing
+#     Salinity and Temperate at Both open boundaries
+#  Rivers run-off forcing
+#  Atmospheric forcing with operational GEM2.5 model products
+#    Constrained to no solid precipitation
+#  SMELT biological model
+
+config_name: SalishSeaTest
+
+# How is the domain to be distributed over the processors in the
+# i (longitude) and j (latitude) directions?
+# These values are used to set the nammpp namelist jpni & jpnj values
+# and to set the number of processors and nodes in the PBS script
+MPI decomposition: 8x18
+#MPI decomposition: 1x7
+
+# For runs on systems that use qsub/PBS/TORQUE
+run_id: test_22dec14_6010
+walltime: 3:30:00
+# If missing, email address is set to ${USER}@eos.ubc.ca
+email: vdo@eoas.ubc.ca
+
+paths:
+  # If relative, paths are taken from current directory
+  NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $HOME/MEOPAR/XIOS-2/
+  forcing: $HOME/MEOPAR/NEMO-forcing/
+  runs directory: /global/scratch/vdo/
+  #runs directory: $HOME/MEOPAR/SalishSea
+
+grid:
+  # If relative, paths are taken from the grid/ directory in the forcing
+  # path above
+  coordinates: coordinates_seagrid_SalishSea201702.nc
+  bathymetry: bathymetry_201702.nc
+  land processor elimination: bathymetry_201702.csv
+
+forcing:
+  # If relative, paths are taken from forcing path above
+  NEMO-atmos:
+    link to: $HOME/MEOPAR/ops
+  open_boundaries:
+    link to: open_boundaries
+  rivers:
+    link to: $HOME/MEOPAR/rivers
+  bfr_coef.nc:
+    link to: $HOME/MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
+
+restart:
+  restart.nc: $HOME/MEOPAR/RESTART/SalishSea_00218160_restart.nc
+
+namelists:
+  # The namelist section files in the lists below will be concatenated
+  # to create a namelist file whose name is the key under which the files
+  # are listed. The keys are the names of the namelist files that NEMO-3.6
+  # expects.
+  #
+  # The only required key is namelist_cfg.
+  #
+  # If relative, paths are taken from current directory
+  namelist_ref:
+    - /home/vdo/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaTest/EXP00/namelist_ref
+ 
+  namelist_cfg:
+    - ./namelist.time
+    - ./namelist.domain
+    - ./namelist.surface
+    - ./namelist.lateral
+    - ./namelist.bottom
+    - ./namelist.tracer
+    - ./namelist.dynamics
+    - ./namelist.vertical
+    - ./namelist.compute
+
+output:
+  # If relative, paths are taken from current directory
+  iodefs: iodef_xios2.xml
+  filedefs: file_def_xios2_dailysplit.xml
+  domaindefs: domain_def_xios2.xml
+  fielddefs: field_def.xml
+  separate XIOS server: True
+  XIOS servers: 1
+

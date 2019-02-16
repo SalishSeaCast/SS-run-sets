@@ -1,0 +1,103 @@
+!!======================================================================
+!!            ***  Surface Boundary Condition namelists  ***
+!!
+!! sets boundary conditions for surface features.  Note that this file
+!! only includes the subset of namelists we use and furthermore only
+!! the variables we typically change.
+!!======================================================================
+!! Included namelists:
+!!   namsbc          surface boundary condition
+!!   namsbc_ana      analytical         formulation
+!!   namsbc_core     CORE bulk formulae formulation
+!!   namsbc_apr      Atmospheric Pressure
+!!   namsbc_rnf      river runoffs
+!!======================================================================
+!! Not included namelists:
+!!   namsbc_flx      flux               formulation
+!!   namsbc_clio     CLIO bulk formulae formulation
+!!   namsbc_mfs      MFS  bulk formulae formulation
+!!   namsbc_cpl      CouPLed            formulation             ("key_coupled")
+!!   namtra_qsr      penetrative solar radiation
+!!   namsbc_sas      Standalone Surface module
+!!   namsbc_isf      ice shelf melting/freezing
+!!   namsbc_ssr      sea surface restoring term (for T and/or S)
+!!   namsbc_alb      albedo parameters
+!!   namsbc_wave     external fields from wave model
+!!======================================================================
+!!
+!!
+!-----------------------------------------------------------------------
+&namsbc        !   Surface Boundary Condition (surface module)
+!-----------------------------------------------------------------------
+   nn_fsbc     =  1        !  frequency of surface boundary condition computation
+                           !     (also = the frequency of sea-ice model call)
+   ln_ana      = .false.   !  analytical formulation                    (T => fill namsbc_ana )
+   ln_blk_core = .true.    !  CORE bulk formulation                     (T => fill namsbc_core)
+   ln_apr_dyn  = .true.    !  Patm gradient added in ocean & ice Eqs.   (T => fill namsbc_apr )
+   nn_ice      = 0         !  =0 no ice boundary condition,
+                           !  =1 use observed ice-cover,
+                           !  =2 ice-model used                         ("key_lim3" or "key_lim2")
+   ln_rnf      = .true.    !  runoffs                                   (T   => fill namsbc_rnf)
+   ln_ssr      = .false.   !  Sea Surface Restoring on T and/or S       (T => fill namsbc_ssr)
+   nn_fwb      = 0         !  FreshWater Budget:
+                           !     =0 unchecked
+                           !     =1 global mean of e-p-r set to zero at each time step
+                           !     =2 annual global mean of e-p-r set to zero
+&end
+
+
+!-----------------------------------------------------------------------
+&namsbc_ana    !   analytical surface boundary condition
+!-----------------------------------------------------------------------
+   rn_utau0    =   0.e0    !  uniform value for the i-stress
+&end
+
+!-----------------------------------------------------------------------
+&namsbc_core   !   namsbc_core  CORE bulk formulae
+!-----------------------------------------------------------------------
+!         !  file name             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                                                   ! rotation !
+!         !                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename                                                  ! pairing  !
+  sn_wndi = 'NEMO-atmos/ops',        1,                 'u_wind',    .true.,       .false.,  'daily',    'HS_grid/weights-gem2.5-ops_201702_HS.nc', 'Uwnd'
+  sn_wndj = 'NEMO-atmos/ops',        1,                 'v_wind',    .true.,       .false.,  'daily',    'HS_grid/weights-gem2.5-ops_201702_HS.nc', 'Vwnd'
+  sn_qsr  = 'NEMO-atmos/ops',        1,                 'solar',     .true.,       .false.,  'daily',    'HS_grid/weights-gem2.5-ops_201702_HS.nc', ''
+  sn_qlw  = 'NEMO-atmos/ops',        1,                 'therm_rad', .true.,       .false.,  'daily',    'HS_grid/weights-gem2.5-ops_201702_HS.nc', ''
+  sn_tair = 'NEMO-atmos/ops',        1,                 'tair',      .true.,       .false.,  'daily',    'HS_grid/weights-gem2.5-ops_201702_HS.nc', ''
+  sn_humi = 'NEMO-atmos/ops',        1,                 'qair',      .true.,       .false.,  'daily',    'HS_grid/weights-gem2.5-ops_201702_HS.nc', ''
+  sn_prec = 'NEMO-atmos/ops',        1,                 'precip',    .true.,       .false.,  'daily',    'HS_grid/weights-gem2.5-ops_201702_HS.nc', ''
+  sn_snow = 'grid/no_snow',        -12,                 'snow',      .true.,       .true.,   'yearly',   'HS_grid/weights-gem2.5-ops_201702_HS.nc', ''
+
+   cn_dir      = './'  !  root directory for the location of the bulk files
+   rn_zqt      = 2.    !  Air temperature and humidity reference height (m)
+   rn_vfac     = 1.    !  new feature, lets use (0. for comparison, then switch to 1)
+                       !  multiplicative factor for ocean/ice velocity
+                       !  in the calculation of the wind stress (0.=absolute winds or 1.=relative winds)
+&end
+
+!-----------------------------------------------------------------------
+&namsbc_apr    !   Atmospheric pressure used as ocean forcing or in bulk
+!-----------------------------------------------------------------------
+!         !  file name       ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                                                   ! rotation !
+!         !                  !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename                                                  ! pairing  !
+  sn_apr  = 'NEMO-atmos/ops',  1,                 'atmpres',   .true.,       .false.,  'daily',    'HS_grid/weights-gem2.5-ops_201702_HS.nc', ''
+
+  cn_dir      = './'     !  root directory for the location of the bulk files
+  ln_apr_obc  = .false.  !  inverse barometer added to OBC ssh data
+&end
+
+!-----------------------------------------------------------------------
+&namsbc_rnf    !   runoffs namelist surface boundary condition
+!-----------------------------------------------------------------------
+!             !  file name                 ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
+!             !                            !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
+  sn_rnf      = 'HS_rivers-climatology/rivers_month_201702_HS',    -1,                'rorunoff',  .true.,       .true.,  'yearly',   '',        ''
+  sn_cnf      = '',                          24,                'socoefr0',  .false.,      .true.,  'yearly',   '',        ''
+  sn_s_rnf    = '',                          24,                'rosaline',  .false.,      .true.,  'yearly',   '',        ''
+  sn_t_rnf    = 'HS_rivers-climatology/rivers_ConsTemp_month_HS',  -1,                'rotemper',  .true.,       .true.,  'yearly',   '',        ''
+  sn_dep_rnf  = 'HS_rivers-climatology/rivers_month_201702_HS',    -1,                'rodepth' ,  .true.,       .true.,  'yearly',   '',        ''
+
+  cn_dir       = './'  !  root directory for the location of the runoff files
+  ln_rnf_mouth = .false.                   !  specific treatment at rivers mouths
+  ln_rnf_depth = .true.                    !  read in depth information for runoff
+  ln_rnf_tem   = .true.                    !  read in temperature information for runoff
+  ln_rnf_sal   = .false.                   !  read in salinity information for runoff
+&end

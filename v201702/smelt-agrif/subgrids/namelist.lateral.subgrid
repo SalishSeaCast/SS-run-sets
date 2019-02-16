@@ -1,0 +1,33 @@
+&namlbc        !   lateral momentum boundary condition
+!-----------------------------------------------------------------------
+   rn_shlat    = 0.5     !  shlat = 0  !  0 < shlat < 2  !  shlat = 2  !  2 < shlat
+                         !  free slip  !   partial slip  !   no slip   ! strong slip
+&end
+
+
+&namcla        !   cross land advection new? might be cool for Active Pass etc
+!-----------------------------------------------------------------------
+&end
+
+
+&nam_tide      !   tide parameters (#ifdef key_tide)   see NEMO-3.6-code/NEMOGCM/NEMO/OPA_SRC/SBC/tideini.F90
+! Tidal parameters that we use to have to input are in OPA_SRC/SBC/tide.h90
+!-----------------------------------------------------------------------
+   ln_tide_pot   = .false.   !  use tidal potential forcing
+   rdttideramp   =    0.    !
+   clname(1)     =   'M2'   !  name of constituent
+   clname(2)     =   'S2'
+   clname(3)     =   'N2'
+   clname(4)     =   'K1'
+   clname(5)     =   'O1'
+   clname(6)     =   'Q1'
+   clname(7)     =   'K2'
+   clname(8)     =   'P1'
+&end
+
+
+&nambdy        !  unstructured open boundaries                          ("key_bdy")
+!-----------------------------------------------------------------------
+    nb_bdy         = 0                     !  number of open boundary sets According to merge namelist, only 1
+&end
+

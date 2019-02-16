@@ -1,0 +1,9 @@
+changset:   571:9cd10f3f2d5008e461649b26e5e051055ee2e4c7
+tag:        tip
+user:       Doug Latornell <dlatornell@eoas.ubc.ca>
+date:       Fri Oct 27 09:03:31 2017 -07:00
+files:      salishsea_cmd/run.py tests/test_run.py
+description:
+Ensure that system mpirun is used on salish.
+
+We need to avoid using an mpirun that might be installed in a conda env.

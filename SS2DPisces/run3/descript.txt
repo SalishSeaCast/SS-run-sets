@@ -1,0 +1,6 @@
+based on run2
+closed domain
+no tides
+2 day run
+altered namelists from run2 so that no input files expected for bio tracers
+in namelist_pisces, changed option for new production algorithm to false
