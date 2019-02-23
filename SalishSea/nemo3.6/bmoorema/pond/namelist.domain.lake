@@ -81,3 +81,20 @@
  ln_tsd_init   = .false.           ! Initialisation of ocean T & S with T & S input data (T) or not (F)
  ln_tsd_tradmp = .false.           ! damping of ocean T & S toward T & S input data (T) or not (F)
 &end
+
+
+&namtsa        !   analytical : Temperature  & Salinity
+!-----------------------------------------------------------------------
+rn_tini_surf     =     3.5                 !  Initial surface temperature
+rn_tini_surfint  =   898.                  !  Initial surface temperature
+rn_tini_surf0    =   500.                  !  Initial surface temperature
+rn_tini_decay    =    -0.1                 !  Initial temperature decay
+rn_tini_slope    =     0.003               !  Initial temperature slope
+rn_tini_deep     =     9.                  !  Initial deep temperature
+rn_sini_surf     =   -15.                  !  Initial surface salinity
+rn_sini_surfint  =   750.                  !  Initial surface salinity
+rn_sini_surf0    =   500.                  !  Initial surface salinity
+rn_sini_decay    =    -0.2                 !  Initial salinity decay
+rn_sini_slope    =     0.003               !  Initial salinity slope
+rn_sini_deep     =    30.                  !  Initial deep salinity
+&end
