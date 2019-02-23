@@ -7,7 +7,7 @@
     -->
     <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4">
       <file_group id="1h" output_freq="1h"  output_level="10" enabled=".TRUE."/> <!-- 1 time step files -->
-      <file_group id="1d" output_freq="1d"  output_level="10" split_freq="1d" enabled=".TRUE."> <!-- 1h files -->
+      <file_group id="1ts" output_freq="1ts"  output_level="10" split_freq="1d" enabled=".TRUE."> <!-- 1h files -->
         <file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
           <field field_ref="ssh"            name="sossheig"/>
           <field field_ref="toce"           name="votemper"/>
@@ -49,6 +49,8 @@
           <field field_ref="TA"       name="total_alkalinity"/>
           <field field_ref="O2"       name="dissolved_oxygen"/>
           <field field_ref="f_co2flux" name="co2_flux_mmol_m2_s" />
+          <field field_ref="f_uptake_DIC" name="uptake_DIC" /> 
+          <field field_ref="f_uptake_UC" name="uptake_UC" />
         </file>
         <file id="file6" name_suffix="_prod_T" description="smelt diagnostics A" >
           <field field_ref="PPDIAT"      />
@@ -130,6 +132,8 @@
           <field field_ref="TA"             name="total_alkalinity"/>
           <field field_ref="O2"             name="dissolved_oxygen"/>
           <field field_ref="f_co2flux"      name="co2_flux_mmol_m2_s" />
+          <field field_ref="f_uptake_DIC" name="uptake_DIC" />
+          <field field_ref="f_uptake_UC" name="uptake_UC" />
         </file>  
         <file id="file7" name_suffix="_dia2_T" description="smelt diagnostics B" >
           <field field_ref="HetMRub"      />
