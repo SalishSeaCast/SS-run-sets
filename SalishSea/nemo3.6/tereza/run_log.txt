@@ -13,5 +13,5 @@ SMELT_c4:/ [FX] -
 SMELT_COG:/ [FX] - 
 SMELT_COG_withlocalBC:/ [PR] -
 SCOG_1seg_sept2016:/ [NR] - subset of fxning SCOG_sept2016 for comparison with SCOG_LBC_sept2016
-
+SKOG - Feb 22. argh. 
 
