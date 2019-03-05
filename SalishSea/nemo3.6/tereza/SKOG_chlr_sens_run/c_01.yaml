@@ -3,7 +3,7 @@ account: rrg-allen
 MPI decomposition: 16x41
 config_name: SKOG
 run_id: three_21nov14
-walltime: 12:00:00
+walltime: 6:00:00
 
 forcing:
   LiveOcean:
@@ -37,8 +37,8 @@ forcing:
     link to: /home/tjarnik/project/tjarnik/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
 restart:
-  restart.nc: /scratch/dlatorne/hindcast_v201812/01feb18/SalishSea_03350160_restart.nc
-  restart_trc.nc: /scratch/dlatorne/hindcast_v201812/01feb18/SalishSea_03350160_restart_trc.nc
+  restart.nc: /scratch/dlatorne/hindcast_v201812/21jan18/SalishSea_03328560_restart.nc
+  restart_trc.nc: /scratch/dlatorne/hindcast_v201812/21jan18/SalishSea_03328560_restart_trc.nc
 
 
 grid:            
