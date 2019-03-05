@@ -36,9 +36,9 @@ forcing:
   initial_car_data_file.nc:
     link to: /home/tjarnik/project/tjarnik/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
-restart:
-  restart.nc: /scratch/tjarnik/f20_cr4/SalishSea_3479760_restart.nc
-  restart_trc.nc: /scratch/tjarnik/f20_cr4/SalishSea_3479760_restart_trc.nc
+  restart:
+    restart.nc: /scratch/tjarnik/f25_c4a/SKOG_03458160_restart.nc
+    restart_trc.nc: /scratch/tjarnik/f25_c4a/SKOG_03458160_restart_trc.nc
 
 grid:            
   bathymetry: /home/tjarnik/project/tjarnik/MEOPAR/grid/bathymetry_201702.nc
