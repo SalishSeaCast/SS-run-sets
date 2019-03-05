@@ -1,6 +1,6 @@
-run_id: GLSSummer15_0
+run_id: GLSSummer15_2
 config_name: SMELT
-account: def-allen
+account: rrg-allen
 email: eolson@eoas.ubc.ca
 MPI decomposition: 16x41
 walltime: 12:00:00
@@ -28,8 +28,8 @@ forcing:
     link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
-  restart.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01may15/SalishSea_01153440_restart.nc
-  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01may15/SalishSea_01153440_restart_trc.nc
+  restart.nc: $SCRATCH/results/GLSSummer15_1/SalishSea_01369440_restart.nc
+  restart_trc.nc: $SCRATCH/results/GLSSummer15_1/SalishSea_01369440_restart_trc.nc
 
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
@@ -38,7 +38,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist_cfg_01may15_50d
+  - ./namelist_cfg_09aug15_50d
   namelist_top_cfg:
   - ../HC1612Tune/namelist_top_cfg
   namelist_smelt_cfg:
@@ -46,7 +46,7 @@ namelists:
 
 output:
   XIOS servers: 1
-  filedefs: ./file_def.xml
+  filedefs: ./file_def.xml_PhysT
   domaindefs: ./domain_def.xml
   fielddefs: ./field_def.xml
   iodefs: ./iodef.xml
