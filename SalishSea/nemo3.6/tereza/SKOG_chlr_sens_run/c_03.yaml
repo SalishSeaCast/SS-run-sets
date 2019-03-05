@@ -37,8 +37,9 @@ forcing:
     link to: /home/tjarnik/project/tjarnik/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
 restart:
-  restart.nc: /scratch/tjarnik/f20_cr2/SalishSea_3414960_restart.nc
-  restart_trc.nc: /scratch/tjarnik/f20_cr2/SalishSea_3414960_restart_trc.nc
+  restart.nc: /scratch/tjarnik/f25_c2a/SKOG_03393360_restart.nc
+  restart_trc.nc: /scratch/tjarnik/f25_c2a/SKOG_03393360_restart_trc.nc    
+    
 
 grid:            
   bathymetry: /home/tjarnik/project/tjarnik/MEOPAR/grid/bathymetry_201702.nc
