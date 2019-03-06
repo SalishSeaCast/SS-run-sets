@@ -10,7 +10,7 @@
       <file_group id="1h" output_freq="1h"  output_level="10" split_freq="10d" enabled=".TRUE."> <!-- 1h files -->
         <file id="file5" name_suffix="_nphy_T" description="reduced domain physical vars" >
           <field field_ref="rhop"                         grid_ref="NSOG_T_grid"/>
-          <field field_ref="toce        name="votemper"   grid_ref="NSOG_T_grid"/>
+          <field field_ref="toce"       name="votemper"   grid_ref="NSOG_T_grid"/>
           <field field_ref="soce"       name="vosaline"   grid_ref="NSOG_T_grid"/>
         </file>
         <file id="file6" name_suffix="_nbio_T" description="biogeochemical variables" >
