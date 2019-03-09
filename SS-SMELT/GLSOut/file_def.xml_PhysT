@@ -49,6 +49,8 @@
         <file id="file20" name_suffix="_dian_W" description="reduced domain N transports" >
           <field field_ref="NO3_WT"        grid_ref="NSOG_W_grid"/>
           <field field_ref="VMIXNO3"       grid_ref="NSOG_W_grid"/>
+          <field field_ref="VMIXNO3EXP"       grid_ref="NSOG_W_grid"/>
+          <field field_ref="VMIXNO3H"       grid_ref="NSOG_W_grid"/>
           <field field_ref="AVSH"          grid_ref="NSOG_W_grid"/>
           <field field_ref="WLDFNO3"       grid_ref="NSOG_W_grid"/>
           <field field_ref="GLS_k"         grid_ref="NSOG_W_grid"/>

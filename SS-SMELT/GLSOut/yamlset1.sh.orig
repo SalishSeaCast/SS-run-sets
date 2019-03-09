@@ -2,7 +2,7 @@
 NEWRUN=Summer15
 PREFIX=GLS
 
-TEST="$(salishsea run ${PREFIX}_${NEWRUN}_1b.yaml $SCRATCH/results/${PREFIX}_${NEWRUN}_1b 2>&1)"
+TEST="$(salishsea run ${PREFIX}_${NEWRUN}_1.yaml $SCRATCH/results/${PREFIX}_${NEWRUN}_1 2>&1)"
 echo $TEST
 if [[ $TEST != *"ERROR"* ]]; then
    JID=${TEST##* }

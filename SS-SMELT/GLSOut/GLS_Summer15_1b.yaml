@@ -1,4 +1,4 @@
-run_id: GLSSummer15_2
+run_id: GLSSummer15_1b
 config_name: SMELT
 account: rrg-allen
 email: eolson@eoas.ubc.ca
@@ -28,8 +28,8 @@ forcing:
     link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
-  restart.nc: $SCRATCH/results/GLS_Summer15_1b/SalishSea_01369440_restart.nc
-  restart_trc.nc: $SCRATCH/results/GLS_Summer15_1b/SalishSea_01369440_restart_trc.nc
+  restart.nc: $SCRATCH/results/GLS_Summer15_1/SalishSea_01304640_restart.nc
+  restart_trc.nc: $SCRATCH/results/GLS_Summer15_1/SalishSea_01304640_restart_trc.nc
 
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
@@ -38,7 +38,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist_cfg_09aug15_50d
+  - ./namelist_cfg_15jul15_25d
   namelist_top_cfg:
   - ../HC1612Tune/namelist_top_cfg
   namelist_smelt_cfg:
