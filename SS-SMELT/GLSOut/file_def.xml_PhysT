@@ -59,10 +59,6 @@
           <field field_ref="bfN2"          grid_ref="NSOG_W_grid"/>
           <field field_ref="woce"    name="vovecrtz"    grid_ref="NSOG_W_grid"/>
         </file>
-        <file id="file21" name_suffix="_dian_W2" description="reduced domain N transports" >
-          <field field_ref="VMIXNO3EXP"       grid_ref="NSOG_W_grid"/>
-          <field field_ref="VMIXNO3H"       grid_ref="NSOG_W_grid"/>
-        </file>
       </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" split_freq="1d" enabled=".TRUE."/> <!-- 2h files -->
       <file_group id="3h" output_freq="3h"  output_level="10" enabled=".TRUE."/> <!-- 3h files -->
