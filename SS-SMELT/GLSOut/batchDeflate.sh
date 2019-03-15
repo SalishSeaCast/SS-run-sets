@@ -9,12 +9,17 @@
 #SBATCH --output=/scratch/eolson/results/stdout_deflate
 #SBATCH --error=/scratch/eolson/results/stderr_deflate
 
-LOC1=/scratch/eolson/results/GLS_Summer15_2/
+LOC1=/scratch/eolson/results/GLS_Summer15_ts/
 
 echo "started at $(date)"
 module load nco/4.6.6
 
 for i in ${LOC1}SalishSea_1h_*.nc
+do
+   filenew=$(echo $i|cut -d'.' -f 1)
+   nccopy -s -4 -d4 $i $filenew'_sm.nc'
+done
+for i in ${LOC1}SalishSea_1ts_*.nc
 do
    filenew=$(echo $i|cut -d'.' -f 1)
    nccopy -s -4 -d4 $i $filenew'_sm.nc'
