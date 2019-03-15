@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOC1=/scratch/eolson/results/GLS_Summer15_2/
+LOC1=/scratch/eolson/results/GLS_Summer15_ts/
 
 echo "started at $(date)"
 module load nco/4.6.6
