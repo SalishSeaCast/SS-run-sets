@@ -2,7 +2,7 @@ email: tjarnik@gmail.com
 MPI decomposition: 1x7
 config_name: SKOG
 run_id: three_21nov14
-walltime: 02:15:00
+walltime: 05:15:00
 
 paths:
   NEMO code config: /data/$USER//MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
