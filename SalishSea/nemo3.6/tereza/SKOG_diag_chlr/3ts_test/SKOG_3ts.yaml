@@ -12,7 +12,7 @@ paths:
 
 forcing:
   LiveOcean:
-    link to: /data/tjarniko/MEOPAR/MOCK_LIVEOCEAN
+    link to: /results/forcing/LiveOcean/boundary_conditions
   NEMO-atmos:
     link to: /results/forcing/atmospheric/GEM2.5/operational
   bfr_coef.nc:
@@ -38,6 +38,11 @@ forcing:
   initial_car_data_file.nc:
     link to: /data/bmoorema/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
+restart:
+  restart.nc: /results2/SalishSea/hindcast.201812_annex/30apr18/SalishSea_03520800_restart.nc
+  restart_trc.nc: //results2/SalishSea/hindcast.201812_annex/30apr18/SalishSea_03520800_restart_trc.nc
+
+
 grid:
   bathymetry: /data/$USER/MEOPAR/grid/bathymetry_201702.nc
   coordinates: /data/$USER/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
@@ -45,7 +50,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.21nov14_onehour
+  - ./namelist.time
   - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist.domain
   - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist.light
