@@ -12,6 +12,8 @@
           <field field_ref="rhop"                         grid_ref="NSOG_T_grid"/>
           <field field_ref="toce"       name="votemper"   grid_ref="NSOG_T_grid"/>
           <field field_ref="soce"       name="vosaline"   grid_ref="NSOG_T_grid"/>
+          <field field_ref="e3t"                          grid_ref="NSOG_T_grid"/>
+          <field field_ref="ssh"        name="sossheig"   grid_ref="NSOG_T_grid"/>
         </file>
         <file id="file6" name_suffix="_nbio_T" description="biogeochemical variables" >
           <field field_ref="NO3"      name="nitrate"              grid_ref="NSOG_T_grid"/>
@@ -57,7 +59,8 @@
           <field field_ref="GLS_P"         grid_ref="NSOG_W_grid"/>
           <field field_ref="eps"           grid_ref="NSOG_W_grid"/>
           <field field_ref="bfN2"          grid_ref="NSOG_W_grid"/>
-          <field field_ref="woce"    name="vovecrtz"    grid_ref="NSOG_W_grid"/>
+          <field field_ref="woce"   name="vovecrtz"         grid_ref="NSOG_W_grid"/>
+          <field field_ref="avt"    name="vert_eddy_diff"   grid_ref="NSOG_W_grid"/>
         </file>
       </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" split_freq="1d" enabled=".TRUE."/> <!-- 2h files -->
