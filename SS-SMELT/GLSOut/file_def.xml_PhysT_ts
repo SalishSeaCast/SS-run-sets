@@ -9,7 +9,7 @@
       <file_group id="1ts" output_freq="1ts"  output_level="10" enabled=".TRUE."> <!-- 1 time step files -->
         <file id="file1" name_suffix="_nbio_T" description="biogeochemical variables" >
           <field field_ref="NO3"           grid_ref="NSOG_T_grid"/>
-          <field field_ref="e3t"/>
+          <field field_ref="e3t"           grid_ref="NSOG_T_grid"/>
         </file>
         <file id="file2" name_suffix="_dian_W" description="reduced domain N transports" >
           <field field_ref="avt"           grid_ref="NSOG_W_grid"/>
@@ -29,7 +29,7 @@
       <file_group id="1h" output_freq="1h"  output_level="10" enabled=".TRUE."> <!-- 1h files -->
         <file id="file6" name_suffix="_nbio_T" description="biogeochemical variables" >
           <field field_ref="NO3"           grid_ref="NSOG_T_grid"/>
-          <field field_ref="e3t"/>
+          <field field_ref="e3t"           grid_ref="NSOG_T_grid"/>
         </file>
         <file id="file20" name_suffix="_dian_W" description="reduced domain N transports" >
           <field field_ref="avt"           grid_ref="NSOG_W_grid"/>
