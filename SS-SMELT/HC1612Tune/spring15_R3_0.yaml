@@ -1,0 +1,66 @@
+run_id: spring15_R3_0
+config_name: SMELT
+account: rrg-allen
+email: eolson@eoas.ubc.ca
+MPI decomposition: 16x39
+walltime: 12:00:00
+
+paths:
+  # If relative, paths are taken from current directory
+  NEMO code config: $MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $MEOPAR/XIOS-2/
+  runs directory: $SCRATCH/
+
+grid:
+  bathymetry: $PROJECT/SalishSea/hindcast-sys/grid/bathymetry_201702.nc
+  coordinates: $PROJECT/SalishSea/hindcast-sys/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $PROJECT/SalishSea/hindcast-sys/grid/bathymetry_201702.csv
+
+forcing:
+  LiveOcean:
+    link to: $PROJECT/SalishSea/forcing/LiveOcean
+  NEMO-atmos:
+    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
+  bfr_coef.nc:
+    link to: $PROJECT/SalishSea/hindcast-sys/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: $PROJECT/SalishSea/hindcast-sys/grid
+  river_turb:
+    link to: $PROJECT/SalishSea/forcing/rivers/river_turb
+  rivers:
+    link to: $PROJECT/SalishSea/forcing/rivers
+  rivers-climatology:
+    link to: $MEOPAR/NEMO-forcing/rivers-climatology
+  ssh:
+    link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
+  tides:
+    link to: $PROJECT/SalishSea/hindcast-sys/tides
+  tracers:
+    link to: $MEOPAR/NEMO-forcing/tracers
+
+restart:
+  restart.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01jan15/SalishSea_00894240_restart.nc
+  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01jan15/SalishSea_00894240_restart_trc.nc
+
+namelists:
+  namelist_cfg:
+  - ./namelist_cfg_01jan15_50d
+  namelist_top_cfg:
+  - ./namelist_top_cfg
+  namelist_smelt_cfg:
+  - ./namelist_smelt_cfg_Base
+  namelist_smelt_ref:
+  - ./namelist_smelt_ref_R3
+
+output:
+  domaindefs: ../spring2/domain_def.xml
+  fielddefs: ../GLSOut/field_def.xml
+  filedefs: ../HC2rep/file_def.xml.attached
+  iodefs: ../spring2/iodef.xml
+  separate XIOS server: false
+  XIOS servers: 1
+
+vcs revisions:
+  hg:
+  - $MEOPAR/SS-run-sets
+  - $MEOPAR/XIOS-ARCH

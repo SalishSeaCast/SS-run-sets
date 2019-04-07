@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<simulation>
+
+ <context id="nemo" time_origin="1900-01-01 00:00:00" >
+
+    <!--
+============================================================================================================
+=                                  definition of all existing variables                                    =
+=                                            DO NOT CHANGE                                                 =
+============================================================================================================
+    -->
+    <field_definition src="./field_def.xml"/>
+    <!--
+============================================================================================================
+=                                           output files definition                                        =
+=                                            Define your own files                                         =
+=                                         put the variables you want...                                    =
+============================================================================================================
+    -->
+    <file_definition src="./file_def.xml"/>
+    <!--
+============================================================================================================
+= grid definition = = DO NOT CHANGE =
+============================================================================================================
+    -->
+
+   <axis_definition>
+      <axis id="deptht" long_name="Vertical T levels" unit="m" positive="down" />
+      <axis id="depthu" long_name="Vertical U levels" unit="m" positive="down" />
+      <axis id="depthv" long_name="Vertical V levels" unit="m" positive="down" />
+      <axis id="depthw" long_name="Vertical W levels" unit="m" positive="down" />
+      <axis id="nfloat" long_name="Float number"      unit="-" />
+      <axis id="icbcla" long_name="Iceberg class"     unit="-" />
+   </axis_definition>
+
+   <domain_definition src="./domain_def.xml"/>
+
+   <grid_definition>
+     <grid id="grid_T_2D" domain_ref="grid_T" />
+     <grid id="grid_U_2D" domain_ref="grid_U" />
+     <grid id="grid_V_2D" domain_ref="grid_V" />
+     <grid id="grid_W_2D" domain_ref="grid_W" />
+     <grid id="grid_T_3D" domain_ref="grid_T" axis_ref="deptht" />
+     <grid id="grid_U_3D" domain_ref="grid_U" axis_ref="depthu" />
+     <grid id="grid_V_3D" domain_ref="grid_V" axis_ref="depthv" />
+     <grid id="grid_W_3D" domain_ref="grid_W" axis_ref="depthw" />
+   </grid_definition>
+
+  </context>
+
+
+
+ <context id="1_nemo" time_origin="1900-01-01 00:00:00" >
+
+    <!--
+============================================================================================================
+=                                  definition of all existing variables                                    =
+=                                            DO NOT CHANGE                                                 =
+============================================================================================================
+    -->
+    <field_definition src="./field_def.xml"/>
+    <!--
+============================================================================================================
+=                                           output files definition                                        =
+=                                            Define your own files                                         =
+=                                         put the variables you want...                                    =
+============================================================================================================
+    -->
+    <file_definition src="./1_file_def.xml"/>
+    <!--
+============================================================================================================
+= grid definition = = DO NOT CHANGE =
+============================================================================================================
+    -->
+
+   <axis_definition>
+      <axis id="deptht" long_name="Vertical T levels" unit="m" positive="down" />
+      <axis id="depthu" long_name="Vertical U levels" unit="m" positive="down" />
+      <axis id="depthv" long_name="Vertical V levels" unit="m" positive="down" />
+      <axis id="depthw" long_name="Vertical W levels" unit="m" positive="down" />
+      <axis id="nfloat" long_name="Float number"      unit="-" />
+      <axis id="icbcla" long_name="Iceberg class"     unit="-" />
+   </axis_definition>
+
+   <domain_definition src="./1_domain_def.xml"/>
+
+   <grid_definition>
+     <grid id="grid_T_2D" domain_ref="grid_T" />
+     <grid id="grid_U_2D" domain_ref="grid_U" />
+     <grid id="grid_V_2D" domain_ref="grid_V" />
+     <grid id="grid_W_2D" domain_ref="grid_W" />
+     <grid id="grid_T_3D" domain_ref="grid_T" axis_ref="deptht" />
+     <grid id="grid_U_3D" domain_ref="grid_U" axis_ref="depthu" />
+     <grid id="grid_V_3D" domain_ref="grid_V" axis_ref="depthv" />
+     <grid id="grid_W_3D" domain_ref="grid_W" axis_ref="depthw" />
+   </grid_definition>
+
+  </context>
+
+
+<!--
+============================================================================================================
+=  XIOS Server Configuration
+============================================================================================================
+-->
+  <context id="xios">
+    <variable_definition>
+      <!-- We must have buffer_size > jpi*jpj*jpk*8 (with jpi and jpj the subdomain size) -->
+      <variable id="buffer_size"               type="integer">20000000</variable>
+      <variable id="buffer_server_factor_size" type="integer">2</variable>
+      <variable id="print_file"                type="boolean">true</variable>
+      <variable id="info_level"                type="integer">10</variable>
+      <variable id="using_server"              type="boolean">true</variable>
+      <variable id="using_oasis"               type="boolean">false</variable>
+      <variable id="oasis_codes_id"            type="string" >oceanx</variable>
+    </variable_definition>
+  </context>
+
+</simulation>
+

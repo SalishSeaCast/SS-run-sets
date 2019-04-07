@@ -1,0 +1,63 @@
+run_id: orig_4
+config_name: SMELT
+email: eolson@eoas.ubc.ca
+MPI decomposition: 12x26
+walltime: 24:00:00
+
+paths:
+  # If relative, paths are taken from current directory
+  NEMO code config: $MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $MEOPAR/XIOS-2/
+  runs directory: $SCRATCH/
+
+grid:
+  bathymetry: $MEOPAR/NEMO-forcing-new/grid/bathymetry_201702.nc
+  coordinates: $MEOPAR/NEMO-forcing-new/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $MEOPAR/NEMO-forcing-new/grid/bathymetry_201702.csv
+
+forcing:
+  LiveOcean:
+    link to: /home/eolson/MEOPAR/NEMO-forcing-new/LiveOcean
+  NEMO-atmos:
+    link to: $MEOPAR/NEMO-forcing-new/NEMO-atmos
+  bfr_coef.nc:
+    link to: $MEOPAR/NEMO-forcing-new/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: $MEOPAR/NEMO-forcing-new/grid
+  river_turb:
+    link to: $MEOPAR/NEMO-forcing-new/rivers/river_turb
+  rivers:
+    link to: $MEOPAR/NEMO-forcing-new/rivers
+  rivers-climatology:
+    link to: $MEOPAR/NEMO-forcing-new/rivers-climatology
+  ssh:
+    link to: $MEOPAR/NEMO-forcing-new/ssh
+  tides:
+    link to: $MEOPAR/NEMO-forcing-new/tides
+  tracers:
+    link to: $MEOPAR/NEMO-forcing-new/tracers
+
+restart:
+  restart.nc: $SCRATCH/results/orig_3/SalishSea_00298080_restart.nc
+  restart_trc.nc: $SCRATCH/results/orig_3/SalishSea_00298080_restart_trc.nc
+
+namelists:
+  namelist_cfg:
+  - ./namelist_cfg_01apr15_10d
+  namelist_top_cfg:
+  - ./namelist_top_cfg
+  namelist_smelt_cfg:
+  - ./namelist_smelt_cfg_Base
+  namelist_smelt_ref:
+  - ./namelist_smelt_ref_orig
+
+output:
+  domaindefs: ../spring2/domain_def.xml
+  fielddefs: ../spring2/field_def.xml
+  filedefs: ../spring2/file_def.xml.noGridnoDia
+  iodefs: iodef.xml.Orc
+  separate XIOS server: true
+  XIOS servers: 1
+vcs revisions:
+  hg:
+  - $MEOPAR/SS-run-sets

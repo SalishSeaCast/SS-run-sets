@@ -1,0 +1,2 @@
+mkdir runout
+mv SOG* time* std* solver* ocean* output* tracer* runout/

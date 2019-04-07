@@ -1,0 +1,27 @@
+!! Run timing control
+!!
+!! *Note*: The time step is set in the &namdom namelist in the namelist.domain
+!!         file.
+!!
+&namrun        !   Parameters of the run
+!-----------------------------------------------------------------------
+   cn_exp      = "SalishSea"  ! experiment name
+   nn_it000    =    627121    ! first time step
+   nn_itend    =    635761    ! last time step (std 1 day = 2160 re: rn_rdt=40 in &namdom)
+   nn_date0    =  20150626    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
+                              ! used to adjust tides to run date (regardless of restart control)
+   nn_leapy    =       1      ! Leap year calendar (1) or not (0)
+   ln_rstart   =  .true.      ! start from rest (F) or from a restart file (T)
+   nn_euler    =       1      !  = 0 : start with forward time step if ln_rstart=T
+   nn_rstctl   =       0      ! restart control => activated only if ln_rstart = T
+                              !   = 0 nn_date0 read in namelist
+                              !       nn_it000 read in namelist
+                              !   = 1 nn_date0 read in namelist
+                              !       nn_it000 check consistency between namelist and restart
+                              !   = 2 nn_date0 read in restart
+                              !       nn_it000 check consistency between namelist and restart
+   nn_istate   =       1      ! output the initial state (1) or not (0)
+   nn_stock    =    2160      ! frequency of creation of a restart file (modulo referenced to 1)
+   ln_cfmeta   =  .true.      !  output additional data to netCDF files required for compliance with the CF metadata standard
+   ln_clobber  =  .true.      ! clobber (overwrite) an existing file
+&end
