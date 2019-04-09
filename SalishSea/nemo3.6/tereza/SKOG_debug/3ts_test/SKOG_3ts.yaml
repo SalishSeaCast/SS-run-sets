@@ -30,7 +30,7 @@ forcing:
   tides:
     link to: /data/$USER/MEOPAR/tides
   tracers:
-    link to: /data/bmoorema/MEOPAR/tracers
+    link to: /data/$USER/MEOPAR/tracers
   initial_data_file.nc:
     link to: /data/bmoorema/MEOPAR/tracers/initial/Bathy201702_12nov14.nc
   initial_bio_data_file.nc:

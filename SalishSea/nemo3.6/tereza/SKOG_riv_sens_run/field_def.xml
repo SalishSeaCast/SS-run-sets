@@ -816,8 +816,6 @@
        <field id="wind_mag"        long_name="wind_mag"         standard_name="wind_mag"  unit="fill" grid_ref="grid_T_2D" />
        <field id="f_uptake_DIC"        long_name="f_uptake_DIC"         standard_name="f_uptake_DIC"  unit="fill" grid_ref="grid_T_3D" />
        <field id="f_uptake_UC"        long_name="f_uptake_UC"         standard_name="f_uptake_UC"  unit="fill" grid_ref="grid_T_3D" />
-       <field id="f_TA_DEC"        long_name="f_TA_DEC"         standard_name="f_TA_DEC"  unit="fill" grid_ref="grid_T_3D" />
-       <field id="f_TA_INC"        long_name="f_TA_INC"         standard_name="f_TA_INC"  unit="fill" grid_ref="grid_T_3D" />
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
        <field id="Num"         long_name="Number of organic particles"              unit="1" />
        <field id="Num_E3T"     long_name="Num * E3T"                                unit="m"  > Num * e3t </field >

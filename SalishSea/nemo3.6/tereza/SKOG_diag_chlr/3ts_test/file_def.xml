@@ -51,6 +51,8 @@
           <field field_ref="f_co2flux" name="co2_flux_mmol_m2_s" />
           <field field_ref="f_uptake_DIC" name="uptake_DIC" /> 
           <field field_ref="f_uptake_UC" name="uptake_UC" />
+          <field field_ref="f_TA_INC" name="f_TA_INC" />
+          <field field_ref="f_TA_DEC" name="f_TA_DEC" />
         </file>
         <file id="file6" name_suffix="_prod_T" description="smelt diagnostics A" >
           <field field_ref="PPDIAT"      />
