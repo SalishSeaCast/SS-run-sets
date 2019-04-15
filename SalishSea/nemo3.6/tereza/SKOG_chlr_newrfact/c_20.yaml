@@ -37,8 +37,8 @@ forcing:
     link to: /home/tjarnik/project/tjarnik/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
 restart:
-  restart.nc: /scratch/tjarnik/RF13/SKOG_03749760_restart.nc
-  restart_trc.nc: /scratch/tjarnik/RF13/SKOG_03749760_restart_trc.nc
+  restart.nc: /scratch/tjarnik/RF19/SKOG_03944160_restart.nc
+  restart_trc.nc: /scratch/tjarnik/RF19/SKOG_03944160_restart_trc.nc
 
 grid:            
   bathymetry: /home/tjarnik/project/tjarnik/MEOPAR/grid/bathymetry_201702.nc
@@ -47,7 +47,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time14
+  - ./namelist.time20
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
