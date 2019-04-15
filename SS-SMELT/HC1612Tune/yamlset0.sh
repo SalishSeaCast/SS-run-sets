@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN="R"
+NEWRUN="R5"
 OLDRUN="R3"
 PREFIX=spring15
 
