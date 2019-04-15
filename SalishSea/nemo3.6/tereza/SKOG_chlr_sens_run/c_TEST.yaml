@@ -1,9 +1,9 @@
 email: tjarnik@gmail.com
-account: def-allen
+account: rrg-allen
 MPI decomposition: 16x41
 config_name: SKOG
 run_id: three_21nov14
-walltime: 11:00:00
+walltime: 6:00:00
 
 forcing:
   LiveOcean:
@@ -37,8 +37,9 @@ forcing:
     link to: /home/tjarnik/project/tjarnik/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
 restart:
-  restart.nc: /scratch/tjarnik/RF13/SKOG_03749760_restart.nc
-  restart_trc.nc: /scratch/tjarnik/RF13/SKOG_03749760_restart_trc.nc
+  restart.nc: /scratch/dlatorne/hindcast_v201812/21jan18/SalishSea_03328560_restart.nc
+  restart_trc.nc: /scratch/dlatorne/hindcast_v201812/21jan18/SalishSea_03328560_restart_trc.nc
+
 
 grid:            
   bathymetry: /home/tjarnik/project/tjarnik/MEOPAR/grid/bathymetry_201702.nc
@@ -47,7 +48,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time14
+  - ./namelist.timeTEST
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
@@ -64,7 +65,7 @@ namelists:
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_physics
   namelist_smelt_cfg:
   - ./namelist_smelt_biology
-  - ./namelist_smelt_rivers
+  - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_smelt_rivers
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_smelt_skog
 
 output:
