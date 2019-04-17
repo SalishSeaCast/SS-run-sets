@@ -1,9 +1,9 @@
 email: tjarnik@gmail.com
 account: rrg-allen
-MPI decomposition: 16x41
+MPI decomposition: 15x32
 config_name: SKOG
-run_id: three_21nov14
-walltime: 6:00:00
+run_id: gtest_8N_DET
+walltime: 3:00:00
 
 forcing:
   LiveOcean:
@@ -48,7 +48,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.timeTEST
+  - ./namelist.time1
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
@@ -65,7 +65,7 @@ namelists:
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_physics
   namelist_smelt_cfg:
   - ./namelist_smelt_biology
-  - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_smelt_rivers
+  - ./namelist_smelt_rivers
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_smelt_skog
 
 output:
@@ -74,7 +74,7 @@ output:
   domaindefs: /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/domain_def.xml
   fielddefs: ./field_def.xml
   iodefs: /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/iodef.xml
-  separate XIOS server: false
+  separate XIOS server: true
 
 paths:
   NEMO code config: /home/tjarnik/project/tjarnik/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
