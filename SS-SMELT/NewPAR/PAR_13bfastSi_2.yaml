@@ -1,4 +1,4 @@
-run_id: PAR1_3_b_3
+run_id: PAR13bfastSi_2
 config_name: SMELTPAR
 account: rrg-allen
 email: eolson@eoas.ubc.ca
@@ -28,8 +28,8 @@ forcing:
     link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
-  restart.nc: $SCRATCH/results/PAR_1_3_b_2/SalishSea_02797200_restart.nc
-  restart_trc.nc: $SCRATCH/results/PAR_1_3_b_2/SalishSea_02797200_restart_trc.nc
+  restart.nc: $SCRATCH/results/PAR13bfastSi_1/SalishSea_02689200_restart.nc
+  restart_trc.nc: $SCRATCH/results/PAR13bfastSi_1/SalishSea_02689200_restart_trc.nc
 
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
@@ -38,13 +38,13 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist_cfg_31may17_50d
+  - ./namelist_cfg_11apr17_50d
   namelist_top_cfg:
   - ../HC1612Tune/namelist_top_cfg
   namelist_smelt_cfg:
   - ./namelist_smelt_cfg_Base
   namelist_smelt_ref:
-  - ./namelist_smelt_ref_HC1812_1_3_b
+  - ./namelist_smelt_ref_HC1812_13bfastSi
 output:
   XIOS servers: 1
   filedefs: ./file_def.xml_PAR
