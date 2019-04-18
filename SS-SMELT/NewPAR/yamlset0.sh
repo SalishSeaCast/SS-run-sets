@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN="1_3_b"
+NEWRUN="13bslowSi"
 OLDRUN="1_3"
 PREFIX=PAR
 

@@ -28,8 +28,8 @@ forcing:
     link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
-  restart.nc: $SCRATCH/results/PAR1_3_b_0/SalishSea_02581200_restart.nc
-  restart_trc.nc: $SCRATCH/results/PAR1_3_b_0/SalishSea_02581200_restart_trc.nc
+  restart.nc: $SCRATCH/results/PAR_1_3_b_0/SalishSea_02581200_restart.nc
+  restart_trc.nc: $SCRATCH/results/PAR_1_3_b_0/SalishSea_02581200_restart_trc.nc
 
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
