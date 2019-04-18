@@ -66,7 +66,7 @@ namelists:
   namelist_smelt_cfg:
   - ./namelist_smelt_biology
   - ./namelist_smelt_rivers
-  - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_smelt_skog
+  - ./namelist_smelt_skog
 
 output:
   XIOS servers: 1
