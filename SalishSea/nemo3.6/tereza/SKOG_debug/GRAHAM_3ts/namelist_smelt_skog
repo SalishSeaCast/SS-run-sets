@@ -17,6 +17,7 @@
    ln_co2sys  =  .false. ! run the co2sys module or the original PISCES module
    atcco2     =  409.    ! Constant value atmospheric pCO2 - ln_co2int = F
    clname     =  'atcco2.txt'  ! Name of atm pCO2 file - ln_co2int = T
+   model_year =  2015    ! model year for calculating co2
    LR_slope   =  2.149     !  linear regression + gaussian fit 
    LR_int     =  -3929.359 !  to seasonal cycle of atmospheric co2
    ctr        =  161.898   !  based on scripps observations at ptbarrow and lajolla
