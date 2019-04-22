@@ -55,7 +55,7 @@
         </file> 
         <file id="file15" name_suffix="_dian_U" description="Chem transports">
 	  <field field_ref="DIC_UT"        name="DIC_UT"/>
-	  <field field_ref="TA_UT"         name="DIC_UT"/>
+	  <field field_ref="TA_UT"         name="TA_UT"/>
         </file>
          <file id="file16" name_suffix="_dian_V" description="Chem transports">
           <field field_ref="DIC_VT"        name="DIC_VT"/>
