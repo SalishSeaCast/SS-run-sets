@@ -1,8 +1,8 @@
 email: tjarnik@gmail.com
-account: rrg-allen
+account: def-allen
 MPI decomposition: 14x29
 config_name: SKOG
-run_id: BR7
+run_id: BR8
 walltime: 11:00:00
 
 forcing:
@@ -37,8 +37,8 @@ forcing:
     link to: /home/tjarnik/project/tjarnik/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
 restart:    
-  restart.nc: /scratch/allen/SKOG/31may15/SKOG_01283040_restart.nc
-  restart_trc.nc: /scratch/allen/SKOG/31may15/SKOG_01283040_restart_trc.nc
+  restart.nc: /scratch/allen/SKOG/30jun15/SKOG_01347840_restart.nc
+  restart_trc.nc: /scratch/allen/SKOG/31may15/SKOG_01347840_restart_trc.nc
 
 
 
@@ -49,7 +49,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time7
+  - ./namelist.time8
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
