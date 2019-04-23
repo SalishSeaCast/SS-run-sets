@@ -13,12 +13,12 @@ MPI decomposition: 5x19
 # For runs on systems that use qsub/PBS/TORQUE
 #
 # If relative, paths are taken from current directory
-run_id: SalishSeaPond_cape1_S4d
+run_id: SalishSeaPond_S4d05ms_halocline20m_rhosurf1020
 # Maximum run time requested/allowed for job
 # Too low and you job will be terminated before it finishes
 # Too high and you will have to wait longer on the queue for your job to start
 # You have to experiment to find the "just right" value
-walltime: 02:00:00
+walltime: 03:00:00
 # Email address to send job begin, end, and abort notifications to
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: bmoorema@eoas.ubc.ca
@@ -32,13 +32,13 @@ paths:
   XIOS: $HOME/MEOPAR/XIOS-2
   # Directory in which to create temporary run directories
   # Typically NOT inside a version control repository
-  runs directory: $SCRATCH/Results/Pond/SalishSeaPond_cape1_S4d
+  runs directory: $SCRATCH/Results/Lake/SalishSeaPond_S4d05ms_halocline20m_rhosurf1020
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
   # path below
-  coordinates: $HOME/MEOPAR/grid/idealized/coordinates_pond.nc
-  bathymetry: $HOME/MEOPAR/grid/idealized/bathymetry_pond_cape1.nc
+  coordinates: $HOME/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  bathymetry: $HOME/MEOPAR/grid/bathymetry_201702.nc
   # Optional path/filename for land processor elimination MPI-LPE mapping
   # file that matches bathymetry;
   # If "land processor elimination:" key is absent or has the value "False",
@@ -73,14 +73,17 @@ namelists:
   # If relative, paths are taken from current directory
   namelist_cfg:
     - ../namelist.time
-    - ../namelist.domain.ideal
-    - ../namelist.atmos_rivers.S4d
+    - ../namelist.domain.lake
+    - ../namelist.atmos_rivers
     - ../namelist.light
-    - ../namelist.bottom.200x
+    - ../namelist.bottom
     - ../namelist.tracer
     - ../namelist.dynamics
     - ../namelist.vertical
     - ../namelist.compute
+    - ../namelist.awind.S4d05ms
+    - ../namelist.istate.halocline20m
+    - ../namelist.istate.rhosurf1020
   namelist_top_cfg:
     - ../namelist_top_cfg
 
