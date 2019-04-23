@@ -30,8 +30,8 @@ forcing:
 
 
 restart:
-  restart.nc: $SCRATCH/SKOG/01may15/SKOG_01218240_restart.nc
-  restart_trc.nc: $SCRATCH/SKOG/01may15/SKOG_01218240_restart_trc.nc
+  restart.nc: $SCRATCH/SKOG/16may15/SKOG_01218240_restart.nc
+  restart_trc.nc: $SCRATCH/SKOG/16may15/SKOG_01218240_restart_trc.nc
 
 grid:            
   bathymetry: $HOME/MEOPAR/grid/bathymetry_201702.nc
