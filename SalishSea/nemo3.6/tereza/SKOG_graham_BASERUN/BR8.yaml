@@ -1,9 +1,9 @@
 email: tjarnik@gmail.com
-account: def-allen
+account: rrg-allen
 MPI decomposition: 14x29
 config_name: SKOG
 run_id: BR8
-walltime: 11:00:00
+walltime: 11:50:00
 
 forcing:
   LiveOcean:
