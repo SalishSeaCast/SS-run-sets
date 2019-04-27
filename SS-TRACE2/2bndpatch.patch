@@ -1,0 +1,27 @@
+*** namelist_cfg_07mar17	2017-08-31 18:21:54.000000000 -0700
+--- namelist_cfg_07mar17_2bnd	2017-09-02 17:23:40.000000000 -0700
+***************
+*** 189,197 ****
+  &namtra_qsr    !   penetrative solar radiation
+  !-----------------------------------------------------------------------
+     ln_qsr_rgb  = .false.  !  RGB (Red-Green-Blue) light penetration
+!    ln_qsr_2bd  = .false.   !  2 bands              light penetration
+!    ln_qsr_bio  = .true.   !  bio-model light penetration
+     nn_chldta   = 0        !  RGB : Chl data (=1) or cst value (=0)
+  &end
+  
+  !-----------------------------------------------------------------------
+--- 189,201 ----
+  &namtra_qsr    !   penetrative solar radiation
+  !-----------------------------------------------------------------------
+     ln_qsr_rgb  = .false.  !  RGB (Red-Green-Blue) light penetration
+!    ln_qsr_2bd  = .true.    !  2 bands              light penetration
+!    ln_qsr_bio  = .false.  !  bio-model light penetration
+     nn_chldta   = 0        !  RGB : Chl data (=1) or cst value (=0)
++    rn_abs      =   0.70    !  RGB & 2 bands: fraction of light (rn_si1)
++    rn_si0      =   0.431    !  RGB & 2 bands: shortess depth of extinction
++    rn_si1      =   2.92    !  2 bands: longest depth of extinction
++ 
+  &end
+  
+  !-----------------------------------------------------------------------

@@ -1,0 +1,80 @@
+# salishsea command processor run description example for NEMO-3.6
+#
+# Salish Sea Long River Domain (#6) with:
+#     Tidal forcing
+#     Salinity and Temperate at Both open boundaries
+#  Rivers run-off forcing
+#  Atmospheric forcing with operational GEM2.5 model products
+#    Constrained to no solid precipitation
+#  SOG biological model
+
+config_name: TRACE
+
+# How is the domain to be distributed over the processors in the
+# i (longitude) and j (latitude) directions?
+# These values are used to set the nammpp namelist jpni & jpnj values
+# and to set the number of processors and nodes in the PBS script
+MPI decomposition: 11x26
+
+# For runs on systems that use qsub/PBS/TORQUE
+run_id: TRACE6770
+walltime: 30:00:00
+# If missing, email address is set to ${USER}@eos.ubc.ca
+email: eolson@eoas.ubc.ca
+
+paths:
+  # If relative, paths are taken from current directory
+  NEMO-code: /home/eolson/MEOPAR/NEMO6770
+  XIOS: /home/eolson/MEOPAR/XIOS/
+  forcing: /home/eolson/MEOPAR/NEMO-forcing/
+  runs directory: /global/scratch/eolson/ 
+
+grid:
+  # If relative, paths are taken from the grid/ directory in the forcing
+  # path above
+  coordinates: coordinates_seagrid_SalishSea.nc
+  bathymetry: bathy_downonegrid2.nc
+
+forcing:
+  # If relative, paths are taken from forcing path above
+  NEMO-atmos:
+    link to: atmospheric/
+    check link:
+      type: atmospheric
+      namelist filename: namelist_cfg
+  open_boundaries:
+    link to: open_boundaries/
+  rivers:
+    link to: rivers/
+  restart.nc:
+    link to: /home/eolson/MEOPAR/NEMO-forcing/restarts/SalishSea_00241920_restart.nc
+
+namelists:
+  # The namelist section files in the lists below will be concatenated
+  # to create a namelist file whose name is the key under which the files
+  # are listed. The keys are the names of the namelist files that NEMO-3.6
+  # expects.
+  #
+  # The only required key is namelist_cfg.
+  #
+  # If relative, paths are taken from current directory
+  namelist_cfg:
+    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/namelist_cfg.TRACE10dkt20_11x26
+  namelist_ref:
+    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/namelist_ref.TRACE
+  namelist_top_cfg:
+    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/namelist_top_cfg.TRACEtvd
+  namelist_top_ref:
+    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/namelist_top_ref.TRACE
+  namelist_pisces_cfg:
+    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/namelist_pisces_cfg.TRACE0
+  namelist_pisces_ref:
+    - /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/namelist_pisces_ref.TRACE
+
+output:
+  # If relative, paths are taken from current directory
+  domain: /home/eolson/MEOPAR/SS-run-sets/SS-SMELT/iofiles/domain_def.xml
+  fields: /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/field_def.xml.TRACE
+  files: /home/eolson/MEOPAR/SS-run-sets/SS-TRACE/iodef.xml.TRACEOffsetCheck
+  separate XIOS server: True
+  XIOS servers: 1

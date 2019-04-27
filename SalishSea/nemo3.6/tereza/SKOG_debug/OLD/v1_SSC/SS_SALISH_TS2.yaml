@@ -1,0 +1,87 @@
+MPI decomposition: 1x7
+walltime: 06:00:00
+run_id: 01sept16nowcast-dev
+config_name: SalishSeaCast 
+email: tjarnik@gmail.com
+
+forcing:
+  LiveOcean:
+    link to: /results/forcing/LiveOcean/boundary_conditions/
+  NEMO-atmos:
+    link to: /results/forcing/atmospheric/GEM2.5/operational
+  bfr_coef.nc:
+    link to: /data/tjarniko/MEOPAR/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: /data/tjarniko/MEOPAR/grid
+  rivers:
+    link to: /results/forcing/rivers
+  rivers-climatology:
+    link to: /data/tjarniko/MEOPAR/rivers-climatology
+  river_turb:
+    link to: /results/forcing/rivers/river_turb
+  ssh:
+    link to: /results/forcing/sshNeahBay/obs
+  tides:
+    link to: /data/tjarniko/MEOPAR/tides
+  tracers:
+    link to: /data/tjarniko/MEOPAR/tracers
+  initial_data_file.nc:
+    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/SalishSea_01684800_restart.nc
+  initial_bio_data_file.nc:
+    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/SalishSea_01684800_restart_trc.nc
+  initial_car_data_file.nc:
+    link to: /data/tjarniko/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tereza/INIT_NC/SalishSea_01684800_restart_trc.nc
+
+
+
+grid:
+  bathymetry: /data/tjarniko/MEOPAR/grid/bathymetry_201702.nc
+  coordinates: /data/tjarniko/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+#  land processor elimination: /data/tjarniko/MEOPAR/grid/bathymetry_201702.csv
+
+namelists:
+  namelist_cfg:
+  - ./namelist.time_allTS
+  - /data/tjarniko/MEOPAR/SS-run-sets/v201702/namelist.domain
+  - /data/tjarniko/MEOPAR/SS-run-sets/v201702/hindcast/namelist.atmos_rivers
+  - /data/tjarniko/MEOPAR/SS-run-sets/v201702/namelist.light
+  - /data/tjarniko/MEOPAR/SS-run-sets/v201702/hindcast/namelist.lateral
+  - /data/tjarniko/MEOPAR/SS-run-sets/v201702/namelist.bottom
+  - /data/tjarniko/MEOPAR/SS-run-sets/v201702/hindcast/namelist.tracer
+  - /data/tjarniko/MEOPAR/SS-run-sets/v201702/namelist.dynamics
+  - /data/tjarniko/MEOPAR/SS-run-sets/v201702/namelist.vertical
+  - /data/tjarniko/MEOPAR/SS-run-sets/v201702/namelist.compute
+  namelist_smelt_cfg:
+  - ./namelist_smelt_biology
+  - ./namelist_smelt_rivers.SKOG
+  - ./namelist_smelt_skog
+  namelist_top_cfg:
+  - ./namelist_top_coldstart_01jan16.SKOG
+  - ./namelist_top_TDBorig
+  - ./namelist_top_physics
+
+output:
+  XIOS servers: 1
+  domaindefs: /data/tjarniko/MEOPAR/SS-run-sets/v201702/domain_def.xml
+  fielddefs: /data/tjarniko/MEOPAR/SS-run-sets/v201702/field_def.xml
+  filedefs: /data/tjarniko/MEOPAR/SS-run-sets/v201702/hindcast/file_def_dailysplit_upTrac.xml
+  iodefs: /data/tjarniko/MEOPAR/SS-run-sets/v201702/iodef.xml
+  separate XIOS server: true
+
+paths:
+  NEMO code config: /data/tjarniko/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: /data/tjarniko/MEOPAR/XIOS-2
+  runs directory: /data/tjarniko/results/
+
+vcs revisions:
+  hg:
+  - /data/tjarniko/MEOPAR/grid
+  - /data/tjarniko/MEOPAR/NEMO-Cmd
+  - /data/tjarniko/MEOPAR/rivers-climatology
+  - /data/tjarniko/MEOPAR/SalishSeaCmd
+  - /data/tjarniko/MEOPAR/SS-run-sets
+  - /data/tjarniko/MEOPAR/tides
+  - /rdata/tjarniko/MEOPAR/tracers
+  - /data/tjarniko/MEOPAR/XIOS-ARCH
+
+

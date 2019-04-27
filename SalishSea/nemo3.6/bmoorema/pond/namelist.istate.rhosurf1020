@@ -1,0 +1,13 @@
+!! Domain configuration
+!!
+&namtsa        !   analytical : Temperature  & Salinity
+!-----------------------------------------------------------------------
+rn_istate_tsurf      =  9.                  !  Surface temperature
+rn_istate_tdeep      =  9.                  !  Deep temperature
+rn_istate_tdecay     =  0.                  !  T interface decay (controls max gradient)
+rn_istate_tslope     =  0.                  !  T slope below halocline
+rn_istate_ssurf      = 26.                  !  Surface salinity
+rn_istate_sdeep      = 30.                  !  Deep salinity
+rn_istate_sdecay     = -1.4                 !  S interface decay (controls max gradient)
+rn_istate_sslope     =  0.01                !  S slope below halocline
+&end

@@ -1,0 +1,155 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+! PISCES  (key_pisces) cfg namelist (see below for key_pisces_reduced)
+!!              1  - air-sea exchange                         (nampisext)
+!!              2  - biological parameters                    (nampisbio)
+!!              3  - parameters for nutrient limitations      (nampislim)
+!!              4  - parameters for phytoplankton             (nampisprod,nampismort)
+!!              5  - parameters for zooplankton               (nampismes,nampiszoo)
+!!              6  - parameters for remineralization          (nampisrem)
+!!              7  - parameters for calcite chemistry         (nampiscal)
+!!              8  - parameters for inputs deposition         (nampissed)
+!!              9  - parameters for Kriest parameterization   (nampiskrp, nampiskrs)
+!!              10 - additional 2D/3D  diagnostics            (nampisdia)
+!!              11 - Damping                                  (nampisdmp)
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisbio     !   biological parameters
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisprod     !   parameters for phytoplankton growth
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_R_diat            = 3.60E-05    !: 1/s
+   zz_rate_R_myri            = 0.9E-05    !: 1/s
+   zz_rate_R_nano            = 0.9E-05    !: 1/s
+   zz_rate_maxtemp_diat      = 26.0         !: deg C
+   zz_rate_maxtemp_myri      = 31.0         !: deg C
+   zz_rate_maxtemp_nano      = 31.0         !: deg C
+   zz_rate_temprange_diat    = 14.0          !: deg C
+   zz_rate_temprange_myri    = 13.0          !: deg C
+   zz_rate_temprange_nano    = 13.0          !: deg C
+   zz_rate_Iopt_diat         = 50.000       !: W/m^2
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampissbc
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!              !  file name          ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !                     !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_riverno3  ='bio_climatology/rivers_bio_tracers',         24,            'no3',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_rivernh4  ='bio_climatology/rivers_bio_tracers',         24,            'nh4',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_riversil  ='bio_climatology/rivers_bio_tracers',         24,            'sil',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_riverdia  ='bio_climatology/rivers_bio_tracers',         24,            'dia',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_riverphy  ='bio_climatology/rivers_bio_tracers',         24,            'phy',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_rivermes  ='bio_climatology/rivers_bio_tracers',         24,            'mes',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_riverzoo  ='bio_climatology/rivers_bio_tracers',         24,            'zoo',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_riverdoc  ='bio_climatology/rivers_bio_tracers',         24,            'don',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_riverpoc  ='bio_climatology/rivers_bio_tracers',         24,            'pon',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_riverdsi  ='bio_climatology/rivers_bio_tracers',         24,            'bsi',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_rivertra  ='bio_climatology/rivers_bio_tracers',         24,            'tur',       .true.,      .true.,  'daily', '',        '',        ''
+   sn_turb      ='river_turb/riverTurbDaily2',                   24,           'turb',       .true.,     .false.,  'daily', '',        '',        ''
+   cn_dir       = 'rivers/'  ! root directory for the location of the runoff files
+   ln_river = .true.
+   ln_turb = .true.
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampismort     !   parameters for phytoplankton sinks
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,i
+   zz_rate_pico_Rm         = 0.050E-06 ! pico-phyto natural mortality
+   zz_rate_myri_Rm         = 0.070E-06 ! pico-phyto natural mortality
+   zz_rate_micro_Rm        = 0.065E-06 ! micro-phyto natural mortality
+   zz_frac_waste_FNM_NH    = 0.05      ! waste fraction from pico-phyto natural mortality to NH
+   zz_frac_waste_FNM_DON   = 0.465      ! waste fraction from pico-phyto natural mortality to DON
+   zz_frac_waste_FNM_PON   = 0.465      ! waste fraction from pico-phyto natural mortality to PON
+   zz_frac_waste_FNM_Ref   = 0.02      ! waste fraction from pico-phyto natural mort to refractory
+   zz_frac_waste_NNM_NH    = 0.05      ! waste fraction from pico-phyto natural mortality to NH
+   zz_frac_waste_NNM_DON   = 0.465      ! waste fraction from pico-phyto natural mortality to DON
+   zz_frac_waste_NNM_PON   = 0.465      ! waste fraction from pico-phyto natural mortality to PON
+   zz_frac_waste_NNM_Ref   = 0.02      ! waste fraction from pico-phyto natural mort to refractory
+   zz_frac_waste_DNM_NH    = 0.05      ! waste fraction from micro-phyto natural mortality to NH
+   zz_frac_waste_DNM_DON   = 0.465      ! waste fraction from micro-phyto natural mortality to DON
+   zz_frac_waste_DNM_PON   = 0.465      ! waste fraction from micro-phyto natural mortality to PON
+   zz_frac_waste_DNM_Ref   = 0.02      ! waste fraction from micro-phyto natural mort to refractory
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampismes     !   parameters for M. rubrum
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_frac_waste_FEN_NH            = 0.05               !:
+   zz_frac_waste_FEN_DON           = 0.465               !waste fraction from mesorub grazing picophyto to DON
+   zz_frac_waste_FEN_PON           = 0.465               !waste fraction from mesorub grazing picophyto to PON
+/
+&nampismezo     !   parameters for microzooplankton
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_frac_waste_MNM_NH             = 0.05          ! waste fraction from mesozoo natural mortality to NH
+   zz_frac_waste_MNM_DON            = 0.465       ! waste fraction from mesozoo natural mortality to DON
+   zz_frac_waste_MNM_PON            = 0.465       ! waste fraction from mesozoo natural mortality to PON
+   zz_frac_waste_MEX_NH             = 0.3        ! waste fraction from mesozoo excretion to NH
+   zz_frac_waste_MEX_DON            = 0.3        ! waste fraction from mesozoo excretion to DON
+   zz_frac_waste_MEX_PON            = 0.4         ! waste fraction from mesozoo excretion to PON
+   zz_frac_waste_PEM_NH             = 0.0         ! waste fraction from mesozoo grazing PON to NH
+   zz_frac_waste_PEM_DON            = 0.0         ! waste fraction from mesozoo grazing PON to DON
+   zz_frac_waste_PEM_PON            = 1.0         ! waste fraction from mesozoo grazing PON to PON
+   zz_frac_waste_DEM_NH             = 0.05        ! waste fraction from mesozoo grazing microphyto to NH #  Alain, excretion rate to growth rate
+   zz_frac_waste_DEM_DON            = 0.465       ! waste fraction from mesozoo grazing microphyto to DON# Denman and Pena about 1/2 to dissolved
+   zz_frac_waste_DEM_PON            = 0.465       ! waste fraction from mesozoo grazing microphyto to PON
+   zz_frac_waste_FEM_NH             = 0.05        ! waste fraction from mesozoo grazing picophyto to NH
+   zz_frac_waste_FEM_DON            = 0.465       ! waste fraction from mesozoo grazing picophyto to DON
+   zz_frac_waste_FEM_PON            = 0.465       ! waste fraction from mesozoo grazing picophyto to PON
+   zz_frac_waste_ZEM_NH             = 0.05        ! waste fraction from mesozoo grazing microzoo to NH
+   zz_frac_waste_ZEM_DON            = 0.465       ! waste fraction from mesozoo grazing microzoo to DON
+   zz_frac_waste_ZEM_PON            = 0.465       ! waste fraction from mesozoo grazing microzoo to PON
+   zz_frac_waste_NEM_NH             = 0.05        ! waste fraction from mesozoo grazing nanophyto to NH
+   zz_frac_waste_NEM_DON            = 0.465       ! waste fraction from mesozoo grazing nanophyto to DON
+   zz_frac_waste_NEM_PON            = 0.465       ! waste fraction from mesozoo grazing nanophyto to PON
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampiszoo     !   parameters for microzooplankton
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_uzoo_R               = 0.90E-05   ! 1/s micro-phyto maximum growth rate # Hitch
+   zz_rate_uzoo_Rm              = 0.70E-06   !uM N / s microzooplankton natural mortality rate @ 20 deg C
+   zz_frac_waste_PEZ_NH         = 0.0        ! waste fraction from microzoo grazing PON to NH
+   zz_frac_waste_PEZ_DON        = 0.0        !waste fraction from microzoo grazing PON to DON
+   zz_frac_waste_PEZ_PON        = 1.0        !waste fraction from microzoo grazing PON to PON
+   zz_frac_waste_DEZ_NH         = 0.05       ! waste fraction from microzoo grazing microphyto to NH
+   zz_frac_waste_DEZ_DON        = 0.465      !waste fraction from microzoo grazing microphyto to DON
+   zz_frac_waste_DEZ_PON        = 0.465      !waste fraction from microzoo grazing microphyto to PON
+   zz_frac_waste_NEZ_NH         = 0.05       ! waste fraction from microzoo grazing nanophyto to NH
+   zz_frac_waste_NEZ_DON        = 0.465      !waste fraction from microzoo grazing nanophyto to DON
+   zz_frac_waste_NEZ_PON        = 0.465      !waste fraction from microzoo grazing nanophyto to PON
+   zz_frac_waste_FEZ_NH         = 0.05       ! waste fraction from microzoo grazing picophyto to NH
+   zz_frac_waste_FEZ_DON        = 0.465      !waste fraction from microzoo grazing picophyto to DON
+   zz_frac_waste_FEZ_PON        = 0.465      !waste fraction from microzoo grazing picophyto to PON
+   zz_frac_waste_ZEZ_NH         = 0.05       ! 
+   zz_frac_waste_ZEZ_DON        = 0.465      !waste fraction from microzoo grazing microzoo to DON
+   zz_frac_waste_ZEZ_PON        = 0.465      !waste fraction from microzoo grazing microzoo to PON
+   zz_frac_waste_ZNM_NH         = 0.05        !waste fraction from micro-zoo natural mortality to DON
+   zz_frac_waste_ZNM_DON        = 0.465        !waste fraction from micro-zoo natural mortality to DON
+   zz_frac_waste_ZNM_PON        = 0.465        !waste fraction from micro-zoo natural mortality to PON
+   zz_frac_waste_ZEX_NH         = 0.3      !waste fraction from micro-zoo excretion to DON
+   zz_frac_waste_ZEX_DON        = 0.3       !waste fraction from micro-zoo excretion to DON
+   zz_frac_waste_ZEX_PON        = 0.4        !waste fraction from micro-zoo excretion to PON
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisdia     !   additional 2D/3D tracers diagnostics
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!              !    name   !           title of the field          !     units      !
+!              !           !                                       !                !
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisdmp     !  Damping
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampismass     !  Mass conservation
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisopt     !  Sinking of bio groups
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampissink     !  Sinking of bio groups
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_w_sink_D_PON = 5.6e-5        ! m/s PON detritus sinking rate # Jeffery quoting Dune and Bacon
+   zz_w_sink_D_bSi = 5.6e-5        ! m/s  biogenic silicon detritus sinking rate # match NO3 particles
+/
+

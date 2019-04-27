@@ -1,0 +1,42 @@
+# salishsea command processor run description for Salish Sea case
+#
+# Salish Sea full domain with:
+#   Stratification from nov spin up file
+#   Open, unstructured western boundary across Strait of Juan de Fuca
+#     Tidal forcing at north and west, flux corrected and phase shifted
+#     SSH forcing at north and west
+#     No temperature and salinity forcing
+#   Monthly river run-off
+#   Atmospheric forcing with CGRF products
+#     Constrained to no solid precipitation
+
+config_name: SalishSea
+
+run_id: feb2006
+walltime: 21:00:00
+email: nsoontie@eos.ubc.ca
+
+paths:
+  NEMO-code: ../../../../NEMO-code/
+  forcing: ../../../../NEMO-forcing/
+  runs directory: ../../../../SalishSea/
+
+grid:
+  coordinates: coordinates_seagrid_SalishSea.nc
+  bathymetry: bathy_meter_SalishSea2.nc
+
+forcing:
+  atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos
+  initial conditions: /home/dlatorne/MEOPAR/SalishSea/spin-up/31jan9feb/
+  open boundaries: open_boundaries/
+  rivers: rivers/
+
+namelists:
+  - namelist.feb2006.time
+  - namelist.feb2006.domain
+  - namelist.surface #corrected atmospheric pressure
+  - ../namelist.lateral.corr_tides #original tides
+  - ../namelist.bottom_reduce
+  - namelist.tracers
+  - namelist.dynamics
+  - namelist.compute.6x14

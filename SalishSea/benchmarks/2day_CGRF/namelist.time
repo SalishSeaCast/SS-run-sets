@@ -1,0 +1,35 @@
+!! Run timing control
+!!
+!! *Note*: The time step is set in the &namdom namelist in the namelist.domain
+!!         file.
+!!
+&namrun        !   Parameters of the run
+!-----------------------------------------------------------------------
+   cn_exp      = "SalishSea"  ! experience name
+   nn_it000    =           0  ! first time step
+   nn_itend    =       17280  ! last time step (std 1 day = 8640 re: rn_rdt in &namdom)
+   nn_date0    =    20091117  ! date at nit_0000 = 1 (format yyyymmdd)
+                              ! used to adjust tides to run date (regardless of restart control)
+   nn_leapy    =       1      ! Leap year calendar (1) or not (0)
+   ln_rstart   =  .true.      ! start from rest (F) or from a restart file (T)
+   nn_rstctl   =       0      ! restart control => activated only if ln_rstart = T
+                              !   = 0 nn_date0 read in namelist
+                              !       nn_it000 read in namelist
+                              !   = 1 nn_date0 read in namelist
+                              !       nn_it000 check consistency between namelist and restart
+                              !   = 2 nn_date0 read in restart
+                              !       nn_it000 check consistency between namelist and restart
+   nn_istate   =       0      ! output the initial state (1) or not (0)
+   nn_stock    =   17280      ! frequency of creation of a restart file (modulo referenced to 1)
+   ln_clobber  =  .true.      ! clobber (overwrite) an existing file
+&end
+
+&nam_diaharm   !   Harmonic analysis of tidal constituents ('key_diaharm')
+!-----------------------------------------------------------------------
+    nit000_han =      1  ! First time step used for harmonic analysis
+    nitend_han =  17280  ! Last time step used for harmonic analysis
+    nstep_han  =     90  ! Time step frequency for harmonic analysis
+    !! Names of tidal constituents
+    tname(1)   = 'K1'
+    tname(2)   = 'M2'
+&end

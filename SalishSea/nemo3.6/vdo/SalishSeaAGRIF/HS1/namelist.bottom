@@ -1,0 +1,48 @@
+!!======================================================================
+!!                 ***  Bottom boundary condition  ***
+!!======================================================================
+!!   nambfr        bottom friction
+!!   nambbc        bottom temperature boundary condition
+!!   nambbl        bottom boundary layer scheme               use          ("key_trabbl")
+!!======================================================================
+!
+!-----------------------------------------------------------------------
+&nambfr        !   bottom friction
+!-----------------------------------------------------------------------
+   nn_bfr      =    2       !  type of bottom friction :   = 0 : free slip,  = 1 : linear friction
+                            !                              = 2 : nonlinear friction
+   rn_bfri1    =    4.e-4   !  bottom drag coefficient (linear case)
+   rn_bfri2    =    7.5e-3  !  bottom drag coefficient (non linear case). Minimum coeft if ln_loglayer=T
+   rn_bfri2_max =   2.      !  max. bottom drag coefficient (non linear case and ln_loglayer=T)
+   rn_bfeb2    =    2.5e-3  !  bottom turbulent kinetic energy background  (m2/s2)
+   rn_bfrz0    =    0.07    !  bottom roughness [m] if ln_loglayer=T
+   ln_bfr2d    = .true.     !  horizontal variation of the bottom friction coef (read a 2D mask file )
+   rn_bfrien   =    400.    !  local multiplying factor of bfr (ln_bfr2d=T)
+   rn_tfri1    =    4.e-4   !  top drag coefficient (linear case)
+   rn_tfri2    =    2.5e-3  !  top drag coefficient (non linear case). Minimum coeft if ln_loglayer=T
+   rn_tfri2_max =   1.e-1   !  max. top drag coefficient (non linear case and ln_loglayer=T)
+   rn_tfeb2    =    0.0     !  top turbulent kinetic energy background  (m2/s2)
+   rn_tfrz0    =    3.e-3   !  top roughness [m] if ln_loglayer=T
+   ln_tfr2d    = .false.    !  horizontal variation of the top friction coef (read a 2D mask file )
+   rn_tfrien   =    50.     !  local multiplying factor of tfr (ln_tfr2d=T)
+
+   ln_bfrimp   = .true.     !  implicit bottom friction (requires ln_zdfexp = .false. if true)
+   ln_loglayer = .true.     !  logarithmic formulation (non linear case)
+/
+!-----------------------------------------------------------------------
+&nambbc        !   bottom temperature boundary condition
+!-----------------------------------------------------------------------
+   ln_trabbc   = .false.   !  Apply a geothermal heating at the ocean bottom
+   nn_geoflx   =      0    !  geothermal heat flux: = 0 no flux
+                           !     = 1 constant flux
+                           !     = 2 variable flux (read in geothermal_heating.nc in mW/m2)
+   rn_geoflx_cst = 86.4e-3 !  Constant value of geothermal heat flux [W/m2]
+/
+!-----------------------------------------------------------------------
+&nambbl        !   bottom boundary layer scheme
+!-----------------------------------------------------------------------
+   nn_bbl_ldf  =  0     !  diffusive bbl (=1)   or not (=0)
+   nn_bbl_adv  =  0     !  advective bbl (=1/2) or not (=0)
+   rn_ahtbbl   =  0     !  lateral mixing coefficient in the bbl  [m2/s]
+   rn_gambbl   =  10.   !  advective bbl coefficient                 [s]
+/

@@ -1,0 +1,71 @@
+email: sallen@eoas.ubc.ca
+account: def-allen
+MPI decomposition: 14x39
+config_name: SalishSeaCast_Blue
+run_id: sticky_13nov14
+walltime: 01:00:00
+
+forcing:
+  LiveOcean:
+    link to: $PROJECT/SalishSea/forcing/LiveOcean
+  NEMO-atmos:
+    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
+  initial_data_file.nc:
+    link to: $HOME/MEOPAR/tracers/initial/Bathy201702_12nov14.nc
+
+  bfr_coef.nc:
+    link to: $HOME/MEOPAR/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: $HOME/MEOPAR/grid
+  rivers:
+    link to: $PROJECT/SalishSea/forcing/rivers
+  rivers-climatology:
+    link to: $HOME/MEOPAR/rivers-climatology
+  ssh:
+    link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
+  tides:
+    link to: $HOME/MEOPAR/tides
+  tracers:
+    link to: $HOME/MEOPAR/tracers
+
+grid:
+  bathymetry: $HOME/MEOPAR/grid/bathymetry_201702.nc
+  coordinates: $HOME/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $HOME/MEOPAR/grid/bathymetry_201702.csv
+
+namelists:
+  namelist_cfg:
+  - ./namelist.time.13nov14
+  - $HOME/MEOPAR/SS-run-sets/v201702/namelist.domain
+  - $HOME/MEOPAR/SS-run-sets/v201702/hindcast/namelist.atmos_rivers
+  - $HOME/MEOPAR/SS-run-sets/v201702/namelist.light_blue
+  - $HOME/MEOPAR/SS-run-sets/v201702/hindcast/namelist.lateral
+  - $HOME/MEOPAR/SS-run-sets/v201702/namelist.bottom
+  - $HOME/MEOPAR/SS-run-sets/v201702/hindcast/namelist.tracer_sticky
+  - $HOME/MEOPAR/SS-run-sets/v201702/hindcast/namelist.dynamics_sticky
+  - $HOME/MEOPAR/SS-run-sets/v201702/namelist.vertical
+  - $HOME/MEOPAR/SS-run-sets/v201702/namelist.compute
+
+output:
+  XIOS servers: 1
+  filedefs: ../file_def_dailysplit_blue.xml
+  domaindefs: $HOME/MEOPAR/SS-run-sets/v201702/domain_def.xml
+  fielddefs: $HOME/MEOPAR/SS-run-sets/v201702/field_def.xml
+  iodefs: $HOME/MEOPAR/SS-run-sets/v201702/iodef.xml
+  separate XIOS server: true
+
+paths:
+  NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $HOME/MEOPAR/XIOS-2
+  runs directory: /scratch/allen/hindcast
+
+vcs revisions:
+  hg:
+  - $HOME/MEOPAR/grid
+  - $HOME/MEOPAR/NEMO-Cmd
+  - $HOME/MEOPAR/rivers-climatology
+  - $HOME/MEOPAR/SalishSeaCmd
+  - $HOME/MEOPAR/SS-run-sets
+  - $HOME/MEOPAR/tides
+  - $HOME/MEOPAR/tracers
+  - $HOME/MEOPAR/XIOS-ARCH
