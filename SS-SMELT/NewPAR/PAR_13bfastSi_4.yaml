@@ -1,4 +1,4 @@
-run_id: PAR13bfastSi_4
+run_id: PAR_13bfastSi_4
 config_name: SMELTPAR
 account: rrg-allen
 email: eolson@eoas.ubc.ca
@@ -28,8 +28,8 @@ forcing:
     link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
-  restart.nc: $SCRATCH/results/PAR13bfastSi_3b/SalishSea_02905200_restart.nc
-  restart_trc.nc: $SCRATCH/results/PAR13bfastSi_3b/SalishSea_02905200_restart_trc.nc
+  restart.nc: $SCRATCH/results/PAR_13bfastSi_3b/SalishSea_02905200_restart.nc
+  restart_trc.nc: $SCRATCH/results/PAR_13bfastSi_3b/SalishSea_02905200_restart_trc.nc
 
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc

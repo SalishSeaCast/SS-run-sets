@@ -9,7 +9,7 @@
 #SBATCH --output=/scratch/eolson/results/stdout_deflate
 #SBATCH --error=/scratch/eolson/results/stderr_deflate
 
-LOC1=/scratch/eolson/results/PAR1_3_3/
+LOC1=/scratch/eolson/results/PAR_13bfastSi_2/
 
 echo "started at $(date)"
 module load nco/4.6.6
@@ -20,10 +20,10 @@ do
    nccopy -s -4 -d4 $i $filenew'_sm.nc'
 done
 
-for i in ${LOC1}*_sm.nc
-do
-   s=${i%_sm.nc}; 
-   mv $i ${s}.nc;
-done
+#for i in ${LOC1}*_sm.nc
+#do
+#   s=${i%_sm.nc}; 
+#   mv $i ${s}.nc;
+#done
 
 echo "Results deflation ended at $(date)"
