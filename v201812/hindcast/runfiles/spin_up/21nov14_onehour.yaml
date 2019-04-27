@@ -1,8 +1,8 @@
 email: sallen@eoas.ubc.ca
-account: def-allen
+account: rrg-allen
 MPI decomposition: 8x18
 config_name: SalishSeaCast
-run_id: threebroad_21nov14
+run_id: onehour_21nov14
 walltime: 00:15:00
 
 forcing:
