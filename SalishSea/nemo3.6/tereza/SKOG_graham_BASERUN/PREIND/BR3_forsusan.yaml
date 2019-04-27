@@ -2,7 +2,7 @@ email: sallen@eoas.ubc.ca
 account: rrg-allen
 MPI decomposition: 16x41
 config_name: SKOG
-run_id: skog_BR2
+run_id: skog_BR3
 walltime: 11:30:00
 
 forcing:
@@ -30,8 +30,8 @@ forcing:
 
 
 restart:
-  restart.nc: /scratch/allen/SKOG/06jan15/SKOG_00959040_restart.nc
-  restart_trc.nc: /scratch/allen/SKOG/06jan15/SKOG_00959040_restart_trc.nc
+  restart.nc: /scratch/allen/SKOG/31jan15/SKOG_01023840_restart.nc
+  restart_trc.nc: /scratch/allen/SKOG/31jan15/SKOG_01023840_restart_trc.nc
 
 grid:            
   bathymetry: $HOME/MEOPAR/grid/bathymetry_201702.nc
@@ -40,7 +40,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time2
+  - ./namelist.time3
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.domain
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.light
