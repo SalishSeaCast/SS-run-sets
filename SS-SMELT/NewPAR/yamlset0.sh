@@ -1,6 +1,6 @@
 #!/bin/bash
-NEWRUN="13bfastSiLR"
-OLDRUN="13bfastSi"
+NEWRUN="13bfastSiHR"
+OLDRUN="13bfastSiLR"
 PREFIX=PAR
 
 #echo "working dir: $(pwd)"

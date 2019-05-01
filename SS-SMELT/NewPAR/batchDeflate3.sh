@@ -1,15 +1,16 @@
 #!/bin/bash
 #SBATCH --job-name=deflate
+#SBATCH --dependency=afterok:20186663
 #SBATCH --mem=2000M
 #SBATCH --time=12:00:00
 #SBATCH --mail-user=eolson@eoas.ubc.ca
 #SBATCH --mail-type=ALL
-#SBATCH --account=def-allen
+#SBATCH --account=rrg-allen
 # stdout and stderr file paths/names
 #SBATCH --output=/scratch/eolson/results/stdout_deflate
 #SBATCH --error=/scratch/eolson/results/stderr_deflate
 
-LOC1=/scratch/eolson/results/PAR1_3_6/
+LOC1=/scratch/eolson/results/PAR_13bfastSiLR_3/
 
 echo "started at $(date)"
 module load nco/4.6.6
