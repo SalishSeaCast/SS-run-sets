@@ -1,5 +1,5 @@
 email: tjarnik@gmail.com
-account: def-allen
+account: rrg-allen
 MPI decomposition: 14x29
 config_name: SKOG
 run_id: BR6
@@ -37,8 +37,8 @@ forcing:
     link to: /home/tjarnik/project/tjarnik/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
 restart:
-  restart.nc: /scratch/allen/SKOG/16may15/SKOG_01218240_restart.nc
-  restart_trc.nc: /scratch/allen/SKOG/16may15/SKOG_01218240_restart_trc.nc
+  restart.nc: /scratch/tjarnik/RST/SKOG_01218240_restart.nc
+  restart_trc.nc: /scratch/tjarnik/RST/SKOG_01218240_restart_trc.nc
 
 grid:            
   bathymetry: /home/tjarnik/project/tjarnik/MEOPAR/grid/bathymetry_201702.nc
