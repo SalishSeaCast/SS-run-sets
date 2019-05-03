@@ -2,7 +2,7 @@ email: sallen@eoas.ubc.ca
 account: rrg-allen
 MPI decomposition: 16x41
 config_name: SKOG
-run_id: skog_preind_BR3
+run_id: skog_BR2
 walltime: 11:30:00
 
 forcing:
@@ -30,7 +30,7 @@ forcing:
 
 
 restart:
-  restart.nc: /scratch/allen/SKOG/31jan15/SKOG_01023840_restart.nc
+  restart.nc: /scratch/allen/SKOG/01jan15/SKOG_00959040_restart.nc
   restart_trc.nc: /scratch/allen/SKOG/31jan15/SKOG_01023840_restart_trc.nc
 
 grid:            
@@ -40,7 +40,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time3
+  - ./namelist.time2
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.domain
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - $HOME/MEOPAR/SS-run-sets/v201812/namelist.light
