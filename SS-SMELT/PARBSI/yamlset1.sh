@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN=BSIdepfastSiHR
+NEWRUN=BSIdepfastSiLR
 PREFIX=PAR
 
 TEST="$(salishsea run ${PREFIX}_${NEWRUN}_0.yaml $SCRATCH/results/${PREFIX}_${NEWRUN}_0 2>&1)"
