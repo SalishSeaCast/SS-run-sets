@@ -9,7 +9,7 @@
 #SBATCH --output=/scratch/eolson/results/stdout_deflate
 #SBATCH --error=/scratch/eolson/results/stderr_deflate
 
-LOC1=/scratch/eolson/results/PAR_13bfastSiHR_0/
+LOC1=/scratch/eolson/results/PAR_BSIdepfastSiLR_1/
 
 echo "started at $(date)"
 module load nco/4.6.6
