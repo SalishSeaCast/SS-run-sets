@@ -46,10 +46,10 @@ namelists:
   namelist_smelt_ref:
   - ./namelist_smelt_ref_HC1812
 output:
-  domaindefs: ../spring2/domain_def.xml
+  domaindefs: ../GLSOut/domain_def.xml
   fielddefs: ../GLSOut/field_def.xml
-  filedefs: ../HC2rep/file_def.xml.attached
-  iodefs: ../spring2/iodef.xml
+  filedefs: ./file_def.xml
+  iodefs: ../GLSOut/iodef.xml
   separate XIOS server: false
   XIOS servers: 1
 

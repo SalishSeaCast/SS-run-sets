@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOC1=/scratch/eolson/results/PAR_13bfastSiHR_3/
+LOC1=/scratch/eolson/results/PAR_BSIdepfastSiLR_0/
 
 echo "started at $(date)"
 module load nco/4.6.6
