@@ -12,12 +12,21 @@
           <field field_ref="ssh"            name="sossheig"/>
           <field field_ref="toce"           name="votemper"/>
           <field field_ref="soce"           name="vosaline"/>
+	  <field field_ref="qlw_oce"        name="qlw_oce"/>
+	  <field field_ref="qsb_oce"        name="qsb_oce"/>
+	  <field field_ref="qla_oce"        name="qla_oce"/>
+	  <field field_ref="qemp_oce"       name="qemp_oce"/>
+          <field field_ref="taum_oce"       name="taum_oce"/>
+          <field field_ref="precip"         name="precip"/>
+          <field field_ref="wspd"           name="wspd"/>
         </file>
           <file id="file2" name_suffix="_grid_U" description="ocean U grid variables" >
           <field field_ref="uoce"           name="vozocrtx"  />
+          <field field_ref="utau"           name="utau"/>
         </file>
 	    <file id="file3" name_suffix="_grid_V" description="ocean V grid variables" >
           <field field_ref="voce"           name="vomecrty"  />
+          <field field_ref="vtau"           name="vtau"/>
         </file>
 	    <file id="file4" name_suffix="_grid_W" description="ocean W grid variables" >
           <field field_ref="woce"           name="vovecrtz" />
