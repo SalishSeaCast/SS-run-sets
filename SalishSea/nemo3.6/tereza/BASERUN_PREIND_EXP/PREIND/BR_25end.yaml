@@ -1,0 +1,93 @@
+email: tjarnik@gmail.com
+account: rrg-allen
+MPI decomposition: 14x29
+config_name: SKOG
+run_id: PI_restartfor31dec151
+walltime: 3:00:00
+
+forcing:
+  LiveOcean:
+    link to: $PROJECT/SalishSea/forcing/LiveOcean
+  NEMO-atmos:
+    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
+
+  bfr_coef.nc:
+    link to: $PROJECT/tjarnik/MEOPAR/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: $PROJECT/tjarnik/MEOPAR/grid
+  rivers:
+    link to: $PROJECT/SalishSea/forcing/rivers
+  rivers-climatology:
+    link to: $PROJECT/tjarnik/MEOPAR/rivers-climatology
+  river_turb:
+    link to: $PROJECT/SalishSea/forcing/rivers/river_turb
+  ssh:
+    link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
+  tides:
+    link to: $PROJECT/tjarnik/MEOPAR/tides
+  tracers:
+    link to: $PROJECT/tjarnik/MEOPAR/tracers
+
+
+  initial_data_file.nc:
+    link to: $PROJECT/tjarnik/MEOPAR/tracers/initial/Bathy201702_12nov14.nc
+  initial_bio_data_file.nc:
+    link to: $PROJECT/tjarnik/MEOPAR/tracers/initial/BioIC_SMELT_v20180706.nc
+  initial_car_data_file.nc:
+    link to: $PROJECT/tjarnik/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
+
+restart:
+  restart.nc: /scratch/tjarnik/PI_2/25dec15/SKOG_02473200_restart.nc
+  restart_trc.nc: /scratch/tjarnik/PI_2/25dec15/SKOG_02473200_restart_trc.nc
+
+
+grid:            
+  bathymetry: $PROJECT/tjarnik/MEOPAR/grid/bathymetry_201702.nc
+  coordinates: $PROJECT/tjarnik/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $PROJECT/tjarnik/MEOPAR/grid/bathymetry_201702.csv
+
+namelists:
+  namelist_cfg:
+  - ./namelist.time1_dec31
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.lateral
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.bottom
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.tracer
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.dynamics
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.vertical
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.compute
+
+  namelist_top_cfg:
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_restart
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_TracerDefAndBdy
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_physics
+  namelist_smelt_cfg:
+  - ./namelist_smelt_biology
+  - ./namelist_smelt_rivers
+  - ./namelist_smelt_skog
+
+output:
+  XIOS servers: 1
+  filedefs: ./file_def.xml
+  domaindefs: $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/domain_def.xml
+  fielddefs: ./field_def.xml
+  iodefs: $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/iodef.xml
+  separate XIOS server: true
+
+paths:
+  NEMO code config: $PROJECT/tjarnik/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $PROJECT/tjarnik/MEOPAR/XIOS-2
+  runs directory: $SCRATCH
+
+vcs revisions:
+  hg:
+  - $PROJECT/tjarnik/MEOPAR/grid
+  - $PROJECT/tjarnik/MEOPAR/NEMO-Cmd
+  - $PROJECT/tjarnik/MEOPAR/rivers-climatology
+  - $PROJECT/tjarnik/MEOPAR/SalishSeaCmd
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets
+  - $PROJECT/tjarnik/MEOPAR/tides
+  - $PROJECT/tjarnik/MEOPAR/tracers
+  - $PROJECT/tjarnik/MEOPAR/XIOS-ARCH
