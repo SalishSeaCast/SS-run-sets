@@ -5,11 +5,12 @@ run_id: SKOG_2015_PI_yr3
 walltime: 11:00:00
 
 segmented run:
+  first segment number: 0
   start date: 2015-01-01
   start time step: 2475361
   end date: 2015-12-31
-  days per segment: 30
-  segment walltime: 12:00:00
+  days per segment: 60
+  segment walltime: 20:00:00
   namelists:
     namrun: ./namelist.time1_full2015
     namdom: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist.domain
