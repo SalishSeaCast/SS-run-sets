@@ -28,8 +28,8 @@ forcing:
     link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
-  restart.nc: $SCRATCH/results/NewLONoSiT_3/SalishSea_03013200_restart.nc
-  restart_trc.nc: $SCRATCH/results/NewLONoSiT_3/SalishSea_03013200_restart_trc.nc
+  restart.nc: $SCRATCH/results/NewLONoSiT_4/SalishSea_03013200_restart.nc
+  restart_trc.nc: $SCRATCH/results/NewLONoSiT_4/SalishSea_03013200_restart_trc.nc
 
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
@@ -38,7 +38,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist_cfg_28oct17_50d
+  - ./namelist_cfg_08sep17_50d
   namelist_top_cfg:
   - ./namelist_top_cfg_newLO
   namelist_smelt_cfg:

@@ -4,7 +4,7 @@
 #SBATCH --time=12:00:00
 #SBATCH --mail-user=eolson@eoas.ubc.ca
 #SBATCH --mail-type=ALL
-#SBATCH --account=rrg-allen
+#SBATCH --account=def-allen
 # stdout and stderr file paths/names
 #SBATCH --output=/scratch/eolson/results/stdout_deflate
 #SBATCH --error=/scratch/eolson/results/stderr_deflate
