@@ -56,10 +56,12 @@
         <file id="file15" name_suffix="_dian_U" description="Chem transports">
 	  <field field_ref="DIC_UT"        name="DIC_UT"/>
 	  <field field_ref="TA_UT"         name="TA_UT"/>
+	  <field field_ref="NO3_UT"         name="NO3_UT"/>
         </file>
          <file id="file16" name_suffix="_dian_V" description="Chem transports">
           <field field_ref="DIC_VT"        name="DIC_VT"/>
 	  <field field_ref="TA_VT"         name="TA_VT"/>
+	  <field field_ref="NO3_VT"         name="NO3_VT"/>
         </file>
          <file id="file17" name_suffix="_dian_W" description="Chem transports">
           <field field_ref="DIC_WT"        name="DIC_WT"/>
