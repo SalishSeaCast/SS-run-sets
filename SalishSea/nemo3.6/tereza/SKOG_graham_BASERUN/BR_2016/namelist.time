@@ -25,5 +25,5 @@
    ln_clobber  =  .true.      ! clobber (overwrite) an existing file
 
    ln_rst_list  = .false.       !  output restarts at list of times using nn_stocklist (T) or at set frequency with nn_stock (F)
-   nn_stock    =  21600      ! frequency of creation of a restart file (modulo referenced to 1)
+   nn_stock    =  10800      ! frequency of creation of a restart file (modulo referenced to 1)
 &end
