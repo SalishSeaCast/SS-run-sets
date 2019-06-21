@@ -1,7 +1,7 @@
 #!/bin/bash
-NEWRUN=NewLOGnSiT
+NEWRUN=NewLOGnSiTB
 
-TEST="$(salishsea run ${NEWRUN}_0.yaml $SCRATCH/results/${NEWRUN}_0 2>&1)"
+TEST="$(salishsea run ${NEWRUN}_1.yaml $SCRATCH/results/${NEWRUN}_1 2>&1)"
 echo $TEST
 if [[ $TEST != *"ERROR"* ]]; then
    JID=${TEST##* }
@@ -9,9 +9,9 @@ else
   exit
 fi
 echo $JID
-sbatch --dependency=afterok:${JID} batchDeflate.sh ${NEWRUN} 0
+sbatch --dependency=afterok:${JID} batchDeflate.sh ${NEWRUN} 1
 
-for j in $(seq 1 5); do
+for j in $(seq 2 5); do
   TEST=0
   TEST="$(salishsea run --waitjob ${JID} --nocheck-initial-conditions ${NEWRUN}_${j}.yaml $SCRATCH/results/${NEWRUN}_${j} 2>&1)"
   echo $TEST
