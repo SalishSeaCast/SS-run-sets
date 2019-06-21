@@ -13,16 +13,11 @@
 !!              11 - Damping                                  (nampisdmp)
 !>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-&nampisbio     !   biological parameters
-!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-   nrdttrc    =  1        ! time step frequency for biology
-/
-!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisprod     !   parameters for phytoplankton growth
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    zz_rate_R_diat            = 5.70E-05    !: 1/s
    zz_rate_R_myri            = 2.00E-05    !: 1/s
-   zz_rate_R_nano            = 1.80E-05    !: 1/s
+   zz_rate_R_nano            = 1.90E-05    !: 1/s
    zz_rate_maxtemp_diat      = 26.0         !: deg C
    zz_rate_maxtemp_myri      = 31.0         !: deg C
    zz_rate_maxtemp_nano      = 31.0         !: deg C
@@ -86,8 +81,8 @@
 &nampismezo     !   parameters for mesozooplankton
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    zz_rate_mesozoo_winterconc = 0.38                   ! uM N mesozooplankton background concentration
-   zz_rate_mesozoo_sumpeakval =  0.55, 0.56,  0.36     ! uM N magnitude of mesozooplankton summer concentration peaks
-   zz_rate_mesozoo_sumpeakwid = 40.0,  67.00, 43.00    ! year-days widths of mesozooplankton summer concentration peaks
+   zz_rate_mesozoo_sumpeakval =  0.55, 0.55,  0.36     ! uM N magnitude of mesozooplankton summer concentration peaks
+   zz_rate_mesozoo_sumpeakwid = 40.0,  70.00, 43.00    ! year-days widths of mesozooplankton summer concentration peaks
    zz_rate_mesozoo_sumpeakpos = 130.0, 206.0, 290.0    ! year-day times of mesozooplankton summer concentration peaks
    zz_rate_mesozoo_alpha            = 1.0         ! 0 to 1. alpha = 0: spatially uniform mesozoo; alpha = 1: mesozoo proportional to prey
    zz_rate_mesozoo_R                = 1.37e-5     ! uM N / s mesozooplankton maximum ingestion rate @ 20 deg C
@@ -191,7 +186,7 @@
    zz_remin_NH     =  4.0e-7
    zz_remin_D_DON  =  2.3e-6
    zz_remin_D_PON  =  2.3e-6
-   zz_remin_D_bSi  =  2.136e-6
+   zz_remin_D_bSi  =  3.40e-6
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisopt     !  Light attenuation
@@ -216,7 +211,7 @@
    zz_w_sink_Pmicro_min = 0.5  ! m/d  microphyto minimum sinking rate # Alain CONVERTED TO M/S ON NAMELIST READ
    zz_w_sink_Pmicro_max = 1.2  ! m/d microphyto maximum sinking rate # Alain CONVERTED TO M/S ON NAMELIST READ
    zz_w_sink_D_PON = 1.0e-4      ! m/s PON detritus sinking rate # Jeffery quoting Dune and Bacon
-   zz_w_sink_D_bSi = 4.2e-4      ! m/s  biogenic silicon detritus sinking rate # match NO3 particles
+   zz_w_sink_D_bSi = 2.8e-4      ! m/s  biogenic silicon detritus sinking rate # match NO3 particles
    zz_alpha_b_Si = 0.9          ! fraction of bottom flux resuspended in bottom cell
    zz_alpha_b_N = 0.45          ! fraction of bottom flux resuspended in bottom cell
    zz_alpha_b_T = 0.75          ! fraction of bottom flux resuspended in bottom cell
@@ -226,18 +221,18 @@
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 !              !  file name          ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !              !                     !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
-   sn_riverno3  = 'rivers-climatology/bio/R201809_2_bioClim',       24,               'no3',       .true.,       .true.,  'daily',    '',        '',        ''
-   sn_rivernh4  = 'rivers-climatology/bio/R201812_bioConst',     -12,               'nh4',       .false.,      .true.,  'yearly',   '',        '',        ''
-   sn_riversil  = 'rivers-climatology/bio/R201809_2_bioClim',       24,               'sil',       .true.,       .true.,  'daily',    '',        '',        ''
-   sn_riverdia  = 'rivers-climatology/bio/R201812_bioConst',     -12,               'dia',       .false.,      .true.,  'yearly',   '',        '',        ''
-   sn_riverphy  = 'rivers-climatology/bio/R201812_bioConst',     -12,               'phy',       .false.,      .true.,  'yearly',   '',        '',        ''
-   sn_rivermes  = 'rivers-climatology/bio/R201812_bioConst',     -12,               'mes',       .false.,      .true.,  'yearly',   '',        '',        ''
-   sn_riverzoo  = 'rivers-climatology/bio/R201812_bioConst',     -12,               'zoo',       .false.,      .true.,  'yearly',   '',        '',        ''
-   sn_riverdoc  = 'rivers-climatology/bio/R201812_bioConst',     -12,               'don',       .false.,      .true.,  'yearly',   '',        '',        ''
-   sn_riverpoc  = 'rivers-climatology/bio/R201812_bioConst',     -12,               'pon',       .false.,      .true.,  'yearly',   '',        '',        ''
-   sn_riverdsi  = 'rivers-climatology/bio/R201812_bioConst',     -12,               'bsi',       .false.,      .true.,  'yearly',   '',        '',        ''
-   sn_rivertra  = 'rivers-climatology/bio/R201812_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
-   sn_turb      = 'river_turb/riverTurbDaily2',                 24,           'turb',       .true.,     .false.,  'daily',    '',        '',        ''
+   sn_riverno3  = 'rivers-climatology/bio/R201906_bioClim',       24,     'no3',     .true.,       .true.,  'daily',    '',        '',        ''
+   sn_rivernh4  = 'rivers-climatology/bio/R201906_bioConst',     -12,     'nh4',     .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riversil  = 'rivers-climatology/bio/R201906_bioClim',       24,     'sil',     .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riverdia  = 'rivers-climatology/bio/R201906_bioConst',     -12,     'dia',     .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverphy  = 'rivers-climatology/bio/R201906_bioConst',     -12,     'phy',     .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_rivermes  = 'rivers-climatology/bio/R201906_bioConst',     -12,     'mes',     .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverzoo  = 'rivers-climatology/bio/R201906_bioConst',     -12,     'zoo',     .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverdoc  = 'rivers-climatology/bio/R201906_bioConst',     -12,     'don',     .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverpoc  = 'rivers-climatology/bio/R201906_bioConst',     -12,     'pon',     .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverdsi  = 'rivers-climatology/bio/R201906_bioConst',     -12,     'bsi',     .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_rivertra  = 'rivers-climatology/bio/R201906_bioConst',     -12,     'tur',     .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_turb      = 'river_turb/riverTurbDaily21906',               24,    'turb',     .true.,     .false.,  'daily',    '',        '',        ''
    cn_dir       = './'  ! root directory for the location of the runoff files
    ln_river = .true.
    ln_turb = .true.
