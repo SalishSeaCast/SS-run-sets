@@ -79,6 +79,8 @@
       <domain id="FVCOM_U"                 domain_ref="grid_U"> <zoom_domain ibegin="225" jbegin="340" ni="144" nj="221" /> </domain>
       <!-- Northern Strait for Nitrate Analysis -->
       <domain id="NSOG_U"                  domain_ref="grid_U"> <zoom_domain ibegin="112" jbegin="644" ni="97" nj="130" /> </domain>
+      <!-- Western Boundary for Flux -->
+      <domain id="JdF_Flux"                domain_ref="grid_U"> <zoom_domain ibegin="23"  jbegin="361" ni="1"  nj="75" /> </domain>
    </domain_group>
 
    <domain_group id="grid_V">
@@ -99,6 +101,8 @@
       <domain id="NSOG_V"                  domain_ref="grid_V"> <zoom_domain ibegin="112" jbegin="644" ni="97" nj="130" /> </domain>
       <domain id="TV1"                      domain_ref="grid_V"> <zoom_domain ibegin="50" jbegin="883" ni="26" nj="1" /> </domain>
       <domain id="TV2"                      domain_ref="grid_V"> <zoom_domain ibegin="122" jbegin="792" ni="67" nj="1" /> </domain>
+      <!-- Northern Boundary for Flux -->
+      <domain id="JS_Flux"                 domain_ref="grid_V"> <zoom_domain ibegin="46"  jbegin="886" ni="30" nj="1" /> </domain>
    </domain_group>
 
    <domain_group id="grid_W">
