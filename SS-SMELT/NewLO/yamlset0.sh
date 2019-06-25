@@ -1,6 +1,6 @@
 #!/bin/bash
-NEWRUN="NewLOGnSiTB"
-OLDRUN="NewLOGnSiT"
+NEWRUN="NewLOGnSiTC"
+OLDRUN="NewLOGnSiTB"
 
 #echo "working dir: $(pwd)"
 
