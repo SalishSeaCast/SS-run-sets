@@ -29,7 +29,7 @@ forcing:
 
 restart:
   restart.nc: $SCRATCH/results/NewLOSOGT_0_0/SalishSea_02516400_restart.nc
-  restart_trc.nc: $SCRATCH/results/NewLOSOGT_0_0/SalishSea_02516400_restart_trc_hiSi2.nc
+  restart_trc.nc: $SCRATCH/results/NewLOSOGT_0_0/SalishSea_02516400_restart_trc.nc
 
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
