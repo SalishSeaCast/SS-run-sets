@@ -1,7 +1,7 @@
 #!/bin/bash
 NEWRUN=NewLOSOGT2Si
 
-TEST="$(salishsea run ${NEWRUN}_1b.yaml $SCRATCH/results/${NEWRUN}_1 2>&1)"
+TEST="$(salishsea run ${NEWRUN}_1.yaml $SCRATCH/results/${NEWRUN}_1 2>&1)"
 echo $TEST
 if [[ $TEST != *"ERROR"* ]]; then
    JID=${TEST##* }
@@ -9,7 +9,7 @@ else
   exit
 fi
 echo $JID
-sbatch --dependency=afterok:${JID} batchDeflate.sh ${NEWRUN} 1_0
+#sbatch --dependency=afterok:${JID} batchDeflate.sh ${NEWRUN} 1_0
 
 for j in $(seq 2 5); do
   TEST=0
