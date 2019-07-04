@@ -9,7 +9,7 @@ else
   exit
 fi
 echo $JID
-#sbatch --dependency=afterok:${JID} batchDeflate.sh ${NEWRUN} 1_0
+sbatch --dependency=afterok:${JID} batchDeflate.sh ${NEWRUN} 1
 
 for j in $(seq 2 5); do
   TEST=0
