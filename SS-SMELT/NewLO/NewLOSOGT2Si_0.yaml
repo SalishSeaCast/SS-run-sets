@@ -48,7 +48,7 @@ namelists:
 output:
   domaindefs: ../GLSOut/domain_def.xml
   fielddefs: ../GLSOut/field_def.xml
-  filedefs: ./file_def.xml
+  filedefs: ./file_def.xml.SiReduced
   iodefs: ../GLSOut/iodef.xml
   separate XIOS server: false
   XIOS servers: 1
