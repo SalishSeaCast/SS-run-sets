@@ -6,9 +6,9 @@ walltime: 06:00:00
 
 forcing:
   LiveOcean:
-    link to: $FORCING/SalishSea/forcing/LiveOcean
+    link to: $FORCING/SalishSeaCast/forcing/LiveOcean
   NEMO-atmos:
-    link to: $FORCING/SalishSea/forcing/atmospheric/GEM2.5/operational
+    link to: $FORCING/SalishSeaCast/forcing/atmospheric/GEM2.5/operational
   initial_data_file.nc:
     link to: $PROJECT/SalishSeaCast/hindcast-sys/tracers/initial/201905/SalishSea_00894240_restart.nc
   initial_bio_data_file.nc:
