@@ -71,7 +71,7 @@ output:
 paths:
   NEMO code config: $PROJECT/SalishSeaCast/hindcast-sys/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $PROJECT/SalishSeaCast/hindcast-sys/XIOS-2
-  runs directory: $SCRATCH/hindcast_v201905/
+  runs directory: $SCRATCHDIR/hindcast_v201905/
 
 vcs revisions:
   hg:
