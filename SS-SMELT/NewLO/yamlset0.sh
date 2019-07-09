@@ -1,6 +1,6 @@
 #!/bin/bash
-NEWRUN="NewLOSOGT2SiB"
-OLDRUN="NewLOSOGT2Si"
+NEWRUN="NewLOSOGTRSi"
+OLDRUN="NewLOSOGT2SiB"
 
 #echo "working dir: $(pwd)"
 
