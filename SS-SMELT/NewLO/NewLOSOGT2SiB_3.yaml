@@ -1,6 +1,6 @@
 run_id: NewLOSOGT2SiB_3
 config_name: SMELT
-account: def-allen
+account: rrg-allen
 email: eolson@eoas.ubc.ca
 MPI decomposition: 14x29
 walltime: 12:00:00
