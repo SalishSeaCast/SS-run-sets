@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN=NewLOSOGT2Si
+NEWRUN=NewLOSOGTRSi
 
 TEST="$(salishsea run ${NEWRUN}_0.yaml $SCRATCH/results/${NEWRUN}_0 2>&1)"
 echo $TEST
@@ -9,7 +9,7 @@ else
   exit
 fi
 echo $JID
-sbatch --dependency=afterok:${JID} batchDeflate.sh ${NEWRUN} 0
+#sbatch --dependency=afterok:${JID} batchDeflate.sh ${NEWRUN} 0
 
 for j in $(seq 1 5); do
   TEST=0
@@ -22,7 +22,7 @@ for j in $(seq 1 5); do
     exit
   fi
   echo $JID
-  sbatch --dependency=afterok:${JID} batchDeflate.sh $NEWRUN $j
+  #sbatch --dependency=afterok:${JID} batchDeflate.sh $NEWRUN $j
 done
 #TEST=0
 #TEST="$(salishsea run --waitjob ${JID} --nocheck-initial-conditions ${NEWRUN}_2.yaml $SCRATCH/results/${NEWRUN}_2 2>&1)"
