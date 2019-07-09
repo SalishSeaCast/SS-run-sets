@@ -24,8 +24,33 @@
       <file_group id="3h" output_freq="3h"  output_level="10" enabled=".TRUE."/> <!-- 3h files -->
       <file_group id="4h" output_freq="4h"  output_level="10" enabled=".FALSE."/> <!-- 4h files -->
       <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."/> <!-- 6h files -->
-
-      <file_group id="1d" output_freq="1d"  output_level="10" enabled=".TRUE."/> <!-- 1d files -->
+      <file_group id="1d" output_freq="1d"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 1d files -->
+        <file id="file17" name_suffix="_VT1" description="section 1 N transports" >
+          <field field_ref="Si_VT"        grid_ref="TV1_grid"/>
+          <field field_ref="bSi_VT"        grid_ref="TV1_grid"/>
+          <field field_ref="DIAT_VT"        grid_ref="TV1_grid"/>
+        </file>
+        <file id="file18" name_suffix="_VT2" description="section 2 N transports" >
+          <field field_ref="Si_VT"        grid_ref="TV2_grid"/>
+          <field field_ref="bSi_VT"        grid_ref="TV2_grid"/>
+          <field field_ref="DIAT_VT"        grid_ref="TV2_grid"/>
+        </file>
+        <file id="file17" name_suffix="_Tex" description="section Tex transports" >
+          <field field_ref="Si_VT"        grid_ref="Tex_grid"/>
+          <field field_ref="bSi_VT"        grid_ref="Tex_grid"/>
+          <field field_ref="DIAT_VT"        grid_ref="Tex_grid"/>
+        </file>
+        <file id="file18" name_suffix="_Gulf" description="section Gulf transports" >
+          <field field_ref="Si_VT"        grid_ref="Gulf_grid"/>
+          <field field_ref="bSi_VT"        grid_ref="Gulf_grid"/>
+          <field field_ref="DIAT_VT"        grid_ref="Gulf_grid"/>
+        </file>
+        <file id="file18" name_suffix="_VicSill" description="section VicSill transports" >
+          <field field_ref="Si_UT"        grid_ref="VicSill_grid"/>
+          <field field_ref="bSi_UT"        grid_ref="VicSill_grid"/>
+          <field field_ref="DIAT_UT"        grid_ref="VicSill_grid"/>
+        </file>
+      </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
       <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE."/>  <!-- 5d files -->
 
