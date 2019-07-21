@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN=NewLOSOGT2SiB
+NEWRUN=NewLOSOGTbfSi
 
 TEST="$(salishsea run ${NEWRUN}_1.yaml $SCRATCH/results/${NEWRUN}_1 2>&1)"
 echo $TEST
