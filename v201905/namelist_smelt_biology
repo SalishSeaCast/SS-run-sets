@@ -182,6 +182,7 @@
    zz_remin_D_DON  =  2.3e-6
    zz_remin_D_PON  =  2.3e-6
    zz_remin_D_bSi  =  3.40e-6
+   zz_bfSi         =  2.1e-5    ! mmol/m2/s
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisopt     !  Light attenuation
