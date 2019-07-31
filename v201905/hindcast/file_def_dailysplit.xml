@@ -21,9 +21,6 @@
         </file>
 	    <file id="file4" name_suffix="_grid_W" description="ocean W grid variables" >
           <field field_ref="woce"           name="vovecrtz" />
-          <field field_ref="avt"            name="vert_eddy_diff" />
-          <field field_ref="avm"            name="vert_eddy_visc" />
-          <field field_ref="eps"            name="dissipation"/>
         </file>
         <file id="file5" name_suffix="_ptrc_T" description="biogeochemical variables" >
           <field field_ref="NO3"            name="nitrate"/>
@@ -47,41 +44,7 @@
           <field field_ref="e3t"      name="e3t"/>
           <field field_ref="DIC"      name="dissolved_inorganic_carbon"/>
           <field field_ref="TA"       name="total_alkalinity"/>
-          <field field_ref="O2"       name="dissolved_oxygen"/>
-        </file>
-        <file id="file6" name_suffix="_prod_T" description="smelt diagnostics A" >
-          <field field_ref="PPDIAT"      />
-          <field field_ref="PPPHY"       />
-          <field field_ref="PPMRUB"     />
-          <field field_ref="PPDIATNO3"      />
-          <field field_ref="PPPHYNO3"     />
-          <field field_ref="PPMRUBNO3"     />
-          <field field_ref="TQ10"       />
-        </file>
-        <file id="file15" name_suffix="_mtrc_T" description="passive tracer 20 m" >
-          <field field_ref="MYTRC1"         name="tracer20m" grid_ref="trc20m_grid"/>
-        </file>
-        <file id="file16" name_suffix="_dian_U" description="reduced domain N transports" >
-          <field field_ref="NO3_UT"        grid_ref="NSOG_U_grid"/>
-          <field field_ref="ULDFNO3"       grid_ref="NSOG_U_grid"/>
-        </file>
-        <file id="file19" name_suffix="_dian_V" description="reduced domain N transports" >
-          <field field_ref="NO3_VT"        grid_ref="NSOG_V_grid"/>
-          <field field_ref="VLDFNO3"       grid_ref="NSOG_V_grid"/>
-        </file>
-        <file id="file20" name_suffix="_dian_W" description="reduced domain N transports" >
-          <field field_ref="NO3_WT"        grid_ref="NSOG_W_grid"/>
-          <field field_ref="VMIXNO3"       grid_ref="NSOG_W_grid"/>
-          <field field_ref="AVSH"          grid_ref="NSOG_W_grid"/>
-          <field field_ref="WLDFNO3"       grid_ref="NSOG_W_grid"/>
-        </file>
-        <file id="file17" name_suffix="_VT1" description="section 1 N transports" >
-          <field field_ref="NO3_VT"        grid_ref="TV1_grid"/>
-          <field field_ref="VLDFNO3"       grid_ref="TV1_grid"/>
-        </file>
-        <file id="file18" name_suffix="_VT2" description="section 2 N transports" >
-          <field field_ref="NO3_VT"        grid_ref="TV2_grid"/>
-          <field field_ref="VLDFNO3"       grid_ref="TV2_grid"/>
+          <field field_ref="O2"             name="dissolved_oxygen"/>
         </file>
       </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" split_freq="1d" enabled=".TRUE."> <!-- 2h files -->
@@ -90,46 +53,16 @@
       <file_group id="4h" output_freq="4h"  output_level="10" enabled=".FALSE."/> <!-- 4h files -->
       <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."/> <!-- 6h files -->
       <file_group id="1d" output_freq="1d"  output_level="10" compression_level="4" split_freq="1d" enabled=".TRUE."> <!-- 1d files -->
-        <file id="file8" name_suffix="_grid_T" description="ocean T grid variables" >
-          <field field_ref="ssh"            name="sossheig"/>
-          <field field_ref="toce"           name="votemper"/>
-          <field field_ref="soce"           name="vosaline"/>
-        </file>
-    	<file id="file9" name_suffix="_grid_U" description="ocean U grid variables" >
-          <field field_ref="uoce"           name="vozocrtx"  />
-        </file>
-	    <file id="file10" name_suffix="_grid_V" description="ocean V grid variables" >
-          <field field_ref="voce"           name="vomecrty"  />
-        </file>
-	    <file id="file11" name_suffix="_grid_W" description="ocean W grid variables" >
-          <field field_ref="woce"           name="vovecrtz" />
-          <field field_ref="avt"            name="vert_eddy_diff" />
-          <field field_ref="avm"            name="vert_eddy_visc" />
-          <field field_ref="eps" name="dissipation"/>
-        </file>
-        <file id="file12" name_suffix="_ptrc_T" description="biogeochemical variables" >
-          <field field_ref="NO3"            name="nitrate"/>
-          <field field_ref="NH4"            name="ammonium"/>
-          <field field_ref="Si"             name="silicon"/>
-          <field field_ref="DIAT"           name="diatoms"/>
-          <field field_ref="PHY"            name="flagellates"/>
-          <field field_ref="MYRI"           name="ciliates"/>
-          <field field_ref="MICZ"           name="microzooplankton"/>
-          <field field_ref="DON"            name="dissolved_organic_nitrogen"/>
-          <field field_ref="PON"            name="particulate_organic_nitrogen"/>
-          <field field_ref="bSi"            name="biogenic_silicon"/>
-          <field field_ref="TRA"            name="Fraser_tracer"/>
-          <field field_ref="MESZ"           name="mesozooplankton"/>
-        </file>
-        <file id="file14" name_suffix="_carp_T" description="auxilary variables">
-          <field field_ref="PAR"      name="PAR"/>
-          <field field_ref="rhop"     name="sigma_theta"/>
-          <field field_ref="e3t"      name="e3t"/>
-          <field field_ref="DIC"            name="dissolved_inorganic_carbon"/>
-          <field field_ref="TA"             name="total_alkalinity"/>
-          <field field_ref="O2"             name="dissolved_oxygen"/>
+      <file id="file6" name_suffix="_prod_T" description="smelt diagnostics A" >
+          <field field_ref="PPDIAT"      />
+          <field field_ref="PPPHY"       />
+          <field field_ref="PPMRUB"     />
+          <field field_ref="PPDIATNO3"      />
+          <field field_ref="PPPHYNO3"     />
+          <field field_ref="PPMRUBNO3"     />
+          <field field_ref="TQ10"       />
           <field field_ref="f_co2flux"      name="co2_flux_mmol_m2_s" />
-        </file>  
+        </file>
         <file id="file7" name_suffix="_dia2_T" description="smelt diagnostics B" >
           <field field_ref="HetMRub"      />
           <field field_ref="MORTPHY"      />
@@ -146,43 +79,6 @@
           <field field_ref="GRMICZPON"      />
           <field field_ref="GRMICZMICZ"      />
         </file>
-	<file id="file22" name_suffix="_flux_U" description="western boundary fluxes">
-	  <field field_ref="uoces"      grid_ref="JdF_grid"/>
-	  <field field_ref="uocet"      grid_ref="JdF_grid"/>
-	  <field field_ref="NO3_UT"     grid_ref="JdF_grid"/>
-	  <field field_ref="NH4_UT"     grid_ref="JdF_grid"/>
-	  <field field_ref="Si_UT"      grid_ref="JdF_grid"/>
-	  <field field_ref="DIAT_UT"    grid_ref="JdF_grid"/>
-	  <field field_ref="MYRI_UT"    grid_ref="JdF_grid"/>
-	  <field field_ref="PHY_UT"     grid_ref="JdF_grid"/>
-	  <field field_ref="MICZ_UT"    grid_ref="JdF_grid"/>
-	  <field field_ref="DON_UT"     grid_ref="JdF_grid"/>
-	  <field field_ref="PON_UT"     grid_ref="JdF_grid"/>
-	  <field field_ref="bSi_UT"     grid_ref="JdF_grid"/>
-	  <field field_ref="TRA_UT"     grid_ref="JdF_grid"/>
-	  <field field_ref="DIC_UT"     grid_ref="JdF_grid"/>
-	  <field field_ref="TA_UT"      grid_ref="JdF_grid"/>
-	  <field field_ref="O2_UT"      grid_ref="JdF_grid"/>
-	</file>
-	<file id="file23" name_suffix="_flux_V" description="northern boundary fluxes">
-	  <field field_ref="voces"      grid_ref="JS_grid"/>
-	  <field field_ref="vocet"      grid_ref="JS_grid"/>
-	  <field field_ref="NO3_VT"     grid_ref="JS_grid"/>
-	  <field field_ref="NH4_VT"     grid_ref="JS_grid"/>
-	  <field field_ref="Si_VT"      grid_ref="JS_grid"/>
-	  <field field_ref="DIAT_VT"    grid_ref="JS_grid"/>
-	  <field field_ref="MYRI_VT"    grid_ref="JS_grid"/>
-	  <field field_ref="PHY_VT"     grid_ref="JS_grid"/>
-	  <field field_ref="MICZ_VT"    grid_ref="JS_grid"/>
-	  <field field_ref="DON_VT"     grid_ref="JS_grid"/>
-	  <field field_ref="PON_VT"     grid_ref="JS_grid"/>
-	  <field field_ref="bSi_VT"     grid_ref="JS_grid"/>
-	  <field field_ref="TRA_VT"     grid_ref="JS_grid"/>
-	  <field field_ref="DIC_VT"     grid_ref="JS_grid"/>
-	  <field field_ref="TA_VT"      grid_ref="JS_grid"/>
-	  <field field_ref="O2_VT"      grid_ref="JS_grid"/>
-	</file>
-	  
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
       <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE."/>  <!-- 5d files -->
@@ -195,7 +91,7 @@
       <file_group id="2y"  output_freq="2y" output_level="10" enabled=".TRUE."/> <!-- real 2y files -->
       <file_group id="5y"  output_freq="5y" output_level="10" enabled=".TRUE."/> <!-- real 5y files -->
       <file_group id="10y" output_freq="10y" output_level="10" enabled=".TRUE."/> <!-- real 10y files -->
-      <file_group id="20min" output_freq="1200s" output_level="10" compression_level="4" split_freq="1d" enabled=".TRUE."> <!-- 20 minute files -->
+      <file_group id="20min" output_freq="1200s" output_level="10" compression_level="4" split_freq="1d" enabled=".FALSE."> <!-- 20 minute files -->
         <file id="Slab_U" name="Slab_U" description="20min near surface U velocity">
           <field field_ref="uoce" name="vozocrtx" grid_ref="two_straits_grid_U"/>
         </file>
@@ -203,7 +99,7 @@
           <field field_ref="voce" name="vomecrty" grid_ref="two_straits_grid_V"/>
         </file>
       </file_group>
-      <file_group id="10min" output_freq="600s" output_level="10" compression_level="4" split_freq="1d" enabled=".TRUE."> <!-- 10 minute files -->
+      <file_group id="10min" output_freq="600s" output_level="10" compression_level="4" split_freq="1d" enabled=".FALSE."> <!-- 10 minute files -->
         <file id="PointAtkinson" name="PointAtkinson" description="10min interval SSH for tides">
           <field field_ref="ssh" name="sossheig" grid_ref="PointAtkinson_grid"/>
         </file>
