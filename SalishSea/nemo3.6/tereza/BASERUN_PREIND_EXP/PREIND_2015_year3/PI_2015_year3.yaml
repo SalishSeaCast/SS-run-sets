@@ -3,7 +3,7 @@ account: rrg-allen
 MPI decomposition: 14x29
 config_name: SKOG
 run_id: PI_2015_year3
-walltime: 3:00:00
+walltime: 3:01:00
 
 forcing:
   LiveOcean:
