@@ -1,6 +1,6 @@
 #!/bin/bash
-NEWRUN="t15r13B"
-OLDRUN="t15r13A"
+NEWRUN="t15r13C"
+OLDRUN="t15r13B"
 
 #echo "working dir: $(pwd)"
 
