@@ -52,7 +52,7 @@
    sn_trcobc(9) = 'tracers/west/bioOBC_West_const201812',  -12,        'PON',      .false., .true., 'yearly',   '',        '',   ''
    sn_trcobc(10) = 'tracers/west/bioOBC_West_const201812', -12,        'bSi',      .false., .true., 'yearly',   '',        '',   ''
    sn_trcobc(11) = 'tracers/west/bioOBC_West_const201812', -12,        'tur',      .false., .true., 'yearly',   '',        '',   ''
-   sn_trcobc(12) = 'PREIND_BCcond/PREIND_BC_v201905',           24,        'DIC',      .true.,  .false.,  'daily',   '',        '',   ''
+   sn_trcobc(12) = 'tracers/west/PREIND_BCcond/PREIND_BC_corrected_v201905',           24,        'DIC',      .true.,  .false.,  'daily',   '',        '',   ''
    sn_trcobc(13) = 'LiveOcean/LiveOcean_v201712',           24,        'TA',       .true.,  .false.,  'daily',   '',        '',   ''
    sn_trcobc(14) = 'LiveOcean/LiveOcean_v201712',           24,        'OXY',      .true.,  .false.,  'daily',   '',        '',   ''
 
