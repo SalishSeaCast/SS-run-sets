@@ -51,7 +51,8 @@
           <field field_ref="DIC"            name="dissolved_inorganic_carbon"/>
           <field field_ref="TA"             name="total_alkalinity"/>
           <field field_ref="O2"             name="dissolved_oxygen"/>
-          <field field_ref="f_co2flux"      name="co2_flux_mmol_m2_s" />
+	  <field id="f_uptake_UC"     name="uncoupled_carbon_uptake"/>     
+	  <field field_ref="f_co2flux"      name="co2_flux_mmol_m2_s" />
         </file> 
         <file id="file15" name_suffix="_dian_U" description="Chem transports">
 	  <field field_ref="DIC_UT"        name="DIC_UT"/>
