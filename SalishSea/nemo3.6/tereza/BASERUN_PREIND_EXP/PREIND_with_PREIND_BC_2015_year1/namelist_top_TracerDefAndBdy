@@ -88,8 +88,8 @@
    sn_trcobc(9)  = 'bioOBC_North_const201812',          4380,        'PON',      .true.,  .true.,  'yearly',   '',      '',   ''
    sn_trcobc(10) = 'bioOBC_North_const201812',          4380,        'bSi',      .true.,  .true.,  'yearly',   '',      '',   ''
    sn_trcobc(11) = 'bioOBC_North_const201812',          4380,        'tur',       .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(12) = 'Dosser_north_TEOS10_DICTA.nc',        -1,        'DIC',       .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(13) = 'Dosser_north_TEOS10_DICTA.nc',        -1,        'TA',       .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(12) = 'Dosser_north_TEOS10_DICTA_preind_080819.nc',        -1,        'DIC',       .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(13) = 'Dosser_north_TEOS10_DICTA_preind_080819.nc',        -1,        'TA',       .true.,  .true.,  'yearly',   '',      '',   ''
    sn_trcobc(14) = 'tr_northDICTAOXY.nc',               4380,        'OXY',       .true.,  .true.,  'yearly',   '',      '',   ''
 
    cn_dir_obc        =  './tracers/north/'      !  root directory for the location of OPEN data files
