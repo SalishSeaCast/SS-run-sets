@@ -61,7 +61,7 @@ namelists:
 
   namelist_top_cfg:
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_restart
-  - ./namelist_top_TracerDefAndBdy
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_TracerDefAndBdy
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_physics
   namelist_smelt_cfg:
   - ./namelist_smelt_biology
