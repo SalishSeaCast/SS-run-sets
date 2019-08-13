@@ -1,5 +1,5 @@
 email: tjarnik@gmail.com
-account: rrg-allen
+account: def-allen
 MPI decomposition: 14x29
 config_name: SKOG
 run_id: oneday_test_with_output_latflux
@@ -73,7 +73,7 @@ output:
   filedefs: ./file_def_withflux.xml
   domaindefs: ./domain_def_forflux.xml
   fielddefs: ./field_def.xml
-  iodefs: $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/iodef.xml
+  iodefs: ./iodef.xml
   separate XIOS server: true
 
 paths:
