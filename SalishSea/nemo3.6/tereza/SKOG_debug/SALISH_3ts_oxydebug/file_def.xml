@@ -51,6 +51,7 @@
           <field field_ref="O2"       name="dissolved_oxygen"/>
           <field field_ref="zfld16"        name="zfld16" />
           <field field_ref="zflu16"        name="zflu16" />
+          <field field_ref="oce_o2"        name="oce_o2" />
           <field field_ref="of_chemo2"        name="of_chemo2" />
           <field field_ref="of_zkgo2"        name="of_zkgo2" />
           <field field_ref="f_co2flux" name="co2_flux_mmol_m2_s" />
