@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN=t15r15DiatAlpha0
+NEWRUN=t15r15LinbfSi
 
 TEST="$(salishsea run ${NEWRUN}_0.yaml $SCRATCH/results/${NEWRUN}_0 2>&1)"
 echo $TEST
