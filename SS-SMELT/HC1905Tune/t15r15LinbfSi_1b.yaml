@@ -1,6 +1,6 @@
-run_id: t15r15LinbfSi_0
+run_id: t15r15LinbfSi_1
 config_name: SMELT
-account: rrg-allen
+account: def-allen
 email: eolson@eoas.ubc.ca
 MPI decomposition: 14x29
 walltime: 12:00:00
@@ -28,8 +28,8 @@ forcing:
     link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
-  restart.nc: $MEOPAR/NEMO-forcing/restarts/spinup1905/31dec14/SalishSea_02365200_restart.nc
-  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/spinup1905/31dec14/SalishSea_02365200_restart_trc.nc
+  restart.nc: $SCRATCH/results/t15r15LinbfSi_1a/SalishSea_02516400_restart.nc
+  restart_trc.nc: $SCRATCH/results/t15r15LinbfSi_1a/SalishSea_02516400_restart_trc.nc
 
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
@@ -38,13 +38,14 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist_cfg_1905_01jan15_50d
+  - ./namelist_cfg_1905_12mar15_30d
   namelist_top_cfg:
   - ../NewLO/namelist_top_cfg_newLO
   namelist_smelt_cfg:
   - ../NewLO/namelist_smelt_cfg_Base
   namelist_smelt_ref:
   - ./namelist_smelt_ref_t15r15LinbfSi
+
 output:
   domaindefs: ../GLSOut/domain_def.xml
   fielddefs: ../GLSOut/field_def.xml
