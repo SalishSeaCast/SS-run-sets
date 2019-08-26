@@ -2,7 +2,7 @@ run_id: t15r15LinbfSi_1
 config_name: SMELT
 account: def-allen
 email: eolson@eoas.ubc.ca
-MPI decomposition: 16x39
+MPI decomposition: 14x29
 walltime: 12:00:00
 
 forcing:
