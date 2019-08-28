@@ -198,8 +198,8 @@
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampissink     !  Sinking of bio groups
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-   zz_w_sink_Pmicro_min = 0.6  ! m/d  microphyto minimum sinking rate # Alain CONVERTED TO M/S ON NAMELIST READ
-   zz_w_sink_Pmicro_max = 1.5  ! m/d microphyto maximum sinking rate # Alain CONVERTED TO M/S ON NAMELIST READ
+   zz_w_sink_Pmicro_min = 0.5  ! m/d  microphyto minimum sinking rate # Alain CONVERTED TO M/S ON NAMELIST READ
+   zz_w_sink_Pmicro_max = 1.2  ! m/d microphyto maximum sinking rate # Alain CONVERTED TO M/S ON NAMELIST READ
    zz_w_sink_D_PON = 1.0e-4      ! m/s PON detritus sinking rate # Jeffery quoting Dune and Bacon
    zz_w_sink_D_bSi = 2.8e-4      ! m/s  biogenic silicon detritus sinking rate # match NO3 particles
    zz_alpha_b_Si = 0.9          ! fraction of bottom flux resuspended in bottom cell
