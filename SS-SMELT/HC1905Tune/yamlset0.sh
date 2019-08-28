@@ -1,6 +1,6 @@
 #!/bin/bash
-NEWRUN="t15r15LinbfSi"
-OLDRUN="t15r15DiatAlpha0"
+NEWRUN="LinbfSiDiatRefl0_2"
+OLDRUN="t15r15LinbfSi"
 
 #echo "working dir: $(pwd)"
 
