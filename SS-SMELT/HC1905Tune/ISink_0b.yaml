@@ -1,9 +1,9 @@
-run_id: ISink_1
+run_id: ISink_0b
 config_name: SMELT
-account: rrg-allen
+account: def-allen
 email: eolson@eoas.ubc.ca
 MPI decomposition: 14x29
-walltime: 15:00:00
+walltime: 12:00:00
 
 forcing:
   LiveOcean:
@@ -28,8 +28,8 @@ forcing:
     link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
-  restart.nc: $SCRATCH/results/ISink_0/SalishSea_02473200_restart.nc
-  restart_trc.nc: $SCRATCH/results/ISink_0/SalishSea_02473200_restart_trc.nc
+  restart.nc: $SCRATCH/results/ISink_0a/SalishSea_02451600_restart.nc
+  restart_trc.nc: $SCRATCH/results/ISink_0a/SalishSea_02451600_restart_trc.nc
 
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
@@ -38,7 +38,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist_cfg_1905_20feb15_50d
+  - ./namelist_cfg_1905_21jan15_10d
   namelist_top_cfg:
   - ../NewLO/namelist_top_cfg_newLO
   namelist_smelt_cfg:
