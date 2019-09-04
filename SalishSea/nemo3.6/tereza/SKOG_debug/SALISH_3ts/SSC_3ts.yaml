@@ -58,7 +58,7 @@ namelists:
 
   namelist_top_cfg:
   - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist_top_coldstart
-  - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist_top_TracerDefAndBdy
+  - ./namelist_top_TracerDefAndBdy
   - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist_top_physics
   namelist_smelt_cfg:
   - /data/$USER/MEOPAR/SS-run-sets/v201812/namelist_smelt_biology
