@@ -31,8 +31,8 @@
     nb_bdy         = 2                     !  number of open boundary sets According to merge namelist, only 1
     ln_coords_file = .false., .false.      !  =T : read bdy coordinates from file
     cn_dyn2d       = 'flather', 'flather'            !
-    rn_ssh_offset  = 0, 0.0               !  ssh offset on north boundary
-    nn_dyn2d_dta   =  2, 2                 !  = 0, bdy data are equal to the initial state
+    rn_ssh_offset  = 0, 0.05               !  ssh offset on north boundary
+    nn_dyn2d_dta   =  3, 3                 !  = 0, bdy data are equal to the initial state
                                            !  = 1, bdy data are read in 'bdydata   .nc' files
                                            !  = 2, use tidal harmonic forcing data from files
                                            !  = 3, use external data AND tidal harmonic forcing
@@ -64,9 +64,9 @@
 !-----------------------------------------------------------------------
 !        !  file name                    ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
 !        !                               !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
-  bn_ssh = 'NEP/ssh_W',                        120,               'sossheig', .true.,        .false.,  'yearly',    '',        ''
-  bn_u2d = 'NEP/ssh_y2007m01d01',                        -12,               'vobtcrtx', .false.,        .true.,  'yearly',    '',        ''
-  bn_v2d = 'NEP/ssh_y2007m01d01',                        -12,               'vobtcrty', .false.,        .true.,  'yearly',    '',        ''
+  bn_ssh = 'ssh/ssh',                        1,               'sossheig', .true.,        .false.,  'daily',    '',        ''
+  bn_u2d = 'ssh/ssh',                        1,               'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v2d = 'ssh/ssh',                        1,               'vobtcrty', .true.,        .false.,  'daily',    '',        ''
   bn_u3d = '',                              24,               'vozocrtx', .true.,        .false.,  'daily',    '',        ''
   bn_v3d = '',                              24,               'vomecrty', .true.,        .false.,  'daily',    '',        ''
   bn_tem = 'NEP/ts_fill_rs_W',   120,               'votemper', .true.,        .false.,  'yearly',    '',        ''
@@ -96,13 +96,13 @@
 !-----------------------------------------------------------------------
 !        !  file name                             ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation !
 !        !                                        !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  !
-  bn_ssh = 'NEP/ssh_N',                             120,              'sossheig', .true.,        .false.,  'yearly',    '',        ''
-  bn_u2d = 'NEP/ssh_y2007m01d01',                        -12,               'vobtcrtx', .false.,        .true.,  'yearly',    '',        ''
-  bn_v2d = 'NEP/ssh_y2007m01d01',                        -12,               'vobtcrty', .false.,        .true.,  'yearly',    '',        ''
+  bn_ssh = 'ssh/ssh',                             1,              'sossheig', .true.,        .false.,  'daily',    '',        ''
+  bn_u2d = 'ssh/ssh',                        1,               'vobtcrtx', .true.,        .false.,  'daily',    '',        ''
+  bn_v2d = 'ssh/ssh',                        1,               'vobtcrty', .true.,        .false.,  'daily',    '',        ''
   bn_u3d = '',                              24,               'vozocrtx', .true.,        .false.,  'daily',    '',        ''
   bn_v3d = '',                              24,               'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'NEP/ts_fill_rs_N',   120,               'votemper', .true.,        .false.,  'yearly',    '',        ''
-  bn_sal = 'NEP/ts_fill_rs_N',   120,               'vosaline', .true.,        .false.,  'yearly',    '',        ''
+  bn_tem = 'tracers/north/Dosser_north_TEOS10',   -1,               'votemper', .true.,        .true.,  'yearly',    '',        ''
+  bn_sal = 'tracers/north/Dosser_north_TEOS10',   -1,               'vosaline', .true.,        .true.,  'yearly',    '',        ''
 
   cn_dir = './'
   ln_full_vel = .false.
