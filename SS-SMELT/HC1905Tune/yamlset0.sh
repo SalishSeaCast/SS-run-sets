@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN="ISink"
+NEWRUN="testT"
 OLDRUN="t15r15LinbfSi"
 
 #echo "working dir: $(pwd)"
