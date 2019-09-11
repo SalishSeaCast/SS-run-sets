@@ -1,4 +1,4 @@
-run_id: ISink_1
+run_id: ISink_2b
 config_name: SMELT
 account: rrg-allen
 email: eolson@eoas.ubc.ca
@@ -28,8 +28,8 @@ forcing:
     link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
-  restart.nc: $SCRATCH/results/ISink_1a/SalishSea_02516400_restart.nc
-  restart_trc.nc: $SCRATCH/results/ISink_1a/SalishSea_02516400_restart_trc.nc
+  restart.nc: $SCRATCH/results/ISink_2a/SalishSea_02624400_restart.nc
+  restart_trc.nc: $SCRATCH/results/ISink_2a/SalishSea_02624400_restart_trc.nc
 
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
@@ -38,7 +38,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist_cfg_1905_12mar15_30d
+  - ./namelist_cfg_1905_01may15_30d
   namelist_top_cfg:
   - ../NewLO/namelist_top_cfg_newLO
   namelist_smelt_cfg:
