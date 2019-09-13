@@ -10,7 +10,7 @@ forcing:
   NEMO-atmos:
     link to: $FORCING/SalishSeaCast/forcing/atmospheric/GEM2.5/gemlam
   initial_data_file.nc:
-    link to: $PROJECT/SalishSeaCast/hindcast-sys/tracers/initial/201905/SalishSea_00894240_restart.nc
+    link to: $PROJECT/SalishSeaCast/hindcast-sys/sea_initial/v201905/SalishSea_01576800_restart.nc
   initial_bio_data_file.nc:
     link to: $PROJECT/SalishSeaCast/hindcast-sys/tracers/initial/201905/SalishSea_00894240_restart_trc_SiNO3.nc
   initial_car_data_file.nc:
@@ -56,13 +56,13 @@ namelists:
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist_top_TracerDefAndBdy
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist_top_physics
   namelist_smelt_cfg:
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist_smelt_biology
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist_smelt_biology_190906
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist_smelt_rivers
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist_smelt_skog
 
 output:
   XIOS servers: 1
-  filedefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/hindcast/file_def_dailysplit.xml
+  filedefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/hindcast/file_def_dailysplit_noFVCOM.xml
   domaindefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/domain_def.xml
   fielddefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/field_def.xml
   iodefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/iodef.xml
@@ -71,7 +71,7 @@ output:
 paths:
   NEMO code config: $PROJECT/SalishSeaCast/hindcast-sys/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $PROJECT/SalishSeaCast/hindcast-sys/XIOS-2
-  runs directory: $SCRATCHDIR/hindcast_v201905/
+  runs directory: $SCRATCHDIR/spinup.201905
 
 vcs revisions:
   hg:

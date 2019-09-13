@@ -25,7 +25,7 @@ forcing:
   LiveOcean:
     link to: $FORCING/SalishSeaCast/forcing/LiveOcean
   NEMO-atmos:
-    link to: $FORCING/SalishSeaCast/forcing/atmospheric/GEM2.5/operational
+    link to: $FORCING/SalishSeaCast/forcing/atmospheric/GEM2.5/gemlam
   bfr_coef.nc:
     link to: $PROJECT/SalishSeaCast/hindcast-sys/grid/jetty_mask_bathy201702.nc
   grid:
@@ -47,7 +47,7 @@ namelists:
   namelist_cfg:
   - $PROJECT/SalishSeaCast/hindcast-sys/runs/namelist.time
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.domain
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.atmos_rivers
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.atmos_rivers.gemlam
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.light
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.lateral
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.bottom
@@ -56,7 +56,7 @@ namelists:
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.vertical
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.compute
   namelist_smelt_cfg:
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist_smelt_biology_190831
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist_smelt_biology_190906
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist_smelt_rivers
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist_smelt_skog
   namelist_top_cfg:
