@@ -1,0 +1,31 @@
+!!======================================================================
+!!             Tracers & Dynamics vertical physics namelists
+!!======================================================================
+!! Included namelists
+!!    namzdf        vertical physics
+!!    namzdf_gls    generalized length scale vertical mixing          ("key_zdfgls")
+!!======================================================================
+!! Note included namelists:
+!!    namzdf_ric    richardson number dependent vertical mixing       ("key_zdfric")
+!!    namzdf_tke    TKE dependent vertical mixing                     ("key_zdftke")
+!!    namzdf_kpp    KPP dependent vertical mixing                     ("key_zdfkpp")
+!!    namzdf_ddm    double diffusive mixing parameterization          ("key_zdfddm")
+!!    namzdf_tmx    tidal mixing parameterization                     ("key_zdftmx")
+!!======================================================================
+!
+!-----------------------------------------------------------------------
+&namzdf        !   vertical physics
+!-----------------------------------------------------------------------
+   rn_avm0     =   1.e-6   !  vertical eddy viscosity   [m2/s]          (background Kz if not "key_zdfcst")
+   rn_avt0     =   1.e-6   !  vertical eddy diffusivity [m2/s]          (background Kz if not "key_zdfcst")
+   nn_avb      =    0      !  profile for background avt & avm (=1) or not (=0)
+   nn_havtb    =    0      !  horizontal shape for avtb (=1) or not (=0)
+   ln_zdfevd   = .false.   !  enhanced vertical diffusion (evd) (T) or not (F)
+   nn_evdm     =  1        !  evd apply on tracer (=0) or on tracer and momentum (=1)
+   rn_avevd    =  20.      !  evd mixing coefficient [m2/s]
+   ln_zdfnpc   = .false.   !  Non-Penetrative Convective algorithm (T) or not (F)
+   nn_npc      =    1      !  frequency of application of npc
+   nn_npcp     =  365      !  npc control print frequency
+   ln_zdfexp   = .false.   !  time-stepping: split-explicit (T) or implicit (F) time stepping
+   nn_zdfexp   =    3      !  number of sub-timestep for ln_zdfexp=T
+&end

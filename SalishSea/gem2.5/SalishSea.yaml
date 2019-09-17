@@ -1,0 +1,52 @@
+# salishsea command processor run description example
+#
+# Salish Sea full domain with:
+#   Smoothed JdF mouth bathymetry
+#   Initial T and S from previous day run restart file
+#   Open, unstructured western boundary across Strait of Juan de Fuca
+#     Tidal forcing at mouth of JdF
+#     Masson, depth corrected, open boundaries
+#   Open, unstructured northern boundary across Johnstone Strait
+#     Tidal forcing just north of Port Nelson
+#     Seasonal T and S forcing based on Thomson (1982)
+#  All rivers run-off forcing
+#     Fraser is based on actual daily average gauge data at Hope
+#     All other rivers are monthly climatologies
+#  Atmospheric forcing with 2.5km EC GEM operational model products
+#    Constrained to no solid precipitation
+
+config_name: SalishSea
+
+# For runs on systems that use qsub/PBS/TORQUE; e.g. Westgrid
+run_id: 25-26oct14GEMops
+walltime: 2:00:00
+
+paths:
+  # If relative, paths are taken from current directory
+  NEMO-code: ../../../NEMO-code/
+  forcing: ../../../NEMO-forcing/
+  runs directory: ../../../SalishSea/
+
+grid:
+  # If relative, paths are taken from forcing path above
+  coordinates: coordinates_seagrid_SalishSea.nc
+  bathymetry: bathy_meter_SalishSea2.nc
+
+forcing:
+  # If relative, paths are taken from forcing path above
+  atmospheric: /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos/
+  # The path and name of a restart file may be used as initial conditions
+  initial conditions: ../../../SalishSea/results/gem-ops-18-24oct14/SalishSea_00388800_restart.nc
+  open boundaries: open_boundaries/
+  rivers: /home/sallen/MEOPAR/rivers/
+
+namelists:
+  # If relative, paths are taken from current directory
+  - namelist.time
+  - ../namelist.domain
+  - namelist.surface.realtime-ops
+  - ../namelist.lateral
+  - ../namelist.bottom
+  - ../namelist.tracers
+  - ../namelist.dynamics
+  - ../namelist.compute.12x27

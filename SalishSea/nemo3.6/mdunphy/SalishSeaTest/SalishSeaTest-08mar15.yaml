@@ -1,0 +1,59 @@
+# Salish Sea Test
+config_name: SalishSeaTest
+MPI decomposition: 6x12
+run_id: SST-08mar15
+walltime: 4:00:00
+
+paths:
+  NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $HOME/MEOPAR/XIOS-2
+  forcing: $HOME/MEOPAR/NEMO-forcing/
+  runs directory: $HOME/MEOPAR/SalishSea/
+
+grid:
+  # If relative, paths are taken from the grid/ directory in the forcing
+  # path above
+  coordinates: coordinates_seagrid_SalishSea201702.nc
+  bathymetry: bathymetry_201702.nc
+
+restart:
+  restart.nc: $HOME/MEOPAR/NEMO-forcing-MD/hindcast/07mar15/SalishSea_00382320_restart.nc
+
+forcing:
+  # If relative, paths are taken from forcing path above
+  NEMO-atmos:
+    link to: $HOME/MEOPAR/NEMO-forcing-MD/atmospheric/
+  open_boundaries:
+    link to: $HOME/MEOPAR/NEMO-forcing-MD/open_boundaries/
+  rivers:
+    link to: $HOME/MEOPAR/NEMO-forcing-MD/rivers/
+  bfr_coef.nc:
+    link to: grid/jetty_mask_bathy201702.nc
+
+namelists:
+  namelist_cfg:
+    - namelist.time.08mar15
+    - namelist.domain.40
+    - namelist.surface.blue
+    - namelist.lateral
+    - namelist.bottom
+    - namelist.tracer
+    - namelist.dynamics
+    - namelist.vertical
+    - namelist.compute
+
+# Output settings.
+output:
+  separate XIOS server: True
+  XIOS servers: 4
+  iodefs: $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/iodef.xml
+  domaindefs: $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/domain_def.xml
+  fielddefs: $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/hindcast/field_def.xml
+  filedefs: $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/mdunphy/xios2/file_def.xml
+
+vcs revisions:
+  hg:
+    - $HOME/MEOPAR/SS-run-sets
+    - $HOME/MEOPAR/SalishSeaCmd
+    - $HOME/MEOPAR/NEMO-Cmd
+

@@ -1,0 +1,20 @@
+STOP ctl_opn bad opening
+> Error [void CXMLParser::ParseFile(const StdString & filename)] : In file '/data/tjarniko/MEOPAR/XIOS/src/xml_parser.cpp', line 20 -> 
+Can not open <./iodef.xml> file
+
+
+Program received signal SIGABRT: Process abort signal.
+
+Backtrace for this error:
+#0  0x7F49B314B777
+#1  0x7F49B314BD7E
+#2  0x7F49B2666CAF
+#3  0x7F49B2666C37
+#4  0x7F49B266A027
+#5  0x497D50 in xios::CException::~CException()
+#6  0x5305EF in xios::xml::CXMLParser::ParseFile(std::string const&)
+#7  0x476518 in xios::CXios::initialize()
+#8  0x476798 in xios::CXios::initServerSide()
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 27310 on node salish.eos.ubc.ca exited on signal 6 (Aborted).
+--------------------------------------------------------------------------

@@ -1,0 +1,20 @@
+<domain_definition>
+   <domain_group id="grid_T">
+      <domain id="grid_T" long_name="grid T"/>
+      <!-- VENUS -->
+   </domain_group>
+
+   <domain_group id="grid_U">
+      <domain id="grid_U" long_name="grid U"/>
+      <!-- VENUS -->
+   </domain_group>
+
+   <domain_group id="grid_V">
+      <domain id="grid_V" long_name="grid V"/>
+      <!-- VENUS -->
+   </domain_group>
+
+   <domain id="grid_W" long_name="grid W"/>
+   <domain id="scalarpoint" long_name="scalar"/>
+</domain_definition>
+
