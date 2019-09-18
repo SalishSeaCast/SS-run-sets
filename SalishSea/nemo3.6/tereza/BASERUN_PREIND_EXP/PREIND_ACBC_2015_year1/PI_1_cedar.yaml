@@ -2,7 +2,7 @@ email: tjarnik@gmail.com
 account: def-allen
 MPI decomposition: 16x41
 config_name: SKOG
-run_id: CP_1
+run_id: PI_1
 walltime: 11:50:00
 
 forcing:
@@ -37,8 +37,8 @@ forcing:
     link to: /home/tjarnik/project/tjarnik/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
 restart:
-  restart.nc: /scratch/tjarnik/CP_restart/SKOG_02471040_restart.nc
-  restart_trc.nc: /scratch/tjarnik/CP_restart/SKOG_02471040_restart_trc.nc
+  restart.nc: /scratch/tjarnik/PI_restart/SKOG_03263760_restart.nc
+  restart_trc.nc: /scratch/tjarnik/PI_restart/SKOG_03263760_restart_trc.nc
 
 
 grid:            
@@ -61,7 +61,7 @@ namelists:
 
   namelist_top_cfg:
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_restart
-  - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_TracerDefAndBdy
+  - ./namelist_top_TracerDefAndBdy
   - /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_physics
   namelist_smelt_cfg:
   - ./namelist_smelt_biology
@@ -70,10 +70,10 @@ namelists:
 
 output:
   XIOS servers: 1
-  filedefs: ./file_def.xml
-  domaindefs: /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/domain_def.xml
+  filedefs: ./file_def_withflux.xml
+  domaindefs: ./domain_def_forflux.xml
   fielddefs: ./field_def.xml
-  iodefs: /home/tjarnik/project/tjarnik/MEOPAR/SS-run-sets/v201812/iodef.xml
+  iodefs: ./iodef.xml
   separate XIOS server: false
 
 paths:
