@@ -3,7 +3,7 @@ account: def-allen
 MPI decomposition: 14x29
 config_name: SKOG
 run_id: oneday_test_with_output_latflux
-walltime: 11:31:00
+walltime: 11:55:00
 
 forcing:
   LiveOcean:
