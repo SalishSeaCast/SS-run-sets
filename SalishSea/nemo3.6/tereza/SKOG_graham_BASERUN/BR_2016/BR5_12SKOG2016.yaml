@@ -1,0 +1,93 @@
+email: sallen@eoas.ubc.ca,tjarnik@gmail.com
+MPI decomposition: 16x34
+config_name: SKOG
+run_id: SKOG_2016_BASE
+walltime: 11:00:00
+
+segmented run:
+  start date: 2016-04-30
+  start time step: 2730241
+  end date: 2016-12-31
+  days per segment: 30
+  segment walltime: 12:00:00
+  namelists:
+    namrun: ./namelist.time
+    namdom: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist.domain
+
+forcing:
+  LiveOcean:
+    link to: $FORCING/SalishSeaCast/forcing/LiveOcean
+  NEMO-atmos:
+    link to: $FORCING/SalishSeaCast/forcing/atmospheric/GEM2.5/operational
+
+  bfr_coef.nc:
+    link to: $PROJECT/SalishSeaCast/hindcast-sys/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: $PROJECT/SalishSeaCast/hindcast-sys/grid
+  rivers:
+    link to: $FORCING/SalishSeaCast/forcing/rivers
+  rivers-climatology:
+    link to: $PROJECT/SalishSeaCast/hindcast-sys/rivers-climatology
+  river_turb:
+    link to: $FORCING/SalishSeaCast/forcing/rivers/river_turb
+  ssh:
+    link to: $FORCING/SalishSeaCast/forcing/sshNeahBay/obs
+  tides:
+    link to: $PROJECT/SalishSeaCast/hindcast-sys/tides
+  tracers:
+    link to: $PROJECT/SalishSeaCast/hindcast-sys/tracers
+
+restart:
+  restart.nc: $SCRATCHDIR/SKOG_0/SKOG_02730240_restart.nc
+  restart_trc.nc: $SCRATCHDIR/SKOG_0/SKOG_02730240_restart_trc.nc
+
+grid:            
+  bathymetry: $PROJECT/SalishSeaCast/hindcast-sys/grid/bathymetry_201702.nc
+  coordinates: $PROJECT/SalishSeaCast/hindcast-sys/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $PROJECT/SalishSeaCast/hindcast-sys/grid/bathymetry_201702.csv
+
+namelists:
+  namelist_cfg:
+  - ./namelist.time
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist.domain
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist.atmos_rivers
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist.light
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist.lateral
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist.bottom
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist.tracer
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist.dynamics
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist.vertical
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist.compute
+
+  namelist_top_cfg:
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist_top_restart
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist_top_TracerDefAndBdy
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist_top_physics
+  namelist_smelt_cfg:
+  - /home/sallen/dlatorne/SalishSeaCast/hindcast-sys/SS-run-sets/SalishSea/nemo3.6/tereza/SKOG_graham_BASERUN/BR_2016/namelist_smelt_biology
+  - /home/sallen/dlatorne/SalishSeaCast/hindcast-sys/SS-run-sets/SalishSea/nemo3.6/tereza/SKOG_graham_BASERUN/BR_2016/namelist_smelt_rivers
+  - /home/sallen/dlatorne/SalishSeaCast/hindcast-sys/SS-run-sets/SalishSea/nemo3.6/tereza/SKOG_graham_BASERUN/BR_2016/namelist_smelt_skog
+
+output:
+  XIOS servers: 1
+  filedefs: ./file_def.xml
+  domaindefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/domain_def.xml
+  fielddefs: ./field_def.xml
+  iodefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/iodef.xml
+  separate XIOS server: true
+
+paths:
+  NEMO code config: $PROJECT/SalishSeaCast/hindcast-sys/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $PROJECT/SalishSeaCast/hindcast-sys/XIOS-2
+  runs directory: $SCRATCHDIR/
+
+vcs revisions:
+  hg:
+  - $PROJECT/SalishSeaCast/hindcast-sys/grid
+  - $PROJECT/SalishSeaCast/hindcast-sys/NEMO-Cmd
+  - $PROJECT/SalishSeaCast/hindcast-sys/rivers-climatology
+  - $PROJECT/SalishSeaCast/hindcast-sys/SalishSeaCmd
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets
+  - $PROJECT/SalishSeaCast/hindcast-sys/tides
+  - $PROJECT/SalishSeaCast/hindcast-sys/tracers
+  - $PROJECT/SalishSeaCast/hindcast-sys/XIOS-ARCH

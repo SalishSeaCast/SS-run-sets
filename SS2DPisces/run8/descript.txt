@@ -1,0 +1,5 @@
+based on run3
+closed domain
+no tides
+2 day run
+altered bathymetry to use bathy2DDeep.nc, which has no depths shallower than 100m. See if this still has weird boundary issues.

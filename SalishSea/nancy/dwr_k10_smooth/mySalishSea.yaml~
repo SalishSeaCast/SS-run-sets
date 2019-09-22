@@ -1,0 +1,36 @@
+# salishsea command processor run description for Salish Sea case
+#
+# Salish Sea full domain with smoothed topography during dwr in August 2003
+
+config_name: SalishSea
+
+# qsub/PBS/TORQUE commands
+
+run_id: dwr_smooth
+email: nsoontie@eos.ubc.ca
+walltime: '21:00:00'
+
+paths:
+  NEMO-code: ../../../../NEMO-code/
+  forcing: ../../../../NEMO-forcing/
+  runs directory: ../../../../SalishSea/
+
+grid:
+  coordinates: coordinates_seagrid_SalishSea.nc
+  bathymetry: smoothto033.nc
+
+forcing:
+  atmospheric: /home/dlatorne/MEOPAR/CGRF/NEMO-atmos/
+  initial conditions: /home/dlatorne/MEOPAR/SalishSea/spin-up/9aug18aug/
+  open boundaries: open_boundaries/
+  rivers: rivers/
+
+namelists:
+  - ../namelist.time.19aug28sep            # start on Aug 19, 2003
+  - mynamelist.domain  # new TS for smooth topography
+  - ../../tides/mynamelist.surface
+  - ../../tides/mynamelist.lateral
+  - ../../namelist.bottom
+  - ../../namelist.tracers
+  - ../../tides/mynamelist.dynamics15N
+  - ../../namelist.compute.12x27

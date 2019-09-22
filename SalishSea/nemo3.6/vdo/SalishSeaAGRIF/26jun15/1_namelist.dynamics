@@ -1,0 +1,72 @@
+!!======================================================================
+!!                      ***  Dynamics namelists  ***
+!!======================================================================
+!!   namdyn_adv    formulation of the momentum advection
+!!   namdyn_vor    advection scheme
+!!   namdyn_hpg    hydrostatic pressure gradient
+!!   namdyn_spg    surface pressure gradient                            (CPP key only)
+!!   namdyn_ldf    lateral diffusion scheme
+!!   nam_vvl variable volume    (key_vvl)
+!!======================================================================
+!
+!-----------------------------------------------------------------------
+&namdyn_adv    !   formulation of the momentum advection
+!-----------------------------------------------------------------------
+   ln_dynadv_vec = .true.  !  vector form (T) or flux form (F)
+   nn_dynkeg     = 1       ! scheme for grad(KE): =0   C2  ;  =1   Hollingsworth correction
+   ln_dynadv_cen2= .false. !  flux form - 2nd order centered scheme
+   ln_dynadv_ubs = .false. !  flux form - 3rd order UBS      scheme
+   ln_dynzad_zts = .true.  !  Use (T) sub timestepping for vertical momentum advection
+   nn_dynzad_zts =    10   !     number of sub-time steps for ln_dynzad_zts=T
+&end
+
+
+!-----------------------------------------------------------------------
+&nam_vvl    !   vertical coordinate options
+!-----------------------------------------------------------------------
+   ln_vvl_zstar  = .true.           !  zstar vertical coordinate
+   ln_vvl_ztilde = .false.          !  ztilde vertical coordinate: only high frequency variations
+   ln_vvl_layer  = .false.          !  full layer vertical coordinate
+   ln_vvl_ztilde_as_zstar = .false. !  ztilde vertical coordinate emulating zstar
+   ln_vvl_zstar_at_eqtor = .false.  !  ztilde near the equator
+   rn_ahe3       = 0.0e0            !  thickness diffusion coefficient
+   rn_rst_e3t    = 30.e0            !  ztilde to zstar restoration timescale [days]
+   rn_lf_cutoff  = 5.0e0            !  cutoff frequency for low-pass filter  [days]
+   rn_zdef_max   = 0.9e0            !  maximum fractional e3t deformation
+   ln_vvl_dbg    = .false.          !  debug prints    (T/F)
+&end
+
+
+!-----------------------------------------------------------------------
+&namdyn_hpg    !   Hydrostatic pressure gradient option
+!-----------------------------------------------------------------------
+   ln_hpg_zco  = .false.   !  z-coordinate - full steps
+   ln_hpg_zps  = .false.   !  z-coordinate - partial steps (interpolation)
+   ln_hpg_sco  = .false.   !  s-coordinate (standard jacobian formulation)
+   ln_hpg_djc  = .false.   !  s-coordinate (Density Jacobian with Cubic polynomial)
+   ln_hpg_prj  = .true.    !  s-coordinate (Pressure Jacobian scheme)
+   ln_dynhpg_imp = .false. !  time stepping: semi-implicit time scheme  (T)
+                           !                 centered      time scheme  (F)
+&end
+
+
+!-----------------------------------------------------------------------
+&namdyn_ldf    !   lateral diffusion on momentum
+!-----------------------------------------------------------------------
+   !                            !  Type of the operator :
+   ln_dynldf_lap    =  .true.   !  laplacian operator
+   ln_dynldf_bilap  =  .false.  !  bilaplacian operator
+   !                            !  Direction of action  :
+   ln_dynldf_level  =  .false.  !  iso-level
+   ln_dynldf_hor    =  .true.   !  horizontal (geopotential)   (require "key_ldfslp" in s-coord.)
+   ln_dynldf_iso    =  .false.  !  iso-neutral                 (require "key_ldfslp")
+   !                            !  Coefficient
+   rn_ahm_0_lap     =     0.25  !  horizontal laplacian eddy viscosity   [m2/s]
+   rn_ahmb_0        =     0.    !  background eddy viscosity for ldf_iso [m2/s]
+   rn_ahm_0_blp     =  -1.0e+10 !  horizontal bilaplacian eddy viscosity [m4/s]
+   rn_cmsmag_1      =     3.    !  constant in laplacian Smagorinsky viscosity
+   rn_cmsmag_2      =     3     !  constant in bilaplacian Smagorinsky viscosity
+   rn_cmsh          =     1.    !  1 or 0 , if 0 -use only shear for Smagorinsky viscosity
+   rn_ahm_m_blp     =    -1.e12 !  upper limit for bilap  abs(ahm) < min( dx^4/128rdt, rn_ahm_m_blp)
+   rn_ahm_m_lap     = 40000.    !  upper limit for lap  ahm < min(dx^2/16rdt, rn_ahm_m_lap)
+&end

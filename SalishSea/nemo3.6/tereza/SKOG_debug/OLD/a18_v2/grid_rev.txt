@@ -1,0 +1,7 @@
+changset:   21:2298a95bf000b7f7c51ad26db587e6c354be0be2
+tag:        tip
+user:       Doug Latornell <dlatornell@eoas.ubc.ca>
+date:       Tue Oct 17 17:04:12 2017 -07:00
+files:      subgrids/BaynesSound/weights-gem2.5-ops_201702_BS.nc
+description:
+Add 201702 bathymetry atmos forcing weights file for Baynes Sound AGRIF sub-grid.
