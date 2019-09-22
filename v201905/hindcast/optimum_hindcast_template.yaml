@@ -10,7 +10,7 @@ walltime: 12:00:00
 paths:
   NEMO code config: $PROJECT/SalishSeaCast/hindcast-sys/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $PROJECT/SalishSeaCast/hindcast-sys/XIOS-2
-  runs directory: $SCRATCHDIR/spinup.201905
+  runs directory: $SCRATCHDIR/hindcast.201905
 
 grid:
   bathymetry: $PROJECT/SalishSeaCast/hindcast-sys/grid/bathymetry_201702.nc
@@ -18,8 +18,8 @@ grid:
   land processor elimination: $PROJECT/SalishSeaCast/hindcast-sys/grid/bathymetry_201702.csv
 
 restart:
-  restart.nc: $SCRATCHDIR/spinup.201905/ddmmmyy/SalishSea_nnnnnnnn_restart.nc
-  restart_trc.nc: $SCRATCHDIR/spinup.201905/ddmmmyy/SalishSea_nnnnnnnn_restart_trc.nc
+  restart.nc: $SCRATCHDIR/hindcast.201905/ddmmmyy/SalishSea_nnnnnnnn_restart.nc
+  restart_trc.nc: $SCRATCHDIR/hindcast.201905/ddmmmyy/SalishSea_nnnnnnnn_restart_trc.nc
 
 forcing:
   LiveOcean:
@@ -47,7 +47,7 @@ namelists:
   namelist_cfg:
   - $PROJECT/SalishSeaCast/hindcast-sys/runs/namelist.time
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.domain
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.atmos_rivers.gemlam
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.atmos_rivers
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.light
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.lateral
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.bottom
