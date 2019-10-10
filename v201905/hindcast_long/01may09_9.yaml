@@ -2,7 +2,7 @@ email: sallen@eoas.ubc.ca,dlatornell@eoas.ubc.ca
 MPI decomposition: 18x31
 config_name: SalishSeaCast
 run_id: hindlong
-walltime: 36:00:00
+walltime: 18:00:00
 
 forcing:
   NEP:
