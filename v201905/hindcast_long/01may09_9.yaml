@@ -28,8 +28,8 @@ forcing:
     link to: $PROJECT/tracers
 
 restart:
-  restart.nc: $SCRATCH/hindcast_v201905_long/01sep09/SalishSea_03419280_restart.nc
-  restart_trc.nc: $SCRATCH/hindcast_v201905_long/01sep09/SalishSea_03419280_restart_trc.nc
+  restart.nc: $SCRATCH/hindcast_v201905_long/01may09/SalishSea_03419280_restart.nc
+  restart_trc.nc: $SCRATCH/hindcast_v201905_long/01may09/SalishSea_03419280_restart_trc.nc
 
 grid:
   bathymetry: $PROJECT/grid/bathymetry_201702.nc
