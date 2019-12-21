@@ -13,7 +13,7 @@ MPI decomposition: 5x19
 # For runs on systems that use qsub/PBS/TORQUE
 #
 # If relative, paths are taken from current directory
-run_id: SalishSeaPond_S4d10ms_N0175
+run_id: SalishSeaPond_S4d10ms_N0175s
 # Maximum run time requested/allowed for job
 # Too low and you job will be terminated before it finishes
 # Too high and you will have to wait longer on the queue for your job to start
@@ -32,7 +32,7 @@ paths:
   XIOS: $HOME/MEOPAR/XIOS-2
   # Directory in which to create temporary run directories
   # Typically NOT inside a version control repository
-  runs directory: $SCRATCH/Results/Lake/SalishSeaPond_S4d10ms_N0175
+  runs directory: $SCRATCH/Results/Lake/SalishSeaPond_S4d10ms_N0175s
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -82,7 +82,7 @@ namelists:
     - ../namelist.vertical
     - ../namelist.compute
     - ../namelist.awind.S4d10ms
-    - ../namelist.istate.N0175
+    - ../namelist.istate.N0175s
   namelist_top_cfg:
     - ../namelist_top_cfg
 
