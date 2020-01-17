@@ -1,7 +1,7 @@
 #!/bin/bash
 NEWRUN=testmuZ
 
-TEST="$(salishsea run ${NEWRUN}_2.yaml $SCRATCH/results/${NEWRUN}_2 2>&1)"
+TEST="$(salishsea run --waitjob 3690574 --nocheck-initial-conditions ${NEWRUN}_3.yaml $SCRATCH/results/${NEWRUN}_3 2>&1)"
 echo $TEST
 if [[ $TEST != *"ERROR"* ]]; then
    JID=${TEST##* }
@@ -11,7 +11,7 @@ fi
 echo $JID
 #sbatch --dependency=afterok:${JID} batchDeflate.sh ${NEWRUN} 0
 
-for j in $(seq 3 4 5 6); do
+for j in $(seq 4 6); do
   TEST=0
   TEST="$(salishsea run --waitjob ${JID} --nocheck-initial-conditions ${NEWRUN}_${j}.yaml $SCRATCH/results/${NEWRUN}_${j} 2>&1)"
   echo $TEST
