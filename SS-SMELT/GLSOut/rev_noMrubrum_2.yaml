@@ -46,11 +46,11 @@ namelists:
 
 output:
   XIOS servers: 1
-  filedefs: ./file_def.xml_PhysT
+  filedefs: ./file_def.xml_noMrubrum
   domaindefs: ./domain_def.xml
   fielddefs: ./field_def.xml
   iodefs: ./iodef.xml
-  separate XIOS server: false
+  separate XIOS server: true
 
 paths:
   NEMO code config: $MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
