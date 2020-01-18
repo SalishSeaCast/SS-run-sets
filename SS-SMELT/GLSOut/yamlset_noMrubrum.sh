@@ -1,6 +1,6 @@
 #!/bin/bash
 NEWRUN=noMrubrum
-PREFIX=GLS
+PREFIX=rev
 
 TEST="$(salishsea run ${PREFIX}_${NEWRUN}_0.yaml $SCRATCH/results/${PREFIX}_${NEWRUN}_0 2>&1)"
 echo $TEST
