@@ -34,7 +34,7 @@ restart:
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702_noDisc.nc
   coordinates: $MEOPAR/NEMO-forcing/grid/coordinates_seagrid_SalishSea201702.nc
-  land processor elimination: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.csv
+  land processor elimination: $MEOPAR/NEMO-forcing/grid/bathymetry_201702_noDisc.csv
 
 namelists:
   namelist_cfg:
