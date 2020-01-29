@@ -1,8 +1,8 @@
 email: tjarnik@gmail.com
-account: def-allen
+account: rrg-allen
 MPI decomposition: 19x33
 config_name: SKOG
-run_id: acbc_25
+run_id: LA3_1
 walltime: 11:50:00
 
 forcing:
