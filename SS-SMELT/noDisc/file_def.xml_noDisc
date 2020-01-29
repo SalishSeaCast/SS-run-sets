@@ -8,6 +8,17 @@
     <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4" split_freq="10d" split_freq_format= "%y%mo%d">
       <file_group id="1ts" output_freq="1ts"  output_level="10" enabled=".TRUE."/> <!-- 1 time step files -->
       <file_group id="1h" output_freq="1h"  output_level="10" compression_level="4" split_freq="10d" enabled=".TRUE."> <!-- 1h files -->
+	<file id="file1" name_suffix="_grid_T" description="ocean T grid variables" >
+          <field field_ref="ssh"            name="sossheig"/>
+          <field field_ref="toce"           name="votemper"/>
+          <field field_ref="soce"           name="vosaline"/>
+        </file>
+          <file id="file2" name_suffix="_grid_U" description="ocean U grid variables" >
+          <field field_ref="uoce"           name="vozocrtx"  />
+        </file>
+            <file id="file3" name_suffix="_grid_V" description="ocean V grid variables" >
+          <field field_ref="voce"           name="vomecrty"  />
+        </file>
         <file id="file5" name_suffix="_ptrc_T" description="biogeochemical variables" >
           <field field_ref="NO3"            name="nitrate"/>
           <field field_ref="Si"             name="silicon"/>
