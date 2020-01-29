@@ -29,7 +29,7 @@ forcing:
 
 restart:
   restart.nc: $SCRATCH/results/rev_noDisc_0/SalishSea_01153440_restart.nc
-  restart_trc.nc: $SCRATCH/results/rev_noDisc_0/SalishSea_01153440_restart_trc_noMrubrum.nc
+  restart_trc.nc: $SCRATCH/results/rev_noDisc_0/SalishSea_01153440_restart_trc.nc
 
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702_noDisc.nc
