@@ -48,7 +48,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time25
+  - ./namelist.time1
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
