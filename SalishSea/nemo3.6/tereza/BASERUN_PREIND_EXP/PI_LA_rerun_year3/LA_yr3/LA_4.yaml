@@ -2,7 +2,7 @@ email: tjarnik@gmail.com
 account: rrg-allen
 MPI decomposition: 19x33
 config_name: SKOG
-run_id: pi3
+run_id: LA3_3
 walltime: 11:50:00
 
 forcing:
@@ -37,8 +37,9 @@ forcing:
     link to: $PROJECT/tjarnik/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
 restart:
-  restart.nc: /scratch/tjarnik/PILA3_rerun/PI3/31jan15/SKOG_02600640_restart.nc
-  restart_trc.nc: /scratch/tjarnik/PILA3_rerun/PI3/31jan15/SKOG_02600640_restart_trc.nc
+  restart.nc: /scratch/tjarnik/PILA3_rerun/LA3/02mar15/SKOG_02665440_restart.nc
+  restart_trc.nc: /scratch/tjarnik/PILA3_rerun/LA3/02mar15/SKOG_02665440_restart_trc.nc
+
 
 
 grid:            
@@ -48,7 +49,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time3
+  - ./namelist.time4
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
@@ -61,7 +62,7 @@ namelists:
 
   namelist_top_cfg:
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_restart
-  - ./namelist_top_TracerDefAndBdy
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_TracerDefAndBdy
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_physics
   namelist_smelt_cfg:
   - ./namelist_smelt_biology
