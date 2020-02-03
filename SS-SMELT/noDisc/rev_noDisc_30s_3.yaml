@@ -1,0 +1,68 @@
+run_id: noDisc_3
+config_name: SMELT
+account: rrg-allen
+email: eolson@eoas.ubc.ca
+MPI decomposition: 16x41
+walltime: 12:00:00
+
+forcing:
+  LiveOcean:
+    link to: $PROJECT/SalishSea/forcing/LiveOcean
+  NEMO-atmos:
+    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
+  bfr_coef.nc:
+    link to: $MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: $MEOPAR/NEMO-forcing/grid
+  rivers:
+    link to: $PROJECT/SalishSea/forcing/rivers
+  rivers-climatology:
+    link to: $MEOPAR/NEMO-forcing/rivers-climatology
+  river_turb:
+    link to: $PROJECT/SalishSea/forcing/rivers/river_turb
+  ssh:
+    link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
+  tides:
+    link to: $MEOPAR/NEMO-forcing/tides
+  tracers:
+    link to: $MEOPAR/NEMO-forcing/tracers
+
+restart:
+  restart.nc: $SCRATCH/results/rev_noDisc_2/SalishSea_01304640_restart.nc
+  restart_trc.nc: $SCRATCH/results/rev_noDisc_2/SalishSea_01304640_restart_trc.nc
+
+grid:
+  bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702_noDisc.nc
+  coordinates: $MEOPAR/NEMO-forcing/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $MEOPAR/NEMO-forcing/grid/bathymetry_201702_noDisc.csv
+
+namelists:
+  namelist_cfg:
+  - ./namelist_cfg_10jul15_30d_30s_noDisc
+  namelist_top_cfg:
+  - ./namelist_top_cfg_noDisc
+  namelist_top_ref:
+  - ./namelist_top_ref_noDisc
+  namelist_smelt_cfg:
+  - ./namelist_smelt_cfg
+
+output:
+  XIOS servers: 1
+  filedefs: ./file_def.xml_noDisc
+  domaindefs: ./domain_def.xml
+  fielddefs: ./field_def.xml
+  iodefs: ./iodef.xml
+  separate XIOS server: true
+
+paths:
+  NEMO code config: $MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $MEOPAR/XIOS-2/
+  runs directory: $SCRATCH/
+  
+vcs revisions:
+  hg:
+  - $MEOPAR/SS-run-sets
+  - $MEOPAR/NEMO-forcing/tides
+  - $MEOPAR/NEMO-forcing/tracers
+  - $MEOPAR/NEMO-forcing/rivers-climatology
+  - $MEOPAR/NEMO-forcing/grid
