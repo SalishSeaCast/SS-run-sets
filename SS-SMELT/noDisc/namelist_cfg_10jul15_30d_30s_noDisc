@@ -37,7 +37,7 @@
    jp_cfg      =     120               !  resolution of the configuration [1/degrees]
    jpidta      =     398               !  1st lateral dimension ( >= jpi )
    jpjdta      =     898               !  2nd    "         "    ( >= jpj )
-   jpkdta      =      30               !  number of levels      ( >= jpk )
+   jpkdta      =      40               !  number of levels      ( >= jpk )
    jpiglo      =     398               !  1st dimension of global domain --> i =jpidta
    jpjglo      =     898               !  2nd    -                  -    --> j =jpjdta
    jperio      =       0               !  lateral cond. type (between 0 and 6)
@@ -64,7 +64,7 @@
    rn_e3zps_min=    2.     !  partial step thickness is set larger than the minimum of
    rn_e3zps_rat=    0.5    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
                            !
-   rn_rdt      =   40.     !  time step for the dynamics (and tracer if nn_acc=0)
+   rn_rdt      =   30.     !  time step for the dynamics (and tracer if nn_acc=0)
    rn_atfp     =    0.1    !  asselin time filter parameter
    nn_acc      =    0      !  acceleration of convergence : =1      used, rdt < rdttra(k)
                            !                                =0, not used, rdt = rdttra
