@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWRUN=noDis_30s
+NEWRUN=noDisc30s
 PREFIX=rev
 
 TEST="$(salishsea run ${PREFIX}_${NEWRUN}_4.yaml $SCRATCH/results/${PREFIX}_${NEWRUN}_4 2>&1)"
