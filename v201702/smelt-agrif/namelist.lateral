@@ -31,7 +31,6 @@
     nb_bdy         = 2                     !  number of open boundary sets According to merge namelist, only 1
     ln_coords_file = .false., .false.      !  =T : read bdy coordinates from file
     cn_dyn2d       = 'flather', 'flather'            !
-    rn_ssh_offset  = 0, 0.098              !  ssh offset on north boundary
     nn_dyn2d_dta   =  3, 3                 !  = 0, bdy data are equal to the initial state
                                            !  = 1, bdy data are read in 'bdydata   .nc' files
                                            !  = 2, use tidal harmonic forcing data from files
@@ -101,8 +100,8 @@
   bn_v2d = 'ssh/ssh',                             1,              'vobtcrty', .true.,        .false.,  'daily',    '',        ''
   bn_u3d = '',                                   24,              'vozocrtx', .true.,        .false.,  'daily',    '',        ''
   bn_v3d = '',                                   24,              'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'tracers/north/Dosser_north_TEOS10',  -1,              'votemper', .true.,        .true.,   'yearly',   '',        ''
-  bn_sal = 'tracers/north/Dosser_north_TEOS10',  -1,              'vosaline', .true.,        .true.,   'yearly',   '',        ''
+  bn_tem = 'tracers/north/SalishSea_north_TEOS10',  4320,              'votemper', .true.,        .true.,   'yearly',   '',        ''
+  bn_sal = 'tracers/north/SalishSea_north_TEOS10',  4320,              'vosaline', .true.,        .true.,   'yearly',   '',        ''
 
   cn_dir = './'
   ln_full_vel = .false.
