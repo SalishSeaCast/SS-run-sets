@@ -6,9 +6,9 @@
 &namrun        !   Parameters of the run
 !-----------------------------------------------------------------------
    cn_exp      = "SKOG"        ! experience name
-   nn_it000    =    2989441    ! first time step
-   nn_itend    =    3054240    ! last time step (std 1 day = 2160 re: rn_rdt=40 in &namdom)
-   nn_date0    =  20150829    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
+   nn_it000    =    2859841    ! first time step
+   nn_itend    =    2924640    ! last time step (std 1 day = 2160 re: rn_rdt=40 in &namdom)
+   nn_date0    =  20150630    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
                               ! used to adjust tides to run date (regardless of restart control)
    nn_leapy    =       1      ! Leap year calendar (1) or not (0)
    ln_rstart   =   .true.     ! start from rest (F) or from a restart file (T)
@@ -25,5 +25,5 @@
    ln_clobber  =  .true.      ! clobber (overwrite) an existing file
 
    ln_rst_list  = .false.       !  output restarts at list of times using nn_stocklist (T) or at set frequency with nn_stock (F)
-   nn_stock    =  2160      ! frequency of creation of a restart file (modulo referenced to 1)
+   nn_stock    =  10800      ! frequency of creation of a restart file (modulo referenced to 1)
 &end
