@@ -75,6 +75,7 @@ output:
 vcs revisions:
   git:
     - $PROJECT/SalishSeaCast/hindcast-sys/tides
+    - $PROJECT/SalishSeaCast/hindcast-sys/XIOS-ARCH
   hg:
     - $PROJECT/SalishSeaCast/hindcast-sys/grid
     - $PROJECT/SalishSeaCast/hindcast-sys/NEMO-Cmd
@@ -83,4 +84,3 @@ vcs revisions:
     - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets
     - $PROJECT/SalishSeaCast/hindcast-sys/tracers
     - $PROJECT/SalishSeaCast/hindcast-sys/XIOS-2
-    - $PROJECT/SalishSeaCast/hindcast-sys/XIOS-ARCH
