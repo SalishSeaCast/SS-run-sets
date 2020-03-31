@@ -115,12 +115,13 @@ output:
     filedefs: /home/dlatorne/nowcast-agrif-sys/SS-run-sets/v201702/smelt-agrif/subgrids/BaynesSound/file_def.BS.xml
 
 vcs revisions:
-  hg:
+  git:
     - /home/dlatorne/nowcast-agrif-sys/grid
     - /home/dlatorne/nowcast-agrif-sys/NEMO-Cmd
     - /home/dlatorne/nowcast-agrif-sys/rivers-climatology
+    - /home/dlatorne/nowcast-agrif-sys/tides
+    - /home/dlatorne/nowcast-agrif-sys/XIOS-ARCH
+  hg:
     - /home/dlatorne/nowcast-agrif-sys/SalishSeaCmd
     - /home/dlatorne/nowcast-agrif-sys/SS-run-sets
-    - /home/dlatorne/nowcast-agrif-sys/tides
     - /home/dlatorne/nowcast-agrif-sys/tracers
-    - /home/dlatorne/nowcast-agrif-sys/XIOS-ARCH
