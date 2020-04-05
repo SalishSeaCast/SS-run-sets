@@ -26,6 +26,8 @@
           <field field_ref="PPMRUBNO3"     />
           <field field_ref="TQ10"       />
           <field field_ref="PAR"       />
+          <field field_ref="BIOTRNO3"       />
+          <field field_ref="PHYSTRNO3"       />
         </file>
         <file id="file16" name_suffix="_dian_U" description="reduced domain N transports" >
           <field field_ref="NO3_UT"        grid_ref="NSOG_U_grid"/>
