@@ -926,6 +926,8 @@
        <field id="MORTMRUB"    long_name="M. rubrum mortality"                     unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="MORTDIAT"    long_name="Diatom mortality"                        unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="TQ10"        long_name="Temperature dependence of bio rates"     unit="1"             grid_ref="grid_T_3D" />
+       <field id="BIOTRNO3"    long_name="biology trend nitrate"                   unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PHYSTRNO3"    long_name="physics trend nitrate"                  unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="Heup"        long_name="Euphotic layer depth"                    unit="m"                               />
 
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
