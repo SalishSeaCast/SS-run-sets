@@ -1,5 +1,5 @@
 email: tjarnik@gmail.com
-account: rrg-allen
+account: def-allen
 MPI decomposition: 19x33
 config_name: SKOG
 run_id: pi13
@@ -37,8 +37,8 @@ forcing:
     link to: $PROJECT/tjarnik/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
 restart:
-  restart.nc: /scratch/tjarnik/PILA3_rerun/PI3/17nov15/SKOG_03227040_restart.nc
-  restart_trc.nc: /scratch/tjarnik/PILA3_rerun/PI3/17nov15/SKOG_03227040_restart_trc.nc
+  restart.nc: /scratch/tjarnik/PILA4/PI4/17nov15/SKOG_03227040_restart.nc
+  restart_trc.nc: /scratch/tjarnik/PILA4/PI4/17nov15/SKOG_03227040_restart_trc.nc
 
 
 grid:            
