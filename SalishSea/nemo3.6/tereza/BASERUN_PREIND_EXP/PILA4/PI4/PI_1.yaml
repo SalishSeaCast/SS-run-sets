@@ -1,5 +1,5 @@
 email: tjarnik@gmail.com
-account: def-allen
+account: rrg-allen
 MPI decomposition: 19x33
 config_name: SKOG
 run_id: pi4_1
@@ -38,7 +38,7 @@ forcing:
 
 restart:
   restart.nc: /scratch/tjarnik/PILA4/initial_restarts/SKOG_PI_02471040_restart.nc
-  restart_trc.nc: /scratch/tjarnik/PILA4/initial_restarts/SKOG_PI_02471040_restart.nc
+  restart_trc.nc: /scratch/tjarnik/PILA4/initial_restarts/SKOG_PI_02471040_restart_trc.nc
 
 
 grid:            
