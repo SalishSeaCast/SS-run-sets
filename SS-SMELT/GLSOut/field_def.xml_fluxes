@@ -911,6 +911,9 @@
        <field id="PPDIATNO3"   long_name="New Primary production of diatoms"       unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="PPPHYNO3"    long_name="New Primary production of small phyto"   unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="PPMRUBNO3"   long_name="New Primary production of M. rubrum"     unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PPDIATNO3V"   long_name="New Primary production of diatoms"       unit="mmol N/s"   grid_ref="grid_T_3D" />
+       <field id="PPPHYNO3V"    long_name="New Primary production of small phyto"   unit="mmol N/s"   grid_ref="grid_T_3D" />
+       <field id="PPMRUBNO3V"   long_name="New Primary production of M. rubrum"     unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="HetMRub"     long_name="Heterotrophic growth of M. rubrum"       unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="GRMESZDIAT"  long_name="Mesozoo grazing on diatoms"              unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="GRMESZMRUB"  long_name="Mesozoo grazing on M. rubrum"            unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
@@ -926,8 +929,10 @@
        <field id="MORTMRUB"    long_name="M. rubrum mortality"                     unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="MORTDIAT"    long_name="Diatom mortality"                        unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="TQ10"        long_name="Temperature dependence of bio rates"     unit="1"             grid_ref="grid_T_3D" />
+       <field id="RIVNO3"      long_name="riverine nitrate"                        unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="BIOTRNO3"    long_name="biology trend nitrate"                   unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="PHYSTRNO3"    long_name="physics trend nitrate"                  unit="mmol N/s"   grid_ref="grid_T_3D" />
+       <field id="NITR"        long_name="nitrification"                           unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="Heup"        long_name="Euphotic layer depth"                    unit="m"                               />
 
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
