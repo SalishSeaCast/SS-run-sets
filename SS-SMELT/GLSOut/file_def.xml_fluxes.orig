@@ -24,10 +24,6 @@
           <field field_ref="NO3_E3T"    />
           <field field_ref="e3t"        />
         </file>
-        <file id="file9" name_suffix="_Sutil_V" description="N transports" >
-          <field field_ref="NO3_VT"        grid_ref="Sutil_grid"/>
-          <field field_ref="VLDFNO3T"       grid_ref="Sutil_grid"/>
-        </file>
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
       <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE."/>  <!-- 5d files -->
