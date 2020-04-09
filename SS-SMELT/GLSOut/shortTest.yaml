@@ -49,7 +49,7 @@ output:
   filedefs: ./file_def.xml_fluxes
   domaindefs: ./domain_def.xml_fluxes
   fielddefs: ./field_def.xml_fluxes
-  iodefs: ./iodef.xml
+  iodefs: ./iodef.xml_fluxes
   separate XIOS server: true
 
 paths:
