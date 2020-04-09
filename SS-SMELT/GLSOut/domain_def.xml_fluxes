@@ -102,6 +102,11 @@
       <domain id="TV2"                      domain_ref="grid_V"> <zoom_domain ibegin="122" jbegin="792" ni="67" nj="1" /> </domain>
       <domain id="Tex"                      domain_ref="grid_V"> <zoom_domain ibegin="130" jbegin="585" ni="125" nj="1" /> </domain>
       <domain id="Gulf"                     domain_ref="grid_V"> <zoom_domain ibegin="220" jbegin="355" ni="135" nj="1" /> </domain>
+      <domain id="Haro"                     domain_ref="grid_V"> <zoom_domain ibegin="213" jbegin="305" ni="33" nj="1" /> </domain>
+      <domain id="SJC"                      domain_ref="grid_V"> <zoom_domain ibegin="258" jbegin="281" ni="12" nj="1" /> </domain>
+      <domain id="Rosario"                  domain_ref="grid_V"> <zoom_domain ibegin="280" jbegin="265" ni="31" nj="1" /> </domain>
+      <domain id="Discovery"                domain_ref="grid_V"> <zoom_domain ibegin="120" jbegin="737" ni="11" nj="1" /> </domain>
+      <domain id="Sutil"                    domain_ref="grid_V"> <zoom_domain ibegin="138" jbegin="749" ni="26" nj="1" /> </domain>
    </domain_group>
 
    <domain_group id="grid_W">
