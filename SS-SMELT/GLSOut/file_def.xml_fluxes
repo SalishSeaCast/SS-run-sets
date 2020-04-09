@@ -13,7 +13,7 @@
       <file_group id="4h" output_freq="4h"  output_level="10" enabled=".FALSE."/> <!-- 4h files -->
       <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."/> <!-- 6h files -->
       <file_group id="1d" output_freq="1d"  output_level="10" split_freq="5d" enabled=".TRUE."> <!-- 1d files -->
-        <file id="file6" name_suffix="_dian_T" description="diagnostics" >
+        <file id="file1" name_suffix="_dian_T" description="diagnostics" >
           <field field_ref="PPDIATNO3V"      />
           <field field_ref="PPPHYNO3V"       />
           <field field_ref="PPMRUBNO3V"      />
@@ -24,18 +24,42 @@
           <field field_ref="NO3_E3T"    />
           <field field_ref="e3t"        />
         </file>
-        <file id="file16" name_suffix="_dian_U" description="reduced domain N transports" >
-          <field field_ref="NO3_UT"        grid_ref="NSOG_U_grid"/>
-          <field field_ref="ULDFNO3T"       grid_ref="NSOG_U_grid"/>
+        <file id="file2" name_suffix="_SJDFK_U" description="N transports" >
+          <field field_ref="NO3_UT"        grid_ref="SJDFK_grid"/>
+          <field field_ref="ULDFNO3T"       grid_ref="SJDFK_grid"/>
         </file>
-        <file id="file19" name_suffix="_dian_V" description="reduced domain N transports" >
-          <field field_ref="NO3_VT"        grid_ref="NSOG_V_grid"/>
-          <field field_ref="VLDFNO3T"       grid_ref="NSOG_V_grid"/>
+        <file id="file3" name_suffix="_SJDFE_U" description="N transports" >
+          <field field_ref="NO3_UT"        grid_ref="SJDFE_grid"/>
+          <field field_ref="ULDFNO3T"       grid_ref="SJDFE_grid"/>
         </file>
-        <file id="file20" name_suffix="_dian_W" description="reduced domain N transports" >
-          <field field_ref="NO3_WT"        grid_ref="NSOG_W_grid"/>
-          <field field_ref="VMIXNO3"       grid_ref="NSOG_W_grid"/>
-          <field field_ref="WLDFNO3"       grid_ref="NSOG_W_grid"/>
+        <file id="file4" name_suffix="_Malaspina_U" description="N transports" >
+          <field field_ref="NO3_UT"        grid_ref="Malaspina_grid"/>
+          <field field_ref="ULDFNO3T"       grid_ref="Malaspina_grid"/>
+        </file>
+        <file id="file5" name_suffix="_Haro_V" description="N transports" >
+          <field field_ref="NO3_VT"        grid_ref="Haro_grid"/>
+          <field field_ref="VLDFNO3T"       grid_ref="Haro_grid"/>
+        </file>
+        <file id="file6" name_suffix="_SJC_V" description="N transports" >
+          <field field_ref="NO3_VT"        grid_ref="SJC_grid"/>
+          <field field_ref="VLDFNO3T"       grid_ref="SJC_grid"/>
+        </file>
+        <file id="file7" name_suffix="_Rosario_V" description="N transports" >
+          <field field_ref="NO3_VT"        grid_ref="Rosario_grid"/>
+          <field field_ref="VLDFNO3T"       grid_ref="Rosario_grid"/>
+        </file>
+        <file id="file8" name_suffix="_Discovery_V" description="N transports" >
+          <field field_ref="NO3_VT"        grid_ref="Discovery_grid"/>
+          <field field_ref="VLDFNO3T"       grid_ref="Discovery_grid"/>
+        </file>
+        <file id="file9" name_suffix="_Sutil_V" description="N transports" >
+          <field field_ref="NO3_VT"        grid_ref="Sutil_grid"/>
+          <field field_ref="VLDFNO3T"       grid_ref="Sutil_grid"/>
+        </file>
+        <file id="file10" name_suffix="_dian_W" description="N transports" >
+          <field field_ref="NO3_WT"        grid_ref="layer_grid_W"/>
+          <field field_ref="VMIXNO3"       grid_ref="layer_grid_W"/>
+          <field field_ref="WLDFNO3"       grid_ref="layer_grid_W"/>
         </file>
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
