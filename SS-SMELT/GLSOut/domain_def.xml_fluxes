@@ -81,7 +81,7 @@
       <domain id="NSOG_U"                  domain_ref="grid_U"> <zoom_domain ibegin="112" jbegin="644" ni="97" nj="130" /> </domain>
       <domain id="VicSill"                 domain_ref="grid_U"> <zoom_domain ibegin="186" jbegin="220" ni="1" nj="100" /> </domain>
       <domain id="SJDFE"                   domain_ref="grid_U"> <zoom_domain ibegin="186" jbegin="228" ni="1" nj="87" /> </domain>
-      <domain id="SFDFK"                   domain_ref="grid_U"> <zoom_domain ibegin="140" jbegin="253" ni="1" nj="55" /> </domain>
+      <domain id="SJDFK"                   domain_ref="grid_U"> <zoom_domain ibegin="140" jbegin="253" ni="1" nj="55" /> </domain>
       <domain id="Malaspina"               domain_ref="grid_U"> <zoom_domain ibegin="187" jbegin="722" ni="1" nj="24" /> </domain>
    </domain_group>
 
