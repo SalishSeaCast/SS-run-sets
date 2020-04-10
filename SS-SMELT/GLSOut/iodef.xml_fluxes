@@ -34,6 +34,7 @@
       <!-- Surface Slab -->
       <axis id="nearsurface_U" long_name="Top 5 U levels" axis_ref="depthu"> <zoom_axis begin="0" n="5" /> </axis>
       <axis id="nearsurface_V" long_name="Top 5 V levels" axis_ref="depthv"> <zoom_axis begin="0" n="5" /> </axis>
+      <axis id="layer6m_W"     long_name="w level at 6 m" axis_ref="depthw"> <zoom_axis being="6" n="1" /> </axis>
       <!-- Surface Slab -->
       <axis id="deptht_20m" long_name="Top 20 T levels" axis_ref="deptht"> <zoom_axis begin="0" n="27" /> </axis>
    </axis_definition>
@@ -115,7 +116,9 @@
      <!-- Two Straits -->
      <grid id="two_straits_grid_U">           <domain domain_ref="two_straits_U"/> <axis axis_ref="nearsurface_U"/> </grid>
      <grid id="two_straits_grid_V">           <domain domain_ref="two_straits_V"/> <axis axis_ref="nearsurface_V"/> </grid>
+     <grid id="layer6m_grid">                 <domain domain_ref="grid_W"/>        <axis axis_ref="layer6m_W"/> </grid>
 
+     layer6m_grid
      <!-- Tide Points Baynes Sound -->
      <grid id="BaynesSound_grid">             <domain domain_ref="BaynesSound"/>              </grid>
      <grid id="EastDenmanIsland_grid">        <domain domain_ref="EastDenmanIsland"/>         </grid>

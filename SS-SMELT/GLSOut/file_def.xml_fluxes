@@ -28,6 +28,11 @@
           <field field_ref="NO3_VT"        grid_ref="Sutil_grid"/>
           <field field_ref="VLDFNO3T"       grid_ref="Sutil_grid"/>
         </file>
+        <file id="file20" name_suffix="_layer6m_W" description="vert N transports" >
+          <field field_ref="NO3_WT"        grid_ref="layer6m_grid"/>
+          <field field_ref="VMIXNO3"       grid_ref="layer6m_grid"/>
+          <field field_ref="WLDFNO3"       grid_ref="layer6m_grid"/>
+        </file>
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
       <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE."/>  <!-- 5d files -->
