@@ -151,6 +151,11 @@
      <grid id="SJC_grid">  <domain domain_ref="SJC" />  <axis id="depthv" /> </grid>
      <grid id="Rosario_grid">  <domain domain_ref="Rosario" />  <axis id="depthv" /> </grid>
      <grid id="Discovery_grid">  <domain domain_ref="Discovery" />  <axis id="depthv" /> </grid>
+
+     <!-- Transports out Boundaries -->
+     <grid id="JdF_grid">    <domain domain_ref="JdF_Flux" />    <axis id="depthu" /> </grid>
+     <grid id="JS_grid">    <domain domain_ref="JS_Flux" />    <axis id="depthv" /> </grid>
+     
      </grid_definition>
 
   </context>
@@ -166,7 +171,7 @@
       <variable id="optimal_buffer_size"       type="string">performance</variable>
       <variable id="buffer_size_factor"        type="double">1.0</variable>
       <variable id="info_level"                type="int" >10</variable>
-<variable id="using_server" type="bool">false</variable>
+<variable id="using_server" type="bool">true</variable>
             <variable id="using_oasis"               type="bool">false</variable>
       <variable id="oasis_codes_id"            type="string" >oceanx</variable>
     </variable_definition>
