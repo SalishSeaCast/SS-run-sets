@@ -144,6 +144,9 @@
      <grid id="TV2_grid">    <domain domain_ref="TV2" />    <axis id="depthv" /> </grid>
      <grid id="Tex_grid">    <domain domain_ref="Tex" />    <axis id="depthv" /> </grid>
      <grid id="Gulf_grid">   <domain domain_ref="Gulf" />   <axis id="depthv" /> </grid>
+     <grid id="SJDFK_grid">  <domain domain_ref="SJDFK" />  <axis id="depthu" /> </grid>
+     <grid id="SJDFE_grid">  <domain domain_ref="SJDFE" />  <axis id="depthu" /> </grid>
+     <grid id="Malaspina_grid">  <domain domain_ref="Malaspina" />  <axis id="depthu" /> </grid>
      <grid id="Sutil_grid">  <domain domain_ref="Sutil" />  <axis id="depthv" /> </grid>
      <grid id="Haro_grid">  <domain domain_ref="Haro" />  <axis id="depthv" /> </grid>
      <grid id="SJC_grid">  <domain domain_ref="SJC" />  <axis id="depthv" /> </grid>

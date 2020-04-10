@@ -20,6 +20,7 @@
           <field field_ref="RIVNO3"       />
           <field field_ref="BIOTRNO3"       />
           <field field_ref="PHYSTRNO3"      />
+          <field field_ref="AFILTNO3"      />
           <field field_ref="NITR"           />
           <field field_ref="NO3_E3T"    />
           <field field_ref="e3t"        />
@@ -43,6 +44,18 @@
         <file id="file6" name_suffix="_Discovery_V" description="N transports" >
           <field field_ref="NO3_VT"        grid_ref="Discovery_grid"/>
           <field field_ref="VLDFNO3T"       grid_ref="Discovery_grid"/>
+        </file>
+        <file id="file7" name_suffix="_Malaspina_U" description="N transports" >
+          <field field_ref="NO3_UT"        grid_ref="Malaspina_grid"/>
+          <field field_ref="ULDFNO3T"       grid_ref="Malaspina_grid"/>
+        </file>
+        <file id="file8" name_suffix="_SJDFK_U" description="N transports" >
+          <field field_ref="NO3_UT"        grid_ref="SJDFK_grid"/>
+          <field field_ref="ULDFNO3T"       grid_ref="SJDFK_grid"/>
+        </file>
+        <file id="file9" name_suffix="_SJDFE_U" description="N transports" >
+          <field field_ref="NO3_UT"        grid_ref="SJDFE_grid"/>
+          <field field_ref="ULDFNO3T"       grid_ref="SJDFE_grid"/>
         </file>
         <file id="file20" name_suffix="_layer6m_W" description="vert N transports" >
           <field field_ref="NO3_WT"        grid_ref="layer6m_grid"/>
