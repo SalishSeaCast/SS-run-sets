@@ -145,6 +145,10 @@
      <grid id="Tex_grid">    <domain domain_ref="Tex" />    <axis id="depthv" /> </grid>
      <grid id="Gulf_grid">   <domain domain_ref="Gulf" />   <axis id="depthv" /> </grid>
      <grid id="Sutil_grid">  <domain domain_ref="Sutil" />  <axis id="depthv" /> </grid>
+     <grid id="Haro_grid">  <domain domain_ref="Haro" />  <axis id="depthv" /> </grid>
+     <grid id="SJC_grid">  <domain domain_ref="SJC" />  <axis id="depthv" /> </grid>
+     <grid id="Rosario_grid">  <domain domain_ref="Rosario" />  <axis id="depthv" /> </grid>
+     <grid id="Discovery_grid">  <domain domain_ref="Discovery" />  <axis id="depthv" /> </grid>
      </grid_definition>
 
   </context>
