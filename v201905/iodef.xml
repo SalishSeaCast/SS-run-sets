@@ -56,6 +56,7 @@
      <grid id="VENUS_east_gridded_grid_T">    <domain domain_ref="VENUS_east_gridded_T"/>     <axis id="deptht" /></grid>
      <grid id="VENUS_central_gridded_grid_T"> <domain domain_ref="VENUS_central_gridded_T"/>  <axis id="deptht" /></grid>
      <grid id="VENUS_delta_gridded_grid_T">   <domain domain_ref="VENUS_delta_gridded_T"/>    <axis id="deptht" /></grid>
+     <grid id="S3_grid">                      <domain domain_ref="S3"/>                       <axis id="deptht_15m"/> </grid>
      <grid id="CODAR_grid_T">                 <domain domain_ref="CODAR_T"/>                  <axis id="deptht" /></grid>
      <grid id="PortRenfrew_grid">             <domain domain_ref="PortRenfrew"/>              </grid>
      <grid id="SheringhamPoint_grid">         <domain domain_ref="SheringhamPoint"/>          </grid>
