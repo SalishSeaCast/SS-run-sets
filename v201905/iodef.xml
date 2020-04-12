@@ -35,7 +35,8 @@
       <axis id="nearsurface_U" long_name="Top 5 U levels" axis_ref="depthu"> <zoom_axis begin="0" n="5" /> </axis>
       <axis id="nearsurface_V" long_name="Top 5 V levels" axis_ref="depthv"> <zoom_axis begin="0" n="5" /> </axis>
       <!-- Surface Slab -->
-      <axis id="deptht_20m" long_name="Top 20 T levels" axis_ref="deptht"> <zoom_axis begin="0" n="27" /> </axis>
+      <axis id="deptht_15m" long_name="Top 15 T levels" axis_ref="deptht"> <zoom_axis begin="0" n="15" /> </axis>
+      <axis id="deptht_20m" long_name="Top 20 T levels" axis_ref="deptht"> <zoom_axis begin="0" n="20" /> </axis>
    </axis_definition>
 
    <domain_definition src="./domain_def.xml"/>
