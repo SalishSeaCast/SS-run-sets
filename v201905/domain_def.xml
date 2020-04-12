@@ -7,6 +7,8 @@
       <domain id="VENUS_east_gridded_T"    domain_ref="grid_T"> <zoom_domain ibegin="282" jbegin="415" ni="2"  nj="2"  /> </domain>
       <domain id="VENUS_central_gridded_T" domain_ref="grid_T"> <zoom_domain ibegin="265" jbegin="423" ni="2"  nj="2"  /> </domain>
       <domain id="VENUS_delta_gridded_T"   domain_ref="grid_T"> <zoom_domain ibegin="283" jbegin="424" ni="2"  nj="2"  /> </domain>
+      <!-- S3 -->
+      <domain id="S3"                      domain_ref="grid_T"> <zoom_domain ibegin="258"  jbegin="450" ni="1" nj="1"  /> </domain>
       <!-- CODAR -->
       <domain id="CODAR_T"                 domain_ref="grid_T"> <zoom_domain ibegin="240" jbegin="380" ni="80" nj="80" /> </domain>
       <!-- Tide Points -->
