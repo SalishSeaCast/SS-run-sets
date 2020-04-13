@@ -52,7 +52,7 @@ namelists:
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
-  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.lateral
+  - ./namelist.lateral
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.bottom
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.tracer
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.dynamics
