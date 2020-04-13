@@ -851,6 +851,7 @@
        <field id="TA_UT"    long_name="Total Alkalinity Concentration - U Transport"               standard_name="TA_u_dy_dz"       unit="mmol s-1" />
        <field id="O2_UT"    long_name="Oxygen Concentration - U Transport"              standard_name="O2_u_dy_dz"       unit="mmol s-1" />
        <field id="ULDFNO3"  long_name="X dir lateral mix"                                 standard_name="NO3mixx"          unit="mmol/m2/s" />
+       <field id="ULDFNO3T"  long_name="X dir lateral mix integrated"                     standard_name="NO3mixxint"       unit="mmol/s" />
      </field_group>
 
      <!-- SMELT Advective and Diffusive Transports of Tracers - V Grid  -->
@@ -870,9 +871,10 @@
        <field id="TA_VT"    long_name="Total Alkalinity Concentration - V Transport"      standard_name="TA_v_dy_dz"       unit="mmol s-1" />
        <field id="O2_VT"    long_name="Oxygen Concentration - V Transport"                standard_name="O2_v_dy_dz"       unit="mmol s-1" />
        <field id="VLDFNO3"  long_name="Y dir lateral mix"                                 standard_name="NO3mixy"          unit="mmol/m2/s" />
+       <field id="VLDFNO3T"  long_name="Y dir lateral mix integrated"                     standard_name="NO3mixyint"          unit="mmol/s" />
      </field_group>
 
-     <!-- SMELT Advective and Diffusive Transports of Tracers - W Grid  -->
+     <!-- SMELT Advective and Diffusive Transports of Tracers and GLS output - W Grid  -->
      <field_group id="tran_W" grid_ref="grid_W_3D">
        <field id="TRA_WT"   long_name="Fraser River Turbidity Tracer - W Transport"       standard_name="TRA_w_dy_dx"      unit="NTU m3 s-1" />
        <field id="PON_WT"   long_name="Particulate Organic N Concentration - W Transport" standard_name="PON_w_dy_dx"      unit="mmol s-1" />
@@ -887,11 +889,17 @@
        <field id="NH4_WT"   long_name="Ammonium Concentration - W Transport"              standard_name="NH4_w_dy_dx"      unit="mmol s-1" />
        <field id="VMIXNO3"  long_name="upward no3 flux due to vert mixing with horiz comp" standard_name="vNO3mix"          unit="mmol N/m2/s" />
        <field id="VMIXNO3H" long_name="explicit est of horiz contrib to VMIXNO3"          standard_name="vNO3mixH"         unit="mmol N/m2/s" />
+       <field id="VMIXNO3EXP" long_name="explicit est of upward no3 flux due to vert mix" standard_name="vNO3mixExp"       unit="mmol N/m2/s" />
        <field id="AVSH"     long_name="sloping horizontal contrib to avs"                 standard_name="avs_horiz"        unit="m2/s" />
        <field id="WLDFNO3"  long_name="vert component of sloping lateral mix"             standard_name="NO3LDFW"          unit="mmol N/m2/s" />
        <field id="DIC_WT"   long_name="Dissolved Inorganic Carbon - W Transport"          standard_name="DIC_w_dy_dx"      unit="mmol s-1" />
        <field id="TA_WT"    long_name="Nitrate Concentration - W Transport"               standard_name="TA_w_dy_dx"       unit="mmol s-1" />
        <field id="O2_WT"    long_name="Ammonium Concentration - W Transport"              standard_name="O2_w_dy_dx"       unit="mmol s-1" />
+       <field id="GLS_k"    long_name="GLS TKE"                                           standard_name="GLS_k"            unit="m2 s-2" />
+       <field id="GLS_eps"  long_name="GLS Dissipation"                                   standard_name="GLS_eps"          unit="m2 s-3" />
+       <field id="GLS_G"    long_name="GLS Buoy Prod"                                     standard_name="GLS_G"            unit="m2 s-3" />
+       <field id="GLS_P"    long_name="GLS Shear Prod"                                    standard_name="GLS_P"            unit="m2 s-3" />
+       <field id="GLS_SH2"  long_name="GLS shear squared"                                 standard_name="GLS_SH2"          unit="s-1" />
      </field_group>
      <!-- PISCES additional diagnostics on T grid  -->
 
@@ -903,6 +911,9 @@
        <field id="PPDIATNO3"   long_name="New Primary production of diatoms"       unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="PPPHYNO3"    long_name="New Primary production of small phyto"   unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="PPMRUBNO3"   long_name="New Primary production of M. rubrum"     unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PPDIATNO3V"   long_name="New Primary production of diatoms"       unit="mmol N/s"   grid_ref="grid_T_3D" />
+       <field id="PPPHYNO3V"    long_name="New Primary production of small phyto"   unit="mmol N/s"   grid_ref="grid_T_3D" />
+       <field id="PPMRUBNO3V"   long_name="New Primary production of M. rubrum"     unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="HetMRub"     long_name="Heterotrophic growth of M. rubrum"       unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="GRMESZDIAT"  long_name="Mesozoo grazing on diatoms"              unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="GRMESZMRUB"  long_name="Mesozoo grazing on M. rubrum"            unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
@@ -918,6 +929,11 @@
        <field id="MORTMRUB"    long_name="M. rubrum mortality"                     unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="MORTDIAT"    long_name="Diatom mortality"                        unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="TQ10"        long_name="Temperature dependence of bio rates"     unit="1"             grid_ref="grid_T_3D" />
+       <field id="RIVNO3"      long_name="riverine nitrate"                        unit="mmol N/s"   grid_ref="grid_T_3D" />
+       <field id="BIOTRNO3"    long_name="biology trend nitrate"                   unit="mmol N/s"   grid_ref="grid_T_3D" />
+       <field id="PHYSTRNO3"    long_name="physics trend nitrate"                  unit="mmol N/s"   grid_ref="grid_T_3D" />
+       <field id="AFILTNO3"    long_name="asselin trend nitrate"                  unit="mmol N/s"   grid_ref="grid_T_3D" />
+       <field id="NITR"        long_name="nitrification"                           unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="Heup"        long_name="Euphotic layer depth"                    unit="m"                               />
 
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
