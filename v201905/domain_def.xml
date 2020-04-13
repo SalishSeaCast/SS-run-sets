@@ -81,6 +81,10 @@
       <domain id="FVCOM_U"                 domain_ref="grid_U"> <zoom_domain ibegin="225" jbegin="340" ni="144" nj="221" /> </domain>
       <!-- Northern Strait for Nitrate Analysis -->
       <domain id="NSOG_U"                  domain_ref="grid_U"> <zoom_domain ibegin="112" jbegin="644" ni="97" nj="130" /> </domain>
+      <domain id="VicSill"                 domain_ref="grid_U"> <zoom_domain ibegin="186" jbegin="220" ni="1" nj="100" /> </domain>
+      <domain id="SJDFE"                   domain_ref="grid_U"> <zoom_domain ibegin="186" jbegin="228" ni="1" nj="87" /> </domain>
+      <domain id="SJDFK"                   domain_ref="grid_U"> <zoom_domain ibegin="140" jbegin="253" ni="1" nj="55" /> </domain>
+      <domain id="Malaspina"               domain_ref="grid_U"> <zoom_domain ibegin="187" jbegin="722" ni="1" nj="24" /> </domain>
       <!-- Western Boundary for Flux -->
       <domain id="JdF_Flux"                domain_ref="grid_U"> <zoom_domain ibegin="23"  jbegin="361" ni="1"  nj="75" /> </domain>
    </domain_group>
@@ -103,6 +107,14 @@
       <domain id="NSOG_V"                  domain_ref="grid_V"> <zoom_domain ibegin="112" jbegin="644" ni="97" nj="130" /> </domain>
       <domain id="TV1"                      domain_ref="grid_V"> <zoom_domain ibegin="50" jbegin="883" ni="26" nj="1" /> </domain>
       <domain id="TV2"                      domain_ref="grid_V"> <zoom_domain ibegin="122" jbegin="792" ni="67" nj="1" /> </domain>
+      <domain id="Tex"                      domain_ref="grid_V"> <zoom_domain ibegin="130" jbegin="585" ni="125" nj="1" /> </domain>
+      <domain id="Gulf"                     domain_ref="grid_V"> <zoom_domain ibegin="220" jbegin="355" ni="135" nj="1" /> </domain>
+      <domain id="Haro"                     domain_ref="grid_V"> <zoom_domain ibegin="213" jbegin="305" ni="33" nj="1" /> </domain>
+      <domain id="SJC"                      domain_ref="grid_V"> <zoom_domain ibegin="258" jbegin="281" ni="12" nj="1" /> </domain>
+      <domain id="Rosario"                  domain_ref="grid_V"> <zoom_domain ibegin="280" jbegin="265" ni="31" nj="1" /> </domain>
+      <domain id="Discovery"                domain_ref="grid_V"> <zoom_domain ibegin="120" jbegin="737" ni="11" nj="1" /> </domain>
+      <domain id="Sutil"                    domain_ref="grid_V"> <zoom_domain ibegin="138" jbegin="749" ni="26" nj="1" /> </domain>
+
       <!-- Northern Boundary for Flux -->
       <domain id="JS_Flux"                 domain_ref="grid_V"> <zoom_domain ibegin="46"  jbegin="886" ni="30" nj="1" /> </domain>
    </domain_group>
