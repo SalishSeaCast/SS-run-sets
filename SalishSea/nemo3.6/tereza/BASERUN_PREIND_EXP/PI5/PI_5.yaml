@@ -1,8 +1,8 @@
 email: tjarnik@gmail.com
 account: rrg-allen
-MPI decomposition: 19x33
+MPI decomposition: 15x28
 config_name: SKOG
-run_id: pi3rr_5
+run_id: pi5_5
 walltime: 11:50:00
 
 forcing:
@@ -52,7 +52,7 @@ namelists:
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
-  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.lateral
+  - ./namelist.lateral
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.bottom
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.tracer
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.dynamics
