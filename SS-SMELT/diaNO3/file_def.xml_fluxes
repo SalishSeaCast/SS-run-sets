@@ -31,7 +31,7 @@
         </file>
         <file id="file3" name_suffix="_Haro_V" description="N transports" >
           <field field_ref="NO3_VT"        grid_ref="Haro_grid"/>
-          <field field_ref="NO3_XM"        grid_ref="Haro_grid"/>
+          <field field_ref="NO3_YM"        grid_ref="Haro_grid"/>
           <field field_ref="VLDFNO3T"       grid_ref="Haro_grid"/>
         </file>
         <file id="file4" name_suffix="_SJC_V" description="N transports" >
