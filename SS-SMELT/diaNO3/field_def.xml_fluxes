@@ -856,6 +856,20 @@
 
      <!-- SMELT Advective and Diffusive Transports of Tracers - V Grid  -->
      <field_group id="tran_V" grid_ref="grid_V_3D">
+       <field id="TRA_XM"   long_name="Fraser River Turbidity Tracer - V Transport"       standard_name="TRA_v_dx_dz"      unit="NTU m3 s-1" />
+       <field id="PON_XM"   long_name="Particulate Organic N Concentration - V Transport" standard_name="PON_v_dx_dz"      unit="mmol s-1" />
+       <field id="Si_XM"    long_name="Silicon Concentration - V Transport"               standard_name="Si_v_dx_dz"       unit="mmol s-1" />
+       <field id="PHY_XM"   long_name="Flagellates Concentration - V Transport"           standard_name="PHY_v_dx_dz"      unit="mmol s-1" />
+       <field id="MICZ_XM"  long_name="Microzooplankton Concentration - V Transport"      standard_name="MICZ_v_dx_dz"     unit="mmol s-1" />
+       <field id="DON_XM"   long_name="Dissolved Organic N Concentration - V Transport"   standard_name="DON_v_dx_dz"      unit="mmol s-1" />
+       <field id="DIAT_XM"  long_name="Diatoms Concentration - V Transport"               standard_name="DIAT_v_dx_dz"     unit="mmol s-1" />
+       <field id="MYRI_XM"  long_name="Mesodinium rubrum Concentration - V Transport"     standard_name="MYRI_v_dx_dz"     unit="mmol s-1" />
+       <field id="bSi_XM"   long_name="Biogenic Silicon Concentration - V Transport"      standard_name="bSi_v_dx_dz"      unit="mmol s-1" />
+       <field id="NO3_XM"   long_name="Nitrate Concentration - V Transport"               standard_name="NO3_v_dx_dz"      unit="mmol s-1" />
+       <field id="NH4_XM"   long_name="Ammonium Concentration - V Transport"              standard_name="NH4_v_dx_dz"      unit="mmol s-1" />
+       <field id="DIC_XM"   long_name="Dissolved Inorganic Carbon - V Transport"          standard_name="DIC_v_dx_dz"      unit="mmol s-1" />
+       <field id="TA_XM"    long_name="Total Alkalinity Concentration - V Transport"      standard_name="TA_v_dy_dz"       unit="mmol s-1" />
+       <field id="O2_XM"    long_name="Oxygen Concentration - V Transport"                standard_name="O2_v_dy_dz"       unit="mmol s-1" />
        <field id="TRA_VT"   long_name="Fraser River Turbidity Tracer - V Transport"       standard_name="TRA_v_dx_dz"      unit="NTU m3 s-1" />
        <field id="PON_VT"   long_name="Particulate Organic N Concentration - V Transport" standard_name="PON_v_dx_dz"      unit="mmol s-1" />
        <field id="Si_VT"    long_name="Silicon Concentration - V Transport"               standard_name="Si_v_dx_dz"       unit="mmol s-1" />
