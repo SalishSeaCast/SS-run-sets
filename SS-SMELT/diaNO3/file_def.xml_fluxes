@@ -31,7 +31,6 @@
         </file>
         <file id="file3" name_suffix="_Haro_V" description="N transports" >
           <field field_ref="NO3_VT"        grid_ref="Haro_grid"/>
-          <field field_ref="NO3TVDY"        grid_ref="Haro_grid"/>
           <field field_ref="NO3_YM"        grid_ref="Haro_grid"/>
           <field field_ref="VLDFNO3"       grid_ref="Haro_grid"/>
         </file>
@@ -49,7 +48,6 @@
         </file>
         <file id="file7" name_suffix="_Malaspina_U" description="N transports" >
           <field field_ref="NO3_UT"        grid_ref="Malaspina_grid"/>
-          <field field_ref="NO3TVDX"        grid_ref="Malaspina_grid"/>
           <field field_ref="ULDFNO3"       grid_ref="Malaspina_grid"/>
         </file>
         <file id="file8" name_suffix="_SJDFK_U" description="N transports" >
@@ -64,7 +62,6 @@
           <field field_ref="NO3_WT"        grid_ref="layer6m_grid"/>
           <field field_ref="VMIXNO3"       grid_ref="layer6m_grid"/>
           <field field_ref="WLDFNO3"       grid_ref="layer6m_grid"/>
-          <field field_ref="NO3TVDZ"       grid_ref="layer6m_grid"/>
         </file>
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
