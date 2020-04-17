@@ -852,6 +852,7 @@
        <field id="O2_UT"    long_name="Oxygen Concentration - U Transport"              standard_name="O2_u_dy_dz"       unit="mmol s-1" />
        <field id="ULDFNO3"  long_name="X dir lateral mix"                                 standard_name="NO3mixx"          unit="mmol/m2/s" />
        <field id="ULDFNO3T"  long_name="X dir lateral mix integrated"                     standard_name="NO3mixxint"       unit="mmol/s" />
+       <field id="NO3TVDX"  long_name="X dir tvd advection"                               standard_name="NO3tvdx"          unit="mmol/s" />
      </field_group>
 
      <!-- SMELT Advective and Diffusive Transports of Tracers - V Grid  -->
@@ -886,6 +887,7 @@
        <field id="O2_VT"    long_name="Oxygen Concentration - V Transport"                standard_name="O2_v_dy_dz"       unit="mmol s-1" />
        <field id="VLDFNO3"  long_name="Y dir lateral mix"                                 standard_name="NO3mixy"          unit="mmol/m2/s" />
        <field id="VLDFNO3T"  long_name="Y dir lateral mix integrated"                     standard_name="NO3mixyint"          unit="mmol/s" />
+       <field id="NO3TVDY"  long_name="Y dir tvd advection"                               standard_name="NO3tvdy"          unit="mmol/s" />
      </field_group>
 
      <!-- SMELT Advective and Diffusive Transports of Tracers and GLS output - W Grid  -->
@@ -914,6 +916,7 @@
        <field id="GLS_G"    long_name="GLS Buoy Prod"                                     standard_name="GLS_G"            unit="m2 s-3" />
        <field id="GLS_P"    long_name="GLS Shear Prod"                                    standard_name="GLS_P"            unit="m2 s-3" />
        <field id="GLS_SH2"  long_name="GLS shear squared"                                 standard_name="GLS_SH2"          unit="s-1" />
+       <field id="NO3TVDW"  long_name="Nitrate TVD Advection Z direction"                 standard_name="NO3tvdz"          unit="mmol s-1" />
      </field_group>
      <!-- PISCES additional diagnostics on T grid  -->
 
