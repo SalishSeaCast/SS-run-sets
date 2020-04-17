@@ -20,6 +20,7 @@
           <field field_ref="RIVNO3"       />
           <field field_ref="BIOTRNO3"       />
           <field field_ref="PHYSTRNO3"      />
+          <field field_ref="ALLTRNO3"      />
           <field field_ref="AFILTNO3"      />
           <field field_ref="NITR"           />
           <field field_ref="NO3_E3T"    />
