@@ -952,6 +952,8 @@
        <field id="ALLTRNO3"    long_name="total trend nitrate"                  unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="AFILTNO3"    long_name="asselin trend nitrate"                  unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="NITR"        long_name="nitrification"                           unit="mmol N/s"   grid_ref="grid_T_3D" />
+       <field id="NO3RADB"     long_name="negative correction"                     unit="mmol N/s"   grid_ref="grid_T_3D" />
+       <field id="NO3RADN"     long_name="negative correction"                     unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="Heup"        long_name="Euphotic layer depth"                    unit="m"                               />
 
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
