@@ -27,38 +27,35 @@
           <field field_ref="e3t"        />
         </file>
         <file id="file2" name_suffix="_Sutil_V" description="N transports" >
-          <field field_ref="NO3_VT"        grid_ref="Sutil_grid"/>
+          <field field_ref="NO3TVDY"        grid_ref="Sutil_grid"/>
           <field field_ref="VLDFNO3"       grid_ref="Sutil_grid"/>
         </file>
         <file id="file3" name_suffix="_Haro_V" description="N transports" >
-          <field field_ref="NO3_VT"        grid_ref="Haro_grid"/>
           <field field_ref="NO3TVDY"        grid_ref="Haro_grid"/>
-          <field field_ref="NO3_YM"        grid_ref="Haro_grid"/>
           <field field_ref="VLDFNO3"       grid_ref="Haro_grid"/>
         </file>
         <file id="file4" name_suffix="_SJC_V" description="N transports" >
-          <field field_ref="NO3_VT"        grid_ref="SJC_grid"/>
+          <field field_ref="NO3TVDY"       grid_ref="SJC_grid"/>
           <field field_ref="VLDFNO3"       grid_ref="SJC_grid"/>
         </file>
         <file id="file5" name_suffix="_Rosario_V" description="N transports" >
-          <field field_ref="NO3_VT"        grid_ref="Rosario_grid"/>
+          <field field_ref="NO3TVDY"       grid_ref="Rosario_grid"/>
           <field field_ref="VLDFNO3"       grid_ref="Rosario_grid"/>
         </file>
         <file id="file6" name_suffix="_Discovery_V" description="N transports" >
-          <field field_ref="NO3_VT"        grid_ref="Discovery_grid"/>
+          <field field_ref="NO3TVDY"       grid_ref="Discovery_grid"/>
           <field field_ref="VLDFNO3"       grid_ref="Discovery_grid"/>
         </file>
         <file id="file7" name_suffix="_Malaspina_U" description="N transports" >
-          <field field_ref="NO3_UT"        grid_ref="Malaspina_grid"/>
           <field field_ref="NO3TVDX"        grid_ref="Malaspina_grid"/>
           <field field_ref="ULDFNO3"       grid_ref="Malaspina_grid"/>
         </file>
         <file id="file8" name_suffix="_SJDFK_U" description="N transports" >
-          <field field_ref="NO3_UT"        grid_ref="SJDFK_grid"/>
+          <field field_ref="NO3TVDX"       grid_ref="SJDFK_grid"/>
           <field field_ref="ULDFNO3"       grid_ref="SJDFK_grid"/>
         </file>
         <file id="file9" name_suffix="_SJDFE_U" description="N transports" >
-          <field field_ref="NO3_UT"        grid_ref="SJDFE_grid"/>
+          <field field_ref="NO3TVDX"       grid_ref="SJDFE_grid"/>
           <field field_ref="ULDFNO3"       grid_ref="SJDFE_grid"/>
         </file>
         <file id="file20" name_suffix="_layer6m_W" description="vert N transports" >
