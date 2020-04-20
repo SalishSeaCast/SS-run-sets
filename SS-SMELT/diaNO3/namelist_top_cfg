@@ -146,4 +146,7 @@
    rn_ahtrb_0       =     0.    !     background eddy diffusivity for ldf_iso [m2/s]
    rn_fact_lap      =     1.    !     enhanced zonal eddy diffusivity
 /
-
+&namtrc_rad        !  treatment of negative concentrations 
+!-----------------------------------------------------------------------
+   ln_trcrad   =  .true.  !  artificially correct negative concentrations (T) or not (F)
+/
