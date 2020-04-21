@@ -78,9 +78,9 @@ vcs revisions:
     - $PROJECT/SalishSeaCast/hindcast-sys/NEMO-Cmd
     - $PROJECT/SalishSeaCast/hindcast-sys/rivers-climatology
     - $PROJECT/SalishSeaCast/hindcast-sys/SalishSeaCmd
+    - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets
     - $PROJECT/SalishSeaCast/hindcast-sys/tides
     - $PROJECT/SalishSeaCast/hindcast-sys/tracers
     - $PROJECT/SalishSeaCast/hindcast-sys/XIOS-ARCH
   hg:
-    - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets
     - $PROJECT/SalishSeaCast/hindcast-sys/XIOS-2
