@@ -120,8 +120,7 @@ vcs revisions:
     - /home/dlatorne/nowcast-agrif-sys/NEMO-Cmd
     - /home/dlatorne/nowcast-agrif-sys/rivers-climatology
     - /home/dlatorne/nowcast-agrif-sys/SalishSeaCmd
+    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets
     - /home/dlatorne/nowcast-agrif-sys/tides
     - /home/dlatorne/nowcast-agrif-sys/tracers
     - /home/dlatorne/nowcast-agrif-sys/XIOS-ARCH
-  hg:
-    - /home/dlatorne/nowcast-agrif-sys/SS-run-sets
