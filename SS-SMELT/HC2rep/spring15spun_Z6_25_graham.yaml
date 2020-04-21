@@ -1,6 +1,6 @@
 run_id: spring15spun_Z6_25
 config_name: SMELT
-account: rrg-allen
+account: def-allen
 email: eolson@eoas.ubc.ca
 MPI decomposition: 14x39
 walltime: 12:00:00
