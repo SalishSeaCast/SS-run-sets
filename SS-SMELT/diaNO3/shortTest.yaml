@@ -59,8 +59,9 @@ paths:
   
 vcs revisions:
   hg:
-  - $MEOPAR/SS-run-sets
   - $MEOPAR/NEMO-forcing/tides
   - $MEOPAR/NEMO-forcing/tracers
   - $MEOPAR/NEMO-forcing/rivers-climatology
   - $MEOPAR/NEMO-forcing/grid
+  git:
+  - $MEOPAR/SS-run-sets
