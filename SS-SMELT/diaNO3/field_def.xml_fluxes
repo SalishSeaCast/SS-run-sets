@@ -954,6 +954,8 @@
        <field id="NITR"        long_name="nitrification"                           unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="NO3RADB"     long_name="negative correction"                     unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="NO3RADN"     long_name="negative correction"                     unit="mmol N/s"   grid_ref="grid_T_3D" />
+       <field id="NO3TVDTRA1"  long_name="before TVD"                              unit="mmol N/s"   grid_ref="grid_T_3D" />
+       <field id="NO3TVDTRA2"  long_name="after TVD"                              unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="Heup"        long_name="Euphotic layer depth"                    unit="m"                               />
 
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
