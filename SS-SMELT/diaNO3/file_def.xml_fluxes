@@ -30,6 +30,7 @@
           <field field_ref="NO3RADB"        />
           <field field_ref="NO3RADN"        />
         </file>
+      </file_group>
         <file id="file3" name_suffix="_Sutil_V" description="N transports" >
           <field field_ref="NO3TVDY"        grid_ref="Sutil_grid"/>
           <field field_ref="VLDFNO3"       grid_ref="Sutil_grid"/>
