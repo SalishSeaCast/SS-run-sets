@@ -37,8 +37,8 @@ forcing:
     link to: $PROJECT/tjarnik/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
 restart:
-  restart.nc: /scratch/tjarnik/PILA4/PI4/01apr15/SKOG_02730240_restart.nc
-  restart_trc.nc: /scratch/tjarnik/PILA4/PI4/01apr15/SKOG_02730240_restart_trc.nc
+  restart.nc: /scratch/tjarnik/PI5/01apr15/SKOG_02730240_restart.nc
+  restart_trc.nc: /scratch/tjarnik/PI5/01apr15/SKOG_02730240_restart_trc.nc
 
 
 grid:            
