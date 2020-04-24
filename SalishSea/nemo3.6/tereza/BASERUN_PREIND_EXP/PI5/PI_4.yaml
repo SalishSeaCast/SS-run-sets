@@ -82,7 +82,7 @@ paths:
   runs directory: $SCRATCH
 
 vcs revisions:
-  hg:
+  git:
   - $PROJECT/tjarnik/MEOPAR/grid
   - $PROJECT/tjarnik/MEOPAR/NEMO-Cmd
   - $PROJECT/tjarnik/MEOPAR/rivers-climatology
