@@ -74,14 +74,14 @@ paths:
 vcs revisions:
   git:
   - $PROJECT/grid
+  - $PROJECT/NEMO-3.6-code
   - $PROJECT/NEMO-Cmd
   - $PROJECT/rivers-climatology
   - $PROJECT/SalishSeaCmd
+  - $PROJECT/SS-run-sets
   - $PROJECT/tides
   - $PROJECT/tracers
   - $PROJECT/XIOS-ARCH
   hg:
-  - $PROJECT/NEMO-3.6-code
-  - $PROJECT/SS-run-sets
   - $PROJECT/XIOS-2
 
