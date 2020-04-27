@@ -783,6 +783,7 @@
        <field id="bSi_E3T"      long_name="bsi * E3T"                                unit="mmol/m2"  > bSi * e3t </field >
        <field id="NO3"          long_name="Nitrate Concentration"               standard_name="mole_concentration_of_nitrate_in_sea_water"   unit="mmol m-3" />
        <field id="NO3_E3T"      long_name="NO3 * E3T"                                unit="mmol/m2"  > NO3 * e3t </field >
+       <field id="NO3_E3TSNAP"    long_name="NO3 * E3T"     operation="instant"           unit="mmol/m2"  > NO3 * e3t </field >
        <field id="NH4"          long_name="Ammonium Concentration"              standard_name="mole_concentration_of_ammonium_in_sea_water"  unit="mmol m-3" />
        <field id="NH4_E3T"      long_name="NH4 * E3T"                                unit="mmol/m2"  > NH4 * e3t </field >
        <field id="DIC"          long_name="Dissolved Inorganic C Concentration" standard_name="mole_concentration_of_dissolved_inorganic_carbon_in_sea_water"   unit="mmol m-3" />
@@ -956,6 +957,7 @@
        <field id="NO3RADN"     long_name="negative correction"                     unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="NO3TVDTRA1"  long_name="before TVD"                              unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="NO3TVDTRA2"  long_name="after TVD"                              unit="mmol N/s"   grid_ref="grid_T_3D" />
+       <field id="NO3SNAP"     long_name="snapshot"                              unit="mmol N"   grid_ref="grid_T_3D" />
        <field id="Heup"        long_name="Euphotic layer depth"                    unit="m"                               />
 
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
