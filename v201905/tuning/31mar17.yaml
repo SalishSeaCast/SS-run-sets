@@ -2,7 +2,7 @@ email: sallen@eoas.ubc.ca
 MPI decomposition: 18x31
 config_name: SalishSeaCast
 run_id: tuning
-walltime: 39:00:00
+walltime: 6:30:00
 
 forcing:
   LiveOcean:
@@ -28,8 +28,8 @@ forcing:
     link to: $PROJECT/tracers
 
 restart:
-  restart.nc: $SCRATCH/tuning/31oct15/SalishSea_03810240_restart.nc
-  restart_trc.nc: $SCRATCH/tuning/31oct15/SalishSea_03810240_restart_trc.nc
+  restart.nc: $SCRATCH/tuning/01nov16/SalishSea_04924800_restart.nc
+  restart_trc.nc: $SCRATCH/tuning/01nov16/SalishSea_04924800_restart_trc.nc
 
 grid:
   bathymetry: $PROJECT/grid/bathymetry_201702.nc
@@ -38,7 +38,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time_01nov15
+  - ./namelist.time_31mar17
   - $PROJECT/SS-run-sets/v201905/namelist.domain
   - $PROJECT/SS-run-sets/v201905/namelist.atmos_rivers
   - $PROJECT/SS-run-sets/v201905/namelist.light
@@ -54,7 +54,7 @@ namelists:
   - $PROJECT/SS-run-sets/v201905/namelist_top_TracerDefAndBdy
   - $PROJECT/SS-run-sets/v201905/namelist_top_physics
   namelist_smelt_cfg:
-  - $PROJECT/SS-run-sets/v201905/tuning/namelist_smelt_biology_tune2
+  - $PROJECT/SS-run-sets/v201905/tuning/namelist_smelt_biology_tune1
   - $PROJECT/SS-run-sets/v201905/namelist_smelt_rivers
   - $PROJECT/SS-run-sets/v201905/namelist_smelt_skog
 
@@ -74,14 +74,14 @@ paths:
 vcs revisions:
   git:
   - $PROJECT/grid
-  - $PROJECT/NEMO-3.6-code
   - $PROJECT/NEMO-Cmd
   - $PROJECT/rivers-climatology
   - $PROJECT/SalishSeaCmd
-  - $PROJECT/SS-run-sets
   - $PROJECT/tides
   - $PROJECT/tracers
   - $PROJECT/XIOS-ARCH
   hg:
+  - $PROJECT/NEMO-3.6-code
+  - $PROJECT/SS-run-sets
   - $PROJECT/XIOS-2
 

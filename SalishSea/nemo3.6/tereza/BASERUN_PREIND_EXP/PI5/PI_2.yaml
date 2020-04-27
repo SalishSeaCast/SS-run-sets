@@ -37,7 +37,7 @@ forcing:
     link to: $PROJECT/tjarnik/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
 restart:
-  restart.nc: /scratch/tjarnik/PI5/01jan15/SKOG_02535840_restart.nc
+  restart.nc: /scratch/tjarnik/PILA4/PI4/01jan15/SKOG_02535840_restart.nc
   restart_trc.nc: /scratch/tjarnik/PI5/01jan15/SKOG_02535840_restart_trc.nc
 
 

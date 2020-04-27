@@ -16,7 +16,7 @@
           <field field_ref="MYRI"           name="ciliates"/>
         </file>
       </file_group>
-      <file_group id="1h" output_freq="1h"  output_level="10" compression_level="4" split_freq="1m" enabled=".TRUE."> <!-- 1h files -->
+      <file_group id="1hmo" output_freq="1h"  output_level="10" compression_level="4" split_freq="1mo" enabled=".TRUE."> <!-- 1h files -->
         <file id="file15" name="S3" description="Hourly biology at S3">
           <field field_ref="NO3"         name="nitrate"      grid_ref="S3_grid"/>
           <field field_ref="Si"          name="silicon"      grid_ref="S3_grid"/>

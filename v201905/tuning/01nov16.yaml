@@ -28,8 +28,8 @@ forcing:
     link to: $PROJECT/tracers
 
 restart:
-  restart.nc: $SCRATCH/tuning/31oct15/SalishSea_03810240_restart.nc
-  restart_trc.nc: $SCRATCH/tuning/31oct15/SalishSea_03810240_restart_trc.nc
+  restart.nc: $SCRATCH/tuning/31oct16/SalishSea_04600800_restart.nc
+  restart_trc.nc: $SCRATCH/tuning/31oct16/SalishSea_04600800_restart_trc.nc
 
 grid:
   bathymetry: $PROJECT/grid/bathymetry_201702.nc
@@ -38,7 +38,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time_01nov15
+  - ./namelist.time_01nov16
   - $PROJECT/SS-run-sets/v201905/namelist.domain
   - $PROJECT/SS-run-sets/v201905/namelist.atmos_rivers
   - $PROJECT/SS-run-sets/v201905/namelist.light

@@ -1,6 +1,6 @@
 email: tjarnik@gmail.com
 account: rrg-allen
-MPI decomposition: 15x28
+MPI decomposition: 15x32
 config_name: SKOG
 run_id: pi3rr_4
 walltime: 11:50:00
@@ -82,7 +82,7 @@ paths:
   runs directory: $SCRATCH
 
 vcs revisions:
-  hg:
+  git:
   - $PROJECT/tjarnik/MEOPAR/grid
   - $PROJECT/tjarnik/MEOPAR/NEMO-Cmd
   - $PROJECT/tjarnik/MEOPAR/rivers-climatology
