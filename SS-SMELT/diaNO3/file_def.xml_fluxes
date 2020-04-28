@@ -9,6 +9,7 @@
       <file_group id="1ts" output_freq="2160ts"  output_level="10" enabled=".TRUE."> <!-- 1 time step files -->
         <file id="file1" name_suffix="_ptrc_T" description="diagnostics" >
           <field field_ref="NO3_E3TSNAP"    />
+        </file>
       </file_group>
       <file_group id="1h" output_freq="1h"  output_level="10" split_freq="10d" enabled=".TRUE."/> <!-- 1h files -->
       <file_group id="2h" output_freq="2h"  output_level="10" split_freq="1d" enabled=".TRUE."/> <!-- 2h files -->
@@ -32,7 +33,6 @@
           <field field_ref="NO3RADB"        />
           <field field_ref="NO3RADN"        />
         </file>
-      </file_group>
         <file id="file3" name_suffix="_Sutil_V" description="N transports" >
           <field field_ref="NO3TVDY"        grid_ref="Sutil_grid"/>
           <field field_ref="VLDFNO3"       grid_ref="Sutil_grid"/>
