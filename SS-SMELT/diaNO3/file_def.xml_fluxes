@@ -30,8 +30,7 @@
           <field field_ref="PPPHYNO3V"       />
           <field field_ref="PPMRUBNO3V"      />
           <field field_ref="NITR"           />
-          <field field_ref="NO3RADB"        />
-          <field field_ref="NO3RADN"        />
+          <field field_ref="NO3RAD"        />
         </file>
         <file id="file3" name_suffix="_Sutil_V" description="N transports" >
           <field field_ref="NO3TVDY"        grid_ref="Sutil_grid"/>
