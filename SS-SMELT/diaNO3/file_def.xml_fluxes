@@ -6,11 +6,7 @@
 ============================================================================================================
     -->
     <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4" split_freq="10d" split_freq_format= "%y%mo%d">
-      <file_group id="1ts" output_freq="2160ts"  output_level="10" enabled=".TRUE."> <!-- 1 time step files -->
-        <file id="file1" name_suffix="_ptrc_T" description="diagnostics" >
-          <field field_ref="NO3_E3TSNAP"    />
-        </file>
-      </file_group>
+      <file_group id="1ts" output_freq="2160ts"  output_level="10" enabled=".TRUE."/> <!-- 1 time step files -->
       <file_group id="1h" output_freq="1h"  output_level="10" split_freq="10d" enabled=".TRUE."/> <!-- 1h files -->
       <file_group id="2h" output_freq="2h"  output_level="10" split_freq="1d" enabled=".TRUE."/> <!-- 2h files -->
       <file_group id="3h" output_freq="3h"  output_level="10" enabled=".TRUE."/> <!-- 3h files -->
@@ -23,8 +19,6 @@
           <field field_ref="PHYSTRNO3"      />
           <field field_ref="ALLTRNO3"      />
           <field field_ref="AFILTNO3"      />
-          <field field_ref="NO3_E3T"    />
-          <field field_ref="NO3SNAP"    />
           <field field_ref="NO3_E3TSNAP"    />
           <field field_ref="PPDIATNO3V"      />
           <field field_ref="PPPHYNO3V"       />
