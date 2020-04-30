@@ -25,9 +25,16 @@
           <field field_ref="PPMRUBNO3V"      />
           <field field_ref="NITR"           />
           <field field_ref="NO3RAD"        />
+          <field field_ref="NO3_atf"        />
+          <field field_ref="NO3_sms"        />
+          <field field_ref="NO3_radb"        />
+          <field field_ref="NO3_radn"        />
+          <field field_ref="NO3_yad"        />
         </file>
         <file id="file3" name_suffix="_Sutil_V" description="N transports" >
           <field field_ref="NO3TVDY"        grid_ref="Sutil_grid"/>
+          <field field_ref="NO3_yad"        grid_ref="Sutil_grid"/>
+          <field field_ref="NO3_ldf"        grid_ref="Sutil_grid"/>
           <field field_ref="VLDFNO3"       grid_ref="Sutil_grid"/>
         </file>
         <file id="file4" name_suffix="_Haro_V" description="N transports" >
