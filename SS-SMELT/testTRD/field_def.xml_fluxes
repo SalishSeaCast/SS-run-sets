@@ -1145,8 +1145,6 @@
        <field id="XNUM"        long_name="Number of particles in aggregats"        unit="1"          grid_ref="grid_T_3D" />
        <field id="WSC"         long_name="sinking speed of mass flux"              unit="m2/s"       grid_ref="grid_T_3D" />
        <field id="WSN"         long_name="sinking speed of number flux"            unit="m2/s"       grid_ref="grid_T_3D" />
-       <field id="REM_DIAT"      long_name="---"        unit="---"                        />
-       <field id="REM_DIAT"      long_name="---"        unit="---"                        />
 
        <!-- dbio_T on T grid : variables available with key_diaar5 -->
        <field id="TPP"         long_name="Total Primary production of phyto"                   unit="mol/m3/s"  grid_ref="grid_T_3D" />
