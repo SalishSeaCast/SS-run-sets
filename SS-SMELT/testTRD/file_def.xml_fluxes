@@ -14,22 +14,23 @@
       <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."/> <!-- 6h files -->
       <file_group id="1d" output_freq="1d"  output_level="10" split_freq="5d" enabled=".TRUE."> <!-- 1d files -->
         <file id="file2" name_suffix="_dian_T" description="diagnostics" >
-          <field field_ref="RIVNO3"       />
-          <field field_ref="BIOTRNO3"       />
+          <!-- <field field_ref="RIVNO3"       />
           <field field_ref="PHYSTRNO3"      />
           <field field_ref="ALLTRNO3"      />
-          <field field_ref="AFILTNO3"      />
           <field field_ref="NO3_E3TSNAP"    />
           <field field_ref="PPDIATNO3V"      />
           <field field_ref="PPPHYNO3V"       />
-          <field field_ref="PPMRUBNO3V"      />
+          <field field_ref="PPMRUBNO3V"      /> -->
           <field field_ref="NITR"           />
           <field field_ref="NO3RAD"        />
           <field field_ref="ATF_NO3"        />
           <field field_ref="SMS_NO3"        />
           <field field_ref="RDB_NO3"        />
           <field field_ref="RDN_NO3"        />
-          <field field_ref="YAD_NO3"       />
+          <field field_ref="REM_PON"       />
+          <field field_ref="REM_DON"       />
+          <field field_ref="REM_NO3"       />
+          <field field_ref="REM_bSi"       />
         </file>
         <file id="file3" name_suffix="_Sutil_V" description="N transports" >
           <field field_ref="NO3TVDY"        grid_ref="Sutil_grid"/>

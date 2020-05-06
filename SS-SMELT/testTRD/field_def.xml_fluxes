@@ -1123,12 +1123,30 @@
        <field id="RDB_O2"      long_name="---"        unit="---"                        />
        <field id="RDN_O2"      long_name="---"        unit="---"                        />
 
+       <field id="REM_NO3"      long_name="---"        unit="---"                    />
+       <field id="REM_NH4"      long_name="---"        unit="---"                    />
+       <field id="REM_PON"      long_name="---"        unit="---"                    />
+       <field id="REM_DON"      long_name="---"        unit="---"                    />
+       <field id="REM_Si"       long_name="---"        unit="---"                    />
+       <field id="REM_bSi"      long_name="---"        unit="---"                    />
+       <field id="REM_PHY"      long_name="---"        unit="---"                    />
+       <field id="REM_DIAT"     long_name="---"        unit="---"                    />
+       <field id="REM_MYRI"     long_name="---"        unit="---"                    />
+       <field id="REM_MICZ"     long_name="---"        unit="---"                    />
+       <field id="REM_TRA"      long_name="---"        unit="---"                    />
+       <field id="REM_DIC"      long_name="---"        unit="---"                    />
+       <field id="REM_TA"       long_name="---"        unit="---"                    />
+       <field id="REM_O2"       long_name="---"        unit="---"                    />
+       <field id="REM_PHY"      long_name="---"        unit="---"                    />
+
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
        <field id="EPN100"      long_name="Particulate number flux at 100 m"        unit="mol/m2/s"                        />
        <field id="EXPN"        long_name="Particulate number flux"                 unit="mol/m2/s"   grid_ref="grid_T_3D" />
        <field id="XNUM"        long_name="Number of particles in aggregats"        unit="1"          grid_ref="grid_T_3D" />
        <field id="WSC"         long_name="sinking speed of mass flux"              unit="m2/s"       grid_ref="grid_T_3D" />
        <field id="WSN"         long_name="sinking speed of number flux"            unit="m2/s"       grid_ref="grid_T_3D" />
+       <field id="REM_DIAT"      long_name="---"        unit="---"                        />
+       <field id="REM_DIAT"      long_name="---"        unit="---"                        />
 
        <!-- dbio_T on T grid : variables available with key_diaar5 -->
        <field id="TPP"         long_name="Total Primary production of phyto"                   unit="mol/m3/s"  grid_ref="grid_T_3D" />
