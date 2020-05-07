@@ -1139,6 +1139,54 @@
        <field id="REM_O2"       long_name="---"        unit="---"                    />
        <field id="REM_PHY"      long_name="---"        unit="---"                    />
 
+       <field id="ATX_NO3"      long_name="---"        unit="---"                    />
+       <field id="ATX_NH4"      long_name="---"        unit="---"                    />
+       <field id="ATX_PON"      long_name="---"        unit="---"                    />
+       <field id="ATX_DON"      long_name="---"        unit="---"                    />
+       <field id="ATX_Si"       long_name="---"        unit="---"                    />
+       <field id="ATX_bSi"      long_name="---"        unit="---"                    />
+       <field id="ATX_PHY"      long_name="---"        unit="---"                    />
+       <field id="ATX_DIAT"     long_name="---"        unit="---"                    />
+       <field id="ATX_MYRI"     long_name="---"        unit="---"                    />
+       <field id="ATX_MICZ"     long_name="---"        unit="---"                    />
+       <field id="ATX_TRA"      long_name="---"        unit="---"                    />
+       <field id="ATX_DIC"      long_name="---"        unit="---"                    />
+       <field id="ATX_TA"       long_name="---"        unit="---"                    />
+       <field id="ATX_O2"       long_name="---"        unit="---"                    />
+       <field id="ATX_PHY"      long_name="---"        unit="---"                    />
+
+       <field id="ATY_NO3"      long_name="---"        unit="---"                    />
+       <field id="ATY_NH4"      long_name="---"        unit="---"                    />
+       <field id="ATY_PON"      long_name="---"        unit="---"                    />
+       <field id="ATY_DON"      long_name="---"        unit="---"                    />
+       <field id="ATY_Si"       long_name="---"        unit="---"                    />
+       <field id="ATY_bSi"      long_name="---"        unit="---"                    />
+       <field id="ATY_PHY"      long_name="---"        unit="---"                    />
+       <field id="ATY_DIAT"     long_name="---"        unit="---"                    />
+       <field id="ATY_MYRI"     long_name="---"        unit="---"                    />
+       <field id="ATY_MICZ"     long_name="---"        unit="---"                    />
+       <field id="ATY_TRA"      long_name="---"        unit="---"                    />
+       <field id="ATY_DIC"      long_name="---"        unit="---"                    />
+       <field id="ATY_TA"       long_name="---"        unit="---"                    />
+       <field id="ATY_O2"       long_name="---"        unit="---"                    />
+       <field id="ATY_PHY"      long_name="---"        unit="---"                    />
+
+       <field id="ATZ_NO3"      long_name="---"        unit="---"                    />
+       <field id="ATZ_NH4"      long_name="---"        unit="---"                    />
+       <field id="ATZ_PON"      long_name="---"        unit="---"                    />
+       <field id="ATZ_DON"      long_name="---"        unit="---"                    />
+       <field id="ATZ_Si"       long_name="---"        unit="---"                    />
+       <field id="ATZ_bSi"      long_name="---"        unit="---"                    />
+       <field id="ATZ_PHY"      long_name="---"        unit="---"                    />
+       <field id="ATZ_DIAT"     long_name="---"        unit="---"                    />
+       <field id="ATZ_MYRI"     long_name="---"        unit="---"                    />
+       <field id="ATZ_MICZ"     long_name="---"        unit="---"                    />
+       <field id="ATZ_TRA"      long_name="---"        unit="---"                    />
+       <field id="ATZ_DIC"      long_name="---"        unit="---"                    />
+       <field id="ATZ_TA"       long_name="---"        unit="---"                    />
+       <field id="ATZ_O2"       long_name="---"        unit="---"                    />
+       <field id="ATZ_PHY"      long_name="---"        unit="---"                    />
+
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
        <field id="EPN100"      long_name="Particulate number flux at 100 m"        unit="mol/m2/s"                        />
        <field id="EXPN"        long_name="Particulate number flux"                 unit="mol/m2/s"   grid_ref="grid_T_3D" />
