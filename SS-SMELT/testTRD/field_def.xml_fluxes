@@ -1187,6 +1187,54 @@
        <field id="ATZ_O2"       long_name="---"        unit="---"                    />
        <field id="ATZ_PHY"      long_name="---"        unit="---"                    />
 
+       <field id="DTX_NO3"      long_name="---"        unit="---"                    />
+       <field id="DTX_NH4"      long_name="---"        unit="---"                    />
+       <field id="DTX_PON"      long_name="---"        unit="---"                    />
+       <field id="DTX_DON"      long_name="---"        unit="---"                    />
+       <field id="DTX_Si"       long_name="---"        unit="---"                    />
+       <field id="DTX_bSi"      long_name="---"        unit="---"                    />
+       <field id="DTX_PHY"      long_name="---"        unit="---"                    />
+       <field id="DTX_DIAT"     long_name="---"        unit="---"                    />
+       <field id="DTX_MYRI"     long_name="---"        unit="---"                    />
+       <field id="DTX_MICZ"     long_name="---"        unit="---"                    />
+       <field id="DTX_TRA"      long_name="---"        unit="---"                    />
+       <field id="DTX_DIC"      long_name="---"        unit="---"                    />
+       <field id="DTX_TA"       long_name="---"        unit="---"                    />
+       <field id="DTX_O2"       long_name="---"        unit="---"                    />
+       <field id="DTX_PHY"      long_name="---"        unit="---"                    />
+
+       <field id="DTY_NO3"      long_name="---"        unit="---"                    />
+       <field id="DTY_NH4"      long_name="---"        unit="---"                    />
+       <field id="DTY_PON"      long_name="---"        unit="---"                    />
+       <field id="DTY_DON"      long_name="---"        unit="---"                    />
+       <field id="DTY_Si"       long_name="---"        unit="---"                    />
+       <field id="DTY_bSi"      long_name="---"        unit="---"                    />
+       <field id="DTY_PHY"      long_name="---"        unit="---"                    />
+       <field id="DTY_DIAT"     long_name="---"        unit="---"                    />
+       <field id="DTY_MYRI"     long_name="---"        unit="---"                    />
+       <field id="DTY_MICZ"     long_name="---"        unit="---"                    />
+       <field id="DTY_TRA"      long_name="---"        unit="---"                    />
+       <field id="DTY_DIC"      long_name="---"        unit="---"                    />
+       <field id="DTY_TA"       long_name="---"        unit="---"                    />
+       <field id="DTY_O2"       long_name="---"        unit="---"                    />
+       <field id="DTY_PHY"      long_name="---"        unit="---"                    />
+
+       <field id="DTZ_NO3"      long_name="---"        unit="---"                    />
+       <field id="DTZ_NH4"      long_name="---"        unit="---"                    />
+       <field id="DTZ_PON"      long_name="---"        unit="---"                    />
+       <field id="DTZ_DON"      long_name="---"        unit="---"                    />
+       <field id="DTZ_Si"       long_name="---"        unit="---"                    />
+       <field id="DTZ_bSi"      long_name="---"        unit="---"                    />
+       <field id="DTZ_PHY"      long_name="---"        unit="---"                    />
+       <field id="DTZ_DIAT"     long_name="---"        unit="---"                    />
+       <field id="DTZ_MYRI"     long_name="---"        unit="---"                    />
+       <field id="DTZ_MICZ"     long_name="---"        unit="---"                    />
+       <field id="DTZ_TRA"      long_name="---"        unit="---"                    />
+       <field id="DTZ_DIC"      long_name="---"        unit="---"                    />
+       <field id="DTZ_TA"       long_name="---"        unit="---"                    />
+       <field id="DTZ_O2"       long_name="---"        unit="---"                    />
+       <field id="DTZ_PHY"      long_name="---"        unit="---"                    />
+
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
        <field id="EPN100"      long_name="Particulate number flux at 100 m"        unit="mol/m2/s"                        />
        <field id="EXPN"        long_name="Particulate number flux"                 unit="mol/m2/s"   grid_ref="grid_T_3D" />
