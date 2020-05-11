@@ -14,13 +14,13 @@
       <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."/> <!-- 6h files -->
       <file_group id="1d" output_freq="1d"  output_level="10" split_freq="5d" enabled=".TRUE."> <!-- 1d files -->
         <file id="file2" name_suffix="_dian_T" description="diagnostics" >
-          <!-- <field field_ref="RIVNO3"       />
+          <field field_ref="RIVNO3"       />
           <field field_ref="PHYSTRNO3"      />
           <field field_ref="ALLTRNO3"      />
           <field field_ref="NO3_E3TSNAP"    />
           <field field_ref="PPDIATNO3V"      />
           <field field_ref="PPPHYNO3V"       />
-          <field field_ref="PPMRUBNO3V"      /> -->
+          <field field_ref="PPMRUBNO3V"      /> 
           <field field_ref="NITR"           />
           <field field_ref="NO3RAD"        />
           <field field_ref="ATF_NO3"        />
