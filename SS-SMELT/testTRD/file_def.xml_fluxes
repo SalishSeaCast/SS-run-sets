@@ -5,7 +5,7 @@
 =                                         put the variables you want...                                    =
 ============================================================================================================
     -->
-    <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4" split_freq="10d" split_freq_format= "%y%mo%d">
+    <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4" compression_level="4" split_freq="10d" split_freq_format= "%y%mo%d">
       <file_group id="1ts" output_freq="2160ts"  output_level="10" enabled=".TRUE."/> <!-- 1 time step files -->
       <file_group id="1h" output_freq="1h"  output_level="10" split_freq="10d" enabled=".TRUE."/> <!-- 1h files -->
       <file_group id="2h" output_freq="2h"  output_level="10" split_freq="1d" enabled=".TRUE."/> <!-- 2h files -->
