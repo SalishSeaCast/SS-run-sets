@@ -1139,6 +1139,112 @@
        <field id="REM_O2"       long_name="---"        unit="---"                    />
        <field id="REM_PHY"      long_name="---"        unit="---"                    />
 
+       <field id="RIV_NO3"      long_name="---"        unit="---"                    />
+       <field id="RIV_NH4"      long_name="---"        unit="---"                    />
+       <field id="RIV_PON"      long_name="---"        unit="---"                    />
+       <field id="RIV_DON"      long_name="---"        unit="---"                    />
+       <field id="RIV_Si"       long_name="---"        unit="---"                    />
+       <field id="RIV_bSi"      long_name="---"        unit="---"                    />
+       <field id="RIV_PHY"      long_name="---"        unit="---"                    />
+       <field id="RIV_DIAT"     long_name="---"        unit="---"                    />
+       <field id="RIV_MYRI"     long_name="---"        unit="---"                    />
+       <field id="RIV_MICZ"     long_name="---"        unit="---"                    />
+       <field id="RIV_TRA"      long_name="---"        unit="---"                    />
+       <field id="RIV_DIC"      long_name="---"        unit="---"                    />
+       <field id="RIV_TA"       long_name="---"        unit="---"                    />
+       <field id="RIV_O2"       long_name="---"        unit="---"                    />
+       <field id="RIV_PHY"      long_name="---"        unit="---"                    />
+
+       <field id="RIV_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > RIV_DIAT+RIV_MYRI+RIV_PHY+RIV_MICZ </field >
+       <field id="WAS_NH4"      long_name="grazing, mort to NH4"   unit="mmol/m2"  > MRT_NH4+MRU_NH4+MIZ_NH4+MSZ_NH4 </field >
+       <field id="WAS_PON"      long_name="grazing, mort to PON"   unit="mmol/m2"  > MRT_PON+MRU_PON+MIZ_PON+MSZ_PON </field >
+       <field id="WAS_DON"      long_name="grazing, mort to DON"   unit="mmol/m2"  > MRT_DON+MRU_DON+MIZ_DON+MSZ_DON </field >
+
+       <field id="MRT_NO3"      long_name="---"        unit="---"                    />
+       <field id="MRT_NH4"      long_name="---"        unit="---"                    />
+       <field id="MRT_PON"      long_name="---"        unit="---"                    />
+       <field id="MRT_DON"      long_name="---"        unit="---"                    />
+       <field id="MRT_Si"       long_name="---"        unit="---"                    />
+       <field id="MRT_bSi"      long_name="---"        unit="---"                    />
+       <field id="MRT_PHY"      long_name="---"        unit="---"                    />
+       <field id="MRT_DIAT"     long_name="---"        unit="---"                    />
+       <field id="MRT_MYRI"     long_name="---"        unit="---"                    />
+       <field id="MRT_MICZ"     long_name="---"        unit="---"                    />
+       <field id="MRT_TRA"      long_name="---"        unit="---"                    />
+       <field id="MRT_DIC"      long_name="---"        unit="---"                    />
+       <field id="MRT_TA"       long_name="---"        unit="---"                    />
+       <field id="MRT_O2"       long_name="---"        unit="---"                    />
+       <field id="MRT_PHY"      long_name="---"        unit="---"                    />
+
+       <field id="MIZ_NO3"      long_name="---"        unit="---"                    />
+       <field id="MIZ_NH4"      long_name="---"        unit="---"                    />
+       <field id="MIZ_PON"      long_name="---"        unit="---"                    />
+       <field id="MIZ_DON"      long_name="---"        unit="---"                    />
+       <field id="MIZ_Si"       long_name="---"        unit="---"                    />
+       <field id="MIZ_bSi"      long_name="---"        unit="---"                    />
+       <field id="MIZ_PHY"      long_name="---"        unit="---"                    />
+       <field id="MIZ_DIAT"     long_name="---"        unit="---"                    />
+       <field id="MIZ_MYRI"     long_name="---"        unit="---"                    />
+       <field id="MIZ_MICZ"     long_name="---"        unit="---"                    />
+       <field id="MIZ_TRA"      long_name="---"        unit="---"                    />
+       <field id="MIZ_DIC"      long_name="---"        unit="---"                    />
+       <field id="MIZ_TA"       long_name="---"        unit="---"                    />
+       <field id="MIZ_O2"       long_name="---"        unit="---"                    />
+       <field id="MIZ_PHY"      long_name="---"        unit="---"                    />
+
+       <field id="MSZ_NO3"      long_name="---"        unit="---"                    />
+       <field id="MSZ_NH4"      long_name="---"        unit="---"                    />
+       <field id="MSZ_PON"      long_name="---"        unit="---"                    />
+       <field id="MSZ_DON"      long_name="---"        unit="---"                    />
+       <field id="MSZ_Si"       long_name="---"        unit="---"                    />
+       <field id="MSZ_bSi"      long_name="---"        unit="---"                    />
+       <field id="MSZ_PHY"      long_name="---"        unit="---"                    />
+       <field id="MSZ_DIAT"     long_name="---"        unit="---"                    />
+       <field id="MSZ_MYRI"     long_name="---"        unit="---"                    />
+       <field id="MSZ_MICZ"     long_name="---"        unit="---"                    />
+       <field id="MSZ_TRA"      long_name="---"        unit="---"                    />
+       <field id="MSZ_DIC"      long_name="---"        unit="---"                    />
+       <field id="MSZ_TA"       long_name="---"        unit="---"                    />
+       <field id="MSZ_O2"       long_name="---"        unit="---"                    />
+       <field id="MSZ_PHY"      long_name="---"        unit="---"                    />
+
+       <field id="MRU_NO3"      long_name="---"        unit="---"                    />
+       <field id="MRU_NH4"      long_name="---"        unit="---"                    />
+       <field id="MRU_PON"      long_name="---"        unit="---"                    />
+       <field id="MRU_DON"      long_name="---"        unit="---"                    />
+       <field id="MRU_Si"       long_name="---"        unit="---"                    />
+       <field id="MRU_bSi"      long_name="---"        unit="---"                    />
+       <field id="MRU_PHY"      long_name="---"        unit="---"                    />
+       <field id="MRU_DIAT"     long_name="---"        unit="---"                    />
+       <field id="MRU_MYRI"     long_name="---"        unit="---"                    />
+       <field id="MRU_MICZ"     long_name="---"        unit="---"                    />
+       <field id="MRU_TRA"      long_name="---"        unit="---"                    />
+       <field id="MRU_DIC"      long_name="---"        unit="---"                    />
+       <field id="MRU_TA"       long_name="---"        unit="---"                    />
+       <field id="MRU_O2"       long_name="---"        unit="---"                    />
+       <field id="MRU_PHY"      long_name="---"        unit="---"                    />
+
+       <field id="PRD_NO3"      long_name="---"        unit="---"                    />
+       <field id="PRD_NH4"      long_name="---"        unit="---"                    />
+       <field id="PRD_PON"      long_name="---"        unit="---"                    />
+       <field id="PRD_DON"      long_name="---"        unit="---"                    />
+       <field id="PRD_Si"       long_name="---"        unit="---"                    />
+       <field id="PRD_bSi"      long_name="---"        unit="---"                    />
+       <field id="PRD_PHY"      long_name="---"        unit="---"                    />
+       <field id="PRD_DIAT"     long_name="---"        unit="---"                    />
+       <field id="PRD_MYRI"     long_name="---"        unit="---"                    />
+       <field id="PRD_MICZ"     long_name="---"        unit="---"                    />
+       <field id="PRD_TRA"      long_name="---"        unit="---"                    />
+       <field id="PRD_DIC"      long_name="---"        unit="---"                    />
+       <field id="PRD_TA"       long_name="---"        unit="---"                    />
+       <field id="PRD_O2"       long_name="---"        unit="---"                    />
+       <field id="PRD_PHY"      long_name="---"        unit="---"                    />
+
+       <field id="BSZ_DIAT"     long_name="---"        unit="---"                    />
+       <field id="BSZ_bSi"      long_name="---"        unit="---"                    />
+       <field id="BSZ_PON"      long_name="---"        unit="---"                    />
+       <field id="BSZ_TRA"      long_name="---"        unit="---"                    />
+
        <field id="ATX_NO3"      long_name="---"        unit="---"                    />
        <field id="ATX_NH4"      long_name="---"        unit="---"                    />
        <field id="ATX_PON"      long_name="---"        unit="---"                    />
