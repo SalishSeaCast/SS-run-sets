@@ -65,7 +65,6 @@
           <field field_ref="MIZ_PON"       />
         </file>
         <file id="file5" name_suffix="_Sutil_V" description="N transports" >
-          <field field_ref="NO3TVDY"        grid_ref="Sutil_grid"/>
           <field field_ref="ATY_NO3"        grid_ref="Sutil_grid"/>
           <field field_ref="ATY_NH4"        grid_ref="Sutil_grid"/>
           <field field_ref="ATY_PON"        grid_ref="Sutil_grid"/>
@@ -75,70 +74,69 @@
           <field field_ref="ATY_MYRI"        grid_ref="Sutil_grid"/>
           <field field_ref="ATY_MICZ"        grid_ref="Sutil_grid"/>
           <field field_ref="DTY_NO3"        grid_ref="Sutil_grid"/>
-          <field field_ref="VLDFNO3"       grid_ref="Sutil_grid"/>
         </file>
         <file id="file6" name_suffix="_Haro_V" description="N transports" >
-          <field field_ref="ATY_NO3"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_NH4"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_PON"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_DON"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_PHY"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_DIAT"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_MYRI"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_MICZ"        grid_ref="Sutil_grid"/>
-          <field field_ref="DTY_NO3"        grid_ref="Sutil_grid"/>
+          <field field_ref="ATY_NO3"        grid_ref="Haro_grid"/>
+          <field field_ref="ATY_NH4"        grid_ref="Haro_grid"/>
+          <field field_ref="ATY_PON"        grid_ref="Haro_grid"/>
+          <field field_ref="ATY_DON"        grid_ref="Haro_grid"/>
+          <field field_ref="ATY_PHY"        grid_ref="Haro_grid"/>
+          <field field_ref="ATY_DIAT"        grid_ref="Haro_grid"/>
+          <field field_ref="ATY_MYRI"        grid_ref="Haro_grid"/>
+          <field field_ref="ATY_MICZ"        grid_ref="Haro_grid"/>
+          <field field_ref="DTY_NO3"        grid_ref="Haro_grid"/>
         </file>
         <file id="file7" name_suffix="_SJC_V" description="N transports" >
-          <field field_ref="ATY_NO3"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_NH4"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_PON"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_DON"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_PHY"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_DIAT"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_MYRI"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_MICZ"        grid_ref="Sutil_grid"/>
-          <field field_ref="DTY_NO3"        grid_ref="Sutil_grid"/>
+          <field field_ref="ATY_NO3"        grid_ref="SJC_grid"/>
+          <field field_ref="ATY_NH4"        grid_ref="SJC_grid"/>
+          <field field_ref="ATY_PON"        grid_ref="SJC_grid"/>
+          <field field_ref="ATY_DON"        grid_ref="SJC_grid"/>
+          <field field_ref="ATY_PHY"        grid_ref="SJC_grid"/>
+          <field field_ref="ATY_DIAT"        grid_ref="SJC_grid"/>
+          <field field_ref="ATY_MYRI"        grid_ref="SJC_grid"/>
+          <field field_ref="ATY_MICZ"        grid_ref="SJC_grid"/>
+          <field field_ref="DTY_NO3"        grid_ref="SJC_grid"/>
         </file>
         <file id="file8" name_suffix="_Rosario_V" description="N transports" >
-          <field field_ref="ATY_NO3"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_NH4"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_PON"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_DON"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_PHY"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_DIAT"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_MYRI"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_MICZ"        grid_ref="Sutil_grid"/>
-          <field field_ref="DTY_NO3"        grid_ref="Sutil_grid"/>
+          <field field_ref="ATY_NO3"        grid_ref="Rosario_grid"/>
+          <field field_ref="ATY_NH4"        grid_ref="Rosario_grid"/>
+          <field field_ref="ATY_PON"        grid_ref="Rosario_grid"/>
+          <field field_ref="ATY_DON"        grid_ref="Rosario_grid"/>
+          <field field_ref="ATY_PHY"        grid_ref="Rosario_grid"/>
+          <field field_ref="ATY_DIAT"        grid_ref="Rosario_grid"/>
+          <field field_ref="ATY_MYRI"        grid_ref="Rosario_grid"/>
+          <field field_ref="ATY_MICZ"        grid_ref="Rosario_grid"/>
+          <field field_ref="DTY_NO3"        grid_ref="Rosario_grid"/>
         </file>
         <file id="file9" name_suffix="_Discovery_V" description="N transports" >
-          <field field_ref="ATY_NO3"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_NH4"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_PON"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_DON"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_PHY"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_DIAT"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_MYRI"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATY_MICZ"        grid_ref="Sutil_grid"/>
-          <field field_ref="DTY_NO3"        grid_ref="Sutil_grid"/>
+          <field field_ref="ATY_NO3"        grid_ref="Discovery_grid"/>
+          <field field_ref="ATY_NH4"        grid_ref="Discovery_grid"/>
+          <field field_ref="ATY_PON"        grid_ref="Discovery_grid"/>
+          <field field_ref="ATY_DON"        grid_ref="Discovery_grid"/>
+          <field field_ref="ATY_PHY"        grid_ref="Discovery_grid"/>
+          <field field_ref="ATY_DIAT"        grid_ref="Discovery_grid"/>
+          <field field_ref="ATY_MYRI"        grid_ref="Discovery_grid"/>
+          <field field_ref="ATY_MICZ"        grid_ref="Discovery_grid"/>
+          <field field_ref="DTY_NO3"        grid_ref="Discovery_grid"/>
         </file>
         <file id="file10" name_suffix="_Malaspina_U" description="N transports" >
-          <field field_ref="ATX_NO3"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATX_NH4"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATX_PON"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATX_DON"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATX_PHY"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATX_DIAT"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATX_MYRI"        grid_ref="Sutil_grid"/>
-          <field field_ref="ATX_MICZ"        grid_ref="Sutil_grid"/>
-          <field field_ref="DTX_NO3"        grid_ref="Sutil_grid"/>
+          <field field_ref="ATX_NO3"        grid_ref="Malaspina_grid"/>
+          <field field_ref="ATX_NH4"        grid_ref="Malaspina_grid"/>
+          <field field_ref="ATX_PON"        grid_ref="Malaspina_grid"/>
+          <field field_ref="ATX_DON"        grid_ref="Malaspina_grid"/>
+          <field field_ref="ATX_PHY"        grid_ref="Malaspina_grid"/>
+          <field field_ref="ATX_DIAT"        grid_ref="Malaspina_grid"/>
+          <field field_ref="ATX_MYRI"        grid_ref="Malaspina_grid"/>
+          <field field_ref="ATX_MICZ"        grid_ref="Malaspina_grid"/>
+          <field field_ref="DTX_NO3"        grid_ref="Malaspina_grid"/>
         </file>
         <file id="file11" name_suffix="_SJDFK_U" description="N transports" >
-          <field field_ref="NO3TVDX"       grid_ref="SJDFK_grid"/>
-          <field field_ref="ULDFNO3"       grid_ref="SJDFK_grid"/>
+          <field field_ref="ATX_NO3"       grid_ref="SJDFK_grid"/>
+          <field field_ref="DTX_NO3"       grid_ref="SJDFK_grid"/>
         </file>
         <file id="file12" name_suffix="_SJDFE_U" description="N transports" >
-          <field field_ref="NO3TVDX"       grid_ref="SJDFE_grid"/>
-          <field field_ref="ULDFNO3"       grid_ref="SJDFE_grid"/>
+          <field field_ref="ATX_NO3"       grid_ref="SJDFE_grid"/>
+          <field field_ref="DTX_NO3"       grid_ref="SJDFE_grid"/>
         </file>
         <file id="file20" name_suffix="_layer6m_W" description="vert N transports" >
           <field field_ref="ATZ_NO3"        grid_ref="layer6m_grid"/>
