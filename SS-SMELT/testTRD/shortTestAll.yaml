@@ -3,7 +3,7 @@ config_name: SMELT
 account: def-allen
 email: eolson@eoas.ubc.ca
 MPI decomposition: 16x41
-walltime: 1:00:00
+walltime: 2:00:00
 
 forcing:
   LiveOcean:
