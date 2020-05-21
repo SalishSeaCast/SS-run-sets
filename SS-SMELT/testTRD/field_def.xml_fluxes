@@ -1365,7 +1365,7 @@
        <field id="VMIXTA"       long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
        <field id="VMIXO2"       long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
        <field id="VMIXPHY"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXLIV"      long_name="upward flux due to vert mixing with horiz comp""DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > VMIXDIAT+VMIXMYRI+VMIXPHY+VMIXMICZ </field >
+       <field id="VMIXLIV"      long_name="upward flux due to vert mixing with horiz comp"   unit="mmol/m2"  > VMIXDIAT+VMIXMYRI+VMIXPHY+VMIXMICZ </field >
 
        <field id="WLDFNO3"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
        <field id="WLDFNH4"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
