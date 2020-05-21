@@ -767,31 +767,41 @@
        <field id="TRA_E3T"      long_name="TRA * E3T"                               unit="NTU m"  > TRA * e3t </field >
        <field id="PON"          long_name="Particulate Organic N Concentration" standard_name="mole_concentration_of_particulate_organic_matter_expressed_as_nitrogen_in_sea_water" unit="mmol m-3" />
        <field id="PON_E3T"      long_name="PON * E3T"                                unit="mmol/m2"  > PON * e3t </field >
+       <field id="PON_E3TSNAP"      long_name="PON * E3T"     operation="instant"        unit="mmol/m2"  > PON * e3t </field >
        <field id="Si"           long_name="Silicon Concentration"               standard_name="mole_concentration_of_silicate_in_sea_water"                                         unit="mmol m-3" />
        <field id="Si_E3T"       long_name="Si * E3T"                                 unit="mmol/m2"  > Si * e3t </field >
+       <field id="Si_E3TSNAP"      long_name="Si * E3T"     operation="instant"        unit="mmol/m2"  > Si * e3t </field >
        <field id="PHY"          long_name="Flagellates Concentration"           standard_name="mole_concentration_of_flagellates_expressed_as_nitrogen_in_sea_water"                unit="mmol m-3" />
        <field id="PHY_E3T"      long_name="PHY * E3T"                                unit="mmol/m2"  > PHY * e3t </field >
+       <field id="PHY_E3TSNAP"      long_name="PHY * E3T"     operation="instant"        unit="mmol/m2"  > PHY * e3t </field >
        <field id="MICZ"         long_name="Microzooplankton Concentration"      standard_name="mole_concentration_of_microzooplankton_expressed_as_nitrogen_in_sea_water"           unit="mmol m-3" />
+       <field id="MICZ_E3TSNAP"      long_name="MICZ * E3T"     operation="instant"        unit="mmol/m2"  > MICZ * e3t </field >
        <field id="MICZ_E3T"     long_name="MICZ * E3T"                               unit="mmol/m2"  > MICZ * e3t </field >
        <field id="DON"          long_name="Dissolved Organic N Concentration"   standard_name="mole_concentration_of_organic_detritus_expressed_as_nitrogen_in_sea_water"           unit="mmol m-3" />
        <field id="DON_E3T"      long_name="DON * E3T"                                unit="mmol/m2"  > DON * e3t </field >
+       <field id="DON_E3TSNAP"      long_name="DON * E3T"     operation="instant"        unit="mmol/m2"  > DON * e3t </field >
        <field id="DIAT"         long_name="Diatoms Concentration"               standard_name="mole_concentration_of_diatoms_expressed_as_nitrogen_in_sea_water"                    unit="mmol m-3" />
        <field id="DIAT_E3T"     long_name="DIAT * E3T"                               unit="mmol/m2"  > DIAT * e3t </field >
+       <field id="DIAT_E3TSNAP"      long_name="DIAT * E3T"     operation="instant"        unit="mmol/m2"  > DIAT * e3t </field >
        <field id="MYRI"         long_name="Mesodinium rubrum Concentration"     standard_name="mole_concentration_of_mesodinium_rubrum_expressed_as_nitrogen_in_sea_water"          unit="mmol m-3" />
        <field id="MYRI_E3T"     long_name="MYRI * E3T"                               unit="mmol/m2"  > MYRI * e3t </field >
+       <field id="MYRI_E3TSNAP"      long_name="MYRI * E3T"     operation="instant"        unit="mmol/m2"  > MYRI * e3t </field >
        <field id="bSi"          long_name="Biogenic Silicon Concentration"      standard_name="mole_concentration_of_organic_detritus_expressed_as_silicon_in_sea_water"            unit="mmol m-3" />
        <field id="bSi_E3T"      long_name="bsi * E3T"                                unit="mmol/m2"  > bSi * e3t </field >
+       <field id="bSi_E3TSNAP"      long_name="bSi * E3T"     operation="instant"        unit="mmol/m2"  > bSi * e3t </field >
        <field id="NO3"          long_name="Nitrate Concentration"               standard_name="mole_concentration_of_nitrate_in_sea_water"   unit="mmol m-3" />
        <field id="NO3_E3T"      long_name="NO3 * E3T"                                unit="mmol/m2"  > NO3 * e3t </field >
        <field id="NO3_E3TSNAP"      long_name="NO3 * E3T"     operation="instant"        unit="mmol/m2"  > NO3 * e3t </field >
        <field id="NH4"          long_name="Ammonium Concentration"              standard_name="mole_concentration_of_ammonium_in_sea_water"  unit="mmol m-3" />
        <field id="NH4_E3T"      long_name="NH4 * E3T"                                unit="mmol/m2"  > NH4 * e3t </field >
+       <field id="NH4_E3TSNAP"      long_name="NH4 * E3T"     operation="instant"        unit="mmol/m2"  > NH4 * e3t </field >
        <field id="DIC"          long_name="Dissolved Inorganic C Concentration" standard_name="mole_concentration_of_dissolved_inorganic_carbon_in_sea_water"   unit="mmol m-3" />
        <field id="DIC_E3T"      long_name="DIC * E3T"                                unit="mmol/m2"  > DIC * e3t </field >
        <field id="TA"          long_name="Total Alkalinity Concentration"              standard_name="sea_water_alkalinity_expressed_as_mole_equivalent"  unit="mmol m-3" />
        <field id="TA_E3T"      long_name="TA * E3T"                                unit="mmol/m2"  > TA * e3t </field >
        <field id="O2"          long_name="Dissolved Oxygen Concentration"              standard_name="dissolved_oxygen_expressed_as_mole_equivalent"  unit="mmol m-3" />
        <field id="O2_E3T"      long_name="O2 * E3T"                                unit="mmol/m2"  > O2 * e3t </field >
+       <field id="LIV_E3TSNAP"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > DIAT_E3T+MYRI_E3T+PHY_E3T+MICZ_E3T </field >
 
        <!-- SKOG outputs -->
        <field id="f_ph"        long_name="f_ph"         standard_name="f_ph"  unit="fill" grid_ref="grid_T_2D" />
@@ -888,11 +898,9 @@
        <field id="bSi_WT"   long_name="Biogenic Silicon Concentration - W Transport"      standard_name="bSi_w_dy_dx"      unit="mmol s-1" />
        <field id="NO3_WT"   long_name="Nitrate Concentration - W Transport"               standard_name="NO3_w_dy_dx"      unit="mmol s-1" />
        <field id="NH4_WT"   long_name="Ammonium Concentration - W Transport"              standard_name="NH4_w_dy_dx"      unit="mmol s-1" />
-       <field id="VMIXNO3"  long_name="upward no3 flux due to vert mixing with horiz comp" standard_name="vNO3mix"          unit="mmol N/m2/s" />
        <field id="VMIXNO3H" long_name="explicit est of horiz contrib to VMIXNO3"          standard_name="vNO3mixH"         unit="mmol N/m2/s" />
        <field id="VMIXNO3EXP" long_name="explicit est of upward no3 flux due to vert mix" standard_name="vNO3mixExp"       unit="mmol N/m2/s" />
        <field id="AVSH"     long_name="sloping horizontal contrib to avs"                 standard_name="avs_horiz"        unit="m2/s" />
-       <field id="WLDFNO3"  long_name="vert component of sloping lateral mix"             standard_name="NO3LDFW"          unit="mmol N/m2/s" />
        <field id="DIC_WT"   long_name="Dissolved Inorganic Carbon - W Transport"          standard_name="DIC_w_dy_dx"      unit="mmol s-1" />
        <field id="TA_WT"    long_name="Nitrate Concentration - W Transport"               standard_name="TA_w_dy_dx"       unit="mmol s-1" />
        <field id="O2_WT"    long_name="Ammonium Concentration - W Transport"              standard_name="O2_w_dy_dx"       unit="mmol s-1" />
@@ -902,6 +910,15 @@
        <field id="GLS_P"    long_name="GLS Shear Prod"                                    standard_name="GLS_P"            unit="m2 s-3" />
        <field id="GLS_SH2"  long_name="GLS shear squared"                                 standard_name="GLS_SH2"          unit="s-1" />
        <field id="NO3TVDZ"  long_name="Nitrate TVD Advection Z direction"                 standard_name="NO3tvdz"          unit="mmol s-1" />
+
+       <field id="BSZ_PON"  long_name="Bottom Sinking flux"            unit="mmol s-1"     />
+       <field id="BSZ_DIAT"  long_name="Bottom Sinking flux"            unit="mmol s-1"    />
+       <field id="BSZ_bSi"  long_name="Bottom Sinking flux"            unit="mmol s-1"     />
+       <field id="BSZ_TRA"  long_name="Bottom Sinking flux"            unit="mmol s-1"     />
+       <field id="BFX_PON"  long_name="Bottom Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BFX_DIAT"  long_name="Bottom Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BFX_bSi"  long_name="Bottom Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BFX_TRA"  long_name="Bottom Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
      </field_group>
      <!-- PISCES additional diagnostics on T grid  -->
 
@@ -939,6 +956,7 @@
        <field id="Heup"        long_name="Euphotic layer depth"                    unit="m"                               />
        <field id="ALLTRNO3"    long_name="total trend nitrate"                  unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="NO3RAD"     long_name="negative correction"                     unit="mmol N/s"   grid_ref="grid_T_3D" />
+       <field id="REFRN"     long_name="transfer to refr"                     unit="mmol N/s"   grid_ref="grid_T_3D" />
 
        <!-- Diagnostics available with key_trdtrc -->
        <field id="XAD_NO3"      long_name="---"        unit="---"                        />
@@ -1123,6 +1141,8 @@
        <field id="RDB_O2"      long_name="---"        unit="---"                        />
        <field id="RDN_O2"      long_name="---"        unit="---"                        />
 
+       <field id="ATF_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > ATF_DIAT+ATF_MYRI+ATF_PHY+ATF_MICZ </field >
+
        <field id="REM_NO3"      long_name="---"        unit="---"                    />
        <field id="REM_NH4"      long_name="---"        unit="---"                    />
        <field id="REM_PON"      long_name="---"        unit="---"                    />
@@ -1260,6 +1280,7 @@
        <field id="ATX_TA"       long_name="---"        unit="---"                    />
        <field id="ATX_O2"       long_name="---"        unit="---"                    />
        <field id="ATX_PHY"      long_name="---"        unit="---"                    />
+       <field id="ATX_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > ATX_DIAT+ATX_MYRI+ATX_PHY+ATX_MICZ </field >
 
        <field id="ATY_NO3"      long_name="---"        unit="---"                    />
        <field id="ATY_NH4"      long_name="---"        unit="---"                    />
@@ -1276,6 +1297,7 @@
        <field id="ATY_TA"       long_name="---"        unit="---"                    />
        <field id="ATY_O2"       long_name="---"        unit="---"                    />
        <field id="ATY_PHY"      long_name="---"        unit="---"                    />
+       <field id="ATY_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > ATY_DIAT+ATY_MYRI+ATY_PHY+ATY_MICZ </field >
 
        <field id="ATZ_NO3"      long_name="---"        unit="---"                    />
        <field id="ATZ_NH4"      long_name="---"        unit="---"                    />
@@ -1292,6 +1314,7 @@
        <field id="ATZ_TA"       long_name="---"        unit="---"                    />
        <field id="ATZ_O2"       long_name="---"        unit="---"                    />
        <field id="ATZ_PHY"      long_name="---"        unit="---"                    />
+       <field id="ATZ_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > ATZ_DIAT+ATZ_MYRI+ATZ_PHY+ATZ_MICZ </field >
 
        <field id="DTX_NO3"      long_name="---"        unit="---"                    />
        <field id="DTX_NH4"      long_name="---"        unit="---"                    />
@@ -1308,6 +1331,7 @@
        <field id="DTX_TA"       long_name="---"        unit="---"                    />
        <field id="DTX_O2"       long_name="---"        unit="---"                    />
        <field id="DTX_PHY"      long_name="---"        unit="---"                    />
+       <field id="DTX_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > DTX_DIAT+DTX_MYRI+DTX_PHY+DTX_MICZ </field >
 
        <field id="DTY_NO3"      long_name="---"        unit="---"                    />
        <field id="DTY_NH4"      long_name="---"        unit="---"                    />
@@ -1324,22 +1348,41 @@
        <field id="DTY_TA"       long_name="---"        unit="---"                    />
        <field id="DTY_O2"       long_name="---"        unit="---"                    />
        <field id="DTY_PHY"      long_name="---"        unit="---"                    />
+       <field id="DTY_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > DTY_DIAT+DTY_MYRI+DTY_PHY+DTY_MICZ </field >
 
-       <field id="DTZ_NO3"      long_name="---"        unit="---"                    />
-       <field id="DTZ_NH4"      long_name="---"        unit="---"                    />
-       <field id="DTZ_PON"      long_name="---"        unit="---"                    />
-       <field id="DTZ_DON"      long_name="---"        unit="---"                    />
-       <field id="DTZ_Si"       long_name="---"        unit="---"                    />
-       <field id="DTZ_bSi"      long_name="---"        unit="---"                    />
-       <field id="DTZ_PHY"      long_name="---"        unit="---"                    />
-       <field id="DTZ_DIAT"     long_name="---"        unit="---"                    />
-       <field id="DTZ_MYRI"     long_name="---"        unit="---"                    />
-       <field id="DTZ_MICZ"     long_name="---"        unit="---"                    />
-       <field id="DTZ_TRA"      long_name="---"        unit="---"                    />
-       <field id="DTZ_DIC"      long_name="---"        unit="---"                    />
-       <field id="DTZ_TA"       long_name="---"        unit="---"                    />
-       <field id="DTZ_O2"       long_name="---"        unit="---"                    />
-       <field id="DTZ_PHY"      long_name="---"        unit="---"                    />
+       <field id="VMIXNO3"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXNH4"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXPON"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXDON"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXSi"       long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXbSi"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXPHY"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXDIAT"     long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXMYRI"     long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXMICZ"     long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXTRA"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXDIC"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXTA"       long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXO2"       long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXPHY"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXLIV"      long_name="upward flux due to vert mixing with horiz comp""DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > VMIXDIAT+VMIXMYRI+VMIXPHY+VMIXMICZ </field >
+
+       <field id="WLDFNO3"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFNH4"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFPON"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFDON"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFSi"       long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFbSi"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFPHY"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFDIAT"     long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFMYRI"     long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFMICZ"     long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFTRA"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFDIC"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFTA"       long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFO2"       long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFPHY"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFLIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > WLDFDIAT+WLDFMYRI+WLDFPHY+WLDFMICZ </field >
 
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
        <field id="EPN100"      long_name="Particulate number flux at 100 m"        unit="mol/m2/s"                        />
