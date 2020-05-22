@@ -146,4 +146,17 @@
    rn_ahtrb_0       =     0.    !     background eddy diffusivity for ldf_iso [m2/s]
    rn_fact_lap      =     1.    !     enhanced zonal eddy diffusivity
 /
-
+&namtrc_trd       !   diagnostics on tracer trends        ('key_trdtrc')
+!                          or mixed-layer trends          ('key_trdmld_trc')
+!----------------------------------------------------------------------
+   ln_trdtrc(1)  =   .true.
+   ln_trdtrc(2)  =   .true.
+   ln_trdtrc(3)  =   .true.
+   ln_trdtrc(4)  =   .true.
+   ln_trdtrc(5)  =   .true.
+   ln_trdtrc(6)  =   .true.
+   ln_trdtrc(7)  =   .true.
+   ln_trdtrc(8)  =   .true.
+   ln_trdtrc(9)  =   .true.
+   ln_trdtrc(10)  =   .true.
+/

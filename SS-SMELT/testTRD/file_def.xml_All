@@ -34,6 +34,7 @@
           <field field_ref="ATF_LIV"    />
           <field field_ref="BFX_PON"    />
           <field field_ref="BFX_DIAT"    />
+          <field field_ref="SMS_DON"        />
         </file>
         <file id="file4" name_suffix="_graz_T" description="diagnostics" >
           <field field_ref="MRU_MYRI"       />

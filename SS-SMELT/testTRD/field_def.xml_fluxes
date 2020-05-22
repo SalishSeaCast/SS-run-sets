@@ -863,6 +863,38 @@
        <field id="O2_UT"    long_name="Oxygen Concentration - U Transport"              standard_name="O2_u_dy_dz"       unit="mmol s-1" />
        <field id="ULDFNO3"  long_name="X dir lateral mix"                                 standard_name="NO3mixx"          unit="mmol/s" />
        <field id="NO3TVDX"  long_name="X dir tvd advection"                               standard_name="NO3tvdx"          unit="mmol/s" />
+       <field id="ATX_NO3"      long_name="---"        unit="---"                    />
+       <field id="ATX_NH4"      long_name="---"        unit="---"                    />
+       <field id="ATX_PON"      long_name="---"        unit="---"                    />
+       <field id="ATX_DON"      long_name="---"        unit="---"                    />
+       <field id="ATX_Si"       long_name="---"        unit="---"                    />
+       <field id="ATX_bSi"      long_name="---"        unit="---"                    />
+       <field id="ATX_PHY"      long_name="---"        unit="---"                    />
+       <field id="ATX_DIAT"     long_name="---"        unit="---"                    />
+       <field id="ATX_MYRI"     long_name="---"        unit="---"                    />
+       <field id="ATX_MICZ"     long_name="---"        unit="---"                    />
+       <field id="ATX_TRA"      long_name="---"        unit="---"                    />
+       <field id="ATX_DIC"      long_name="---"        unit="---"                    />
+       <field id="ATX_TA"       long_name="---"        unit="---"                    />
+       <field id="ATX_O2"       long_name="---"        unit="---"                    />
+       <field id="ATX_PHY"      long_name="---"        unit="---"                    />
+       <field id="ATX_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > ATX_DIAT+ATX_MYRI+ATX_PHY+ATX_MICZ </field >
+       <field id="DTX_NO3"      long_name="---"        unit="---"                    />
+       <field id="DTX_NH4"      long_name="---"        unit="---"                    />
+       <field id="DTX_PON"      long_name="---"        unit="---"                    />
+       <field id="DTX_DON"      long_name="---"        unit="---"                    />
+       <field id="DTX_Si"       long_name="---"        unit="---"                    />
+       <field id="DTX_bSi"      long_name="---"        unit="---"                    />
+       <field id="DTX_PHY"      long_name="---"        unit="---"                    />
+       <field id="DTX_DIAT"     long_name="---"        unit="---"                    />
+       <field id="DTX_MYRI"     long_name="---"        unit="---"                    />
+       <field id="DTX_MICZ"     long_name="---"        unit="---"                    />
+       <field id="DTX_TRA"      long_name="---"        unit="---"                    />
+       <field id="DTX_DIC"      long_name="---"        unit="---"                    />
+       <field id="DTX_TA"       long_name="---"        unit="---"                    />
+       <field id="DTX_O2"       long_name="---"        unit="---"                    />
+       <field id="DTX_PHY"      long_name="---"        unit="---"                    />
+       <field id="DTX_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > DTX_DIAT+DTX_MYRI+DTX_PHY+DTX_MICZ </field >
      </field_group>
 
      <!-- SMELT Advective and Diffusive Transports of Tracers - V Grid  -->
@@ -883,6 +915,38 @@
        <field id="O2_VT"    long_name="Oxygen Concentration - V Transport"                standard_name="O2_v_dy_dz"       unit="mmol s-1" />
        <field id="VLDFNO3"  long_name="Y dir lateral mix"                                 standard_name="NO3mixy"          unit="mmol/s" />
        <field id="NO3TVDY"  long_name="Y dir tvd advection"                               standard_name="NO3tvdy"          unit="mmol/s" />
+       <field id="ATY_NO3"      long_name="---"        unit="---"                    />
+       <field id="ATY_NH4"      long_name="---"        unit="---"                    />
+       <field id="ATY_PON"      long_name="---"        unit="---"                    />
+       <field id="ATY_DON"      long_name="---"        unit="---"                    />
+       <field id="ATY_Si"       long_name="---"        unit="---"                    />
+       <field id="ATY_bSi"      long_name="---"        unit="---"                    />
+       <field id="ATY_PHY"      long_name="---"        unit="---"                    />
+       <field id="ATY_DIAT"     long_name="---"        unit="---"                    />
+       <field id="ATY_MYRI"     long_name="---"        unit="---"                    />
+       <field id="ATY_MICZ"     long_name="---"        unit="---"                    />
+       <field id="ATY_TRA"      long_name="---"        unit="---"                    />
+       <field id="ATY_DIC"      long_name="---"        unit="---"                    />
+       <field id="ATY_TA"       long_name="---"        unit="---"                    />
+       <field id="ATY_O2"       long_name="---"        unit="---"                    />
+       <field id="ATY_PHY"      long_name="---"        unit="---"                    />
+       <field id="ATY_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > ATY_DIAT+ATY_MYRI+ATY_PHY+ATY_MICZ </field >
+       <field id="DTY_NO3"      long_name="---"        unit="---"                    />
+       <field id="DTY_NH4"      long_name="---"        unit="---"                    />
+       <field id="DTY_PON"      long_name="---"        unit="---"                    />
+       <field id="DTY_DON"      long_name="---"        unit="---"                    />
+       <field id="DTY_Si"       long_name="---"        unit="---"                    />
+       <field id="DTY_bSi"      long_name="---"        unit="---"                    />
+       <field id="DTY_PHY"      long_name="---"        unit="---"                    />
+       <field id="DTY_DIAT"     long_name="---"        unit="---"                    />
+       <field id="DTY_MYRI"     long_name="---"        unit="---"                    />
+       <field id="DTY_MICZ"     long_name="---"        unit="---"                    />
+       <field id="DTY_TRA"      long_name="---"        unit="---"                    />
+       <field id="DTY_DIC"      long_name="---"        unit="---"                    />
+       <field id="DTY_TA"       long_name="---"        unit="---"                    />
+       <field id="DTY_O2"       long_name="---"        unit="---"                    />
+       <field id="DTY_PHY"      long_name="---"        unit="---"                    />
+       <field id="DTY_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > DTY_DIAT+DTY_MYRI+DTY_PHY+DTY_MICZ </field >
      </field_group>
 
      <!-- SMELT Advective and Diffusive Transports of Tracers and GLS output - W Grid  -->
@@ -919,6 +983,55 @@
        <field id="BFX_DIAT"  long_name="Bottom Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
        <field id="BFX_bSi"  long_name="Bottom Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
        <field id="BFX_TRA"  long_name="Bottom Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="ATZ_NO3"      long_name="---"        unit="---"                    />
+       <field id="ATZ_NH4"      long_name="---"        unit="---"                    />
+       <field id="ATZ_PON"      long_name="---"        unit="---"                    />
+       <field id="ATZ_DON"      long_name="---"        unit="---"                    />
+       <field id="ATZ_Si"       long_name="---"        unit="---"                    />
+       <field id="ATZ_bSi"      long_name="---"        unit="---"                    />
+       <field id="ATZ_PHY"      long_name="---"        unit="---"                    />
+       <field id="ATZ_DIAT"     long_name="---"        unit="---"                    />
+       <field id="ATZ_MYRI"     long_name="---"        unit="---"                    />
+       <field id="ATZ_MICZ"     long_name="---"        unit="---"                    />
+       <field id="ATZ_TRA"      long_name="---"        unit="---"                    />
+       <field id="ATZ_DIC"      long_name="---"        unit="---"                    />
+       <field id="ATZ_TA"       long_name="---"        unit="---"                    />
+       <field id="ATZ_O2"       long_name="---"        unit="---"                    />
+       <field id="ATZ_PHY"      long_name="---"        unit="---"                    />
+       <field id="ATZ_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > ATZ_DIAT+ATZ_MYRI+ATZ_PHY+ATZ_MICZ </field >
+       <field id="VMIXNO3"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXNH4"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXPON"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXDON"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXSi"       long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXbSi"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXPHY"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXDIAT"     long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXMYRI"     long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXMICZ"     long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXTRA"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXDIC"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXTA"       long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXO2"       long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXPHY"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXLIV"      long_name="upward flux due to vert mixing with horiz comp"   unit="mmol/m2"  > VMIXDIAT+VMIXMYRI+VMIXPHY+VMIXMICZ </field >
+
+       <field id="WLDFNO3"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFNH4"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFPON"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFDON"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFSi"       long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFbSi"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFPHY"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFDIAT"     long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFMYRI"     long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFMICZ"     long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFTRA"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFDIC"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFTA"       long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFO2"       long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFPHY"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
+       <field id="WLDFLIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > WLDFDIAT+WLDFMYRI+WLDFPHY+WLDFMICZ </field >
      </field_group>
      <!-- PISCES additional diagnostics on T grid  -->
 
@@ -1174,8 +1287,8 @@
        <field id="RIV_TA"       long_name="---"        unit="---"                    />
        <field id="RIV_O2"       long_name="---"        unit="---"                    />
        <field id="RIV_PHY"      long_name="---"        unit="---"                    />
-
        <field id="RIV_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > RIV_DIAT+RIV_MYRI+RIV_PHY+RIV_MICZ </field >
+
        <field id="WAS_NH4"      long_name="grazing, mort to NH4"   unit="mmol/m2"  > MRT_NH4+MRU_NH4+MIZ_NH4+MSZ_NH4 </field >
        <field id="WAS_PON"      long_name="grazing, mort to PON"   unit="mmol/m2"  > MRT_PON+MRU_PON+MIZ_PON+MSZ_PON </field >
        <field id="WAS_DON"      long_name="grazing, mort to DON"   unit="mmol/m2"  > MRT_DON+MRU_DON+MIZ_DON+MSZ_DON </field >
@@ -1264,125 +1377,6 @@
        <field id="BSZ_bSi"      long_name="---"        unit="---"                    />
        <field id="BSZ_PON"      long_name="---"        unit="---"                    />
        <field id="BSZ_TRA"      long_name="---"        unit="---"                    />
-
-       <field id="ATX_NO3"      long_name="---"        unit="---"                    />
-       <field id="ATX_NH4"      long_name="---"        unit="---"                    />
-       <field id="ATX_PON"      long_name="---"        unit="---"                    />
-       <field id="ATX_DON"      long_name="---"        unit="---"                    />
-       <field id="ATX_Si"       long_name="---"        unit="---"                    />
-       <field id="ATX_bSi"      long_name="---"        unit="---"                    />
-       <field id="ATX_PHY"      long_name="---"        unit="---"                    />
-       <field id="ATX_DIAT"     long_name="---"        unit="---"                    />
-       <field id="ATX_MYRI"     long_name="---"        unit="---"                    />
-       <field id="ATX_MICZ"     long_name="---"        unit="---"                    />
-       <field id="ATX_TRA"      long_name="---"        unit="---"                    />
-       <field id="ATX_DIC"      long_name="---"        unit="---"                    />
-       <field id="ATX_TA"       long_name="---"        unit="---"                    />
-       <field id="ATX_O2"       long_name="---"        unit="---"                    />
-       <field id="ATX_PHY"      long_name="---"        unit="---"                    />
-       <field id="ATX_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > ATX_DIAT+ATX_MYRI+ATX_PHY+ATX_MICZ </field >
-
-       <field id="ATY_NO3"      long_name="---"        unit="---"                    />
-       <field id="ATY_NH4"      long_name="---"        unit="---"                    />
-       <field id="ATY_PON"      long_name="---"        unit="---"                    />
-       <field id="ATY_DON"      long_name="---"        unit="---"                    />
-       <field id="ATY_Si"       long_name="---"        unit="---"                    />
-       <field id="ATY_bSi"      long_name="---"        unit="---"                    />
-       <field id="ATY_PHY"      long_name="---"        unit="---"                    />
-       <field id="ATY_DIAT"     long_name="---"        unit="---"                    />
-       <field id="ATY_MYRI"     long_name="---"        unit="---"                    />
-       <field id="ATY_MICZ"     long_name="---"        unit="---"                    />
-       <field id="ATY_TRA"      long_name="---"        unit="---"                    />
-       <field id="ATY_DIC"      long_name="---"        unit="---"                    />
-       <field id="ATY_TA"       long_name="---"        unit="---"                    />
-       <field id="ATY_O2"       long_name="---"        unit="---"                    />
-       <field id="ATY_PHY"      long_name="---"        unit="---"                    />
-       <field id="ATY_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > ATY_DIAT+ATY_MYRI+ATY_PHY+ATY_MICZ </field >
-
-       <field id="ATZ_NO3"      long_name="---"        unit="---"                    />
-       <field id="ATZ_NH4"      long_name="---"        unit="---"                    />
-       <field id="ATZ_PON"      long_name="---"        unit="---"                    />
-       <field id="ATZ_DON"      long_name="---"        unit="---"                    />
-       <field id="ATZ_Si"       long_name="---"        unit="---"                    />
-       <field id="ATZ_bSi"      long_name="---"        unit="---"                    />
-       <field id="ATZ_PHY"      long_name="---"        unit="---"                    />
-       <field id="ATZ_DIAT"     long_name="---"        unit="---"                    />
-       <field id="ATZ_MYRI"     long_name="---"        unit="---"                    />
-       <field id="ATZ_MICZ"     long_name="---"        unit="---"                    />
-       <field id="ATZ_TRA"      long_name="---"        unit="---"                    />
-       <field id="ATZ_DIC"      long_name="---"        unit="---"                    />
-       <field id="ATZ_TA"       long_name="---"        unit="---"                    />
-       <field id="ATZ_O2"       long_name="---"        unit="---"                    />
-       <field id="ATZ_PHY"      long_name="---"        unit="---"                    />
-       <field id="ATZ_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > ATZ_DIAT+ATZ_MYRI+ATZ_PHY+ATZ_MICZ </field >
-
-       <field id="DTX_NO3"      long_name="---"        unit="---"                    />
-       <field id="DTX_NH4"      long_name="---"        unit="---"                    />
-       <field id="DTX_PON"      long_name="---"        unit="---"                    />
-       <field id="DTX_DON"      long_name="---"        unit="---"                    />
-       <field id="DTX_Si"       long_name="---"        unit="---"                    />
-       <field id="DTX_bSi"      long_name="---"        unit="---"                    />
-       <field id="DTX_PHY"      long_name="---"        unit="---"                    />
-       <field id="DTX_DIAT"     long_name="---"        unit="---"                    />
-       <field id="DTX_MYRI"     long_name="---"        unit="---"                    />
-       <field id="DTX_MICZ"     long_name="---"        unit="---"                    />
-       <field id="DTX_TRA"      long_name="---"        unit="---"                    />
-       <field id="DTX_DIC"      long_name="---"        unit="---"                    />
-       <field id="DTX_TA"       long_name="---"        unit="---"                    />
-       <field id="DTX_O2"       long_name="---"        unit="---"                    />
-       <field id="DTX_PHY"      long_name="---"        unit="---"                    />
-       <field id="DTX_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > DTX_DIAT+DTX_MYRI+DTX_PHY+DTX_MICZ </field >
-
-       <field id="DTY_NO3"      long_name="---"        unit="---"                    />
-       <field id="DTY_NH4"      long_name="---"        unit="---"                    />
-       <field id="DTY_PON"      long_name="---"        unit="---"                    />
-       <field id="DTY_DON"      long_name="---"        unit="---"                    />
-       <field id="DTY_Si"       long_name="---"        unit="---"                    />
-       <field id="DTY_bSi"      long_name="---"        unit="---"                    />
-       <field id="DTY_PHY"      long_name="---"        unit="---"                    />
-       <field id="DTY_DIAT"     long_name="---"        unit="---"                    />
-       <field id="DTY_MYRI"     long_name="---"        unit="---"                    />
-       <field id="DTY_MICZ"     long_name="---"        unit="---"                    />
-       <field id="DTY_TRA"      long_name="---"        unit="---"                    />
-       <field id="DTY_DIC"      long_name="---"        unit="---"                    />
-       <field id="DTY_TA"       long_name="---"        unit="---"                    />
-       <field id="DTY_O2"       long_name="---"        unit="---"                    />
-       <field id="DTY_PHY"      long_name="---"        unit="---"                    />
-       <field id="DTY_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > DTY_DIAT+DTY_MYRI+DTY_PHY+DTY_MICZ </field >
-
-       <field id="VMIXNO3"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXNH4"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXPON"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXDON"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXSi"       long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXbSi"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXPHY"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXDIAT"     long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXMYRI"     long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXMICZ"     long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXTRA"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXDIC"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXTA"       long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXO2"       long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXPHY"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXLIV"      long_name="upward flux due to vert mixing with horiz comp"   unit="mmol/m2"  > VMIXDIAT+VMIXMYRI+VMIXPHY+VMIXMICZ </field >
-
-       <field id="WLDFNO3"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
-       <field id="WLDFNH4"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
-       <field id="WLDFPON"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
-       <field id="WLDFDON"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
-       <field id="WLDFSi"       long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
-       <field id="WLDFbSi"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
-       <field id="WLDFPHY"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
-       <field id="WLDFDIAT"     long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
-       <field id="WLDFMYRI"     long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
-       <field id="WLDFMICZ"     long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
-       <field id="WLDFTRA"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
-       <field id="WLDFDIC"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
-       <field id="WLDFTA"       long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
-       <field id="WLDFO2"       long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
-       <field id="WLDFPHY"      long_name="vert component of sloping lateral mix"        unit="mmol N/m2/s"    />
-       <field id="WLDFLIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > WLDFDIAT+WLDFMYRI+WLDFPHY+WLDFMICZ </field >
 
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
        <field id="EPN100"      long_name="Particulate number flux at 100 m"        unit="mol/m2/s"                        />
