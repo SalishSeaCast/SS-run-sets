@@ -158,5 +158,6 @@
    ln_trdtrc(7)  =   .true.
    ln_trdtrc(8)  =   .true.
    ln_trdtrc(9)  =   .true.
-   ln_trdtrc(10)  =   .true.
+   ln_trdtrc(10) =   .true.
 /
+
