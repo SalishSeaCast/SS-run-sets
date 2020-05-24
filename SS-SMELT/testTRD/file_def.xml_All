@@ -35,19 +35,8 @@
           <field field_ref="BFX_PON"    />
           <field field_ref="BFX_DIAT"    />
           <field field_ref="SMS_DON"        />
-        </file>
-        <file id="file4" name_suffix="_graz_T" description="diagnostics" >
-          <field field_ref="MRU_MYRI"       />
-          <field field_ref="MSZ_DIAT"       />
-          <field field_ref="MSZ_MYRI"       />
-          <field field_ref="MSZ_PHY"       />
-          <field field_ref="MSZ_MICZ"       />
-          <field field_ref="MSZ_PON"       />
-          <field field_ref="MIZ_DIAT"       />
-          <field field_ref="MIZ_MYRI"       />
-          <field field_ref="MIZ_PHY"       />
-          <field field_ref="MIZ_MICZ"       />
-          <field field_ref="MIZ_PON"       />
+          <field field_ref="SMS_PON"        />
+          <field field_ref="SMS_NH4"        />
         </file>
         <file id="file5" name_suffix="_Sutil_V" description="N transports" >
           <field field_ref="ATY_NO3"        grid_ref="Sutil_grid"/>
