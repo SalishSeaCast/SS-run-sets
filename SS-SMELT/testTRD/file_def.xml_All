@@ -14,7 +14,6 @@
       <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."/> <!-- 6h files -->
       <file_group id="1d" output_freq="1d"  output_level="10" split_freq="5d" enabled=".TRUE."> <!-- 1d files -->
         <file id="file1" name_suffix="_dian_T" description="diagnostics" >
-          <field field_ref="PHYSTRNO3"      />
           <field field_ref="NO3RAD"        />
           <field field_ref="RIV_NO3"       />
           <field field_ref="RIV_NH4"       />
