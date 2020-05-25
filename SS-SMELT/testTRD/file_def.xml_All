@@ -34,7 +34,7 @@
           <field field_ref="BFX_PON"    />
           <field field_ref="BFX_DIAT"    />
         </file>
-        <file id="file3" name_suffix="_dia1_T" description="diagnostics" >
+        <file id="file3" name_suffix="_dia2_T" description="diagnostics" >
           <field field_ref="PHS_NO3"    />
           <field field_ref="PHS_NH4"    />
           <field field_ref="PHS_DON"    />
@@ -148,10 +148,17 @@
           <field field_ref="BSZ_PON"       grid_ref="layer6m_grid"/>
           <field field_ref="VMIXNO3H"       grid_ref="layer6m_grid"/>
         </file>
+        <file id="file22" name_suffix="_snp_T" description="diagnostics" >
+          <field field_ref="NO3_E3TSNAP"    />
+          <field field_ref="NH4_E3TSNAP"   />
+          <field field_ref="PON_E3TSNAP"    />
+          <field field_ref="DON_E3TSNAP"   />
+          <field field_ref="LIV_E3TSNAP"   />
+        </file>
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
       <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE.">  <!-- 5d files -->
-        <file id="file1" name_suffix="_snp_T" description="diagnostics" >
+        <file id="file23" name_suffix="_snp_T" description="diagnostics" >
           <field field_ref="NO3_E3TSNAP"    />
           <field field_ref="NH4_E3TSNAP"   />
           <field field_ref="PON_E3TSNAP"    />
