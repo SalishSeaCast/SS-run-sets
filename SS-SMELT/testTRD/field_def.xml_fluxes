@@ -1215,6 +1215,8 @@
        <field id="RDB_TRA"      long_name="---"        unit="---"                        />
        <field id="RDN_TRA"      long_name="---"        unit="---"                        />
 
+       <field id="SMS_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > SMS_DIAT+SMS_MYRI+SMS_PHY+SMS_MICZ </field >
+
        <field id="XAD_DIC"      long_name="---"        unit="---"                        />
        <field id="YAD_DIC"      long_name="---"        unit="---"                        />
        <field id="ZAD_DIC"      long_name="---"        unit="---"                        />
@@ -1288,6 +1290,23 @@
        <field id="RIV_O2"       long_name="---"        unit="---"                    />
        <field id="RIV_PHY"      long_name="---"        unit="---"                    />
        <field id="RIV_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > RIV_DIAT+RIV_MYRI+RIV_PHY+RIV_MICZ </field >
+
+       <field id="PHS_NO3"      long_name="---"        unit="---"                    />
+       <field id="PHS_NH4"      long_name="---"        unit="---"                    />
+       <field id="PHS_PON"      long_name="---"        unit="---"                    />
+       <field id="PHS_DON"      long_name="---"        unit="---"                    />
+       <field id="PHS_Si"       long_name="---"        unit="---"                    />
+       <field id="PHS_bSi"      long_name="---"        unit="---"                    />
+       <field id="PHS_PHY"      long_name="---"        unit="---"                    />
+       <field id="PHS_DIAT"     long_name="---"        unit="---"                    />
+       <field id="PHS_MYRI"     long_name="---"        unit="---"                    />
+       <field id="PHS_MICZ"     long_name="---"        unit="---"                    />
+       <field id="PHS_TRA"      long_name="---"        unit="---"                    />
+       <field id="PHS_DIC"      long_name="---"        unit="---"                    />
+       <field id="PHS_TA"       long_name="---"        unit="---"                    />
+       <field id="PHS_O2"       long_name="---"        unit="---"                    />
+       <field id="PHS_PHY"      long_name="---"        unit="---"                    />
+       <field id="PHS_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > PHS_DIAT+PHS_MYRI+PHS_PHY+PHS_MICZ </field >
 
        <field id="WAS_NH4"      long_name="grazing, mort to NH4"   unit="mmol/m2"  > MRT_NH4+MRU_NH4+MIZ_NH4+MSZ_NH4 </field >
        <field id="WAS_PON"      long_name="grazing, mort to PON"   unit="mmol/m2"  > MRT_PON+MRU_PON+MIZ_PON+MSZ_PON </field >

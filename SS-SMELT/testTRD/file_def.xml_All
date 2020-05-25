@@ -13,10 +13,9 @@
       <file_group id="4h" output_freq="4h"  output_level="10" enabled=".FALSE."/> <!-- 4h files -->
       <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."/> <!-- 6h files -->
       <file_group id="1d" output_freq="1d"  output_level="10" split_freq="5d" enabled=".TRUE."> <!-- 1d files -->
-        <file id="file2" name_suffix="_dian_T" description="diagnostics" >
+        <file id="file1" name_suffix="_dian_T" description="diagnostics" >
           <field field_ref="PHYSTRNO3"      />
           <field field_ref="NO3RAD"        />
-          <field field_ref="SMS_NO3"        />
           <field field_ref="RIV_NO3"       />
           <field field_ref="RIV_NH4"       />
           <field field_ref="REM_NO3"       />
@@ -26,7 +25,7 @@
           <field field_ref="PRD_NH4"       />
           <field field_ref="REFRN"       />
         </file>
-        <file id="file3" name_suffix="_dia1_T" description="diagnostics" >
+        <file id="file2" name_suffix="_dia1_T" description="diagnostics" >
           <field field_ref="ATF_NO3"    />
           <field field_ref="ATF_NH4"    />
           <field field_ref="ATF_DON"    />
@@ -34,9 +33,18 @@
           <field field_ref="ATF_LIV"    />
           <field field_ref="BFX_PON"    />
           <field field_ref="BFX_DIAT"    />
+        </file>
+        <file id="file3" name_suffix="_dia1_T" description="diagnostics" >
+          <field field_ref="PHS_NO3"    />
+          <field field_ref="PHS_NH4"    />
+          <field field_ref="PHS_DON"    />
+          <field field_ref="PHS_PON"    />
+          <field field_ref="PHS_LIV"    />
+          <field field_ref="SMS_NO3"        />
+          <field field_ref="SMS_NH4"        />
           <field field_ref="SMS_DON"        />
           <field field_ref="SMS_PON"        />
-          <field field_ref="SMS_NH4"        />
+          <field field_ref="SMS_LIV"    />
         </file>
         <file id="file5" name_suffix="_Sutil_V" description="N transports" >
           <field field_ref="ATY_NO3"        grid_ref="Sutil_grid"/>
