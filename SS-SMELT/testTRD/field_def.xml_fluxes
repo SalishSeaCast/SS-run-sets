@@ -767,41 +767,41 @@
        <field id="TRA_E3T"      long_name="TRA * E3T"                               unit="NTU m"  > TRA * e3t </field >
        <field id="PON"          long_name="Particulate Organic N Concentration" standard_name="mole_concentration_of_particulate_organic_matter_expressed_as_nitrogen_in_sea_water" unit="mmol m-3" />
        <field id="PON_E3T"      long_name="PON * E3T"                                unit="mmol/m2"  > PON * e3t </field >
-       <field id="PON_E3TSNAP"      long_name="PON * E3T"     operation="instant"        unit="mmol/m2"  > PON * e3t </field >
+       <field id="PON_E3TSNAP"  long_name="PON * E3T"     operation="instant"        unit="mmol/m2"  > PON * e3t </field >
        <field id="Si"           long_name="Silicon Concentration"               standard_name="mole_concentration_of_silicate_in_sea_water"                                         unit="mmol m-3" />
        <field id="Si_E3T"       long_name="Si * E3T"                                 unit="mmol/m2"  > Si * e3t </field >
-       <field id="Si_E3TSNAP"      long_name="Si * E3T"     operation="instant"        unit="mmol/m2"  > Si * e3t </field >
+       <field id="Si_E3TSNAP"   long_name="Si * E3T"     operation="instant"         unit="mmol/m2"  > Si * e3t </field >
        <field id="PHY"          long_name="Flagellates Concentration"           standard_name="mole_concentration_of_flagellates_expressed_as_nitrogen_in_sea_water"                unit="mmol m-3" />
        <field id="PHY_E3T"      long_name="PHY * E3T"                                unit="mmol/m2"  > PHY * e3t </field >
-       <field id="PHY_E3TSNAP"      long_name="PHY * E3T"     operation="instant"        unit="mmol/m2"  > PHY * e3t </field >
+       <field id="PHY_E3TSNAP"  long_name="PHY * E3T"     operation="instant"        unit="mmol/m2"  > PHY * e3t </field >
        <field id="MICZ"         long_name="Microzooplankton Concentration"      standard_name="mole_concentration_of_microzooplankton_expressed_as_nitrogen_in_sea_water"           unit="mmol m-3" />
-       <field id="MICZ_E3TSNAP"      long_name="MICZ * E3T"     operation="instant"        unit="mmol/m2"  > MICZ * e3t </field >
        <field id="MICZ_E3T"     long_name="MICZ * E3T"                               unit="mmol/m2"  > MICZ * e3t </field >
+       <field id="MICZ_E3TSNAP" long_name="MICZ * E3T"     operation="instant"       unit="mmol/m2"  > MICZ * e3t </field >
        <field id="DON"          long_name="Dissolved Organic N Concentration"   standard_name="mole_concentration_of_organic_detritus_expressed_as_nitrogen_in_sea_water"           unit="mmol m-3" />
        <field id="DON_E3T"      long_name="DON * E3T"                                unit="mmol/m2"  > DON * e3t </field >
-       <field id="DON_E3TSNAP"      long_name="DON * E3T"     operation="instant"        unit="mmol/m2"  > DON * e3t </field >
+       <field id="DON_E3TSNAP"  long_name="DON * E3T"     operation="instant"        unit="mmol/m2"  > DON * e3t </field >
        <field id="DIAT"         long_name="Diatoms Concentration"               standard_name="mole_concentration_of_diatoms_expressed_as_nitrogen_in_sea_water"                    unit="mmol m-3" />
        <field id="DIAT_E3T"     long_name="DIAT * E3T"                               unit="mmol/m2"  > DIAT * e3t </field >
-       <field id="DIAT_E3TSNAP"      long_name="DIAT * E3T"     operation="instant"        unit="mmol/m2"  > DIAT * e3t </field >
+       <field id="DIAT_E3TSNAP" long_name="DIAT * E3T"     operation="instant"       unit="mmol/m2"  > DIAT * e3t </field >
        <field id="MYRI"         long_name="Mesodinium rubrum Concentration"     standard_name="mole_concentration_of_mesodinium_rubrum_expressed_as_nitrogen_in_sea_water"          unit="mmol m-3" />
        <field id="MYRI_E3T"     long_name="MYRI * E3T"                               unit="mmol/m2"  > MYRI * e3t </field >
-       <field id="MYRI_E3TSNAP"      long_name="MYRI * E3T"     operation="instant"        unit="mmol/m2"  > MYRI * e3t </field >
+       <field id="MYRI_E3TSNAP" long_name="MYRI * E3T"     operation="instant"       unit="mmol/m2"  > MYRI * e3t </field >
        <field id="bSi"          long_name="Biogenic Silicon Concentration"      standard_name="mole_concentration_of_organic_detritus_expressed_as_silicon_in_sea_water"            unit="mmol m-3" />
        <field id="bSi_E3T"      long_name="bsi * E3T"                                unit="mmol/m2"  > bSi * e3t </field >
-       <field id="bSi_E3TSNAP"      long_name="bSi * E3T"     operation="instant"        unit="mmol/m2"  > bSi * e3t </field >
+       <field id="bSi_E3TSNAP"  long_name="bSi * E3T"     operation="instant"        unit="mmol/m2"  > bSi * e3t </field >
        <field id="NO3"          long_name="Nitrate Concentration"               standard_name="mole_concentration_of_nitrate_in_sea_water"   unit="mmol m-3" />
        <field id="NO3_E3T"      long_name="NO3 * E3T"                                unit="mmol/m2"  > NO3 * e3t </field >
-       <field id="NO3_E3TSNAP"      long_name="NO3 * E3T"     operation="instant"        unit="mmol/m2"  > NO3 * e3t </field >
+       <field id="NO3_E3TSNAP"  long_name="NO3 * E3T"     operation="instant"        unit="mmol/m2"  > NO3 * e3t </field >
        <field id="NH4"          long_name="Ammonium Concentration"              standard_name="mole_concentration_of_ammonium_in_sea_water"  unit="mmol m-3" />
        <field id="NH4_E3T"      long_name="NH4 * E3T"                                unit="mmol/m2"  > NH4 * e3t </field >
-       <field id="NH4_E3TSNAP"      long_name="NH4 * E3T"     operation="instant"        unit="mmol/m2"  > NH4 * e3t </field >
+       <field id="NH4_E3TSNAP"  long_name="NH4 * E3T"     operation="instant"        unit="mmol/m2"  > NH4 * e3t </field >
        <field id="DIC"          long_name="Dissolved Inorganic C Concentration" standard_name="mole_concentration_of_dissolved_inorganic_carbon_in_sea_water"   unit="mmol m-3" />
        <field id="DIC_E3T"      long_name="DIC * E3T"                                unit="mmol/m2"  > DIC * e3t </field >
-       <field id="TA"          long_name="Total Alkalinity Concentration"              standard_name="sea_water_alkalinity_expressed_as_mole_equivalent"  unit="mmol m-3" />
-       <field id="TA_E3T"      long_name="TA * E3T"                                unit="mmol/m2"  > TA * e3t </field >
-       <field id="O2"          long_name="Dissolved Oxygen Concentration"              standard_name="dissolved_oxygen_expressed_as_mole_equivalent"  unit="mmol m-3" />
-       <field id="O2_E3T"      long_name="O2 * E3T"                                unit="mmol/m2"  > O2 * e3t </field >
-       <field id="LIV_E3TSNAP"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > DIAT_E3T+MYRI_E3T+PHY_E3T+MICZ_E3T </field >
+       <field id="TA"           long_name="Total Alkalinity Concentration"              standard_name="sea_water_alkalinity_expressed_as_mole_equivalent"  unit="mmol m-3" />
+       <field id="TA_E3T"       long_name="TA * E3T"                                unit="mmol/m2"  > TA * e3t </field >
+       <field id="O2"           long_name="Dissolved Oxygen Concentration"              standard_name="dissolved_oxygen_expressed_as_mole_equivalent"  unit="mmol m-3" />
+       <field id="O2_E3T"       long_name="O2 * E3T"                                unit="mmol/m2"  > O2 * e3t </field >
+       <field id="LIV_E3TSNAP"  long_name="DIAT+MYRI+PHY+MICZ" operation="instant"  unit="mmol/m2"  > DIAT_E3T+MYRI_E3T+PHY_E3T+MICZ_E3T </field >
 
        <!-- SKOG outputs -->
        <field id="f_ph"        long_name="f_ph"         standard_name="f_ph"  unit="fill" grid_ref="grid_T_2D" />

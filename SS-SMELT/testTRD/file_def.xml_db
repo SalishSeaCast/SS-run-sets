@@ -46,6 +46,17 @@
           <field field_ref="SMS_PHY"    />
           <field field_ref="SMS_MICZ"    />
         </file>
+        <file id="file22" name_suffix="_snp_T" description="diagnostics" >
+          <field field_ref="NO3_E3TSNAP"    />
+          <field field_ref="NH4_E3TSNAP"   />
+          <field field_ref="PON_E3TSNAP"    />
+          <field field_ref="DON_E3TSNAP"   />
+          <field field_ref="LIV_E3TSNAP"   />
+          <field field_ref="DIAT_E3TSNAP"   />
+          <field field_ref="MYRI_E3TSNAP"   />
+          <field field_ref="PHY_E3TSNAP"   />
+          <field field_ref="MICZ_E3TSNAP"   />
+        </file>
         <file id="file5" name_suffix="_Sutil_V" description="N transports" >
           <field field_ref="ATY_NO3"        grid_ref="Sutil_grid"/>
           <field field_ref="ATY_NH4"        grid_ref="Sutil_grid"/>
@@ -148,28 +159,9 @@
           <field field_ref="BSZ_PON"       grid_ref="layer6m_grid"/>
           <field field_ref="VMIXNO3H"       grid_ref="layer6m_grid"/>
         </file>
-        <file id="file22" name_suffix="_snp_T" description="diagnostics" >
-          <field field_ref="NO3_E3TSNAP"    />
-          <field field_ref="NH4_E3TSNAP"   />
-          <field field_ref="PON_E3TSNAP"    />
-          <field field_ref="DON_E3TSNAP"   />
-          <field field_ref="LIV_E3TSNAP"   />
-          <field field_ref="DIAT_E3TSNAP"   />
-          <field field_ref="MRYI_E3TSNAP"   />
-          <field field_ref="PHY_E3TSNAP"   />
-          <field field_ref="MICZ_E3TSNAP"   />
-        </file>
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
-      <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE.">  <!-- 5d files -->
-        <file id="file23" name_suffix="_snp_T" description="diagnostics" >
-          <field field_ref="NO3_E3TSNAP"    />
-          <field field_ref="NH4_E3TSNAP"   />
-          <field field_ref="PON_E3TSNAP"    />
-          <field field_ref="DON_E3TSNAP"   />
-          <field field_ref="LIV_E3TSNAP"   />
-        </file>
-      </file_group>
+      <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE."/>  <!-- 5d files -->
       <file_group id="1m" output_freq="1mo" output_level="10" enabled=".TRUE."/> <!-- real monthly files -->
       <file_group id="2m" output_freq="2mo" output_level="10" enabled=".TRUE."/> <!-- real 2m files -->
       <file_group id="3m" output_freq="3mo" output_level="10" enabled=".TRUE."/> <!-- real 3m files -->
