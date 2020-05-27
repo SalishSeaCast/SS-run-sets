@@ -45,6 +45,18 @@
           <field field_ref="SMS_PON"        />
           <field field_ref="SMS_LIV"    />
         </file>
+        <file id="file4" name_suffix="_rad_T" description="diagnostics" >
+          <field field_ref="RDB_NO3"    />
+          <field field_ref="RDB_NH4"    />
+          <field field_ref="RDB_DON"    />
+          <field field_ref="RDB_PON"    />
+          <field field_ref="RDB_LIV"    />
+          <field field_ref="RDN_NO3"        />
+          <field field_ref="RDN_NH4"        />
+          <field field_ref="RDN_DON"        />
+          <field field_ref="RDN_PON"        />
+          <field field_ref="RDN_LIV"    />
+        </file>
         <file id="file5" name_suffix="_Sutil_V" description="N transports" >
           <field field_ref="ATY_NO3"        grid_ref="Sutil_grid"/>
           <field field_ref="ATY_NH4"        grid_ref="Sutil_grid"/>
