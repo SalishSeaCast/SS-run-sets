@@ -1215,7 +1215,14 @@
        <field id="RDB_TRA"      long_name="---"        unit="---"                        />
        <field id="RDN_TRA"      long_name="---"        unit="---"                        />
 
-       <field id="SMS_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > SMS_DIAT+SMS_MYRI+SMS_PHY+SMS_MICZ </field >
+       <field id="XAD_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/s"  > XAD_DIAT+XAD_MYRI+XAD_PHY+XAD_MICZ </field >
+       <field id="YAD_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/s"  > YAD_DIAT+YAD_MYRI+YAD_PHY+YAD_MICZ </field >
+       <field id="ZAD_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/s"  > ZAD_DIAT+ZAD_MYRI+ZAD_PHY+ZAD_MICZ </field >
+       <field id="LDF_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/s"  > LDF_DIAT+ZAD_MYRI+LDF_PHY+LDF_MICZ </field >
+       <field id="SMS_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/s"  > SMS_DIAT+SMS_MYRI+SMS_PHY+SMS_MICZ </field >
+       <field id="ATF_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/s"  > ATF_DIAT+ATF_MYRI+ATF_PHY+ATF_MICZ </field >
+       <field id="RDB_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/s"  > RDB_DIAT+RDB_MYRI+RDB_PHY+RDB_MICZ </field >
+       <field id="RDN_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/s"  > RDN_DIAT+RDN_MYRI+RDN_PHY+RDN_MICZ </field >
 
        <field id="XAD_DIC"      long_name="---"        unit="---"                        />
        <field id="YAD_DIC"      long_name="---"        unit="---"                        />
@@ -1255,8 +1262,6 @@
        <field id="ATF_O2"      long_name="---"        unit="---"                        />
        <field id="RDB_O2"      long_name="---"        unit="---"                        />
        <field id="RDN_O2"      long_name="---"        unit="---"                        />
-
-       <field id="ATF_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > ATF_DIAT+ATF_MYRI+ATF_PHY+ATF_MICZ </field >
 
        <field id="REM_NO3"      long_name="---"        unit="---"                    />
        <field id="REM_NH4"      long_name="---"        unit="---"                    />
