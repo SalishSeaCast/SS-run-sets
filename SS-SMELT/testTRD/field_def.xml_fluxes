@@ -1263,6 +1263,22 @@
        <field id="RDB_O2"      long_name="---"        unit="---"                        />
        <field id="RDN_O2"      long_name="---"        unit="---"                        />
 
+       <field id="TBS_NO3"      long_name="---"        unit="---"                    />
+       <field id="TBS_NH4"      long_name="---"        unit="---"                    />
+       <field id="TBS_PON"      long_name="---"        unit="---"                    />
+       <field id="TBS_DON"      long_name="---"        unit="---"                    />
+       <field id="TBS_Si"       long_name="---"        unit="---"                    />
+       <field id="TBS_bSi"      long_name="---"        unit="---"                    />
+       <field id="TBS_PHY"      long_name="---"        unit="---"                    />
+       <field id="TBS_DIAT"     long_name="---"        unit="---"                    />
+       <field id="TBS_MYRI"     long_name="---"        unit="---"                    />
+       <field id="TBS_MICZ"     long_name="---"        unit="---"                    />
+       <field id="TBS_TRA"      long_name="---"        unit="---"                    />
+       <field id="TBS_DIC"      long_name="---"        unit="---"                    />
+       <field id="TBS_TA"       long_name="---"        unit="---"                    />
+       <field id="TBS_O2"       long_name="---"        unit="---"                    />
+       <field id="TBS_PHY"      long_name="---"        unit="---"                    />
+
        <field id="REM_NO3"      long_name="---"        unit="---"                    />
        <field id="REM_NH4"      long_name="---"        unit="---"                    />
        <field id="REM_PON"      long_name="---"        unit="---"                    />
