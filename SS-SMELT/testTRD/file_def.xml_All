@@ -22,7 +22,9 @@
           <field field_ref="REM_DON"       />
           <field field_ref="PRD_NO3"       />
           <field field_ref="PRD_NH4"       />
-          <field field_ref="REFRN"       />
+          <field field_ref="REFRN"         />
+          <field field_ref="BSZ_DIAT"      />
+          <field field_ref="BSZ_PON"       />
         </file>
         <file id="file2" name_suffix="_dia1_T" description="diagnostics" >
           <field field_ref="ATF_NO3"    />
