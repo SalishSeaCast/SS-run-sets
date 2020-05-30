@@ -2,7 +2,7 @@ run_id: shortTest
 config_name: SMELT
 account: rrg-allen
 email: eolson@eoas.ubc.ca
-MPI decomposition: 16x41
+MPI decomposition: 18x31
 walltime: 2:00:00
 
 forcing:
