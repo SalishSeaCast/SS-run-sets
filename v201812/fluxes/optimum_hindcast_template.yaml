@@ -1,9 +1,9 @@
 # salishsea command processor run description file template for
-# SalishSeaCast automation hindcast SMELT+SKOG runs on optimum
+# SalishSeaCast automation hindcast SMELT runs on optimum
 
 email: sallen@eoas.ubc.ca
 MPI decomposition: 16x34
-config_name: SalishSeaCast
+config_name: SMELT
 run_id: ddmmmyyhindcast
 walltime: 12:00:00
 
@@ -59,20 +59,16 @@ namelists:
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist.vertical
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist.compute
   namelist_smelt_cfg:
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist_smelt_biology
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/fluxes/namelist_smelt_rivers
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist_smelt_skog
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/fluxes/namelist_smelt_cfg
   namelist_top_cfg:
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist_top_restart
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist_top_TracerDefAndBdy
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/namelist_top_physics
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/fluxes/namelist_top_cfg
   
 output:
   XIOS servers: 1
-  domaindefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/domain_def.xml
-  fielddefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/field_def.xml
+  domaindefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/fluxes/domain_def.xml_fluxes
+  fielddefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/fluxes/field_def.xml_fluxes
   filedefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/fluxes/file_def.xml
-  iodefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/iodef.xml
+  iodefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201812/fluxes/iodef.xml_fluxes
   separate XIOS server: true
 
 vcs revisions:
@@ -86,5 +82,4 @@ vcs revisions:
   - $PROJECT/SalishSeaCast/hindcast-sys/tides
   - $PROJECT/SalishSeaCast/hindcast-sys/tracers
   - $PROJECT/SalishSeaCast/hindcast-sys/XIOS-ARCH
-  hg:
   - $PROJECT/SalishSeaCast/hindcast-sys/XIOS-2
