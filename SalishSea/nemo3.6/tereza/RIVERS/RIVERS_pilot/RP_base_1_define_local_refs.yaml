@@ -42,11 +42,11 @@ grid:
 
 namelists:
   namelist_ref:
-  - ./namelist_ref
+  - $PROJECT/tjarnik/MEOPAR//NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaCast/EXP00/namelist_ref
   namelist_top_ref:
-  - ./namelist_top_ref
+  - $PROJECT/tjarnik/MEOPAR//NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaCast/EXP00/namelist_top_ref
   namelist_smelt_ref:
-  - ./namelist_smelt_ref
+  - $PROJECT/tjarnik/MEOPAR//NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaCast/EXP00/namelist_smelt_ref
       
   namelist_cfg:
   - ./namelist.time3_1
@@ -66,13 +66,13 @@ namelists:
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_physics
 
   namelist_smelt_cfg:
-  - ./namelist_smelt_cfg_HC201812equiv
+  - $PROJECT/tjarnik/MEOPAR//NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaCast/EXP00/namelist_smelt_cfg_HC201812equiv
 
 output:
   XIOS servers: 1
   filedefs: ./file_def.xml
   domaindefs: ./domain_def.xml
-  fielddefs: ./field_def.xml
+  fielddefs: $PROJECT/tjarnik/MEOPAR//NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaCast/EXP00/field_def.xml
   iodefs: ./iodef.xml
   separate XIOS server: true
 
