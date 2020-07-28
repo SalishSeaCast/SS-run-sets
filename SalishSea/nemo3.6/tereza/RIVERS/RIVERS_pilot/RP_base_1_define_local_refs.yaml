@@ -41,6 +41,13 @@ grid:
 
 
 namelists:
+  namelist_ref:
+  - ./namelist_ref
+  namelist_top_ref:
+  - ./namelist_top_ref
+  namelist_smelt_ref:
+  - ./namelist_smelt_ref
+      
   namelist_cfg:
   - ./namelist.time3_1
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
