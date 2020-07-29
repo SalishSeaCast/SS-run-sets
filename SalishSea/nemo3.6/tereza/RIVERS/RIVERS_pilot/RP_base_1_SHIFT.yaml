@@ -1,4 +1,4 @@
-run_id: RP_base_2
+run_id: RP_base_1_SHIFT
 config_name: SalishSeaCast
 account: rrg-allen
 email: tjarnik@gmail.com
@@ -17,7 +17,7 @@ forcing:
   grid:
     link to: $PROJECT/tjarnik/MEOPAR/grid
   rivers:
-    link to: $PROJECT/tjarnik/MEOPAR/RIVERS_files/daily_R201702/
+    link to: $PROJECT/tjarnik/MEOPAR/RIVERS_files/daily_45Dearly/
   rivers-climatology:
     link to: $PROJECT/tjarnik/MEOPAR/rivers-climatology
   river_turb:                                              
@@ -30,8 +30,8 @@ forcing:
     link to: $PROJECT/tjarnik/MEOPAR/tracers
 
 restart:
-  restart.nc: /scratch/tjarnik/RIV_PIL/01jan17/SalishSea_02538000_restart.nc
-  restart_trc.nc: /scratch/tjarnik/RIV_PIL/01jan17/SalishSea_02538000_restart_trc.nc
+  restart.nc: /scratch/tjarnik/RIV_PIL/v201812restarts/SalishSea_02473200_restart.nc
+  restart_trc.nc: /scratch/tjarnik/RIV_PIL/v201812restarts/SalishSea_02473200_restart_trc.nc
 
     
 grid:
@@ -49,7 +49,7 @@ namelists:
   - $PROJECT/tjarnik/MEOPAR//NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaCast/EXP00/namelist_smelt_ref
       
   namelist_cfg:
-  - ./namelist.time2
+  - ./namelist.time1
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
   - ./namelist.atmos_rivers
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
