@@ -17,7 +17,7 @@ forcing:
   grid:
     link to: $PROJECT/tjarnik/MEOPAR/grid
   rivers:
-    link to: $PROJECT/tjarnik/MEOPAR/RIVERS_files/daily_R201702/
+    link to: $PROJECT/SalishSea/forcing/rivers
   rivers-climatology:
     link to: $PROJECT/tjarnik/MEOPAR/rivers-climatology
   river_turb:                                              
