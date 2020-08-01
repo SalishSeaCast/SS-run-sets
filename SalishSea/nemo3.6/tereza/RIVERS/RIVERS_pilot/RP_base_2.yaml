@@ -30,8 +30,8 @@ forcing:
     link to: $PROJECT/tjarnik/MEOPAR/tracers
 
 restart:
-  restart.nc: /scratch/tjarnik/RIV_PIL/01jan17/SalishSea_02538000_restart.nc
-  restart_trc.nc: /scratch/tjarnik/RIV_PIL/01jan17/SalishSea_02538000_restart_trc.nc
+  restart.nc: /scratch/tjarnik/RIV_PIL/01jan17/SalishSeaCast_02538000_restart.nc
+  restart_trc.nc: /scratch/tjarnik/RIV_PIL/01jan17/SalishSeaCast_02538000_restart_trc.nc
 
     
 grid:

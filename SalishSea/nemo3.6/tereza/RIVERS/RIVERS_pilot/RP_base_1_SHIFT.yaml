@@ -51,7 +51,7 @@ namelists:
   namelist_cfg:
   - ./namelist.time1
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
-  - ./namelist.atmos_rivers
+  - ./namelist.atmos_riversSHIFT
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.lateral
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.bottom
