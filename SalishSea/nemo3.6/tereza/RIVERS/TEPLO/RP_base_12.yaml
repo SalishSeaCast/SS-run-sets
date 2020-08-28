@@ -8,9 +8,9 @@ walltime: 12:00:00
 
 forcing:
   LiveOcean:
-    link to: $PROJECT/SalishSea/forcing/LiveOcean
+    link to: $PROJECT/tjarnik/MEOPAR/TEPLOFILES/LiveOcean
   NEMO-atmos:
-    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
+    link to: $PROJECT/tjarnik/MEOPAR/TEPLOFILES/operational
 
   bfr_coef.nc:
     link to: $PROJECT/tjarnik/MEOPAR/grid/jetty_mask_bathy201702.nc
@@ -30,8 +30,8 @@ forcing:
     link to: $PROJECT/tjarnik/MEOPAR/tracers
 
 restart:
-  restart.nc: /scratch/tjarnik/RIV_PIL/28oct17/SalishSeaCast_03186000_restart.nc
-  restart_trc.nc: /scratch/tjarnik/RIV_PIL/28oct17/SalishSeaCast_03186000_restart_trc.nc
+  restart.nc: /scratch/tjarnik/TEPLO/28oct17/SalishSeaCast_03186000_restart.nc
+  restart_trc.nc: /scratch/tjarnik/TEPLO/28oct17/SalishSeaCast_03186000_restart_trc.nc
 
     
 grid:
@@ -53,7 +53,7 @@ namelists:
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
   - ./namelist.atmos_rivers
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
-  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.lateral
+  - ./namelist.lateral
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.bottom
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.tracer
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.dynamics
