@@ -1,6 +1,6 @@
-run_id: RP_base_11
+run_id: RP_base_8
 config_name: SalishSeaCast
-account: def-allen
+account: rrg-allen
 email: tjarnik@gmail.com
 MPI decomposition: 16x41
 walltime: 12:00:00
@@ -30,8 +30,8 @@ forcing:
     link to: $PROJECT/tjarnik/MEOPAR/tracers
 
 restart:
-  restart.nc: /scratch/tjarnik/RIV_PIL/28sep17/SalishSeaCast_03121200_restart.nc
-  restart_trc.nc: /scratch/tjarnik/RIV_PIL/28sep17/SalishSeaCast_03121200_restart_trc.nc
+  restart.nc: /scratch/tjarnik/RIV_PIL/30jun17/SalishSeaCast_02926800_restart.nc
+  restart_trc.nc: /scratch/tjarnik/RIV_PIL/30jun17/SalishSeaCast_02926800_restart_trc.nc
 
     
 grid:
@@ -49,11 +49,11 @@ namelists:
   - $PROJECT/tjarnik/MEOPAR//NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaCast/EXP00/namelist_smelt_ref
       
   namelist_cfg:
-  - ./namelist.time11
+  - ./namelist.time8
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
   - ./namelist.atmos_rivers
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
-  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812//namelist.lateral
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.lateral
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.bottom
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.tracer
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.dynamics
