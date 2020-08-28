@@ -8,9 +8,9 @@ walltime: 12:00:00
 
 forcing:
   LiveOcean:
-    link to: $PROJECT/SalishSea/forcing/LiveOcean
+    link to: $PROJECT/tjarnik/MEOPAR/TEPLOFILES/LiveOcean
   NEMO-atmos:
-    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
+    link to: $PROJECT/tjarnik/MEOPAR/TEPLOFILES/operational
 
   bfr_coef.nc:
     link to: $PROJECT/tjarnik/MEOPAR/grid/jetty_mask_bathy201702.nc
@@ -19,7 +19,7 @@ forcing:
   rivers:
     link to: $PROJECT/tjarnik/MEOPAR/RIVERS_files/daily_R201702/
   rivers-climatology:
-    link to: $PROJECT/tjarnik/MEOPAR/TEPLOFILES
+    link to: $PROJECT/tjarnik/MEOPAR/rivers-climatology
   river_turb:                                              
     link to: $PROJECT/SalishSea/forcing/rivers/river_turb
   ssh:
@@ -30,8 +30,8 @@ forcing:
     link to: $PROJECT/tjarnik/MEOPAR/tracers
 
 restart:
-  restart.nc: /scratch/tjarnik/RIV_PIL/v201812restarts/SalishSea_02473200_restart.nc
-  restart_trc.nc: /scratch/tjarnik/RIV_PIL/v201812restarts/SalishSea_02473200_restart_trc.nc
+  restart.nc: $PROJECT/tjarnik/MEOPAR/TEPLOFILES/SalishSea_TEPLO_02473200_restart.nc
+  restart_trc.nc: $PROJECT/tjarnik/MEOPAR/TEPLOFILES/SalishSea_02473200_restart_trc.nc
 
     
 grid:

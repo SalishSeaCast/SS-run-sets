@@ -80,7 +80,7 @@
   sn_rnf      = 'rivers/R201702DFraDailyElse',                   24,                'rorunoff', .true.,        .false., 'daily',    '',        ''
   sn_cnf      = '',                                           0,                'socoefr0', .false.,       .true.,  'yearly',   '',        ''
   sn_s_rnf    = '',                                          24,                'rosaline', .false.,       .true.,  'yearly',   '',        ''
-  sn_t_rnf    = 'rivers-climatology/rivers_ConsTemp_month',  -1,                'rotemper', .true.,        .true.,  'yearly',   '',        ''
+  sn_t_rnf    = 'rivers-climatology/rivers_ConsTemp_month_plus2',  -1,                'rotemper', .true.,        .true.,  'yearly',   '',        ''
   sn_dep_rnf  = 'rivers-climatology/rivers_month_201702',    -1,                'rodepth' , .true.,        .true.,  'yearly',   '',        ''
 
   cn_dir       = './'       !  root directory for the location of the runoff files
