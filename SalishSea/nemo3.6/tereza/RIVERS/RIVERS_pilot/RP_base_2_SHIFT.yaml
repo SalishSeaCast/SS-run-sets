@@ -1,0 +1,90 @@
+run_id: RP_base_3_SHIFT
+config_name: SalishSeaCast
+account: rrg-allen
+email: tjarnik@gmail.com
+MPI decomposition: 16x41
+walltime: 12:00:00
+
+
+forcing:
+  LiveOcean:
+    link to: $PROJECT/SalishSea/forcing/LiveOcean
+  NEMO-atmos:
+    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
+
+  bfr_coef.nc:
+    link to: $PROJECT/tjarnik/MEOPAR/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: $PROJECT/tjarnik/MEOPAR/grid
+  rivers:
+    link to: $PROJECT/tjarnik/MEOPAR/RIVERS_files/daily_45Dearly
+  rivers-climatology:
+    link to: $PROJECT/tjarnik/MEOPAR/rivers-climatology
+  river_turb:                                              
+    link to: $PROJECT/SalishSea/forcing/rivers/river_turb
+  ssh:
+    link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
+  tides: 
+    link to: $PROJECT/tjarnik/MEOPAR/tides
+  tracers: 
+    link to: $PROJECT/tjarnik/MEOPAR/tracers
+
+restart:
+  restart.nc: /scratch/tjarnik/RIV_PIL/01jan17SHIFT/SalishSeaCast_02538000_restart.nc
+  restart_trc.nc: /scratch/tjarnik/RIV_PIL/01jan17SHIFT/SalishSeaCast_02538000_restart_trc.nc
+
+    
+grid:
+  bathymetry: $PROJECT/tjarnik/MEOPAR/grid/bathymetry_201702.nc
+  coordinates: $PROJECT/tjarnik/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $PROJECT/tjarnik/MEOPAR/grid/bathymetry_201702.csv
+
+
+namelists:
+  namelist_ref:
+  - $PROJECT/tjarnik/MEOPAR//NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaCast/EXP00/namelist_ref
+  namelist_top_ref:
+  - $PROJECT/tjarnik/MEOPAR//NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaCast/EXP00/namelist_top_ref
+  namelist_smelt_ref:
+  - $PROJECT/tjarnik/MEOPAR//NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaCast/EXP00/namelist_smelt_ref
+      
+  namelist_cfg:
+  - ./namelist.time2
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
+  - ./namelist.atmos_riversSHIFT
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.lateral
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.bottom
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.tracer
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.dynamics
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.vertical
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.compute
+
+  namelist_top_cfg:
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_restart
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_TracerDefAndBdy
+  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist_top_physics
+
+  namelist_smelt_cfg:
+  - $PROJECT/tjarnik/MEOPAR//NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaCast/EXP00/namelist_smelt_cfg_HC201812equiv
+
+output:
+  XIOS servers: 1
+  filedefs: ./file_def.xml
+  domaindefs: ./domain_def.xml
+  fielddefs: $PROJECT/tjarnik/MEOPAR//NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaCast/EXP00/field_def.xml
+  iodefs: ./iodef.xml
+  separate XIOS server: true
+
+paths:
+  NEMO code config: $PROJECT/tjarnik/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $PROJECT/tjarnik/MEOPAR/XIOS-2
+  runs directory: $SCRATCH
+
+  
+vcs revisions:
+  git:
+  - $PROJECT/tjarnik/MEOPAR/grid
+  - $PROJECT/tjarnik/MEOPAR/tracers
+  - $PROJECT/tjarnik/MEOPAR/rivers-climatology
+  - $PROJECT/tjarnik/MEOPAR/tides
