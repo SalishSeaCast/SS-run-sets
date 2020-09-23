@@ -92,12 +92,6 @@
                            !    = 0 (no vvl: cc_ice = zero / vvl: cc_ice = )
                            !    = 1 prescribed to a namelist value (implemented in pisces only)
 /
-!-----------------------------------------------------------------------
-&namtrc_trd       !   diagnostics on tracer trends        ('key_trdtrc')
-!----------------------------------------------------------------------
-   rn_ucf_trc  =   1          !  unit conversion factor (=1 -> /seconds ; =86400. -> /day)
-   ln_trdtrc(1)  =   .true.
-/
 !----------------------------------------------------------------------
 ! namtrc_bc       !   data for boundary conditions
 !-----------------------------------------------------------------------

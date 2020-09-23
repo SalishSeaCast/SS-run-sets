@@ -1,39 +1,17 @@
 !!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-!! SMELT+SKOG reference namelist (see below for key_pisces_reduced)
+!! PISCES  (key_pisces) reference namelist (see below for key_pisces_reduced)
 !!              1  - air-sea exchange                         (nampisext)
-!!              2  - carbon chemistry
-!!              3  - biological parameters                    (nampisbio)
+!!              2  - biological parameters                    (nampisbio)
+!!              3  - parameters for nutrient limitations      (nampislim)    
 !!              4  - parameters for phytoplankton             (nampisprod,nampismort)
 !!              5  - parameters for zooplankton               (nampismes,nampiszoo)
 !!              6  - parameters for remineralization          (nampisrem)
-!!              7 - additional 2D/3D  diagnostics             (nampisdia)
-!!              8 - Damping                                   (nampisdmp)
+!!              7  - parameters for calcite chemistry         (nampiscal)
+!!              8  - parameters for inputs deposition         (nampissed)
+!!              9  - parameters for Kriest parameterization   (nampiskrp, nampiskrs)
+!!              10 - additional 2D/3D  diagnostics            (nampisdia)
+!!              11 - Damping                                  (nampisdmp)
 !>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-&nampisext     !   air-sea exchange
-!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-   ln_co2int  =  .false. ! read atm pco2 from a file (T) or calculate (F)
-   clname     =  'atcco2.txt'  ! Name of atm pCO2 file - ln_co2int = T
-   zz_carbon_year =  -999     ! model year for calculating co2 < 0, use model year
-   zz_LR_slope   =  2.149     !  linear regression + gaussian fit 
-   zz_LR_int     =  -3929.359 !  to seasonal cycle of atmospheric co2
-   zz_ctr        =  161.898   !  based on scripps observations at ptbarrow and lajolla
-   zz_amp        =  7.083     !  calc notebook by TJSJ
-   zz_wid        =  44.703    !  notebook loc:
-   zz_ctr2       =  218.832   !  carbon_dev/MOCSY_and_FLUX/CO2_obs.ipynb
-   zz_amp2       =  -19.004   !
-   zz_wid2       =  87.8836   !
-   zz_ctr3       =  199.430   !
-   zz_amp3       =  8.026     !
-   zz_wid3       =  -185.920  !
-/
-!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-&nampiscarbon     ! Carbonate chemistry parameters (added- TJSJ, walrus)
-!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-   zz_redfield_c_n = 6.625     ! Redfield ratio carbon to nitrogen
-   zz_redfield_p_n = 0.0625    ! Redfield ratio phosphorus to nitrogen
-   zz_redfield_o_n = 9.3750    ! Redfield ratio oxygen to nitrogen
-/
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisbio     !   biological parameters
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -215,7 +193,6 @@
    zz_remin_D_DON  =  2.3e-6
    zz_remin_D_PON  =  2.3e-6
    zz_remin_D_bSi  =  3.24e-6
-   zz_bfSi         =  0.0 ! default to zero for compatibility with earlier versions
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisdia     !   additional 2D/3D tracers diagnostics 
@@ -257,9 +234,7 @@
    zz_w_sink_Pmicro_max = 1.2  ! m/d microphyto maximum sinking rate # Alain CONVERTED TO M/S ON NAMELIST READ
    zz_w_sink_D_PON = 8e-5      ! m/s PON detritus sinking rate # Jeffery quoting Dune and Bacon
    zz_w_sink_D_bSi = 8e-5      ! m/s  biogenic silicon detritus sinking rate # match NO3 particles
-   zz_alpha_b_Si = 0.8         ! fraction of bottom flux resuspended in bottom cell - bSi
-   zz_alpha_b_D = 0.8          ! fraction of bottom flux resuspended in bottom cell - diatoms: default
-                               ! to HC201812 zz_alpha_b_Si value for backward compatibility of cfg namelists
-   zz_alpha_b_N = 0.45          ! fraction of bottom flux resuspended in bottom cell - PON
-   zz_alpha_b_T = 0.75          ! fraction of bottom flux resuspended in bottom cell - turbidity
+   zz_alpha_b_Si = 0.5         ! fraction of bottom flux resuspended in bottom cell
+   zz_alpha_b_N = 0.5          ! fraction of bottom flux resuspended in bottom cell
+   zz_alpha_b_T = 0.5          ! fraction of bottom flux resuspended in bottom cell
 /

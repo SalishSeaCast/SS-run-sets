@@ -45,6 +45,10 @@
    sn_tracer(9)  = 'PON     ' , 'Small organic carbon Concentration     ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(10) = 'bSi     ' , 'biogenic Silicate Concentration        ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
    sn_tracer(11) = 'TRA     ' , 'River Tracer                           ',  'mol-C/L' ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(12) = 'DIC     ' , 'Dissolved Inorganic Carbon             ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(13) = 'TA      ' , 'Total Alkalinity                       ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(14) = 'O2      ' , 'Dissolved Oxygen                       ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(15) = 'MYTRC1  ' , '20 m upwelling tracer                  ',  '1      ' ,  .false.    , .false.  ,  .false. ,  .false.  ,  .true.
 
    ln_trcdta = .true.
    ln_trcdmp = .false.
@@ -73,6 +77,10 @@
    sn_trcobc(9) = 'tracers/west/bioOBC_West_const201812',  -12,        'PON',      .false., .true., 'yearly',   '',        '',   ''
    sn_trcobc(10) = 'tracers/west/bioOBC_West_const201812', -12,        'bSi',      .false., .true., 'yearly',   '',        '',   ''
    sn_trcobc(11) = 'tracers/west/bioOBC_West_const201812', -12,        'tur',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(12) = 'LiveOcean/LiveOcean_v201712',           24,        'DIC',      .true.,  .false.,  'daily',   '',        '',   ''
+   sn_trcobc(13) = 'LiveOcean/LiveOcean_v201712',           24,        'TA',       .true.,  .false.,  'daily',   '',        '',   ''
+   sn_trcobc(14) = 'LiveOcean/LiveOcean_v201712',           24,        'OXY',      .true.,  .false.,  'daily',   '',        '',   ''
+
    cn_dir_obc        =  './'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
    rn_trofac(2)   =  1.0  !  -      -      -     -
@@ -85,6 +93,9 @@
    rn_trofac(9)   =  1.0  !  -      -      -     -
    rn_trofac(10)  =  1.0  !  -      -      -     -
    rn_trofac(11)  =  1.0  !  -      -      -     -
+   rn_trofac(12)  =  1.0  !  -      -      -     -
+   rn_trofac(13)  =  1.0  !  -      -      -     -
+   rn_trofac(14)  =  1.0  !  -      -      -     -
 /
 !----------------------------------------------------------------------
 &nambdy_bc       !   data for BDY boundary conditions: 2nd boundary
@@ -102,6 +113,9 @@
    sn_trcobc(9)  = 'bioOBC_North_const201812',          4380,        'PON',      .true.,  .true.,  'yearly',   '',      '',   ''
    sn_trcobc(10) = 'bioOBC_North_const201812',          4380,        'bSi',      .true.,  .true.,  'yearly',   '',      '',   ''
    sn_trcobc(11) = 'bioOBC_North_const201812',          4380,        'tur',       .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(12) = 'tr_northDICTAOXY.nc',               4380,        'DIC',       .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(13) = 'tr_northDICTAOXY.nc',               4380,        'TA',       .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(14) = 'tr_northDICTAOXY.nc',               4380,        'OXY',       .true.,  .true.,  'yearly',   '',      '',   ''
 
    cn_dir_obc        =  './tracers/north/'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
@@ -115,7 +129,11 @@
    rn_trofac(9)   =  1.0  !  -      -      -     -
    rn_trofac(10)  =  1.0  !  -      -      -     -
    rn_trofac(11)  =  1.0  !  -      -      -     -
+   rn_trofac(12)  =  1.0  !  -      -      -     -
+   rn_trofac(13)  =  1.0  !  -      -      -     -
+   rn_trofac(14)  =  1.0  !  -      -      -     -
 /
+
 
 
 

@@ -52,6 +52,8 @@
           <field field_ref="SMS_DON"        />
           <field field_ref="SMS_PON"        />
           <field field_ref="SMS_LIV"    />
+          <field field_ref="SMS_Si"    />
+          <field field_ref="SMS_bSi"    />
         </file>
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
