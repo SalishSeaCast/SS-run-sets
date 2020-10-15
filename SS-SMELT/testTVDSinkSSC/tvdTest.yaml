@@ -3,8 +3,8 @@ email: eolson@eoas.ubc.ca
 account: def-allen
 MPI decomposition: 16x41
 config_name: SalishSeaCast
-run_id: 01jan15_hindcast
-walltime: 01:00:00
+run_id: testTVD_SSC
+walltime: 8:00:00
 
 forcing:
   LiveOcean:
@@ -30,8 +30,8 @@ forcing:
     link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
-  restart.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01jan15/SalishSea_00894240_restart.nc
-  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01jan15/SalishSea_00894240_restart_trc.nc
+  restart.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01apr15/SalishSea_01088640_restart.nc
+  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01apr15/SalishSea_01088640_restart_trc.nc
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
   coordinates: $MEOPAR/NEMO-forcing/grid/coordinates_seagrid_SalishSea201702.nc
@@ -43,7 +43,7 @@ namelists:
   namelist_top_cfg:
   - ./namelist_top_cfg
   namelist_smelt_cfg:
-  - ./namelist_smelt_cfg_HC201905equiv
+  - ./namelist_smelt_cfg_tvdTest
 
 output:
   XIOS servers: 1
