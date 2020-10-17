@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<simulation>
+
+ <context id="nemo">
+
+    <!--
+============================================================================================================
+=                                  definition of all existing variables                                    =
+=                                            DO NOT CHANGE                                                 =
+============================================================================================================
+    -->
+    <field_definition src="./field_def.xml"/>
+    <!--
+============================================================================================================
+=                                           output files definition                                        =
+=                                            Define your own files                                         =
+=                                         put the variables you want...                                    =
+============================================================================================================
+    -->
+    <file_definition src="./file_def.xml"/>
+    <!--
+============================================================================================================
+= grid definition = = DO NOT CHANGE =
+============================================================================================================
+    -->
+
+   <axis_definition>
+      <axis id="deptht" long_name="Vertical T levels" unit="m" positive="down" />
+      <axis id="depthu" long_name="Vertical U levels" unit="m" positive="down" />
+      <axis id="depthv" long_name="Vertical V levels" unit="m" positive="down" />
+      <axis id="depthw" long_name="Vertical W levels" unit="m" positive="down" />
+      <axis id="nfloat" long_name="Float number"      unit="-" />
+      <axis id="icbcla" long_name="Iceberg class"     unit="-" />
+      <!-- Surface Slab -->
+      <axis id="nearsurface_U" long_name="Top 5 U levels" axis_ref="depthu"> <zoom_axis begin="0" n="5" /> </axis>
+      <axis id="nearsurface_V" long_name="Top 5 V levels" axis_ref="depthv"> <zoom_axis begin="0" n="5" /> </axis>
+      <!-- Surface Slab -->
+      <axis id="deptht_20m" long_name="Top 20 T levels" axis_ref="deptht"> <zoom_axis begin="0" n="27" /> </axis>
+   </axis_definition>
+
+   <domain_definition src="./domain_def.xml"/>
+
+   <grid_definition>
+     <grid id="grid_T_2D"> <domain domain_ref="grid_T" />                      </grid>
+     <grid id="grid_U_2D"> <domain domain_ref="grid_U" />                      </grid>
+     <grid id="grid_V_2D"> <domain domain_ref="grid_V" />                      </grid>
+     <grid id="grid_W_2D"> <domain domain_ref="grid_W" />                      </grid>
+     <grid id="grid_T_3D"> <domain domain_ref="grid_T" /> <axis id="deptht" /> </grid>
+     <grid id="grid_U_3D"> <domain domain_ref="grid_U" /> <axis id="depthu" /> </grid>
+     <grid id="grid_V_3D"> <domain domain_ref="grid_V" /> <axis id="depthv" /> </grid>
+     <grid id="grid_W_3D"> <domain domain_ref="grid_W" /> <axis id="depthw" /> </grid>
+
+     <grid id="VENUS_east_grid_T">            <domain domain_ref="VENUS_east_T"/>             <axis id="deptht" /></grid>
+     <grid id="VENUS_central_grid_T">         <domain domain_ref="VENUS_central_T"/>          <axis id="deptht" /></grid>
+     <grid id="VENUS_east_gridded_grid_T">    <domain domain_ref="VENUS_east_gridded_T"/>     <axis id="deptht" /></grid>
+     <grid id="VENUS_central_gridded_grid_T"> <domain domain_ref="VENUS_central_gridded_T"/>  <axis id="deptht" /></grid>
+     <grid id="VENUS_delta_gridded_grid_T">   <domain domain_ref="VENUS_delta_gridded_T"/>    <axis id="deptht" /></grid>
+     <grid id="CODAR_grid_T">                 <domain domain_ref="CODAR_T"/>                  <axis id="deptht" /></grid>
+     <grid id="PortRenfrew_grid">             <domain domain_ref="PortRenfrew"/>              </grid>
+     <grid id="SheringhamPoint_grid">         <domain domain_ref="SheringhamPoint"/>          </grid>
+     <grid id="Sooke_grid">                   <domain domain_ref="Sooke"/>                    </grid>
+     <grid id="PedderBay_grid">               <domain domain_ref="PedderBay"/>                </grid>
+     <grid id="Esquimalt_grid">               <domain domain_ref="Esquimalt"/>                </grid>
+     <grid id="Victoria_grid">                <domain domain_ref="Victoria"/>                 </grid>
+     <grid id="CloverPoint_grid">             <domain domain_ref="CloverPoint"/>              </grid>
+     <grid id="FinnertyCove_grid">            <domain domain_ref="FinnertyCove"/>             </grid>
+     <grid id="PortTownsend_grid">            <domain domain_ref="PortTownsend"/>             </grid>
+     <grid id="FulfordHarbour_grid">          <domain domain_ref="FulfordHarbour"/>           </grid>
+     <grid id="PatriciaBay_grid">             <domain domain_ref="PatriciaBay"/>              </grid>
+     <grid id="PatosIsland_grid">             <domain domain_ref="PatosIsland"/>              </grid>
+     <grid id="TumboChannel_grid">            <domain domain_ref="TumboChannel"/>             </grid>
+     <grid id="WhalerBay_grid">               <domain domain_ref="WhalerBay"/>                </grid>
+     <grid id="Tsawwassen_grid">              <domain domain_ref="Tsawwassen"/>               </grid>
+     <grid id="SandHeads_grid">               <domain domain_ref="SandHeads"/>                </grid>
+     <grid id="WoodwardsLanding_grid">        <domain domain_ref="WoodwardsLanding"/>         </grid>
+     <grid id="NewWestminster_grid">          <domain domain_ref="NewWestminster"/>           </grid>
+     <grid id="PointGrey_grid">               <domain domain_ref="PointGrey"/>                </grid>
+     <grid id="SandyCove_grid">               <domain domain_ref="SandyCove"/>                </grid>
+     <grid id="Squamish_grid">                <domain domain_ref="Squamish"/>                 </grid>
+     <grid id="PointAtkinson_grid">           <domain domain_ref="PointAtkinson"/>            </grid>
+     <grid id="GibsonsLanding_grid">          <domain domain_ref="GibsonsLanding"/>           </grid>
+     <grid id="HalfmoonBay_grid">             <domain domain_ref="HalfmoonBay"/>              </grid>
+     <grid id="IrvinesLanding_grid">          <domain domain_ref="IrvinesLanding"/>           </grid>
+     <grid id="PowellRiver_grid">             <domain domain_ref="PowellRiver"/>              </grid>
+     <grid id="Lund_grid">                    <domain domain_ref="Lund"/>                     </grid>
+     <grid id="TwinIslets_grid">              <domain domain_ref="TwinIslets"/>               </grid>
+     <grid id="CampbellRiver_grid">           <domain domain_ref="CampbellRiver"/>            </grid>
+     <grid id="MaudeIslandE_grid">            <domain domain_ref="MaudeIslandE"/>             </grid>
+     <grid id="NympheCove_grid">              <domain domain_ref="NympheCove"/>               </grid>
+     <grid id="SeymourNarrows_grid">          <domain domain_ref="SeymourNarrows"/>           </grid>
+     <grid id="BrownBay_grid">                <domain domain_ref="BrownBay"/>                 </grid>
+     <grid id="ChathamPoint_grid">            <domain domain_ref="ChathamPoint"/>             </grid>
+     <grid id="KelseyBay_grid">               <domain domain_ref="KelseyBay"/>                </grid>
+     <grid id="YorkeIsland_grid">             <domain domain_ref="YorkeIsland"/>              </grid>
+     <grid id="Nanaimo_grid">                 <domain domain_ref="Nanaimo"/>                  </grid>
+     <grid id="NeahBay_grid">                 <domain domain_ref="NeahBay"/>                  </grid>
+     <grid id="CherryPoint_grid">             <domain domain_ref="CherryPoint"/>              </grid>
+     <grid id="FridayHarbor_grid">            <domain domain_ref="FridayHarbor"/>             </grid>
+     <grid id="BoundaryBay_grid">             <domain domain_ref="BoundaryBay"/>              </grid>
+     <grid id="VENUS_east_grid_U">            <domain domain_ref="VENUS_east_U"/>             <axis id="depthu" /></grid>
+     <grid id="VENUS_central_grid_U">         <domain domain_ref="VENUS_central_U"/>          <axis id="depthu" /></grid>
+     <grid id="VENUS_east_gridded_grid_U">    <domain domain_ref="VENUS_east_gridded_U"/>     <axis id="depthu" /></grid>
+     <grid id="VENUS_central_gridded_grid_U"> <domain domain_ref="VENUS_central_gridded_U"/>  <axis id="depthu" /></grid>
+     <grid id="VENUS_delta_gridded_grid_U">   <domain domain_ref="VENUS_delta_gridded_U"/>    <axis id="depthu" /></grid>
+     <grid id="CODAR_grid_U">                 <domain domain_ref="CODAR_U"/>                  <axis id="depthu" /></grid>
+     <grid id="VENUS_east_grid_V">            <domain domain_ref="VENUS_east_V"/>             <axis id="depthv" /></grid>
+     <grid id="VENUS_central_grid_V">         <domain domain_ref="VENUS_central_V"/>          <axis id="depthv" /></grid>
+     <grid id="VENUS_east_gridded_grid_V">    <domain domain_ref="VENUS_east_gridded_V"/>     <axis id="depthv" /></grid>
+     <grid id="VENUS_central_gridded_grid_V"> <domain domain_ref="VENUS_central_gridded_V"/>  <axis id="depthv" /></grid>
+     <grid id="VENUS_delta_gridded_grid_V">   <domain domain_ref="VENUS_delta_gridded_V"/>    <axis id="depthv" /></grid>
+     <grid id="CODAR_grid_V">                 <domain domain_ref="CODAR_V"/>                  <axis id="depthv" /></grid>
+     <grid id="VENUS_east_gridded_grid_W">    <domain domain_ref="VENUS_east_gridded_W"/>     <axis id="depthw" /></grid>
+     <grid id="VENUS_central_gridded_grid_W"> <domain domain_ref="VENUS_central_gridded_W"/>  <axis id="depthw" /></grid>
+     <grid id="VENUS_delta_gridded_grid_W">   <domain domain_ref="VENUS_delta_gridded_W"/>    <axis id="depthw" /></grid>
+     <!-- Two Straits -->
+     <grid id="two_straits_grid_U">           <domain domain_ref="two_straits_U"/> <axis axis_ref="nearsurface_U"/> </grid>
+     <grid id="two_straits_grid_V">           <domain domain_ref="two_straits_V"/> <axis axis_ref="nearsurface_V"/> </grid>
+
+     <!-- Tide Points Baynes Sound -->
+     <grid id="BaynesSound_grid">             <domain domain_ref="BaynesSound"/>              </grid>
+     <grid id="EastDenmanIsland_grid">        <domain domain_ref="EastDenmanIsland"/>         </grid>
+
+     <!-- Boundary Conditions for FVCOM -->
+     <grid id="FVCOM_grid_T_2D"> <domain domain_ref="FVCOM_T"/> </grid>
+     <grid id="FVCOM_grid_U_2D"> <domain domain_ref="FVCOM_U"/> </grid>
+     <grid id="FVCOM_grid_V_2D"> <domain domain_ref="FVCOM_V"/> </grid>
+     <grid id="FVCOM_grid_T_3D"> <domain domain_ref="FVCOM_T"/> <axis id="deptht" /> </grid>
+     <grid id="FVCOM_grid_U_3D"> <domain domain_ref="FVCOM_U"/> <axis id="depthu" /> </grid>
+     <grid id="FVCOM_grid_V_3D"> <domain domain_ref="FVCOM_V"/> <axis id="depthv" /> </grid>
+     <grid id="FVCOM_grid_W_3D"> <domain domain_ref="FVCOM_W"/> <axis id="depthw" /> </grid>
+
+     <!-- Passive tracer below 20 m -->
+     <grid id="trc20m_grid"> <domain domain_ref="trc20m"/> <axis axis_ref="deptht_20m"/> </grid>
+
+     <!-- Northern Strait and Transports -->
+     <grid id="NSOG_T_grid"> <domain domain_ref="NSOG_T"/>  <axis id="deptht" /> </grid>
+     <grid id="NSOG_U_grid"> <domain domain_ref="NSOG_U" /> <axis id="depthu" /> </grid>
+     <grid id="NSOG_V_grid"> <domain domain_ref="NSOG_V" /> <axis id="depthv" /> </grid>
+     <grid id="NSOG_W_grid"> <domain domain_ref="NSOG_W" /> <axis id="depthw" /> </grid>
+     <grid id="TV1_grid">    <domain domain_ref="TV1" />    <axis id="depthv" /> </grid>
+     <grid id="TV2_grid">    <domain domain_ref="TV2" />    <axis id="depthv" /> </grid>
+
+     <!-- Transports out Boundaries -->
+     <grid id="JdF_grid">    <domain domain_ref="JdF_Flux" />    <axis id="depthu" /> </grid>
+     <grid id="JS_grid">    <domain domain_ref="JS_Flux" />    <axis id="depthv" /> </grid>
+     
+     </grid_definition>
+
+  </context>
+
+
+<!--
+============================================================================================================
+=  XIOS Server Configuration
+============================================================================================================
+-->
+  <context id="xios">
+    <variable_definition>
+      <variable id="optimal_buffer_size"       type="string">performance</variable>
+      <variable id="buffer_size_factor"        type="double">1.0</variable>
+      <variable id="info_level"                type="int" >10</variable>
+<variable id="using_server" type="bool">true</variable>
+            <variable id="using_oasis"               type="bool">false</variable>
+      <variable id="oasis_codes_id"            type="string" >oceanx</variable>
+    </variable_definition>
+  </context>
+
+</simulation>
+
