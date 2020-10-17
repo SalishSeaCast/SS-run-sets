@@ -72,34 +72,6 @@
           <field field_ref="DTY_LIV"        grid_ref="Sutil_grid"/>
           <field field_ref="DTY_DIAT"        grid_ref="Sutil_grid"/>
         </file>
-        <file id="file7" name_suffix="_Haro_V" description="N transports" >
-          <field field_ref="ATY_NO3"        grid_ref="Haro_grid"/>
-          <field field_ref="ATY_NH4"        grid_ref="Haro_grid"/>
-          <field field_ref="ATY_PON"        grid_ref="Haro_grid"/>
-          <field field_ref="ATY_DON"        grid_ref="Haro_grid"/>
-          <field field_ref="ATY_LIV"        grid_ref="Haro_grid"/>
-          <field field_ref="ATY_DIAT"        grid_ref="Haro_grid"/>
-          <field field_ref="DTY_NO3"        grid_ref="Haro_grid"/>
-          <field field_ref="DTY_NH4"        grid_ref="Haro_grid"/>
-          <field field_ref="DTY_PON"        grid_ref="Haro_grid"/>
-          <field field_ref="DTY_DON"        grid_ref="Haro_grid"/>
-          <field field_ref="DTY_LIV"        grid_ref="Haro_grid"/>
-          <field field_ref="DTY_DIAT"        grid_ref="Haro_grid"/>
-        </file>
-        <file id="file8" name_suffix="_SJC_V" description="N transports" >
-          <field field_ref="ATY_NO3"         grid_ref="SJC_grid"/>
-          <field field_ref="ATY_NH4"         grid_ref="SJC_grid"/>
-          <field field_ref="ATY_PON"         grid_ref="SJC_grid"/>
-          <field field_ref="ATY_DON"         grid_ref="SJC_grid"/>
-          <field field_ref="ATY_LIV"         grid_ref="SJC_grid"/>
-          <field field_ref="ATY_DIAT"         grid_ref="SJC_grid"/>
-          <field field_ref="DTY_NO3"         grid_ref="SJC_grid"/>
-          <field field_ref="DTY_NH4"         grid_ref="SJC_grid"/>
-          <field field_ref="DTY_PON"         grid_ref="SJC_grid"/>
-          <field field_ref="DTY_DON"         grid_ref="SJC_grid"/>
-          <field field_ref="DTY_LIV"         grid_ref="SJC_grid"/>
-          <field field_ref="DTY_DIAT"         grid_ref="SJC_grid"/>
-        </file>
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
       <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE.">  <!-- 5d files -->

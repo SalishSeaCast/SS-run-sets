@@ -45,7 +45,7 @@
           <field field_ref="RDN_PON"    />
           <field field_ref="RDN_LIV"    />
         </file>
-	<file id="file5" name_suffix="_ptrc_T" description="biogeochemical variables" >
+         <file id="file5" name_suffix="_ptrc_T" description="biogeochemical variables" >
           <field field_ref="NO3"      name="nitrate"                       />
           <field field_ref="NH4"      name="ammonium"                      />
           <field field_ref="Si"       name="silicon"                       />
@@ -73,7 +73,7 @@
           <field field_ref="DTY_DIAT"        grid_ref="Sutil_grid"/>
         </file>
         <file id="file7" name_suffix="_Haro_V" description="N transports" >
-          <field field_ref="ATY_NO3"        grid_ref="Haro_grid"/>
+          <field field_ref="ATY_NO3"        grid_ref="Haro_grid"/> 
           <field field_ref="ATY_NH4"        grid_ref="Haro_grid"/>
           <field field_ref="ATY_PON"        grid_ref="Haro_grid"/>
           <field field_ref="ATY_DON"        grid_ref="Haro_grid"/>
@@ -100,9 +100,65 @@
           <field field_ref="DTY_LIV"         grid_ref="SJC_grid"/>
           <field field_ref="DTY_DIAT"         grid_ref="SJC_grid"/>
         </file>
+        <file id="file9" name_suffix="_Rosario_V" description="N transports" >
+          <field field_ref="ATY_NO3"        grid_ref="Rosario_grid"/>
+          <field field_ref="ATY_NH4"        grid_ref="Rosario_grid"/>
+          <field field_ref="ATY_PON"        grid_ref="Rosario_grid"/>
+          <field field_ref="ATY_DON"        grid_ref="Rosario_grid"/>
+          <field field_ref="ATY_LIV"        grid_ref="Rosario_grid"/>
+          <field field_ref="ATY_DIAT"        grid_ref="Rosario_grid"/>
+          <field field_ref="DTY_NO3"        grid_ref="Rosario_grid"/>
+          <field field_ref="DTY_NH4"        grid_ref="Rosario_grid"/>
+          <field field_ref="DTY_PON"        grid_ref="Rosario_grid"/>
+          <field field_ref="DTY_DON"        grid_ref="Rosario_grid"/>
+          <field field_ref="DTY_LIV"        grid_ref="Rosario_grid"/>
+          <field field_ref="DTY_DIAT"        grid_ref="Rosario_grid"/>
+        </file>
+        <file id="file10" name_suffix="_Discovery_V" description="N transports" >
+          <field field_ref="ATY_NO3"         grid_ref="Discovery_grid"/>
+          <field field_ref="ATY_NH4"         grid_ref="Discovery_grid"/>
+          <field field_ref="ATY_PON"         grid_ref="Discovery_grid"/>
+          <field field_ref="ATY_DON"         grid_ref="Discovery_grid"/>
+          <field field_ref="ATY_LIV"         grid_ref="Discovery_grid"/>
+          <field field_ref="ATY_DIAT"         grid_ref="Discovery_grid"/>
+          <field field_ref="DTY_NO3"         grid_ref="Discovery_grid"/>
+          <field field_ref="DTY_NH4"         grid_ref="Discovery_grid"/>
+          <field field_ref="DTY_PON"         grid_ref="Discovery_grid"/>
+          <field field_ref="DTY_DON"         grid_ref="Discovery_grid"/>
+          <field field_ref="DTY_LIV"         grid_ref="Discovery_grid"/>
+          <field field_ref="DTY_DIAT"         grid_ref="Discovery_grid"/>
+        </file>
+        <file id="file11" name_suffix="_Malaspina_U" description="N transports" >
+          <field field_ref="ATX_NO3"        grid_ref="Malaspina_grid"/>
+          <field field_ref="ATX_NH4"        grid_ref="Malaspina_grid"/>
+          <field field_ref="ATX_PON"        grid_ref="Malaspina_grid"/>
+          <field field_ref="ATX_DON"        grid_ref="Malaspina_grid"/>
+          <field field_ref="ATX_LIV"        grid_ref="Malaspina_grid"/>
+          <field field_ref="ATX_DIAT"        grid_ref="Malaspina_grid"/>
+          <field field_ref="DTX_NO3"        grid_ref="Malaspina_grid"/>
+          <field field_ref="DTX_NH4"        grid_ref="Malaspina_grid"/>
+          <field field_ref="DTX_PON"        grid_ref="Malaspina_grid"/>
+          <field field_ref="DTX_DON"        grid_ref="Malaspina_grid"/>
+          <field field_ref="DTX_LIV"        grid_ref="Malaspina_grid"/>
+          <field field_ref="DTX_DIAT"        grid_ref="Malaspina_grid"/>
+        </file>
+        <file id="file12" name_suffix="_SJDFK_U" description="N transports" >
+          <field field_ref="ATX_NO3"       grid_ref="SJDFK_grid"/>
+          <field field_ref="DTX_NO3"       grid_ref="SJDFK_grid"/>
+        </file>
+        <file id="file13" name_suffix="_SJDFE_U" description="N transports" >
+          <field field_ref="ATX_NO3"       grid_ref="SJDFE_grid"/>
+          <field field_ref="DTX_NO3"       grid_ref="SJDFE_grid"/>
+        </file>
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
       <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE.">  <!-- 5d files -->
+        <file id="file17" name_suffix="_snp_T" description="diagnostics" >
+          <field field_ref="NO3_E3TSNAP"    />
+          <field field_ref="PON_E3TSNAP"    />
+          <field field_ref="bSi_E3TSNAP"   />
+          <field field_ref="DIAT_E3TSNAP"   />
+        </file>
       </file_group>
       <file_group id="1m" output_freq="1mo" output_level="10" enabled=".TRUE."/> <!-- real monthly files -->
       <file_group id="2m" output_freq="2mo" output_level="10" enabled=".TRUE."/> <!-- real 2m files -->
