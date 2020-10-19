@@ -1,17 +1,15 @@
-# last run on beluga
-email: eolson@eoas.ubc.ca
+run_id: fluxesCorr_0
+config_name: SMELT
 account: rrg-allen
+email: eolson@eoas.ubc.ca
 MPI decomposition: 16x41
-config_name: SalishSeaCast
-run_id: testTVD_SSC
-walltime: 2:00:00
+walltime: 12:00:00
 
 forcing:
   LiveOcean:
     link to: $PROJECT/SalishSea/forcing/LiveOcean
   NEMO-atmos:
     link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
-
   bfr_coef.nc:
     link to: $MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
   grid:
@@ -30,34 +28,38 @@ forcing:
     link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
-  restart.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01apr15/SalishSea_01088640_restart.nc
-  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01apr15/SalishSea_01088640_restart_trc.nc
+  restart.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01jan15/SalishSea_00894240_restart.nc
+  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01jan15/SalishSea_00894240_restart_trc.nc
+
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
   coordinates: $MEOPAR/NEMO-forcing/grid/coordinates_seagrid_SalishSea201702.nc
   land processor elimination: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.csv
-
+  
 namelists:
   namelist_cfg:
-  - ./namelist_cfg
+  - ./namelist_cfg_20150101_60d
   namelist_top_cfg:
   - ./namelist_top_cfg
   namelist_smelt_cfg:
-  - ./namelist_smelt_cfg_tvdTest
+  - ./namelist_smelt_cfg_1_11
 
 output:
   XIOS servers: 1
-  filedefs: ./file_def.xml
+  filedefs: ./file_def.xml_fluxes
   domaindefs: ./domain_def.xml_fluxes
-  fielddefs: ./field_def.xml_TVDfluxes
+  fielddefs: ./field_def.xml_fluxes
   iodefs: ./iodef.xml_fluxes
-  separate XIOS server: True
+  separate XIOS server: true
 
 paths:
   NEMO code config: $MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-  XIOS: $MEOPAR/XIOS-2
+  XIOS: $MEOPAR/XIOS-2/
   runs directory: $SCRATCH/
   
 vcs revisions:
-  hg:
-  - $HOME/MEOPAR/SS-run-sets
+  git:
+  - $MEOPAR/NEMO-forcing/tides
+  - $MEOPAR/NEMO-forcing/tracers
+  - $MEOPAR/NEMO-forcing/rivers-climatology
+  - $MEOPAR/NEMO-forcing/grid
