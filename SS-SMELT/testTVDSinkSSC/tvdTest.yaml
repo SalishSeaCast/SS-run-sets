@@ -4,7 +4,7 @@ account: rrg-allen
 MPI decomposition: 16x41
 config_name: SalishSeaCast
 run_id: testTVD_SSC
-walltime: 2:00:00
+walltime: 16:00:00
 
 forcing:
   LiveOcean:
