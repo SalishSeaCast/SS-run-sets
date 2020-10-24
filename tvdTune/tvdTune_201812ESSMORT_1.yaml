@@ -3,7 +3,7 @@ email: eolson@eoas.ubc.ca
 account: rrg-allen
 MPI decomposition: 16x41
 config_name: SalishSeaCast
-run_id: tvdTune_A
+run_id: tvdTune_201812ESSMORT
 walltime: 12:00:00
 
 forcing:
@@ -30,8 +30,8 @@ forcing:
     link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
-  restart.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01apr15/SalishSea_01088640_restart.nc
-  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01apr15/SalishSea_01088640_restart_trc.nc
+  restart.nc: $SCRATCH/results/tvdTune_201812ESSMORT/SalishSea_00937440_restart.nc
+  restart_trc.nc: $SCRATCH/results/tvdTune_201812ESSMORT/SalishSea_00937440_restart_trc.nc
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
   coordinates: $MEOPAR/NEMO-forcing/grid/coordinates_seagrid_SalishSea201702.nc
@@ -39,7 +39,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist_cfg
+  - ./namelist_cfg_20150121_20d
   namelist_top_cfg:
   - ./namelist_top_cfg
   namelist_smelt_cfg:
