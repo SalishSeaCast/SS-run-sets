@@ -1,6 +1,6 @@
 # last run on beluga
 email: eolson@eoas.ubc.ca
-account: rrg-allen
+account: def-allen
 MPI decomposition: 16x41
 config_name: SalishSeaCast
 run_id: tvdTune_201812ESSMORT
