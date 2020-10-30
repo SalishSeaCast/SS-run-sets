@@ -59,7 +59,7 @@ namelists:
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist.vertical
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist.compute
   namelist_smelt_cfg:
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/improving/namelist_smelt_biology_HC201905equiv
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/improving/namelist_smelt_biology_evenlessSink
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist_smelt_rivers
   - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist_smelt_skog
   namelist_top_cfg:
