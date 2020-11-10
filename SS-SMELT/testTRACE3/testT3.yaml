@@ -2,7 +2,7 @@
 email: eolson@eoas.ubc.ca
 account: rrg-allen
 MPI decomposition: 16x41
-config_name: SMELT
+config_name: TRACE3
 run_id: testT3
 walltime: 0:20:00
 
