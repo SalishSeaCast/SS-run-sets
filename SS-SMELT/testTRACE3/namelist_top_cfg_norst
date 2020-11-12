@@ -62,15 +62,15 @@
 !              !  file name      ! frequency (hours) !    variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !              !                 !  (if <0  months)  !      name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
    sn_trcobc(1) = 'tracers/west/testTurbW.nc',             -12,        'turStep',  .false., .true., 'yearly',  '',        '',   ''
-   sn_trcobc(2) = 'LiveOcean/LiveOcean_v201712',            24,        'Si',       .true.,  .false., 'daily',   '',        '',   ''
-   sn_trcobc(3) = 'tracers/west/bioOBC_West_const201812',  -12,        'DIA',      .false., .true., 'yearly',   '',        '',   ''
-   sn_trcobc(4) = 'tracers/west/bioOBC_West_const201812',  -12,        'CRY',      .false., .true., 'yearly',   '',        '',   ''
-   sn_trcobc(5) = 'tracers/west/bioOBC_West_const201812',  -12,        'MYRI',     .false., .true., 'yearly',   '',        '',   ''
-   sn_trcobc(6) = 'tracers/west/bioOBC_West_const201812',  -12,        'MICZ',     .false., .true., 'yearly',   '',        '',   ''
-   sn_trcobc(7) = 'tracers/west/bioOBC_West_const201812',  -12,        'DON',      .false., .true., 'yearly',   '',        '',   ''
-   sn_trcobc(8) = 'tracers/west/bioOBC_West_const201812',  -12,        'PON',      .false., .true., 'yearly',   '',        '',   ''
-   sn_trcobc(9)  = 'tracers/west/bioOBC_West_const201812', -12,        'bSi',      .false., .true., 'yearly',   '',        '',   ''
-   sn_trcobc(10) = 'tracers/west/bioOBC_West_const201812', -12,        'tur',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(2) = 'tracers/west/testTurbW.nc',             -12,        'turStep',  .false., .true., 'yearly',  '',        '',   ''
+   sn_trcobc(3) = 'tracers/west/testTurbW.nc',             -12,        'turStep',  .false., .true., 'yearly',  '',        '',   ''
+   sn_trcobc(4) = 'tracers/west/testTurbW.nc',             -12,        'turStep',  .false., .true., 'yearly',  '',        '',   ''
+   sn_trcobc(5) = 'tracers/west/testTurbW.nc',             -12,        'turStep',  .false., .true., 'yearly',  '',        '',   ''
+   sn_trcobc(6) = 'tracers/west/testTurbW.nc',             -12,        'turStep',  .false., .true., 'yearly',  '',        '',   ''
+   sn_trcobc(7) = 'tracers/west/testTurbW.nc',             -12,        'turStep',  .false., .true., 'yearly',  '',        '',   ''
+   sn_trcobc(8) = 'tracers/west/testTurbW.nc',             -12,        'turStep',  .false., .true., 'yearly',  '',        '',   ''
+   sn_trcobc(9) = 'tracers/west/testTurbW.nc',             -12,        'turStep',  .false., .true., 'yearly',  '',        '',   ''
+   sn_trcobc(10) = 'tracers/west/testTurbW.nc',             -12,        'turStep',  .false., .true., 'yearly',  '',        '',   ''
    cn_dir_obc        =  './'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
    rn_trofac(2)   =  1.0  !  -      -      -     -
@@ -89,15 +89,15 @@
 !              !  file name      ! frequency (hours) ! variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !              !                 !  (if <0  months)  !   name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
    sn_trcobc(1)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(2)  = 'bioOBC_North_monthlySiNO3.nc',        -1,        'Si',       .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(3)  = 'bioOBC_North_const201812',          4380,        'DIA',      .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(4)  = 'bioOBC_North_const201812',          4380,        'CRY',      .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(5)  = 'bioOBC_North_const201812',          4380,        'MYRI',     .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(6)  = 'bioOBC_North_const201812',          4380,        'MICZ',     .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(7)  = 'bioOBC_North_const201812',          4380,        'DON',      .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(8)  = 'bioOBC_North_const201812',          4380,        'PON',      .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(9)  = 'bioOBC_North_const201812',          4380,        'bSi',      .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(10) = 'bioOBC_North_const201812',          4380,        'tur',       .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(2)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(3)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(4)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(5)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(6)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(7)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(8)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(9)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(10)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
 
    cn_dir_obc        =  './tracers/north/'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
