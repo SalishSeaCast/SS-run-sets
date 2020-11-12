@@ -41,7 +41,7 @@ namelists:
   namelist_cfg:
   - ./namelist_cfg
   namelist_top_cfg:
-  - ./namelist_top_cfg
+  - ./namelist_top_cfg_norst
   namelist_smelt_cfg:
   - ./namelist_smelt_cfg_tvdTest
 
