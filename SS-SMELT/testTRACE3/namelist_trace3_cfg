@@ -1,0 +1,54 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! PISCES  (key_pisces) config namelist (see below for key_pisces_reduced)
+!!              4  - parameters for phytoplankton             (nampisprod,nampismort)
+!!              5  - parameters for zooplankton               (nampismes, nampismezo, nampiszoo)
+!!              6  - parameters for remineralization          (nampisrem)
+!!              7 - optical model                             (nampisopt)
+!!              11 - Sinking                                  (nampissink)
+!!              12 - Turbidity (river tracer)                 (nampisriv)
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampissink     !  Sinking of bio groups
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_w_sink_Pmicro_min = 0.555 ! m/d  microphyto minimum sinking rate # Alain CONVERTED TO M/S ON NAMELIST READ
+   zz_w_sink_Pmicro_max = 1.332 ! m/d microphyto maximum sinking rate # Alain CONVERTED TO M/S ON NAMELIST READ
+   zz_w_sink_D_PON = 1.11e-4      ! m/s PON detritus sinking rate # Jeffery quoting Dune and Bacon
+   zz_w_sink_D_bSi = 3.108e-4      ! m/s  biogenic silicon detritus sinking rate # match NO3 particles
+   zz_alpha_b_Si = 0.92          ! fraction of bottom flux resuspended in bottom cell
+   zz_alpha_b_N = 0.45          ! fraction of bottom flux resuspended in bottom cell
+   zz_alpha_b_T = 0.75          ! fraction of bottom flux resuspended in bottom cell
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisriv     !   river tracer parameters
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   Wd      = 0.0,   0.1,     0.2,    0.3,   0.4,  0.5, 0.6, 0.7, 0.8, 0.9      ! sediment sinking velocity, m/d
+   alpha_C = 0.0,   0.00001, 0.0001, 0.001, 0.01, 0.1, 0.3, 0.6, 0.8, 1.0 ! transfer factor 1/(d NTU)
+   alpha_T = 0.5,   0.5,     0.5,    0.5,   0.5,  0.5, 0.5, 0.5, 0.5, 0.5     ! bottom reflection coeff
+/
+
+
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! SMELT  (key_pisces) Rivers
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampissbc
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!               !  file name                                  ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!               !                                             !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_river1  = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river2  = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river3  = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river4  = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river5  = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river6  = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river7  = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river8  = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river9  = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river10  = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_turb      = 'river_turb/riverTurbDaily2',              24,               'turb',      .true.,       .false., 'daily',    '',        '',        ''
+   cn_dir       = './'  ! root directory for the location of the runoff files
+   ln_river = .true.
+   ln_turb = .true.
+/
+
+

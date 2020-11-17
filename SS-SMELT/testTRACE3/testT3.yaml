@@ -42,8 +42,10 @@ namelists:
   - ./namelist_cfg
   namelist_top_cfg:
   - ./namelist_top_cfg_norst
-  namelist_smelt_cfg:
-  - ./namelist_smelt_cfg_tvdTest
+  namelist_trace3_cfg:
+  - ./namelist_trace3_cfg_tvdTest
+  namelist_trace3_ref:
+  - ./namelist_trace3_ref
 
 output:
   XIOS servers: 1
