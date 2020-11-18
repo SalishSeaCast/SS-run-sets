@@ -51,7 +51,7 @@ output:
   XIOS servers: 1
   filedefs: ./file_def.xml
   domaindefs: ./domain_def.xml_fluxes
-  fielddefs: ./field_def.xml_TVDfluxes
+  fielddefs: ../../TRACE3/field_def.xml_TRACE3
   iodefs: ./iodef.xml_fluxes
   separate XIOS server: True
 

@@ -34,16 +34,16 @@
 !                !    name   !           title of the field              ! initial data ! initial data ! obc    !    sbc  !  cbc    ! save   !
 !                !           !                                           !  units       ! from file    !                             ! or not !
 !                !           !                                           !              ! or not       !                             !        !
-   sn_tracer(1)  = 'NO3     ' , 'Nitrates Concentration                 ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(2)  = 'Si      ' , 'Silicate Concentration                 ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(3)  = 'DIAT    ' , 'Diatoms Concentration                  ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(4)  = 'PHY     ' , 'Nanophytoplankton Concentration        ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(5)  = 'MYRI    ' , 'Mesozooplankton Concentration          ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(6)  = 'MICZ    ' , 'Microzooplankton Concentration         ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(7)  = 'DON     ' , 'Dissolved organic Concentration        ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(8)  = 'PON     ' , 'Small organic carbon Concentration     ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(9)  = 'bSi     ' , 'biogenic Silicate Concentration        ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
-   sn_tracer(10) = 'TRA     ' , 'River Tracer                           ',  'mol-C/L' ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(1)  = 'TUR1    ' , 'Turbidity 1                            ',  'NTU'     ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(2)  = 'TUR2    ' , 'Turbidity 2                            ',  'NTU'     ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(3)  = 'TUR3    ' , 'Turbidity 3                            ',  'NTU'     ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(4)  = 'TUR4    ' , 'Turbidity 4                            ',  'NTU'     ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(5)  = 'TUR5    ' , 'Turbidity 5                            ',  'NTU'     ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(6)  = 'TUR6    ' , 'Turbidity 6                            ',  'NTU'     ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(7)  = 'TUR7    ' , 'Turbidity 7                            ',  'NTU'     ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(8)  = 'TUR8    ' , 'Turbidity 8                            ',  'NTU'     ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(9)  = 'TUR9    ' , 'Turbidity 9                            ',  'NTU'     ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(10) = 'TUR10   ' , 'Turbidity 10                           ',  'NTU'     ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
 
    ln_trcdta = .false.
    ln_trcdmp = .false.
@@ -70,7 +70,7 @@
    sn_trcobc(7) = 'tracers/west/testTurbW.nc',             -12,        'turStep',  .false., .true., 'yearly',  '',        '',   ''
    sn_trcobc(8) = 'tracers/west/testTurbW.nc',             -12,        'turStep',  .false., .true., 'yearly',  '',        '',   ''
    sn_trcobc(9) = 'tracers/west/testTurbW.nc',             -12,        'turStep',  .false., .true., 'yearly',  '',        '',   ''
-   sn_trcobc(10) = 'tracers/west/testTurbW.nc',             -12,        'turStep',  .false., .true., 'yearly',  '',        '',   ''
+   sn_trcobc(10) = 'tracers/west/testTurbW.nc',            -12,        'turStep',  .false., .true., 'yearly',  '',        '',   ''
    cn_dir_obc        =  './'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
    rn_trofac(2)   =  1.0  !  -      -      -     -
@@ -88,16 +88,16 @@
 !-----------------------------------------------------------------------
 !              !  file name      ! frequency (hours) ! variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !              !                 !  (if <0  months)  !   name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
-   sn_trcobc(1)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(2)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(3)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(4)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(5)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(6)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(7)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(8)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(9)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(10)  = 'testTurbN.nc',                       -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(1)  = 'testTurbN.nc',         -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(2)  = 'testTurbN.nc',         -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(3)  = 'testTurbN.nc',         -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(4)  = 'testTurbN.nc',         -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(5)  = 'testTurbN.nc',         -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(6)  = 'testTurbN.nc',         -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(7)  = 'testTurbN.nc',         -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(8)  = 'testTurbN.nc',         -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(9)  = 'testTurbN.nc',         -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(10)  = 'testTurbN.nc',        -12,        'turStep',  .false., .true.,  'yearly',   '',      '',   ''
 
    cn_dir_obc        =  './tracers/north/'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
