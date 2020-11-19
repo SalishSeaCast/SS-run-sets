@@ -1,0 +1,35 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!!     TURBIDITY TRACER TUNING EXPERIMENT PARAMETERS
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisbio     !   biological parameters
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisturb
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+! var        (1)   (2)   (3)   (4)   (5)   (6)   (7)   (8)   (9)   (10)
+   Wd  =     0.0,  0.3,  0.6,  0.9,  1.2,  1.5,  1.8,  2.1,  2.4,  2.7   ! sinking velocities, m/d
+   alpha_C = 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0   ! attennuation coeff
+   alpha_T = 0.5,  0.5,  0.5,  0.5,  0.5,  0.5,  0.5,  0.5,  0.5,  0.5   ! bottom refl. coeff
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampissbc
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!               !  file name                                  ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!               !                                             !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_river1    = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river2    = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river3    = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river4    = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river5    = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river6    = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river7    = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river8    = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river9    = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_river10   = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_turb      = 'river_turb/riverTurbDaily2',              24,               'turb',      .true.,       .false., 'daily',    '',        '',        ''
+   cn_dir       = './'  ! root directory for the location of the runoff files
+   ln_river = .false.
+   ln_turb = .false.
+/
