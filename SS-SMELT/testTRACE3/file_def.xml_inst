@@ -10,6 +10,14 @@
         <file id="file1" name_suffix="_ptrc_T" description="biogeochemical variables" >
           <field field_ref="TUR1"           />
           <field field_ref="TUR2"           />
+          <field field_ref="TUR3"           />
+          <field field_ref="TUR4"           />
+          <field field_ref="TUR5"           />
+          <field field_ref="TUR6"           />
+          <field field_ref="TUR7"           />
+          <field field_ref="TUR8"           />
+          <field field_ref="TUR9"           />
+          <field field_ref="TUR10"           />
           <field field_ref="RIVTRA0"        />
           <field field_ref="RIVTRA1"        />
           <field field_ref="RIVTRA2"        />
