@@ -6,7 +6,7 @@
 ============================================================================================================
     -->
     <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4" compression_level="4" split_freq="10d" split_freq_format= "%y%mo%d">
-      <file_group id="1ts" output_freq="1ts"  output_level="10" enabled=".TRUE."> <!-- 1 time step files -->
+      <file_group id="1ts" output_freq="1ts"  output_level="10" split_freq="10ts" enabled=".TRUE."> <!-- 1 time step files -->
         <file id="file1" name_suffix="_ptrc_T" description="biogeochemical variables" >
           <field field_ref="TUR1"           />
           <field field_ref="TUR2"           />
@@ -19,6 +19,7 @@
           <field field_ref="RIVTRB0"        />
           <field field_ref="RIVTRB1"        />
           <field field_ref="RIVTRB2"        />
+          <field field_ref="SFTURB"        />
 	  <field field_ref="soce"           name="vosaline"/>
         </file>
       </file_group>

@@ -763,15 +763,6 @@
 
      <field_group id="ptrc_T" grid_ref="grid_T_3D">
        <field id="TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
-       <field id="RIVTRA0"         long_name="Fraser Tracer 1"                          unit=" NTU " />
-       <field id="RIVTRA1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
-       <field id="RIVTRA2"         long_name="Fraser Tracer 1"                          unit=" NTU " />
-       <field id="RIVTRB0"         long_name="Fraser Tracer 1"                          unit=" NTU " />
-       <field id="RIVTRB1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
-       <field id="RIVTRB2"         long_name="Fraser Tracer 1"                          unit=" NTU " />
-       <field id="RIVTRN0"         long_name="Fraser Tracer 1"                          unit=" NTU " />
-       <field id="RIVTRN1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
-       <field id="RIVTRN2"         long_name="Fraser Tracer 1"                          unit=" NTU " />
        <field id="TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
        <field id="TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
        <field id="TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
@@ -1110,6 +1101,16 @@
      <!-- PISCES additional diagnostics on T grid  -->
 
      <field_group id="diad_T" grid_ref="grid_T_3D">
+       <field id="RIVTRA0"         long_name="RA01"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="RIVTRA1"         long_name="RA11"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="RIVTRA2"         long_name="RA21"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="RIVTRB0"         long_name="RB01"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="RIVTRB1"         long_name="RB11"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="RIVTRB2"         long_name="RB21"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="RIVTRN0"         long_name="RN01"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="RIVTRN1"         long_name="RN11"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="RIVTRN2"         long_name="RN21"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="SFTURB"      long_name="turb forcing"                      unit=" NTU " grid_ref="grid_T_2D" />
        <field id="PAR"         long_name="Photosynthetically Available Radiation"  unit="W/m2"          grid_ref="grid_T_3D" />
        <field id="PPDIAT"      long_name="Primary production of diatoms"           unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="PPPHY"       long_name="Primary production of small phyto"       unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
