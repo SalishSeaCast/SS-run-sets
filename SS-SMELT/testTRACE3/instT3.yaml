@@ -49,7 +49,7 @@ namelists:
 
 output:
   XIOS servers: 1
-  filedefs: ./file_def.xml_inst
+  filedefs: ./file_def.xml
   domaindefs: ./domain_def.xml_fluxes
   fielddefs: ./field_def.xml_inst
   iodefs: ./iodef.xml_fluxes

@@ -15,10 +15,20 @@
           <field field_ref="TUR4"           />
           <field field_ref="TUR5"           />
           <field field_ref="TUR6"           />
-          <field field_ref="TUR7"           />
-          <field field_ref="TUR8"           />
-          <field field_ref="TUR9"           />
-          <field field_ref="TUR10"           />
+	  <field field_ref="TUR7"           />
+	  <field field_ref="TUR8"           />
+	  <field field_ref="TUR9"           />
+	  <field field_ref="TUR10"           />
+	  <field field_ref="RIVTRN2"        />
+          <field field_ref="avt"           />
+          <field field_ref="woce"           />
+	  <field field_ref="E1E2TA"           />
+	  <field field_ref="E1E2TASP"           />
+	  <field field_ref="BIOSINK1"           />
+	  <field field_ref="ZWNBIO1"           />
+	  <field field_ref="ZWNBIO2"           />
+	  <field field_ref="ZWN1"           />
+	  <field field_ref="SFTURB"        />
 	  <field field_ref="soce"           name="vosaline"/>
         </file>
       </file_group>
