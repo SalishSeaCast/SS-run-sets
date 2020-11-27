@@ -1,10 +1,10 @@
 # last run on beluga
 email: eolson@eoas.ubc.ca
-account: def-allen
+account: rrg-allen
 MPI decomposition: 16x41
-config_name: SalishSeaCast
-run_id: tvdTune_small
-walltime: 3:00:00
+config_name: TRACE3
+run_id: instT3
+walltime: 1:00:00
 
 forcing:
   LiveOcean:
@@ -30,8 +30,8 @@ forcing:
     link to: $MEOPAR/NEMO-forcing/tracers
 
 restart:
-  restart.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01jan15/SalishSea_00894240_restart.nc
-  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01jan15/SalishSea_00894240_restart_trc.nc
+  restart.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01apr15/SalishSea_01088640_restart.nc
+  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01apr15/SalishSea_01088640_restart_trc.nc
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
   coordinates: $MEOPAR/NEMO-forcing/grid/coordinates_seagrid_SalishSea201702.nc
@@ -39,17 +39,19 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist_cfg_20150101_5d
+  - ./namelist_cfg_10ts
   namelist_top_cfg:
-  - ./namelist_top_cfg_g
-  namelist_smelt_cfg:
-  - ./namelist_smelt_cfg_201812ESSMORTb
+  - ./namelist_top_cfg_norst
+  namelist_trace3_cfg:
+  - ./namelist_trace3_cfg
+  namelist_trace3_ref:
+  - ./namelist_trace3_ref
 
 output:
   XIOS servers: 1
   filedefs: ./file_def.xml
   domaindefs: ./domain_def.xml_fluxes
-  fielddefs: ./field_def.xml_TVDfluxes
+  fielddefs: ./field_def.xml_inst
   iodefs: ./iodef.xml_fluxes
   separate XIOS server: True
 

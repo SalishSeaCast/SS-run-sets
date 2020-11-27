@@ -10,9 +10,9 @@
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampisriv     !   river tracer parameters
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-   Wd      = 0.0,   0.0,     0.0,    0.0,   0.0,  0.0, 0.0, 0.0, 0.0, 0.0      ! sediment sinking velocity, m/d
-   alpha_C = 0.0,   0.0,     0.0,    0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ! transfer factor 1/(d NTU)
-   alpha_T = 0.5,   0.5,     0.5,    0.5,   0.5,  0.5, 0.5, 0.5, 0.5, 0.5     ! bottom reflection coeff
+   Wd      = 1.0,   2.0,   3.0,   4.0,   5.0,  1.0, 2.0, 3.0, 4.0, 5.0     ! sediment sinking velocity, m/d
+   alpha_C = 0.0,   0.0,   0.0,   0.0,   0.0,  0.0, 0.0, 0.0, 0.0, 0.0     ! transfer factor 1/(d NTU)
+   alpha_T = 0.0,   0.0,   0.0,   0.0,   0.0,  0.5, 0.5, 0.5, 0.5, 0.5     ! bottom reflection coeff
 /
 
 
