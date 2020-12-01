@@ -1101,6 +1101,7 @@
      <!-- PISCES additional diagnostics on T grid  -->
 
      <field_group id="diad_T" grid_ref="grid_T_3D">
+       <field id="TVDPTB1"      long_name="ztransp"                       unit=" NTU " grid_ref="grid_W_3D" />
        <field id="ZWZA"         long_name="ztransp"                       unit=" NTU " grid_ref="grid_W_3D" />
        <field id="ZWZB"         long_name="ztransp"                       unit=" NTU " grid_ref="grid_W_3D" />
        <field id="ZWZC"         long_name="ztransp"                       unit=" NTU " grid_ref="grid_W_3D" />
