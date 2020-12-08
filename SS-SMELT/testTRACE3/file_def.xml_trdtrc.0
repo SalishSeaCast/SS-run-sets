@@ -1,3 +1,5 @@
+p
+p
 <!--
 ============================================================================================================
 =                                           output files definition                                        =
@@ -10,18 +12,31 @@
       <file_group id="1h" output_freq="1h"  output_level="10" split_freq="10d" enabled=".TRUE."> <!-- 1h files -->
         <file id="file1" name_suffix="_ptrc_T" description="biogeochemical variables" >
           <field field_ref="TUR1"           />
+          <field field_ref="TUR1_E3T"           />
           <field field_ref="TUR2"           />
+          <field field_ref="TUR2_E3T"           />
           <field field_ref="TUR3"           />
+          <field field_ref="TUR3_E3T"           />
           <field field_ref="TUR4"           />
+          <field field_ref="TUR4_E3T"           />
           <field field_ref="TUR5"           />
+          <field field_ref="TUR5_E3T"           />
           <field field_ref="TUR6"           />
           <field field_ref="TUR7"           />
           <field field_ref="TUR8"           />
           <field field_ref="TUR9"           />
           <field field_ref="TUR10"           />
+	  <field field_ref="ZWZA"        />
+          <field field_ref="ZWZB"          />
+          <field field_ref="ZWZC"           />
 	  <field field_ref="SFTURB"        />
-	  <field field_ref="e3t"        />
-          <field field_ref="woce"       />
+        </file>
+        <file id="file2" name_suffix="_ptrc_U" description="biogeochemical variables" >
+          <field field_ref="ATX_TUR1"           />
+          <field field_ref="ATX_TUR2"           />
+          <field field_ref="ATX_TUR3"           />
+          <field field_ref="ATX_TUR4"           />
+          <field field_ref="ATX_TUR5"           />
         </file>
       </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" split_freq="1d" enabled=".TRUE."/> <!-- 2h files -->

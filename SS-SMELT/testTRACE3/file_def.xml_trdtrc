@@ -1,3 +1,5 @@
+p
+p
 <!--
 ============================================================================================================
 =                                           output files definition                                        =
@@ -19,9 +21,10 @@
           <field field_ref="TUR8"           />
           <field field_ref="TUR9"           />
           <field field_ref="TUR10"           />
+	  <field field_ref="ZWZA"        />
+          <field field_ref="ZWZB"          />
+          <field field_ref="ZWZC"           />
 	  <field field_ref="SFTURB"        />
-	  <field field_ref="e3t"        />
-          <field field_ref="woce"       />
         </file>
       </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" split_freq="1d" enabled=".TRUE."/> <!-- 2h files -->
