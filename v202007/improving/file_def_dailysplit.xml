@@ -72,6 +72,11 @@
           <field field_ref="bSi"            name="biogenic_silicon"/>
           <field field_ref="MESZ"           name="mesozooplankton"/>
         </file>
+	<file id="file34" name_suffix="_dia_T" description="diagnostic variables" >
+          <field field_ref="BFX_DIAT"    name="BFX_DIAT"/>
+          <field field_ref="BFX_PON"     name="BFX_PON"/>
+          <field field_ref="BFX_bSi"     name="BFX_bSi"/>
+        </file>
 	<file id="file33" name_suffix="_carp_T" description="auxilary variables">
           <field field_ref="PAR"      name="PAR"/>
           <field field_ref="rhop"     name="sigma_theta"/>

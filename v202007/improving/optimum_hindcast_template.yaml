@@ -8,14 +8,14 @@ run_id: ddmmmyyhindcast
 walltime: 12:00:00
 
 paths:
-  NEMO code config: $PROJECT/SalishSeaCast/hindcast-sys/NEMO-3.6-code/NEMOGCM/CONFIG
+  NEMO code config: $SUSANPROJECT/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $PROJECT/SalishSeaCast/hindcast-sys/XIOS-2
   runs directory: $SCRATCHDIR/hindcast_202007_asselin
 
 grid:
-  bathymetry: $PROJECT/SalishSeaCast/hindcast-sys/grid/bathymetry_201702.nc
-  coordinates: $PROJECT/SalishSeaCast/hindcast-sys/grid/coordinates_seagrid_SalishSea201702.nc
-  land processor elimination: $PROJECT/SalishSeaCast/hindcast-sys/grid/bathymetry_201702.csv
+  bathymetry: $SUSANPROJECT/MEOPAR/grid/bathymetry_201702.nc
+  coordinates: $SUSANPROJECT/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $SUSANPROJECT/MEOPAR/grid/bathymetry_201702.csv
 
 restart:
   restart.nc: $SCRATCHDIR/hindcast_202007_asselin/ddmmmyy/SalishSea_nnnnnnnn_restart.nc
@@ -30,60 +30,61 @@ forcing:
     #   type: atmospheric
     link to: $FORCING/SalishSeaCast/forcing/atmospheric/GEM2.5/operational
   bfr_coef.nc:
-    link to: $PROJECT/SalishSeaCast/hindcast-sys/grid/jetty_mask_bathy201702.nc
+    link to: $SUSANPROJECT/MEOPAR/grid/jetty_mask_bathy201702.nc
   grid:
-    link to: $PROJECT/SalishSeaCast/hindcast-sys/grid
+    link to: $SUSANPROJECT/MEOPAR/grid
   rivers:
     link to: $FORCING/SalishSeaCast/forcing/rivers
   rivers-climatology:
-    link to: $PROJECT/SalishSeaCast/hindcast-sys/rivers-climatology
+    link to: $SUSANPROJECT/MEOPAR/rivers-climatology
   river_turb:
     link to: $FORCING/SalishSeaCast/forcing/rivers/river_turb
   ssh:
     link to: $FORCING/SalishSeaCast/forcing/sshNeahBay/obs
   tides:
-    link to: $PROJECT/SalishSeaCast/hindcast-sys/tides
+    link to: $SUSANPROJECT/MEOPAR/tides
   tracers:
-    link to: $PROJECT/SalishSeaCast/hindcast-sys/tracers
+    link to: $SUSANPROJECT/MEOPAR/tracers
 
 namelists:
   namelist_cfg:
   - $PROJECT/SalishSeaCast/hindcast-sys/runs/namelist.time
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist.domain
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist.atmos_rivers
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist.light
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist.lateral
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist.bottom
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist.tracer
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist.dynamics
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist.vertical
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist.compute
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.domain
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.atmos_rivers
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.light
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.lateral
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.bottom
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.tracer
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.dynamics
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.vertical
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.compute
   namelist_smelt_cfg:
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/improving/namelist_smelt_biology_202007A
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist_smelt_rivers
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist_smelt_skog
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/improving/namelist_smelt_biology_202007A
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist_smelt_rivers
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist_smelt_skog
   namelist_top_cfg:
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist_top_restart
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist_top_TracerDefAndBdy
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/namelist_top_physics
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist_top_restart
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist_top_TracerDefAndBdy
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist_top_physics
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/improving/namelist_top_trdtrc
   
 output:
   XIOS servers: 1
-  domaindefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/domain_def.xml
-  fielddefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/field_def.xml
-  filedefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/improving/file_def_dailysplit.xml
-  iodefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v202007/iodef.xml
+  domaindefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/domain_def.xml
+  fielddefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/field_def.xml
+  filedefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/improving/file_def_dailysplit.xml
+  iodefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/iodef.xml
   separate XIOS server: true
 
 vcs revisions:
   git:
-  - $PROJECT/SalishSeaCast/hindcast-sys/grid
+  - $SUSANPROJECT/MEOPAR/grid
   - $PROJECT/SalishSeaCast/hindcast-sys/NEMO-Cmd
-  - $PROJECT/SalishSeaCast/hindcast-sys/NEMO-3.6-code
-  - $PROJECT/SalishSeaCast/hindcast-sys/rivers-climatology
-  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets
+  - $SUSANPROJECT/MEOPAR/NEMO-3.6-code
+  - $SUSANPROJECT/MEOPAR/rivers-climatology
+  - $SUSANPROJECT/MEOPAR/SS-run-sets
   - $PROJECT/SalishSeaCast/hindcast-sys/SalishSeaCmd
-  - $PROJECT/SalishSeaCast/hindcast-sys/tides
-  - $PROJECT/SalishSeaCast/hindcast-sys/tracers
+  - $SUSANPROJECT/MEOPAR/tides
+  - $SUSANPROJECT/MEOPAR/tracers
   - $PROJECT/SalishSeaCast/hindcast-sys/XIOS-ARCH
   - $PROJECT/SalishSeaCast/hindcast-sys/XIOS-2

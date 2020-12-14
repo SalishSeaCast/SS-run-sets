@@ -975,14 +975,15 @@
        <field id="GLS_SH2"  long_name="GLS shear squared"                                 standard_name="GLS_SH2"          unit="s-1" />
        <field id="NO3TVDZ"  long_name="Nitrate TVD Advection Z direction"                 standard_name="NO3tvdz"          unit="mmol s-1" />
 
-       <field id="BSZ_PON"  long_name="Bottom Sinking flux"            unit="mmol s-1"     />
-       <field id="BSZ_DIAT"  long_name="Bottom Sinking flux"            unit="mmol s-1"    />
-       <field id="BSZ_bSi"  long_name="Bottom Sinking flux"            unit="mmol s-1"     />
-       <field id="BSZ_TRA"  long_name="Bottom Sinking flux"            unit="mmol s-1"     />
-       <field id="BFX_PON"  long_name="Bottom Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
-       <field id="BFX_DIAT"  long_name="Bottom Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
-       <field id="BFX_bSi"  long_name="Bottom Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
-       <field id="BFX_TRA"  long_name="Bottom Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BSZ_PON"  long_name="Bottom PON Sinking flux"            unit="mmol s-1"     />
+       <field id="BSZ_DIAT"  long_name="Bottom DIAT Sinking flux"          unit="mmol s-1"    />
+       <field id="BSZ_bSi"  long_name="Bottom Biogenic Si Sinking flux"    unit="mmol s-1"     />
+       <field id="BSZ_TRA"  long_name="Bottom TRA Sinking flux"            unit="mmol s-1"     />
+       <field id="BFX_PON"  long_name="Bottom PON Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BFX_DIAT"  long_name="Bottom DIAT Sinking flux"          unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BFX_NO3"  long_name="Bottom Nitrate Sinking flux"          unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BFX_bSi"  long_name="Bottom Biogenic Si Sinking flux"    unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BFX_TRA"  long_name="Bottom TRA Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
        <field id="ATZ_NO3"      long_name="---"        unit="---"                    />
        <field id="ATZ_NH4"      long_name="---"        unit="---"                    />
        <field id="ATZ_PON"      long_name="---"        unit="---"                    />

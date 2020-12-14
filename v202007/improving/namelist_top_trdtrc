@@ -1,0 +1,16 @@
+!-----------------------------------------------------------------------
+&namtrc_trd       !   diagnostics on tracer trends        ('key_trdtrc')
+!----------------------------------------------------------------------
+   rn_ucf_trc  =   1          !  unit conversion factor (=1 -> /seconds ; =86400. -> /day)
+   ln_trdtrc(1)  =   .false.
+   ln_trdtrc(2)  =   .false.
+   ln_trdtrc(3)  =   .false.
+   ln_trdtrc(4)  =   .true.
+   ln_trdtrc(5)  =   .false.
+   ln_trdtrc(6)  =   .false.
+   ln_trdtrc(7)  =   .false.
+   ln_trdtrc(8)  =   .false.
+   ln_trdtrc(9)  =   .true.
+   ln_trdtrc(10) =   .true.
+   ln_trdtrc(11) =   .false.
+/
