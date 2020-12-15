@@ -61,5 +61,6 @@ paths:
   runs directory: $SCRATCH/
   
 vcs revisions:
-  hg:
-  - $HOME/MEOPAR/SS-run-sets
+  git:
+  - $MEOPAR/SS-run-sets
+  - $MEOPAR/NEMO-3.6-code
