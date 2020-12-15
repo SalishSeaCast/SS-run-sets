@@ -1,0 +1,59 @@
+email: eolson@eoas.ubc.ca
+account: rrg-allen
+MPI decomposition: 16x41
+config_name: TRACE3
+run_id: TRACE3_AT0_01_5
+walltime: '3:00:00'
+forcing:
+  LiveOcean:
+    link to: $PROJECT/SalishSea/forcing/LiveOcean
+  NEMO-atmos:
+    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
+  bfr_coef.nc:
+    link to: $MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: $MEOPAR/NEMO-forcing/grid
+  rivers:
+    link to: $PROJECT/SalishSea/forcing/rivers
+  rivers-climatology:
+    link to: $MEOPAR/NEMO-forcing/rivers-climatology
+  river_turb:
+    link to: $PROJECT/SalishSea/forcing/rivers/turbidity_201906
+  ssh:
+    link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
+  tides:
+    link to: $MEOPAR/NEMO-forcing/tides
+  tracers:
+    link to: $MEOPAR/NEMO-forcing/tracers
+restart:
+  restart.nc: $SCRATCH/results/TRACE3_AT0_01/SalishSea_02689200_restart.nc
+  restart_trc.nc: $SCRATCH/results/TRACE3_AT0_01/SalishSea_02689200_restart_trc.nc
+grid:
+  bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
+  coordinates: $MEOPAR/NEMO-forcing/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.csv
+namelists:
+  namelist_cfg:
+  - namelist_cfgs/namelist_cfg_namrun_20170411_20d
+  - ./namelist_cfg_base
+  namelist_top_cfg:
+  - namelist_top_cfg_trace3_rst
+  namelist_trace3_cfg:
+  - namelist_trace3_cfg_AT0_01
+  namelist_trace3_ref:
+  - ./namelist_trace3_ref
+output:
+  XIOS servers: 1
+  filedefs: file_def.xml_1d
+  domaindefs: ./domain_def.xml_fluxes
+  fielddefs: ./field_def.xml_trdtrc
+  iodefs: ./iodef.xml_fluxes
+  separate XIOS server: true
+paths:
+  NEMO code config: $MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $MEOPAR/XIOS-2
+  runs directory: $SCRATCH/
+vcs revisions:
+  git:
+  - $MEOPAR/SS-run-sets
+  - $MEOPAR/NEMO-3.6-code
