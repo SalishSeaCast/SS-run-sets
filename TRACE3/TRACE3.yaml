@@ -1,10 +1,9 @@
-# last run on beluga
 email: eolson@eoas.ubc.ca
 account: rrg-allen
 MPI decomposition: 16x41
 config_name: TRACE3
-run_id: TRACE3test
-walltime: 0:20:00
+run_id: TRACE3
+walltime: 3:00:00
 
 forcing:
   LiveOcean:
@@ -21,7 +20,7 @@ forcing:
   rivers-climatology:
     link to: $MEOPAR/NEMO-forcing/rivers-climatology
   river_turb:
-    link to: $PROJECT/SalishSea/forcing/rivers/river_turb
+    link to: $PROJECT/SalishSea/forcing/rivers/turbidity_201906
   ssh:
     link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
   tides:
@@ -31,7 +30,7 @@ forcing:
 
 restart:
   restart.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01apr15/SalishSea_01088640_restart.nc
-
+  restart_trc.nc: $MEOPAR/NEMO-forcing/restarts/HC201812/01apr15/SalishSea_01088640_restart_trc.nc
 grid:
   bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
   coordinates: $MEOPAR/NEMO-forcing/grid/coordinates_seagrid_SalishSea201702.nc
@@ -39,19 +38,20 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ../SS-SMELT/testTVDSinkSSC/namelist_cfg
+  - ./namelist_cfg_namrun
+  - ./namelist_cfg_base
   namelist_top_cfg:
-  - ./namelist_top_cfg_trace3
-  namelist_smelt_cfg:
-  - ./namelist_trace3_cfg_A
-  namelist_smelt_ref:
+  - ./namelist_top_cfg
+  namelist_trace3_cfg:
+  - ./namelist_trace3_cfg
+  namelist_trace3_ref:
   - ./namelist_trace3_ref
 
 output:
   XIOS servers: 1
   filedefs: ./file_def.xml
   domaindefs: ./domain_def.xml_fluxes
-  fielddefs: ./field_def.xml_TRACE3
+  fielddefs: ./field_def.xml_trdtrc
   iodefs: ./iodef.xml_fluxes
   separate XIOS server: True
 

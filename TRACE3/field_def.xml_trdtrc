@@ -772,6 +772,204 @@
        <field id="TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
        <field id="TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
        <field id="TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+       <field id="TUR1_E3T"     long_name="TUR1 * E3T"                    unit="NTU*m"  > TUR1 * e3t </field >
+       <field id="TUR2_E3T"     long_name="TUR2 * E3T"                    unit="NTU*m"  > TUR2 * e3t </field >
+       <field id="TUR3_E3T"     long_name="TUR3 * E3T"                    unit="NTU*m"  > TUR3 * e3t </field >
+       <field id="TUR4_E3T"     long_name="TUR4 * E3T"                    unit="NTU*m"  > TUR4 * e3t </field >
+       <field id="TUR5_E3T"     long_name="TUR5 * E3T"                    unit="NTU*m"  > TUR5 * e3t </field >
+       <field id="TUR6_E3T"     long_name="TUR6 * E3T"                    unit="NTU*m"  > TUR6 * e3t </field >
+       <field id="TUR7_E3T"     long_name="TUR7 * E3T"                    unit="NTU*m"  > TUR7 * e3t </field >
+       <field id="TUR8_E3T"     long_name="TUR8 * E3T"                    unit="NTU*m"  > TUR8 * e3t </field >
+       <field id="TUR9_E3T"     long_name="TUR9 * E3T"                    unit="NTU*m"  > TUR9 * e3t </field >
+       <field id="TUR10_E3T"     long_name="TUR10 * E3T"                    unit="NTU*m"  > TUR10 * e3t </field >
+     </field_group>
+
+     <field_group id="ptrc_T" grid_ref="grid_U_3D">
+       <field id="ATX_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="ATX_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="ATX_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="ATX_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="ATX_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="ATX_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="ATX_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="ATX_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="ATX_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="ATX_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+     </field_group>
+
+     <field_group id="ptrc_T" grid_ref="grid_V_3D">
+       <field id="ATY_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="ATY_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="ATY_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="ATY_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="ATY_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="ATY_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="ATY_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="ATY_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="ATY_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="ATY_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+     </field_group>
+
+     <field_group id="ptrc_T" grid_ref="grid_W_3D">
+       <field id="ATZ_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="ATZ_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="ATZ_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="ATZ_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="ATZ_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="ATZ_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="ATZ_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="ATZ_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="ATZ_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="ATZ_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+     </field_group>
+
+     <field_group id="ptrc_T" grid_ref="grid_U_3D">
+       <field id="DTX_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="DTX_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="DTX_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="DTX_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="DTX_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="DTX_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="DTX_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="DTX_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="DTX_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="DTX_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+     </field_group>
+
+     <field_group id="ptrc_T" grid_ref="grid_V_3D">
+       <field id="DTY_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="DTY_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="DTY_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="DTY_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="DTY_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="DTY_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="DTY_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="DTY_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="DTY_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="DTY_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+     </field_group>
+
+     <field_group id="ptrc_T" grid_ref="grid_T_3D">
+       <field id="XAD_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="XAD_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="XAD_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="XAD_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="XAD_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="XAD_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="XAD_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="XAD_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="XAD_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="XAD_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+       <field id="YAD_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="YAD_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="YAD_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="YAD_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="YAD_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="YAD_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="YAD_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="YAD_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="YAD_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="YAD_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+       <field id="ZAD_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="ZAD_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="ZAD_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="ZAD_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="ZAD_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="ZAD_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="ZAD_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="ZAD_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="ZAD_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="ZAD_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+       <field id="LDF_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="LDF_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="LDF_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="LDF_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="LDF_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="LDF_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="LDF_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="LDF_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="LDF_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="LDF_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+       <field id="BBL_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="BBL_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="BBL_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="BBL_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="BBL_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="BBL_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="BBL_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="BBL_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="BBL_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="BBL_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+       <field id="FOR_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="FOR_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="FOR_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="FOR_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="FOR_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="FOR_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="FOR_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="FOR_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="FOR_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="FOR_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+       <field id="ZDF_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="ZDF_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="ZDF_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="ZDF_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="ZDF_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="ZDF_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="ZDF_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="ZDF_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="ZDF_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="ZDF_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+       <field id="DMP_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="DMP_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="DMP_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="DMP_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="DMP_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="DMP_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="DMP_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="DMP_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="DMP_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="DMP_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+       <field id="SMS_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="SMS_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="SMS_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="SMS_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="SMS_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="SMS_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="SMS_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="SMS_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="SMS_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="SMS_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+       <field id="ATF_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="ATF_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="ATF_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="ATF_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="ATF_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="ATF_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="ATF_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="ATF_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="ATF_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="ATF_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+       <field id="RDB_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="RDB_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="RDB_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="RDB_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="RDB_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="RDB_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="RDB_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="RDB_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="RDB_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="RDB_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
+       <field id="RDN_TUR1"         long_name="Fraser Tracer 1"                          unit=" NTU " />
+       <field id="RDN_TUR2"         long_name="Fraser Tracer 2"                          unit=" NTU " />
+       <field id="RDN_TUR3"         long_name="Fraser Tracer 3"                          unit=" NTU " />
+       <field id="RDN_TUR4"         long_name="Fraser Tracer 4"                          unit=" NTU " />
+       <field id="RDN_TUR5"         long_name="Fraser Tracer 5"                          unit=" NTU " />
+       <field id="RDN_TUR6"         long_name="Fraser Tracer 6"                          unit=" NTU " />
+       <field id="RDN_TUR7"         long_name="Fraser Tracer 7"                          unit=" NTU " />
+       <field id="RDN_TUR8"         long_name="Fraser Tracer 8"                          unit=" NTU " />
+       <field id="RDN_TUR9"         long_name="Fraser Tracer 9"                          unit=" NTU " />
+       <field id="RDN_TUR10"        long_name="Fraser Tracer 10"                         unit=" NTU " />
      </field_group>
 
      <field_group id="ptrc_T" grid_ref="grid_U_3D">
@@ -1101,6 +1299,26 @@
      <!-- PISCES additional diagnostics on T grid  -->
 
      <field_group id="diad_T" grid_ref="grid_T_3D">
+       <field id="TVDPTB1"      long_name="ztransp"                       unit=" NTU " grid_ref="grid_W_3D" />
+       <field id="ZWZA"         long_name="ztransp"                       unit=" NTU " grid_ref="grid_W_3D" />
+       <field id="ZWZB"         long_name="ztransp"                       unit=" NTU " grid_ref="grid_W_3D" />
+       <field id="ZWZC"         long_name="ztransp"                       unit=" NTU " grid_ref="grid_W_3D" />
+       <field id="BIOSINK1"         long_name="ztransp"                       unit=" NTU " grid_ref="grid_W_3D" />
+       <field id="E1E2TA"         long_name="ztransp"                       unit=" NTU " grid_ref="grid_T_2D" />
+       <field id="E1E2TASP"         long_name="ztransp"                       unit=" NTU " grid_ref="grid_W_3D" />
+       <field id="ZWN1"            long_name="ztransp"                       unit=" NTU " grid_ref="grid_W_3D" />
+       <field id="ZWNBIO1"            long_name="ztransp bio"                unit=" NTU " grid_ref="grid_W_3D" />
+       <field id="ZWNBIO2"            long_name="ztransp bio"                unit=" NTU " grid_ref="grid_W_3D" />
+       <field id="RIVTRA0"         long_name="RA01"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="RIVTRA1"         long_name="RA11"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="RIVTRA2"         long_name="RA21"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="RIVTRB0"         long_name="RB01"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="RIVTRB1"         long_name="RB11"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="RIVTRB2"         long_name="RB21"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="RIVTRN0"         long_name="RN01"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="RIVTRN1"         long_name="RN11"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="RIVTRN2"         long_name="RN21"                          unit=" NTU " grid_ref="grid_T_3D" />
+       <field id="SFTURB"      long_name="turb forcing"                      unit=" NTU " grid_ref="grid_T_2D" />
        <field id="PAR"         long_name="Photosynthetically Available Radiation"  unit="W/m2"          grid_ref="grid_T_3D" />
        <field id="PPDIAT"      long_name="Primary production of diatoms"           unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="PPPHY"       long_name="Primary production of small phyto"       unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
