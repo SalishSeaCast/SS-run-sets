@@ -37,7 +37,7 @@ namelists:
   - namelist_cfgs/namelist_cfg_namrun_20171008_20d
   - ./namelist_cfg_base
   namelist_top_cfg:
-  - namelist_top_cfg_rst
+  - namelist_top_cfg_trace3_rst
   namelist_trace3_cfg:
   - namelist_trace3_cfg_AT0
   namelist_trace3_ref:
