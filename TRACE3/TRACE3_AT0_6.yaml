@@ -3,7 +3,7 @@ account: rrg-allen
 MPI decomposition: 16x41
 config_name: TRACE3
 run_id: TRACE3_AT0_6
-walltime: '3:00:00'
+walltime: 6:00:00
 forcing:
   LiveOcean:
     link to: $PROJECT/SalishSea/forcing/LiveOcean
