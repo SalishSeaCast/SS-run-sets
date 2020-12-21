@@ -44,7 +44,7 @@ namelists:
   - ./namelist_trace3_ref
 output:
   XIOS servers: 1
-  filedefs: file_def.xml_1d
+  filedefs: file_def.xml_1d_p
   domaindefs: ./domain_def.xml_fluxes
   fielddefs: ./field_def.xml_trdtrc
   iodefs: ./iodef.xml_fluxes
