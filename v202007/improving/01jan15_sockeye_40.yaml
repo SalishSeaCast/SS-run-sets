@@ -1,7 +1,7 @@
 email: sallen@eoas.ubc.ca
 MPI decomposition: 18x30
 config_name: SalishSeaCast
-run_id: 01jan15
+run_id: 01jan15_098
 walltime: 92:00:00
 
 forcing:
@@ -42,7 +42,7 @@ namelists:
   - $PROJECT/SS-run-sets/v202007/namelist.domain
   - $PROJECT/SS-run-sets/v202007/improving/namelist.atmos_rivers_smooth
   - $PROJECT/SS-run-sets/v202007/namelist.light
-  - $PROJECT/SS-run-sets/v202007/namelist.lateral
+  - $PROJECT/SS-run-sets/v202007/improving/namelist.lateral_098
   - $PROJECT/SS-run-sets/v202007/namelist.bottom
   - $PROJECT/SS-run-sets/v202007/namelist.tracer
   - $PROJECT/SS-run-sets/v202007/namelist.dynamics
