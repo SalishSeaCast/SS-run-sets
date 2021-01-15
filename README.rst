@@ -13,7 +13,7 @@ License
     :target: https://www.apache.org/licenses/LICENSE-2.0
     :alt: Licensed under the Apache License, Version 2.0
 
-The SalisCastSea NEMO run-sets are copyright 2013-2020 by the `Salish Sea MEOPAR Project Contributors`_ and The University of British Columbia.
+The SalisCastSea NEMO run-sets are copyright 2013-2021 by the `Salish Sea MEOPAR Project Contributors`_ and The University of British Columbia.
 
 They are licensed under the Apache License, Version 2.0.
 http://www.apache.org/licenses/LICENSE-2.0
