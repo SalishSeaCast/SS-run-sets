@@ -59,14 +59,13 @@ namelists:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.vertical
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.compute
   namelist_smelt_cfg:
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/improving/namelist_smelt_biology_202007C
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/improving/namelist_smelt_biology_202007C_lowR
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist_smelt_rivers
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist_smelt_skog
   namelist_top_cfg:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist_top_restart
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist_top_TracerDefAndBdy
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist_top_physics
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/improving/namelist_top_trdtrc
   
 output:
   XIOS servers: 1
