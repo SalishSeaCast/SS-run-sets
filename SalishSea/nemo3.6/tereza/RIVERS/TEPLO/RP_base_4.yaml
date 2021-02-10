@@ -2,7 +2,7 @@ run_id: RP_base_4
 config_name: SalishSeaCast
 account: rrg-allen
 email: tjarnik@gmail.com
-MPI decomposition: 16x41
+MPI decomposition: 18x31 #!16x41
 walltime: 12:00:00
 
 
@@ -30,7 +30,7 @@ forcing:
     link to: $PROJECT/tjarnik/MEOPAR/tracers
 
 restart:
-  restart.nc: /scratch/tjarnik/TEPLO/02mar17/SalishSeaCast_02667600_restart.nc
+  restart.nc: /scratch/tjarnik/TEPLO/02mar17/SalishSeaCast_MOD_02667600_restart.nc
   restart_trc.nc: /scratch/tjarnik/TEPLO/02mar17/SalishSeaCast_02667600_restart_trc.nc
 
     
