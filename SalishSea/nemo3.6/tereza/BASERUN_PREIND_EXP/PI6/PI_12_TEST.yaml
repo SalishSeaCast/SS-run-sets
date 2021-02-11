@@ -3,7 +3,7 @@ account: rrg-allen
 MPI decomposition: 18x31
 config_name: SKOG
 run_id: pi12
-walltime: 11:50:00
+walltime: 3:50:00
 
 forcing:
   LiveOcean:
@@ -37,8 +37,8 @@ forcing:
     link to: $PROJECT/tjarnik/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
 restart:
-  restart.nc: /scratch/tjarnik/PI5/28oct15/SKOG_03183840_restart.nc
-  restart_trc.nc: /scratch/tjarnik/PI5/28oct15/SKOG_03183840_restart_trc.nc
+  restart.nc: /scratch/tjarnik/PI6_test/SKOG_03183840_restart.nc
+  restart_trc.nc: /scratch/tjarnik/PI6_test/SKOG_03183840_restart_trc.nc
 
 
 grid:            
