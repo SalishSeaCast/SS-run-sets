@@ -1,8 +1,8 @@
 email: tjarnik@gmail.com
 account: rrg-allen
-MPI decomposition: 15x28
+MPI decomposition: 18x31
 config_name: SKOG
-run_id: pi5_1
+run_id: pi6_1
 walltime: 11:50:00
 
 forcing:
@@ -29,16 +29,10 @@ forcing:
     link to: $PROJECT/tjarnik/MEOPAR/tracers
 
 
-  initial_data_file.nc:
-    link to: $PROJECT/tjarnik/MEOPAR/tracers/initial/Bathy201702_12nov14.nc
-  initial_bio_data_file.nc:
-    link to: $PROJECT/tjarnik/MEOPAR/tracers/initial/BioIC_SMELT_v20180706.nc
-  initial_car_data_file.nc:
-    link to: $PROJECT/tjarnik/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
 restart:
-  restart.nc: /scratch/tjarnik/PI5/SKOG_PI_02471040_restart.nc
-  restart_trc.nc: /scratch/tjarnik/PI5/SKOG_PI_02471040_restart_trc.nc
+  restart.nc: /scratch/tjarnik/PI6/SKOG_03259440_restart.nc
+  restart_trc.nc: /scratch/tjarnik/PI6/SKOG_03259440_restart_trc.nc
 
 
 grid:            
@@ -52,7 +46,7 @@ namelists:
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
-  - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.lateral
+  - ./namelist.lateral
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.bottom
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.tracer
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.dynamics
@@ -82,12 +76,9 @@ paths:
   runs directory: $SCRATCH
 
 vcs revisions:
-  hg:
+  git:
   - $PROJECT/tjarnik/MEOPAR/grid
-  - $PROJECT/tjarnik/MEOPAR/NEMO-Cmd
   - $PROJECT/tjarnik/MEOPAR/rivers-climatology
-  - $PROJECT/tjarnik/MEOPAR/SalishSeaCmd
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets
   - $PROJECT/tjarnik/MEOPAR/tides
   - $PROJECT/tjarnik/MEOPAR/tracers
-  - $PROJECT/tjarnik/MEOPAR/XIOS-ARCH
