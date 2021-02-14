@@ -1,8 +1,8 @@
 email: tjarnik@gmail.com
 account: rrg-allen
-MPI decomposition: 15x28
+MPI decomposition: 18x31
 config_name: SKOG
-run_id: pirr_2
+run_id: pi6_2
 walltime: 11:50:00
 
 forcing:
@@ -29,16 +29,10 @@ forcing:
     link to: $PROJECT/tjarnik/MEOPAR/tracers
 
 
-  initial_data_file.nc:
-    link to: $PROJECT/tjarnik/MEOPAR/tracers/initial/Bathy201702_12nov14.nc
-  initial_bio_data_file.nc:
-    link to: $PROJECT/tjarnik/MEOPAR/tracers/initial/BioIC_SMELT_v20180706.nc
-  initial_car_data_file.nc:
-    link to: $PROJECT/tjarnik/MEOPAR/tracers/initial/init_DICTAOXY_072718.nc
 
 restart:
-  restart.nc: /scratch/tjarnik/PILA4/PI4/01jan15/SKOG_02535840_restart.nc
-  restart_trc.nc: /scratch/tjarnik/PI5/01jan15/SKOG_02535840_restart_trc.nc
+  restart.nc: /scratch/tjarnik/PI6/01jan15/SKOG_03324240_restart.nc
+  restart_trc.nc: /scratch/tjarnik/PI6/01jan15/SKOG_03324240_restart_trc.nc
 
 
 grid:            
@@ -82,12 +76,9 @@ paths:
   runs directory: $SCRATCH
 
 vcs revisions:
-  hg:
+  git:
   - $PROJECT/tjarnik/MEOPAR/grid
-  - $PROJECT/tjarnik/MEOPAR/NEMO-Cmd
   - $PROJECT/tjarnik/MEOPAR/rivers-climatology
-  - $PROJECT/tjarnik/MEOPAR/SalishSeaCmd
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets
   - $PROJECT/tjarnik/MEOPAR/tides
   - $PROJECT/tjarnik/MEOPAR/tracers
-  - $PROJECT/tjarnik/MEOPAR/XIOS-ARCH
