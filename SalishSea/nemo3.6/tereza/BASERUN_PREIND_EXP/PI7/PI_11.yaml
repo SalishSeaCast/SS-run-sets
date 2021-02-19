@@ -31,8 +31,8 @@ forcing:
 
 
 restart:
-  restart.nc: /scratch/tjarnik/PI7/28sep15/SKOG_04771440_restart.nc
-  restart_trc.nc: /scratch/tjarnik/PI7/28sep15/SKOG_04771440_restart_trc.nc
+  restart.nc: /scratch/tjarnik/PI7/28sep15/SKOG_04695840_restart.nc
+  restart_trc.nc: /scratch/tjarnik/PI7/28sep15/SKOG_04695840_restart_trc.nc
 
 
 grid:            
