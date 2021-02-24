@@ -2,7 +2,7 @@ email: tjarnik@gmail.com
 account: rrg-allen
 MPI decomposition: 18x31
 config_name: SKOG
-run_id: pi6_3
+run_id: pi6_2
 walltime: 11:50:00
 
 forcing:
@@ -31,8 +31,8 @@ forcing:
 
 
 restart:
-  restart.nc: /scratch/tjarnik/PI7/31jan15/SKOG_04177440_restart.nc
-  restart_trc.nc: /scratch/tjarnik/PI7/31jan15/SKOG_04177440_restart_trc.nc
+  restart.nc: /scratch/tjarnik/PI8/01jan15/SKOG_04901040_restart.nc
+  restart_trc.nc: /scratch/tjarnik/PI8/01jan15/SKOG_04901040_restart_trc.nc
 
 
 grid:            
@@ -42,7 +42,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time3
+  - ./namelist.time2
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
