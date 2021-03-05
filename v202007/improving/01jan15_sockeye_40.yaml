@@ -1,8 +1,8 @@
 email: sallen@eoas.ubc.ca
 MPI decomposition: 18x30
 config_name: SalishSeaCast
-run_id: 01jan15_098
-walltime: 80:00:00
+run_id: 01jan15_graze
+walltime: 50:00:00
 
 forcing:
   LiveOcean:
@@ -38,7 +38,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time_01jan15
+  - ./namelist.time_01jan15_thirdyear
   - $PROJECT/SS-run-sets/v202007/namelist.domain
   - $PROJECT/SS-run-sets/v202007/improving/namelist.atmos_rivers_smooth
   - $PROJECT/SS-run-sets/v202007/namelist.light
@@ -60,7 +60,7 @@ namelists:
 
 output:
   XIOS servers: 1
-  filedefs: $PROJECT/SS-run-sets/v202007/improving/file_def_dailysplit_noptrchour.xml
+  filedefs: $PROJECT/SS-run-sets/v202007/improving/file_def_dailysplit_less_buteval.xml
   domaindefs: $PROJECT/SS-run-sets/v202007/domain_def.xml
   fielddefs: $PROJECT/SS-run-sets/v202007/field_def.xml
   iodefs: $PROJECT/SS-run-sets/v202007/iodef.xml
