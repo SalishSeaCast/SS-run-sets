@@ -1,9 +1,0 @@
-!! Domain configuration
-!!
-&namtsa_halo        !   analytical : halocline depth
-!-----------------------------------------------------------------------
-rn_istate_yvary      = .false.              !  Vary initial stratification with y
-rn_istate_y1         =  0.                  !  Southern y variation point (deepest halocline)
-rn_istate_y2         =  0.                  !  Northern y variation point (shallowest halocline)
-rn_istate_halocline  =  20.                 !  Halocline depth (constant or maximum)
-&end
