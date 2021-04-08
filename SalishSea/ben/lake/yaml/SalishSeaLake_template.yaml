@@ -89,13 +89,8 @@ namelists:
     - ../namelist.dynamics
     - ../namelist.vertical
     - ../namelist.compute
-<<<<<<< HEAD:SalishSea/ben/lake/yaml/SalishSeaLake_S022Nm2_N0075s.yaml
-    - ../namelist.awind.S022Nm2
-    - ../namelist.istate.N0075s
-=======
     - ../namelists_awind/namelist.awind.taustr
     - ../namelists_istate/namelist.istate.Nstr
->>>>>>> a3d7316d (New automated runset for SalishSeaIdeal):SalishSea/ben/lake/yaml/SalishSeaLake_template.yaml
 
 output:
   # If relative, paths are taken from current directory
