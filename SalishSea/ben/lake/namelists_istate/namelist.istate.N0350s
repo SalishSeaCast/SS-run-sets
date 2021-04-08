@@ -1,0 +1,10 @@
+!! Domain configuration
+!!
+&namtsa        !   analytical : Temperature  & Salinity
+!-----------------------------------------------------------------------
+rn_istate_tsurf     = 10.0              !  Surface temperature
+rn_istate_tdeep     = 10.0              !  Deep temperature
+rn_istate_ssurf     =  3.2              !  Surface salinity
+rn_istate_sdeep     = 35.0              !  Deep salinity
+rn_istate_kdepth    =  31               !  Gradient depth index
+&end

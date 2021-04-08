@@ -13,7 +13,7 @@ MPI decomposition: 5x19
 # For runs on systems that use qsub/PBS/TORQUE
 #
 # If relative, paths are taken from current directory
-run_id: SalishSeaLake_S179Nm2_N0100s
+run_id: SalishSeaLake_S045Nm2_N0400s
 # Maximum run time requested/allowed for job
 # Too low and you job will be terminated before it finishes
 # Too high and you will have to wait longer on the queue for your job to start
@@ -23,8 +23,6 @@ walltime: 03:00:00
 # If missing, email address is set to ${USER}@eos.ubc.ca
 email: bmoorema@eoas.ubc.ca
 
-<<<<<<< HEAD
-=======
 # For runs on systems that use sbatch/SLURM
 #
 # **Optional**
@@ -33,7 +31,6 @@ email: bmoorema@eoas.ubc.ca
 # other systems
 account: def-allen
 
->>>>>>> a3d7316d (New automated runset for SalishSeaIdeal)
 paths:
   # Absolute path to NEMO-3.6 CONFIG/ directory.
   # You can use ~, $USER, $HOME if you wish.
@@ -43,7 +40,7 @@ paths:
   XIOS: $HOME/MEOPAR/XIOS-2
   # Directory in which to create temporary run directories
   # Typically NOT inside a version control repository
-  runs directory: $SCRATCH/Results/Lake/SalishSeaLake_S179Nm2_N0100s
+  runs directory: $SCRATCH/Results/Lake/SalishSeaLake_S045Nm2_N0400s
 
 grid:
   # If relative, paths are taken from the grid/ directory in the forcing
@@ -83,19 +80,6 @@ namelists:
   #
   # If relative, paths are taken from current directory
   namelist_cfg:
-<<<<<<< HEAD
-    - ../namelist.time
-    - ../namelist.domain.lake
-    - ../namelist.atmos_rivers
-    - ../namelist.light
-    - ../namelist.bottom
-    - ../namelist.tracer
-    - ../namelist.dynamics
-    - ../namelist.vertical
-    - ../namelist.compute
-    - ../namelist.awind.S179Nm2
-    - ../namelist.istate.N0100s
-=======
   - ../namelist.time
   - ../namelist.domain.lake
   - ../namelist.atmos_rivers
@@ -105,9 +89,8 @@ namelists:
   - ../namelist.dynamics
   - ../namelist.vertical
   - ../namelist.compute
-  - ../namelists_awind/namelist.awind.S179Nm2
-  - ../namelists_istate/namelist.istate.N0100s
->>>>>>> a3d7316d (New automated runset for SalishSeaIdeal)
+  - ../namelists_awind/namelist.awind.S045Nm2
+  - ../namelists_istate/namelist.istate.N0400s
 
 output:
   # If relative, paths are taken from current directory
@@ -115,28 +98,13 @@ output:
   filedefs: ../file_def.xml
   domaindefs: ../domain_def.xml
   fielddefs: ../field_def.xml
-<<<<<<< HEAD
-  separate XIOS server: True
-=======
   separate XIOS server: true
->>>>>>> a3d7316d (New automated runset for SalishSeaIdeal)
   XIOS servers: 1
 
 vcs revisions:
   git:
-<<<<<<< HEAD
-    - $HOME/MEOPAR/SS-run-sets
-    - $HOME/MEOPAR/grid
-    - $HOME/MEOPAR/rivers-climatology
-    - $HOME/MEOPAR/tides
-    - $HOME/MEOPAR/tracers
-    - $HOME/MEOPAR/NEMO-Cmd
-    - $HOME/MEOPAR/SalishSeaCmd
-    - $HOME/MEOPAR/XIOS-ARCH
-=======
   - $HOME/MEOPAR/SS-run-sets
   - $HOME/MEOPAR/grid
   - $HOME/MEOPAR/NEMO-Cmd
   - $HOME/MEOPAR/SalishSeaCmd
   - $HOME/MEOPAR/XIOS-ARCH
->>>>>>> a3d7316d (New automated runset for SalishSeaIdeal)

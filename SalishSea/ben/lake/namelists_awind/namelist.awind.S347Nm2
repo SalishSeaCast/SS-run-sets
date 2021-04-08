@@ -1,0 +1,37 @@
+!!======================================================================
+!!            ***  Surface Boundary Condition namelists  ***
+!!
+!! sets boundary conditions for surface features and rivers.  Note that
+!! this file only includes the subset of namelists we use and furthermore
+!! only the variables we typically change. Note that incoming solar
+!! radiation has its own namelist file
+!!======================================================================
+!! Included namelists:
+!!   namsbc_ana      analytical         formulation
+!!======================================================================
+!! Not included namelists:
+!!   namsbc          surface boundary condition
+!!   namsbc_core     CORE bulk formulae formulation
+!!   namsbc_rnf      river runoffs
+!!   namsbc_apr      Atmospheric Pressure
+!!   namsbc_flx      flux               formulation
+!!   namsbc_clio     CLIO bulk formulae formulation
+!!   namsbc_mfs      MFS  bulk formulae formulation
+!!   namsbc_cpl      CouPLed            formulation       ("key_coupled")
+!!   namsbc_sas      StAndalone Surface module
+!!   namsbc_isf      ice shelf melting/freezing
+!!   namsbc_ssr      sea surface restoring term (for T and/or S)
+!!   namsbc_wave     external fields from wave model
+!!======================================================================
+!!
+!!
+!-----------------------------------------------------------------------
+&namsbc_ana    !   analytical surface boundary condition
+!-----------------------------------------------------------------------
+   rn_utau0    =   -0.155   !  uniform value for the i-stress
+   rn_vtau0    =    0.310   !  uniform value for the j-stress
+   nn_tau000   =        1   !  timestep to start wind ramp up
+   nn_tau001   =        1   !  timestep of peak wind (0 hr)
+   nn_tau002   =    10800   !  timestep to begin wind rampdown (5 d)
+   nn_tau003   =    10800   !  timestep to end wind ramp down (0 hr)
+&end
