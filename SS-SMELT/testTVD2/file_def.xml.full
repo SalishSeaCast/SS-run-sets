@@ -1,0 +1,101 @@
+<!--
+============================================================================================================
+=                                           output files definition                                        =
+=                                            Define your own files                                         =
+=                                         put the variables you want...                                    =
+============================================================================================================
+    -->
+    <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4">
+      <file_group id="1ts" output_freq="1ts"  output_level="10" enabled=".TRUE."/> <!-- 1 time step files -->
+      <file_group id="1h" output_freq="1h"  output_level="10" split_freq="1d" enabled=".TRUE."/> <!-- 1h files -->
+      <file_group id="2h" output_freq="2h"  output_level="10" split_freq="1d" enabled=".TRUE."/> <!-- 2h files -->
+      <file_group id="3h" output_freq="3h"  output_level="10" enabled=".TRUE."/> <!-- 3h files -->
+      <file_group id="4h" output_freq="4h"  output_level="10" enabled=".FALSE."/> <!-- 4h files -->
+      <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."/> <!-- 6h files -->
+      <file_group id="1d" output_freq="1d"  output_level="10" split_freq="1d" enabled=".TRUE."> <!-- 1d files -->
+        <file id="file1" name_suffix="_dian_T" description="diagnostics" >
+          <field field_ref="RIV_NO3"    />
+          <field field_ref="RIV_DIAT"    />
+          <field field_ref="REM_NO3"    />
+          <field field_ref="PRD_NO3"    />
+        </file>
+        <file id="file2" name_suffix="_dia1_T" description="diagnostics" >
+          <field field_ref="ATF_NO3"    />
+          <field field_ref="ATF_DIAT"    />
+          <field field_ref="BFX_PON"    />
+          <field field_ref="BFX_DIAT"   />
+        </file>
+        <file id="file4" name_suffix="_rad_T" description="diagnostics" >
+          <field field_ref="RDB_NO3"    />
+          <field field_ref="RDB_DIAT"    />
+          <field field_ref="RDN_NO3"    />
+          <field field_ref="RDN_DIAT"    />
+        </file>
+         <file id="file5" name_suffix="_ptrc_T" description="biogeochemical variables" >
+          <field field_ref="NO3"      name="nitrate"                       />
+          <field field_ref="DIAT"     name="diatoms"                       />
+          <field field_ref="PHY"      name="flagellates"                   />
+          <field field_ref="MYRI"     name="ciliates"                      />
+          <field field_ref="DON"      name="dissolved_organic_nitrogen"    />
+          <field field_ref="PON"      name="particulate_organic_nitrogen"  />
+          <field field_ref="bSi"      name="biogenic_silicon"              />
+        </file>
+        <file id="file6" name_suffix="_Sutil_V" description="N transports" >
+          <field field_ref="ATY_NO3"        grid_ref="Sutil_grid"/>
+          <field field_ref="ATY_DIAT"        grid_ref="Sutil_grid"/>
+          <field field_ref="DTY_NO3"        grid_ref="Sutil_grid"/>
+          <field field_ref="DTY_DIAT"        grid_ref="Sutil_grid"/>
+        </file>
+        <file id="file7" name_suffix="_Haro_V" description="N transports" >
+          <field field_ref="ATY_NO3"        grid_ref="Haro_grid"/>
+          <field field_ref="ATY_DIAT"        grid_ref="Haro_grid"/>
+          <field field_ref="DTY_NO3"        grid_ref="Haro_grid"/>
+          <field field_ref="DTY_DIAT"        grid_ref="Haro_grid"/>
+        </file>
+        <file id="file8" name_suffix="_SJC_V" description="N transports" >
+          <field field_ref="ATY_NO3"         grid_ref="SJC_grid"/>
+          <field field_ref="ATY_DIAT"         grid_ref="SJC_grid"/>
+          <field field_ref="DTY_NO3"         grid_ref="SJC_grid"/>
+          <field field_ref="DTY_DIAT"         grid_ref="SJC_grid"/>
+        </file>
+        <file id="file9" name_suffix="_Rosario_V" description="N transports" >
+          <field field_ref="ATY_NO3"        grid_ref="Rosario_grid"/>
+          <field field_ref="ATY_DIAT"        grid_ref="Rosario_grid"/>
+          <field field_ref="DTY_NO3"        grid_ref="Rosario_grid"/>
+          <field field_ref="DTY_DIAT"        grid_ref="Rosario_grid"/>
+        </file>
+        <file id="file10" name_suffix="_Discovery_V" description="N transports" >
+          <field field_ref="ATY_NO3"         grid_ref="Discovery_grid"/>
+          <field field_ref="ATY_DIAT"         grid_ref="Discovery_grid"/>
+          <field field_ref="DTY_NO3"         grid_ref="Discovery_grid"/>
+          <field field_ref="DTY_DIAT"         grid_ref="Discovery_grid"/>
+        </file>
+        <file id="file11" name_suffix="_Malaspina_U" description="N transports" >
+          <field field_ref="ATX_NO3"        grid_ref="Malaspina_grid"/>
+          <field field_ref="ATX_DIAT"        grid_ref="Malaspina_grid"/>
+          <field field_ref="DTX_NO3"        grid_ref="Malaspina_grid"/>
+          <field field_ref="DTX_DIAT"        grid_ref="Malaspina_grid"/>
+        </file>
+      </file_group>
+      <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
+      <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE.">  <!-- 5d files -->
+        <file id="file17" name_suffix="_snp_T" description="diagnostics" >
+          <field field_ref="NO3_E3TSNAP"    />
+          <field field_ref="DIAT_E3TSNAP"   />
+        </file>
+      </file_group>
+      <file_group id="1m" output_freq="1mo" output_level="10" enabled=".TRUE."/> <!-- real monthly files -->
+      <file_group id="2m" output_freq="2mo" output_level="10" enabled=".TRUE."/> <!-- real 2m files -->
+      <file_group id="3m" output_freq="3mo" output_level="10" enabled=".TRUE."/> <!-- real 3m files -->
+      <file_group id="4m" output_freq="4mo" output_level="10" enabled=".TRUE."/> <!-- real 4m files -->
+      <file_group id="6m" output_freq="6mo" output_level="10" enabled=".TRUE."/> <!-- real 6m files -->
+      <file_group id="1y"  output_freq="1y" output_level="10" enabled=".TRUE."/> <!-- real yearly files -->
+      <file_group id="2y"  output_freq="2y" output_level="10" enabled=".TRUE."/> <!-- real 2y files -->
+      <file_group id="5y"  output_freq="5y" output_level="10" enabled=".TRUE."/> <!-- real 5y files -->
+      <file_group id="10y" output_freq="10y" output_level="10" enabled=".TRUE."/> <!-- real 10y files -->
+      <file_group id="20min" output_freq="1200s" output_level="10" split_freq="1d" enabled=".TRUE."> <!-- 20 minute files -->
+      </file_group>
+      <file_group id="10min" output_freq="600s" output_level="10" split_freq="1d" enabled=".TRUE."> <!-- 10 minute files -->
+      </file_group>
+
+   </file_definition>
