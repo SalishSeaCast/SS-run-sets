@@ -2,7 +2,7 @@ email: tjarnik@gmail.com
 account: rrg-allen
 MPI decomposition: 18x31
 config_name: SKOG
-run_id: pi6_3
+run_id: pi6_6
 walltime: 11:50:00
 
 forcing:
@@ -28,11 +28,9 @@ forcing:
   tracers:
     link to: $PROJECT/tjarnik/MEOPAR/tracers
 
-
-
 restart:
-  restart.nc: /scratch-deleted-2021-mar-20/tjarnik/PI9/31jan15/SKOG_05754240_restart.nc
-  restart_trc.nc: /scratch-deleted-2021-mar-20/tjarnik/PI9/31jan15/SKOG_05754240_restart_trc.nc
+  restart.nc: /scratch-deleted-2021-mar-20/tjarnik/PI9/01may15/SKOG_05948640_restart.nc
+  restart_trc.nc: /scratch-deleted-2021-mar-20/tjarnik/PI9/01may15/SKOG_05948640_restart_trc.nc
 
 
 grid:            
@@ -42,7 +40,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time3
+  - ./namelist.time6
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
@@ -73,7 +71,7 @@ output:
 paths:
   NEMO code config: $PROJECT/tjarnik/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $PROJECT/tjarnik/MEOPAR/XIOS-2
-  runs directory: /scratch-deleted-2021-mar-20/tjarnik
+  runs directory: /scratch-deleted-2021-mar-20/tjarnik/
 
 vcs revisions:
   git:
@@ -82,3 +80,4 @@ vcs revisions:
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets
   - $PROJECT/tjarnik/MEOPAR/tides
   - $PROJECT/tjarnik/MEOPAR/tracers
+  - $PROJECT/tjarnik/MEOPAR/NEMO-3.6-code

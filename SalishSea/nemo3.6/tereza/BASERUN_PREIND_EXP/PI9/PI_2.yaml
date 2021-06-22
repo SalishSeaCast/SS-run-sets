@@ -31,8 +31,8 @@ forcing:
 
 
 restart:
-  restart.nc: //scratch-deleted-2021/tjarnik/PI9/01jan15/SKOG_05765220_restart.nc
-  restart_trc.nc: //scratch-deleted-2021/tjarnik/PI9/01jan15/SKOG_05765220_restart_trc.nc
+  restart.nc: //scratch-deleted-2021-mar-20/tjarnik/PI9/01jan15/SKOG_05689440_restart.nc
+  restart_trc.nc: //scratch-deleted-2021-mar-20/tjarnik/PI9/01jan15/SKOG_05689440_restart_trc.nc
 
 
 grid:            
@@ -73,7 +73,7 @@ output:
 paths:
   NEMO code config: $PROJECT/tjarnik/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $PROJECT/tjarnik/MEOPAR/XIOS-2
-  runs directory: /scratch-deleted-2021/tjarnik
+  runs directory: /scratch-deleted-2021-mar-20/tjarnik
 
 vcs revisions:
   git:

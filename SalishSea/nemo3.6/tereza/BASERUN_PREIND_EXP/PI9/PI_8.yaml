@@ -2,7 +2,7 @@ email: tjarnik@gmail.com
 account: rrg-allen
 MPI decomposition: 18x31
 config_name: SKOG
-run_id: pi6_3
+run_id: pi6_8
 walltime: 11:50:00
 
 forcing:
@@ -31,8 +31,8 @@ forcing:
 
 
 restart:
-  restart.nc: /scratch-deleted-2021-mar-20/tjarnik/PI9/31jan15/SKOG_05754240_restart.nc
-  restart_trc.nc: /scratch-deleted-2021-mar-20/tjarnik/PI9/31jan15/SKOG_05754240_restart_trc.nc
+  restart.nc: /scratch-deleted-2021-mar-20/tjarnik/PI9/30jun15/SKOG_06078240_restart.nc
+  restart_trc.nc: /scratch-deleted-2021-mar-20/tjarnik/PI9/30jun15/SKOG_06078240_restart_trc.nc
 
 
 grid:            
@@ -42,7 +42,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time3
+  - ./namelist.time8
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.domain
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.atmos_rivers
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets/v201812/namelist.light
@@ -82,3 +82,4 @@ vcs revisions:
   - $PROJECT/tjarnik/MEOPAR/SS-run-sets
   - $PROJECT/tjarnik/MEOPAR/tides
   - $PROJECT/tjarnik/MEOPAR/tracers
+  - $PROJECT/tjarnik/MEOPAR/NEMO-3.6-code
