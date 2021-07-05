@@ -1,0 +1,7 @@
+changset:   4:98a8fd0c50344b9fa6b9d044e0fbdd67d8a121cd
+tag:        PROD-hindcast-201806-v3 PROD-hindcast-201812 PROD-hindcast_201812-v2 PROD-hindcast_201812-v3 PROD-hindcast_201812-v4 PROD-hindcast_201812-v5 PROD-hindcast_201905-v1 PROD-hindcast_201905-v2 PROD-nowcast-dev-201806 PROD-nowcast-green-201806 XIOS-2r1066
+user:       Doug Latornell <dlatornell@eoas.ubc.ca>
+date:       Sun Apr 23 18:45:49 2017 -07:00
+files:      .hgignore
+description:
+Don't track build products files and directories.

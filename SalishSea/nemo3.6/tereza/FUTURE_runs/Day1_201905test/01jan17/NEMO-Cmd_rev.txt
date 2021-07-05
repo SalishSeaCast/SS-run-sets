@@ -1,0 +1,7 @@
+changset:   614:72048a7675f2e4cf087af584d4e220e988ad9002
+tag:        tip
+user:       Doug Latornell <dlatornell@eoas.ubc.ca>
+date:       Tue Aug 27 10:32:30 2019 -07:00
+files:      nemo_cmd/prepare.py
+description:
+Fix bug re: preserving permissions of patched namelist file

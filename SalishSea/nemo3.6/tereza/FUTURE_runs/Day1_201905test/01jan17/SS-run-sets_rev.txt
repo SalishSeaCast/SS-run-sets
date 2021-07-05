@@ -1,0 +1,7 @@
+changset:   2535:7a12eaef03971a38a24349cb2435013ef1a9f7dd
+tag:        tip
+user:       Susan Allen <sallen@eoas.ubc.ca>
+date:       Thu Sep 26 17:00:44 2019 -07:00
+files:      v201905/hindcast/optimum_hindcast_template.yaml v201905/namelist_smelt_biology_190926
+description:
+Tweak the bottom Si reflection (start of 2016)

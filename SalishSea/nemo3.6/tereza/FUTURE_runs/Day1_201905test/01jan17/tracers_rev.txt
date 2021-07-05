@@ -1,0 +1,7 @@
+changset:   51:995f78a791ad98e38820eb1ea5ad0b1aeba952ba
+tag:        PROD-hindcast_201905-v2
+user:       Tereza <tjarnik@gmail.com>
+date:       Thu Aug 08 16:20:19 2019 -07:00
+files:      north/Dosser_north_TEOS10_DICTA_preind_080819.nc
+description:
+preindustrial johnstone-strait carbon conditions using Tetjana method
