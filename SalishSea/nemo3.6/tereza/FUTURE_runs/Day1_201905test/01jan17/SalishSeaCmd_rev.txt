@@ -1,0 +1,7 @@
+changset:   702:317978559d39506e06f377801a16cf7dc678f8f5
+tag:        tip
+user:       Doug Latornell <dlatornell@eoas.ubc.ca>
+date:       Fri Aug 23 18:40:47 2019 -07:00
+files:      salishsea_cmd/run.py tests/test_run.py
+description:
+Fix typos in `bind-to core` options in optimum mpiexec commands

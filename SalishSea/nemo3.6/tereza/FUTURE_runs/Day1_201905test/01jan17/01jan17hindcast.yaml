@@ -1,0 +1,75 @@
+MPI decomposition: 16x34
+config_name: SalishSeaCast
+email: sallen@eoas.ubc.ca
+forcing:
+  LiveOcean:
+    link to: $FORCING/SalishSeaCast/forcing/LiveOcean
+  NEMO-atmos:
+    link to: $FORCING/SalishSeaCast/forcing/atmospheric/GEM2.5/operational
+  bfr_coef.nc:
+    link to: $PROJECT/SalishSeaCast/hindcast-sys/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: $PROJECT/SalishSeaCast/hindcast-sys/grid
+  river_turb:
+    link to: $FORCING/SalishSeaCast/forcing/rivers/river_turb
+  rivers:
+    link to: $FORCING/SalishSeaCast/forcing/rivers
+  rivers-climatology:
+    link to: $PROJECT/SalishSeaCast/hindcast-sys/rivers-climatology
+  ssh:
+    link to: $FORCING/SalishSeaCast/forcing/sshNeahBay/obs
+  tides:
+    link to: $PROJECT/SalishSeaCast/hindcast-sys/tides
+  tracers:
+    link to: $PROJECT/SalishSeaCast/hindcast-sys/tracers
+grid:
+  bathymetry: $PROJECT/SalishSeaCast/hindcast-sys/grid/bathymetry_201702.nc
+  coordinates: $PROJECT/SalishSeaCast/hindcast-sys/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $PROJECT/SalishSeaCast/hindcast-sys/grid/bathymetry_201702.csv
+namelists:
+  namelist_cfg:
+  - $PROJECT/SalishSeaCast/hindcast-sys/runs/namelist.time
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.domain
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.atmos_rivers
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.light
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.lateral
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.bottom
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.tracer
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.dynamics
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.vertical
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist.compute
+  namelist_smelt_cfg:
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist_smelt_biology_190926
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist_smelt_rivers
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist_smelt_skog
+  namelist_top_cfg:
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist_top_restart
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist_top_TracerDefAndBdy
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/namelist_top_physics
+output:
+  XIOS servers: 1
+  domaindefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/domain_def.xml
+  fielddefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/field_def.xml
+  filedefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/hindcast/file_def_dailysplit.xml
+  iodefs: $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets/v201905/iodef.xml
+  separate XIOS server: true
+paths:
+  NEMO code config: $PROJECT/SalishSeaCast/hindcast-sys/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $PROJECT/SalishSeaCast/hindcast-sys/XIOS-2
+  runs directory: $SCRATCHDIR/hindcast.201905
+restart:
+  restart.nc: /scratch/sallen/dlatorne/hindcast.201905/26dec16/SalishSea_04732560_restart.nc
+  restart_trc.nc: /scratch/sallen/dlatorne/hindcast.201905/26dec16/SalishSea_04732560_restart_trc.nc
+run_id: 01jan17hindcast
+vcs revisions:
+  hg:
+  - $PROJECT/SalishSeaCast/hindcast-sys/grid
+  - $PROJECT/SalishSeaCast/hindcast-sys/NEMO-Cmd
+  - $PROJECT/SalishSeaCast/hindcast-sys/rivers-climatology
+  - $PROJECT/SalishSeaCast/hindcast-sys/SalishSeaCmd
+  - $PROJECT/SalishSeaCast/hindcast-sys/SS-run-sets
+  - $PROJECT/SalishSeaCast/hindcast-sys/tides
+  - $PROJECT/SalishSeaCast/hindcast-sys/tracers
+  - $PROJECT/SalishSeaCast/hindcast-sys/XIOS-2
+  - $PROJECT/SalishSeaCast/hindcast-sys/XIOS-ARCH
+walltime: '10:00:00'

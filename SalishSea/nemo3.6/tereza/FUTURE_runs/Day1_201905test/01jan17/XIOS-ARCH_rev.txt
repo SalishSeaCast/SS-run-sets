@@ -1,0 +1,7 @@
+changset:   54:d64627ec046655c6a31e9557ea2d09cdd98830c9
+tag:        PROD-hindcast_201905-v2
+user:       Doug Latornell <dlatornell@eoas.ubc.ca>
+date:       Fri Sep 13 19:04:20 2019 -07:00
+files:      UBC-EOAS/arch-GCC_OPTIMUM.env
+description:
+Change EOAS optimum cluster arch to use OpenMPI-2.1.6

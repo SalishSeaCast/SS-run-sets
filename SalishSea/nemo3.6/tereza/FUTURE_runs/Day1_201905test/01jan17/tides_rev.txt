@@ -1,0 +1,7 @@
+changset:   16:822767acfddfdda123f35b40e539ae1fb0407232
+tag:        PROD-hindcast_201905-v2
+user:       Doug Latornell <dlatornell@eoas.ubc.ca>
+date:       Wed Jul 03 13:14:03 2019 -07:00
+files:      .hgtags
+description:
+Tag PROD-nowcast-green-201812 re: change prod from 201806 to 201812 NEMO config

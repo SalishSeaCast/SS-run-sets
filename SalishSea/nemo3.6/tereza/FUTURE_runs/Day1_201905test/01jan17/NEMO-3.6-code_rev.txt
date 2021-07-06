@@ -1,0 +1,7 @@
+changset:   1700:2ca8d61c2ed8a087368b1230ddb9db155ca9a73c
+tag:        PROD-hindcast_201905-v2
+user:       Elise Olson <eolson@eos.ubc.ca>
+date:       Thu Sep 12 18:10:18 2019 -07:00
+files:      NEMOGCM/CONFIG/SMELT/MY_SRC/p4zprod.F90
+description:
+weird merge of two heads I apprently created?

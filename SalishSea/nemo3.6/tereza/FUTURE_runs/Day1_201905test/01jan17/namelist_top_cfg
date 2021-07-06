@@ -1,0 +1,175 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! NEMO/TOP1 CFG:   - tracer run information                (namtrc_run)
+!!               - tracer data initialisation            (namtrc_dta)
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+&namtrc_run     !   run information
+!-----------------------------------------------------------------------
+   nn_dttrc      =  1        !  time step frequency for passive sn_tracers
+   nn_writetrc   =  1      !  time step frequency for sn_tracer outputs
+   ln_top_euler  = .false.    !  use Euler time-stepping for TOP
+   ln_rsttr      = .true.   !  start from a restart file (T) or not (F)
+   nn_rsttr      =   0       !  restart control = 0 initial time step is not compared to the restart file value
+                           !                  = 1 do not use the value in the restart file
+                           !                  = 2 calendar parameters read in the restart file
+   cn_trcrst_in  = "restart_trc"   !  suffix of pass. sn_tracer restart name (input)
+   cn_trcrst_indir = "."           !  directory from which to read input passive tracer restarts
+   cn_trcrst_out = "restart_trc"   !  suffix of pass. sn_tracer restart name (output)
+   cn_trcrst_outdir = "."          !  directory to which to write output passive tracer restarts
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+!-----------------------------------------------------------------------
+&namtrc_dta      !    Initialisation from data input file
+!-----------------------------------------------------------------------
+/
+
+
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! NEMO/TOP1 CFG tracers:
+!!               - tracer definition                     (namtrc    )
+!!               - tracer boundaries                     (namtrc_bdy)
+!!               - tracer bdy data                       (nambdy_bc) x 2
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+&namtrc     !   tracers definition
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!                !    name   !           title of the field              ! initial data ! initial data ! obc    !    sbc  !  cbc    ! save   !
+!                !           !                                           !  units       ! from file    !                             ! or not !
+!                !           !                                           !              ! or not       !                             !        !
+   sn_tracer(1)  = 'NO3     ' , 'Nitrates Concentration                 ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(2)  = 'NH4     ' , 'Ammonium Concentration                 ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(3)  = 'Si      ' , 'Silicate Concentration                 ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(4)  = 'DIAT    ' , 'Diatoms Concentration                  ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(5)  = 'PHY     ' , 'Nanophytoplankton Concentration        ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(6)  = 'MYRI    ' , 'Mesozooplankton Concentration          ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(7)  = 'MICZ    ' , 'Microzooplankton Concentration         ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(8)  = 'DON     ' , 'Dissolved organic Concentration        ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(9)  = 'PON     ' , 'Small organic carbon Concentration     ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(10) = 'bSi     ' , 'biogenic Silicate Concentration        ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(11) = 'TRA     ' , 'River Tracer                           ',  'mol-C/L' ,  .false.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(12) = 'DIC     ' , 'Dissolved Inorganic Carbon             ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(13) = 'TA      ' , 'Total Alkalinity                       ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(14) = 'O2      ' , 'Dissolved Oxygen                       ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(15) = 'MYTRC1  ' , '20 m upwelling tracer                  ',  '1      ' ,  .false.    , .false.  ,  .false. ,  .false.  ,  .true.
+
+   ln_trcdta = .true.
+   ln_trcdmp = .false.
+   /
+!-----------------------------------------------------------------------
+&namtrc_bdy     ! bdy for passive tracers
+!-----------------------------------------------------------------------
+   cn_trc_dflt   =  'frs','frs'
+   cn_trc        =  'frs','frs'          ! boundary condition type for passive tracers
+   nn_trcdmp_bdy = 0, 0
+/
+!----------------------------------------------------------------------
+&nambdy_bc       !   data for BDY boundary conditions: 1st boundary
+!-----------------------------------------------------------------------
+!
+!              !  file name      ! frequency (hours) !    variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !                 !  (if <0  months)  !      name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_trcobc(1) = 'LiveOcean/LiveOcean_v201905',            24,        'NO3',      .true.,  .false., 'daily',   '',        '',   ''
+   sn_trcobc(2) = 'tracers/west/bioOBC_West_const201812',  -12,        'NH4',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(3) = 'LiveOcean/LiveOcean_v201905',            24,        'Si',       .true.,  .false., 'daily',   '',        '',   ''
+   sn_trcobc(4) = 'tracers/west/bioOBC_West_const201812',  -12,        'DIA',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(5) = 'tracers/west/bioOBC_West_const201812',  -12,        'CRY',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(6) = 'tracers/west/bioOBC_West_const201812',  -12,        'MYRI',     .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(7) = 'tracers/west/bioOBC_West_const201812',  -12,        'MICZ',     .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(8) = 'tracers/west/bioOBC_West_const201812',  -12,        'DON',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(9) = 'tracers/west/bioOBC_West_const201812',  -12,        'PON',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(10) = 'tracers/west/bioOBC_West_const201812', -12,        'bSi',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(11) = 'tracers/west/bioOBC_West_const201812', -12,        'tur',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(12) = 'LiveOcean/LiveOcean_v201905',           24,        'DIC',      .true.,  .false.,  'daily',   '',        '',   ''
+   sn_trcobc(13) = 'LiveOcean/LiveOcean_v201905',           24,        'TA',       .true.,  .false.,  'daily',   '',        '',   ''
+   sn_trcobc(14) = 'LiveOcean/LiveOcean_v201905',           24,        'OXY',      .true.,  .false.,  'daily',   '',        '',   ''
+
+   cn_dir_obc        =  './'      !  root directory for the location of OPEN data files
+   rn_trofac(1)   =  1.0  !  -      -      -     -
+   rn_trofac(2)   =  1.0  !  -      -      -     -
+   rn_trofac(3)   =  1.0  !  multiplicative factor
+   rn_trofac(4)   =  1.0  !  -      -      -     -
+   rn_trofac(5)   =  1.0  !  -      -      -     -
+   rn_trofac(6)   =  1.0  !  -      -      -     -
+   rn_trofac(7)   =  1.0  !  -      -      -     -
+   rn_trofac(8)   =  1.0  !  -      -      -     -
+   rn_trofac(9)   =  1.0  !  -      -      -     -
+   rn_trofac(10)  =  1.0  !  -      -      -     -
+   rn_trofac(11)  =  1.0  !  -      -      -     -
+   rn_trofac(12)  =  1.0  !  -      -      -     -
+   rn_trofac(13)  =  1.0  !  -      -      -     -
+   rn_trofac(14)  =  1.0  !  -      -      -     -
+/
+!----------------------------------------------------------------------
+&nambdy_bc       !   data for BDY boundary conditions: 2nd boundary
+!-----------------------------------------------------------------------
+!              !  file name      ! frequency (hours) ! variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !                 !  (if <0  months)  !   name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_trcobc(1)  = 'bioOBC_North_monthlySiNO3.nc',        -1,        'NO3',      .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(2)  = 'bioOBC_North_const201812',          4380,        'NH4',      .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(3)  = 'bioOBC_North_monthlySiNO3.nc',        -1,        'Si',       .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(4)  = 'bioOBC_North_const201812',          4380,        'DIA',      .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(5)  = 'bioOBC_North_const201812',          4380,        'CRY',      .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(6)  = 'bioOBC_North_const201812',          4380,        'MYRI',     .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(7)  = 'bioOBC_North_const201812',          4380,        'MICZ',     .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(8)  = 'bioOBC_North_const201812',          4380,        'DON',      .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(9)  = 'bioOBC_North_const201812',          4380,        'PON',      .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(10) = 'bioOBC_North_const201812',          4380,        'bSi',      .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(11) = 'bioOBC_North_const201812',          4380,        'tur',       .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(12) = 'Dosser_north_TEOS10_DICTA.nc',        -1,        'DIC',       .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(13) = 'Dosser_north_TEOS10_DICTA.nc',        -1,        'TA',       .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(14) = 'tr_northDICTAOXY.nc',               4380,        'OXY',       .true.,  .true.,  'yearly',   '',      '',   ''
+
+   cn_dir_obc        =  './tracers/north/'      !  root directory for the location of OPEN data files
+   rn_trofac(1)   =  1.0  !  -      -      -     -
+   rn_trofac(2)   =  1.0  !  -      -      -     -
+   rn_trofac(3)   =  1.0  !  multiplicative factor
+   rn_trofac(4)   =  1.0  !  -      -      -     -
+   rn_trofac(5)   =  1.0  !  -      -      -     -
+   rn_trofac(6)   =  1.0  !  -      -      -     -
+   rn_trofac(7)   =  1.0  !  -      -      -     -
+   rn_trofac(8)   =  1.0  !  -      -      -     -
+   rn_trofac(9)   =  1.0  !  -      -      -     -
+   rn_trofac(10)  =  1.0  !  -      -      -     -
+   rn_trofac(11)  =  1.0  !  -      -      -     -
+   rn_trofac(12)  =  1.0  !  -      -      -     -
+   rn_trofac(13)  =  1.0  !  -      -      -     -
+   rn_trofac(14)  =  1.0  !  -      -      -     -
+/
+
+
+
+
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! NEMO/TOP1 CFG physics impact:
+!!               - tracer time stepping                  (namtrc_run)
+!!               - tracer advection                      (namtrc_adv)
+!!               - tracer lateral diffusion              (namtrc_ldf)
+!-----------------------------------------------------------------------
+&namtrc_run     !   run information
+!-----------------------------------------------------------------------
+   ln_top_euler  = .false.    !  use Euler time-stepping for TOP
+/
+!-----------------------------------------------------------------------
+&namtrc_adv    !   advection scheme for passive tracer
+!-----------------------------------------------------------------------
+   ln_trcadv_tvd_zts =  .true.   !  TVD scheme zts
+   nn_trcadv_tvd_zts =    20      !     number of sub time-steps for TVD ZTS
+
+/
+!-----------------------------------------------------------------------
+&namtrc_ldf    !   lateral diffusion scheme for passive tracer
+!-----------------------------------------------------------------------
+!                               !  Type of the operator :
+   ln_trcldf_lap    =  .true.   !     laplacian operator       
+   ln_trcldf_bilap  =  .false.  !     bilaplacian operator     
+                                !  Direction of action  :
+   ln_trcldf_level  =  .false.  !     iso-level                
+   ln_trcldf_hor    =  .false.  !     horizontal (geopotential)         (require "key_ldfslp" when ln_sco=T)
+   ln_trcldf_iso    =  .true.   !     iso-neutral                       (require "key_ldfslp")
+!                               !  Coefficient
+   rn_ahtrc_0       =    1.5    !(2000)  horizontal eddy diffusivity for tracers [m2/s]
+   rn_ahtrb_0       =     0.    !     background eddy diffusivity for ldf_iso [m2/s]
+   rn_fact_lap      =     1.    !     enhanced zonal eddy diffusivity
+/
+
+
+
+
