@@ -59,7 +59,7 @@ namelists:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.vertical
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.compute
   namelist_smelt_cfg:
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/improving/namelist_smelt_biology_202007C
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/improving/namelist_smelt_biology_202007G
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/improving/namelist_smelt_rivers_SiPuget
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist_smelt_skog
   namelist_top_cfg:
