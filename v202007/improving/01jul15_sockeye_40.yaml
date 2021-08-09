@@ -1,7 +1,7 @@
 email: sallen@eoas.ubc.ca
 MPI decomposition: 18x30
 config_name: SalishSeaCast
-run_id: 01jan15_daily
+run_id: 01jul15_daily
 walltime: 72:00:00
 
 forcing:
@@ -28,8 +28,8 @@ forcing:
     link to: $PROJECT/tracers
 
 restart:
-  restart.nc: $SCRATCH/202007/26dec14/SalishSea_03153600_restart.nc
-  restart_trc.nc: $SCRATCH/202007/26dec14/SalishSea_03153600_restart_trc.nc
+  restart.nc: $SCRATCH/202007/20207C-p3/01jan15/SalishSea_03544560_restart.nc
+  restart_trc.nc: $SCRATCH/202007/20207C-p3/01jan15/SalishSea_03544560_restart_trc.nc
 
 grid:
   bathymetry: $PROJECT/grid/bathymetry_201702.nc
@@ -38,7 +38,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time_01jan15_halfyear
+  - ./namelist.time_01jul15_halfyear
   - $PROJECT/SS-run-sets/v202007/namelist.domain
   - $PROJECT/SS-run-sets/v202007/improving/namelist.atmos_rivers_daily
   - $PROJECT/SS-run-sets/v202007/namelist.light
@@ -60,7 +60,7 @@ namelists:
 
 output:
   XIOS servers: 1
-  filedefs: $PROJECT/SS-run-sets/v202007/improving/file_def_dailysplit_less_buteval.xml
+  filedefs: $PROJECT/SS-run-sets/v202007/improving/file_def_dailysplit_noptrchour.xml
   domaindefs: $PROJECT/SS-run-sets/v202007/domain_def.xml
   fielddefs: $PROJECT/SS-run-sets/v202007/field_def.xml
   iodefs: $PROJECT/SS-run-sets/v202007/iodef.xml

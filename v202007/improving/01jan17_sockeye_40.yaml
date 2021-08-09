@@ -1,8 +1,8 @@
 email: sallen@eoas.ubc.ca
 MPI decomposition: 18x30
 config_name: SalishSeaCast
-run_id: 01jan15_daily
-walltime: 72:00:00
+run_id: 01jan17_daily
+walltime: 60:00:00
 
 forcing:
   LiveOcean:
@@ -28,8 +28,8 @@ forcing:
     link to: $PROJECT/tracers
 
 restart:
-  restart.nc: $SCRATCH/202007/26dec14/SalishSea_03153600_restart.nc
-  restart_trc.nc: $SCRATCH/202007/26dec14/SalishSea_03153600_restart_trc.nc
+  restart.nc: $SCRATCH/202007/26dec16/SalishSea_04732560_restart.nc
+  restart_trc.nc: $SCRATCH/202007/26dec16/SalishSea_04732560_restart_trc.nc
 
 grid:
   bathymetry: $PROJECT/grid/bathymetry_201702.nc
@@ -38,7 +38,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time_01jan15_halfyear
+  - ./namelist.time_01jan17_halfyear
   - $PROJECT/SS-run-sets/v202007/namelist.domain
   - $PROJECT/SS-run-sets/v202007/improving/namelist.atmos_rivers_daily
   - $PROJECT/SS-run-sets/v202007/namelist.light
