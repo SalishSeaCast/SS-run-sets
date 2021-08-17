@@ -10,15 +10,13 @@
       <file_group id="1h" output_freq="1h"  output_level="10" split_freq="10d" enabled=".TRUE."> <!-- 1h files -->
         <file id="file1" name_suffix="_ptrc_T" description="diagnostics" >
           <field field_ref="NO3"    />
-          <field field_ref="O2"    />
-          <field field_ref="NH4"    />
-          <field field_ref="DIAT"   />
-          <field field_ref="Si"    />
-          <field field_ref="PHY"    />
-          <field field_ref="bSi"    />
+          <field field_ref="ATF_NO3"    />
         </file>
         <file id="file2" name_suffix="_grid_T" description="ocean T grid variables" >
 	  <field field_ref="ssh"            name="sossheig"/>
+	</file>
+        <file id="file3" name_suffix="_grid_U" description="ocean T grid variables" >
+	  <field field_ref="ATX_NO3"           /> 
 	</file>
       </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" split_freq="1d" enabled=".TRUE."/> <!-- 2h files -->
