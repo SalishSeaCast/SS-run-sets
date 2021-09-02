@@ -1,0 +1,63 @@
+# last run on beluga
+email: eolson@eoas.ubc.ca
+account: rrg-allen
+MPI decomposition: 16x41
+config_name: SalishSeaCast
+run_id: newL
+walltime: 1:00:00
+
+forcing:
+  LiveOcean:
+    link to: $PROJECT/SalishSea/forcing/LiveOcean
+  NEMO-atmos:
+    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational
+
+  bfr_coef.nc:
+    link to: $MEOPAR/NEMO-forcing/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: $MEOPAR/NEMO-forcing/grid
+  rivers:
+    link to: $PROJECT/SalishSea/forcing/rivers
+  rivers-climatology:
+    link to: $MEOPAR/NEMO-forcing/rivers-climatology
+  river_turb:
+    link to: $PROJECT/SalishSea/forcing/rivers/river_turb
+  ssh:
+    link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
+  tides:
+    link to: $MEOPAR/NEMO-forcing/tides
+  tracers:
+    link to: $MEOPAR/NEMO-forcing/tracers
+
+restart:
+  restart.nc: $MEOPAR/SS-run-sets/SS-SMELT/debug/SalishSea_03032640_restart.nc
+  restart_trc.nc: $MEOPAR/SS-run-sets/SS-SMELT/debug/SalishSea_03032640_restart_trc.nc
+grid:
+  bathymetry: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.nc
+  coordinates: $MEOPAR/NEMO-forcing/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $MEOPAR/NEMO-forcing/grid/bathymetry_201702.csv
+
+namelists:
+  namelist_cfg:
+  - ./namelist_cfg
+  namelist_top_cfg:
+  - ../testSSCOxy/namelist_top_cfg
+  namelist_smelt_cfg:
+  - ./namelist_smelt_cfg_oxynewL
+
+output:
+  XIOS servers: 1
+  filedefs: ./file_def.xml
+  domaindefs: ./domain_def.xml
+  fielddefs: ./field_def.xml
+  iodefs: ./iodef.xml
+  separate XIOS server: True
+
+paths:
+  NEMO code config: $MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $MEOPAR/XIOS-2
+  runs directory: $SCRATCH/
+  
+vcs revisions:
+  hg:
+  - $HOME/MEOPAR/SS-run-sets
