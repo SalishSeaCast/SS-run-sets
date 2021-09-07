@@ -25,9 +25,6 @@
    zz_PE_Iopt_diat           = 62.658287255 !: W/m^2
    zz_PE_Iopt_myri           = 0.0          !: W/m^2
    zz_PE_Iopt_nano           = 14.918639823 !: W/m^2
-   zz_rate_gamma_diat        = 0.0          !:
-   zz_rate_gamma_myri        = 0.0          !:
-   zz_rate_gamma_nano        = 0.0          !:
    zz_rate_K_Si_diat         = 1.2          !:
    zz_rate_K_Si_myri         = 0.0          !:
    zz_rate_K_Si_nano         = 0.0          !:
