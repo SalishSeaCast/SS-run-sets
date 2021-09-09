@@ -45,19 +45,16 @@
    zz_frac_waste_FNM_NH    = 0.05      ! waste fraction from pico-phyto natural mortality to NH
    zz_frac_waste_FNM_DON   = 0.470     ! waste fraction from pico-phyto natural mortality to DON
    zz_frac_waste_FNM_PON   = 0.470     ! waste fraction from pico-phyto natural mortality to PON
-   zz_frac_waste_FNM_Ref   = 0.02      ! waste fraction from pico-phyto natural mort to refractory
    zz_frac_waste_FNM_Bsi   = 1.0       ! waste fraction from pico-phyto natural mortality to bSi
    zz_rate_myri_Rm         = 0.0778E-04  ! M. rubrum natural mortality
    zz_frac_waste_CNM_NH    = 0.05       ! waste fraction from M. rubrum natural mortality to NH
    zz_frac_waste_CNM_DON   = 0.470      ! waste fraction from M. rubrum natural mortality to DON
    zz_frac_waste_CNM_PON   = 0.470      ! waste fraction from M. rubrum natural mortality to PON
-   zz_frac_waste_CNM_Ref   = 0.02       ! waste fraction from M. rubrum natural mort to refractory
    zz_frac_waste_CNM_Bsi   = 1.0        ! waste fraction from M. rubrum natural mortality to bSi
    zz_rate_diat_Rm        = 0.0667E-05 ! diatom (micro-phyto( natural mortality
    zz_frac_waste_DNM_NH    = 0.05      ! waste fraction from micro-phyto natural mortality to NH
    zz_frac_waste_DNM_DON   = 0.470     ! waste fraction from micro-phyto natural mortality to DON
    zz_frac_waste_DNM_PON   = 0.470     ! waste fraction from micro-phyto natural mortality to PON
-   zz_frac_waste_DNM_Ref   = 0.02      ! waste fraction from micro-phyto natural mort to refractory
    zz_frac_waste_DNM_Bsi   = 1.        ! waste fraction from micro-phyto natural mortality to bSi
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
