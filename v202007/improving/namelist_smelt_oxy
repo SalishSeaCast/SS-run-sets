@@ -1,0 +1,10 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! PISCES  (key_pisces) config namelist (see below for key_pisces_reduced)
+!!              1 - Oxygen Model                 (nampisoxy)
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisoxy     !   parameters for oxygen model
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_alpha_SOD    = 0.0   ! fraction of sinking N flux contributing to sediment oxygen demand
+/
