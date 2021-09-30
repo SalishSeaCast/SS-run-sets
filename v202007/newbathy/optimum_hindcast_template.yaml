@@ -56,10 +56,10 @@ namelists:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.bottom
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.tracer
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.dynamics
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201803/charnock/namelist.vertical.charnock
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.vertical
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist.compute
   namelist_smelt_cfg:
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/improving/namelist_smelt_biology_202007K
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/improving/namelist_smelt_biology_202007L
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/improving/namelist_smelt_rivers_202109I
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/namelist_smelt_skog
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202007/improving/namelist_smelt_oxy
