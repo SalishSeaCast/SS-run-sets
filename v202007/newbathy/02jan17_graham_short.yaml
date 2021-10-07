@@ -30,7 +30,7 @@ forcing:
 
 restart:
   restart.nc: /home/allen/MEOPAR/fordoug/SalishSea_04734720_restart.nc
-  restart_trc.nc : /home/allen/MEOPAR/fordoug/SalishSea_04734720_restart.nc
+  restart_trc.nc : /home/allen/MEOPAR/fordoug/SalishSea_04734720_restart_trc.nc
 
 grid:
   bathymetry: $HOME/MEOPAR/grid/bathymetry_202108.nc
