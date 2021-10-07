@@ -3,7 +3,7 @@ MPI decomposition: 11x18
 config_name: SalishSeaCast
 run_id: 02jan17_L2
 walltime: 3:00:00
-account: def-allen
+account: rrg-allen
 
 forcing:
   LiveOcean:
