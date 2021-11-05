@@ -18,8 +18,8 @@ grid:
   land processor elimination: $SUSANPROJECT/MEOPAR/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: $SCRATCHDIR/hindcast_202007_asselin/ddmmmyy/SalishSea_nnnnnnnn_restart.nc
-  restart_trc.nc: $SCRATCHDIR/hindcast_202007_asselin/ddmmmyy/SalishSea_nnnnnnnn_restart_trc.nc
+  restart.nc: $SCRATCHDIR/v202111/ddmmmyy/SalishSea_nnnnnnnn_restart.nc
+  restart_trc.nc: $SCRATCHDIR/v202111/ddmmmyy/SalishSea_nnnnnnnn_restart_trc.nc
 
 forcing:
   LiveOcean:
