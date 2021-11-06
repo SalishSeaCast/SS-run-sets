@@ -1,10 +1,9 @@
-# salishsea command processor run description file template for
-# SalishSeaCast automation hindcast runs on optimum
+# SalishSeaCast starter run for v202111
 
 email: sallen@eoas.ubc.ca
 MPI decomposition: 16x34
 config_name: SalishSeaCast
-run_id: ddmmmyyhindcast
+run_id: 01nov14
 walltime: 12:00:00
 
 paths:
@@ -16,10 +15,6 @@ grid:
   bathymetry: $SUSANPROJECT/MEOPAR/grid/bathymetry_202108.nc
   coordinates: $SUSANPROJECT/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
   land processor elimination: $SUSANPROJECT/MEOPAR/grid/bathymetry_202108.csv
-
-restart:
-  restart.nc: $SCRATCHDIR/v202111/ddmmmyy/SalishSea_nnnnnnnn_restart.nc
-  restart_trc.nc: $SCRATCHDIR/v202111/ddmmmyy/SalishSea_nnnnnnnn_restart_trc.nc
 
 forcing:
   LiveOcean:
@@ -45,10 +40,16 @@ forcing:
     link to: $SUSANPROJECT/MEOPAR/tides
   tracers:
     link to: $SUSANPROJECT/MEOPAR/tracers
+  initial_data_file.nc:
+    link to: $SCRATCHDIR/v202111/31oct14/Bathy202108_31oct14.nc
+  initial_bio_data_file.nc:
+    link to: $SCRATCHDIR/v202111/31oct14/Bathy202108_31oct14.nc
+  initial_car_data_file.nc:
+    link to: $SCRATCHDIR/v202111/31oct14/Bathy202108_31oct14.nc
 
 namelists:
   namelist_cfg:
-  - $PROJECT/SalishSeaCast/hindcast-sys/runs/namelist.time
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.time_01nov14_5day
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.domain
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.light
@@ -63,7 +64,7 @@ namelists:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111//namelist_smelt_rivers
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_restart
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_coldstart
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_TracerDefAndBdy
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_physics
   
@@ -71,7 +72,7 @@ output:
   XIOS servers: 1
   domaindefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/domain_def.xml
   fielddefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/field_def.xml
-  filedefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/improving/file_def_dailysplit.xml
+  filedefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/file_def_dailysplit.xml
   iodefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/iodef.xml
   separate XIOS server: true
 
