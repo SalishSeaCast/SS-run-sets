@@ -71,7 +71,7 @@ output:
   XIOS servers: 1
   domaindefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/domain_def.xml
   fielddefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/field_def.xml
-  filedefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/improving/file_def_dailysplit.xml
+  filedefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/file_def_dailysplit.xml
   iodefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/iodef.xml
   separate XIOS server: true
 
