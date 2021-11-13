@@ -33,8 +33,8 @@
 !-----------------------------------------------------------------------
 &namzdf_gls                !   GLS vertical diffusion                   ("key_zdfgls")
 !-----------------------------------------------------------------------
-   rn_wvage_max  =  25.7   !  Maximum "wave age" c_p/ustar (if nn_z0_met=2)
-   rn_ustar_ref  =   0.18  !  Fetch/duration wave growth limitation threshold on ustar [m/s] (if nn_z0_met=2)
-   rn_frac_hs    =   1.3   !  Fraction of wave height as roughness (if nn_z0_met=2)
+   rn_wvage_max  =  21.5   !  Maximum "wave age" c_p/ustar (if nn_z0_met=2)
+   rn_ustar_ref  =   0.175 !  Fetch/duration wave growth limitation threshold on ustar [m/s] (if nn_z0_met=2)
+   rn_frac_hs    =   1.0   !  Fraction of wave height as roughness (if nn_z0_met=2)
    nn_z0_met     =     2   !  Method for surface roughness computation (0/1/2)
 &end

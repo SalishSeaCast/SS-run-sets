@@ -1,8 +1,8 @@
 email: bmoorema@eoas.ubc.ca
 MPI decomposition: 14x30
 config_name: SalishSeaCast_Blue
-run_id: SalishSeaCast_currenttuning_test
-walltime: 12:00:00
+run_id: SalishSeaCast_currenttuning_base_20160331_20160930
+walltime: 23:00:00
 account: rrg-allen
 
 forcing:
@@ -24,8 +24,9 @@ forcing:
     link to: $HOME/MEOPAR/tides/
   tracers:
     link to: $HOME/MEOPAR/tracers/
-  initial_data_file.nc:
-    link to: $HOME/MEOPAR/tracers/initial/Bathy202108_01jan16_phys.nc
+
+restart:
+  restart.nc: $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/SalishSea_00194400_restart.nc
 
 grid:
   bathymetry: $HOME/MEOPAR/grid/bathymetry_202108.nc
@@ -34,7 +35,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.time
+  - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.time.20160331_20160930
   - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.domain
   - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.atmos_rivers
   - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.light
@@ -57,7 +58,7 @@ output:
 paths:
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $HOME/MEOPAR/XIOS-2
-  runs directory: $SCRATCH/Results/test/SalishSeaCast_currenttuning_test
+  runs directory: $SCRATCH/Results/currents/SalishSeaCast_currenttuning_base_20160331_20160930
 
 vcs revisions:
   git:
