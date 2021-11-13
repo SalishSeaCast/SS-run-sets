@@ -1,8 +1,8 @@
 email: bmoorema@eoas.ubc.ca
 MPI decomposition: 14x30
 config_name: SalishSeaCast_Blue
-run_id: SalishSeaCast_currenttuning_base_20160101_20160630_coldstart
-walltime: 23:00:00
+run_id: SalishSeaCast_currenttuning_base_20160101_20160331_coldstart
+walltime: 12:00:00
 account: rrg-allen
 
 forcing:
@@ -34,7 +34,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.time.20160101_20160630_coldstart
+  - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.time.20160101_20160331_coldstart
   - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.domain
   - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.atmos_rivers
   - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.light
@@ -57,7 +57,7 @@ output:
 paths:
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $HOME/MEOPAR/XIOS-2
-  runs directory: $SCRATCH/Results/Currents/SalishSeaCast_currenttuning_base_20160101_20160630_coldstart
+  runs directory: $SCRATCH/Results/Currents/SalishSeaCast_currenttuning_base_20160101_20160331_coldstart
 
 vcs revisions:
   git:
