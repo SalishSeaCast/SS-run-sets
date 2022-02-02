@@ -17,7 +17,7 @@
    sn_riverpoc  = 'rivers-climatology/bio/R201906_bioConst',     -12,               'pon',       .false.,      .true.,  'yearly',   '',        '',        ''
    sn_riverdsi  = 'rivers-climatology/bio/R201906_bioConst',     -12,               'bsi',       .false.,      .true.,  'yearly',   '',        '',        ''
    sn_rivertra  = 'rivers-climatology/bio/R201906_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
-   sn_turb      = 'rivers/riverTurbDaily201906',              24,               'turb',      .true.,       .false., 'daily',    '',        '',        ''
+   sn_turb      = 'river_turb/riverTurbDaily201906',              24,               'turb',      .true.,       .false., 'daily',    '',        '',        ''
    sn_riverdic  = 'rivers-climatology/skog_sens_highFras/rivers_skog_tracers',  24,               'dic',       .true.,       .true.,  'daily',    '',        '',        ''
    sn_riverta   = 'rivers-climatology/skog_sens_highFras/rivers_skog_tracers',  24,               'ta',        .true.,       .true.,  'daily',    '',        '',        ''
    sn_rivero2   = 'rivers-climatology/bio/rivers_bio_tracers',    24,               'oxy',       .true.,       .true.,  'daily',    '',        '',        ''
