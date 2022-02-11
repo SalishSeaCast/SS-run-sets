@@ -1,4 +1,4 @@
-# Copyright 2017 The Salish Sea NEMO Project and
+# Copyright 2017 – present by The Salish Sea NEMO Project and
 # The University of British Columbia
 
 # Licensed under the Apache License, Version 2.0 (the "License");
