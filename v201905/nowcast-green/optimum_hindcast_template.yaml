@@ -28,7 +28,7 @@ forcing:
     # check link:
     #   namelist filename: namelist_cfg
     #   type: atmospheric
-    link to: $FORCING/SalishSeaCast/forcing/atmospheric/GEM2.5/gemlam
+    link to: $FORCING/SalishSeaCast/forcing/atmospheric/GEM2.5/operational
   bfr_coef.nc:
     link to: $SUSANPROJECT/MEOPAR/grid/jetty_mask_bathy201702.nc
   grid:
@@ -50,7 +50,7 @@ namelists:
   namelist_cfg:
   - $PROJECT/SalishSeaCast/hindcast-sys/runs/namelist.time
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.domain
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/nowcast-green/namelist.atmos_rivers_gemlam
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.atmos_rivers
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.light
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.lateral
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.bottom
@@ -60,7 +60,7 @@ namelists:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.compute
   namelist_smelt_cfg:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist_smelt_biology_190926
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/nowcast-green/namelist_smelt_rivers_oldturb
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/nowcast-green/namelist_smelt_rivers
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist_smelt_skog
   namelist_top_cfg:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist_top_restart
