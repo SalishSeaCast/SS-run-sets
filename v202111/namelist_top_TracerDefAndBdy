@@ -61,7 +61,7 @@
    rn_trofac(3)   =  1.0  !  multiplicative factor
    rn_trofac(4)   =  1.0  !  -      -      -     -
    rn_trofac(5)   =  1.0  !  -      -      -     -
-   rn_trofac(6)   =  1.0  !  -      -      -     -
+   rn_trofac(6)   =  0.0  !  set ciliates to zero
    rn_trofac(7)   =  1.0  !  -      -      -     -
    rn_trofac(8)   =  1.0  !  -      -      -     -
    rn_trofac(9)   =  1.0  !  -      -      -     -
@@ -97,7 +97,7 @@
    rn_trofac(3)   =  1.0  !  multiplicative factor
    rn_trofac(4)   =  1.0  !  -      -      -     -
    rn_trofac(5)   =  1.0  !  -      -      -     -
-   rn_trofac(6)   =  1.0  !  -      -      -     -
+   rn_trofac(6)   =  0.0  !  set ciliates to zero
    rn_trofac(7)   =  1.0  !  -      -      -     -
    rn_trofac(8)   =  1.0  !  -      -      -     -
    rn_trofac(9)   =  1.0  !  -      -      -     -
