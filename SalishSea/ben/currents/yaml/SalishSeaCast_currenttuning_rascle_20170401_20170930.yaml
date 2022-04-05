@@ -1,0 +1,74 @@
+email: bmoorema@eoas.ubc.ca
+MPI decomposition: 14x30
+config_name: SalishSeaCast_Blue
+run_id: SalishSeaCast_currenttuning_rascle_20170401_20170930
+walltime: 23:00:00
+account: rrg-allen
+
+forcing:
+  LiveOcean:
+    link to: $HOME/project/SalishSea/forcing/LiveOcean/
+  NEMO-atmos:
+    link to: $HOME/project/SalishSea/forcing/atmospheric/GEM2.5/operational/
+  bfr_coef.nc:
+    link to: $HOME/MEOPAR/grid/jetty_mask_bathy202108.nc
+  grid:
+    link to: $HOME/MEOPAR/grid/
+  rivers:
+    link to: $HOME/project/SalishSea/forcing/rivers/
+  rivers-climatology:
+    link to: $HOME/MEOPAR/rivers-climatology/
+  ssh:
+    link to: $HOME/project/SalishSea/forcing/sshNeahBay/obs/
+  tides:
+    link to: $HOME/MEOPAR/tides/
+  tracers:
+    link to: $HOME/MEOPAR/tracers/
+
+restart:
+  restart.nc: $SCRATCH/Results/Currents/SalishSeaCast_currenttuning_rascle_20161001_20170331/SalishSea_00984960_restart.nc
+
+grid:
+  bathymetry: $HOME/MEOPAR/grid/bathymetry_202108.nc
+  coordinates: $HOME/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $HOME/MEOPAR/grid/bathymetry_202108.csv
+
+namelists:
+  namelist_cfg:
+  - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.time.20170401_20170930
+  - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.domain
+  - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.atmos_rivers
+  - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.light
+  - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.lateral
+  - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.bottom
+  - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.tracer
+  - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.dynamics
+  - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.vertical.rascle
+  - $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/namelist.compute
+
+output:
+  XIOS servers: 1
+  filedefs: $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/file_def.xml
+  domaindefs: $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/domain_def.xml
+  fielddefs: $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/field_def.xml
+  iodefs: $HOME/MEOPAR/SS-run-sets/SalishSea/ben/currents/iodef.xml
+  separate XIOS server: true
+  XIOS servers: 1
+
+paths:
+  NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $HOME/MEOPAR/XIOS-2
+  runs directory: $SCRATCH/Results/Currents/SalishSeaCast_currenttuning_rascle_20170401_20170930
+
+vcs revisions:
+  git:
+  - $HOME/MEOPAR/grid
+  - $HOME/MEOPAR/NEMO-3.6-code
+  - $HOME/MEOPAR/NEMO-Cmd
+  - $HOME/MEOPAR/rivers-climatology
+  - $HOME/MEOPAR/SalishSeaCmd
+  - $HOME/MEOPAR/SS-run-sets
+  - $HOME/MEOPAR/tracers
+  - $HOME/MEOPAR/XIOS-2
+  - $HOME/MEOPAR/XIOS-ARCH
+
