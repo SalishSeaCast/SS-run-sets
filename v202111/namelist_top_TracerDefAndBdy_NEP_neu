@@ -1,0 +1,93 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! NEMO/TOP1 CFG tracers:
+!!               - tracer definition                     (namtrc    )
+!!               - tracer boundaries                     (namtrc_bdy)
+!!               - tracer bdy data                       (nambdy_bc) x 2
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+&namtrc     !   tracers definition
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!                !    name   !           title of the field              ! initial data ! initial data ! obc    !    sbc  !  cbc    ! save   !
+!                !           !                                           !  units       ! from file    !                             ! or not !
+!                !           !                                           !              ! or not       !                             !        !
+   sn_tracer(1)  = 'NO3     ' , 'Nitrates Concentration                 ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(2)  = 'NH4     ' , 'Ammonium Concentration                 ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(3)  = 'Si      ' , 'Silicate Concentration                 ',  'mol-C/L' ,  .true.     , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(4)  = 'DIAT    ' , 'Diatoms Concentration                  ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(5)  = 'PHY     ' , 'Nanophytoplankton Concentration        ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(6)  = 'MYRI    ' , 'Mesozooplankton Concentration          ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(7)  = 'MICZ    ' , 'Microzooplankton Concentration         ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(8)  = 'DON     ' , 'Dissolved organic Concentration        ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(9)  = 'PON     ' , 'Small organic carbon Concentration     ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(10) = 'bSi     ' , 'biogenic Silicate Concentration        ',  'mol-C/L' ,  .true.     , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(11) = 'TRA     ' , 'River Tracer                           ',  'mol-C/L' ,  .false.    , .false.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(12) = 'DIC     ' , 'Dissolved Inorganic Carbon             ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(13) = 'TA      ' , 'Total Alkalinity                       ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
+   sn_tracer(14) = 'O2      ' , 'Dissolved Oxygen                       ',  'mol-C/L' ,  .true.    , .true.   ,  .false. ,  .false.  ,  .true.
+
+   ln_trcdta = .true.
+   ln_trcdmp = .false.
+   /
+!-----------------------------------------------------------------------
+&namtrc_bdy     ! bdy for passive tracers
+!-----------------------------------------------------------------------
+   cn_trc_dflt   =  'neumann','neumann'
+   cn_trc        =  'frs','frs'          ! boundary condition type for passive tracers
+   nn_trcdmp_bdy = 0, 0
+/
+!----------------------------------------------------------------------
+&nambdy_bc       !   data for BDY boundary conditions: 1st boundary
+!-----------------------------------------------------------------------
+!
+!              !  file name      ! frequency (hours) !    variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !                 !  (if <0  months)  !      name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_trcobc(1) = 'NEP/bio_NEP_fill',                      120,        'NO3',      .true.,  .false.,'yearly',   '',        '',   ''
+   sn_trcobc(3) = 'NEP/bio_NEP_fill',                      120,        'Si',       .true.,  .false.,'yearly',   '',        '',   ''
+   sn_trcobc(12) = 'NEP/ts_fill_rs_W',                     120,        'DIC',      .true.,  .false.,'yearly',   '',        '',   ''
+   sn_trcobc(13) = 'NEP/ts_fill_rs_W',                     120,        'TA',       .true.,  .false.,'yearly',   '',        '',   ''
+   sn_trcobc(14) = 'NEP/ts_fill_rs_W',                     120,        'OXY',      .true.,  .false.,'yearly',   '',        '',   ''
+
+   cn_dir_obc        =  './'      !  root directory for the location of OPEN data files
+   rn_trofac(1)   =  1.0  !  -      -      -     -
+   rn_trofac(2)   =  1.0  !  -      -      -     -
+   rn_trofac(3)   =  1.0  !  multiplicative factor
+   rn_trofac(4)   =  1.0  !  -      -      -     -
+   rn_trofac(5)   =  1.0  !  -      -      -     -
+   rn_trofac(6)   =  0.0  !  set ciliates to zero
+   rn_trofac(7)   =  1.0  !  -      -      -     -
+   rn_trofac(8)   =  1.0  !  -      -      -     -
+   rn_trofac(9)   =  1.0  !  -      -      -     -
+   rn_trofac(10)  =  1.0  !  -      -      -     -
+   rn_trofac(11)  =  1.0  !  -      -      -     -
+   rn_trofac(12)  =  1.0  !  -      -      -     -
+   rn_trofac(13)  =  1.0  !  -      -      -     -
+   rn_trofac(14)  =  1.0  !  -      -      -     -
+/
+!----------------------------------------------------------------------
+&nambdy_bc       !   data for BDY boundary conditions: 2nd boundary
+!-----------------------------------------------------------------------
+!              !  file name      ! frequency (hours) ! variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !                 !  (if <0  months)  !   name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_trcobc(1)  = 'tracers/north/bioOBC_North_monthlySiNO3.nc',        -1,        'NO3',      .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(3)  = 'tracers/north/bioOBC_North_monthlySiNO3.nc',        -1,        'Si',       .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(12) = 'NEP/ts_fill_rs_N',           		   120,        'DIC',      .true.,  .false.,  'yearly',   '',        '',   ''
+   sn_trcobc(13) = 'NEP/ts_fill_rs_N',           		   120,        'TA',       .true.,  .false.,  'yearly',   '',        '',   ''
+   sn_trcobc(14) = 'NEP/ts_fill_rs_N',           		   120,        'OXY',      .true.,  .false.,  'yearly',   '',        '',   ''
+
+   cn_dir_obc        =  './'      !  root directory for the location of OPEN data files
+   rn_trofac(1)   =  1.0  !  -      -      -     -
+   rn_trofac(2)   =  1.0  !  -      -      -     -
+   rn_trofac(3)   =  1.0  !  multiplicative factor
+   rn_trofac(4)   =  1.0  !  -      -      -     -
+   rn_trofac(5)   =  1.0  !  -      -      -     -
+   rn_trofac(6)   =  0.0  !  set ciliates to zero
+   rn_trofac(7)   =  1.0  !  -      -      -     -
+   rn_trofac(8)   =  1.0  !  -      -      -     -
+   rn_trofac(9)   =  1.0  !  -      -      -     -
+   rn_trofac(10)  =  1.0  !  -      -      -     -
+   rn_trofac(11)  =  1.0  !  -      -      -     -
+   rn_trofac(12)  =  1.0  !  -      -      -     -
+   rn_trofac(13)  =  1.0  !  -      -      -     -
+   rn_trofac(14)  =  1.0  !  -      -      -     -
+/
+
+
