@@ -60,7 +60,7 @@ namelists:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.compute
   namelist_smelt_cfg:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist_smelt_biology_190926
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/nowcast-green/namelist_smelt_rivers_oldturb
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/nowcast-green/namelist_smelt_rivers_earlyturb
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist_smelt_skog
   namelist_top_cfg:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist_top_restart
