@@ -4,7 +4,7 @@
 email: sallen@eoas.ubc.ca
 MPI decomposition: 18x30
 config_name: SalishSeaCast
-run_id: 01jan07
+run_id: 01jan07_recon
 walltime: 4:00:00
 
 paths:
