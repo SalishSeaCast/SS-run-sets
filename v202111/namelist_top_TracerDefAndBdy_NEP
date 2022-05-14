@@ -41,19 +41,19 @@
 !              !  file name      ! frequency (hours) !    variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !              !                 !  (if <0  months)  !      name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
    sn_trcobc(1) = 'NEP/bio_NEP_fill',                      120,        'NO3',      .true.,  .false.,'yearly',   '',        '',   ''
-   sn_trcobc(2) = 'tracers/west/bioOBC_West_const201812',  -12,        'NH4',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(2) = 'tracers/west/OBC_Plankton_fromClimate_2007_2019_v201905',  -12,        'ammonium',      .true., .true., 'yearly',   '',        '',   ''
    sn_trcobc(3) = 'NEP/bio_NEP_fill',                      120,        'Si',       .true.,  .false.,'yearly',   '',        '',   ''
-   sn_trcobc(4) = 'tracers/west/bioOBC_West_const201812',  -12,        'DIA',      .false., .true., 'yearly',   '',        '',   ''
-   sn_trcobc(5) = 'tracers/west/bioOBC_West_const201812',  -12,        'CRY',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(4) = 'tracers/west/OBC_Plankton_fromClimate_2007_2019_v201905',  -12,        'diatoms',      .true., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(5) = 'tracers/west/OBC_Plankton_fromClimate_2007_2019_v201905',  -12,        'flagellates',      .true., .true., 'yearly',   '',        '',   ''
    sn_trcobc(6) = 'tracers/west/bioOBC_West_const201812',  -12,        'MYRI',     .false., .true., 'yearly',   '',        '',   ''
-   sn_trcobc(7) = 'tracers/west/bioOBC_West_const201812',  -12,        'MICZ',     .false., .true., 'yearly',   '',        '',   ''
-   sn_trcobc(8) = 'tracers/west/bioOBC_West_const201812',  -12,        'DON',      .false., .true., 'yearly',   '',        '',   ''
-   sn_trcobc(9) = 'tracers/west/bioOBC_West_const201812',  -12,        'PON',      .false., .true., 'yearly',   '',        '',   ''
-   sn_trcobc(10) = 'tracers/west/bioOBC_West_const201812', -12,        'bSi',      .false., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(7) = 'tracers/west/OBC_Plankton_fromClimate_2007_2019_v201905',  -12,        'microzooplankton',     .true., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(8) = 'tracers/west/OBC_Plankton_fromClimate_2007_2019_v201905',  -12,        'dissolved_organic_nitrogen',      .true., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(9) = 'tracers/west/OBC_Plankton_fromClimate_2007_2019_v201905',  -12,        'particulate_organic_nitrogen',      .true., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(10) = 'tracers/west/OBC_Plankton_fromClimate_2007_2019_v201905', -12,        'biogenic_silicon',      .true., .true., 'yearly',   '',        '',   ''
    sn_trcobc(11) = 'tracers/west/bioOBC_West_const201812', -12,        'tur',      .false., .true., 'yearly',   '',        '',   ''
-   sn_trcobc(12) = 'NEP/ts_fill_rs_W',                     120,        'DIC',      .true.,  .false.,'yearly',   '',        '',   ''
-   sn_trcobc(13) = 'NEP/ts_fill_rs_W',                     120,        'TA',       .true.,  .false.,'yearly',   '',        '',   ''
-   sn_trcobc(14) = 'NEP/ts_fill_rs_W',                     120,        'OXY',      .true.,  .false.,'yearly',   '',        '',   ''
+   sn_trcobc(12) = 'NEP/NEP_W_v202204',                     120,        'DIC',      .true.,  .false.,'yearly',   '',        '',   ''
+   sn_trcobc(13) = 'NEP/NEP_W_v202204',                     120,        'TA',       .true.,  .false.,'yearly',   '',        '',   ''
+   sn_trcobc(14) = 'NEP/NEP_W_v202204',                     120,        'OXY',      .true.,  .false.,'yearly',   '',        '',   ''
 
    cn_dir_obc        =  './'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
@@ -77,19 +77,19 @@
 !              !  file name      ! frequency (hours) ! variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !              !                 !  (if <0  months)  !   name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
    sn_trcobc(1)  = 'tracers/north/bioOBC_North_monthlySiNO3.nc',        -1,        'NO3',      .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(2)  = 'tracers/north/bioOBC_North_const201812',          4380,        'NH4',      .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(2)  = 'tracers/north/OBC_Plankton_fromClimate_2007_2019_v201905',  -12,        'ammonium',      .true., .true., 'yearly',   '',        '',   ''
    sn_trcobc(3)  = 'tracers/north/bioOBC_North_monthlySiNO3.nc',        -1,        'Si',       .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(4)  = 'tracers/north/bioOBC_North_const201812',          4380,        'DIA',      .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(5)  = 'tracers/north/bioOBC_North_const201812',          4380,        'CRY',      .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(4)  = 'tracers/north/OBC_Plankton_fromClimate_2007_2019_v201905',  -12,        'diatoms',      .true., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(5)  = 'tracers/north/OBC_Plankton_fromClimate_2007_2019_v201905',  -12,        'flagellates',      .true., .true., 'yearly',   '',        '',   ''
    sn_trcobc(6)  = 'tracers/north/bioOBC_North_const201812',          4380,        'MYRI',     .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(7)  = 'tracers/north/bioOBC_North_const201812',          4380,        'MICZ',     .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(8)  = 'tracers/north/bioOBC_North_const201812',          4380,        'DON',      .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(9)  = 'tracers/north/bioOBC_North_const201812',          4380,        'PON',      .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(10) = 'tracers/north/bioOBC_North_const201812',          4380,        'bSi',      .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(7)  = 'tracers/north/OBC_Plankton_fromClimate_2007_2019_v201905',  -12,        'microzooplankton',     .true., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(8)  = 'tracers/north/OBC_Plankton_fromClimate_2007_2019_v201905',  -12,        'dissolved_organic_nitrogen',      .true., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(9)  = 'tracers/north/OBC_Plankton_fromClimate_2007_2019_v201905',  -12,        'particulate_organic_nitrogen',      .true., .true., 'yearly',   '',        '',   ''
+   sn_trcobc(10) = 'tracers/north/OBC_Plankton_fromClimate_2007_2019_v201905', -12,        'biogenic_silicon',      .true., .true., 'yearly',   '',        '',   ''
    sn_trcobc(11) = 'tracers/north/bioOBC_North_const201812',          4380,        'tur',       .true.,  .true.,  'yearly',   '',      '',   ''
-   sn_trcobc(12) = 'NEP/ts_fill_rs_N',           		   120,        'DIC',      .true.,  .false.,  'yearly',   '',        '',   ''
-   sn_trcobc(13) = 'NEP/ts_fill_rs_N',           		   120,        'TA',       .true.,  .false.,  'yearly',   '',        '',   ''
-   sn_trcobc(14) = 'NEP/ts_fill_rs_N',           		   120,        'OXY',      .true.,  .false.,  'yearly',   '',        '',   ''
+   sn_trcobc(12) = 'tracers/north/Dosser_north_TEOS10_DICTA.nc',        -1,        'DIC',       .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(13) = 'tracers/north/Dosser_north_TEOS10_DICTA.nc',        -1,        'TA',       .true.,  .true.,  'yearly',   '',      '',   ''
+   sn_trcobc(14) = 'tracers/north/tr_northDICTAOXY.nc',               4380,        'OXY',       .true.,  .true.,  'yearly',   '',      '',   ''
 
    cn_dir_obc        =  './'      !  root directory for the location of OPEN data files
    rn_trofac(1)   =  1.0  !  -      -      -     -
