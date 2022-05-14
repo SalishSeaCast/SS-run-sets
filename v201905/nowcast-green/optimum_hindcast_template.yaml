@@ -50,7 +50,7 @@ namelists:
   namelist_cfg:
   - $PROJECT/SalishSeaCast/hindcast-sys/runs/namelist.time
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.domain
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/nowcast-green/namelist.atmos_rivers_early_gemlam
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/nowcast-green/namelist.atmos_rivers_gemlam
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.light
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/nowcast-green/namelist.lateral.NEP
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.bottom
