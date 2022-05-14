@@ -1,0 +1,89 @@
+# salishsea command processor run description file template for
+# SalishSeaCast automation hindcast runs on optimum
+
+email: sallen@eoas.ubc.ca
+MPI decomposition: 16x34
+config_name: SalishSeaCast
+run_id: ddmmmyyhindcast
+walltime: 12:00:00
+
+paths:
+  NEMO code config: $SUSANPROJECT/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $PROJECT/SalishSeaCast/hindcast-sys/XIOS-2
+  runs directory: $SCRATCHDIR/v201905r
+
+grid:
+  bathymetry: $SUSANPROJECT/MEOPAR/grid/bathymetry_201702.nc
+  coordinates: $SUSANPROJECT/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $SUSANPROJECT/MEOPAR/grid/bathymetry_201702.csv
+
+restart:
+  restart.nc: $SCRATCHDIR/v201905r/ddmmmyy/SalishSea_nnnnnnnn_restart.nc
+  restart_trc.nc: $SCRATCHDIR/v201905r/ddmmmyy/SalishSea_nnnnnnnn_restart_trc.nc
+
+forcing:
+  NEP:
+    link to: $FORCING/SalishSeaCast/forcing/NEP36
+  NEMO-atmos:
+    # check link:
+    #   namelist filename: namelist_cfg
+    #   type: atmospheric
+    link to: $FORCING/SalishSeaCast/forcing/atmospheric/GEM2.5/gemlam
+  bfr_coef.nc:
+    link to: $SUSANPROJECT/MEOPAR/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: $SUSANPROJECT/MEOPAR/grid
+  rivers:
+    link to: $FORCING/SalishSeaCast/forcing/rivers
+  rivers-climatology:
+    link to: $SUSANPROJECT/MEOPAR/rivers-climatology
+  river_turb:
+    link to: $FORCING/SalishSeaCast/forcing/rivers/river_turb
+  ssh:
+    link to: $FORCING/SalishSeaCast/forcing/sshNeahBay/obs
+  tides:
+    link to: $SUSANPROJECT/MEOPAR/tides
+  tracers:
+    link to: $SUSANPROJECT/MEOPAR/tracers
+
+namelists:
+  namelist_cfg:
+  - $PROJECT/SalishSeaCast/hindcast-sys/runs/namelist.time
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.domain
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/nowcast-green/namelist.atmos_rivers_early_gemlam
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.light
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/nowcast-green/namelist.lateral.NEP
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.bottom
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.tracer
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.dynamics
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.vertical
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist.compute
+  namelist_smelt_cfg:
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist_smelt_biology_190926
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/nowcast-green/namelist_smelt_rivers_oldturb
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist_smelt_skog
+  namelist_top_cfg:
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist_top_restart
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/nowcast-green/namelist_top_TracerDefAndBdy_NEP
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/namelist_top_physics
+  
+output:
+  XIOS servers: 1
+  domaindefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/domain_def.xml
+  fielddefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/field_def.xml
+  filedefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/nowcast-green/file_def_dailysplit.xml
+  iodefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v201905/iodef.xml
+  separate XIOS server: true
+
+vcs revisions:
+  git:
+  - $SUSANPROJECT/MEOPAR/grid
+  - $PROJECT/SalishSeaCast/hindcast-sys/NEMO-Cmd
+  - $SUSANPROJECT/MEOPAR/NEMO-3.6-code
+  - $SUSANPROJECT/MEOPAR/rivers-climatology
+  - $SUSANPROJECT/MEOPAR/SS-run-sets
+  - $PROJECT/SalishSeaCast/hindcast-sys/SalishSeaCmd
+  - $SUSANPROJECT/MEOPAR/tides
+  - $SUSANPROJECT/MEOPAR/tracers
+  - $PROJECT/SalishSeaCast/hindcast-sys/XIOS-ARCH
+  - $PROJECT/SalishSeaCast/hindcast-sys/XIOS-2
