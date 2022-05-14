@@ -69,8 +69,8 @@
   bn_v2d = 'ssh/ssh',                        1,               'vobtcrty', .true.,        .false.,  'daily',    '',        ''
   bn_u3d = '',                              24,               'vozocrtx', .true.,        .false.,  'daily',    '',        ''
   bn_v3d = '',                              24,               'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'NEP/ts_fill_rs_W',   120,               'votemper', .true.,        .false.,  'yearly',    '',        ''
-  bn_sal = 'NEP/ts_fill_rs_W',   120,               'vosaline', .true.,        .false.,  'yearly',    '',        ''
+  bn_tem = 'NEP/NEP_W_v202204',   120,               'votemper', .true.,        .false.,  'yearly',    '',        ''
+  bn_sal = 'NEP/NEP_W_v202204',   120,               'vosaline', .true.,        .false.,  'yearly',    '',        ''
 
   cn_dir = './'
 &end
@@ -101,8 +101,8 @@
   bn_v2d = 'ssh/ssh',                        1,               'vobtcrty', .true.,        .false.,  'daily',    '',        ''
   bn_u3d = '',                              24,               'vozocrtx', .true.,        .false.,  'daily',    '',        ''
   bn_v3d = '',                              24,               'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'NEP/ts_fill_rs_N',   120,               'votemper', .true.,        .false.,  'yearly',    '',        ''
-  bn_sal = 'NEP/ts_fill_rs_N',   120,               'vosaline', .true.,        .false.,  'yearly',    '',        ''
+  bn_tem = 'tracers/north/Dosser_north_TEOS10',  -1,              'votemper', .true.,        .true.,   'yearly',   '',        ''
+  bn_sal = 'tracers/north/Dosser_north_TEOS10',  -1,              'vosaline', .true.,        .true.,   'yearly',   '',        ''
 
   cn_dir = './'
   ln_full_vel = .false.
