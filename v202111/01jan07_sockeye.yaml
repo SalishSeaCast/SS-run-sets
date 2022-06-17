@@ -4,8 +4,8 @@
 email: sallen@eoas.ubc.ca
 MPI decomposition: 18x30
 config_name: SalishSeaCast
-run_id: 01jan07_recon
-walltime: 4:00:00
+run_id: 01jan07_newv
+walltime: 8:00:00
 
 paths:
   NEMO code config: $PROJECT/NEMO-3.6-code/NEMOGCM/CONFIG
@@ -25,7 +25,7 @@ forcing:
   NEP:
     link to: $FORCING/NEP36
   NEMO-atmos:
-    link to: $FORCING/atmospheric/ReCON
+    link to: $FORCING/atmospheric/GEM2.5/gemlam
   bfr_coef.nc:
     link to: $PROJECT/grid/jetty_mask_bathy202108.nc
   grid:
@@ -45,9 +45,9 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time_01jan07_fifteendays
+  - ./namelist.time_01jan07_onemonth
   - $PROJECT/SS-run-sets/v202111/namelist.domain
-  - $PROJECT/SS-run-sets/v202111/namelist.atmos_rivers_recon
+  - $PROJECT/SS-run-sets/v202111/namelist.atmos_rivers_early_gemlam
   - $PROJECT/SS-run-sets/v202111/namelist.light
   - $PROJECT/SS-run-sets/v202111/namelist.lateral.NEP
   - $PROJECT/SS-run-sets/v202111/namelist.bottom
