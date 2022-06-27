@@ -1,0 +1,75 @@
+# salishsea command processor run description file template for
+# SalishSeaCast double resolution blue run on Sockeye
+
+email: sallen@eoas.ubc.ca
+MPI decomposition: 14x25
+config_name: SalishSeaCast_Blue
+run_id: 01jan17_double
+walltime: 3:00:00
+
+paths:
+  NEMO code config: $PROJECT/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $PROJECT/XIOS-2
+  runs directory: $SCRATCH/DOUBLE_202111
+
+grid:
+  bathymetry: $PROJECT/grid/bathymetry_double_202206.nc
+  coordinates: $PROJECT/grid/coordinates_SalishSea_double_202206.nc
+  land processor elimination: $PROJECT/grid/bathymetry_double_202206.csv
+
+forcing:
+  LiveOcean:
+    link to: $FORCING//LiveOcean
+  NEMO-atmos:
+    link to: $FORCING/atmospheric/GEM2.5/operational
+  bfr_coef.nc:
+    link to: $PROJECT/grid/jetty_mask_double_202206.nc
+  grid:
+    link to: $PROJECT/grid
+  rivers:
+    link to: $FORCING/rivers
+  rivers-climatology:
+    link to: $PROJECT/rivers-climatology
+  ssh:
+    link to: $FORCING/sshNeahBay/obs
+  tides:
+    link to: $PROJECT/tides
+  tracers:
+    link to: $PROJECT/tracers
+  initial_data_file.nc:
+    link to: $PROJECT/initial_susan/SalishSea_double_initial_20161231.nc
+
+
+namelists:
+  namelist_cfg:
+  - ./namelist.time_01jan17_oneday
+  - $PROJECT/SS-run-sets/v202111/double_blue/namelist.domain
+  - $PROJECT/SS-run-sets/v202111/double_blue/namelist.atmos_rivers
+  - $PROJECT/SS-run-sets/v202111/namelist.light_blue
+  - $PROJECT/SS-run-sets/v202111/double_blue/namelist.lateral
+  - $PROJECT/SS-run-sets/v202111/namelist.bottom  # fine
+  - $PROJECT/SS-run-sets/v202111/namelist.tracer # leave ah = 1.5 m2/s
+  - $PROJECT/SS-run-sets/v202111/namelist.dynamics # leave ah = 1.5 m2/s
+  - $PROJECT/SS-run-sets/v202111/namelist.vertical # fine
+  - $PROJECT/SS-run-sets/v202111/namelist.compute # fine
+  
+output:
+  XIOS servers: 1
+  domaindefs: $PROJECT/SS-run-sets/v202111/domain_def.xml
+  fielddefs: $PROJECT/SS-run-sets/v202111/field_def.xml
+  filedefs: $PROJECT/SS-run-sets/v202111/double_blue/file_def_dailysplit.xml
+  iodefs: $PROJECT/SS-run-sets/v202111/iodef.xml
+  separate XIOS server: true
+
+vcs revisions:
+  git:
+  - $PROJECT/grid
+  - $PROJECT/NEMO-Cmd
+  - $PROJECT/NEMO-3.6-code
+  - $PROJECT/rivers-climatology
+  - $PROJECT/SS-run-sets
+  - $PROJECT/SalishSeaCmd
+  - $PROJECT/tides
+  - $PROJECT/tracers
+  - $PROJECT/XIOS-ARCH
+  - $PROJECT/XIOS-2
