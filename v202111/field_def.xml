@@ -1037,7 +1037,7 @@
      <!-- PISCES additional diagnostics on T grid  -->
 
      <field_group id="diad_T" grid_ref="grid_T_3D">
-       <field id="PAR"         long_name="Photosynthetically Available Radiation"  unit="W/m2"          grid_ref="grid_T_3D" />
+       <field id="PAR"         long_name="Photosynthetically Available Radiation"  standard_name="downwelling_photosynthetic_radiative_flux_in_sea_water"  unit="W/m2"          grid_ref="grid_T_3D" />
        <field id="PPDIAT"      long_name="Primary production of diatoms"           unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="PPPHY"       long_name="Primary production of small phyto"       unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="PPMRUB"      long_name="Primary production of M. rubrum"         unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
