@@ -2,10 +2,10 @@
 # SalishSeaCast double resolution blue run on Sockeye
 
 email: sallen@eoas.ubc.ca
-MPI decomposition: 14x25
+MPI decomposition: 14x33
 config_name: SalishSeaCast_Blue
-run_id: 01jan17_double
-walltime: 3:00:00
+run_id: double_40
+walltime: 6:00:00
 
 paths:
   NEMO code config: $PROJECT/NEMO-3.6-code/NEMOGCM/CONFIG
@@ -42,7 +42,7 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time_01jan17_oneday
+  - ./namelist.time_01jan17_twoday
   - $PROJECT/SS-run-sets/v202111/double_blue/namelist.domain
   - $PROJECT/SS-run-sets/v202111/double_blue/namelist.atmos_rivers
   - $PROJECT/SS-run-sets/v202111/namelist.light_blue
