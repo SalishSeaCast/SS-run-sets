@@ -928,9 +928,7 @@
        <field id="GRMICZPHY"   long_name="Microzoo grazing on small phyto"         standard_name="tendency_of_mole_concentration_of_small_phytoplankton_expressed_as_nitrogen_in_sea_water_due_to_microzooplankton_grazing"                               unit="mmol N/m3/s"  grid_ref="grid_T_3D" />
        <field id="GRMICZPON"   long_name="Microzoo grazing on PON"                 standard_name="tendency_of_mole_concentration_of_particulate_organic_nitrogen_expressed_as_nitrogen_in_sea_water_due_to_microzooplankton_grazing"                      unit="mmol N/m3/s"  grid_ref="grid_T_3D" />
        <field id="GRMICZMICZ"  long_name="Microzoo grazing on microzooplankton"    standard_name="tendency_of_mole_concentration_of_microzooplankton_expressed_as_nitrogen_in_sea_water_due_to_microzooplankton_grazing"                                  unit="mmol N/m3/s"  grid_ref="grid_T_3D" />
-
-       <field id="TQ10"        long_name="Temperature dependence of bio rates"     unit="1"            grid_ref="grid_T_3D" />
-
+       <field id="TQ10"        long_name="Temperature dependence of bio rates"     standard_name="biorate_multiplier_due_to_temperature_relative_to_20_degree_C"                                                                                          unit="1"            grid_ref="grid_T_3D" />
        <field id="RIVNO3"      long_name="riverine nitrate"                        unit="mmol N/s"     grid_ref="grid_T_3D" />
        <field id="BIOTRNO3"    long_name="biology trend nitrate"                   unit="mmol N/s"     grid_ref="grid_T_3D" />
        <field id="PHYSTRNO3"   long_name="physics trend nitrate"                   unit="mmol N/s"     grid_ref="grid_T_3D" />
