@@ -811,7 +811,7 @@
        <field id="f_kwco2"        long_name="f_kwco2"         standard_name="f_kwco2"  unit="fill" grid_ref="grid_T_2D" />
        <field id="f_K0"        long_name="f_K0"         standard_name="f_K0"  unit="fill" grid_ref="grid_T_2D" />
        <field id="f_co2starair"        long_name="f_co2starair"         standard_name="f"  unit="fill" grid_ref="grid_T_2D" />
-       <field id="f_co2flux"        long_name="f_co2flux"         standard_name="f"  unit="fill" grid_ref="grid_T_2D" />
+       <field id="f_co2flux"  long_name="Surface CO2 Flux"  standard_name="surface_downward_mole_flux_of_carbon_dioxide"  unit="mmol CO2 m-2 s-1"  grid_ref="grid_T_2D" />
        <field id="f_dpco2"        long_name="f_dpco2"         standard_name="f_dpco2"  unit="fill" grid_ref="grid_T_2D" />
        <field id="wind_mag"        long_name="wind_mag"         standard_name="wind_mag"  unit="fill" grid_ref="grid_T_2D" />
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
