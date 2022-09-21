@@ -12,6 +12,8 @@
           <field field_ref="ssh"            name="sossheig"/>
           <field field_ref="toce"           name="votemper"/>
           <field field_ref="soce"           name="vosaline"/>
+          <field field_ref="rhop"           name="sigma_theta"/>
+          <field field_ref="e3t"            name="e3t"/>
         </file>
           <file id="file2" name_suffix="_grid_U" description="ocean U grid variables" >
           <field field_ref="uoce"           name="vozocrtx"  />
@@ -25,27 +27,25 @@
           <field field_ref="avm"            name="vert_eddy_visc" />
           <field field_ref="eps"            name="dissipation"/>
         </file>
-        <file id="file5" name_suffix="_ptrc_T" description="biogeochemical variables" >
+        <file id="file5" name_suffix="_biol_T" description="biology" >
           <field field_ref="NO3"            name="nitrate"/>
           <field field_ref="NH4"            name="ammonium"/>
           <field field_ref="Si"             name="silicon"/>
           <field field_ref="DIAT"           name="diatoms"/>
           <field field_ref="PHY"            name="flagellates"/>
-          <field field_ref="MYRI"           name="ciliates"/>
           <field field_ref="MICZ"           name="microzooplankton"/>
           <field field_ref="DON"            name="dissolved_organic_nitrogen"/>
           <field field_ref="PON"            name="particulate_organic_nitrogen"/>
           <field field_ref="bSi"            name="biogenic_silicon"/>
           <field field_ref="MESZ"           name="mesozooplankton"/>
         </file>
-	<file id="file13" name_suffix="_carp_T" description="auxilary variables">
+	<file id="file6" name_suffix="_chem_T" description="chemistry and light">
           <field field_ref="PAR"      name="PAR"/>
-          <field field_ref="rhop"     name="sigma_theta"/>
-          <field field_ref="e3t"      name="e3t"/>
-          <field field_ref="TRA"      name="Fraser_tracer"/>
+          <field field_ref="TRA"      name="turbidity"/>
           <field field_ref="DIC"      name="dissolved_inorganic_carbon"/>
           <field field_ref="TA"       name="total_alkalinity"/>
           <field field_ref="O2"       name="dissolved_oxygen"/>
+          <field field_ref="CO2flux"      name="CO2_flux" />
         </file>
       </file_group>
       <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" split_freq="1d" enabled=".FALSE."> <!-- 2h files -->
@@ -54,39 +54,26 @@
       <file_group id="4h" output_freq="4h"  output_level="10" enabled=".FALSE."/> <!-- 4h files -->
       <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."/> <!-- 6h files -->
       <file_group id="1d" output_freq="1d"  output_level="10" compression_level="4" split_freq="1d" enabled=".TRUE."> <!-- 1d files -->
-        <file id="file31" name_suffix="_grid_T" description="ocean T grid variables" >
-          <field field_ref="ssh"            name="sossheig"/>
-          <field field_ref="toce"           name="votemper"/>
-          <field field_ref="soce"           name="vosaline"/>
+        <file id="file11" name_suffix="_prod_T" description="biology growth rates" >
+          <field field_ref="PPDIAT"      />
+          <field field_ref="PPPHY"       />
+          <field field_ref="PPDIATNO3"      />
+          <field field_ref="PPPHYNO3"     />
+          <field field_ref="TQ10"       />
         </file>
-        <file id="file35" name_suffix="_ptrc_T" description="biogeochemical variables" >
-          <field field_ref="NO3"            name="nitrate"/>
-          <field field_ref="NH4"            name="ammonium"/>
-          <field field_ref="Si"             name="silicon"/>
-          <field field_ref="DIAT"           name="diatoms"/>
-          <field field_ref="PHY"            name="flagellates"/>
-          <field field_ref="MYRI"           name="ciliates"/>
-          <field field_ref="MICZ"           name="microzooplankton"/>
-          <field field_ref="DON"            name="dissolved_organic_nitrogen"/>
-          <field field_ref="PON"            name="particulate_organic_nitrogen"/>
-          <field field_ref="bSi"            name="biogenic_silicon"/>
-          <field field_ref="MESZ"           name="mesozooplankton"/>
+        <file id="file11" name_suffix="_graz_T" description="grazing and mortality" >
+          <field field_ref="MORTPHY"      />
+          <field field_ref="MORTDIAT"      />
+	  <field field_ref="MORTMICZ"     />
+          <field field_ref="GRMESZDIAT"      />
+          <field field_ref="GRMESZPHY"      />
+          <field field_ref="GRMESZPON"      />
+          <field field_ref="GRMESZMICZ"       />
+          <field field_ref="GRMICZDIAT"      />
+          <field field_ref="GRMICZPHY"      />
+          <field field_ref="GRMICZPON"      />
+          <field field_ref="GRMICZMICZ"      />
         </file>
-	<file id="file34" name_suffix="_dia_T" description="diagnostic variables" >
-          <field field_ref="BFX_DIAT"    name="BFX_DIAT"/>
-          <field field_ref="BFX_PON"     name="BFX_PON"/>
-          <field field_ref="BFX_bSi"     name="BFX_bSi"/>
-        </file>
-	<file id="file33" name_suffix="_carp_T" description="auxilary variables">
-          <field field_ref="PAR"      name="PAR"/>
-          <field field_ref="rhop"     name="sigma_theta"/>
-          <field field_ref="e3t"      name="e3t"/>
-          <field field_ref="TRA"      name="Fraser_tracer"/>
-          <field field_ref="DIC"      name="dissolved_inorganic_carbon"/>
-          <field field_ref="TA"       name="total_alkalinity"/>
-          <field field_ref="O2"       name="dissolved_oxygen"/>
-        </file>
-
       </file_group>
       <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
       <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE."/>  <!-- 5d files -->
