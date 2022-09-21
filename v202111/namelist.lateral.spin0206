@@ -69,8 +69,8 @@
   bn_v2d = 'ssh/ssh',                        1,               'vobtcrty', .true.,        .false.,  'daily',    '',        ''
   bn_u3d = '',                              24,               'vozocrtx', .true.,        .false.,  'daily',    '',        ''
   bn_v3d = '',                              24,               'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'NEP/NEP_v202209_climatology_2007_2011',   24,     'votemper', .true.,        .true.,  'daily',    '',        ''
-  bn_sal = 'NEP/NEP_v202209_climatology_2007_2011',   24,     'vosaline', .true.,        .true.,  'daily',    '',        ''
+  bn_tem = 'NEP/NEP_v202209_climatology_2007_2011',   24,     'votemper', .true.,        .true.,  'yearly',    '',        ''
+  bn_sal = 'NEP/NEP_v202209_climatology_2007_2011',   24,     'vosaline', .true.,        .true.,  'yearly',    '',        ''
 
   cn_dir = './'
 &end
