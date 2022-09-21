@@ -822,7 +822,7 @@
        <field id="f_kwco2"        long_name="f_kwco2"         standard_name="f_kwco2"  unit="fill" grid_ref="grid_T_2D" />
        <field id="f_K0"        long_name="f_K0"         standard_name="f_K0"  unit="fill" grid_ref="grid_T_2D" />
        <field id="f_co2starair"        long_name="f_co2starair"         standard_name="f"  unit="fill" grid_ref="grid_T_2D" />
-       <field id="CO2flux"        long_name="Flux of CO2 from Atmosphere to Ocean"         standard_name="f"  unit="mmol m-2 s-1" grid_ref="grid_T_2D" />
+       <field id="CO2flux"        long_name="Flux of CO2 from Atmosphere to Ocean"         standard_name="surface_downward_mole_flux_of_carbon_dioxide"  unit="mmol m-2 s-1" grid_ref="grid_T_2D" />
        <field id="f_dpco2"        long_name="f_dpco2"         standard_name="f_dpco2"  unit="fill" grid_ref="grid_T_2D" />
        <field id="wind_mag"        long_name="wind_mag"         standard_name="wind_mag"  unit="fill" grid_ref="grid_T_2D" />
        <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
@@ -1038,31 +1038,31 @@
 
      <field_group id="diad_T" grid_ref="grid_T_3D">
        <field id="PAR"         long_name="Photosynthetically Available Radiation"  standard_name="downwelling_photosynthetic_radiative_flux_in_sea_water"  unit="W/m2"          grid_ref="grid_T_3D" />
-       <field id="PPDIAT"      long_name="Primary Production of Diatoms"           unit="mmol N m-3 s-1"   grid_ref="grid_T_3D" />
-       <field id="PPPHY"       long_name="Primary Production of Flagellates"       unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="PPMRUB"      long_name="Primary Production of M. rubrum"         unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="PPDIATNO3"   long_name="New Primary Production of Diatoms"       unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="PPPHYNO3"    long_name="New Primary Production of Flagellates"   unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="PPMRUBNO3"   long_name="New Primary Production of M. rubrum"     unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PPDIAT"      long_name="Primary Production of Diatoms"           standard_name="tendency_of_mole_concentration_of_diatoms_expressed_as_nitrogen_in_sea_water_due_to_gross_primary_productivity"     unit="mmol N m-3 s-1"   grid_ref="grid_T_3D" />
+       <field id="PPPHY"       long_name="Primary Production of Flagellates"       standard_name="tendency_of_mole_concentration_of_flagellates_expressed_as_nitrogen_in_sea_water_due_to_gross_primary_productivity"  unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PPMRUB"      long_name="Primary Production of M. rubrum"         standard_name="tendency_of_mole_concentration_of_mesodinium_rubrum_expressed_as_nitrogen_in_sea_water_due_to_gross_primary_productivity"   unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PPDIATNO3"   long_name="New Primary Production of Diatoms"       standard_name="tendency_of_mole_concentration_of_diatoms_expressed_as_nitrogen_in_sea_water_due_to_gross_primary_productivity_due_to_nitrate_utilization"  unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PPPHYNO3"    long_name="New Primary Production of Flagellates"   standard_name="tendency_of_mole_concentration_of_flagellates_expressed_as_nitrogen_in_sea_water_due_to_gross_primary_productivity_due_to_nitrate_utilization"  unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PPMRUBNO3"   long_name="New Primary Production of M. rubrum"     standard_name="tendency_of_mole_concentration_of_mesodinium_rubrum_expressed_as_nitrogen_in_sea_water_due_to_gross_primary_productivity_due_to_nitrate_utilization" unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="PPDIATNO3V"   long_name="New Primary Production of Diatoms"       unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="PPPHYNO3V"    long_name="New Primary Production of Flagellates"   unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="PPMRUBNO3V"   long_name="New Primary Production of M. rubrum"     unit="mmol N/s"   grid_ref="grid_T_3D" />
-       <field id="HetMRub"     long_name="Heterotrophic growth of M. rubrum"       unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="GRMESZDIAT"  long_name="Mesozoo Grazing on Diatoms"              unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="GRMESZMRUB"  long_name="Mesozoo Grazing on M. rubrum"            unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="GRMESZPHY"   long_name="Mesozoo Grazing on Flagellates"          unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="GRMESZPON"   long_name="Mesozoo Grazing on PON"                  unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="GRMESZMICZ"  long_name="Mesozoo Grazing on Microzooplankton"     unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="GRMICZDIAT"  long_name="Microzoo Grazing on Diatoms"             unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="GRMICZMRUB"  long_name="Microzoo Grazing on M. rubrum"           unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="GRMICZPHY"   long_name="Microzoo Grazing on Flagellates"         unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="GRMICZPON"   long_name="Microzoo Grazing on PON"                 unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="GRMICZMICZ"  long_name="Microzoo Grazing on Microzooplankton"    unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="MORTPHY"     long_name="Flagellate mortality"                   unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="MORTMRUB"    long_name="M. rubrum mortality"                     unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
-       <field id="MORTDIAT"    long_name="Diatom Mortality"                        unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="HetMRub"     long_name="Heterotrophic growth of M. rubrum"       standard_name="tendency_of_mole_concentration_of_mesodinium_rubrum_expressed_as_nitrogen_in_sea_water_due_to_heterotrophic_growth"  unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMESZDIAT"  long_name="Mesozoo Grazing on Diatoms"              standard_name="tendency_of_mole_concentration_of_diatoms_expressed_as_nitrogen_in_sea_water_due_to_mesozooplankton_grazing"  unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMESZMRUB"  long_name="Mesozoo Grazing on M. rubrum"            standard_name="tendency_of_mole_concentration_of_mesodinium_rubrum_expressed_as_nitrogen_in_sea_water_due_to_mesozooplankton_grazing"  unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMESZPHY"   long_name="Mesozoo Grazing on Flagellates"          standard_name="tendency_of_mole_concentration_of_flagellates_expressed_as_nitrogen_in_sea_water_due_to_mesozooplankton_grazing"  unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMESZPON"   long_name="Mesozoo Grazing on PON"                  standard_name="tendency_of_mole_concentration_of_particulate_organic_nitrogen_expressed_as_nitrogen_in_sea_water_due_to_mesozooplankton_grazing"  unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMESZMICZ"  long_name="Mesozoo Grazing on Microzooplankton"     standard_name="tendency_of_mole_concentration_of_microzooplankton_expressed_as_nitrogen_in_sea_water_due_to_mesozooplankton_grazing"  unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMICZDIAT"  long_name="Microzoo Grazing on Diatoms"             standard_name="tendency_of_mole_concentration_of_diatoms_expressed_as_nitrogen_in_sea_water_due_to_microzooplankton_grazing"  unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMICZMRUB"  long_name="Microzoo Grazing on M. rubrum"           standard_name="tendency_of_mole_concentration_of_mesodinium_rubrum_expressed_as_nitrogen_in_sea_water_due_to_microzooplankton_grazing"  unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMICZPHY"   long_name="Microzoo Grazing on Flagellates"         standard_name="tendency_of_mole_concentration_of_flagellates_expressed_as_nitrogen_in_sea_water_due_to_microzooplankton_grazing"  unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMICZPON"   long_name="Microzoo Grazing on PON"                 standard_name="tendency_of_mole_concentration_of_particulate_organic_nitrogen_expressed_as_nitrogen_in_sea_water_due_to_microzooplankton_grazing"  unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRMICZMICZ"  long_name="Microzoo Grazing on Microzooplankton"    standard_name="tendency_of_mole_concentration_of_microzooplankton_expressed_as_nitrogen_in_sea_water_due_to_microzooplankton_grazing" unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="MORTPHY"     long_name="Flagellate mortality"                    standard_name="tendency_of_mole_concentration_of_flagellates_expressed_as_nitrogen_in_sea_water_due_to_mortality"          unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="MORTMRUB"    long_name="M. rubrum mortality"                     standard_name="tendency_of_mole_concentration_of_mesodinium_rubrum_expressed_as_nitrogen_in_sea_water_due_to_mortality"            unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
+       <field id="MORTDIAT"    long_name="Diatom Mortality"                        standard_name="tendency_of_mole_concentration_of_diatoms_expressed_as_nitrogen_in_sea_water_due_to_mortality" unit="mmol N/m3/s"   grid_ref="grid_T_3D" />
        <field id="MORTMICZ"    long_name="Microzooplankton Mortality and Excretion" unit="mmol N m-3 s-1"   grid_ref="grid_T_3D" />
-       <field id="TQ10"        long_name="Temperature Dependence of Biology Rates"     unit="1"             grid_ref="grid_T_3D" />
+       <field id="TQ10"        long_name="Temperature Dependence of Biology Rates"  standard_name="biorate_multiplier_due_to_temperature_relative_to_20_degree_C"   unit="1"             grid_ref="grid_T_3D" />
        <field id="RIVNO3"      long_name="riverine nitrate"                        unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="BIOTRNO3"    long_name="biology trend nitrate"                   unit="mmol N/s"   grid_ref="grid_T_3D" />
        <field id="PHYSTRNO3"    long_name="physics trend nitrate"                  unit="mmol N/s"   grid_ref="grid_T_3D" />
