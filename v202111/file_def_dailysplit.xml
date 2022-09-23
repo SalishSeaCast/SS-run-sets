@@ -74,7 +74,7 @@
         <file id="file12" name_suffix="_graz_T" description="grazing and mortality" >
           <field field_ref="MORTPHY"/>
           <field field_ref="MORTDIAT"/>
-	        <field field_ref="MORTMICZ"/>
+	  <field field_ref="MORTMICZ"/>
           <field field_ref="GRMESZDIAT"/>
           <field field_ref="GRMESZPHY"/>
           <field field_ref="GRMESZPON"/>
