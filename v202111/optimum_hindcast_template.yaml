@@ -22,10 +22,10 @@ restart:
   restart_trc.nc: $SCRATCHDIR/v202111/ddmmmyy/SalishSea_nnnnnnnn_restart_trc.nc
 
 forcing:
-  NEP:
-    link to: $FORCING/SalishSeaCast/forcing/NEP36
+  LiveOcean:
+    link to: $FORCING/SalishSeaCast/forcing/LiveOcean
   NEMO-atmos:
-    link to: $FORCING/SalishSeaCast/forcing/atmospheric/ReCON
+    link to: $FORCING/SalishSeaCast/forcing/atmospheric/GEM2.5/gemlam
   bfr_coef.nc:
     link to: $SUSANPROJECT/MEOPAR/grid/jetty_mask_bathy202108.nc
   grid:
@@ -47,9 +47,9 @@ namelists:
   namelist_cfg:
   - $PROJECT/SalishSeaCast/hindcast-sys/runs/namelist.time
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.domain
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers_reconXs1
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers_late_gemlam
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.light
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.lateral.spin0206
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.lateral
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.bottom
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.tracer
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.dynamics
@@ -57,11 +57,11 @@ namelists:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.compute
   namelist_smelt_cfg:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_smelt_biology
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111//namelist_smelt_rivers_earlyturb
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111//namelist_smelt_rivers
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_restart
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_TracerDefAndBdy.spin0206
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_TracerDefAndBdy
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_physics
   
 output:
