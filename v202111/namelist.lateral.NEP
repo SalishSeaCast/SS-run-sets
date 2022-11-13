@@ -69,8 +69,8 @@
   bn_v2d = 'ssh/ssh',                        1,               'vobtcrty', .true.,        .false.,  'daily',    '',        ''
   bn_u3d = '',                              24,               'vozocrtx', .true.,        .false.,  'daily',    '',        ''
   bn_v3d = '',                              24,               'vomecrty', .true.,        .false.,  'daily',    '',        ''
-  bn_tem = 'NEP/NEP_W_v202204',   120,               'votemper', .true.,        .false.,  'yearly',    '',        ''
-  bn_sal = 'NEP/NEP_W_v202204',   120,               'vosaline', .true.,        .false.,  'yearly',    '',        ''
+  bn_tem = 'NEP/NEP_v202209',   	    24,               'votemper', .true.,        .false.,  'daily',    '',        ''
+  bn_sal = 'NEP/NEP_v202209',   	    24,               'vosaline', .true.,        .false.,  'daily',    '',        ''
 
   cn_dir = './'
 &end
