@@ -25,7 +25,7 @@ forcing:
   LiveOcean:
     link to: $FORCING/SalishSeaCast/forcing/LiveOcean
   NEMO-atmos:
-    link to: $FORCING/SalishSeaCast/forcing/atmospheric/GEM2.5/gemlam
+    link to: $FORCING/SalishSeaCast/forcing/atmospheric/GEM2.5/ops
   bfr_coef.nc:
     link to: $SUSANPROJECT/MEOPAR/grid/jetty_mask_bathy202108.nc
   grid:
@@ -47,7 +47,7 @@ namelists:
   namelist_cfg:
   - $PROJECT/SalishSeaCast/hindcast-sys/runs/namelist.time
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.domain
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers_late_gemlam
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.light
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.lateral
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.bottom
