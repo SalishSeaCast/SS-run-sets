@@ -47,7 +47,7 @@ namelists:
   namelist_cfg:
   - ./namelist.time.01mar23
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.domain
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers_hrdps
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers.hrdps
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.light
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.lateral
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.bottom
