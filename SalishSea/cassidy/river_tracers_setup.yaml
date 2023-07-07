@@ -61,7 +61,8 @@ namelists:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_restart
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_TracerDefAndBdy
+  # - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_TracerDefAndBdy
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/namelist_top_TracerDefAndBdy
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_physics
   
 output:
