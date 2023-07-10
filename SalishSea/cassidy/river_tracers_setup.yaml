@@ -26,6 +26,8 @@ forcing:
     link to: $PROJECT/SalishSea/forcing/atmospheric/continental2.5/nemo_forcing/
   bfr_coef.nc:
     link to: $PROJECT/$USER/MEOPAR/grid/jetty_mask_bathy202108.nc
+  river_mask.nc:
+    link to: $PROJECT/$USER/MEOPAR/grid/river_mask_bathy202108.nc
   grid:
     link to: $PROJECT/$USER/MEOPAR/grid
   rivers:
