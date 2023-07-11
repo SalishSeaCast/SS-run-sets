@@ -24,7 +24,7 @@
    sn_tracer(12) = 'FRAS    ' , 'Fraser River                           ',  '1' ,  .false.     , .true.
    sn_tracer(13) = 'OTH     ' , 'All other Rivers                       ',  '1' ,  .false.     , .true.
 
-   ln_trcdta = .true.
+   ln_trcdta = .false.
    ln_trcdmp = .false.
    /
 !-----------------------------------------------------------------------
