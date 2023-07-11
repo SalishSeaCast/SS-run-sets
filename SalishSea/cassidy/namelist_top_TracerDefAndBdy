@@ -30,8 +30,8 @@
 !-----------------------------------------------------------------------
 &namtrc_bdy     ! bdy for passive tracers
 !-----------------------------------------------------------------------
-   cn_trc_dflt   =  'frs','frs'
-   cn_trc        =  'frs','frs'          ! boundary condition type for passive tracers
+   cn_trc_dflt   =  'none','none'
+   cn_trc        =  'none','none'          ! boundary condition type for passive tracers
    nn_trcdmp_bdy = 0, 0
 /
 !----------------------------------------------------------------------
