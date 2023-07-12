@@ -62,16 +62,14 @@ namelists:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_rivers_opsturb
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
-  # - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_restart
   - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/namelist_top_coldstart
-  # - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_TracerDefAndBdy
   - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/namelist_top_TracerDefAndBdy
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_physics
   
 output:
   XIOS servers: 1
   domaindefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/domain_def.xml
-  fielddefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/field_def.xml
+  fielddefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/field_def.xml
   filedefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/file_def.xml
   iodefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/iodef.xml
   separate XIOS server: true
