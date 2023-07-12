@@ -34,52 +34,6 @@
    cn_trc        =  'none','none'          ! boundary condition type for passive tracers
    nn_trcdmp_bdy = 0, 0
 /
-!----------------------------------------------------------------------
-&nambdy_bc       !   data for BDY boundary conditions: 1st boundary
-!-----------------------------------------------------------------------
-!
-!              !  file name      ! frequency (hours) !    variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
-!              !                 !  (if <0  months)  !      name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
 
-
-   cn_dir_obc        =  './'      !  root directory for the location of OPEN data files
-   rn_trofac(1)   =  1.0  !  -      -      -     -
-   rn_trofac(2)   =  1.0  !  -      -      -     -
-   rn_trofac(3)   =  1.0  !  multiplicative factor
-   rn_trofac(4)   =  1.0  !  -      -      -     -
-   rn_trofac(5)   =  1.0  !  -      -      -     -
-   rn_trofac(6)   =  0.0  !  set ciliates to zero
-   rn_trofac(7)   =  1.0  !  -      -      -     -
-   rn_trofac(8)   =  1.0  !  -      -      -     -
-   rn_trofac(9)   =  1.0  !  -      -      -     -
-   rn_trofac(10)  =  1.0  !  -      -      -     -
-   rn_trofac(11)  =  1.0  !  -      -      -     -
-   rn_trofac(12)  =  1.0  !  -      -      -     -
-   rn_trofac(13)  =  1.0  !  -      -      -     -
-   rn_trofac(14)  =  1.0  !  -      -      -     -
-/
-!----------------------------------------------------------------------
-&nambdy_bc       !   data for BDY boundary conditions: 2nd boundary
-!-----------------------------------------------------------------------
-!              !  file name      ! frequency (hours) ! variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
-!              !                 !  (if <0  months)  !   name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
-
-
-   cn_dir_obc        =  './tracers/north/'      !  root directory for the location of OPEN data files
-   rn_trofac(1)   =  1.0  !  -      -      -     -
-   rn_trofac(2)   =  1.0  !  -      -      -     -
-   rn_trofac(3)   =  1.0  !  multiplicative factor
-   rn_trofac(4)   =  1.0  !  -      -      -     -
-   rn_trofac(5)   =  1.0  !  -      -      -     -
-   rn_trofac(6)   =  0.0  !  set ciliates to zero
-   rn_trofac(7)   =  1.0  !  -      -      -     -
-   rn_trofac(8)   =  1.0  !  -      -      -     -
-   rn_trofac(9)   =  1.0  !  -      -      -     -
-   rn_trofac(10)  =  1.0  !  -      -      -     -
-   rn_trofac(11)  =  1.0  !  -      -      -     -
-   rn_trofac(12)  =  1.0  !  -      -      -     -
-   rn_trofac(13)  =  1.0  !  -      -      -     -
-   rn_trofac(14)  =  1.0  !  -      -      -     -
-/
 
 
