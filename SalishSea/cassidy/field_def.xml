@@ -843,6 +843,19 @@
        <field id="C14B_E3T"    long_name="C14B * E3T"                               unit="m"  > C14B * e3t </field >
        <!-- Tracer fields with key_my_trc -->
        <field id="MYTRC1"      long_name="20 m upwelling tracer"                    unit="1" />
+       <field id="NOOK"        long_name="Nooksack River"                    unit="1" />
+       <field id="SKAG"        long_name="Skagit River"                    unit="1" />
+       <field id="SNO"         long_name="Snohomish River"                    unit="1" />
+       <field id="NIS"         long_name="Nisqually River"                    unit="1" />
+       <field id="EL"          long_name="Elwha River"                    unit="1" />
+       <field id="COW"         long_name="Cowichan River"                    unit="1" />
+       <field id="NANA"        long_name="Nanaimo River"                    unit="1" />
+       <field id="PUNT"        long_name="Puntledge River"                    unit="1" />
+       <field id="SALM"        long_name="Salmon River"                    unit="1" />
+       <field id="HOM"         long_name="Homathko River"                    unit="1" />
+       <field id="SQUAM"       long_name="Squamish River"                    unit="1" />
+       <field id="FRAS"        long_name="Fraser River"                    unit="1" />
+       <field id="OTH"         long_name="All Other Rivers"                    unit="1" />
      </field_group>
 
      <!-- SMELT Advective and Diffusive Transports of Tracers - U Grid  -->
