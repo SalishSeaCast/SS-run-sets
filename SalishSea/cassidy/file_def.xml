@@ -61,12 +61,18 @@
         </file>
 
         <file id="file7" name_suffix="_rivr_T" description="river tracers">
-          <field field_ref="PAR"      name="PAR"/>
-          <field field_ref="TRA"      name="turbidity"/>
-          <field field_ref="DIC"      name="dissolved_inorganic_carbon"/>
-          <field field_ref="TA"       name="total_alkalinity"/>
-          <field field_ref="O2"       name="dissolved_oxygen"/>
-          <field field_ref="CO2flux"  name="CO2_flux" />
+          <field field_ref="NOOK"     name="nooksack_river"/>
+          <field field_ref="SKAG"     name="skagit_river"/>
+          <field field_ref="SNO"      name="snohomish_river"/>
+          <field field_ref="NIS"      name="nisqually_river"/>
+          <field field_ref="EL"       name="elwha_river"/>
+          <field field_ref="NANA"     name="nanaimo_river"/>
+          <field field_ref="PUNT"     name="puntledge_river"/>
+          <field field_ref="SALM"     name="salmon_river"/>
+          <field field_ref="HOM"      name="homathko_river"/>
+          <field field_ref="SQUAM"    name="squamish_river"/>
+          <field field_ref="FRAS"     name="fraser_river"/>
+          <field field_ref="OTH"      name="other_rivers"/>
         </file>
       </file_group>
 
