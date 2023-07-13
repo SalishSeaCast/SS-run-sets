@@ -66,6 +66,7 @@
           <field field_ref="SNO"      name="snohomish_river"/>
           <field field_ref="NIS"      name="nisqually_river"/>
           <field field_ref="EL"       name="elwha_river"/>
+          <field field_ref="COW"      name="cowichan_river"/>
           <field field_ref="NANA"     name="nanaimo_river"/>
           <field field_ref="PUNT"     name="puntledge_river"/>
           <field field_ref="SALM"     name="salmon_river"/>
