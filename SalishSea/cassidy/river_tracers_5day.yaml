@@ -5,7 +5,7 @@ email: cdonaldson@eoas.ubc.ca
 MPI decomposition: 6x14
 config_name: river_trace
 run_id: 01mar23_05mar23
-walltime: 7:30:00
+walltime: 12:00:00
 
 paths:
   NEMO code config: $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
