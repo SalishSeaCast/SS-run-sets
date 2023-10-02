@@ -1,0 +1,57 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! SMELT  (key_pisces) Rivers
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampissbc
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!               !  file name                                  ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!               !                                             !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_riverno3  = 'rivers-climatology/bio/R201906_bioClim',       24,               'no3',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_rivernh4  = 'rivers-climatology/bio/R202101_bioConst',     -12,               'nh4',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riversil  = 'rivers-climatology/bio/RPugetExp_bioClim',       24,               'sil',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riverdia  = 'rivers-climatology/bio/R202101_bioConst',     -12,               'dia',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverphy  = 'rivers-climatology/bio/R202101_bioConst',     -12,               'phy',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_rivermyr  = 'rivers-climatology/bio/R202101_bioConst',     -12,               'mes',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverzoo  = 'rivers-climatology/bio/R202101_bioConst',     -12,               'zoo',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverdoc  = 'rivers-climatology/bio/R202101_bioConst',     -12,               'don',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverpoc  = 'rivers-climatology/bio/R202101_bioConst',     -12,               'pon',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_riverdsi  = 'rivers-climatology/bio/R202101_bioConst',     -12,               'bsi',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_rivertra  = 'rivers-climatology/bio/R202101_bioConst',     -12,               'tur',       .false.,      .true.,  'yearly',   '',        '',        ''
+   sn_turb      = 'river_turb/riverTurbDaily201906',              24,               'turb',      .true.,       .false., 'daily',    '',        '',        ''
+   sn_riverdic  = 'rivers-climatology/skog_sens_highFras/rivers_skog_tracers',  24,               'dic',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_riverta   = 'rivers-climatology/skog_sens_highFras/rivers_skog_tracers',  24,               'ta',        .true.,       .true.,  'daily',    '',        '',        ''
+   sn_rivero2   = 'rivers-climatology/bio/rivers_bio_tracers',    24,               'oxy',       .true.,       .true.,  'daily',    '',        '',        ''
+
+   cn_dir       = './'  ! root directory for the location of the runoff files
+   ln_river = .true.
+   ln_turb = .true.
+/
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! SMELT  (key_pisces) Wastewater
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&namwstsbc
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!               !  file name                                  ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!               !                                             !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_wasteno3  = 'wastewater_20231002',       		      	 -1,               'NO3',       .true.,       .true.,  'yearly',    '',        '',        ''
+   sn_wastenh4  = 'wastewater_20231002',                         -1,               'NH3',       .true.,       .true.,  'yearly',   '',        '',        ''
+   sn_wastesil  = 'wastewater_20231002',                         -1,               'dSi',       .true.,       .true.,  'yearly',    '',        '',        ''
+   sn_wastedia  = 'wastewater_20231002',                         -1,              'diatoms',    .true.,       .true.,  'yearly',   '',        '',        ''
+   sn_wastephy  = 'wastewater_20231002',                         -1,        'nanoflagellates',  .true.,      .true.,  'yearly',   '',        '',        ''
+   sn_wastemyr  = 'wastewater_20231002',                         -1,               'Z1',        .true.,      .true.,  'yearly',   '',        '',        ''
+   sn_wastezoo  = 'wastewater_20231002',                         -1,               'Z1',        .true.,      .true.,  'yearly',   '',        '',        ''
+   sn_wastedoc  = 'wastewater_20231002',                         -1,               'DON',       .true.,      .true.,  'yearly',   '',        '',        ''
+   sn_wastepoc  = 'wastewater_20231002',                         -1,               'PON',       .true.,      .true.,  'yearly',   '',        '',        ''
+   sn_wastedsi  = 'wastewater_20231002',                         -1,               'bSi',       .true.,      .true.,  'yearly',   '',        '',        ''
+   sn_wastetra  = 'wastewater_20231002',                         -1,               'turb',       .true.,      .true.,  'yearly',   '',        '',        ''
+   sn_wastedic  = 'wastewater_20231002',                         -1,               'DIC',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_wasteta   = 'wastewater_20231002',                         -1,       'alkalinity',        .true.,       .true.,  'daily',    '',        '',        ''
+   sn_wasteo2   = 'wastewater_20231002',                         -1,            'oxygen',       .true.,       .true.,  'daily',    '',        '',        ''
+
+   cn_waste_dir       = './rivers-climatology/wastewater/'  ! root directory for the location of the runoff files
+/
+
+
+
+
