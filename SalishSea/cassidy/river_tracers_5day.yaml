@@ -27,7 +27,7 @@ forcing:
   bfr_coef.nc:
     link to: $PROJECT/$USER/MEOPAR/grid/jetty_mask_bathy202108.nc
   river_mask.nc:
-    link to: $PROJECT/$USER/MEOPAR/grid/river_mask_bathy202108.nc
+    link to: $PROJECT/$USER/MEOPAR/grid/river_mask_3D_bathy202108.nc
   grid:
     link to: $PROJECT/$USER/MEOPAR/grid
   rivers:
