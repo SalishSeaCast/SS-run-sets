@@ -45,9 +45,9 @@
    sn_wastepoc  = 'wastewater_20231002',                         -1,               'PON',       .true.,      .true.,  'yearly',   '',        '',        ''
    sn_wastedsi  = 'wastewater_20231002',                         -1,               'bSi',       .true.,      .true.,  'yearly',   '',        '',        ''
    sn_wastetra  = 'wastewater_20231002',                         -1,               'turb',       .true.,      .true.,  'yearly',   '',        '',        ''
-   sn_wastedic  = 'wastewater_20231002',                         -1,               'DIC',       .true.,       .true.,  'daily',    '',        '',        ''
-   sn_wasteta   = 'wastewater_20231002',                         -1,       'alkalinity',        .true.,       .true.,  'daily',    '',        '',        ''
-   sn_wasteo2   = 'wastewater_20231002',                         -1,            'oxygen',       .true.,       .true.,  'daily',    '',        '',        ''
+   sn_wastedic  = 'wastewater_20231002',                         -1,               'DIC',       .true.,       .true.,  'yearly',    '',        '',        ''
+   sn_wasteta   = 'wastewater_20231002',                         -1,       'alkalinity',        .true.,       .true.,  'yearly',    '',        '',        ''
+   sn_wasteo2   = 'wastewater_20231002',                         -1,            'oxygen',       .true.,       .true.,  'yearly',    '',        '',        ''
 
    cn_waste_dir       = './rivers-climatology/wastewater/'  ! root directory for the location of the runoff files
 /
