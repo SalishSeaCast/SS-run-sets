@@ -2,7 +2,7 @@
 # example SalishSeaCast v202111 run on graham
 
 email: cdonaldson@eoas.ubc.ca
-MPI decomposition: 6x14
+MPI decomposition: 11x26
 config_name: river_trace
 run_id: 01mar23_05mar23
 walltime: 12:00:00
