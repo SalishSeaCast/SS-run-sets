@@ -14,7 +14,7 @@
       <file_group id="20min" output_freq="1200s" output_level="10" compression_level="4" enabled=".FALSE.">  <!-- 20 minute files -->
       </file_group>
 
-      <file_group id="1h" output_freq="1h"  output_level="10" compression_level="4" enabled=".TRUE.">  <!-- 1h files -->
+      <file_group id="1h" output_freq="1h"  output_level="10" compression_level="4" split_freq="1d" enabled=".TRUE.">  <!-- 1h files -->
         <file id="file1" name_suffix="_grid_T" description="physics tracers and VVL layer thicknesses" >
           <field field_ref="ssh"            name="sossheig"/>
           <field field_ref="toce"           name="votemper"/>
@@ -38,27 +38,6 @@
           <field field_ref="eps"            name="dissipation"/>
         </file>
 
-        <file id="file5" name_suffix="_biol_T" description="biology" >
-          <field field_ref="NO3"            name="nitrate"/>
-          <field field_ref="NH4"            name="ammonium"/>
-          <field field_ref="Si"             name="silicon"/>
-          <field field_ref="DIAT"           name="diatoms"/>
-          <field field_ref="PHY"            name="flagellates"/>
-          <field field_ref="MICZ"           name="microzooplankton"/>
-          <field field_ref="DON"            name="dissolved_organic_nitrogen"/>
-          <field field_ref="PON"            name="particulate_organic_nitrogen"/>
-          <field field_ref="bSi"            name="biogenic_silicon"/>
-          <field field_ref="MESZ"           name="mesozooplankton"/>
-        </file>
-
-        <file id="file6" name_suffix="_chem_T" description="chemistry and light">
-          <field field_ref="PAR"      name="PAR"/>
-          <field field_ref="TRA"      name="turbidity"/>
-          <field field_ref="DIC"      name="dissolved_inorganic_carbon"/>
-          <field field_ref="TA"       name="total_alkalinity"/>
-          <field field_ref="O2"       name="dissolved_oxygen"/>
-          <field field_ref="CO2flux"  name="CO2_flux" />
-        </file>
 
         <file id="file7" name_suffix="_rivr_T" description="river tracers">
           <field field_ref="NOOK"     name="nooksack_river"/>
@@ -86,28 +65,32 @@
       <file_group id="6h" output_freq="6h"  output_level="10" compression_level="4" enabled=".FALSE.">  <!-- 6h files -->
       </file_group>
 
-      <file_group id="1d" output_freq="1d"  output_level="10" compression_level="4" enabled=".TRUE.">  <!-- 1d files -->
-        <file id="file11" name_suffix="_prod_T" description="biology growth rates" >
-          <field field_ref="PPDIAT"/>
-          <field field_ref="PPPHY"/>
-          <field field_ref="PPDIATNO3"/>
-          <field field_ref="PPPHYNO3"/>
-          <field field_ref="TQ10"/>
+      <file_group id="1d" output_freq="1d"  output_level="10" compression_level="4" split_freq="1d" enabled=".TRUE.">  <!-- 1d files -->
+
+        <file id="file11" name_suffix="_grid_T" description="physics tracers and VVL layer thicknesses" >
+          <field field_ref="ssh"            name="sossheig"/>
+          <field field_ref="toce"           name="votemper"/>
+          <field field_ref="soce"           name="vosaline"/>
+          <field field_ref="rhop"           name="sigma_theta"/>
+          <field field_ref="e3t"            name="e3t"/>
         </file>
 
-        <file id="file12" name_suffix="_graz_T" description="grazing and mortality" >
-          <field field_ref="MORTPHY"/>
-          <field field_ref="MORTDIAT"/>
-          <field field_ref="MORTMICZ"/>
-          <field field_ref="GRMESZDIAT"/>
-          <field field_ref="GRMESZPHY"/>
-          <field field_ref="GRMESZPON"/>
-          <field field_ref="GRMESZMICZ"/>
-          <field field_ref="GRMICZDIAT"/>
-          <field field_ref="GRMICZPHY"/>
-          <field field_ref="GRMICZPON"/>
-          <field field_ref="GRMICZMICZ"/>
+      <file id="file17" name_suffix="_rivr_T" description="river tracers">
+          <field field_ref="NOOK"     name="nooksack_river"/>
+          <field field_ref="SKAG"     name="skagit_river"/>
+          <field field_ref="SNO"      name="snohomish_river"/>
+          <field field_ref="NIS"      name="nisqually_river"/>
+          <field field_ref="EL"       name="elwha_river"/>
+          <field field_ref="COW"      name="cowichan_river"/>
+          <field field_ref="NANA"     name="nanaimo_river"/>
+          <field field_ref="PUNT"     name="puntledge_river"/>
+          <field field_ref="SALM"     name="salmon_river"/>
+          <field field_ref="HOM"      name="homathko_river"/>
+          <field field_ref="SQUAM"    name="squamish_river"/>
+          <field field_ref="FRAS"     name="fraser_river"/>
+          <field field_ref="OTH"      name="other_rivers"/>
         </file>
+
       </file_group>
 
       <file_group id="3d" output_freq="3d"  output_level="10" compression_level="4" enabled=".FALSE.">  <!-- 3d files -->
