@@ -18,8 +18,8 @@ grid:
   land processor elimination: $PROJECT/$USER/MEOPAR/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: $SCRATCH/MEOPAR/results/monthly/31mar23/SalishSea_16768080_restart.nc
-  restart_trc.nc: $SCRATCH/MEOPAR/results/monthly/31mar23/SalishSea_16768080_restart_trc.nc
+  restart.nc: $SCRATCH/MEOPAR/results/monthly/mar23/31mar23/SalishSea_16768080_restart.nc
+  restart_trc.nc: $SCRATCH/MEOPAR/results/monthly/mar23/31mar23/SalishSea_16768080_restart_trc.nc
 
 forcing:
   NEMO-atmos:
@@ -62,7 +62,7 @@ namelists:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_rivers_opsturb
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
-  - $SCRATCH/MEOPAR/results/monthly/31mar23/SalishSea_16768080_restart.nc
+  - $SCRATCH/MEOPAR/results/monthly/mar23/31mar23/SalishSea_16768080_restart.nc
   - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/namelist_top_TracerDefAndBdy
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_physics
   
