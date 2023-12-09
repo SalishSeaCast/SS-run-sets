@@ -18,8 +18,8 @@ grid:
   land processor elimination: $PROJECT/$USER/MEOPAR/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: $SCRATCH/MEOPAR/results/monthly/jul23/23jul23/SalishSea_17007841_restart.nc
-  restart_trc.nc: $SCRATCH/MEOPAR/results/monthly/jul23/23jul23/SalishSea_17007841_restart_trc.nc
+  restart.nc: $SCRATCH/MEOPAR/results/monthly/23jul23/SalishSea_17007841_restart.nc
+  restart_trc.nc: $SCRATCH/MEOPAR/results/monthly/23jul23/SalishSea_17007841_restart_trc.nc
 
 forcing:
   NEMO-atmos:
