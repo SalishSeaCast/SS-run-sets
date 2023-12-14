@@ -4,7 +4,7 @@
 email: cdonaldson@eoas.ubc.ca
 MPI decomposition: 19x26
 config_name: river_trace
-run_id: 01jan17_31jan17
+run_id: 01feb17_28feb17
 walltime: 7:00:00
 
 paths:
@@ -62,7 +62,7 @@ namelists:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_rivers_opsturb
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/namelist_top_coldstart
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_restart
   - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/namelist_top_TracerDefAndBdy
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_physics
   
