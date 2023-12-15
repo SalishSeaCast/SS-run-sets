@@ -23,7 +23,7 @@ restart:
 
 forcing:
   NEMO-atmos:
-    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/
+    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational/
   bfr_coef.nc:
     link to: $PROJECT/$USER/MEOPAR/grid/jetty_mask_bathy202108.nc
   river_mask.nc:
