@@ -13,27 +13,27 @@ paths:
   runs directory: $SCRATCH/MEOPAR/runs
 
 grid:
-  bathymetry: $PROJECT/$USER/MEOPAR/grid/bathymetry_202108.nc
-  coordinates: $PROJECT/$USER/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
-  land processor elimination: $PROJECT/$USER/MEOPAR/grid/bathymetry_202108.csv
+  bathymetry: $SCRATCH/temp_proj/grid/bathymetry_202108.nc
+  coordinates: $SCRATCH/temp_proj/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $SCRATCH/temp_proj/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: $SCRATCH/MEOPAR/results/long_run_monthly/31jan/SalishSea_11916720_restart
-  restart_trc.nc: $SCRATCH/MEOPAR/results/long_run_monthly/31jan/SalishSea_11916720_restart_trc.nc
+  restart.nc: $SCRATCH/MEOPAR/results/long_run_monthly/31jan17/SalishSea_11916720_restart.nc
+  restart_trc.nc: $SCRATCH/MEOPAR/results/long_run_monthly/31jan17/SalishSea_11916720_restart_trc.nc
 
 forcing:
   NEMO-atmos:
     link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational/
   bfr_coef.nc:
-    link to: $PROJECT/$USER/MEOPAR/grid/jetty_mask_bathy202108.nc
+    link to: $SCRATCH/temp_proj/grid/jetty_mask_bathy202108.nc
   river_mask.nc:
-    link to: $PROJECT/$USER/MEOPAR/grid/river_mask_3D_bathy202108.nc
+    link to: $SCRATCH/temp_proj/grid/river_mask_3D_bathy202108.nc
   grid:
-    link to: $PROJECT/$USER/MEOPAR/grid
+    link to: $SCRATCH/temp_proj/grid
   rivers:
     link to: $PROJECT/SalishSea/forcing/rivers
   rivers-climatology:
-    link to: $PROJECT/$USER/MEOPAR/rivers-climatology
+    link to: $SCRATCH/temp_proj/rivers-climatology
   river_turb:
     link to: $PROJECT/SalishSea/forcing/rivers/river_turb
   ssh:
@@ -41,48 +41,48 @@ forcing:
   LiveOcean:
     link to: $PROJECT/SalishSea/forcing/LiveOcean
   tides:
-    link to: $PROJECT/$USER/MEOPAR/tides
+    link to: $SCRATCH/temp_proj/tides
   tracers:
-    link to: $PROJECT/$USER/MEOPAR/tracers
+    link to: $SCRATCH/temp_proj/tracers
 
 namelists:
   namelist_cfg:
   - ./../long_run_namelists/namelist.time.20170201
   - $SCRATCH/temp_proj/v202111/namelist.domain
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers
+  - $SCRATCH/temp_proj/SS-run-sets/v202111/namelist.atmos_rivers
   - $SCRATCH/temp_proj/v202111/namelist.light
   - $SCRATCH/temp_proj/v202111/namelist.lateral
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.bottom
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.tracer
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.dynamics
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.vertical
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.compute
+  - $SCRATCH/temp_proj/SS-run-sets/v202111/namelist.bottom
+  - $SCRATCH/temp_proj/SS-run-sets/v202111/namelist.tracer
+  - $SCRATCH/temp_proj/SS-run-sets/v202111/namelist.dynamics
+  - $SCRATCH/temp_proj/SS-run-sets/v202111/namelist.vertical
+  - $SCRATCH/temp_proj/SS-run-sets/v202111/namelist.compute
   namelist_smelt_cfg:
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_biology
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_rivers_opsturb
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
+  - $SCRATCH/temp_proj/SS-run-sets/v202111/namelist_smelt_biology
+  - $SCRATCH/temp_proj/SS-run-sets/v202111/namelist_smelt_rivers_opsturb
+  - $SCRATCH/temp_proj/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_restart
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/namelist_top_TracerDefAndBdy
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_physics
+  - $SCRATCH/temp_proj/SS-run-sets/v202111/namelist_top_restart
+  - $SCRATCH/temp_proj/SS-run-sets/SalishSea/cassidy/namelist_top_TracerDefAndBdy
+  - $SCRATCH/temp_proj/SS-run-sets/v202111/namelist_top_physics
   
 output:
   XIOS servers: 1
-  domaindefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/domain_def.xml
-  fielddefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/field_def.xml
-  filedefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/file_def.xml
-  iodefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/iodef.xml
+  domaindefs: $SCRATCH/temp_proj/SS-run-sets/v202111/domain_def.xml
+  fielddefs: $SCRATCH/temp_proj/SS-run-sets/SalishSea/cassidy/field_def.xml
+  filedefs: $SCRATCH/temp_proj/SS-run-sets/SalishSea/cassidy/file_def.xml
+  iodefs: $SCRATCH/temp_proj/SS-run-sets/v202111/iodef.xml
   separate XIOS server: true
 
 vcs revisions:
   git:
-  - $PROJECT/$USER/MEOPAR/grid
-  - $PROJECT/$USER/MEOPAR/NEMO-Cmd
-  - $PROJECT/$USER/MEOPAR/NEMO-3.6-code
-  - $PROJECT/$USER/MEOPAR/rivers-climatology
-  - $PROJECT/$USER/MEOPAR/SS-run-sets
-  - $PROJECT/$USER/MEOPAR/SalishSeaCmd
-  - $PROJECT/$USER/MEOPAR/tides
-  - $PROJECT/$USER/MEOPAR/tracers
-  - $PROJECT/$USER/MEOPAR/XIOS-ARCH
-  - $PROJECT/$USER/MEOPAR/XIOS-2
+  - $SCRATCH/temp_proj/grid
+  - $SCRATCH/temp_proj/NEMO-Cmd
+  - $SCRATCH/temp_proj/NEMO-3.6-code
+  - $SCRATCH/temp_proj/rivers-climatology
+  - $SCRATCH/temp_proj/SS-run-sets
+  - $SCRATCH/temp_proj/SalishSeaCmd
+  - $SCRATCH/temp_proj/tides
+  - $SCRATCH/temp_proj/tracers
+  - $SCRATCH/temp_proj/XIOS-ARCH
+  - $SCRATCH/temp_proj/XIOS-2
