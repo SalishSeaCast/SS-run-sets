@@ -4,7 +4,7 @@
 email: cdonaldson@eoas.ubc.ca
 MPI decomposition: 19x26
 config_name: river_trace
-run_id: 22jul17_10sep17
+run_id: 21jul17_08sep17
 walltime: 11:59:00
 
 paths:
@@ -18,8 +18,8 @@ grid:
   land processor elimination: $SCRATCH/temp_proj/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: $SCRATCH/MEOPAR/01jun17/SalishSea_12283920_restart.nc
-  restart_trc.nc: $SCRATCH/MEOPAR/01jun17/SalishSea_12283920_restart_trc.nc
+  restart.nc: $SCRATCH/MEOPAR/results/long_run_monthly/20jul17/SalishSea_12283920_restart.nc
+  restart_trc.nc: $SCRATCH/MEOPAR/results/long_run_monthly/20jul17/SalishSea_12283920_restart_trc.nc
 
 forcing:
   NEMO-atmos:
