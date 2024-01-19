@@ -23,7 +23,7 @@ restart:
 
 forcing:
   NEMO-atmos:
-    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational/
+    link to: $SCRATCH/temp_forcing/atmospheric
   bfr_coef.nc:
     link to: $SCRATCH/temp_proj/grid/jetty_mask_bathy202108.nc
   river_mask.nc:
@@ -37,9 +37,9 @@ forcing:
   river_turb:
     link to: $PROJECT/SalishSea/forcing/rivers/river_turb
   ssh:
-    link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
+    link to: $SCRATCH/temp_forcing/sshNeahBay
   LiveOcean:
-    link to: $PROJECT/SalishSea/forcing/LiveOcean
+    link to: $SCRATCH/temp_forcing/LiveOcean
   tides:
     link to: $SCRATCH/temp_proj/tides
   tracers:
@@ -47,7 +47,7 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - ./../long_run_namelists/namelist.time.20170601_20170721
+  - ./../long_run_namelists/namelist.time.20170721_20170908
   - $SCRATCH/temp_proj/v202111/namelist.domain
   - $SCRATCH/temp_proj/SS-run-sets/v202111/namelist.atmos_rivers
   - $SCRATCH/temp_proj/v202111/namelist.light
