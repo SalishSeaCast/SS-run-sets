@@ -4,7 +4,7 @@
 email: sallen@eoas.ubc.ca
 MPI decomposition: 11x26
 config_name: WasteWater
-run_id: 01jan18
+run_id: 01nov18
 walltime: 23:00:00
 
 paths:
@@ -18,8 +18,8 @@ grid:
   land processor elimination: $PROJECT/$USER/MEOPAR/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: /scratch/allen/wastewater/31dec17/SalishSea_12636000_restart.nc
-  restart_trc.nc: /scratch/allen/wastewater/31dec17/SalishSea_12636000_restart_trc.nc
+  restart.nc: /scratch/allen/wastewater/01oct18/SalishSea_13292640_restart.nc
+  restart_trc.nc: /scratch/allen/wastewater/01oct18/SalishSea_13292640_restart_trc.nc
 
 forcing:
   NEMO-atmos:
@@ -45,7 +45,7 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.01jan18_onemonth
+  - ./namelist.time.01nov18
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.domain
   - ./namelist.atmos_rivers_wastewater_20231002
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.light

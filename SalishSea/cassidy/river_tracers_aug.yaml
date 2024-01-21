@@ -1,16 +1,16 @@
 # salishsea command processor run description file template for
 # example SalishSeaCast v202111 run on graham
 
-email: sallen@eoas.ubc.ca
-MPI decomposition: 11x26
-config_name: WasteWater
-run_id: 01jan18
-walltime: 23:00:00
+email: cdonaldson@eoas.ubc.ca
+MPI decomposition: 19x26
+config_name: river_trace
+run_id: 01aug23_31aug23
+walltime: 7:30:00
 
 paths:
   NEMO code config: $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $PROJECT/$USER/MEOPAR/XIOS-2
-  runs directory: $SCRATCH/wastewater
+  runs directory: $SCRATCH/MEOPAR/runs
 
 grid:
   bathymetry: $PROJECT/$USER/MEOPAR/grid/bathymetry_202108.nc
@@ -18,14 +18,16 @@ grid:
   land processor elimination: $PROJECT/$USER/MEOPAR/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: /scratch/allen/wastewater/31dec17/SalishSea_12636000_restart.nc
-  restart_trc.nc: /scratch/allen/wastewater/31dec17/SalishSea_12636000_restart_trc.nc
+  restart.nc: $SCRATCH/MEOPAR/results/monthly/jun23/30jun23/SalishSea_16964641_restart.nc
+  restart_trc.nc: $SCRATCH/MEOPAR/results/monthly/jun23/30jun23/SalishSea_16964641_restart_trc.nc
 
 forcing:
   NEMO-atmos:
-    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational/
+    link to: $PROJECT/SalishSea/forcing/atmospheric/continental2.5/nemo_forcing/
   bfr_coef.nc:
     link to: $PROJECT/$USER/MEOPAR/grid/jetty_mask_bathy202108.nc
+  river_mask.nc:
+    link to: $PROJECT/$USER/MEOPAR/grid/river_mask_3D_bathy202108.nc
   grid:
     link to: $PROJECT/$USER/MEOPAR/grid
   rivers:
@@ -45,9 +47,9 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.01jan18_onemonth
+  - ./namelist.time.01aug23
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.domain
-  - ./namelist.atmos_rivers_wastewater_20231002
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers.hrdps
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.light
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.lateral
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.bottom
@@ -57,18 +59,18 @@ namelists:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.compute
   namelist_smelt_cfg:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_biology
-  - ./namelist_smelt_rivers_wastewater_20231010
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_rivers_opsturb
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111//namelist_top_restart
-  - ./namelist_top_TracerDefAndBdy
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_restart
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/namelist_top_TracerDefAndBdy
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_physics
   
 output:
   XIOS servers: 1
   domaindefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/domain_def.xml
-  fielddefs: ./field_def.xml
-  filedefs: ./file_def_dailysplit.xml
+  fielddefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/field_def.xml
+  filedefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/file_def.xml
   iodefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/iodef.xml
   separate XIOS server: true
 

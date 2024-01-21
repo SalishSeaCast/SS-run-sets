@@ -2,10 +2,10 @@
 # example SalishSeaCast v202111 run on graham
 
 email: cdonaldson@eoas.ubc.ca
-MPI decomposition: 6x14
+MPI decomposition: 19x26
 config_name: river_trace
-run_id: 01mar23
-walltime: 3:00:00
+run_id: 01jun23_30jun23
+walltime: 11:00:00
 
 paths:
   NEMO code config: $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
@@ -18,14 +18,16 @@ grid:
   land processor elimination: $PROJECT/$USER/MEOPAR/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: $SCRATCH/MEOPAR/results/28feb23/SalishSea_16701120_restart.nc
-  restart_trc.nc: $SCRATCH/MEOPAR/results/28feb23/SalishSea_16701120_restart_trc.nc
+  restart.nc: $SCRATCH/MEOPAR/results/monthly/may23/31may23/SalishSea_16899841_restart.nc
+  restart_trc.nc: $SCRATCH/MEOPAR/results/monthly/may23/31may23/SalishSea_16899841_restart_trc.nc
 
 forcing:
   NEMO-atmos:
     link to: $PROJECT/SalishSea/forcing/atmospheric/continental2.5/nemo_forcing/
   bfr_coef.nc:
     link to: $PROJECT/$USER/MEOPAR/grid/jetty_mask_bathy202108.nc
+  river_mask.nc:
+    link to: $PROJECT/$USER/MEOPAR/grid/river_mask_3D_bathy202108.nc
   grid:
     link to: $PROJECT/$USER/MEOPAR/grid
   rivers:
@@ -45,7 +47,7 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.01mar23
+  - ./namelist.time.01jun23
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.domain
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers.hrdps
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.light
@@ -61,14 +63,14 @@ namelists:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_restart
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_TracerDefAndBdy
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/namelist_top_TracerDefAndBdy
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_physics
   
 output:
   XIOS servers: 1
   domaindefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/domain_def.xml
-  fielddefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/field_def.xml
-  filedefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/file_def.xml
+  fielddefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/field_def.xml
+  filedefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/file_def.xml
   iodefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/iodef.xml
   separate XIOS server: true
 
