@@ -4,8 +4,8 @@
 email: cdonaldson@eoas.ubc.ca
 MPI decomposition: 19x26
 config_name: river_trace
-run_id: 01feb17_28feb17
-walltime: 7:00:00
+run_id: 21jul17_08sep17
+walltime: 11:59:00
 
 paths:
   NEMO code config: $SCRATCH/temp_proj/NEMO-3.6-code/NEMOGCM/CONFIG
@@ -18,12 +18,12 @@ grid:
   land processor elimination: $SCRATCH/temp_proj/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: $SCRATCH/MEOPAR/results/long_run_monthly/31jan17/SalishSea_11916720_restart.nc
-  restart_trc.nc: $SCRATCH/MEOPAR/results/long_run_monthly/31jan17/SalishSea_11916720_restart_trc.nc
+  restart.nc: $SCRATCH/MEOPAR/results/long_run_monthly/20jul17/SalishSea_12283920_restart.nc
+  restart_trc.nc: $SCRATCH/MEOPAR/results/long_run_monthly/20jul17/SalishSea_12283920_restart_trc.nc
 
 forcing:
   NEMO-atmos:
-    link to: $PROJECT/SalishSea/forcing/atmospheric/GEM2.5/operational/
+    link to: $SCRATCH/temp_forcing/atmospheric
   bfr_coef.nc:
     link to: $SCRATCH/temp_proj/grid/jetty_mask_bathy202108.nc
   river_mask.nc:
@@ -31,15 +31,15 @@ forcing:
   grid:
     link to: $SCRATCH/temp_proj/grid
   rivers:
-    link to: $PROJECT/SalishSea/forcing/rivers
+    link to: $SCRATCH/temp_forcing/rivers
   rivers-climatology:
     link to: $SCRATCH/temp_proj/rivers-climatology
   river_turb:
     link to: $PROJECT/SalishSea/forcing/rivers/river_turb
   ssh:
-    link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
+    link to: $SCRATCH/temp_forcing/sshNeahBay
   LiveOcean:
-    link to: $PROJECT/SalishSea/forcing/LiveOcean
+    link to: $SCRATCH/temp_forcing/LiveOcean
   tides:
     link to: $SCRATCH/temp_proj/tides
   tracers:
@@ -47,7 +47,7 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - ./../long_run_namelists/namelist.time.20170201
+  - ./../long_run_namelists/namelist.time.20170721_20170908
   - $SCRATCH/temp_proj/v202111/namelist.domain
   - $SCRATCH/temp_proj/SS-run-sets/v202111/namelist.atmos_rivers
   - $SCRATCH/temp_proj/v202111/namelist.light
