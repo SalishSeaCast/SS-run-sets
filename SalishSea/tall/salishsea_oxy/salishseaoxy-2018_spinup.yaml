@@ -1,16 +1,16 @@
-# SalishSeaCast run on graham for one month
+# SalishSea_oxy run on graham for one year
 
 email: atall@eoas.ubc.ca
 MPI decomposition: 19x26
 config_name: SalishSea_oxy2
-run_id: 01_10sep18
+run_id: spinup
 account: rrg-allen
-walltime: 12:00:00
+walltime: 01:00:00
 
 paths:
   NEMO code config: /scratch/atall/MEOPAR2/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /scratch/atall/MEOPAR2/XIOS-2
-  runs directory: $SCRATCH/salishsea_oxy/01_10sep18
+  runs directory: $SCRATCH/salishsea_oxy/2018/spinup
 
 grid:
   bathymetry: $PROJECT/$USER/MEOPAR/grid/bathymetry_202310b.nc
@@ -18,8 +18,8 @@ grid:
   land processor elimination: /scratch/atall/MEOPAR2/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: /scratch/atall/salishseacast/01aug18/SalishSea_13160880_restart.nc
-  restart_trc.nc: /scratch/atall/salishseacast/01aug18/SalishSea_13160880_restart_trc.nc
+  restart.nc: /scratch/atall/restart/31dec17/restart_PHYBIO_12636000_31dec17_snsbCorrected.nc
+  restart_trc.nc: /scratch/atall/restart/31dec17/restart_PHYBIO_12636000_31dec17_snsbCorrected.nc
 
 forcing:
   NEMO-atmos:
@@ -42,10 +42,16 @@ forcing:
     link to: /scratch/atall/MEOPAR2/tides
   tracers:
     link to: /scratch/atall/MEOPAR2/tracers
+  initial_data_file.nc:
+    link to: /scratch/atall/restart/31dec17/restart_PHYBIO_12636000_31dec17_snsbCorrected.nc
+  initial_bio_data_file.nc:
+    link to: /scratch/atall/restart/31dec17/restart_PHYBIO_12636000_31dec17_snsbCorrected.nc
+  initial_car_data_file.nc:
+    link to: /scratch/atall/restart/31dec17/restart_PHYBIO_12636000_31dec17_snsbCorrected.nc
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.01-10sep18
+  - ./namelist.time.31dec17_spinup
   - /scratch/atall/MEOPAR2/SS-run-sets/v202111/namelist.domain
   - /scratch/atall/MEOPAR2/SS-run-sets/v202111/namelist.atmos_rivers
   - /scratch/atall/MEOPAR2/SS-run-sets/v202111/namelist.light
@@ -60,7 +66,7 @@ namelists:
   - /scratch/atall/MEOPAR2/SS-run-sets/v202111/namelist_smelt_rivers_opsturb
   - /scratch/atall/MEOPAR2/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
-  - /scratch/atall/MEOPAR2/SS-run-sets/SalishSea/tall/salishsea_oxy/namelist_top_restart
+  - /scratch/atall/MEOPAR2/SS-run-sets/v202111/namelist_top_coldstart
   - /scratch/atall/MEOPAR2/SS-run-sets/v202111/namelist_top_TracerDefAndBdy
   - /scratch/atall/MEOPAR2/SS-run-sets/v202111/namelist_top_physics
   
@@ -68,7 +74,7 @@ output:
   XIOS servers: 1
   domaindefs: /scratch/atall/MEOPAR2/SS-run-sets/v202111/domain_def.xml
   fielddefs: /scratch/atall/MEOPAR2/SS-run-sets/SalishSea/tall/salishsea_oxy/field_def.xml
-  filedefs: /scratch/atall/MEOPAR2/SS-run-sets/SalishSea/tall/salishsea_oxy/file_def.xml
+  filedefs: /scratch/atall/MEOPAR2/SS-run-sets/SalishSea/tall/salishsea_oxy/file_def_spinup.xml
   iodefs: /scratch/atall/MEOPAR2/SS-run-sets/v202111/iodef.xml
   separate XIOS server: true
 
