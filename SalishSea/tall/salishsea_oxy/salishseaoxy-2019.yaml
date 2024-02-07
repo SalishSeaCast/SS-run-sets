@@ -67,8 +67,8 @@ namelists:
 output:
   XIOS servers: 1
   domaindefs: /scratch/atall/MEOPAR2/SS-run-sets/v202111/domain_def.xml
-  fielddefs: /scratch/atall/MEOPAR2/SS-run-sets/SalishSea/tall/salishsea_oxy/field_def_nosplit.xml
-  filedefs: /scratch/atall/MEOPAR2/SS-run-sets/SalishSea/tall/salishsea_oxy/file_def.xml
+  fielddefs: /scratch/atall/MEOPAR2/SS-run-sets/SalishSea/tall/salishsea_oxy/field_def.xml
+  filedefs: /scratch/atall/MEOPAR2/SS-run-sets/SalishSea/tall/salishsea_oxy/file_def_nosplit.xml
   iodefs: /scratch/atall/MEOPAR2/SS-run-sets/v202111/iodef.xml
   separate XIOS server: true
 

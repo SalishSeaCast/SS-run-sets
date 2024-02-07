@@ -126,31 +126,23 @@
         </file>
 
         <file id="file17" name_suffix="_diag_T" description="diagnostic terms of DO">
-          <field field_ref="VMIXO2H"       name="hcont_tovmix"/>
-          <field field_ref="VMIXO2"       name="v_mix"/>
-          <field field_ref="O2RAD"        name="o2_negative_correction"/>
+          <field field_ref="ULDFO2"       name="ULDF"/>
+          <field field_ref="VLDFO2"       name="VLDF"/>
+          <field field_ref="WLDFO2"       name="WLDF"/>
+          <field field_ref="O2TVDXb"       name="TVDXb"/>
+          <field field_ref="O2TVDYb"       name="TVDYb"/>
+          <field field_ref="O2TVDZb"       name="TVDZb"/>
+          <field field_ref="O2XADV"       name="XADV"/>
+          <field field_ref="O2YADV"       name="YADV"/>
+          <field field_ref="O2ZADV"       name="ZADV"/>
+          <field field_ref="VMIXO2H"       name="VMIXH"/>
+          <field field_ref="VMIXO2"       name="VMIX"/>
           <field field_ref="NPPO2"        name="NPP"/>
           <field field_ref="RPPO2"        name="RPP"/>
-          <field field_ref="NITRO2"       name="NITRIF"/>
-          <field field_ref="REMO2"        name="REMIN"/>
+          <field field_ref="NITRO2"        name="NITR"/>
+          <field field_ref="REMO2"        name="RMIN"/>
           <field field_ref="MICO2"        name="RMIC"/>
           <field field_ref="MESO2"        name="RMES"/>
-        </file>
-
-        <file id="file18" name_suffix="_trdtrc_T" description="diagnostic terms of DO with key_trdtrc">
-          <field field_ref="XAD_O2"       name="x_adv"/>
-          <field field_ref="YAD_O2"       name="y_adv"/>
-          <field field_ref="ZAD_O2"       name="z_adv"/>
-          <field field_ref="LDF_O2"       name="h_mix"/>
-          <field field_ref="ZDF_O2"       name="v_mix"/>
-          <field field_ref="SMS_O2"       name="sms_o2"/>
-          <field field_ref="BBL_O2"       name="bbl_o2"/>
-          <field field_ref="PHS_O2"        name="phs_o2"/>
-          <field field_ref="PRD_O2"        name="prd_o2"/>
-          <field field_ref="MRT_O2"        name="mrt_o2"/>
-          <field field_ref="REM_O2"        name="REMIN2"/>
-          <field field_ref="MIZ_O2"        name="RMIC2"/>
-          <field field_ref="MSZ_O2"        name="RMES2"/>
         </file>
         
       </file_group>

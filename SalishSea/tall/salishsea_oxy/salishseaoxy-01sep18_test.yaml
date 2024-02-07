@@ -2,15 +2,15 @@
 
 email: atall@eoas.ubc.ca
 MPI decomposition: 19x26
-config_name: SalishSea_oxy
+config_name: SalishSea_oxy2
 run_id: sep_nov18
 account: rrg-allen
-walltime: 120:00:00
+walltime: 36:00:00
 
 paths:
   NEMO code config: /scratch/atall/MEOPAR2/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /scratch/atall/MEOPAR2/XIOS-2
-  runs directory: $SCRATCH/salishsea_oxy/sep_nov18
+  runs directory: $SCRATCH/salishsea_oxy/sep_nov18/with_dia
 
 grid:
   bathymetry: $PROJECT/$USER/MEOPAR/grid/bathymetry_202310b.nc

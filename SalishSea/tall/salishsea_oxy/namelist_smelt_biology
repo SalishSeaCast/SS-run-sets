@@ -135,7 +135,7 @@
    zz_rate_uzoo_diatPredslope  = 0.300      ! uM N microzooplankton micro-phyto grazing half saturation const
    zz_rate_uzoo_diatHalfSat    = 1.000      ! uM N microzooplankton micro-phyto grazing half saturation const
    zz_rate_uzoo_myriPref        = 0.170      ! microzooplankton preference for nano-phytoplankton
-   zz_rate_uzoo_myriPredslope   = 0.500      ! uM N microzooplankton nano-phyto grazing limit
+   zz_rate_uzoo_myriPredslope   = 0.500      ! uM N mic rozooplankton nano-phyto grazing limit
    zz_rate_uzoo_myriHalfSat     = 1.000      ! uM N microzooplankton nano-phyto grazing half saturation const
    zz_rate_uzoo_flagPref        = 0.300      ! microzooplankton preference for pico-phytoplankton
    zz_rate_uzoo_flagPredslope   = 0.100      ! uM N microzooplankton pico-phyto grazing limit

@@ -1076,17 +1076,29 @@
        <field id="O2RAD"      long_name="negative correction"                                                                                                                                                                                                unit="mmol N s-1"      grid_ref="grid_T_3D" />
        <field id="REFRN"       long_name="transfer to refr"                                                                                                                                                                                                   unit="mmol N s-1"      grid_ref="grid_T_3D" />
        
-       <!-- Some additional diagnostic terms on rem, micro and mesozoo --> 
-       <field id="REMO2"        long_name="remineralisation of PON and DON"   unit="---"      grid_ref="grid_T_3D" />
-       <field id="NITRO2"        long_name="nitrification" unit="---"      grid_ref="grid_T_3D" />
+       <!-- Some additional diagnostic terms --> 
+       <field id="ULDFO2"  long_name="X dir lateral mix"                                 standard_name="O2mixx"          unit="mmol/s" />
+       <field id="VLDFO2"  long_name="Y dir lateral mix"                                 standard_name="O2mixy"          unit="mmol/s" />
+       <field id="WLDFO2"  long_name="Z dir lateral mix"                                 standard_name="O2mixz"          unit="mmol/s" />
+       <field id="O2TVDX"  long_name="O2 TVD Adv X-dir"                 standard_name="O2tvdx"          unit="mmol s-1" />
+       <field id="O2TVDY"  long_name="O2 TVD Adv Y-dir"                 standard_name="O2tvdy"          unit="mmol s-1" />
+       <field id="O2TVDZ"  long_name="O2 TVD Adv Z-dir"                 standard_name="O2tvdz"          unit="mmol s-1" />
+       <field id="O2TVDXb"  long_name="O2 TVD Adv X-dir"                 standard_name="O2tvdx"          unit="mmol s-1" />
+       <field id="O2TVDYb"  long_name="O2 TVD Adv Y-dir"                 standard_name="O2tvdy"          unit="mmol s-1" />
+       <field id="O2TVDZb"  long_name="O2 TVD Adv Z-dir"                 standard_name="O2tvdz"          unit="mmol s-1" />
+       <field id="O2XADV"  long_name="O2 Adv X-dir"                 standard_name="O2advx"          unit="mmol m-3 s-1" />
+       <field id="O2YADV"  long_name="O2 Adv Y-dir"                 standard_name="O2advy"          unit="mmol m-3 s-1" />
+       <field id="O2ZADV"  long_name="O2 Adv Z-dir"                 standard_name="O2advz"          unit="mmol m-3 s-1" />
+       <field id="REMO2"        long_name="O2 Remin PON and DON"   unit="---"      grid_ref="grid_T_3D" />
+       <field id="NITRO2"        long_name="O2 Nitrif" unit="---"      grid_ref="grid_T_3D" />
        <field id="MORTMICZO2"        long_name="mortality and excretion of microzooplankton" unit="---"      grid_ref="grid_T_3D" />
        <field id="GRMICZO2"        long_name="grazing of microzooplankton" unit="---"      grid_ref="grid_T_3D" />
        <field id="MORTMESZO2"        long_name="mortality and excretion of mesozooplankton" unit="---"      grid_ref="grid_T_3D" />
        <field id="GRMESZO2"        long_name="grazing of mesozooplankton" unit="---"      grid_ref="grid_T_3D" />
-       <field id="MICO2"        long_name="oxygen respiration by microzooplankton" unit="---"      grid_ref="grid_T_3D" />
-       <field id="MESO2"        long_name="oxygen respiration by mesozooplankton" unit="---"      grid_ref="grid_T_3D" />
-       <field id="RPPO2"        long_name="oxygen respiration by mesozooplankton" unit="---"      grid_ref="grid_T_3D" />
-       <field id="NPPO2"        long_name="oxygen respiration by mesozooplankton" unit="---"      grid_ref="grid_T_3D" />
+       <field id="MICO2"        long_name="O2 resp by Z1" unit="---"      grid_ref="grid_T_3D" />
+       <field id="MESO2"        long_name="O2 resp by Z2" unit="---"      grid_ref="grid_T_3D" />
+       <field id="RPPO2"        long_name="O2 prod by Reg PP" unit="---"      grid_ref="grid_T_3D" />
+       <field id="NPPO2"        long_name="O2 prod by New PP" unit="---"      grid_ref="grid_T_3D" />
 
 
        <!-- Diagnostics available with key_trdtrc -->
@@ -1346,6 +1358,24 @@
        <field id="PHS_O2"       long_name="---"        unit="---"                    />
        <field id="PHS_PHY"      long_name="---"        unit="---"                    />
        <field id="PHS_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > PHS_DIAT+PHS_MYRI+PHS_PHY+PHS_MICZ </field >
+       
+       <field id="UNC_DIC"      long_name="---"        unit="---"                    />
+       
+       <field id="FLX_NO3"      long_name="---"        unit="---"                    />
+       <field id="FLX_NH4"      long_name="---"        unit="---"                    />
+       <field id="FLX_PON"      long_name="---"        unit="---"                    />
+       <field id="FLX_DON"      long_name="---"        unit="---"                    />
+       <field id="FLX_Si"       long_name="---"        unit="---"                    />
+       <field id="FLX_bSi"      long_name="---"        unit="---"                    />
+       <field id="FLX_PHY"      long_name="---"        unit="---"                    />
+       <field id="FLX_DIAT"     long_name="---"        unit="---"                    />
+       <field id="FLX_MYRI"     long_name="---"        unit="---"                    />
+       <field id="FLX_MICZ"     long_name="---"        unit="---"                    />
+       <field id="FLX_TRA"      long_name="---"        unit="---"                    />
+       <field id="FLX_DIC"      long_name="---"        unit="---"                    />
+       <field id="FLX_TA"       long_name="---"        unit="---"                    />
+       <field id="FLX_O2"       long_name="---"        unit="---"                    />
+       <field id="FLX_PHY"      long_name="---"        unit="---"                    />
 
        <field id="WAS_NH4"      long_name="grazing, mort to NH4"   unit="mmol/m2"  > MRT_NH4+MRU_NH4+MIZ_NH4+MSZ_NH4 </field >
        <field id="WAS_PON"      long_name="grazing, mort to PON"   unit="mmol/m2"  > MRT_PON+MRU_PON+MIZ_PON+MSZ_PON </field >
