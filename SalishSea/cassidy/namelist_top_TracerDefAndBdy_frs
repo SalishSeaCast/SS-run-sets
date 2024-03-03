@@ -10,19 +10,19 @@
 !                !           !                                           !  units       ! from file    !                             ! or not !
 !                !           !                                           !              ! or not       !                             !        !
 
-   sn_tracer(1)  = 'NOOK    ' , 'Nooksack River                         ',  '1' ,  .false.     , .false.
-   sn_tracer(2)  = 'SKAG    ' , 'Skagit River                           ',  '1' ,  .false.     , .false.
-   sn_tracer(3)  = 'SNO     ' , 'Snohomish River                        ',  '1' ,  .false.     , .false.
-   sn_tracer(4)  = 'NIS     ' , 'Nisqually River                        ',  '1' ,  .false.     , .false.
-   sn_tracer(5)  = 'EL      ' , 'Elwha River                            ',  '1' ,  .false.     , .false.
-   sn_tracer(6)  = 'COW     ' , 'Cowichan River                         ',  '1' ,  .false.     , .false.
-   sn_tracer(7)  = 'NANA    ' , 'Nanaimo River                          ',  '1' ,  .false.     , .false.
-   sn_tracer(8)  = 'PUNT    ' , 'Puntledge River                        ',  '1' ,  .false.     , .false.
-   sn_tracer(9)  = 'SALM    ' , 'Salmon River                           ',  '1' ,  .false.     , .false.
-   sn_tracer(10) = 'HOM     ' , 'Homathko River                         ',  '1' ,  .false.     , .false.
-   sn_tracer(11) = 'SQUAM   ' , 'Squamish River                         ',  '1' ,  .false.     , .false.
-   sn_tracer(12) = 'FRAS    ' , 'Fraser River                           ',  '1' ,  .false.     , .false.
-   sn_tracer(13) = 'OTH     ' , 'All Other Rivers                       ',  '1' ,  .false.     , .false.
+   sn_tracer(1)  = 'NOOK    ' , 'Nooksack River                         ',  '1' ,  .false.     , .false. ,  .false.     , .false.
+   sn_tracer(2)  = 'SKAG    ' , 'Skagit River                           ',  '1' ,  .false.     , .false. ,  .false.     , .false.
+   sn_tracer(3)  = 'SNO     ' , 'Snohomish River                        ',  '1' ,  .false.     , .false. ,  .false.     , .false.
+   sn_tracer(4)  = 'NIS     ' , 'Nisqually River                        ',  '1' ,  .false.     , .false. ,  .false.     , .false.
+   sn_tracer(5)  = 'EL      ' , 'Elwha River                            ',  '1' ,  .false.     , .false. ,  .false.     , .false.
+   sn_tracer(6)  = 'COW     ' , 'Cowichan River                         ',  '1' ,  .false.     , .false. ,  .false.     , .false.
+   sn_tracer(7)  = 'NANA    ' , 'Nanaimo River                          ',  '1' ,  .false.     , .false. ,  .false.     , .false.
+   sn_tracer(8)  = 'PUNT    ' , 'Puntledge River                        ',  '1' ,  .false.     , .false. ,  .false.     , .false.
+   sn_tracer(9)  = 'SALM    ' , 'Salmon River                           ',  '1' ,  .false.     , .false. ,  .false.     , .false.
+   sn_tracer(10) = 'HOM     ' , 'Homathko River                         ',  '1' ,  .false.     , .false. ,  .false.     , .false.
+   sn_tracer(11) = 'SQUAM   ' , 'Squamish River                         ',  '1' ,  .false.     , .false. ,  .false.     , .false.
+   sn_tracer(12) = 'FRAS    ' , 'Fraser River                           ',  '1' ,  .false.     , .false. ,  .false.     , .false.
+   sn_tracer(13) = 'OTH     ' , 'All Other Rivers                       ',  '1' ,  .false.     , .false. ,  .false.     , .false.
 
    ln_trcdta = .false.
    ln_trcdmp = .false.
