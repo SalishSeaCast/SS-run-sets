@@ -58,7 +58,7 @@ namelists:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.vertical
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.compute
   namelist_top_cfg:
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/cassidy/namelist_top_coldstart
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/cassidy/namelist_top_restart
   - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/cassidy/namelist_top_TracerDefAndBdy_frs
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_physics
   
