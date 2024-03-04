@@ -1,7 +1,7 @@
 # salishsea command processor run description file template for
 # SalishSeaCast automation hindcast runs on optimum
 
-email: sallen@eoas.ubc.ca
+email: sallen@eoas.ubc.ca,cdonaldson@eoas.ubc.ca
 MPI decomposition: 16x34
 config_name: river_trace
 run_id: ddmmmyyrivers
@@ -58,7 +58,7 @@ namelists:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.vertical
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.compute
   namelist_top_cfg:
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/cassidy/namelist_top_restart
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_restart
   - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/cassidy/namelist_top_TracerDefAndBdy_frs
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_physics
   
