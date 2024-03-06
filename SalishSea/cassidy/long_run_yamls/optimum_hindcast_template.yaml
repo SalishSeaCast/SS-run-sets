@@ -22,8 +22,8 @@ restart:
   restart_trc.nc: $SCRATCHDIR/rivers/ddmmmyy/SalishSea_nnnnnnnn_restart_trc.nc
 
 forcing:
-  NEP:
-    link to: $FORCING/SalishSeaCast/forcing/NEP36
+  LiveOcean:
+    link to: $FORCING/SalishSeaCast/forcing/LiveOcean
   NEMO-atmos:
     link to: $FORCING/SalishSeaCast/forcing/atmospheric/GEM2.5/gemlam
   bfr_coef.nc:
@@ -51,7 +51,7 @@ namelists:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.domain
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers_late_gemlam
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.light_blue
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.lateral.NEP
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.lateral
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.bottom
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.tracer
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.dynamics
