@@ -963,7 +963,7 @@
        <field id="NO3_WT"   long_name="Nitrate Concentration - W Transport"               standard_name="NO3_w_dy_dx"      unit="mmol s-1" />
        <field id="NH4_WT"   long_name="Ammonium Concentration - W Transport"              standard_name="NH4_w_dy_dx"      unit="mmol s-1" />
        <field id="VMIXNO3H" long_name="explicit est of horiz contrib to VMIXNO3"          standard_name="vNO3mixH"         unit="mmol N/m2/s" />
-       <field id="VMIXO2H" long_name="explicit est of horiz contrib to VMIXO2"          standard_name="vO2mixH"         unit="mmol N/m2/s" />
+       <field id="VMIXO2H" long_name="explicit est of horiz contrib to VMIXO2"          standard_name="vO2mixH"         unit="mmol/m2/s" />
        <field id="VMIXNO3EXP" long_name="explicit est of upward no3 flux due to vert mix" standard_name="vNO3mixExp"       unit="mmol N/m2/s" />
        <field id="AVSH"     long_name="sloping horizontal contrib to avs"                 standard_name="avs_horiz"        unit="m2/s" />
        <field id="AVSH2"     long_name="sloping horizontal contrib to avs"                 standard_name="avs_horiz"        unit="m2/s" />
@@ -1015,7 +1015,7 @@
        <field id="VMIXTRA"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
        <field id="VMIXDIC"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
        <field id="VMIXTA"       long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
-       <field id="VMIXO2"       long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
+       <field id="VMIXO2"       long_name="upward flux due to vert mixing with horiz comp"       unit="mmol/m2/s"    />
        <field id="VMIXPHY"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol N/m2/s"    />
        <field id="VMIXLIV"      long_name="upward flux due to vert mixing with horiz comp"       unit="mmol/m2"  > VMIXDIAT+VMIXMYRI+VMIXPHY+VMIXMICZ </field >
 
@@ -1076,7 +1076,7 @@
        <field id="O2RAD"      long_name="negative correction"                                                                                                                                                                                                unit="mmol N s-1"      grid_ref="grid_T_3D" />
        <field id="REFRN"       long_name="transfer to refr"                                                                                                                                                                                                   unit="mmol N s-1"      grid_ref="grid_T_3D" />
        
-       <!-- Some additional diagnostic terms --> 
+       <!-- Some additional diagnostic terms (Tall)--> 
        <field id="ULDFO2"  long_name="X dir lateral mix"                                 standard_name="O2mixx"          unit="mmol/s" />
        <field id="VLDFO2"  long_name="Y dir lateral mix"                                 standard_name="O2mixy"          unit="mmol/s" />
        <field id="WLDFO2"  long_name="Z dir lateral mix"                                 standard_name="O2mixz"          unit="mmol/s" />
@@ -1086,19 +1086,24 @@
        <field id="O2TVDXb"  long_name="O2 TVD Adv X-dir"                 standard_name="O2tvdx"          unit="mmol s-1" />
        <field id="O2TVDYb"  long_name="O2 TVD Adv Y-dir"                 standard_name="O2tvdy"          unit="mmol s-1" />
        <field id="O2TVDZb"  long_name="O2 TVD Adv Z-dir"                 standard_name="O2tvdz"          unit="mmol s-1" />
+       <field id="O2XADV1"  long_name="O2 Adv X-dir"                 standard_name="O2advx"          unit="mmol m-3 s-1" />
+       <field id="O2YADV1"  long_name="O2 Adv Y-dir"                 standard_name="O2advy"          unit="mmol m-3 s-1" />
+       <field id="O2ZADV1"  long_name="O2 Adv Z-dir"                 standard_name="O2advz"          unit="mmol m-3 s-1" />
+       <field id="O2TADV1"  long_name="O2 Tot Adv"                 standard_name="O2advz"          unit="mmol m-3 s-1" />
        <field id="O2XADV"  long_name="O2 Adv X-dir"                 standard_name="O2advx"          unit="mmol m-3 s-1" />
        <field id="O2YADV"  long_name="O2 Adv Y-dir"                 standard_name="O2advy"          unit="mmol m-3 s-1" />
        <field id="O2ZADV"  long_name="O2 Adv Z-dir"                 standard_name="O2advz"          unit="mmol m-3 s-1" />
-       <field id="REMO2"        long_name="O2 Remin PON and DON"   unit="---"      grid_ref="grid_T_3D" />
-       <field id="NITRO2"        long_name="O2 Nitrif" unit="---"      grid_ref="grid_T_3D" />
-       <field id="MORTMICZO2"        long_name="mortality and excretion of microzooplankton" unit="---"      grid_ref="grid_T_3D" />
-       <field id="GRMICZO2"        long_name="grazing of microzooplankton" unit="---"      grid_ref="grid_T_3D" />
-       <field id="MORTMESZO2"        long_name="mortality and excretion of mesozooplankton" unit="---"      grid_ref="grid_T_3D" />
-       <field id="GRMESZO2"        long_name="grazing of mesozooplankton" unit="---"      grid_ref="grid_T_3D" />
-       <field id="MICO2"        long_name="O2 resp by Z1" unit="---"      grid_ref="grid_T_3D" />
-       <field id="MESO2"        long_name="O2 resp by Z2" unit="---"      grid_ref="grid_T_3D" />
-       <field id="RPPO2"        long_name="O2 prod by Reg PP" unit="---"      grid_ref="grid_T_3D" />
-       <field id="NPPO2"        long_name="O2 prod by New PP" unit="---"      grid_ref="grid_T_3D" />
+       <field id="O2TADV"  long_name="O2 Tot Adv"                 standard_name="O2advz"          unit="mmol m-3 s-1" />
+       <field id="REMO2"        long_name="O2 Remin PON and DON"   unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+       <field id="NITRO2"        long_name="O2 Nitrif" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+       <field id="MORTMICZO2"        long_name="mortality and excretion of microzooplankton" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+       <field id="GRMICZO2"        long_name="grazing of microzooplankton" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+       <field id="MORTMESZO2"        long_name="mortality and excretion of mesozooplankton" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+       <field id="GRMESZO2"        long_name="grazing of mesozooplankton" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+       <field id="MICO2"        long_name="O2 resp by Z1" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+       <field id="MESO2"        long_name="O2 resp by Z2" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+       <field id="RPPO2"        long_name="O2 prod by Reg PP" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+       <field id="NPPO2"        long_name="O2 prod by New PP" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
 
 
        <!-- Diagnostics available with key_trdtrc -->

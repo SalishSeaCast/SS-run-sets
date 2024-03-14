@@ -67,15 +67,10 @@
         </file>
 
         <file id="file17" name_suffix="_diag_T" description="diagnostic terms of DO">
-          <field field_ref="ULDFO2"       name="ULDF"/>
-          <field field_ref="VLDFO2"       name="VLDF"/>
-          <field field_ref="WLDFO2"       name="WLDF"/>
-          <field field_ref="O2TVDXb"       name="TVDXb"/>
-          <field field_ref="O2TVDYb"       name="TVDYb"/>
-          <field field_ref="O2TVDZb"       name="TVDZb"/>
           <field field_ref="O2XADV"       name="XADV"/>
           <field field_ref="O2YADV"       name="YADV"/>
           <field field_ref="O2ZADV"       name="ZADV"/>
+          <field field_ref="O2TADV"       name="TADV"/>
           <field field_ref="VMIXO2H"       name="VMIXH"/>
           <field field_ref="VMIXO2"       name="VMIX"/>
           <field field_ref="NPPO2"        name="NPP"/>
@@ -84,14 +79,6 @@
           <field field_ref="REMO2"        name="RMIN"/>
           <field field_ref="MICO2"        name="RMIC"/>
           <field field_ref="MESO2"        name="RMES"/>
-        </file>
-
-        <file id="file19" name_suffix="_prod_T" description="biology growth rates" >
-          <field field_ref="PPDIAT"/>
-          <field field_ref="PPPHY"/>
-          <field field_ref="PPDIATNO3"/>
-          <field field_ref="PPPHYNO3"/>
-          <field field_ref="TQ10"/>
         </file>
 
       </file_group>
