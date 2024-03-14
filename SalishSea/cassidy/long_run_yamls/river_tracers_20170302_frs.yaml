@@ -2,7 +2,7 @@
 # example SalishSeaCast v202111 run on graham
 
 email: cdonaldson@eoas.ubc.ca
-MPI decomposition: 19x26
+MPI decomposition: 8x18
 config_name: river_trace
 run_id: 02mar17_31mar17
 walltime: 6:00:00
@@ -63,7 +63,7 @@ namelists:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_restart
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/namelist_top_TracerDefAndBdy
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/cassidy/namelist_top_TracerDefAndBdy_frs
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_physics
   
 output:

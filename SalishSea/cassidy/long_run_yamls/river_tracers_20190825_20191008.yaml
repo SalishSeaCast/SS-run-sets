@@ -4,8 +4,8 @@
 email: cdonaldson@eoas.ubc.ca
 MPI decomposition: 19x26
 config_name: river_trace
-run_id: 02mar17_31mar17
-walltime: 6:00:00
+run_id: 25aug19_08oct19
+walltime: 11:59:00
 
 paths:
   NEMO code config: $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
@@ -18,8 +18,8 @@ grid:
   land processor elimination: $PROJECT/$USER/MEOPAR/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: $SCRATCH/MEOPAR/results/long_run_monthly/01mar17/SalishSea_11979360_restart.nc
-  restart_trc.nc: $SCRATCH/MEOPAR/results/long_run_monthly/01mar17/SalishSea_11979360_restart_trc.nc
+  restart.nc: $SCRATCH/MEOPAR/11jul19_24aug19/SalishSea_13936320_restart.nc
+  restart_trc.nc: $SCRATCH/MEOPAR/11jul19_24aug19/SalishSea_13936320_restart_trc.nc
 
 forcing:
   NEMO-atmos:
@@ -47,7 +47,7 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - ./../long_run_namelists/namelist.time.20170302
+  - ./../long_run_namelists/namelist.time.20190825_20191008
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.domain
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.light

@@ -1,0 +1,108 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! NEMO/TOP1 CFG tracers:
+!!               - tracer definition                     (namtrc    )
+!!               - tracer boundaries                     (namtrc_bdy)
+!!               - tracer bdy data                       (nambdy_bc) x 2
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+&namtrc     !   tracers definition
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!                !    name   !           title of the field              ! initial data ! initial data ! obc    !    sbc  !  cbc    ! save   !
+!                !           !                                           !  units       ! from file    !                             ! or not !
+!                !           !                                           !              ! or not       !                             !        !
+
+   sn_tracer(1)  = 'NOOK    ' , 'Nooksack River                         ',  '1' ,  .false.     , .true. ,  .false.     , .false., .true.
+   sn_tracer(2)  = 'SKAG    ' , 'Skagit River                           ',  '1' ,  .false.     , .true. ,  .false.     , .false., .true.
+   sn_tracer(3)  = 'SNO     ' , 'Snohomish River                        ',  '1' ,  .false.     , .true. ,  .false.     , .false., .true.
+   sn_tracer(4)  = 'NIS     ' , 'Nisqually River                        ',  '1' ,  .false.     , .true. ,  .false.     , .false., .true.
+   sn_tracer(5)  = 'EL      ' , 'Elwha River                            ',  '1' ,  .false.     , .true. ,  .false.     , .false., .true.
+   sn_tracer(6)  = 'COW     ' , 'Cowichan River                         ',  '1' ,  .false.     , .true. ,  .false.     , .false., .true.
+   sn_tracer(7)  = 'NANA    ' , 'Nanaimo River                          ',  '1' ,  .false.     , .true. ,  .false.     , .false., .true.
+   sn_tracer(8)  = 'PUNT    ' , 'Puntledge River                        ',  '1' ,  .false.     , .true. ,  .false.     , .false., .true.
+   sn_tracer(9)  = 'SALM    ' , 'Salmon River                           ',  '1' ,  .false.     , .true. ,  .false.     , .false., .true.
+   sn_tracer(10) = 'HOM     ' , 'Homathko River                         ',  '1' ,  .false.     , .true. ,  .false.     , .false., .true.
+   sn_tracer(11) = 'SQUAM   ' , 'Squamish River                         ',  '1' ,  .false.     , .true. ,  .false.     , .false., .true.
+   sn_tracer(12) = 'FRAS    ' , 'Fraser River                           ',  '1' ,  .false.     , .true. ,  .false.     , .false., .true.
+   sn_tracer(13) = 'OTH     ' , 'All Other Rivers                       ',  '1' ,  .false.     , .true. ,  .false.     , .false., .true.
+
+   ln_trcdta = .false.
+   ln_trcdmp = .false.
+   /
+!-----------------------------------------------------------------------
+&namtrc_bdy     ! bdy for passive tracers
+!-----------------------------------------------------------------------
+   cn_trc_dflt   =  'frs','frs'
+   cn_trc        =  'frs','frs'          ! boundary condition type for passive tracers
+   nn_trcdmp_bdy = 0, 0
+/
+!----------------------------------------------------------------------
+&nambdy_bc       !   data for BDY boundary conditions: 1st boundary
+!-----------------------------------------------------------------------
+!
+!              !  file name      ! frequency (hours) !    variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !                 !  (if <0  months)  !      name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_trcobc(1) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(2) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(3) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(4) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(5) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(6) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(7) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(8) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(9) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(10) = 'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(11) = 'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(12) = 'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(13) = 'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+
+   cn_dir_obc        =  './'      !  root directory for the location of OPEN data files
+   rn_trofac(1)   =  0.0  !  -      -      -     -
+   rn_trofac(2)   =  0.0  !  -      -      -     -
+   rn_trofac(3)   =  0.0  !  multiplicative factor
+   rn_trofac(4)   =  0.0  !  -      -      -     -
+   rn_trofac(5)   =  0.0  !  -      -      -     -
+   rn_trofac(6)   =  0.0  !  -      -      -     -
+   rn_trofac(7)   =  0.0  !  -      -      -     -
+   rn_trofac(8)   =  0.0  !  -      -      -     -
+   rn_trofac(9)   =  0.0  !  -      -      -     -
+   rn_trofac(10)  =  0.0  !  -      -      -     -
+   rn_trofac(11)  =  0.0  !  -      -      -     -
+   rn_trofac(12)  =  0.0  !  -      -      -     -
+   rn_trofac(13)  =  0.0  !  -      -      -     -
+/
+!----------------------------------------------------------------------
+&nambdy_bc       !   data for BDY boundary conditions: 2nd boundary
+!-----------------------------------------------------------------------
+!              !  file name      ! frequency (hours) ! variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !                 !  (if <0  months)  !   name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_trcobc(1) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(2) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(3) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(4) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(5) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(6) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(7) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(8) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(9) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(10) = 'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(11) = 'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(12) = 'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(13) = 'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+
+   cn_dir_obc        =  './'      !  root directory for the location of OPEN data files
+   rn_trofac(1)   =  0.0  !  -      -      -     -
+   rn_trofac(2)   =  0.0  !  -      -      -     -
+   rn_trofac(3)   =  0.0  !  multiplicative factor
+   rn_trofac(4)   =  0.0  !  -      -      -     -
+   rn_trofac(5)   =  0.0  !  -      -      -     -
+   rn_trofac(6)   =  0.0  !  -      -      -     -
+   rn_trofac(7)   =  0.0  !  -      -      -     -
+   rn_trofac(8)   =  0.0  !  -      -      -     -
+   rn_trofac(9)   =  0.0  !  -      -      -     -
+   rn_trofac(10)  =  0.0  !  -      -      -     -
+   rn_trofac(11)  =  0.0  !  -      -      -     -
+   rn_trofac(12)  =  0.0  !  -      -      -     -
+   rn_trofac(13)  =  0.0  !  -      -      -     -
+/
+
+
+

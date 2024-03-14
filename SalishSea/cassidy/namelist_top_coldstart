@@ -20,39 +20,5 @@
 !-----------------------------------------------------------------------
 !&namtrc_dta      !    Initialisation from data input file
 !-----------------------------------------------------------------------
-!
-!                !  file name               ! frequency (hours) ! variable   ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
-!                !                          !  (if <0  months)  !   name     !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
-!   sn_trcdta(1)  = 'initial_bio_data_file.nc'    ,        -12        ,  'TRNNO3'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-!   sn_trcdta(2)  = 'initial_bio_data_file.nc'    ,        -12        ,  'TRNNH4'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-!   sn_trcdta(3)  = 'initial_bio_data_file.nc'    ,        -12        ,  'TRNSi'      ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-!   sn_trcdta(4)  = 'initial_bio_data_file.nc'    ,        -12        ,  'TRNDIAT'    ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-!   sn_trcdta(5)  = 'initial_bio_data_file.nc'    ,        -12        ,  'TRNPHY'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-!   sn_trcdta(6)  = 'initial_bio_data_file.nc'    ,        -12        ,  'TRNMYRI'    ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-!   sn_trcdta(7)  = 'initial_bio_data_file.nc'    ,        -12        ,  'TRNMICZ'    ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-!   sn_trcdta(8)  = 'initial_bio_data_file.nc'    ,        -12        ,  'TRNDON'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-!   sn_trcdta(9)  = 'initial_bio_data_file.nc'    ,        -12        ,  'TRNPON'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-!   sn_trcdta(10) = 'initial_bio_data_file.nc'    ,        -12        ,  'TRNbSi'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-!   sn_trcdta(11) = 'initial_bio_data_file.nc'    ,        -12        ,  'TRNTRA'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-!   sn_trcdta(12) = 'initial_car_data_file.nc'    ,        -12        ,  'TRNDIC'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-!   sn_trcdta(13) = 'initial_car_data_file.nc'    ,        -12        ,  'TRNTA'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
-!   sn_trcdta(14) = 'initial_car_data_file.nc'    ,        -12        ,  'TRNO2'     ,    .false.   , .true. , 'yearly'  , ''       , ''       , ''
 
 
-!   rn_trfac(1)   =  1.0  !  -      -      -     -
-!   rn_trfac(2)   =  1.0  !  -      -      -     -
-!   rn_trfac(3)   =  1.0  !  multiplicative factor
-!   rn_trfac(4)   =  1.0  !  -      -      -     -
-!   rn_trfac(5)   =  1.0  !  -      -      -     -
-!   rn_trfac(6)   =  1.0  !  -      -      -     -
-!   rn_trfac(7)   =  1.0  !  -      -      -     -
-!   rn_trfac(8)   =  1.0  !  -      -      -     -
-!   rn_trfac(9)   =  1.0  !  -      -      -     -
-!   rn_trfac(10)  =  1.0  !  -      -      -     -
-!   rn_trfac(11)  =  1.0  !  -      -      -     -
-!   rn_trfac(12)  =  1.0  !  -      -      -     -
-!   rn_trfac(13)  =  1.0  !  -      -      -     -
-!   rn_trfac(14)  =  1.0  !  -      -      -     -
-
-!   cn_dir='./'
-!/
