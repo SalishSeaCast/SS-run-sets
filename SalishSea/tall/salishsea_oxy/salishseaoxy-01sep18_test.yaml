@@ -1,4 +1,4 @@
-# SalishSeaCast run on graham for one month
+# SalishSea_oxy2 run on graham
 
 email: atall@eoas.ubc.ca
 MPI decomposition: 19x26
@@ -10,7 +10,7 @@ walltime: 36:00:00
 paths:
   NEMO code config: /scratch/atall/MEOPAR2/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: /scratch/atall/MEOPAR2/XIOS-2
-  runs directory: $SCRATCH/salishsea_oxy/sep_nov18/with_dia
+  runs directory: $SCRATCH/salishsea_oxy/sep_nov18/modif_sink2
 
 grid:
   bathymetry: $PROJECT/$USER/MEOPAR/grid/bathymetry_202310b.nc

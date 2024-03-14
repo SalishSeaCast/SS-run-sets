@@ -12,7 +12,7 @@
 &nampisprod     !   parameters for phytoplankton growth
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    zz_rate_R_diat            = 5.8e-05      !: 1/s
-   zz_rate_R_myri            = 2.49e-05          !: 1/s (Tall)
+   zz_rate_R_myri            = 0.0          !: 1/s 
    zz_rate_R_flag            = 1.8e-05      !: 1/s
    zz_rate_maxtemp_diat      = 26.0         !: deg C
    zz_rate_maxtemp_myri      = 31.0         !: deg C
@@ -21,17 +21,17 @@
    zz_rate_temprange_myri    = 13.0         !: deg C
    zz_rate_temprange_flag    = 13.0         !: deg C
    zz_PE_a_diat              = 0.045        !: (W/m^2)^-1
-   zz_PE_a_myri              = 0.08          !: (W/m^2)^-1 (Tall)
+   zz_PE_a_myri              = 0.0          !: (W/m^2)^-1
    zz_PE_a_flag              = 0.38         !: (W/m^2)^-1
    zz_PE_Iopt_diat           = 75.0         !: W/m^2
-   zz_PE_Iopt_myri           = 55.2          !: W/m^2 (Tall)
+   zz_PE_Iopt_myri           = 0.0          !: W/m^2
    zz_PE_Iopt_flag           = 20.0         !: W/m^2
    zz_rate_K_Si_diat         = 1.2          !:
    zz_rate_K_Si_myri         = 0.0          !:
    zz_rate_K_Si_flag         = 0.0          !:
    zz_rate_kapa_diat         = 1.0          !:
    zz_rate_kapa_myri         = 0.5          !:
-   zz_rate_kapa_flag         = 0.300        !:
+   zz_rate_kapa_flag         = 0.30        !:
    zz_rate_k_diat            = 2.0          !:
    zz_rate_k_myri            = 0.5          !:
    zz_rate_k_flag            = 0.1          !:
@@ -61,7 +61,7 @@
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 &nampismes     !   parameters for M. rubrum
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-   zz_rate_mesorub_R               = 0.8e-5               !: Tall
+   zz_rate_mesorub_R               = 0               !: 
    zz_rate_mesorub_flagPredSlope   = 0.3               !:
    zz_rate_mesorub_flagHalfSat     = 1.0               !:
    zz_rate_mesorub_eff             = 0.6               !:
@@ -98,7 +98,7 @@
    zz_rate_mesozoo_Z_Pref           = 0.285       !      mesozooplankton preference for microzooplankton
    zz_rate_mesozoo_Z_Predslope      = 0.500       ! uM N mesozooplankton microzooplankton grazing limit
    zz_rate_mesozoo_Z_HalfSat        = 1.200       ! uM N mesozooplankton microzoo grazing half saturation const
-   zz_rate_mesozoo_eff              = 0.00        ! mesozooplankton grazed mass assimilation efficiency
+   zz_rate_mesozoo_eff              = 0.30        ! mesozooplankton grazed mass assimilation efficiency (Tall)
    zz_frac_waste_MNM_NH             = 0.05          ! waste fraction from mesozoo natural mortality to NH
    zz_frac_waste_MNM_DON            = 0.470       ! waste fraction from mesozoo natural mortality to DON
    zz_frac_waste_MNM_PON            = 0.470       ! waste fraction from mesozoo natural mortality to PON
@@ -198,10 +198,10 @@
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    zz_w_sink_Pdiat_min = 0.5  ! m/d  microphyto minimum sinking rate # Alain CONVERTED TO M/S ON NAMELIST READ
    zz_w_sink_Pdiat_max = 1.2  ! m/d microphyto maximum sinking rate # Alain CONVERTED TO M/S ON NAMELIST READ
-   zz_w_sink_D_PON = 1.0e-4      ! m/s PON detritus sinking rate # Jeffery quoting Dune and Bacon
+   zz_w_sink_D_PON = 1.0e-3      ! m/s PON detritus sinking rate # Jeffery quoting Dune and Bacon (from 1.0e-4 Tall)
    zz_w_sink_D_bSi = 2.5e-4      ! m/s  biogenic silicon detritus sinking rate # match NO3 particles
    zz_alpha_b_Si = 0.92          ! fraction of bottom flux resuspended in bottom cell
-   zz_alpha_b_D  = 0.8          ! fraction of bottom, flux resuspended in bottom cell (Tall)
+   zz_alpha_b_D  = 0.5          ! fraction of bottom, flux resuspended in bottom cell (Tall)
    zz_alpha_b_N = 0.45          ! fraction of bottom flux resuspended in bottom cell
    zz_alpha_b_T = 0.75          ! fraction of bottom flux resuspended in bottom cell
 /
@@ -218,3 +218,4 @@
    zz_o2_proreg    = 6.625 ! ratio of oxygen to n during ammonification (OM->NH4), value based Fennel 2013
    zz_alpha_SOD    = 1.0   ! fraction of sinking N flux contributing to sediment oxygen demand
 /
+
