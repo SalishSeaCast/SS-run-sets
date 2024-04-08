@@ -203,7 +203,7 @@
    zz_alpha_b_Si = 0.92          ! fraction of bottom flux resuspended in bottom cell
    zz_alpha_b_D  = 0.5          ! fraction of bottom, flux resuspended in bottom cell (Tall)
    zz_alpha_b_N = 0.30          ! fraction of bottom flux resuspended in bottom cell
-   zz_alpha_b_rem = 0.35          ! fraction of bottom remineralization in bottom cell (Tall)
+   zz_alpha_b_rem = 0.60          ! fraction of bottom remineralization in bottom cell (Tall)
    zz_alpha_b_T = 0.75          ! fraction of bottom flux resuspended in bottom cell
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''

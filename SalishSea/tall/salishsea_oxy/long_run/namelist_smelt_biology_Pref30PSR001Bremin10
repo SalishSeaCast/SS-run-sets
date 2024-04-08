@@ -198,12 +198,12 @@
 !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
    zz_w_sink_Pdiat_min = 0.5  ! m/d  microphyto minimum sinking rate # Alain CONVERTED TO M/S ON NAMELIST READ (from 0.5 Tall)
    zz_w_sink_Pdiat_max = 1.2  ! m/d microphyto maximum sinking rate # Alain CONVERTED TO M/S ON NAMELIST READ (from 1.2 Tall)
-   zz_w_sink_D_PON = 1.0e-4      ! m/s PON detritus sinking rate # Jeffery quoting Dune and Bacon (from 1.0e-4 Tall)
+   zz_w_sink_D_PON = 1.0e-3      ! m/s PON detritus sinking rate # Jeffery quoting Dune and Bacon (from 1.0e-4 Tall)
    zz_w_sink_D_bSi = 2.5e-4      ! m/s  biogenic silicon detritus sinking rate # match NO3 particles
    zz_alpha_b_Si = 0.92          ! fraction of bottom flux resuspended in bottom cell
    zz_alpha_b_D  = 0.5          ! fraction of bottom, flux resuspended in bottom cell (Tall)
    zz_alpha_b_N = 0.30          ! fraction of bottom flux resuspended in bottom cell
-   zz_alpha_b_rem = 0.35          ! fraction of bottom remineralization in bottom cell (Tall)
+   zz_alpha_b_rem = 0.10          ! fraction of bottom remineralization in bottom cell (Tall)
    zz_alpha_b_T = 0.75          ! fraction of bottom flux resuspended in bottom cell
 /
 !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
