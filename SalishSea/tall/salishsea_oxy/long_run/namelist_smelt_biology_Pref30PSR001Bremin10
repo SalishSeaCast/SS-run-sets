@@ -1,0 +1,222 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! PISCES  (key_pisces) config namelist (see below for key_pisces_reduced)
+!!              4  - parameters for phytoplankton             (nampisprod,nampismort)
+!!              5  - parameters for zooplankton               (nampismes, nampismezo, nampiszoo)
+!!              6  - parameters for remineralization          (nampisrem)
+!!              7 - optical model                             (nampisopt)
+!!              11 - Sinking                                  (nampissink)
+!!              12 - Turbidity (river tracer)                 (nampisriv)
+
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisprod     !   parameters for phytoplankton growth
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_R_diat            = 5.8e-05      !: 1/s
+   zz_rate_R_myri            = 0.0          !: 1/s 
+   zz_rate_R_flag            = 1.8e-05      !: 1/s
+   zz_rate_maxtemp_diat      = 26.0         !: deg C
+   zz_rate_maxtemp_myri      = 31.0         !: deg C
+   zz_rate_maxtemp_flag      = 31.0         !: deg C
+   zz_rate_temprange_diat    = 14.0         !: deg C
+   zz_rate_temprange_myri    = 13.0         !: deg C
+   zz_rate_temprange_flag    = 13.0         !: deg C
+   zz_PE_a_diat              = 0.045        !: (W/m^2)^-1
+   zz_PE_a_myri              = 0.0          !: (W/m^2)^-1
+   zz_PE_a_flag              = 0.38         !: (W/m^2)^-1
+   zz_PE_Iopt_diat           = 75.0         !: W/m^2
+   zz_PE_Iopt_myri           = 0.0          !: W/m^2
+   zz_PE_Iopt_flag           = 20.0         !: W/m^2
+   zz_rate_K_Si_diat         = 1.2          !:
+   zz_rate_K_Si_myri         = 0.0          !:
+   zz_rate_K_Si_flag         = 0.0          !:
+   zz_rate_kapa_diat         = 1.0          !:
+   zz_rate_kapa_myri         = 0.5          !:
+   zz_rate_kapa_flag         = 0.30        !:
+   zz_rate_k_diat            = 2.0          !:
+   zz_rate_k_myri            = 0.5          !:
+   zz_rate_k_flag            = 0.1          !:
+   zz_rate_Si_ratio_diat     = 1.8          !:
+   zz_rate_Si_ratio_myri     = 0.0          !:
+   zz_rate_Si_ratio_flag     = 0.0          !:
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampismort     !   parameters for phytoplankton mortality
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_flag_Rm         = 0.0489E-05 ! flagellate (pico-phyto) natural mortality
+   zz_frac_waste_FNM_NH    = 0.05      ! waste fraction from pico-phyto natural mortality to NH
+   zz_frac_waste_FNM_DON   = 0.470     ! waste fraction from pico-phyto natural mortality to DON
+   zz_frac_waste_FNM_PON   = 0.470     ! waste fraction from pico-phyto natural mortality to PON
+   zz_frac_waste_FNM_Bsi   = 1.0       ! waste fraction from pico-phyto natural mortality to bSi
+   zz_rate_myri_Rm         = 0.0778E-04  ! M. rubrum natural mortality
+   zz_frac_waste_CNM_NH    = 0.05       ! waste fraction from M. rubrum natural mortality to NH
+   zz_frac_waste_CNM_DON   = 0.470      ! waste fraction from M. rubrum natural mortality to DON
+   zz_frac_waste_CNM_PON   = 0.470      ! waste fraction from M. rubrum natural mortality to PON
+   zz_frac_waste_CNM_Bsi   = 1.0        ! waste fraction from M. rubrum natural mortality to bSi
+   zz_rate_diat_Rm        = 0.0667E-05 ! diatom (micro-phyto( natural mortality
+   zz_frac_waste_DNM_NH    = 0.05      ! waste fraction from micro-phyto natural mortality to NH
+   zz_frac_waste_DNM_DON   = 0.470     ! waste fraction from micro-phyto natural mortality to DON
+   zz_frac_waste_DNM_PON   = 0.470     ! waste fraction from micro-phyto natural mortality to PON
+   zz_frac_waste_DNM_Bsi   = 1.        ! waste fraction from micro-phyto natural mortality to bSi
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampismes     !   parameters for M. rubrum
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_mesorub_R               = 0               !: 
+   zz_rate_mesorub_flagPredSlope   = 0.3               !:
+   zz_rate_mesorub_flagHalfSat     = 1.0               !:
+   zz_rate_mesorub_eff             = 0.6               !:
+   zz_frac_waste_FEC_NH            = 0.0              !:waste fraction from mesorub grazing picophyto to NH
+   zz_frac_waste_FEC_DON           = 0.470             ! waste fraction from mesorub grazing picophyto to DON
+   zz_frac_waste_FEC_PON           = 0.470             ! waste fraction from mesorub grazing picophyto to PON
+   zz_frac_waste_FEC_BSi           = 1.0               ! waste fraction from mesorub grazing picophyto to Bsi
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampismezo     !   parameters for mesozooplankton
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_mesozoo_winterconc = 0.41                   ! uM N mesozooplankton background concentration
+   zz_rate_mesozoo_sumpeakval =  0.50, 0.57,  0.35     ! uM N magnitude of mesozooplankton summer concentration peaks
+   zz_rate_mesozoo_sumpeakwid = 35.0,  65.00, 44.00    ! year-days widths of mesozooplankton summer concentration peaks
+   zz_rate_mesozoo_sumpeakpos = 140.0, 208.0, 296.0    ! year-day times of mesozooplankton summer concentration peaks
+   zz_rate_mesozoo_alpha            = 1.0         ! 0 to 1. alpha = 0: spatially uniform mesozoo; alpha = 1: mesozoo proportional to prey
+   zz_rate_mesozoo_R                = 1.54e-5     ! uM N / s mesozooplankton maximum ingestion rate @ 20 deg C
+   zz_rate_mesozoo_Rm               = 2.3e-6          ! uM N / s mesozooplankton natural mortality rate @ 20 deg C (Tall)
+   zz_rate_mesozoo_excr             = 1.39e-6          ! uM N / s mesozooplankton excretion rate @ 20 deg C (Tall)
+   zz_rate_mesozoo_PredSlope        = 0.500       ! uM N mesozooplankton total grazing limit
+   zz_rate_mesozoo_HalfSat          = 1.000       ! uM N mesozooplankton total grazing half saturation constant
+   zz_rate_mesozoo_diatPref        = 0.285       !      mesozooplankton preference for diatoms
+   zz_rate_mesozoo_diatPredslope   = 0.000       ! uM N mesozooplankton diatom grazing limit
+   zz_rate_mesozoo_diatHalfSat     = 0.200       ! uM N mesozooplankton diatom grazing half saturation constant
+   zz_rate_mesozoo_myriPref         = 0.180       !      mesozooplankton preference for nano-phytoplankton
+   zz_rate_mesozoo_myriPredslope    = 0.2         ! uM N mesozooplankton nano-phyto grazing limit
+   zz_rate_mesozoo_myriHalfSat      = 1.000       ! uM N mesozooplankton nano-phyto grazing half saturation const
+   zz_rate_mesozoo_flagPref         = 0.1         !      mesozooplankton preference for pico-phytoplankton
+   zz_rate_mesozoo_flagPredslope    = 0.05        ! uM N mesozooplankton pico-phyto grazing limit
+   zz_rate_mesozoo_flagHalfSat      = 0.4         ! uM N mesozooplankton pico-phyto grazing half saturation const
+   zz_rate_mesozoo_PON_Pref         = 0.15        !      mesozooplankton preference for PON
+   zz_rate_mesozoo_PON_Predslope    = 0.000       ! uM N mesozooplankton PON feeding limit
+   zz_rate_mesozoo_PON_HalfSat      = 0.400       ! uM N mesozooplankton PON feeding half saturation const
+   zz_rate_mesozoo_Z_Pref           = 0.285       !      mesozooplankton preference for microzooplankton
+   zz_rate_mesozoo_Z_Predslope      = 0.500       ! uM N mesozooplankton microzooplankton grazing limit
+   zz_rate_mesozoo_Z_HalfSat        = 1.200       ! uM N mesozooplankton microzoo grazing half saturation const
+   zz_rate_mesozoo_eff              = 0.30        ! mesozooplankton grazed mass assimilation efficiency (Tall)
+   zz_frac_waste_MNM_NH             = 0.05          ! waste fraction from mesozoo natural mortality to NH
+   zz_frac_waste_MNM_DON            = 0.470       ! waste fraction from mesozoo natural mortality to DON
+   zz_frac_waste_MNM_PON            = 0.470       ! waste fraction from mesozoo natural mortality to PON
+   zz_frac_waste_MEX_NH             = 0.25        ! waste fraction from mesozoo excretion to NH
+   zz_frac_waste_MEX_DON            = 0.25        ! waste fraction from mesozoo excretion to DON
+   zz_frac_waste_MEX_PON            = 0.5         ! waste fraction from mesozoo excretion to PON
+   zz_frac_waste_PEM_NH             = 0.03         ! waste fraction from mesozoo grazing PON to NH (Tall)
+   zz_frac_waste_PEM_DON            = 0.2         ! waste fraction from mesozoo grazing PON to DON (Tall)
+   zz_frac_waste_PEM_PON            = 1.0         ! waste fraction from mesozoo grazing PON to PON
+   zz_frac_waste_DEM_NH             = 0.05        ! waste fraction from mesozoo grazing microphyto to NH #  Alain, excretion rate to growth rate
+   zz_frac_waste_DEM_DON            = 0.470       ! waste fraction from mesozoo grazing microphyto to DON# Denman and Pena about 1/2 to dissolved
+   zz_frac_waste_DEM_PON            = 0.470       ! waste fraction from mesozoo grazing microphyto to PON
+   zz_frac_waste_DEM_BSi            = 1.0         ! waste fraction from mesozoo grazing microphyto to PON
+   zz_frac_waste_FEM_NH             = 0.05        ! waste fraction from mesozoo grazing picophyto to NH
+   zz_frac_waste_FEM_DON            = 0.470       ! waste fraction from mesozoo grazing picophyto to DON
+   zz_frac_waste_FEM_PON            = 0.470       ! waste fraction from mesozoo grazing picophyto to PON
+   zz_frac_waste_FEM_BSi            = 1.0         ! waste fraction from mesozoo grazing picophyto to Bsi
+   zz_frac_waste_ZEM_NH             = 0.05        ! waste fraction from mesozoo grazing microzoo to NH
+   zz_frac_waste_ZEM_DON            = 0.470       ! waste fraction from mesozoo grazing microzoo to DON
+   zz_frac_waste_ZEM_PON            = 0.470       ! waste fraction from mesozoo grazing microzoo to PON
+   zz_frac_waste_CEM_NH             = 0.05        ! waste fraction from mesozoo grazing M. rubrum to NH
+   zz_frac_waste_CEM_DON            = 0.470       ! waste fraction from mesozoo grazing M. rubrum to DON
+   zz_frac_waste_CEM_PON            = 0.470       ! waste fraction from mesozoo grazing M. rubrum to PON
+   zz_frac_waste_CEM_BSi            = 1.0         ! waste fraction from mesozoo grazing M. rubrum to BSi
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampiszoo     !   parameters for microzooplankton
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_rate_uzoo_Rm              = 0.556E-06  !uM N / s microzooplankton natural mortality rate @ 20 deg C
+   zz_rate_uzoo_excr            = 0.556E-07  !uM N / s microzooplankton excretion rate @ 20 deg C
+   zz_rate_uzoo_PredSlope       = 0.200      ! uM N microzooplankton total grazing limit
+   zz_rate_uzoo_HalfSat         = 1.250      ! uM N microzooplankton total grazing half saturation constant
+   zz_rate_uzoo_diatPref       = 0.260      ! microzooplankton preference for micro-phytoplankton
+   zz_rate_uzoo_diatPredslope  = 0.300      ! uM N microzooplankton micro-phyto grazing half saturation const
+   zz_rate_uzoo_diatHalfSat    = 1.000      ! uM N microzooplankton micro-phyto grazing half saturation const
+   zz_rate_uzoo_myriPref        = 0.170      ! microzooplankton preference for nano-phytoplankton
+   zz_rate_uzoo_myriPredslope   = 0.500      ! uM N mic rozooplankton nano-phyto grazing limit
+   zz_rate_uzoo_myriHalfSat     = 1.000      ! uM N microzooplankton nano-phyto grazing half saturation const
+   zz_rate_uzoo_flagPref        = 0.300      ! microzooplankton preference for pico-phytoplankton
+   zz_rate_uzoo_flagPredslope   = 0.100      ! uM N microzooplankton pico-phyto grazing limit
+   zz_rate_uzoo_flagHalfSat     = 1.000      ! uM N microzooplankton pico-phyto grazing half saturation const
+   zz_rate_uzoo_PON_Pref        = 0.090      ! microzooplankton preference for PON
+   zz_rate_uzoo_PON_Predslope   = 0.600      ! uM N microzooplankton microzoo grazing limit
+   zz_rate_uzoo_PON_HalfSat     = 2.000      ! uM N microzooplankton PON grazing half saturation const
+   zz_rate_uzoo_Z_Pref          = 0.180      ! microzooplankton preference for microzoo cannibalism
+   zz_rate_uzoo_Z_Predslope     = 0.300      ! uM N microzooplankton microzoo grazing limit
+   zz_rate_uzoo_Z_HalfSat       = 0.500      ! uM N microzooplankton microzoo grazing half saturation const
+   zz_rate_uzoo_R               = 2.289E-05   ! 1/s micro-phyto maximum growth rate # Hitchcock 1980, 1.4 d-1 for T. nordenskelii at 10degrees
+   zz_rate_uZoo_eff             = 0.6        ! match SOG
+   zz_frac_waste_PEZ_NH         = 0.02        ! waste fraction from microzoo grazing PON to NH (Tall)
+   zz_frac_waste_PEZ_DON        = 0.1        !waste fraction from microzoo grazing PON to DON (Tall)
+   zz_frac_waste_PEZ_PON        = 1.0        !waste fraction from microzoo grazing PON to PON
+   zz_frac_waste_DEZ_NH         = 0.05       ! waste fraction from microzoo grazing microphyto to NH
+   zz_frac_waste_DEZ_DON        = 0.470      !waste fraction from microzoo grazing microphyto to DON
+   zz_frac_waste_DEZ_PON        = 0.470      !waste fraction from microzoo grazing microphyto to PON
+   zz_frac_waste_DEZ_Bsi        = 1.         !waste fraction from microzoo grazing microphyto to Bsi
+   zz_frac_waste_CEZ_NH         = 0.05       ! waste fraction from microzoo grazing M. rubrum to NH
+   zz_frac_waste_CEZ_DON        = 0.470      !waste fraction from microzoo grazing M. rubrum to DON
+   zz_frac_waste_CEZ_PON        = 0.470      !waste fraction from microzoo grazing M. rubrum to PON
+   zz_frac_waste_CEZ_BSi        = 1.         !waste fraction from microzoo grazing M. rubrum to Bsi
+   zz_frac_waste_FEZ_NH         = 0.05       ! waste fraction from microzoo grazing picophyto to NH
+   zz_frac_waste_FEZ_DON        = 0.470      !waste fraction from microzoo grazing picophyto to DON
+   zz_frac_waste_FEZ_PON        = 0.470      !waste fraction from microzoo grazing picophyto to PON
+   zz_frac_waste_FEZ_BSi        = 1.         !waste fraction from microzoo grazing picophyto to Bsi
+   zz_frac_waste_ZEZ_NH         = 0.05       ! waste fraction from microzoo grazing microzoo to NH
+   zz_frac_waste_ZEZ_DON        = 0.470      !waste fraction from microzoo grazing microzoo to DON
+   zz_frac_waste_ZEZ_PON        = 0.470      !waste fraction from microzoo grazing microzoo to PON
+   zz_frac_waste_ZNM_NH         = 0.05       !waste fraction from micro-zoo natural mortality to NH
+   zz_frac_waste_ZNM_DON        = 0.470      !waste fraction from micro-zoo natural mortality to DON
+   zz_frac_waste_ZNM_PON        = 0.470      !waste fraction from micro-zoo natural mortality to PON
+   zz_frac_waste_ZEX_NH         = 0.25       !waste fraction from micro-zoo excretion to NH
+   zz_frac_waste_ZEX_DON        = 0.25       !waste fraction from micro-zoo excretion to DON
+   zz_frac_waste_ZEX_PON        = 0.5        !waste fraction from micro-zoo excretion to PON
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisrm     !   parameters for remineralization
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_remin_NH     =  4.44e-7
+   zz_remin_D_DON  =  2.56e-6
+   zz_remin_D_PON  =  2.56e-6
+   zz_remin_D_bSi  =  1.221e-6
+   zz_bfSi         =  6.66e-5          ! mmol/m2/s  
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisopt     !  Light attenuation
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      zzialpha = 0.091
+      zzibeta = 0.0433
+      zzigamma = 2.62e-22
+      zzisigma = 5.5
+      zzitheta = 0.445
+      zzidl = 2.56
+      zzN2chl = 2.000   
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampissink     !  Sinking of bio groups
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_w_sink_Pdiat_min = 0.5  ! m/d  microphyto minimum sinking rate # Alain CONVERTED TO M/S ON NAMELIST READ (from 0.5 Tall)
+   zz_w_sink_Pdiat_max = 1.2  ! m/d microphyto maximum sinking rate # Alain CONVERTED TO M/S ON NAMELIST READ (from 1.2 Tall)
+   zz_w_sink_D_PON = 1.0e-4      ! m/s PON detritus sinking rate # Jeffery quoting Dune and Bacon (from 1.0e-4 Tall)
+   zz_w_sink_D_bSi = 2.5e-4      ! m/s  biogenic silicon detritus sinking rate # match NO3 particles
+   zz_alpha_b_Si = 0.92          ! fraction of bottom flux resuspended in bottom cell
+   zz_alpha_b_D  = 0.5          ! fraction of bottom, flux resuspended in bottom cell (Tall)
+   zz_alpha_b_N = 0.30          ! fraction of bottom flux resuspended in bottom cell
+   zz_alpha_b_rem = 0.35          ! fraction of bottom remineralization in bottom cell (Tall)
+   zz_alpha_b_T = 0.75          ! fraction of bottom flux resuspended in bottom cell
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisriv     !   river tracer parameters
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   Wd      = 1.0      ! sediment sinking velocity, m/d
+   alpha_C = 0.0001 ! transfer factor 1/(d NTU)
+/
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+&nampisoxy     !   parameters for oxygen model
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_o2_nitr      =  2.0 ! O2:N for nitrification (NH4->NO3); 2.0 is used in LOBSTER and Fennel 2013
+   zz_o2_proreg    = 6.625 ! ratio of oxygen to n during ammonification (OM->NH4), value based Fennel 2013
+   zz_alpha_SOD    = 1.0   ! fraction of sinking N flux contributing to sediment oxygen demand
+/
+
