@@ -43,7 +43,7 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - /scratch/MEOPAR2/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/./namelist.time.01jan18
+  - /scratch/atall/MEOPAR2/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/./namelist.time.jan18
   - /scratch/atall/MEOPAR2/SS-run-sets/v202111/namelist.domain
   - /scratch/atall/MEOPAR2/SS-run-sets/v202111/namelist.atmos_rivers
   - /scratch/atall/MEOPAR2/SS-run-sets/v202111/namelist.light
