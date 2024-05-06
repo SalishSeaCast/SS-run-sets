@@ -57,7 +57,7 @@ namelists:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.compute
   namelist_smelt_cfg:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_biology_Pref30PSR001Bremin60
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111//namelist_smelt_rivers
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111//namelist_smelt_rivers_newturb
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_restart
