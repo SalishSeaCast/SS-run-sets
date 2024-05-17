@@ -3,12 +3,12 @@ MPI decomposition: 19x26
 config_name: SalishSea_oxy2
 run_id: jan_dec18
 account: rrg-allen
-walltime: 23:00:00
+walltime: 96:00:00
 
 paths:
   NEMO code config: $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $PROJECT/$USER/MEOPAR/XIOS-2
-  runs directory: $SCRATCH/salishsea_oxy/long_run/jan_dec18/HADV_modif
+  runs directory: $SCRATCH/salishsea_oxy/long_run/jan_dec18/HADV_modif/Bremin60
 
 grid:
   bathymetry: $PROJECT/$USER/MEOPAR/grid/bathymetry_202310b.nc
@@ -54,7 +54,7 @@ namelists:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.vertical
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.compute
   namelist_smelt_cfg:
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_biology_Pref30PSR001Bremin10
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_biology_Pref30PSR001Bremin60
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_rivers_opsturb
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
