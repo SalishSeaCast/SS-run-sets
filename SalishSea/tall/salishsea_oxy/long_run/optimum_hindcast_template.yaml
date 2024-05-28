@@ -1,7 +1,7 @@
 # salishsea command processor run description file template for
 # SalishSeaCast automation hindcast runs on optimum
 
-email: sallen@eoas.ubc.ca,atall@eoas.ubc.ca
+email: sallen@eoas.ubc.ca
 MPI decomposition: 16x34
 config_name: SalishSea_oxy2
 run_id: ddmmmyyhindcast
@@ -53,7 +53,7 @@ namelists:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.bottom
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.tracer
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.dynamics
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.vertical
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea_tall/salishsea_oxy/long_run/namelist.vertical
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.compute
   namelist_smelt_cfg:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_biology_Pref30PSR001Bremin60
