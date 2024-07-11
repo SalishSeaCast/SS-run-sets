@@ -1,0 +1,81 @@
+# salishsea command processor run description file for
+# SalishSeaCast_Blue v202111 run on salish
+
+MPI decomposition: 1x7
+config_name: SalishSeaCast_Blue
+run_id: 03jul24-blue
+# max allowed run time in seconds (86400 = 24h)
+walltime: 86400
+
+paths:
+  NEMO code config: /data/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: /data/$USER/MEOPAR/XIOS-2
+  runs directory: /data/$USER/MEOPAR/runs
+
+grid:
+  bathymetry: /data/$USER/MEOPAR/grid/bathymetry_202108.nc
+  coordinates: /data/$USER/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
+  # 1x7 MPI decomposition on salish has no all-land sub-domains, so land processor elimination
+  # is not possible
+  land processor elimination: false
+
+restart:
+  # restart from nowcast-green when possible because it includes minor effect on temperature field
+  # due to light attenuation by phytoplankton chlorophyll
+  restart.nc: /results2/SalishSea/nowcast-green.202111/02jul24/SalishSea_17759520_restart.nc
+
+forcing:
+  NEMO-atmos:
+    link to: /results/forcing/atmospheric/continental2.5/nemo_forcing/
+  bfr_coef.nc:
+    link to: /data/$USER/MEOPAR/grid/jetty_mask_bathy202108.nc
+  grid:
+    link to: /data/$USER/MEOPAR/grid
+  rivers:
+    link to: /results/forcing/rivers
+  rivers-climatology:
+    link to: /data/$USER/MEOPAR/rivers-climatology
+  river_turb:
+    link to: /results/forcing/rivers/river_turb
+  ssh:
+    link to: /results/forcing/sshNeahBay/obs
+  LiveOcean:
+    link to: /results/forcing/LiveOcean/boundary_conditions/
+  tides:
+    link to: /data/$USER/MEOPAR/tides
+  tracers:
+    link to: /data/$USER/MEOPAR/tracers
+
+namelists:
+  namelist_cfg:
+  - ./namelist.time.03jul24
+  - /data/$USER/MEOPAR/SS-run-sets/v202111/nowcast-blue/namelist.domain
+  - /data/$USER/MEOPAR/SS-run-sets/v202111/nowcast-blue/namelist.atmos_rivers
+  - /data/$USER/MEOPAR/SS-run-sets/v202111/nowcast-blue/namelist.light
+  - /data/$USER/MEOPAR/SS-run-sets/v202111/nowcast-blue/namelist.lateral
+  - /data/$USER/MEOPAR/SS-run-sets/v202111/nowcast-blue/namelist.bottom
+  - /data/$USER/MEOPAR/SS-run-sets/v202111/nowcast-blue/namelist.tracer
+  - /data/$USER/MEOPAR/SS-run-sets/v202111/nowcast-blue/namelist.dynamics
+  - /data/$USER/MEOPAR/SS-run-sets/v202111/nowcast-blue/namelist.vertical
+  - /data/$USER/MEOPAR/SS-run-sets/v202111/nowcast-blue/namelist.compute
+
+output:
+  XIOS servers: 1
+  domaindefs: /data/$USER/MEOPAR/SS-run-sets/v202111/nowcast-blue/domain_def.xml
+  fielddefs: /data/$USER/MEOPAR/SS-run-sets/v202111/nowcast-blue/field_def.xml
+  filedefs: /data/$USER/MEOPAR/SS-run-sets/v202111/nowcast-blue/file_def.xml
+  iodefs: /data/$USER/MEOPAR/SS-run-sets/v202111/nowcast-blue/iodef.xml
+  separate XIOS server: true
+
+vcs revisions:
+  git:
+  - /data/$USER/MEOPAR/grid
+  - /data/$USER/MEOPAR/NEMO-Cmd
+  - /data/$USER/MEOPAR/NEMO-3.6-code
+  - /data/$USER/MEOPAR/rivers-climatology
+  - /data/$USER/MEOPAR/SS-run-sets
+  - /data/$USER/MEOPAR/SalishSeaCmd
+  - /data/$USER/MEOPAR/tides
+  - /data/$USER/MEOPAR/tracers
+  - /data/$USER/MEOPAR/XIOS-ARCH
+  - /data/$USER/MEOPAR/XIOS-2
