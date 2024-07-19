@@ -18,24 +18,41 @@
       <file_group id="4h" output_freq="4h"  output_level="10" enabled=".FALSE."/>  <!-- 4h files -->
       <file_group id="6h" output_freq="6h"  output_level="10" enabled=".FALSE."/>  <!-- 6h files -->
 
-      <file_group id="1d" output_freq="1d"  output_level="10" compression_level="4" enabled=".TRUE."> <!-- 1 file daily no split freq -->
+      <file_group id="1d" output_freq="1d"  output_level="10" compression_level="4" split_freq="1d" enabled=".TRUE."> <!-- 1 file daily no split freq -->
         <file id="file1" name_suffix="_grid_T" description="physics tracers and VVL layer thicknesses" >
           <field field_ref="toce"           name="votemper"/>
           <field field_ref="soce"           name="vosaline"/>
           <field field_ref="rhop"           name="sigma_theta"/>
         </file>
 
-      
+        <file id="file15" name_suffix="_biol_T" description="biology" >
+          <field field_ref="NO3"            name="nitrate"/>
+          <field field_ref="NH4"            name="ammonium"/>
+          <field field_ref="DIAT"           name="diatoms"/>
+          <field field_ref="PHY"            name="flagellates"/>
+          <field field_ref="MICZ"           name="microzooplankton"/>
+          <field field_ref="DON"            name="dissolved_organic_nitrogen"/>
+          <field field_ref="PON"            name="particulate_organic_nitrogen"/>
+          <field field_ref="MESZ"           name="mesozooplankton"/>
+        </file>
 
         <file id="file16" name_suffix="_chem_T" description="chemistry and light">
+          <field field_ref="DIC"      name="dissolved_inorganic_carbon"/>
+          <field field_ref="TA"       name="total_alkalinity"/>
           <field field_ref="O2"       name="dissolved_oxygen"/>
         </file>
 
-        <file id="file17" name_suffix="_prod_T" description="biology growth rates" >
-          <field field_ref="PPDIAT"/>
-          <field field_ref="PPPHY"/>
-          <field field_ref="PPDIATNO3"/>
-          <field field_ref="PPPHYNO3"/>
+        <file id="file17" name_suffix="_diag_T" description="diagnostic terms of DO">
+          <field field_ref="O2ZADV"       name="ZADV"/>
+          <field field_ref="O2TADV"       name="TADV"/>
+          <field field_ref="HDIFO2"       name="HDIF"/>
+          <field field_ref="VMIXO2"       name="VMIX"/>
+          <field field_ref="NPPO2"        name="NPP"/>
+          <field field_ref="RPPO2"        name="RPP"/>
+          <field field_ref="NITRO2"        name="NITR"/>
+          <field field_ref="REMO2"        name="RMIN"/>
+          <field field_ref="MICO2"        name="RMIC"/>
+          <field field_ref="MESO2"        name="RMES"/>
         </file>
 
       </file_group>
