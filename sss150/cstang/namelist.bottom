@@ -22,5 +22,4 @@
 
    ln_bfrimp   = .true.     !  implicit bottom friction (requires ln_zdfexp = .false. if true)
    ln_loglayer = .false.    !  logarithmic formulation (non linear case)
-/
-
+&end

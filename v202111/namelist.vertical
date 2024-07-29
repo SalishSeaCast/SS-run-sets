@@ -5,7 +5,7 @@
 !!    namzdf        vertical physics
 !!    namzdf_gls    generalized length scale vertical mixing          ("key_zdfgls")
 !!======================================================================
-!! Note included namelists:
+!! Not included namelists:
 !!    namzdf_ric    richardson number dependent vertical mixing       ("key_zdfric")
 !!    namzdf_tke    TKE dependent vertical mixing                     ("key_zdftke")
 !!    namzdf_kpp    KPP dependent vertical mixing                     ("key_zdfkpp")
@@ -36,4 +36,4 @@
    rn_wvage_max  =  28.2   !  Maximum "wave age" c_p/ustar (if nn_z0_met=2)
    rn_ustar_ref  =   0.18  !  Fetch/duration wave growth limitation threshold on ustar [m/s] (if nn_z0_met=2)
    rn_frac_hs    =   1.5   !  Fraction of wave height as roughness (if nn_z0_met=2)
-/
+&end
