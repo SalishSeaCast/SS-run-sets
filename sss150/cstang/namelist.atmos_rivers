@@ -31,7 +31,7 @@
    nn_fsbc     =  1        !  frequency of surface boundary condition computation
                            !     (also = the frequency of sea-ice model call)
    ln_ana      = .false.   !  analytical formulation                    (T => fill namsbc_ana )
-   ln_blk_core = .false.   !  CORE bulk formulation                     (T => fill namsbc_core)
+   ln_blk_core = .true.   !  CORE bulk formulation                     (T => fill namsbc_core)
    ln_blk_rpn  = .true.    !  RPNE bulk interface                       (T => fill namsbc_rpn)
    ln_apr_dyn  = .true.    !  Patm gradient added in ocean & ice Eqs.   (T => fill namsbc_apr )
    nn_ice      = 1         !  =0 no ice boundary condition,
