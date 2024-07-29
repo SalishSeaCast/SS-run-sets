@@ -6,32 +6,6 @@
 &end
 
 
-&nam_tide      !   tide parameters (#ifdef key_tide)
-! Tidal parameters that we use to have to input are in OPA_SRC/SBC/tide.h90
-!-----------------------------------------------------------------------
-   ln_tide_pot   = .false.  !  use tidal potential forcing
-   ln_tide_load  = .false.
-   ln_tide_load_conj = .false.
-   ln_tide_ramp  = .false.
-   rdttideramp   =  2
-   clname(1)     =   'M2'   !  name of constituent
-   clname(2)     =   'S2'
-   clname(3)     =   'N2'
-   clname(4)     =   'K1'
-   clname(5)     =   'O1'
-   clname(6)     =   'Q1'
-   clname(7)     =   'K2'
-   clname(8)     =   'P1'
-   clname(9)     =   'L2'
-   clname(10)    =   '2N2'
-   clname(11)    =   'NU2'
-   clname(12)    =   'J1'
-   clname(13)    =   'M1'
-   clname(14)    =   'OO1'
-   clname(15)    =   'SO1'
-&end
-
-
 &nambdy        !  unstructured open boundaries                          ("key_bdy")
 !-----------------------------------------------------------------------
     nb_bdy         = 3                     !  number of open boundary sets
@@ -105,12 +79,6 @@
   ln_full_vel = .true.
 &end
 
-&nambdy_tide     ! tidal forcing at open boundaries
-!-----------------------------------------------------------------------
-   filtide          = 'tides/SSS150_Q_tide_W_'
-   ln_bdytide_2ddta = .false.
-   ln_bdytide_conj  = .false.
-&end
 
 &nambdy_index ! open boundaries - definition ("key_bdy")
 !-----------------------------------------------------------------------
@@ -134,11 +102,4 @@
   bn_sal = 'bdy_ts/ts_S',       @{STRING_bdy_freq}, '+vosaline', @{STRING_bdy_ln_tint}, .false.,  '@{STRING_bdy_mord}',    '',        '',         ''
   cn_dir = './input_bdy/'
   ln_full_vel = .true.
-&end
-
-&nambdy_tide     ! tidal forcing at open boundaries
-!-----------------------------------------------------------------------
-   filtide          = 'tides/SSS150_Q_tide_S_'
-   ln_bdytide_2ddta = .false.
-   ln_bdytide_conj  = .false.
 &end
