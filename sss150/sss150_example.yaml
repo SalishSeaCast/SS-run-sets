@@ -36,9 +36,6 @@ forcing:
 
   grid:
     link to: /data/$USER/MEOPAR/grid/sss150/
-  # Not sure if we need bfr_coef
-  # bfr_coef.nc:
-  #   link to: TBD
 
   NEMO-atmos:
     link to: /results/forcing/atmospheric/continental2.5/nemo_forcing/
