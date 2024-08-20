@@ -43,9 +43,7 @@ forcing:
   rivers:
     link to: /results/forcing/rivers/sss150/
   rivers-climatology:
-    # Eastern boundary (Fraser River) temperature, salinity climatologies
-    # Maybe sea surface height climatology too?
-    # used in namelist.lateral for boundary ctypebdy='E'
+    # river water temperatures and runoff depths
     link to: /data/$USER/MEOPAR/rivers-climatology/sss150/
 
   ssc_bdy:
