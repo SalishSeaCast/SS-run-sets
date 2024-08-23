@@ -69,11 +69,11 @@
 !-----------------------------------------------------------------------
 !             !  file name                                 ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
 !             !                                            !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
-  sn_rnf      = 'input_river/rnf_sss150' ,                   24,                'rorunoff', .false.,       .false., 'daily',    '',        ''
+  sn_rnf      = 'rivers/R_SSS150_Dailies' ,                   24,                'rorunoff', .true.,       .false., 'daily',    '',        ''
   sn_cnf      = '',                                           0,                'socoefr0', .false.,       .true.,  'yearly',   '',        ''
   sn_s_rnf    = '',                                           0,                'rosaline', .false.,       .true.,  'yearly',   '',        ''
-  sn_t_rnf    = 'rivers_month_sss150_20210713',              -1,                'rotemper', .true.,        .true.,  'yearly',   '',        ''
-  sn_dep_rnf  = 'rivers_month_sss150_20210713',              -1,                'rodepth' , .true.,        .true.,  'yearly',   '',        ''
+  sn_t_rnf    = 'rivers-climatology/rivers_daily_SS150.nc',   24,                'rotemper', .true.,        .true.,  'yearly',   '',        ''
+  sn_dep_rnf  = 'rivers-climatology/rivers_daily_SS150.nc',   24,                'rodepth' , .true.,        .true.,  'yearly',   '',        ''
 
   cn_dir       = './'       !  root directory for the location of the runoff files
   ln_rnf_mouth = .false.    !  specific treatment at rivers mouths
