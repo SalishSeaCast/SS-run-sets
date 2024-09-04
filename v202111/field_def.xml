@@ -968,8 +968,7 @@
        <field id="DIC_WT"   long_name="Dissolved Inorganic Carbon - W Transport"          standard_name="DIC_w_dy_dx"      unit="mmol s-1" />
        <field id="TA_WT"    long_name="Nitrate Concentration - W Transport"               standard_name="TA_w_dy_dx"       unit="mmol s-1" />
        <field id="O2_WT"    long_name="Ammonium Concentration - W Transport"              standard_name="O2_w_dy_dx"       unit="mmol s-1" />
-       <field id="GLS_k"    long_name="GLS TKE"                                           standard_name="GLS_k"            unit="m2 s-2" />
-       <field id="GLS_eps"  long_name="GLS Dissipation"                                   standard_name="GLS_eps"          unit="m2 s-3" />
+       <field id="GLS_KE"   long_name="GLS TKE"                                           standard_name="GLS_KE"           unit="m2 s-2" />
        <field id="GLS_G"    long_name="GLS Buoy Prod"                                     standard_name="GLS_G"            unit="m2 s-3" />
        <field id="GLS_P"    long_name="GLS Shear Prod"                                    standard_name="GLS_P"            unit="m2 s-3" />
        <field id="GLS_SH2"  long_name="GLS shear squared"                                 standard_name="GLS_SH2"          unit="s-1" />
