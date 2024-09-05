@@ -986,6 +986,16 @@
        <field id="BFX_NO3"  long_name="Bottom Nitrate Sinking flux"          unit="mmol s-1"     grid_ref="grid_W_2D"/>
        <field id="BFX_bSi"  long_name="Bottom Biogenic Si Sinking flux"    unit="mmol s-1"     grid_ref="grid_W_2D"/>
        <field id="BFX_TRA"  long_name="Bottom TRA Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BFX_O2"  long_name="Bottom O2 Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BFX_NH4"  long_name="Bottom PON Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BFX_Si"  long_name="Bottom DIAT Sinking flux"          unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BFX_MYRI"  long_name="Bottom Nitrate Sinking flux"          unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BFX_MICZ"  long_name="Bottom Biogenic Si Sinking flux"    unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BFX_TA"  long_name="Bottom TRA Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BFX_DIC"  long_name="Bottom O2 Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BFX_DON"  long_name="Bottom TRA Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       <field id="BFX_PHY"  long_name="Bottom O2 Sinking flux"            unit="mmol s-1"     grid_ref="grid_W_2D"/>
+       
        <field id="ATZ_NO3"      long_name="---"        unit="---"                    />
        <field id="ATZ_NH4"      long_name="---"        unit="---"                    />
        <field id="ATZ_PON"      long_name="---"        unit="---"                    />
@@ -1068,6 +1078,7 @@
        <field id="RIVNO3"      long_name="riverine nitrate"                                                                                                                                                                                                   unit="mmol N s-1"      grid_ref="grid_T_3D" />
        <field id="BIOTRNO3"    long_name="biology trend nitrate"                                                                                                                                                                                              unit="mmol N s-1"      grid_ref="grid_T_3D" />
        <field id="PHYSTRNO3"   long_name="physics trend nitrate"                                                                                                                                                                                              unit="mmol N s-1"      grid_ref="grid_T_3D" />
+       <field id="PHYSTRO2"   long_name="physics trend oxygen"                                                                                                                                                                                              unit="mmol O2 s-1"      grid_ref="grid_T_3D" />
        <field id="AFILTNO3"    long_name="asselin trend nitrate"                                                                                                                                                                                              unit="mmol N s-1"      grid_ref="grid_T_3D" />
        <field id="NITR"        long_name="nitrification"                                                                                                                                                                                                         unit="mmol N s-1"      grid_ref="grid_T_3D" />
        <field id="Heup"        long_name="Euphotic layer depth"                                                                                                                                                                                               unit="m"                                   />
@@ -1077,10 +1088,11 @@
        <field id="REFRN"       long_name="transfer to refr"                                                                                                                                                                                                   unit="mmol N s-1"      grid_ref="grid_T_3D" />
        
        <!-- Some additional diagnostic terms (Tall)--> 
+       <field id="O2VMIX"  long_name="O2 VMIX"                                 standard_name="O2VMIX"          unit="mmol/m2/s" />
        <field id="ULDFO2"  long_name="X dir lateral mix"                                 standard_name="O2mixx"          unit="mmol/s" />
        <field id="VLDFO2"  long_name="Y dir lateral mix"                                 standard_name="O2mixy"          unit="mmol/s" />
        <field id="WLDFO2"  long_name="Z dir lateral mix"                                 standard_name="O2mixz"          unit="mmol/s" />
-       <field id="HDIFO2"  long_name="Y dir lateral diff"                                 standard_name="O2hdif"          unit="mmol m-3 s-1" />
+       <field id="HDIFO2"  long_name="Y dir lateral diff"                                 standard_name="O2hdif"          unit="mmol/s" />
        <field id="VDIFO2"  long_name="Z dir vert. diff"                                 standard_name="O2vdif"          unit="mmol m-3 s-1" />
        <field id="O2TVDX"  long_name="O2 TVD Adv X-dir"                 standard_name="O2tvdx"          unit="mmol s-1" />
        <field id="O2TVDY"  long_name="O2 TVD Adv Y-dir"                 standard_name="O2tvdy"          unit="mmol s-1" />
@@ -1114,6 +1126,105 @@
        <field id="MESO2"        long_name="O2 resp by Z2" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
        <field id="RPPO2"        long_name="O2 prod by Reg PP" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
        <field id="NPPO2"        long_name="O2 prod by New PP" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+       <field id="O2ZDF"        long_name="Vert. mix" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+       <field id="O2LDF"        long_name="Horiz. mix" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+       <field id="O2REM"        long_name="O2 Cons. by Rem of DON and by Nitrif" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+       <field id="O2MSZ"        long_name="O2 resp by Z2" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+       <field id="O2MIZ"        long_name="O2 resp by Z1" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+       <field id="O2MRT"        long_name="O2 Cons by Phyt. mortality" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+       <field id="O2PRD"        long_name="O2 prod by New + Reg PP" unit="mmol m-3 s-1"      grid_ref="grid_T_3D" />
+
+       <field id="RATE_NO3"      long_name="---"        unit="---"                    />
+       <field id="RATE_NH4"      long_name="---"        unit="---"                    />
+       <field id="RATE_PON"      long_name="---"        unit="---"                    />
+       <field id="RATE_DON"      long_name="---"        unit="---"                    />
+       <field id="RATE_Si"       long_name="---"        unit="---"                    />
+       <field id="RATE_bSi"      long_name="---"        unit="---"                    />
+       <field id="RATE_PHY"      long_name="---"        unit="---"                    />
+       <field id="RATE_DIAT"     long_name="---"        unit="---"                    />
+       <field id="RATE_MYRI"     long_name="---"        unit="---"                    />
+       <field id="RATE_MICZ"     long_name="---"        unit="---"                    />
+       <field id="RATE_TRA"      long_name="---"        unit="---"                    />
+       <field id="RATE_DIC"      long_name="---"        unit="---"                    />
+       <field id="RATE_TA"       long_name="---"        unit="---"                    />
+       <field id="RATE_O2"       long_name="DO tendency---"        unit="mmol/m3/s"                    />
+
+       <field id="RATE2_NO3"      long_name="---"        unit="---"                    />
+       <field id="RATE2_NH4"      long_name="---"        unit="---"                    />
+       <field id="RATE2_PON"      long_name="---"        unit="---"                    />
+       <field id="RATE2_DON"      long_name="---"        unit="---"                    />
+       <field id="RATE2_Si"       long_name="---"        unit="---"                    />
+       <field id="RATE2_bSi"      long_name="---"        unit="---"                    />
+       <field id="RATE2_PHY"      long_name="---"        unit="---"                    />
+       <field id="RATE2_DIAT"     long_name="---"        unit="---"                    />
+       <field id="RATE2_MYRI"     long_name="---"        unit="---"                    />
+       <field id="RATE2_MICZ"     long_name="---"        unit="---"                    />
+       <field id="RATE2_TRA"      long_name="---"        unit="---"                    />
+       <field id="RATE2_DIC"      long_name="---"        unit="---"                    />
+       <field id="RATE2_TA"       long_name="---"        unit="---"                    />
+       <field id="RATE2_O2"       long_name="---"        unit="---"                    />
+
+       <field id="RATE3_NO3"      long_name="---"        unit="---"                    />
+       <field id="RATE3_NH4"      long_name="---"        unit="---"                    />
+       <field id="RATE3_PON"      long_name="---"        unit="---"                    />
+       <field id="RATE3_DON"      long_name="---"        unit="---"                    />
+       <field id="RATE3_Si"       long_name="---"        unit="---"                    />
+       <field id="RATE3_bSi"      long_name="---"        unit="---"                    />
+       <field id="RATE3_PHY"      long_name="---"        unit="---"                    />
+       <field id="RATE3_DIAT"     long_name="---"        unit="---"                    />
+       <field id="RATE3_MYRI"     long_name="---"        unit="---"                    />
+       <field id="RATE3_MICZ"     long_name="---"        unit="---"                    />
+       <field id="RATE3_TRA"      long_name="---"        unit="---"                    />
+       <field id="RATE3_DIC"      long_name="---"        unit="---"                    />
+       <field id="RATE3_TA"       long_name="---"        unit="---"                    />
+       <field id="RATE3_O2"       long_name="---"        unit="---"                    />
+
+       <field id="ADV_NO3"      long_name="---"        unit="---"                    />
+       <field id="ADV_NH4"      long_name="---"        unit="---"                    />
+       <field id="ADV_PON"      long_name="---"        unit="---"                    />
+       <field id="ADV_DON"      long_name="---"        unit="---"                    />
+       <field id="ADV_Si"       long_name="---"        unit="---"                    />
+       <field id="ADV_bSi"      long_name="---"        unit="---"                    />
+       <field id="ADV_PHY"      long_name="---"        unit="---"                    />
+       <field id="ADV_DIAT"     long_name="---"        unit="---"                    />
+       <field id="ADV_MYRI"     long_name="---"        unit="---"                    />
+       <field id="ADV_MICZ"     long_name="---"        unit="---"                    />
+       <field id="ADV_TRA"      long_name="---"        unit="---"                    />
+       <field id="ADV_DIC"      long_name="---"        unit="---"                    />
+       <field id="ADV_TA"       long_name="---"        unit="---"                    />
+       <field id="ADV_O2"       long_name="Total ADV of O2"        unit="mmol/m3/s---"                    />
+
+
+
+       <field id="BIO_NO3"      long_name="---"        unit="---"                    />
+       <field id="BIO_NH4"      long_name="---"        unit="---"                    />
+       <field id="BIO_PON"      long_name="---"        unit="---"                    />
+       <field id="BIO_DON"      long_name="---"        unit="---"                    />
+       <field id="BIO_Si"       long_name="---"        unit="---"                    />
+       <field id="BIO_bSi"      long_name="---"        unit="---"                    />
+       <field id="BIO_PHY"      long_name="---"        unit="---"                    />
+       <field id="BIO_DIAT"     long_name="---"        unit="---"                    />
+       <field id="BIO_MYRI"     long_name="---"        unit="---"                    />
+       <field id="BIO_MICZ"     long_name="---"        unit="---"                    />
+       <field id="BIO_TRA"      long_name="---"        unit="---"                    />
+       <field id="BIO_DIC"      long_name="---"        unit="---"                    />
+       <field id="BIO_TA"       long_name="---"        unit="---"                    />
+       <field id="BIO_O2"       long_name="Biological contribution"        unit="mmol/m3/s"                    />
+
+       <field id="TRBio_NO3"      long_name="---"        unit="---"                    />
+       <field id="TRBio_NH4"      long_name="---"        unit="---"                    />
+       <field id="TRBio_PON"      long_name="---"        unit="---"                    />
+       <field id="TRBio_DON"      long_name="---"        unit="---"                    />
+       <field id="TRBio_Si"       long_name="---"        unit="---"                    />
+       <field id="TRBio_bSi"      long_name="---"        unit="---"                    />
+       <field id="TRBio_PHY"      long_name="---"        unit="---"                    />
+       <field id="TRBio_DIAT"     long_name="---"        unit="---"                    />
+       <field id="TRBio_MYRI"     long_name="---"        unit="---"                    />
+       <field id="TRBio_MICZ"     long_name="---"        unit="---"                    />
+       <field id="TRBio_TRA"      long_name="---"        unit="---"                    />
+       <field id="TRBio_DIC"      long_name="---"        unit="---"                    />
+       <field id="TRBio_TA"       long_name="---"        unit="---"                    />
+       <field id="TRBio_O2"       long_name="---"        unit="---"                    />
 
 
        <!-- Diagnostics available with key_trdtrc -->
@@ -1295,18 +1406,18 @@
        <field id="RDB_TA"      long_name="---"        unit="---"                        />
        <field id="RDN_TA"      long_name="---"        unit="---"                        />
 
-       <field id="XAD_O2"      long_name="---"        unit="---"                        />
-       <field id="YAD_O2"      long_name="---"        unit="---"                        />
-       <field id="ZAD_O2"      long_name="---"        unit="---"                        />
-       <field id="LDF_O2"      long_name="---"        unit="---"                        />
-       <field id="BBL_O2"      long_name="---"        unit="---"                        />
-       <field id="FOR_O2"      long_name="---"        unit="---"                        />
-       <field id="ZDF_O2"      long_name="---"        unit="---"                        />
-       <field id="DMP_O2"      long_name="---"        unit="---"                        />
-       <field id="SMS_O2"      long_name="---"        unit="---"                        />
-       <field id="ATF_O2"      long_name="---"        unit="---"                        />
-       <field id="RDB_O2"      long_name="---"        unit="---"                        />
-       <field id="RDN_O2"      long_name="---"        unit="---"                        />
+       <field id="XAD_O2"      long_name="zonal ADV of O2"        unit="mmol/m3/s"                        />
+       <field id="YAD_O2"      long_name="Merid. ADV of O2"        unit="mmol/m3/s"                        />
+       <field id="ZAD_O2"      long_name="Vert. ADV of O2"        unit="mmol/m3/s"                        />
+       <field id="LDF_O2"      long_name="Lateral diff."        unit="mmol/m3/s"                        />
+       <field id="BBL_O2"      long_name="---"        unit="mmol/m3/s"                        />
+       <field id="FOR_O2"      long_name="---"        unit="mmol/m3/s"                        />
+       <field id="ZDF_O2"      long_name="---"        unit="mmol/m3/s"                        />
+       <field id="DMP_O2"      long_name="---"        unit="mmol/m3/s"                        />
+       <field id="SMS_O2"      long_name="Bio SMS"        unit="mmol/m3/s"                        />
+       <field id="ATF_O2"      long_name="---"        unit="mmol/m3/s"                        />
+       <field id="RDB_O2"      long_name="---"        unit="mmol/m3/s"                        />
+       <field id="RDN_O2"      long_name="---"        unit="mmol/m3/s"                        />
 
        <field id="TBS_NO3"      long_name="---"        unit="---"                    />
        <field id="TBS_NH4"      long_name="---"        unit="---"                    />
@@ -1337,8 +1448,7 @@
        <field id="REM_TRA"      long_name="---"        unit="---"                    />
        <field id="REM_DIC"      long_name="---"        unit="---"                    />
        <field id="REM_TA"       long_name="---"        unit="---"                    />
-       <field id="REM_O2"       long_name="---"        unit="---"                    />
-       <field id="REM_PHY"      long_name="---"        unit="---"                    />
+       <field id="REM_O2"       long_name="O2 Cons by Remin"        unit="mmol/m3/s"                    />
 
        <field id="RIV_NO3"      long_name="---"        unit="---"                    />
        <field id="RIV_NH4"      long_name="---"        unit="---"                    />
@@ -1370,7 +1480,7 @@
        <field id="PHS_TRA"      long_name="---"        unit="---"                    />
        <field id="PHS_DIC"      long_name="---"        unit="---"                    />
        <field id="PHS_TA"       long_name="---"        unit="---"                    />
-       <field id="PHS_O2"       long_name="---"        unit="---"                    />
+       <field id="PHS_O2"       long_name="Dynamical Contribution"        unit="mmol/m3/s"                    />
        <field id="PHS_PHY"      long_name="---"        unit="---"                    />
        <field id="PHS_LIV"      long_name="DIAT+MYRI+PHY+MICZ"   unit="mmol/m2"  > PHS_DIAT+PHS_MYRI+PHS_PHY+PHS_MICZ </field >
        
@@ -1409,7 +1519,7 @@
        <field id="MRT_TRA"      long_name="---"        unit="---"                    />
        <field id="MRT_DIC"      long_name="---"        unit="---"                    />
        <field id="MRT_TA"       long_name="---"        unit="---"                    />
-       <field id="MRT_O2"       long_name="---"        unit="---"                    />
+       <field id="MRT_O2"       long_name="O2 Cons. by Phyto. Mortality"        unit="mmol/m3/s"                    />
        <field id="MRT_PHY"      long_name="---"        unit="---"                    />
 
        <field id="MIZ_NO3"      long_name="---"        unit="---"                    />
@@ -1425,7 +1535,7 @@
        <field id="MIZ_TRA"      long_name="---"        unit="---"                    />
        <field id="MIZ_DIC"      long_name="---"        unit="---"                    />
        <field id="MIZ_TA"       long_name="---"        unit="---"                    />
-       <field id="MIZ_O2"       long_name="---"        unit="---"                    />
+       <field id="MIZ_O2"       long_name="O2 Cons. by Resp.of Z1"        unit="mmol/m3/s"                    />
        <field id="MIZ_PHY"      long_name="---"        unit="---"                    />
 
        <field id="MSZ_NO3"      long_name="---"        unit="---"                    />
@@ -1441,7 +1551,7 @@
        <field id="MSZ_TRA"      long_name="---"        unit="---"                    />
        <field id="MSZ_DIC"      long_name="---"        unit="---"                    />
        <field id="MSZ_TA"       long_name="---"        unit="---"                    />
-       <field id="MSZ_O2"       long_name="---"        unit="---"                    />
+       <field id="MSZ_O2"       long_name="O2 Cons. by Resp.of Z2"        unit="mmol/m3/s"                    />
        <field id="MSZ_PHY"      long_name="---"        unit="---"                    />
 
        <field id="MRU_NO3"      long_name="---"        unit="---"                    />
@@ -1473,7 +1583,7 @@
        <field id="PRD_TRA"      long_name="---"        unit="---"                    />
        <field id="PRD_DIC"      long_name="---"        unit="---"                    />
        <field id="PRD_TA"       long_name="---"        unit="---"                    />
-       <field id="PRD_O2"       long_name="---"        unit="---"                    />
+       <field id="PRD_O2"       long_name="O2 Production by photosyntesis"        unit="mmol/m3/s"                    />
        <field id="PRD_PHY"      long_name="---"        unit="---"                    />
 
        <field id="BSZ_DIAT"     long_name="---"        unit="---"                    />
