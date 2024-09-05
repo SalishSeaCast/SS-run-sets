@@ -31,8 +31,7 @@
    nn_fsbc     =  1        !  frequency of surface boundary condition computation
                            !     (also = the frequency of sea-ice model call)
    ln_ana      = .false.   !  analytical formulation                    (T => fill namsbc_ana )
-   ln_blk_core = .false.   !  CORE bulk formulation                     (T => fill namsbc_core)
-   ln_blk_rpn  = .true.    !  RPNE bulk interface                       (T => fill namsbc_rpn)
+   ln_blk_core = .true.   !  CORE bulk formulation                     (T => fill namsbc_core)
    ln_apr_dyn  = .true.    !  Patm gradient added in ocean & ice Eqs.   (T => fill namsbc_apr )
    nn_ice      = 1         !  =0 no ice boundary condition,
                            !  =1 use observed ice-cover,
@@ -70,11 +69,11 @@
 !-----------------------------------------------------------------------
 !             !  file name                                 ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
 !             !                                            !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
-  sn_rnf      = 'input_river/rnf_sss150' ,                   24,                'rorunoff', .false.,       .false., 'daily',    '',        ''
+  sn_rnf      = 'rivers/R_SSS150_Dailies' ,                   24,                'rorunoff', .true.,       .false., 'daily',    '',        ''
   sn_cnf      = '',                                           0,                'socoefr0', .false.,       .true.,  'yearly',   '',        ''
   sn_s_rnf    = '',                                           0,                'rosaline', .false.,       .true.,  'yearly',   '',        ''
-  sn_t_rnf    = 'rivers_month_sss150_20210713',              -1,                'rotemper', .true.,        .true.,  'yearly',   '',        ''
-  sn_dep_rnf  = 'rivers_month_sss150_20210713',              -1,                'rodepth' , .true.,        .true.,  'yearly',   '',        ''
+  sn_t_rnf    = 'rivers-climatology/rivers_daily_SS150.nc',   24,                'rotemper', .true.,        .true.,  'yearly',   '',        ''
+  sn_dep_rnf  = 'rivers-climatology/rivers_daily_SS150.nc',   24,                'rodepth' , .true.,        .true.,  'yearly',   '',        ''
 
   cn_dir       = './'       !  root directory for the location of the runoff files
   ln_rnf_mouth = .false.    !  specific treatment at rivers mouths
@@ -100,31 +99,4 @@
 !        !                    !  (if <0  months)  !   name     !    (logical)   !  (T/F)  !  'monthly'  ! filename ! pairing  !
   sn_ice   = 'ice_if_zero',        -12,             'ice',        .false.,        .true.,   'yearly',      '',       '',   ''
   cn_dir   = './'             ! Directory where ice file(s) are found
-/
-
-!-----------------------------------------------------------------------
-&namuvd_rpn    !   data: U & V currents
-!-----------------------------------------------------------------------
-!              !  file name                 ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
-!              !                            !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
-   sn_ucur = 'ic_uv/u_ic_y2016m12d23.nc'   ,       -12          ,'vozocrtx' ,   .false.    , .true. , 'yearly' ,  ''      ,  ''   , ''
-   sn_vcur = 'ic_uv/v_ic_y2016m12d23.nc'   ,       -12          ,'vomecrty' ,   .false.    , .true. , 'yearly' ,  ''      ,  ''   , ''
-   sn_ssh  = 'ic_ssh/ssh_ic_y2016m12d23.nc',       -12          ,'sossheig' ,   .false.    , .true. , 'yearly' ,  ''      ,  ''   , ''
-!
-   cn_dir        = './input_ic/'    !  root directory for the location of the files
-   ln_uvd_init_rpn   = .true.  !  Initialisation of ocean U & V with U & V input data (T) or not (F)
-   ln_uvd_dyndmp_rpn = .false. !  damping of ocean U & V toward U & V input data (T) or not (F)
-/
-
-
-
-!-----------------------------------------------------------------------
-&namsbc_readrpn   !   namsbc_readrpn fldread_rpn config
-!-----------------------------------------------------------------------
-   dt_gem_atm      = @{STRING_dt_gem_atm}         !! Spacing of GEM forcing in hours
-   dt_gem_prc      = @{STRING_dt_gem_prc}         !! Spacing of GEM forcing precipitation data in hours
-   lev_gem_forc    = @{STRING_lev_gem_forc}       !! Set of ip1 codes to search for GEM forcing (vertical levels)
-   ln_gem_avgrad   = @{STRING_ln_gem_avgrad}      !! Activate 24h averaging of SW and LW forcing
-/
-
-
+  &end

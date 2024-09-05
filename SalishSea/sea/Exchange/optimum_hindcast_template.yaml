@@ -3,23 +3,22 @@
 
 email: sallen@eoas.ubc.ca
 MPI decomposition: 16x34
-config_name: SalishSea_oxy2
+config_name: SalishSeaCast_Blue
 run_id: ddmmmyyhindcast
 walltime: 12:00:00
 
 paths:
   NEMO code config: $SUSANPROJECT/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $PROJECT/SalishSeaCast/hindcast-sys/XIOS-2
-  runs directory: $SCRATCHDIR/oxygen/
+  runs directory: $SCRATCHDIR/exchange/
 
 grid:
-  bathymetry: $SUSANPROJECT/MEOPAR/grid/bathymetry_202310b.nc
+  bathymetry: $SUSANPROJECT/MEOPAR/grid/bathymetry_202108.nc
   coordinates: $SUSANPROJECT/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
   land processor elimination: $SUSANPROJECT/MEOPAR/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: $SCRATCHDIR/oxygen/ddmmmyy/SalishSea_nnnnnnnn_restart.nc
-  restart_trc.nc: $SCRATCHDIR/oxygen/ddmmmyy/SalishSea_nnnnnnnn_restart_trc.nc
+  restart.nc: $SCRATCHDIR/exchange/ddmmmyy/SalishSea_nnnnnnnn_restart.nc
 
 forcing:
   LiveOcean:
@@ -48,27 +47,19 @@ namelists:
   - $PROJECT/SalishSeaCast/hindcast-sys/runs/namelist.time
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.domain
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.light
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.light_blue
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.lateral
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.bottom
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.tracer
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.dynamics
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.vertical
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.compute
-  namelist_smelt_cfg:
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_biology_Pref30SoD50MZ60
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111//namelist_smelt_rivers_opsturb
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
-  namelist_top_cfg:
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_restart
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_TracerDefAndBdy
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_physics
   
 output:
   XIOS servers: 1
   domaindefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/domain_def.xml
-  fielddefs: $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/field_def.xml
-  filedefs: $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/file_def.xml
+  fielddefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/field_def.xml
+  filedefs: $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/sea/Exchange/file_def.xml
   iodefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/iodef.xml
   separate XIOS server: true
 
