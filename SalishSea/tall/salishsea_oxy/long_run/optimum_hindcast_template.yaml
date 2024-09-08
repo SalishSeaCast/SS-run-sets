@@ -1,7 +1,7 @@
 # salishsea command processor run description file template for
 # SalishSeaCast automation hindcast runs on optimum
 
-email: sallen@eoas.ubc.ca
+email: sallen@eoas.ubc.ca,atall@eoas.ubc.ca
 MPI decomposition: 16x34
 config_name: SalishSea_oxy2
 run_id: ddmmmyyhindcast
@@ -56,7 +56,7 @@ namelists:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.vertical
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.compute
   namelist_smelt_cfg:
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_biology_Pref30SoD50MZ60
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_biology
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111//namelist_smelt_rivers_opsturb
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
@@ -68,7 +68,7 @@ output:
   XIOS servers: 1
   domaindefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/domain_def.xml
   fielddefs: $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/field_def.xml
-  filedefs: $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/file_def.xml
+  filedefs: $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/file_def_diagO2.xml
   iodefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/iodef.xml
   separate XIOS server: true
 
