@@ -17,6 +17,7 @@
       <file_group id="1h" output_freq="1h"  output_level="10" compression_level="4" split_freq="1d" enabled=".TRUE.">  <!-- 1h files -->
         <file id="file1" name_suffix="_grid_T" description="physics tracers and VVL layer thicknesses" >
           <field field_ref="ssh"            name="sossheig"/>
+	  <field field_ref="taubot"         name="taubot"/>
           <field field_ref="toce"           name="votemper"/>
           <field field_ref="soce"           name="vosaline"/>
           <field field_ref="e3t"            name="e3t"/>
