@@ -63,7 +63,7 @@
    zz_rate_mesorub_R               = 0.0               !:
    zz_rate_mesorub_flagPredSlope   = 0.3               !:
    zz_rate_mesorub_flagHalfSat     = 1.0               !:
-   zz_rate_mesorub_eff             = 0.75              !:
+   zz_rate_mesorub_eff             = 0.6               !:
    zz_frac_waste_FEC_NH            = 0.05              !:waste fraction from mesorub grazing picophyto to NH
    zz_frac_waste_FEC_DON           = 0.470             ! waste fraction from mesorub grazing picophyto to DON
    zz_frac_waste_FEC_PON           = 0.470             ! waste fraction from mesorub grazing picophyto to PON
@@ -97,7 +97,7 @@
    zz_rate_mesozoo_Z_Pref           = 0.285       !      mesozooplankton preference for microzooplankton
    zz_rate_mesozoo_Z_Predslope      = 0.500       ! uM N mesozooplankton microzooplankton grazing limit
    zz_rate_mesozoo_Z_HalfSat        = 1.200       ! uM N mesozooplankton microzoo grazing half saturation const
-   zz_rate_mesozoo_eff              = 0.6        ! mesozooplankton grazed mass assimilation efficiency ---Karyn, Pers. Com
+   zz_rate_mesozoo_eff              = 0.75        ! mesozooplankton grazed mass assimilation efficiency ---Karyn, Pers. Com
    zz_frac_waste_MNM_NH             = 0.05          ! waste fraction from mesozoo natural mortality to NH
    zz_frac_waste_MNM_DON            = 0.470       ! waste fraction from mesozoo natural mortality to DON
    zz_frac_waste_MNM_PON            = 0.470       ! waste fraction from mesozoo natural mortality to PON
