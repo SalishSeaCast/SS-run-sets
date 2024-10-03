@@ -47,18 +47,19 @@
 !-----------------------------------------------------------------------
 &namsbc_core   !   namsbc_core  CORE bulk formulae
 !-----------------------------------------------------------------------
-!         !  file name       ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights        ! rotation !
-!         !                  !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename       ! pairing  !
-  sn_wndi = 'HRDPS_OPPwest_ps2.5km',  1,           '-u_wind',    .true.,       .false.,  'daily',    'weights.nc',    'Uwnd'
-  sn_wndj = 'HRDPS_OPPwest_ps2.5km',  1,           '-v_wind',    .true.,       .false.,  'daily',    'weights.nc',    'Vwnd'
-  sn_qsr  = 'HRDPS_OPPwest_ps2.5km',  1,           '-solar',     .true.,       .false.,  'daily',    'weights.nc',    ''
-  sn_qlw  = 'HRDPS_OPPwest_ps2.5km',  1,           '-therm_rad', .true.,       .false.,  'daily',    'weights.nc',    ''
-  sn_tair = 'HRDPS_OPPwest_ps2.5km',  1,           '-tair',      .true.,       .false.,  'daily',    'weights.nc',    ''
-  sn_humi = 'HRDPS_OPPwest_ps2.5km',  1,           '-qair',      .true.,       .false.,  'daily',    'weights.nc',    ''
-  sn_prec = 'HRDPS_OPPwest_ps2.5km',  1,           'precip',     .true.,       .false.,  'daily',    'weights.nc',    ''
-  sn_snow = 'HRDPS_OPPwest_ps2.5km',  1,           'snow',       .true.,       .false.,  'daily',    'weights.nc',    ''
+!         !  file name         ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                                                    ! rotation !
+!         !                    !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename                                                   ! pairing  !
+  sn_wndi = 'NEMO-atmos/hrdps',        1,           'u_wind',    .true.,       .false.,  'daily',    'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', 'Uwnd'
+  sn_wndj = 'NEMO-atmos/hrdps',        1,           'v_wind',    .true.,       .false.,  'daily',    'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', 'Vwnd'
+  sn_qsr  = 'NEMO-atmos/hrdps',        1,           'solar',     .true.,       .false.,  'daily',    'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', ''
+  sn_qlw  = 'NEMO-atmos/hrdps',        1,           'therm_rad', .true.,       .false.,  'daily',    'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', ''
+  sn_tair = 'NEMO-atmos/hrdps',        1,           'tair',      .true.,       .false.,  'daily',    'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', ''
+  sn_humi = 'NEMO-atmos/hrdps',        1,           'qair',      .true.,       .false.,  'daily',    'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', ''
+  sn_prec = 'NEMO-atmos/hrdps',        1,           'precip',    .true.,       .false.,  'daily',    'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', ''
+  sn_snow = 'grid/no_snow',          -12,           'snow',      .true.,       .true.,   'yearly',   'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', ''
 
-   cn_dir      = './ATMDATA/'    !  root directory for the location of the bulk files
+   cn_dir      = './'    !  root directory for the location of the bulk files
+   rn_zqt      = 2.      !  Air temperature and humidity reference height (m)
    rn_vfac     = 1.      !  new feature, lets use (0. for comparison, then switch to 1)
                          !  multiplicative factor for ocean/ice velocity
                          !  in the calculation of the wind stress (0.=absolute winds or 1.=relative winds)
@@ -67,13 +68,13 @@
 !-----------------------------------------------------------------------
 &namsbc_rnf    !   runoffs namelist surface boundary condition
 !-----------------------------------------------------------------------
-!             !  file name                                 ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
-!             !                                            !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
-  sn_rnf      = 'rivers/R_SSS150_Dailies' ,                   24,                'rorunoff', .true.,       .false., 'daily',    '',        ''
-  sn_cnf      = '',                                           0,                'socoefr0', .false.,       .true.,  'yearly',   '',        ''
-  sn_s_rnf    = '',                                           0,                'rosaline', .false.,       .true.,  'yearly',   '',        ''
-  sn_t_rnf    = 'rivers-climatology/rivers_daily_SS150.nc',   24,                'rotemper', .true.,        .true.,  'yearly',   '',        ''
-  sn_dep_rnf  = 'rivers-climatology/rivers_daily_SS150.nc',   24,                'rodepth' , .true.,        .true.,  'yearly',   '',        ''
+!             !  file name                                 ! frequency (hours) ! variable   ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
+!             !                                            !  (if <0  months)  !   name     !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
+  sn_rnf      = 'rivers/R_sss150_Dailies' ,                    24,               'rorunoff', .true.,        .false., 'daily',    '',        ''
+  sn_cnf      = '',                                            0,                'socoefr0', .false.,       .true.,  'yearly',   '',        ''
+  sn_s_rnf    = '',                                            0,                'rosaline', .false.,       .true.,  'yearly',   '',        ''
+  sn_t_rnf    = 'rivers-climatology/rivers_daily_sss150.nc',   24,               'rotemper', .true.,        .true.,  'yearly',   '',        ''
+  sn_dep_rnf  = 'rivers-climatology/rivers_daily_sss150.nc',   24,               'rodepth' , .true.,        .true.,  'yearly',   '',        ''
 
   cn_dir       = './'       !  root directory for the location of the runoff files
   ln_rnf_mouth = .false.    !  specific treatment at rivers mouths
@@ -85,11 +86,12 @@
 !-----------------------------------------------------------------------
 &namsbc_apr    !   Atmospheric pressure used as ocean forcing or in bulk
 !-----------------------------------------------------------------------
-!         !  file name       ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                            ! rotation !
-!         !                  !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename                           ! pairing  !
-  sn_apr  = 'HRDPS_OPPwest_ps2.5km',   1,         '-seapres',   .true.,       .false.,  'daily',   'weights.nc', ''
-  cn_dir      = './ATMDATA/'  !  root directory for the location of the bulk files
-  ln_apr_obc  = .false.      !  inverse barometer added to OBC ssh data
+!         !  file name         ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                                                    ! rotation !
+!         !                    !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename                                                   ! pairing  !
+  sn_apr  = 'NEMO-atmos/hrdps',  1,                  'atmpres',   .true.,       .false.,  'daily',   'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', ''
+
+  cn_dir      = './'     !  root directory for the location of the bulk files
+  ln_apr_obc  = .false.  !  inverse barometer added to OBC ssh data
 &end
 
 !-----------------------------------------------------------------------
@@ -97,6 +99,6 @@
 !-----------------------------------------------------------------------
 !        !   file name        ! frequency (hours) ! variable   ! time interpol. !  clim   ! 'yearly' or ! weights  ! rotation !
 !        !                    !  (if <0  months)  !   name     !    (logical)   !  (T/F)  !  'monthly'  ! filename ! pairing  !
-  sn_ice   = 'ice_if_zero',        -12,             'ice',        .false.,        .true.,   'yearly',      '',       '',   ''
-  cn_dir   = './'             ! Directory where ice file(s) are found
+  sn_ice   = 'no_ice',              -12,             'ice',        .false.,        .true.,   'yearly',      '',       '',   ''
+  cn_dir   = './grid/'        ! Directory where ice file(s) are found
   &end
