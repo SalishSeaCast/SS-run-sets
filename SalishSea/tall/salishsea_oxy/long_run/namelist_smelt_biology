@@ -78,8 +78,8 @@
    zz_rate_mesozoo_sumpeakpos = 140.0, 208.0, 296.0    ! year-day times of mesozooplankton summer concentration peaks
    zz_rate_mesozoo_alpha            = 1.0         ! 0 to 1. alpha = 0: spatially uniform mesozoo; alpha = 1: mesozoo proportional to prey
    zz_rate_mesozoo_R                = 1.54e-5     ! uM N / s mesozooplankton maximum ingestion rate @ 20 deg C
-   zz_rate_mesozoo_Rm               = 0.          ! uM N / s mesozooplankton natural mortality rate @ 20 deg C
-   zz_rate_mesozoo_excr             = 0.          ! uM N / s mesozooplankton excretion rate @ 20 deg C
+   zz_rate_mesozoo_Rm               = 5.787e-7          ! / s mesozooplankton natural mortality rate @ 20 deg C --- Pena, 2016 from Pena, 2003; Blackford, 2004
+   zz_rate_mesozoo_excr             = 1.39e-6          ! / s mesozooplankton excretion rate @ 20 deg C  (Moore-Marley)
    zz_rate_mesozoo_PredSlope        = 0.500       ! uM N mesozooplankton total grazing limit
    zz_rate_mesozoo_HalfSat          = 1.000       ! uM N mesozooplankton total grazing half saturation constant
    zz_rate_mesozoo_diatPref        = 0.285       !      mesozooplankton preference for diatoms
@@ -97,7 +97,7 @@
    zz_rate_mesozoo_Z_Pref           = 0.285       !      mesozooplankton preference for microzooplankton
    zz_rate_mesozoo_Z_Predslope      = 0.500       ! uM N mesozooplankton microzooplankton grazing limit
    zz_rate_mesozoo_Z_HalfSat        = 1.200       ! uM N mesozooplankton microzoo grazing half saturation const
-   zz_rate_mesozoo_eff              = 0.00        ! mesozooplankton grazed mass assimilation efficiency
+   zz_rate_mesozoo_eff              = 0.6        ! mesozooplankton grazed mass assimilation efficiency
    zz_frac_waste_MNM_NH             = 0.05          ! waste fraction from mesozoo natural mortality to NH
    zz_frac_waste_MNM_DON            = 0.470       ! waste fraction from mesozoo natural mortality to DON
    zz_frac_waste_MNM_PON            = 0.470       ! waste fraction from mesozoo natural mortality to PON
