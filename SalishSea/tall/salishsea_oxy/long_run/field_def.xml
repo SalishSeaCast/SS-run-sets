@@ -1103,7 +1103,7 @@
        <field id="O2XADV"  long_name="O2 Adv X-dir"                 standard_name="O2advx"          unit="mmol m-3 s-1" />
        <field id="O2YADV"  long_name="O2 Adv Y-dir"                 standard_name="O2advy"          unit="mmol m-3 s-1" />
        <field id="O2ZADV"  long_name="O2 Adv Z-dir"                 standard_name="O2advz"          unit="mmol m-3 s-1" />
-       <field id="O2TADV"  long_name="O2 Tot Adv"                 standard_name="O2advz"          unit="mmol m-3 s-1" />
+       <field id="O2TADV"  long_name="O2 Tot Adv"                 standard_name="O2advt"          unit="mmol m-3 s-1" />
        <field id="O2XADV1"  long_name="O2 Adv X-dir"                 standard_name="O2advx"          unit="mmol m-3 s-1" />
        <field id="O2YADV1"  long_name="O2 Adv Y-dir"                 standard_name="O2advy"          unit="mmol m-3 s-1" />
        <field id="O2ZADV1"  long_name="O2 Adv Z-dir"                 standard_name="O2advz"          unit="mmol m-3 s-1" />
