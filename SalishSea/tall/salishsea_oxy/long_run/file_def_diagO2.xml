@@ -67,17 +67,15 @@
 
         <file id="file7" name_suffix="_diag_T" description="diagnostic terms of DO">
           <field field_ref="RATE_O2"      name="RATE_O2"/>
-          <field field_ref="PHS_O2"       name="PHS_O2"/>
-          <field field_ref="BIO_O2"       name="BIO_O2"/>
           <field field_ref="SMS_O2"       name="SMS_O2"/>
-          <field field_ref="O2XADV"       name="XAD_O2"/>
-          <field field_ref="O2YADV"       name="YAD_O2"/>
+          <field field_ref="O2TADV"       name="TAD_O2"/>
           <field field_ref="O2ZADV"       name="ZAD_O2"/>
           <field field_ref="LDF_O2"       name="LDF_O2"/>
           <field field_ref="ZDF_O2"       name="ZDF_O2"/>                 
           <field field_ref="O2PRD"        name="PRD_O2"/>
           <field field_ref="O2MRT"        name="MRT_O2"/>
           <field field_ref="O2REM"        name="REM_O2"/>
+          <field field_ref="NITR"         name="NIT_O2"/>
           <field field_ref="O2MSZ"        name="MSZ_O2"/>
           <field field_ref="O2MIZ"        name="MIZ_O2"/>
         </file>
