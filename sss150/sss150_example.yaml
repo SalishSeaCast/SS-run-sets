@@ -39,6 +39,8 @@ forcing:
 
   NEMO-atmos:
     link to: /results/forcing/atmospheric/continental2.5/nemo_forcing/
+  no_snow_ice.nc:
+    link to: /data/$USER/MEOPAR/grid/sss150/no_snow_ice.nc
 
   rivers:
     link to: /results/forcing/rivers/sss150/
