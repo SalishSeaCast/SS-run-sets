@@ -14,7 +14,7 @@ paths:
 
 
 grid:
-  bathymetry: /data/$USER/MEOPAR/grid/sss150/bathymetry_sss150_update202108210102AUM1.nc
+  bathymetry: /data/$USER/MEOPAR/grid/sss150/bathymetry_sss150_20240822.nc
   coordinates: /data/$USER/MEOPAR/grid/sss150/coordinates_sss150_20210709.nc
   # 1x7 MPI decomposition on salish has no all-land sub-domains, so land processor elimination
   # is not possible
