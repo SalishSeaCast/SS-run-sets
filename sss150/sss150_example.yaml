@@ -39,6 +39,8 @@ forcing:
 
   NEMO-atmos:
     link to: /results/forcing/atmospheric/continental2.5/nemo_forcing/
+  atmos_weights.nc:
+    link to: /data/$USER/MEOPAR/grid/sss150/weights-continental2.5-hrdps_20240822_23feb23onward.nc
   no_snow_ice.nc:
     link to: /data/$USER/MEOPAR/grid/sss150/no_snow_ice.nc
 
