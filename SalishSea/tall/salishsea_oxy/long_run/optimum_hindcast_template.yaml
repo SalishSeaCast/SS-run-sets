@@ -44,12 +44,7 @@ forcing:
     link to: $SUSANPROJECT/MEOPAR/tides
   tracers:
     link to: $SUSANPROJECT/MEOPAR/tracers
-  initial_data_file.nc:
-    link to: $SCRATCHDIR/oxygen/26dec09/SalishSea_06324480_restart.nc
-  initial_bio_data_file.nc:
-    link to: $SCRATCHDIR/oxygen/26dec09/SalishSea_06324480_restart.nc
-  initial_car_data_file.nc:
-    link to: $SCRATCHDIR/oxygen/26dec09/SalishSea_06324480_restart.nc
+
 
 namelists:
   namelist_cfg:
@@ -68,7 +63,7 @@ namelists:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_rivers
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_coldstart
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_restart
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_TracerDefAndBdy_NEP
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_physics
   
