@@ -56,8 +56,8 @@ namelists:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.vertical
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.compute
   namelist_smelt_cfg:
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_biology_withZ2eff05MortExc139e6
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111//namelist_smelt_rivers_opsturb
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_biology
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_rivers_newturb
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_restart
@@ -68,7 +68,7 @@ output:
   XIOS servers: 1
   domaindefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/domain_def.xml
   fielddefs: $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/field_def.xml
-  filedefs: $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/file_def_O2.xml
+  filedefs: $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/file_def_diagO2.xml
   iodefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/iodef.xml
   separate XIOS server: true
 
