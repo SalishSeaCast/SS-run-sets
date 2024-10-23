@@ -8,50 +8,22 @@
 
 &nambdy        !  unstructured open boundaries                          ("key_bdy")
 !-----------------------------------------------------------------------
-    nb_bdy         = 3                     !  number of open boundary sets
-    ln_coords_file = .false., .false., .false.  !  =T : read bdy coordinates from file
-    cn_dyn2d       = 'ssh', 'flather','flather'
-    nn_dyn2d_dta   =  1, 3, 3              !  = 0, bdy data are equal to the initial state
+    nb_bdy         = 2                     !  number of open boundary sets
+    ln_coords_file = .false., .false.      !  =T : read bdy coordinates from file
+    cn_dyn2d       = 'flather','flather'
+    nn_dyn2d_dta   =  3, 3                 !  = 0, bdy data are equal to the initial state
                                            !  = 1, bdy data are read in 'bdydata   .nc' files
                                            !  = 2, use tidal harmonic forcing data from files
                                            !  = 3, use external data AND tidal harmonic forcing
-    cn_dyn3d      =  'zero', 'frs', 'frs'  !
-    nn_dyn3d_dta  =  0, 1, 1               !  = 0, bdy data are equal to the initial state
+    cn_dyn3d      =  'frs', 'frs'          !
+    nn_dyn3d_dta  =  1, 1                  !  = 0, bdy data are equal to the initial state
                                            !  = 1, bdy data are read in 'bdydata   .nc' files
-    cn_tra        =  'frs', 'frs', 'frs'   !
-    nn_tra_dta    =  1, 1, 1               !  = 0, bdy data are equal to the initial state
+    cn_tra        =  'frs', 'frs'          !
+    nn_tra_dta    =  1, 1                  !  = 0, bdy data are equal to the initial state
                                            !  = 1, bdy data are read in 'bdydata   .nc' files
-    ln_tra_dmp    =.false., .false. ,.false.       !  open boudaries conditions for tracers
-    ln_dyn3d_dmp  =.false., .false. ,.false.       !  open boundary condition for baroclinic velocities
-    rn_time_dmp   =  365., 365. ,365.      ! Damping time scale in days (nudging on orlanski inflow)
-    rn_time_dmp_out =  365., 365. ,365.    ! Outflow damping time scale (nudging on orlanski outflow)
-    nn_rimwidth   =  4, 10, 10             ! rim depth for FRS
-&end
-
-
-&nambdy_index ! open boundaries - definition ("key_bdy")
-!-----------------------------------------------------------------------
-    ctypebdy  = 'E'
-    nbdyind   = 708   ! i-index for segment
-    nbdybeg   = 200   ! j-index for segment beginning
-    nbdyend   = 225   ! j-index for segment end
-&end
-
-
-&nambdy_dta      !  open boundaries - external data           ("key_bdy")
-!-----------------------------------------------------------------------
-!        !  file name                        ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
-!        !                                   !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
-  bn_ssh = 'input_bdy/bdy_ssh/ssh_E',            0.5,             '+ssh',      .true.,        .false.,  'daily',    '',        '',         ''
-  bn_u2d = '',                                     1,             '',          .true.,        .false.,  'daily',    '',        '',         ''
-  bn_v2d = '',                                     1,             '',          .true.,        .false.,  'daily',    '',        '',         ''
-  bn_u3d = '',                                     1,             '',          .true.,        .false.,  'daily',    '',        '',         ''
-  bn_v3d = '',                                     1,             '',          .true.,        .false.,  'daily',    '',        '',         ''
-  bn_tem = 'temp_E_monthly',                      -1,             'thetao',    .true.,        .true. ,  'yearly',   '',        '',         ''
-  bn_sal = 'salt_E_monthly',                      -1,             'so',        .true.,        .true. ,  'yearly',   '',        '',         ''
-
-  cn_dir = './'
-  ln_full_vel = .false.
+    ln_tra_dmp    =.false., .false.        !  open boudaries conditions for tracers
+    ln_dyn3d_dmp  =.false., .false.        !  open boundary condition for baroclinic velocities
+    nn_rimwidth   =  10, 10                ! rim depth for FRS
 &end
 
 
@@ -66,16 +38,16 @@
 
 &nambdy_dta      !  open boundaries - external data           ("key_bdy")
 !-----------------------------------------------------------------------
-!        !  file name          ! frequency (hours) ! variable  ! time interp.          !  clim   ! 'yearly'/           ! weights  ! rotation ! land/sea mask !
-!        !                     !  (if <0  months)  !   name    !   (logical)           !  (T/F ) ! 'monthly'           ! filename ! pairing  ! filename      !
-  bn_ssh = 'bdy_ssh/ssh_W',     @{STRING_bdy_freq}, '+sossheig', @{STRING_bdy_ln_tint}, .false.,  '@{STRING_bdy_mord}',    '',        '',         ''
-  bn_u2d = '',                  @{STRING_bdy_freq}, '',          @{STRING_bdy_ln_tint}, .false.,  '@{STRING_bdy_mord}',    '',        '',         ''
-  bn_v2d = '',                  @{STRING_bdy_freq}, '',          @{STRING_bdy_ln_tint}, .false.,  '@{STRING_bdy_mord}',    '',        '',         ''
-  bn_u3d = 'bdy_uv/u_W',        @{STRING_bdy_freq}, '+vozocrtx', @{STRING_bdy_ln_tint}, .false.,  '@{STRING_bdy_mord}',    '',        '',         ''
-  bn_v3d = 'bdy_uv/v_W',        @{STRING_bdy_freq}, '+vomecrty', @{STRING_bdy_ln_tint}, .false.,  '@{STRING_bdy_mord}',    '',        '',         ''
-  bn_tem = 'bdy_ts/ts_W',       @{STRING_bdy_freq}, '+votemper', @{STRING_bdy_ln_tint}, .false.,  '@{STRING_bdy_mord}',    '',        '',         ''
-  bn_sal = 'bdy_ts/ts_W',       @{STRING_bdy_freq}, '+vosaline', @{STRING_bdy_ln_tint}, .false.,  '@{STRING_bdy_mord}',    '',        '',         ''
-  cn_dir = './input_bdy/'
+!        !  file name          ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!        !                     !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
+  bn_ssh = 'bdy_ssh/ssh_W',            1,           'sossheig', .true.,        .false.,  'daily',    '',        '',        ''
+  bn_u2d = '',                         1,            '',        .true.,        .false.,  'daily',    '',        '',        ''
+  bn_v2d = '',                         1,            '',        .true.,        .false.,  'daily',    '',        '',        ''
+  bn_u3d = 'bdy_uv/u_W',               1,           'vozocrtx', .true.,        .false.,  'daily',    '',        '',        ''
+  bn_v3d = 'bdy_uv/v_W',               1,           'vomecrty', .true.,        .false.,  'daily',    '',        '',        ''
+  bn_tem = 'bdy_ts/ts_W',              1,           'votemper', .true.,        .false.,  'daily',    '',        '',        ''
+  bn_sal = 'bdy_ts/ts_W',              1,           'vosaline', .true.,        .false.,  'daily',    '',        '',        ''
+  cn_dir = './ssc_bdy/'
   ln_full_vel = .true.
 &end
 
@@ -91,15 +63,15 @@
 
 &nambdy_dta      !  open boundaries - external data           ("key_bdy")
 !-----------------------------------------------------------------------
-!        !  file name          ! frequency (hours) ! variable  ! time interp.          !  clim   ! 'yearly'/           ! weights  ! rotation ! land/sea mask !
-!        !                     !  (if <0  months)  !   name    !   (logical)           !  (T/F ) ! 'monthly'           ! filename ! pairing  ! filename      !
-  bn_ssh = 'bdy_ssh/ssh_S',     @{STRING_bdy_freq}, '+sossheig', @{STRING_bdy_ln_tint}, .false.,  '@{STRING_bdy_mord}',    '',        '',         ''
-  bn_u2d = '',                  @{STRING_bdy_freq}, '',          @{STRING_bdy_ln_tint}, .false.,  '@{STRING_bdy_mord}',    '',        '',         ''
-  bn_v2d = '',                  @{STRING_bdy_freq}, '',          @{STRING_bdy_ln_tint}, .false.,  '@{STRING_bdy_mord}',    '',        '',         ''
-  bn_u3d = 'bdy_uv/u_S',        @{STRING_bdy_freq}, '+vozocrtx', @{STRING_bdy_ln_tint}, .false.,  '@{STRING_bdy_mord}',    '',        '',         ''
-  bn_v3d = 'bdy_uv/v_S',        @{STRING_bdy_freq}, '+vomecrty', @{STRING_bdy_ln_tint}, .false.,  '@{STRING_bdy_mord}',    '',        '',         ''
-  bn_tem = 'bdy_ts/ts_S',       @{STRING_bdy_freq}, '+votemper', @{STRING_bdy_ln_tint}, .false.,  '@{STRING_bdy_mord}',    '',        '',         ''
-  bn_sal = 'bdy_ts/ts_S',       @{STRING_bdy_freq}, '+vosaline', @{STRING_bdy_ln_tint}, .false.,  '@{STRING_bdy_mord}',    '',        '',         ''
-  cn_dir = './input_bdy/'
+!        !  file name          ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!        !                     !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
+  bn_ssh = 'bdy_ssh/ssh_S',            1,          'sossheig',  .true.,        .false.,  'daily',    '',        '',        ''
+  bn_u2d = '',                         1,          '',          .true.,        .false.,  'daily',    '',        '',        ''
+  bn_v2d = '',                         1,          '',          .true.,        .false.,  'daily',    '',        '',        ''
+  bn_u3d = 'bdy_uv/u_S',               1,          'vozocrtx',  .true.,        .false.,  'daily',    '',        '',        ''
+  bn_v3d = 'bdy_uv/v_S',               1,          'vomecrty',  .true.,        .false.,  'daily',    '',        '',        ''
+  bn_tem = 'bdy_ts/ts_S',              1,          'votemper',  .true.,        .false.,  'daily',    '',        '',        ''
+  bn_sal = 'bdy_ts/ts_S',              1,          'vosaline',  .true.,        .false.,  'daily',    '',        '',        ''
+  cn_dir = './ssc_bdy/'
   ln_full_vel = .true.
 &end
