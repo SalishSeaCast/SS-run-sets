@@ -2,7 +2,7 @@
 !!
 &namcfg     !   parameters of the configuration
 !-----------------------------------------------------------------------
-   cp_cfg      =  sss150               !  name of the configuration
+   cp_cfg      =  "sss150"             !  name of the configuration
    jp_cfg      =     120               !  resolution of the configuration [1/degrees]
    jpidta      =     710               !  1st lateral dimension ( >= jpi )
    jpjdta      =     826               !  2nd    "         "    ( >= jpj )
