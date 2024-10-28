@@ -20,19 +20,12 @@ grid:
   # is not possible
   land processor elimination: false
 
-# There is no restart for the initial run.
-# We'll use this section later when we have a run to restart from
-# NOTE: Some variables in namelist.time need to be set correctly to use a restart file
-# restart:
-#   restart.nc: TBD
+# There is a selection of restart files from Michael in /home/mdunphy/sss150_For_Doug/
+restart:
+  restart.nc: /data/dlatorne/MEOPAR/results/sss150/24feb23/2023022400_000.nc
 
 
 forcing:
-  # Initial fields to start our first run with
-  # Not sure yet what file paths will be, nor what the symlink names will be in which
-  # namelists
-  # initial:
-  #   link to: /data/$USER/MEOPAR/tracers/sss150/initial/ ???
 
   grid:
     link to: /data/$USER/MEOPAR/grid/sss150/
@@ -58,7 +51,7 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.03jul24
+  - ./namelist.time.25feb23
   - /data/$USER/MEOPAR/SS-run-sets/sss150/namelist.domain
   - /data/$USER/MEOPAR/SS-run-sets/sss150/namelist.atmos_rivers
   - /data/$USER/MEOPAR/SS-run-sets/sss150/namelist.light
@@ -75,7 +68,7 @@ output:
   domaindefs: /data/$USER/MEOPAR/SS-run-sets/sss150/domain_def.xml
   fielddefs: /data/$USER/MEOPAR/SS-run-sets/sss150/field_def.xml
   filedefs: /data/$USER/MEOPAR/SS-run-sets/sss150/file_def.xml
-  iodefs: /data/$USER/MEOPAR/SS-run-sets/sss150/indef.xml
+  iodefs: /data/$USER/MEOPAR/SS-run-sets/sss150/iodef.xml
   separate XIOS server: true
 
 
