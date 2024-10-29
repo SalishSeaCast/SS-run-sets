@@ -9,6 +9,7 @@
    </domain_group>
 
    <domain_group id="grid_V">
+      <domain id="grid_V" long_name="grid V"/>
    </domain_group>
 
    <domain_group id="grid_W">
