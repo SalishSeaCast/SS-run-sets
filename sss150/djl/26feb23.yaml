@@ -3,7 +3,7 @@
 
 MPI decomposition: 1x7
 config_name: sss150
-run_id: 25feb23
+run_id: 26feb23
 # max allowed run time in seconds (86400 = 24h)
 walltime: 86400
 
@@ -22,7 +22,7 @@ grid:
 
 # There is a selection of restart files from Michael in /home/mdunphy/sss150_For_Doug/
 restart:
-  restart.nc: /data/dlatorne/MEOPAR/results/sss150/24feb23/2023022400_000.nc
+  restart.nc: /data/dlatorne/MEOPAR/results/sss150/25feb23/sss150_00034560_restart.nc
 
 
 forcing:
@@ -51,7 +51,7 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time
+  - ./namelist.time.26feb23
   - /data/$USER/MEOPAR/SS-run-sets/sss150/namelist.domain
   - /data/$USER/MEOPAR/SS-run-sets/sss150/namelist.atmos_rivers
   - /data/$USER/MEOPAR/SS-run-sets/sss150/namelist.light
