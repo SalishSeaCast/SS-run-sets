@@ -1,0 +1,85 @@
+# salishsea command processor run description file for
+# sss150 run on salish
+
+MPI decomposition: 1x7
+config_name: sss150
+run_id: 26feb23
+# max allowed run time in seconds (86400 = 24h)
+walltime: 86400
+
+paths:
+  NEMO code config: /data/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: /data/$USER/MEOPAR/XIOS-2
+  runs directory: /data/$USER/MEOPAR/runs
+
+
+grid:
+  bathymetry: /data/$USER/MEOPAR/grid/sss150/bathymetry_sss150_20240822.nc
+  coordinates: /data/$USER/MEOPAR/grid/sss150/coordinates_sss150_20210709.nc
+  # 1x7 MPI decomposition on salish has no all-land sub-domains, so land processor elimination
+  # is not possible
+  land processor elimination: false
+
+# There is a selection of restart files from Michael in /home/mdunphy/sss150_For_Doug/
+restart:
+  restart.nc: /data/dlatorne/MEOPAR/results/sss150/24feb23/2023022400_000.nc
+
+
+forcing:
+
+  grid:
+    link to: /data/$USER/MEOPAR/grid/sss150/
+
+  NEMO-atmos:
+    link to: /results/forcing/atmospheric/continental2.5/nemo_forcing/
+  atmos_weights.nc:
+    link to: /data/$USER/MEOPAR/grid/sss150/weights-continental2.5-hrdps_20240822_23feb23onward.nc
+  no_snow_ice.nc:
+    link to: /data/$USER/MEOPAR/grid/sss150/no_snow_ice.nc
+
+  rivers:
+    link to: /results/forcing/rivers/sss150/
+  rivers-climatology:
+    # river water temperatures and runoff depths
+    link to: /data/$USER/MEOPAR/rivers-climatology/sss150/
+
+  ssc_bdy:
+    # Western and Southern boundaries field values from SalishSeaCast
+    # used in namelist.lateral for boundaries ctypebdy='W' and ctypebdy='S'
+    link to: /results/forcing/SalishSeaCast/
+
+
+namelists:
+  namelist_cfg:
+  - ./namelist.time.25feb23
+  - /data/$USER/MEOPAR/SS-run-sets/sss150/namelist.domain
+  - /data/$USER/MEOPAR/SS-run-sets/sss150/namelist.atmos_rivers
+  - /data/$USER/MEOPAR/SS-run-sets/sss150/namelist.light
+  - /data/$USER/MEOPAR/SS-run-sets/sss150/namelist.lateral
+  - /data/$USER/MEOPAR/SS-run-sets/sss150/namelist.bottom
+  - /data/$USER/MEOPAR/SS-run-sets/sss150/namelist.tracer
+  - /data/$USER/MEOPAR/SS-run-sets/sss150/namelist.dynamics
+  - /data/$USER/MEOPAR/SS-run-sets/sss150/namelist.vertical
+  - /data/$USER/MEOPAR/SS-run-sets/sss150/namelist.compute
+
+
+output:
+  XIOS servers: 1
+  domaindefs: /data/$USER/MEOPAR/SS-run-sets/sss150/domain_def.xml
+  fielddefs: /data/$USER/MEOPAR/SS-run-sets/sss150/field_def.xml
+  filedefs: ./file_def.xml
+  iodefs: /data/$USER/MEOPAR/SS-run-sets/sss150/iodef.xml
+  separate XIOS server: true
+
+
+vcs revisions:
+  git:
+  - /data/$USER/MEOPAR/grid
+  - /data/$USER/MEOPAR/NEMO-Cmd
+  - /data/$USER/MEOPAR/NEMO-3.6-code
+  - /data/$USER/MEOPAR/rivers-climatology
+  - /data/$USER/MEOPAR/SS-run-sets
+  - /data/$USER/MEOPAR/SalishSeaCmd
+  - /data/$USER/MEOPAR/tracers
+  - /data/$USER/MEOPAR/XIOS-ARCH
+  - /data/$USER/MEOPAR/XIOS-2
