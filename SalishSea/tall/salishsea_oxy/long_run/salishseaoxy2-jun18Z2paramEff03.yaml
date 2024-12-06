@@ -1,14 +1,14 @@
 email: atall@eoas.ubc.ca
 MPI decomposition: 19x26
 config_name: SalishSea_oxy2
-run_id: jandec18Z2param
+run_id: jandec19Z2paramEff03
 account: rrg-allen
-walltime: 120:00:00
+walltime: 23:00:00
 
 paths:
   NEMO code config: $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $PROJECT/$USER/MEOPAR/XIOS-2
-  runs directory: $SCRATCH/salishsea_oxy/long_run/diagO2_Z2param
+  runs directory: $SCRATCH/salishsea_oxy/long_run/diagO2_Z2eff03
 
 grid:
   bathymetry: $PROJECT/$USER/MEOPAR/grid/bathymetry_202310b.nc
@@ -16,10 +16,10 @@ grid:
   land processor elimination: $PROJECT/$USER/MEOPAR/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: /scratch/atall/salishsea_oxy/2018/spinup/SalishSea_12636000_restart.nc
- # restart.nc: /scratch/atall/restart/30jun18/SalishSea_13026960_restart.nc
-  restart_trc.nc: /scratch/atall/salishsea_oxy/2018/spinup/SalishSea_12636000_restart_trc.nc
- # restart_trc.nc: /scratch/atall/restart/30jun18/SalishSea_13026960_restart_trc.nc
+#  restart.nc: /scratch/atall/salishsea_oxy/2018/spinup/SalishSea_12636000_restart.nc
+  restart.nc: /scratch/atall/restart/31may18/SalishSea_12962160_restart.nc
+#  restart_trc.nc: /scratch/atall/salishsea_oxy/2018/spinup/SalishSea_12636000_restart_trc.nc
+  restart_trc.nc: /scratch/atall/restart/31may18/SalishSea_12962160_restart_trc.nc
 
 forcing:
   NEMO-atmos:
@@ -45,7 +45,7 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/./namelist.time.2018
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/./namelist.time.jundec19
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.domain
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.light
@@ -56,20 +56,21 @@ namelists:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.vertical
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.compute
   namelist_smelt_cfg:
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_biology_withZ2effMortExc
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_biology_withZ2eff03MortExc
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_rivers_opsturb
+ # - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_rivers_opsturb_pondon
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_restart
-#  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_TracerDefAndBdy
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_top_TracerDefAndBdy
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_TracerDefAndBdy
+#  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_top_TracerDefAndBdy
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_physics
   
 output:
   XIOS servers: 1
   domaindefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/domain_def.xml
   fielddefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/field_def.xml
-  filedefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/file_def_diagO2.xml
+  filedefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/file_def_diagO2_test.xml
   iodefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/iodef.xml
   separate XIOS server: true
 
