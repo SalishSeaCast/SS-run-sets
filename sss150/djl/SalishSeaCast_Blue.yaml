@@ -27,6 +27,8 @@ restart:
 forcing:
   NEMO-atmos:
     link to: /results/forcing/atmospheric/continental2.5/nemo_forcing/
+  no_snow_ice.nc:
+    link to: /data/$USER/MEOPAR/grid/no_snow_ice_202108.nc
   bfr_coef.nc:
     link to: /data/$USER/MEOPAR/grid/jetty_mask_bathy202108.nc
   grid:
@@ -48,7 +50,7 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.03jul24
+  - ./namelist.time.ssc.03jul24
   - /data/$USER/MEOPAR/SS-run-sets/v202111/nowcast-blue/namelist.domain
   - /data/$USER/MEOPAR/SS-run-sets/v202111/nowcast-blue/namelist.atmos_rivers
   - /data/$USER/MEOPAR/SS-run-sets/v202111/nowcast-blue/namelist.light

@@ -25,7 +25,7 @@ forcing:
   LiveOcean:
     link to: $FORCING/SalishSeaCast/forcing/LiveOcean
   NEMO-atmos:
-    link to: $FORCING/SalishSeaCast/forcing/atmospheric/GEM2.5/operational/
+    link to: $FORCING/SalishSeaCast/forcing/atmospheric/GEM2.5/gemlam/
   bfr_coef.nc:
     link to: $SUSANPROJECT/MEOPAR/grid/jetty_mask_bathy202108.nc
   grid:
@@ -43,11 +43,12 @@ forcing:
   tracers:
     link to: $SUSANPROJECT/MEOPAR/tracers
 
+
 namelists:
   namelist_cfg:
   - $PROJECT/SalishSeaCast/hindcast-sys/runs/namelist.time
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.domain
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers_late_gemlam
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.light
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.lateral
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.bottom
@@ -56,8 +57,8 @@ namelists:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.vertical
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist.compute
   namelist_smelt_cfg:
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_biology_withZ2eff075MortExc
-  - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111//namelist_smelt_rivers_opsturb
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_biology
+  - $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_rivers
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
   - $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/namelist_top_restart
@@ -68,7 +69,7 @@ output:
   XIOS servers: 1
   domaindefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/domain_def.xml
   fielddefs: $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/field_def.xml
-  filedefs: $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/file_def_diagO2.xml
+  filedefs: $SUSANPROJECT/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/file_def.xml
   iodefs: $SUSANPROJECT/MEOPAR/SS-run-sets/v202111/iodef.xml
   separate XIOS server: true
 

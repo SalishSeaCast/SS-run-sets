@@ -47,16 +47,16 @@
 !-----------------------------------------------------------------------
 &namsbc_core   !   namsbc_core  CORE bulk formulae
 !-----------------------------------------------------------------------
-!         !  file name         ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                                                    ! rotation !
-!         !                    !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename                                                   ! pairing  !
-  sn_wndi = 'NEMO-atmos/hrdps',        1,           'u_wind',    .true.,       .false.,  'daily',    'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', 'Uwnd'
-  sn_wndj = 'NEMO-atmos/hrdps',        1,           'v_wind',    .true.,       .false.,  'daily',    'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', 'Vwnd'
-  sn_qsr  = 'NEMO-atmos/hrdps',        1,           'solar',     .true.,       .false.,  'daily',    'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', ''
-  sn_qlw  = 'NEMO-atmos/hrdps',        1,           'therm_rad', .true.,       .false.,  'daily',    'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', ''
-  sn_tair = 'NEMO-atmos/hrdps',        1,           'tair',      .true.,       .false.,  'daily',    'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', ''
-  sn_humi = 'NEMO-atmos/hrdps',        1,           'qair',      .true.,       .false.,  'daily',    'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', ''
-  sn_prec = 'NEMO-atmos/hrdps',        1,           'precip',    .true.,       .false.,  'daily',    'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', ''
-  sn_snow = 'grid/no_snow',          -12,           'snow',      .true.,       .true.,   'yearly',   'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', ''
+!         !  file name         ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights           ! rotation !
+!         !                    !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename          ! pairing  !
+  sn_wndi = 'NEMO-atmos/hrdps',        1,           'u_wind',    .true.,       .false.,  'daily',    'atmos_weights.nc', 'Uwnd'
+  sn_wndj = 'NEMO-atmos/hrdps',        1,           'v_wind',    .true.,       .false.,  'daily',    'atmos_weights.nc', 'Vwnd'
+  sn_qsr  = 'NEMO-atmos/hrdps',        1,           'solar',     .true.,       .false.,  'daily',    'atmos_weights.nc', ''
+  sn_qlw  = 'NEMO-atmos/hrdps',        1,           'therm_rad', .true.,       .false.,  'daily',    'atmos_weights.nc', ''
+  sn_tair = 'NEMO-atmos/hrdps',        1,           'tair',      .true.,       .false.,  'daily',    'atmos_weights.nc', ''
+  sn_humi = 'NEMO-atmos/hrdps',        1,           'qair',      .true.,       .false.,  'daily',    'atmos_weights.nc', ''
+  sn_prec = 'NEMO-atmos/hrdps',        1,           'precip',    .true.,       .false.,  'daily',    'atmos_weights.nc', ''
+  sn_snow = 'no_snow_ice',           -12,           'snow',      .true.,       .true.,   'yearly',   '',                                                            ''
 
    cn_dir      = './'    !  root directory for the location of the bulk files
    rn_zqt      = 2.      !  Air temperature and humidity reference height (m)
@@ -86,9 +86,9 @@
 !-----------------------------------------------------------------------
 &namsbc_apr    !   Atmospheric pressure used as ocean forcing or in bulk
 !-----------------------------------------------------------------------
-!         !  file name         ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights                                                    ! rotation !
-!         !                    !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename                                                   ! pairing  !
-  sn_apr  = 'NEMO-atmos/hrdps',  1,                  'atmpres',   .true.,       .false.,  'daily',   'grid/weights-continental2.5-hrdps_202108_23feb23onward.nc', ''
+!         !  file name         ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights           ! rotation !
+!         !                    !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename          ! pairing  !
+  sn_apr  = 'NEMO-atmos/hrdps',        1,           'atmpres',   .true.,       .false.,  'daily',    'atmos_weights.nc', ''
 
   cn_dir      = './'     !  root directory for the location of the bulk files
   ln_apr_obc  = .false.  !  inverse barometer added to OBC ssh data
@@ -99,6 +99,6 @@
 !-----------------------------------------------------------------------
 !        !   file name        ! frequency (hours) ! variable   ! time interpol. !  clim   ! 'yearly' or ! weights  ! rotation !
 !        !                    !  (if <0  months)  !   name     !    (logical)   !  (T/F)  !  'monthly'  ! filename ! pairing  !
-  sn_ice   = 'no_ice',              -12,             'ice',        .false.,        .true.,   'yearly',      '',       '',   ''
-  cn_dir   = './grid/'        ! Directory where ice file(s) are found
+  sn_ice   = 'no_snow_ice',         -12,             'ice',        .false.,        .true.,   'yearly',   '',        ''
+  cn_dir   = './'        ! Directory where ice file(s) are found
   &end

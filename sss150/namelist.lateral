@@ -1,0 +1,82 @@
+!!======================================================================
+!!            ***  Lateral Boundary Condition namelists  ***
+!!======================================================================
+!!
+!!
+&namlbc        !   lateral momentum boundary condition
+!-----------------------------------------------------------------------
+   rn_shlat    = 0.5     !  shlat = 0  !  0 < shlat < 2  !  shlat = 2  !  2 < shlat
+                         !  free slip  !   partial slip  !   no slip   ! strong slip
+   ln_vorlat   = .false. !  consistency of vorticity boundary condition with analytical eqs.
+&end
+
+
+&nambdy        !  unstructured open boundaries                          ("key_bdy")
+!-----------------------------------------------------------------------
+    nb_bdy         = 2                     !  number of open boundary sets
+    ln_coords_file = .false., .false.      !  =T : read bdy coordinates from file
+    cn_dyn2d       = 'flather','flather'
+    nn_dyn2d_dta   =  1, 1                 !  = 0, bdy data are equal to the initial state
+                                           !  = 1, bdy data are read in 'bdydata .nc' files
+                                           !  = 2, use tidal harmonic forcing data from files
+                                           !  = 3, use external data AND tidal harmonic forcing
+    cn_dyn3d      =  'frs', 'frs'          !
+    nn_dyn3d_dta  =  1, 1                  !  = 0, bdy data are equal to the initial state
+                                           !  = 1, bdy data are read in 'bdydata   .nc' files
+    cn_tra        =  'frs', 'frs'          !
+    nn_tra_dta    =  1, 1                  !  = 0, bdy data are equal to the initial state
+                                           !  = 1, bdy data are read in 'bdydata   .nc' files
+    ln_tra_dmp    =.false., .false.        !  open boudaries conditions for tracers
+    ln_dyn3d_dmp  =.false., .false.        !  open boundary condition for baroclinic velocities
+    nn_rimwidth   =  10, 10                ! rim depth for FRS
+&end
+
+
+&nambdy_index ! open boundaries - definition ("key_bdy")
+!-----------------------------------------------------------------------
+    ctypebdy = 'W'
+    nbdyind   = 2     ! i-index for segment
+    nbdybeg   = 10    ! j-index for segment beginning
+    nbdyend   = 430   ! j-index for segment end
+&end
+
+
+&nambdy_dta      !  open boundaries - external data           ("key_bdy")
+!-----------------------------------------------------------------------
+!        !  file name          ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!        !                     !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
+  bn_ssh = 'bdy_ssh/ssh_W',            1,           'sossheig', .true.,        .false.,  'daily',    '',        '',        ''
+  bn_u2d = '',                         1,            '',        .true.,        .false.,  'daily',    '',        '',        ''
+  bn_v2d = '',                         1,            '',        .true.,        .false.,  'daily',    '',        '',        ''
+  bn_u3d = 'bdy_uv/u_W',               1,           'vozocrtx', .true.,        .false.,  'daily',    '',        '',        ''
+  bn_v3d = 'bdy_uv/v_W',               1,           'vomecrty', .true.,        .false.,  'daily',    '',        '',        ''
+  bn_tem = 'bdy_ts/ts_W',              1,           'votemper', .true.,        .false.,  'daily',    '',        '',        ''
+  bn_sal = 'bdy_ts/ts_W',              1,           'vosaline', .true.,        .false.,  'daily',    '',        '',        ''
+  cn_dir = './ssc_bdy/'
+  ln_full_vel = .true.
+&end
+
+
+&nambdy_index ! open boundaries - definition ("key_bdy")
+!-----------------------------------------------------------------------
+    ctypebdy  = 'S'
+    nbdyind   = 2     ! j-index for segment
+    nbdybeg   = 10     ! i-index for segment beginning
+    nbdyend   = 282   ! i-index for segment end
+&end
+
+
+&nambdy_dta      !  open boundaries - external data           ("key_bdy")
+!-----------------------------------------------------------------------
+!        !  file name          ! frequency (hours) ! variable  ! time interp. !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!        !                     !  (if <0  months)  !   name    !   (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
+  bn_ssh = 'bdy_ssh/ssh_S',            1,          'sossheig',  .true.,        .false.,  'daily',    '',        '',        ''
+  bn_u2d = '',                         1,          '',          .true.,        .false.,  'daily',    '',        '',        ''
+  bn_v2d = '',                         1,          '',          .true.,        .false.,  'daily',    '',        '',        ''
+  bn_u3d = 'bdy_uv/u_S',               1,          'vozocrtx',  .true.,        .false.,  'daily',    '',        '',        ''
+  bn_v3d = 'bdy_uv/v_S',               1,          'vomecrty',  .true.,        .false.,  'daily',    '',        '',        ''
+  bn_tem = 'bdy_ts/ts_S',              1,          'votemper',  .true.,        .false.,  'daily',    '',        '',        ''
+  bn_sal = 'bdy_ts/ts_S',              1,          'vosaline',  .true.,        .false.,  'daily',    '',        '',        ''
+  cn_dir = './ssc_bdy/'
+  ln_full_vel = .true.
+&end
