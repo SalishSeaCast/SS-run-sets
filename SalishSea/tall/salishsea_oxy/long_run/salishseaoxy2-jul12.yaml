@@ -1,7 +1,7 @@
-MPI decomposition: 16x34
+MPI decomposition: 19x26
 config_name: SalishSea_oxy2
 email: atall@eoas.ubc.ca
-account: rrg-allen
+account: def-allen
 forcing:
   LiveOcean:
     link to: $PROJECT/SalishSea/forcing/LiveOcean

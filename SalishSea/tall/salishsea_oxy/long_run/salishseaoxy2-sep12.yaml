@@ -1,7 +1,7 @@
-MPI decomposition: 16x34
+MPI decomposition: 19x26
 config_name: SalishSea_oxy2
 email: atall@eoas.ubc.ca
-account: rrg-allen
+account: def-allen
 forcing:
   LiveOcean:
     link to: $PROJECT/SalishSea/forcing/LiveOcean
@@ -10,7 +10,7 @@ forcing:
   NEP:
     link to: $PROJECT/SalishSea/forcing/NEP36
   bfr_coef.nc:
-    link to: $PROJECT/$USER/MEOPAR/grid/jetty_mask_bathy20241130.nc
+    link to: $PROJECT/$USER/MEOPAR/grid/jetty_mask_bathy20241023.nc
   grid:
     link to: $PROJECT/$USER/MEOPAR/grid
   river_turb:
