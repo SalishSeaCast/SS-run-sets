@@ -1,0 +1,56 @@
+# Config file for bdytools to operate on SalishSeaCast files to produce
+# sss150 files using storage accessible from salish
+
+# Directory in which to store weights file that bdytools calculates,
+# then uses to interpolate field values from SalishSeaCast on to sss150 grid
+#
+# Weights file is calculated by:
+#   bdytools SS-run-sets/sss150/bdytools_ssc_to_sss150_salish.yaml --weights
+# It is subsequently used for interpolation by, for example:
+#   bdytools SS-run-sets/sss150/bdytools_ssc_to_sss150_salish.yaml --bdy ssh ts uv
+weightsdir: /data/dlatorne/MEOPAR/grid/sss150/
+
+# Mesh mask files for the source and destination grids for the interpolation
+srcmask: /data/dlatorne/MEOPAR/grid/mesh_mask202108.nc
+# From Michael
+dstmask: /ocean/mdunphy/sss150_20220715/mesh_mask_southsalishsea150_update202108210102AUM1.nc
+# Above with improved metadata and compression
+# dstmask: /data/dlatorne/MEOPAR/grid/sss150/mesh_mask_sss150_20240822.nc
+
+# Non-working feature to use cached extrapolation weights to handle grid points in
+# the sss150 grid that aren't resolved in the SalishSeaCast grid
+# **Always set this to False**
+flood_weights: False
+
+# Boundary shape parameters
+bdy:
+  - {ctypebdy: W, nbdybeg: 10, nbdyend: 430, nbdyind: 2, nn_rimwidth: 10}
+  - {ctypebdy: S, nbdybeg: 10, nbdyend: 282, nbdyind: 2, nn_rimwidth: 10}
+
+# Source directory and file patterns from which boundary files are calculated
+src_output_dir: /results2/SalishSea/nowcast-green.202111/
+src_output_pattern:
+  # It's not clear why this key has to be here, but it does
+  ic:
+    # File patterns are a little annoying
+    # If the --bdy_date0/--bdy_date1 range doesn't iinclude the first or last day of a month,
+    # we can use
+    #  `??mmmyy/SalishSea_1h_*_grid_T.nc`
+    #  e.g. `??mar23/SalishSea_1h_*_grid_T.nc`,
+    # when scans a full month's files.
+    # To span a month boundary, we have to scan a full year with
+    #   `?????yy/SalishSea_1h_*_grid_T.nc`
+    #   e.g.  `?????23/SalishSea_1h_*_grid_T.nc`.
+    # To span a year boundary... :-(
+    ssh: '??mar23/SalishSea_1h_*_grid_T.nc'
+    t: '??mar23/SalishSea_1h_*_grid_T.nc'
+    u: '??mar23/SalishSea_1h_*_grid_U.nc'
+    v: '??mar23/SalishSea_1h_*_grid_V.nc'
+    # **Always set this to null**
+    subset: null
+
+# Directory in which to store the calculated boundary files
+#   ssh boundary files are written to the bdy_ssh/ sub-directory
+#   temperature and salinity boundary files are written to the bdy_ts/ sub-directory
+#   u & v velocity component boundary files are written to the bdy_uv/ sub-directory
+outputdir: /results/forcing/SalishSeaCast/
