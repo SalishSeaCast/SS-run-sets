@@ -31,7 +31,7 @@ grid:
   land processor elimination: $PROJECT/$USER/MEOPAR/grid/bathymetry_202108.csv
 namelists:
   namelist_cfg:
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist.time.feb16
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist.time.jan16
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.domain
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.light
@@ -59,11 +59,11 @@ output:
 paths:
   NEMO code config: $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $PROJECT/$USER/MEOPAR/XIOS-2
-  runs directory: $SCRATCH/202410b/01feb16
+  runs directory: $SCRATCH/202410b/01jan16
 restart:
-  restart.nc: $SCRATCH/202410b/01jan16/SalishSea_11126160_restart.nc
-  restart_trc.nc: $SCRATCH/202410b/01jan16/SalishSea_11126160_restart_trc.nc
-run_id: 01feb16
+  restart.nc: $SCRATCH/202410b/01dec15/SalishSea_11059200_restart.nc
+  restart_trc.nc: $SCRATCH/202410b/01dec15/SalishSea_11059200_restart_trc.nc
+run_id: 01jan16
 vcs revisions:
   git:
   - $PROJECT/$USER/MEOPAR/grid
