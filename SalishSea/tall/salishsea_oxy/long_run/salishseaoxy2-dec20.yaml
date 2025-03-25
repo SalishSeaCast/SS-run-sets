@@ -31,7 +31,7 @@ grid:
   land processor elimination: $PROJECT/$USER/MEOPAR/grid/bathymetry_202108.csv
 namelists:
   namelist_cfg:
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist.time.jul18
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist.time.dec20
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.domain
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.light
@@ -43,7 +43,7 @@ namelists:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.compute
   namelist_smelt_cfg:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_biology
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_rivers
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist_smelt_rivers_newturb
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist_top_restart
@@ -59,11 +59,11 @@ output:
 paths:
   NEMO code config: $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $PROJECT/$USER/MEOPAR/XIOS-2
-  runs directory: $SCRATCH/202410b/01jul18
+  runs directory: $SCRATCH/202410b/01dec20
 restart:
-  restart.nc: $SCRATCH/202410b/01jun18/SalishSea_13029120_restart.nc
-  restart_trc.nc: $SCRATCH/202410b/01jun18/SalishSea_13029120_restart_trc.nc
-run_id: 01jul18
+  restart.nc: $SCRATCH/202410b/01nov20/SalishSea_14938560_restart.nc
+  restart_trc.nc: $SCRATCH/202410b/01nov20/SalishSea_14938560_restart_trc.nc
+run_id: 01dec20
 vcs revisions:
   git:
   - $PROJECT/$USER/MEOPAR/grid

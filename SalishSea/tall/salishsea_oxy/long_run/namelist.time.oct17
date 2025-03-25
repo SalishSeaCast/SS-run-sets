@@ -6,9 +6,9 @@
 &namrun        !   Parameters of the run
 !-----------------------------------------------------------------------
    cn_exp      = "SalishSea"  ! experience name
-   nn_it000    =  13029121    ! first time step
-   nn_itend    =  13096080    ! last time step (std 1 day = 2160 re: rn_rdt=40 in &namdom)
-   nn_date0    =  20180701    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
+   nn_it000    =  12439441    ! first time step
+   nn_itend    =  12506400    ! last time step (std 1 day = 2160 re: rn_rdt=40 in &namdom)
+   nn_date0    =  20171001    ! date at nn_it000 (format yyyymmdd) ie START OF THIS SEGMENT
                               ! used to adjust tides to run date (regardless of restart control)
    nn_leapy    =       1      ! Leap year calendar (1) or not (0)
    ln_rstart   =   .true.     ! start from rest (F) or from a restart file (T)
