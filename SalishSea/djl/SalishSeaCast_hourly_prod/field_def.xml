@@ -454,7 +454,6 @@
         <field id="avt"          long_name="Vertical Eddy Diffusivity"                  standard_name="ocean_vertical_heat_diffusivity"                             unit="m2 s-1" />
         <field id="logavt"       long_name="logarithm of vertical eddy diffusivity"     standard_name="ocean_vertical_heat_diffusivity"                             unit="m2 s-1" />
         <field id="avm"          long_name="Vertical Eddy Viscosity"                    standard_name="ocean_vertical_momentum_diffusivity"                         unit="m2 s-1" />
-        <field id="eps"          long_name="Turbulent Kinetic Energy Dissipation Rate"  standard_name="specific_turbulent_kinetic_energy_dissipation_in_sea_water"  unit="W kg-1" />
 
         <!-- avs: available with key_zdfddm -->
         <field id="avs"          long_name="salt vertical eddy diffusivity"               standard_name="ocean_vertical_salt_diffusivity"  unit="m2/s" />
@@ -970,8 +969,8 @@
        <field id="DIC_WT"   long_name="Dissolved Inorganic Carbon - W Transport"          standard_name="DIC_w_dy_dx"      unit="mmol s-1" />
        <field id="TA_WT"    long_name="Nitrate Concentration - W Transport"               standard_name="TA_w_dy_dx"       unit="mmol s-1" />
        <field id="O2_WT"    long_name="Ammonium Concentration - W Transport"              standard_name="O2_w_dy_dx"       unit="mmol s-1" />
-       <field id="GLS_k"    long_name="GLS TKE"                                           standard_name="GLS_k"            unit="m2 s-2" />
-       <field id="GLS_eps"  long_name="GLS Dissipation"                                   standard_name="GLS_eps"          unit="m2 s-3" />
+       <field id="GLS_KE"   long_name="GLS TKE"                                           standard_name="GLS_KE"           unit="m2 s-2" />
+       <field id="eps"      long_name="Turbulent Kinetic Energy Dissipation Rate"         standard_name="specific_turbulent_kinetic_energy_dissipation_in_sea_water"  unit="W kg-1" />
        <field id="GLS_G"    long_name="GLS Buoy Prod"                                     standard_name="GLS_G"            unit="m2 s-3" />
        <field id="GLS_P"    long_name="GLS Shear Prod"                                    standard_name="GLS_P"            unit="m2 s-3" />
        <field id="GLS_SH2"  long_name="GLS shear squared"                                 standard_name="GLS_SH2"          unit="s-1" />
