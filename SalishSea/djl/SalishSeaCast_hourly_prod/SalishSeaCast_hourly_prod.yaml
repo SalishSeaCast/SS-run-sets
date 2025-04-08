@@ -5,9 +5,9 @@
 # near the northwest end of Texada Island.
 
 email: dlatornell@eoas.ubc.ca
-MPI decomposition: 10x27
+MPI decomposition: 11x32
 config_name: SalishSeaCast_hourly_prod
-run_id: 23aug24-10x27
+run_id: 24aug24-11x32
 account: rrg-allen
 walltime: 1:00:00
 
@@ -22,8 +22,8 @@ grid:
   land processor elimination: $PROJECT/$USER/MEOPAR/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: $SCRATCH/MEOPAR/results/SalishSeaCast_hourly_prod/22aug24/SalishSea_17869680_restart.nc
-  restart_trc.nc: $SCRATCH/MEOPAR/results/SalishSeaCast_hourly_prod/22aug24/SalishSea_17869680_restart_trc.nc
+  restart.nc: $SCRATCH/MEOPAR/results/SalishSeaCast_hourly_prod/23aug24/SalishSea_17871840_restart.nc
+  restart_trc.nc: $SCRATCH/MEOPAR/results/SalishSeaCast_hourly_prod/23aug24/SalishSea_17871840_restart_trc.nc
 
 forcing:
   NEMO-atmos:
@@ -49,7 +49,7 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.23aug24
+  - ./namelist.time.24aug24
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.domain
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers.hrdps
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.light
