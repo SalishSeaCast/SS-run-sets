@@ -1,0 +1,88 @@
+email: sallen@eoas.ubc.ca
+MPI decomposition: 18x30
+config_name: SalishSeaCast
+run_id: 01jan19_base
+walltime: 5:00:00
+
+forcing:
+  LiveOcean:
+    link to: $FORCING/LiveOcean
+  NEMO-atmos:
+    link to: $FORCING/atmospheric/GEM2.5/operational
+
+  bfr_coef.nc:
+    link to: $PROJECT/grid/jetty_mask_bathy201702.nc
+  grid:
+    link to: $PROJECT/grid
+  rivers:
+    link to: $FORCING/rivers
+  rivers-climatology:
+    link to: $PROJECT/rivers-climatology
+  river_turb:
+    link to: $FORCING/rivers/river_turb
+  ssh:
+    link to: $FORCING/sshNeahBay/obs
+  tides:
+    link to: $PROJECT/tides
+  tracers:
+    link to: $PROJECT/tracers
+
+restart:
+  restart.nc: $SCRATCH/v201905r/31dec18/SalishSea_06309360_restart.nc
+  restart_trc.nc: $SCRATCH/v201905r/31dec18/SalishSea_06309360_restart_trc.nc
+
+grid:
+  bathymetry: $PROJECT/grid/bathymetry_201702.nc
+  coordinates: $PROJECT/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $PROJECT/grid/bathymetry_201702.csv
+
+namelists:
+  namelist_cfg:
+  - ./namelist.time_01jan19_oneweek
+  - $PROJECT/SS-run-sets/v201905/namelist.domain
+  - $PROJECT/SS-run-sets/v201905/namelist.atmos_rivers
+  - $PROJECT/SS-run-sets/v201905/namelist.light
+  - $PROJECT/SS-run-sets/v201905/namelist.lateral
+  - $PROJECT/SS-run-sets/v201905/namelist.bottom
+  - $PROJECT/SS-run-sets/v201905/namelist.tracer
+  - $PROJECT/SS-run-sets/v201905/namelist.dynamics
+  - $PROJECT/SS-run-sets/v201905/namelist.vertical
+  - $PROJECT/SS-run-sets/v201905/namelist.compute
+
+  namelist_top_cfg:
+  - $PROJECT/SS-run-sets/v201905/namelist_top_restart
+  - $PROJECT/SS-run-sets/v201905/namelist_top_TracerDefAndBdy
+  - $PROJECT/SS-run-sets/v201905/namelist_top_physics
+  namelist_smelt_cfg:
+  - $PROJECT/SS-run-sets/v201905/namelist_smelt_biology_190926
+  - $PROJECT/SS-run-sets/v201905/Karyn/namelist_smelt_rivers_oldturb
+  - $PROJECT/SS-run-sets/v201905/namelist_smelt_skog
+
+output:
+  XIOS servers: 1
+  filedefs: $PROJECT/SS-run-sets/v201905/nowcast-green/file_def_dailysplit.xml
+  domaindefs: $PROJECT/SS-run-sets/v201905/domain_def.xml
+  fielddefs: $PROJECT/SS-run-sets/v201905/field_def.xml
+  iodefs: $PROJECT/SS-run-sets/v201905/iodef.xml
+  separate XIOS server: true
+
+paths:
+  NEMO code config: $PROJECT/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $PROJECT/XIOS-2
+  runs directory: $SCRATCH/v201905r
+
+vcs revisions:
+  git:
+  - $PROJECT/grid
+  - $PROJECT/NEMO-3.6-code
+  - $PROJECT/NEMO-Cmd
+  - $PROJECT/rivers-climatology
+  - $PROJECT/SalishSeaCmd
+  - $PROJECT/SS-run-sets
+  - $PROJECT/tides
+  - $PROJECT/tracers
+  - $PROJECT/XIOS-2
+  - $PROJECT/XIOS-ARCH
+
+
+
