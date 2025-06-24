@@ -87,6 +87,7 @@
         <file id="file10" name_suffix="_diag_T" description="diagnostic terms of DO">
           <field field_ref="RATE_O2"      name="RATE_O2"/>
           <field field_ref="BIO_O2"       name="BIO_O2"/>
+          <field field_ref="FLX_O2"       name="FLX_O2"/>
           <field field_ref="PHS_O2"       name="PHS_O2"/>
           <field field_ref="SMS_O2"       name="SMS_O2"/>
           <field field_ref="O2TADV"       name="TAD_O2"/>
