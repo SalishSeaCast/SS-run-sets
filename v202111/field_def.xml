@@ -801,6 +801,8 @@
        <field id="O2"           long_name="Dissolved Oxygen Concentration"      standard_name="mole_concentration_of_dissolved_molecular_oxygen_in_sea_water"                       unit="mmol m-3" />
        <field id="O2_E3T"       long_name="O2 * E3T"                                                                                                                                unit="mmol m-2"  > O2 * e3t </field >
        <field id="LIV_E3TSNAP"  long_name="DIAT+MYRI+PHY+MICZ"                  operation="instant"                                                                                 unit="mmol m-2"  > DIAT_E3T+MYRI_E3T+PHY_E3T+MICZ_E3T </field >
+       <field id="pH"          long_name="pH" standard_name="pH"   unit="standard units" />
+       <field id="CO2"         long_name="Dissolved CO2 Concentration" standard_name="mole_concentration_of_dissolved_carbon_dixoide_in_sea_water"   unit="mmol m-3" />
 
        <!-- SKOG outputs -->
        <field id="f_ph"        long_name="f_ph"         standard_name="f_ph"  unit="fill" grid_ref="grid_T_2D" />
