@@ -1,9 +1,10 @@
 # salishsea command processor run description file template for
-# example SalishSeaCast v202111 run on graham
+# wastewater with alkalinity v202111 run on nibi
 
 email: sallen@eoas.ubc.ca
-MPI decomposition: 11x26
+MPI decomposition: 11x32  # was 11x26
 config_name: WasteWater
+account: rrg-allen
 run_id: 01jan18
 walltime: 23:00:00
 
