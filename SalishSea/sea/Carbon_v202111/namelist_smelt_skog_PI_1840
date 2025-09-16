@@ -1,0 +1,20 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! SKOG  (key_skog) cfg namelist
+!!              1  - carbon chemistry                         (nampiscarbon)
+!!              2  - air-sea exchange                         (nampisext)
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampiscarbon     ! Carbonate chemistry parameters (added- TJSJ, walrus)
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+/
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+&nampisext     !   air-sea exchange
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   zz_carbon_year =  1840     ! model year for calculating co2 < 0, use model year
+   zz_LR_slope    =  0        !  linear regression + gaussian fit 
+   zz_LR_int      =  283.4    !  to seasonal cycle of atmospheric co2
+/
+
+
+
+
