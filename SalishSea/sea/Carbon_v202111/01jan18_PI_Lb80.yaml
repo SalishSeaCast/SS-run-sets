@@ -1,0 +1,87 @@
+email: sallen@eoas.ubc.ca
+MPI decomposition: 11x32
+config_name: SalishSeaCarbon
+account: rrg-allen
+run_id: 01jan18_PI_Lb80
+walltime: 39:00:00
+
+forcing:
+  LiveOcean:
+    link to: $FORCING/LiveOcean
+  NEMO-atmos:
+    link to: $FORCING/atmospheric/GEM2.5/operational/
+
+  bfr_coef.nc:
+    link to: $PROJECT/grid/jetty_mask_bathy202108.nc
+  grid:
+    link to: $PROJECT/grid
+  rivers:
+    link to: $FORCING/rivers
+  rivers-climatology:
+    link to: $PROJECT/rivers-climatology
+  river_turb:
+    link to: $FORCING/rivers/river_turb
+  ssh:
+    link to: $FORCING/sshNeahBay/obs
+  tides:
+    link to: $PROJECT/tides
+  tracers:
+    link to: $PROJECT/tracers
+
+restart:
+  restart.nc: $SCRATCH/Carbon/01jul17/SalishSea_12636000_restart.nc
+  restart_trc.nc: $SCRATCH/Carbon/01jul17/SalishSea_12636000_restart_trc.nc
+
+grid:
+  bathymetry: $PROJECT/grid/bathymetry_202108.nc
+  coordinates: $PROJECT/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $PROJECT/grid/bathymetry_202108.csv
+
+namelists:
+  namelist_cfg:
+  - ./namelist.time_01jan18_sixmonths
+  - $PROJECT/SS-run-sets/v202111/namelist.domain
+  - $PROJECT/SS-run-sets/v202111/namelist.atmos_rivers
+  - $PROJECT/SS-run-sets/v202111/namelist.light
+  - $PROJECT/SS-run-sets/v202111/namelist.lateral
+  - $PROJECT/SS-run-sets/v202111/namelist.bottom
+  - $PROJECT/SS-run-sets/v202111/namelist.tracer
+  - $PROJECT/SS-run-sets/v202111/namelist.dynamics
+  - $PROJECT/SS-run-sets/v202111/namelist.vertical
+  - $PROJECT/SS-run-sets/v202111/namelist.compute
+
+  namelist_top_cfg:
+  - $PROJECT/SS-run-sets/v202111/namelist_top_restart
+  - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_top_TracerDefAndBdy_PI
+  - $PROJECT/SS-run-sets/v202111/namelist_top_physics
+  namelist_smelt_cfg:
+  - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_biology_Leibig_80
+  - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_rivers
+  - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_skog_PI_1843
+
+output:
+  XIOS servers: 1
+  filedefs: $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/file_def_small_ds.xml
+  domaindefs: $PROJECT/SS-run-sets/v202111/domain_def.xml
+  fielddefs: $PROJECT/SS-run-sets/v202111/field_def.xml
+  iodefs: $PROJECT/SS-run-sets/v202111/iodef.xml
+  separate XIOS server: true
+
+paths:
+  NEMO code config: $PROJECT/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $PROJECT/XIOS-2
+  runs directory: $SCRATCH/Carbon
+
+vcs revisions:
+  git:
+  - $PROJECT/grid
+  - $PROJECT/NEMO-Cmd
+  - $PROJECT/rivers-climatology
+  - $PROJECT/SalishSeaCmd
+  - $PROJECT/SS-run-sets
+  - $PROJECT/tides
+  - $PROJECT/tracers
+  - $PROJECT/XIOS-ARCH
+
+
+
