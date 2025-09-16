@@ -1,8 +1,8 @@
 email: sallen@eoas.ubc.ca
-MPI decomposition: 20x41
+MPI decomposition: 11x18
 config_name: SalishSeaCarbon
-run_id: 01jan17_Lb80
-walltime: 30:00:00
+run_id: 01jan19_Lb80
+walltime: 05:00:00
 
 forcing:
   LiveOcean:
@@ -28,8 +28,8 @@ forcing:
     link to: $PROJECT/tracers
 
 restart:
-  restart.nc: $SCRATCH/Carbon/11jul16/SalishSea_11847600_restart.nc
-  restart_trc.nc: $SCRATCH/Carbon/11jul16/SalishSea_11847600_restart_trc.nc
+  restart.nc: $SCRATCH/Carbon/01jul18/SalishSea_13424400_restart.nc
+  restart_trc.nc: $SCRATCH/Carbon/01jul18/SalishSea_13424400_restart_trc.nc
 
 grid:
   bathymetry: $PROJECT/grid/bathymetry_202108.nc
@@ -38,7 +38,7 @@ grid:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time_01jan17_sixmonths
+  - ./namelist.time_01jan19_oneweek
   - $PROJECT/SS-run-sets/v202111/namelist.domain
   - $PROJECT/SS-run-sets/v202111/namelist.atmos_rivers
   - $PROJECT/SS-run-sets/v202111/namelist.light
