@@ -2,9 +2,9 @@
 # example SalishSeaCast v202111 run on nibi
 
 email: dlatornell@eoas.ubc.ca
-MPI decomposition: 12x28
+MPI decomposition: 11x32
 config_name: SalishSeaCast
-run_id: 01mar23-12x28
+run_id: 01mar23-11x32
 account: rrg-allen
 walltime: 0:30:00
 
