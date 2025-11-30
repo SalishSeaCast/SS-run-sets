@@ -1413,7 +1413,7 @@
        <field id="FOR_O2"      long_name="---"        unit="mmol/m3/s"                        />
        <field id="ZDF_O2"      long_name="Vertical Diffusion"     unit="mmol/m3/s"            />
        <field id="DMP_O2"      long_name="---"        unit="mmol/m3/s"                        />
-       <field id="SMS_O2"      long_name="Bio SMS"        unit="mmol/m3/s"                    />
+       <field id="SMS_O2"      long_name="Bio SMS O2"     unit="mmol/m3/s"                    />
        <field id="ATF_O2"      long_name="---"        unit="mmol/m3/s"                        />
        <field id="RDB_O2"      long_name="---"        unit="mmol/m3/s"                        />
        <field id="RDN_O2"      long_name="---"        unit="mmol/m3/s"                        />
@@ -1498,7 +1498,7 @@
        <field id="FLX_TRA"      long_name="---"        unit="---"                    />
        <field id="FLX_DIC"      long_name="---"        unit="---"                    />
        <field id="FLX_TA"       long_name="---"        unit="---"                    />
-       <field id="FLX_O2"       long_name="---"        unit="---"                    />
+       <field id="FLX_O2" long_name="Dissolved O2 Rate Due to Air-Sea Flux of O2" standard_name="tendency_of_oxygen_due_to_airsea_flux_of_O2" unit="mmol O2/m3/s" />
        <field id="FLX_PHY"      long_name="---"        unit="---"                    />
 
        <field id="WAS_NH4"      long_name="grazing, mort to NH4"   unit="mmol/m2"  > MRT_NH4+MRU_NH4+MIZ_NH4+MSZ_NH4 </field >
