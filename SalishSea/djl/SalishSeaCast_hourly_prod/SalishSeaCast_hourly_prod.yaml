@@ -7,7 +7,7 @@
 email: dlatornell@eoas.ubc.ca
 MPI decomposition: 11x32
 config_name: SalishSeaCast_hourly_prod
-run_id: 25aug24-11x32
+run_id: 26aug24-11x32
 account: def-allen
 walltime: 1:00:00
 
@@ -22,8 +22,8 @@ grid:
   land processor elimination: $HOME/MEOPAR/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: $SCRATCH/MEOPAR/results/SalishSeaCast_hourly_prod/24aug24/SalishSea_17874000_restart.nc
-  restart_trc.nc: $SCRATCH/MEOPAR/results/SalishSeaCast_hourly_prod/24aug24/SalishSea_17874000_restart_trc.nc
+  restart.nc: $SCRATCH/MEOPAR/results/SalishSeaCast_hourly_prod/25aug24/SalishSea_17876160_restart.nc
+  restart_trc.nc: $SCRATCH/MEOPAR/results/SalishSeaCast_hourly_prod/25aug24/SalishSea_17876160_restart_trc.nc
 
 forcing:
   NEMO-atmos:
@@ -49,7 +49,7 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.25aug24
+  - ./namelist.time.26aug24
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.domain
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers.hrdps
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.light
