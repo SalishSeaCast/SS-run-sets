@@ -76,7 +76,6 @@ output:
 vcs revisions:
   git:
   - $HOME/MEOPAR/grid
-  - $HOME/MEOPAR/NEMO-Cmd
   # - $HOME/MEOPAR/NEMO-3.6-code
   - $HOME/MEOPAR/rivers-climatology
   - $HOME/MEOPAR/SS-run-sets
