@@ -1,0 +1,79 @@
+# scrubber water yaml
+
+email: sallen@eoas.ubc.ca
+MPI decomposition: 11x18
+config_name: ScrubberWater
+run_id: 01jan19
+walltime: 00:30:00
+
+paths:
+  NEMO code config: $PROJECT/NEMO-3.6-code/NEMOGCM/CONFIG
+  XIOS: $PROJECT/XIOS-2
+  runs directory: $SCRATCH/ScrubberWater
+
+grid:
+  bathymetry: $PROJECT/grid/bathymetry_202108.nc
+  coordinates: $PROJECT/grid/coordinates_seagrid_SalishSea201702.nc
+  land processor elimination: $PROJECT/grid/bathymetry_202108.csv
+
+restart:
+  restart.nc: $SCRATCH/ScrubberWater/31dec18/SalishSea_13424400_restart.nc
+
+forcing:
+  NEMO-atmos:
+    link to: $FORCING/atmospheric/GEM2.5/operational/
+  bfr_coef.nc:
+    link to: $PROJECT/grid/jetty_mask_bathy202108.nc
+  grid:
+    link to: $PROJECT/grid
+  rivers:
+    link to: $FORCING/rivers
+  rivers-climatology:
+    link to: $PROJECT/rivers-climatology
+  river_turb:
+    link to: $FORCING/rivers/river_turb
+  ssh:
+    link to: $FORCING/sshNeahBay/obs
+  LiveOcean:
+    link to: $FORCING/LiveOcean
+  tides:
+    link to: $PROJECT/tides
+  tracers:
+    link to: $PROJECT/tracers
+
+namelists:
+  namelist_cfg:
+  - ./namelist.time_01jan19_oneday
+  - $PROJECT/SS-run-sets/v202111/namelist.domain
+  - $PROJECT/SS-run-sets/SalishSea/sea/scrubberwater/namelist.atmos_rivers_scrubberwater
+  - $PROJECT/SS-run-sets/v202111/namelist.light_blue
+  - $PROJECT/SS-run-sets/v202111/namelist.lateral
+  - $PROJECT/SS-run-sets/v202111/namelist.bottom
+  - $PROJECT/SS-run-sets/v202111/namelist.tracer
+  - $PROJECT/SS-run-sets/v202111/namelist.dynamics
+  - $PROJECT/SS-run-sets/v202111/namelist.vertical
+  - $PROJECT/SS-run-sets/v202111/namelist.compute
+  namelist_top_cfg:
+  - $PROJECT/SS-run-sets/SalishSea/sea/scrubberwater/namelist_top_coldstart
+  - $PROJECT/SS-run-sets/SalishSea/sea/scrubberwater/namelist_top_TracerDefAndBdy
+  - $PROJECT/SS-run-sets/v202111/namelist_top_physics
+  
+output:
+  XIOS servers: 1
+  domaindefs: $PROJECT/SS-run-sets/v202111/domain_def.xml
+  fielddefs: $PROJECT/SS-run-sets/SalishSea/sea/scrubberwater/field_def.xml
+  filedefs: $PROJECT/SS-run-sets/SalishSea/sea/scrubberwater/file_def.xml
+  iodefs: $PROJECT/SS-run-sets/v202111/iodef.xml
+  separate XIOS server: true
+
+vcs revisions:
+  git:
+  - $PROJECT/grid
+  - $PROJECT/NEMO-Cmd
+  - $PROJECT/rivers-climatology
+  - $PROJECT/SS-run-sets
+  - $PROJECT/SalishSeaCmd
+  - $PROJECT/tides
+  - $PROJECT/tracers
+  - $PROJECT/XIOS-ARCH
+
