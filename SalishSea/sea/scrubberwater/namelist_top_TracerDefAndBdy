@@ -1,0 +1,69 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! NEMO/TOP1 CFG tracers:
+!!               - tracer definition                     (namtrc    )
+!!               - tracer boundaries                     (namtrc_bdy)
+!!               - tracer bdy data                       (nambdy_bc) x 2
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+&namtrc     !   tracers definition
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!                !    name   !           title of the field              ! initial data ! initial data ! obc    !    sbc  !  cbc    ! save   !
+!                !           !                                           !  units       ! from file    !                             ! or not !
+!                !           !                                           !              ! or not       !                             !        !
+
+   sn_tracer(1)  = 'NONE    ' , 'No Decay                               ',  '1' ,        .false.     ,   .true., .false., .false., .true. 
+   sn_tracer(2)  = 'SLOW    ' , 'Slow Decay                             ',  '1' ,  	 .false.     ,   .true., .false., .false., .true.
+   sn_tracer(3)  = 'MEDIUM  ' , 'Medium Decay                           ',  '1' ,  	 .false.     ,   .true., .false., .false., .true.
+   sn_tracer(4)  = 'FAST    ' , 'Fast Decay                             ',  '1' ,  	 .false.     ,   .true., .false., .false., .true.
+
+   ln_trcdta = .false.
+   ln_trcdmp = .false.
+   /
+!-----------------------------------------------------------------------
+&namtrc_bdy     ! bdy for passive tracers
+!-----------------------------------------------------------------------
+   cn_trc_dflt   =  'frs','frs'
+   cn_trc        =  'frs','frs'          ! boundary condition type for passive tracers
+   nn_trcdmp_bdy = 0, 0
+/
+!----------------------------------------------------------------------
+&nambdy_bc       !   data for BDY boundary conditions: 1st boundary
+!-----------------------------------------------------------------------
+!
+!              !  file name      ! frequency (hours) !    variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !                 !  (if <0  months)  !      name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_trcobc(1) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(2) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(3) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(4) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   cn_dir_obc        =  './'      !  root directory for the location of OPEN data files
+
+   rn_trofac(1)   =  0.0  !  -      -      -     -
+   rn_trofac(2)   =  0.0  !  -      -      -     -
+   rn_trofac(3)   =  0.0  !  multiplicative factor
+   rn_trofac(4)   =  0.0  !  -      -      -     -
+/
+!----------------------------------------------------------------------
+&nambdy_bc       !   data for BDY boundary conditions: 2nd boundary
+!-----------------------------------------------------------------------
+!
+!              !  file name      ! frequency (hours) !    variable   ! time interp.   !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !                 !  (if <0  months)  !      name     !   (logical)    !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
+   sn_trcobc(1) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(2) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(3) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   sn_trcobc(4) =  'tracers/west/boundary_zeros_west', -12,   'zeros',         .false.,   .true.,   'yearly',        '',        '',             ''
+   cn_dir_obc        =  './'      !  root directory for the location of OPEN data files
+
+   rn_trofac(1)   =  0.0  !  -      -      -     -
+   rn_trofac(2)   =  0.0  !  -      -      -     -
+   rn_trofac(3)   =  0.0  !  multiplicative factor
+   rn_trofac(4)   =  0.0  !  -      -      -     -
+/
+!-----------------------------------------------------------------------
+&nammy_trc     !   my tracer impact
+!-----------------------------------------------------------------------
+   scrubber_decay    =   0., 4.01126841e-07, 8.02253681e-07, 1.60450736e-05
+/
+
+
+
