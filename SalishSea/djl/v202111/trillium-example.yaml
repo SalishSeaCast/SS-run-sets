@@ -1,17 +1,17 @@
 # salishsea command processor run description file template for
-# example SalishSeaCast_Blue v202111 run on nibi
+# example SalishSeaCast v202111 run on trillium
 
 email: dlatornell@eoas.ubc.ca
-MPI decomposition: 11x32
-config_name: SalishSeaCast_Blue
-run_id: 01mar23-blue-11x32
-account: rrg-allen
-walltime: 0:30:00
+MPI decomposition: 21x37
+config_name: SalishSeaCast
+run_id: 01-31mar23-21x37
+account: def-allen
+walltime: 8:00:00
 
 paths:
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $HOME/MEOPAR/XIOS-2
-  runs directory: $SCRATCH/MEOPAR/runs
+  runs directory: $SCRATCH/runs
 
 grid:
   bathymetry: $HOME/MEOPAR/grid/bathymetry_202108.nc
@@ -19,25 +19,26 @@ grid:
   land processor elimination: $HOME/MEOPAR/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: $PROJECT/SalishSea/nowcast-green.202111/28feb23/SalishSea_16701120_restart.nc
+  restart.nc: /scratch/dlatorne/results/28feb23/SalishSea_16701120_restart.nc
+  restart_trc.nc: /scratch/dlatorne/results/28feb23/SalishSea_16701120_restart_trc.nc
 
 forcing:
   NEMO-atmos:
-    link to: $PROJECT/SalishSea/forcing/atmospheric/continental2.5/nemo_forcing/
+    link to: $PROJECT/../SalishSea/forcing/atmospheric/continental2.5/nemo_forcing/
   bfr_coef.nc:
     link to: $HOME/MEOPAR/grid/jetty_mask_bathy202108.nc
   grid:
     link to: $HOME/MEOPAR/grid
   rivers:
-    link to: $PROJECT/SalishSea/forcing/rivers
+    link to: $PROJECT/../SalishSea/forcing/rivers
   rivers-climatology:
     link to: $HOME/MEOPAR/rivers-climatology
   river_turb:
-    link to: $PROJECT/SalishSea/forcing/rivers/river_turb
+    link to: $PROJECT/../SalishSea/forcing/rivers/river_turb
   ssh:
-    link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
+    link to: $PROJECT/../SalishSea/forcing/sshNeahBay/obs
   LiveOcean:
-    link to: $PROJECT/SalishSea/forcing/LiveOcean
+    link to: $PROJECT/../SalishSea/forcing/LiveOcean
   tides:
     link to: $HOME/MEOPAR/tides
   tracers:
@@ -45,16 +46,25 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.01mar23
+  - ./namelist.time.01-31mar23
+  - ./namelist.time.01-31mar23
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.domain
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers.hrdps
-  - $HOME/MEOPAR/SS-run-sets/v202111/namelist.light_blue
+  - $HOME/MEOPAR/SS-run-sets/v202111/namelist.light
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.lateral
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.bottom
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.tracer
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.dynamics
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.vertical
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.compute
+  namelist_smelt_cfg:
+  - $HOME/MEOPAR/SS-run-sets/v202111/namelist_smelt_biology
+  - $HOME/MEOPAR/SS-run-sets/v202111/namelist_smelt_rivers_opsturb
+  - $HOME/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
+  namelist_top_cfg:
+  - $HOME/MEOPAR/SS-run-sets/v202111/namelist_top_restart
+  - $HOME/MEOPAR/SS-run-sets/v202111/namelist_top_TracerDefAndBdy
+  - $HOME/MEOPAR/SS-run-sets/v202111/namelist_top_physics
 
 output:
   XIOS servers: 1
