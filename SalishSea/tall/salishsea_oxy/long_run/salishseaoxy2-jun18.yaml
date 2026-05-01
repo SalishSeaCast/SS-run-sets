@@ -1,4 +1,4 @@
-MPI decomposition: 19x26
+MPI decomposition: 11x32
 config_name: SalishSea_oxy2
 email: atall@eoas.ubc.ca
 account: def-allen
@@ -53,7 +53,7 @@ output:
   XIOS servers: 1
   domaindefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/domain_def.xml
   fielddefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/field_def.xml
-  filedefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/file_def.xml
+  filedefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/file_def_grazmortZ2.xml
   iodefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/iodef.xml
   separate XIOS server: true
 paths:
@@ -76,4 +76,4 @@ vcs revisions:
   - $PROJECT/$USER/MEOPAR/tracers
   - $PROJECT/$USER/MEOPAR/XIOS-ARCH
   - $PROJECT/$USER/MEOPAR/XIOS-2
-walltime: '23:00:00'
+walltime: '9:00:00'

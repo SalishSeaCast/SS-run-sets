@@ -4,7 +4,6 @@
 !! Included namelists
 !!    namzdf        vertical physics
 !!    namzdf_gls    generalized length scale vertical mixing          ("key_zdfgls")
-!!    namzdf_imx    internal wave breaking mixing                     ("key_zdfimx")
 !!======================================================================
 !! Not included namelists:
 !!    namzdf_ric    richardson number dependent vertical mixing       ("key_zdfric")
@@ -18,7 +17,7 @@
 &namzdf        !   vertical physics
 !-----------------------------------------------------------------------
    rn_avm0     =   1.e-6   !  vertical eddy viscosity   [m2/s]          (background Kz if not "key_zdfcst")
-   rn_avt0     =   1.e-6   !  vertical eddy diffusivity [m2/s]          (background Kz if not "key_zdfcst")
+   rn_avt0     =   1.e-5   !  vertical eddy diffusivity [m2/s]          (background Kz if not "key_zdfcst")
    nn_avb      =    0      !  profile for background avt & avm (=1) or not (=0)
    nn_havtb    =    0      !  horizontal shape for avtb (=1) or not (=0)
    ln_zdfevd   = .false.   !  enhanced vertical diffusion (evd) (T) or not (F)
@@ -37,9 +36,4 @@
    rn_wvage_max  =  28.2   !  Maximum "wave age" c_p/ustar (if nn_z0_met=2)
    rn_ustar_ref  =   0.18  !  Fetch/duration wave growth limitation threshold on ustar [m/s] (if nn_z0_met=2)
    rn_frac_hs    =   1.5   !  Fraction of wave height as roughness (if nn_z0_met=2)
-/
-&namzdf_imx    !   internal wave mixing parameterization                 ("key_zdfimx")
-!-----------------------------------------------------------------------
-   kmag     = 1.e-4        !  magnitude of kappa (m2/s)
-/
-!-----------------------------------------------------------------------
+&end

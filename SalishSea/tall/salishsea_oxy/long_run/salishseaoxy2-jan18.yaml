@@ -1,4 +1,4 @@
-MPI decomposition: 19x26
+MPI decomposition: 11x32
 config_name: SalishSea_oxy2
 email: atall@eoas.ubc.ca
 account: def-allen
@@ -53,16 +53,16 @@ output:
   XIOS servers: 1
   domaindefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/domain_def.xml
   fielddefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/field_def.xml
-  filedefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/file_def.xml
+  filedefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/file_def_grazmortZ2.xml
   iodefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/iodef.xml
   separate XIOS server: true
 paths:
   NEMO code config: $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $PROJECT/$USER/MEOPAR/XIOS-2
-  runs directory: $SCRATCH/202410b/01jan18
+  runs directory: $SCRATCH/202410b/01jan18def
 restart:
-  restart.nc: $SCRATCH/202410b/01dec17/SalishSea_12638160_restart.nc
-  restart_trc.nc: $SCRATCH/202410b/01dec17/SalishSea_12638160_restart_trc.nc
+  restart.nc: $SCRATCH/202410b/31dec17/SalishSea_12638160_restart.nc
+  restart_trc.nc: $SCRATCH/202410b/31dec17/SalishSea_12638160_restart_trc.nc
 run_id: 01jan18
 vcs revisions:
   git:
@@ -76,4 +76,4 @@ vcs revisions:
   - $PROJECT/$USER/MEOPAR/tracers
   - $PROJECT/$USER/MEOPAR/XIOS-ARCH
   - $PROJECT/$USER/MEOPAR/XIOS-2
-walltime: '23:00:00'
+walltime: '9:00:00'
