@@ -1,0 +1,138 @@
+<!--
+============================================================================================================
+=                                           output files definition                                        =
+=                                            Define your own files                                         =
+=                                         put the variables you want...                                    =
+============================================================================================================
+    -->
+    <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="1d" min_digits="4">
+
+      <file_group id="1ts" output_freq="1ts"  output_level="10" enabled=".FALSE."/> <!-- 1 time step files -->
+
+      <file_group id="1h" output_freq="1h"  output_level="10" compression_level="4" split_freq="1d" enabled=".FALSE."> <!-- 1h files -->
+        <file id="file1" name_suffix="_grid_T" description="physics tracers and VVL layer thicknesses" >
+          <field field_ref="ssh"            name="sossheig"/>
+          <field field_ref="toce"           name="votemper"/>
+          <field field_ref="soce"           name="vosaline"/>
+          <field field_ref="rhop"           name="sigma_theta"/>
+          <field field_ref="e3t"            name="e3t"/>
+        </file>
+        
+        <file id="file4" name_suffix="_grid_W" description="W velocity and turbulence" >
+          <field field_ref="avt"            name="vert_eddy_diff"/>
+          <field field_ref="avm"            name="vert_eddy_visc"/>
+          <field field_ref="eps"            name="dissipation"/>
+        </file>
+
+        <file id="file5" name_suffix="_biol_T" description="biology" >
+          <field field_ref="NO3"            name="nitrate"/>
+          <field field_ref="NH4"            name="ammonium"/>
+          <field field_ref="Si"             name="silicon"/>
+          <field field_ref="DIAT"           name="diatoms"/>
+          <field field_ref="PHY"            name="flagellates"/>
+          <field field_ref="MICZ"           name="microzooplankton"/>
+          <field field_ref="DON"            name="dissolved_organic_nitrogen"/>
+          <field field_ref="PON"            name="particulate_organic_nitrogen"/>
+          <field field_ref="bSi"            name="biogenic_silicon"/>
+          <field field_ref="MESZ"           name="mesozooplankton"/>
+        </file>
+
+        <file id="file6" name_suffix="_chem_T" description="chemistry and light">
+          <field field_ref="PAR"      name="PAR"/>
+          <field field_ref="TRA"      name="turbidity"/>
+          <field field_ref="DIC"      name="dissolved_inorganic_carbon"/>
+          <field field_ref="TA"       name="total_alkalinity"/>
+          <field field_ref="O2"       name="dissolved_oxygen"/>
+          <field field_ref="CO2flux"  name="CO2_flux" />
+        </file>
+      </file_group>
+
+      <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" split_freq="1d" enabled=".FALSE."> <!-- 2h files -->
+      </file_group>
+      <file_group id="3h" output_freq="3h"  output_level="10" enabled=".FALSE."/>  <!-- 3h files -->
+      <file_group id="4h" output_freq="4h"  output_level="10" enabled=".FALSE."/>  <!-- 4h files -->
+      <file_group id="6h" output_freq="6h"  output_level="10" enabled=".FALSE."/>  <!-- 6h files -->
+
+      <file_group id="1d" output_freq="1d"  output_level="10" compression_level="4" split_freq="1d" enabled=".TRUE."> <!-- 1d files -->
+        <file id="file7" name_suffix="_grid_T" description="physics tracers and VVL layer thicknesses" >
+          <field field_ref="ssh"            name="sossheig"/>
+          <field field_ref="toce"           name="votemper"/>
+          <field field_ref="soce"           name="vosaline"/>
+          <field field_ref="rhop"           name="sigma_theta"/>
+          <field field_ref="e3t"            name="e3t"/>
+        </file>
+
+        <file id="file8" name_suffix="_biol_T" description="biology" >
+          <field field_ref="NO3"            name="nitrate"/>
+          <field field_ref="NH4"            name="ammonium"/>
+          <field field_ref="Si"             name="silicon"/>
+          <field field_ref="DIAT"           name="diatoms"/>
+          <field field_ref="PHY"            name="flagellates"/>
+          <field field_ref="MICZ"           name="microzooplankton"/>
+          <field field_ref="DON"            name="dissolved_organic_nitrogen"/>
+          <field field_ref="PON"            name="particulate_organic_nitrogen"/>
+          <field field_ref="bSi"            name="biogenic_silicon"/>
+          <field field_ref="MESZ"           name="mesozooplankton"/>
+
+        </file>
+
+        <file id="file9" name_suffix="_chem_T" description="chemistry and light">
+          <field field_ref="PAR"      name="PAR"/>
+          <field field_ref="TRA"      name="turbidity"/>
+          <field field_ref="DIC"      name="dissolved_inorganic_carbon"/>
+          <field field_ref="TA"       name="total_alkalinity"/>
+          <field field_ref="O2"       name="dissolved_oxygen"/>
+        </file>
+
+        <file id="file10" name_suffix="_diag_T" description="diagnostic terms of DO">
+          <field field_ref="RATE_O2"      name="RATE_O2"/>
+          <field field_ref="BIO_O2"       name="BIO_O2"/>
+          <field field_ref="FLX_O2"       name="FLX_O2"/>
+          <field field_ref="PHS_O2"       name="PHS_O2"/>
+          <field field_ref="SMS_O2"       name="SMS_O2"/>
+          <field field_ref="O2TADV"       name="TAD_O2"/>
+          <field field_ref="O2ZADV"       name="ZAD_O2"/>
+          <field field_ref="LDF_O2"       name="LDF_O2"/>
+          <field field_ref="ZDF_O2"       name="ZDF_O2"/>                 
+          <field field_ref="O2PRD"        name="PRD_O2"/>
+          <field field_ref="O2MRT"        name="MRT_O2"/>
+          <field field_ref="O2REM"        name="REM_O2"/>
+          <field field_ref="NITR"         name="NIT_O2"/>
+          <field field_ref="O2MSZ"        name="MSZ_O2"/>
+          <field field_ref="O2MIZ"        name="MIZ_O2"/>
+        </file>
+
+        <file id="file12" name_suffix="_graz_T" description="grazing and mortality" >
+          <field field_ref="MORTPHY"/>
+          <field field_ref="MORTDIAT"/>
+          <field field_ref="MORTMICZ"/>
+          <field field_ref="GRMESZDIAT"/>
+          <field field_ref="GRMESZPHY"/>
+          <field field_ref="GRMESZPON"/>
+          <field field_ref="GRMESZMICZ"/>
+          <field field_ref="GRMICZDIAT"/>
+          <field field_ref="GRMICZPHY"/>
+          <field field_ref="GRMICZPON"/>
+          <field field_ref="GRMICZMICZ"/>
+          <field field_ref="Z2_EXCR"/>
+          <field field_ref="Z2_NATMORT"/>
+        </file>
+      </file_group>
+
+      <file_group id="3d" output_freq="3d"  output_level="10" enabled=".FALSE."/>  <!-- 3d files -->
+      <file_group id="5d" output_freq="5d"  output_level="10" enabled=".FALSE."/>  <!-- 5d files -->
+      <file_group id="1m" output_freq="1mo" output_level="10" enabled=".FALSE."/>  <!-- real monthly files -->
+      <file_group id="2m" output_freq="2mo" output_level="10" enabled=".FALSE."/>  <!-- real 2m files -->
+      <file_group id="3m" output_freq="3mo" output_level="10" enabled=".FALSE."/>  <!-- real 3m files -->
+      <file_group id="4m" output_freq="4mo" output_level="10" enabled=".FALSE."/>  <!-- real 4m files -->
+      <file_group id="6m" output_freq="6mo" output_level="10" enabled=".FALSE."/>  <!-- real 6m files -->
+      <file_group id="1y"  output_freq="1y" output_level="10" enabled=".FALSE."/>  <!-- real yearly files -->
+      <file_group id="2y"  output_freq="2y" output_level="10" enabled=".FALSE."/>  <!-- real 2y files -->
+      <file_group id="5y"  output_freq="5y" output_level="10" enabled=".FALSE."/>  <!-- real 5y files -->
+      <file_group id="10y" output_freq="10y" output_level="10" enabled=".FALSE."/> <!-- real 10y files -->
+      <file_group id="20min" output_freq="1200s" output_level="10" compression_level="4" split_freq="1d" enabled=".FALSE."> <!-- 20 minute files -->
+      </file_group>
+      <file_group id="10min" output_freq="600s" output_level="10" compression_level="4" split_freq="1d" enabled=".FALSE."> <!-- 10 minute files -->
+      </file_group>
+
+    </file_definition>
