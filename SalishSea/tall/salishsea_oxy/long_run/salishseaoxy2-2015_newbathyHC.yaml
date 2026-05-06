@@ -1,7 +1,7 @@
 MPI decomposition: 11x32
 config_name: SalishSea_oxy2
 email: atall@eoas.ubc.ca
-account: def-allen
+account: rrg-allen
 forcing:
   LiveOcean:
     link to: $PROJECT/SalishSea/forcing/LiveOcean
@@ -31,7 +31,7 @@ grid:
   land processor elimination: $PROJECT/$USER/MEOPAR/grid/bathymetry_202108.csv
 namelists:
   namelist_cfg:
-  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist.time.2015
+  - $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/namelist.time.2015_fromJan02
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.domain
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers
   - $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/namelist.light
@@ -59,11 +59,11 @@ output:
 paths:
   NEMO code config: $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $PROJECT/$USER/MEOPAR/XIOS-2
-  runs directory: $SCRATCH/202410b/NewBathyHC/01jan15
+  runs directory: $SCRATCH/202410b/NewBathyHC/02jan15
 restart:
-  restart.nc: $SCRATCH/202410b/01jan14/SalishSea_10270800_restart.nc
-  restart_trc.nc: $SCRATCH/202410b/01jan14/SalishSea_10270800_restart_trc.nc
-run_id: NewBathyRun_test
+  restart.nc: $SCRATCH/202410b/coldstart_01jan15/SalishSea_10272960_restart.nc
+  restart_trc.nc: $SCRATCH/202410b/coldstart_01jan15/SalishSea_10272960_restart_trc.nc
+run_id: y2015_NewBathyRun
 vcs revisions:
   git:
   - $PROJECT/$USER/MEOPAR/grid
@@ -76,5 +76,4 @@ vcs revisions:
   - $PROJECT/$USER/MEOPAR/tracers
   - $PROJECT/$USER/MEOPAR/XIOS-ARCH
   - $PROJECT/$USER/MEOPAR/XIOS-2
-walltime: 3:00:00
-#walltime: 96:00:00
+walltime: 96:00:00
