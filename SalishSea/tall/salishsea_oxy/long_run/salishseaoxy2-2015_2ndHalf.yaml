@@ -53,7 +53,7 @@ output:
   XIOS servers: 1
   domaindefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/domain_def.xml
   fielddefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/field_def.xml
-  filedefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/file_def_grazmortZ2_withourly.xml
+  filedefs: $PROJECT/$USER/MEOPAR/SS-run-sets/SalishSea/tall/salishsea_oxy/long_run/file_def_grazmortZ2.xml
   iodefs: $PROJECT/$USER/MEOPAR/SS-run-sets/v202111/iodef.xml
   separate XIOS server: true
 paths:
