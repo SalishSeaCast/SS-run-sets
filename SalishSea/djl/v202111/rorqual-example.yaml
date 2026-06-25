@@ -1,17 +1,17 @@
 # salishsea command processor run description file template for
-# example SalishSeaCast v202111 run on nibi
+# example SalishSeaCast v202111 run on rorqual
 
 email: dlatornell@eoas.ubc.ca
 MPI decomposition: 11x32
 config_name: SalishSeaCast
-run_id: 01mar23-11x32-rrg-restart
-account: rrg-allen
+run_id: 01mar23-11x32
+account: def-allen
 walltime: 0:30:00
 
 paths:
   NEMO code config: $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $HOME/MEOPAR/XIOS-2
-  runs directory: $SCRATCH/MEOPAR/runs
+  runs directory: $HOME/links/scratch/MEOPAR/runs
 
 grid:
   bathymetry: $HOME/MEOPAR/grid/bathymetry_202108.nc
@@ -19,26 +19,26 @@ grid:
   land processor elimination: $HOME/MEOPAR/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: /project/rrg-allen/SalishSea/nowcast-green.202111/28feb23/SalishSea_16701120_restart.nc
-  restart_trc.nc: /project/rrg-allen/SalishSea/nowcast-green.202111/28feb23/SalishSea_16701120_restart_trc.nc
+  restart.nc: $HOME/links/scratch/MEOPAR/results/28feb23/SalishSea_16701120_restart.nc
+  restart_trc.nc: $HOME/links/scratch/MEOPAR/results/28feb23/SalishSea_16701120_restart_trc.nc
 
 forcing:
   NEMO-atmos:
-    link to: $PROJECT/SalishSea/forcing/atmospheric/continental2.5/nemo_forcing/
+    link to: $HOME/links/projects/def-allen/SalishSea/forcing/atmospheric/continental2.5/nemo_forcing/
   bfr_coef.nc:
     link to: $HOME/MEOPAR/grid/jetty_mask_bathy202108.nc
   grid:
     link to: $HOME/MEOPAR/grid
   rivers:
-    link to: $PROJECT/SalishSea/forcing/rivers
+    link to: $HOME/links/projects/def-allen/SalishSea/forcing/rivers
   rivers-climatology:
     link to: $HOME/MEOPAR/rivers-climatology
   river_turb:
-    link to: $PROJECT/SalishSea/forcing/rivers/river_turb
+    link to: $HOME/links/projects/def-allen/SalishSea/forcing/rivers/river_turb
   ssh:
-    link to: $PROJECT/SalishSea/forcing/sshNeahBay/obs
+    link to: $HOME/links/projects/def-allen/SalishSea/forcing/sshNeahBay/obs
   LiveOcean:
-    link to: $PROJECT/SalishSea/forcing/LiveOcean
+    link to: $HOME/links/projects/def-allen/SalishSea/forcing/LiveOcean
   tides:
     link to: $HOME/MEOPAR/tides
   tracers:
