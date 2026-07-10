@@ -76,4 +76,4 @@ vcs revisions:
   - $PROJECT/$USER/MEOPAR/tracers
   - $PROJECT/$USER/MEOPAR/XIOS-ARCH
   - $PROJECT/$USER/MEOPAR/XIOS-2
-walltime: 30:00:00
+walltime: 40:00:00

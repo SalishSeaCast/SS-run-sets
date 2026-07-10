@@ -1,7 +1,7 @@
 MPI decomposition: 11x32
 config_name: SalishSea_oxy2
 email: atall@eoas.ubc.ca
-account: rrg-allen
+account: def-allen
 forcing:
   LiveOcean:
     link to: /project/rrg-allen/SalishSea/forcing/LiveOcean
@@ -76,4 +76,4 @@ vcs revisions:
   - $PROJECT/$USER/MEOPAR/tracers
   - $PROJECT/$USER/MEOPAR/XIOS-ARCH
   - $PROJECT/$USER/MEOPAR/XIOS-2
-walltime: 66:00:00
+walltime: 80:00:00
