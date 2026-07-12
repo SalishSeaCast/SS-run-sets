@@ -1,10 +1,10 @@
 # salishsea command processor run description file template for
 # example SalishSeaCast v202111 run on trillium
 
-email: dlatornell@eoas.ubc.ca
-MPI decomposition: 14x25
+email: sallen@eoas.ubc.ca
+MPI decomposition: 11x32
 config_name: SalishSeaCast
-run_id: 01mar23-14x25
+run_id: 01jan08
 account: def-allen
 walltime: 0:30:00
 
@@ -19,12 +19,12 @@ grid:
   land processor elimination: $HOME/MEOPAR/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: /scratch/dlatorne/results/28feb23/SalishSea_16701120_restart.nc
-  restart_trc.nc: /scratch/dlatorne/results/28feb23/SalishSea_16701120_restart_trc.nc
+  restart.nc: /scratch/allen/restarts/31dec07/SalishSea_04745520_restart.nc
+  restart_trc.nc: /scratch/allen/restarts/31dec07/SalishSea_04745520_restart_trc.nc
 
 forcing:
   NEMO-atmos:
-    link to: $PROJECT/../SalishSea/forcing/atmospheric/continental2.5/nemo_forcing/
+    link to: $PROJECT/../SalishSea/forcing/atmospheric/GEM2.5/gemlam
   bfr_coef.nc:
     link to: $HOME/MEOPAR/grid/jetty_mask_bathy202108.nc
   grid:
@@ -37,8 +37,8 @@ forcing:
     link to: $PROJECT/../SalishSea/forcing/rivers/river_turb
   ssh:
     link to: $PROJECT/../SalishSea/forcing/sshNeahBay/obs
-  LiveOcean:
-    link to: $PROJECT/../SalishSea/forcing/LiveOcean
+  NEP:
+    link to: $PROJECT/../SalishSea/forcing/NEP36
   tides:
     link to: $HOME/MEOPAR/tides
   tracers:
@@ -46,11 +46,11 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time.01mar23_oneday
+  - ./namelist.time.01jan08_oneday
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.domain
-  - $HOME/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers.hrdps
+  - $HOME/MEOPAR/SS-run-sets/v202111/namelist.atmos_rivers_early_gemlam
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.light
-  - $HOME/MEOPAR/SS-run-sets/v202111/namelist.lateral
+  - $HOME/MEOPAR/SS-run-sets/v202111/namelist.lateral.NEP
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.bottom
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.tracer
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.dynamics
@@ -58,11 +58,11 @@ namelists:
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist.compute
   namelist_smelt_cfg:
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist_smelt_biology
-  - $HOME/MEOPAR/SS-run-sets/v202111/namelist_smelt_rivers_opsturb
+  - $HOME/MEOPAR/SS-run-sets/v202111/namelist_smelt_rivers_earlyturb
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist_smelt_skog
   namelist_top_cfg:
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist_top_restart
-  - $HOME/MEOPAR/SS-run-sets/v202111/namelist_top_TracerDefAndBdy
+  - $HOME/MEOPAR/SS-run-sets/v202111/namelist_top_TracerDefAndBdy_NEP
   - $HOME/MEOPAR/SS-run-sets/v202111/namelist_top_physics
 
 output:
@@ -82,4 +82,3 @@ vcs revisions:
   - $HOME/MEOPAR/tides
   - $HOME/MEOPAR/tracers
   - $HOME/MEOPAR/XIOS-ARCH
-
