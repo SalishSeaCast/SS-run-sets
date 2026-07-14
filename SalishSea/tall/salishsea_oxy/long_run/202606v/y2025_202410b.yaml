@@ -1,5 +1,5 @@
 MPI decomposition: 11x32
-config_name: SalishSea_oxy2
+config_name: SalishSea_oxy2_WrongV
 email: atall@eoas.ubc.ca
 account: def-allen
 forcing:
@@ -26,7 +26,7 @@ forcing:
   tracers:
     link to: $PROJECT/$USER/MEOPAR/tracers
 grid:
-  bathymetry: $PROJECT/$USER/MEOPAR/grid/bathymetry_202605.nc
+  bathymetry: $PROJECT/$USER/MEOPAR/grid/bathymetry_202310b.nc
   coordinates: $PROJECT/$USER/MEOPAR/grid/coordinates_seagrid_SalishSea201702.nc
   land processor elimination: $PROJECT/$USER/MEOPAR/grid/bathymetry_202108.csv
 namelists:
