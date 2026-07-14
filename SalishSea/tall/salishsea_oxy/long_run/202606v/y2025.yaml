@@ -1,26 +1,26 @@
 MPI decomposition: 11x32
 config_name: SalishSea_oxy2
 email: atall@eoas.ubc.ca
-account: rrg-allen
+account: def-allen
 forcing:
   LiveOcean:
-    link to: /project/rrg-allen/SalishSea/forcing/LiveOcean
+    link to: /project/def-allen/SalishSea/forcing/LiveOcean
   NEMO-atmos:
-    link to: /project/rrg-allen/SalishSea/forcing/atmospheric/GEM2.5/operational/
+    link to: /project/def-allen/SalishSea/forcing/atmospheric/continental2.5/nemo_forcing/
   NEP:
-    link to: /project/rrg-allen/SalishSea/forcing/NEP36
+    link to: /project/def-allen/SalishSea/forcing/NEP36
   bfr_coef.nc:
     link to: $PROJECT/$USER/MEOPAR/grid/jetty_mask_bathy20241023.nc
   grid:
     link to: $PROJECT/$USER/MEOPAR/grid
   river_turb:
-    link to: /project/rrg-allen/SalishSea/forcing/rivers/river_turb
+    link to: /project/def-allen/SalishSea/forcing/rivers/river_turb
   rivers:
-    link to: /project/rrg-allen/SalishSea/forcing/rivers
+    link to: /project/def-allen/SalishSea/forcing/rivers
   rivers-climatology:
     link to: $PROJECT/$USER/MEOPAR/rivers-climatology
   ssh:
-    link to: /project/rrg-allen/SalishSea/forcing/sshNeahBay/obs
+    link to: /project/def-allen/SalishSea/forcing/sshNeahBay/obs
   tides:
     link to: $PROJECT/$USER/MEOPAR/tides
   tracers:
@@ -59,10 +59,10 @@ output:
 paths:
   NEMO code config: $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
   XIOS: $PROJECT/$USER/MEOPAR/XIOS-2
-  runs directory: $SCRATCH/202606v/results/01jan25
+  runs directory: $SCRATCH/202606v/ForJose/01jan25
 restart:
-  restart.nc: $SCRATCH/202606v/results/01jan24/SalishSea_18159120_restart.nc
-  restart_trc.nc: $SCRATCH/202606v/results/01jan24/SalishSea_18159120_restart_trc.nc
+  restart.nc: $SCRATCH/202410b/01jan24/SalishSea_18159120_restart.nc
+  restart_trc.nc: $SCRATCH/202410b/01jan24/SalishSea_18159120_restart_trc.nc
 run_id: y2025
 vcs revisions:
   git:
