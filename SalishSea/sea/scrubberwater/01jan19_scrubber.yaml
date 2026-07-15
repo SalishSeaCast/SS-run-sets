@@ -1,10 +1,11 @@
 # scrubber water yaml
 
 email: sallen@eoas.ubc.ca
-MPI decomposition: 11x18
+account: def-allen
+MPI decomposition: 11x32
 config_name: ScrubberWater
 run_id: 01jan19
-walltime: 00:30:00
+walltime: 20:00:00
 
 paths:
   NEMO code config: $PROJECT/NEMO-3.6-code/NEMOGCM/CONFIG
@@ -43,7 +44,7 @@ forcing:
 
 namelists:
   namelist_cfg:
-  - ./namelist.time_01jan19_oneday
+  - ./namelist.time_01jan19_sixmonths
   - $PROJECT/SS-run-sets/v202111/namelist.domain
   - $PROJECT/SS-run-sets/SalishSea/sea/scrubberwater/namelist.atmos_rivers_scrubberwater
   - $PROJECT/SS-run-sets/v202111/namelist.light_blue

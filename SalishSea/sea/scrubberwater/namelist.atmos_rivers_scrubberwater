@@ -78,12 +78,11 @@
 !             !  file name                                 ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation !
 !             !                                            !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  !
   sn_rnf      = 'rivers/R202108Dailies',                     24,                'rorunoff', .true.,        .false., 'daily',    '',        ''
-  sn_scrubberwater = 'rivers-climatology/scrubberwater/scrubber_1d_obs_tempsalcalc', 24,      'washwater',    .true.,        .false., 'yearly',    '',        ''
+  sn_scrubberwater = 'rivers-climatology/scrubberwater/scrubber_obs_tempsalcalc', 24, 'washwater', .true., .true.,  'daily',    '',        ''
   sn_cnf      = '',                                           0,                'socoefr0', .false.,       .true.,  'yearly',   '',        ''
   sn_s_rnf    = '',                                          24,                'rosaline', .false.,       .true.,  'yearly',   '',        ''
   sn_t_rnf    = 'rivers-climatology/rivers_daily_202108',    24,                'rotemper', .true.,        .true.,  'yearly',   '',        ''
   sn_dep_rnf  = 'rivers-climatology/rivers_daily_202108',    24,                'rodepth' , .true.,        .true.,  'yearly',   '',        ''
-!!  sn_t_wastewater = 'rivers-climatology/wastewater/wastewater_20231002', -1,   'temperature', .true.,    .true.,  'yearly',   '',        ''
 
 
   cn_dir       = './'       !  root directory for the location of the runoff files

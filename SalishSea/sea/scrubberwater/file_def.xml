@@ -14,8 +14,20 @@
       <file_group id="20min" output_freq="1200s" output_level="10" compression_level="4" enabled=".FALSE.">  <!-- 20 minute files -->
       </file_group>
 
-      <file_group id="1h" output_freq="1h"  output_level="10" compression_level="4" enabled=".TRUE.">  <!-- 1h files -->
-        <file id="file1" name_suffix="_grid_T" description="physics tracers and VVL layer thicknesses" >
+      <file_group id="1h" output_freq="1h"  output_level="10" compression_level="4" enabled=".FALSE.">  <!-- 1h files -->
+	      </file_group>
+
+      <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" enabled=".FALSE.">  <!-- 2h files -->
+      </file_group>
+      <file_group id="3h" output_freq="3h"  output_level="10" compression_level="4" enabled=".FALSE.">  <!-- 3h files -->
+      </file_group>
+      <file_group id="4h" output_freq="4h"  output_level="10" compression_level="4" enabled=".FALSE.">  <!-- 4h files -->
+      </file_group>
+      <file_group id="6h" output_freq="6h"  output_level="10" compression_level="4" enabled=".FALSE.">  <!-- 6h files -->
+      </file_group>
+
+      <file_group id="1d" output_freq="1d"  output_level="10" compression_level="4" enabled=".TRUE.">  <!-- 1d files -->
+	        <file id="file1" name_suffix="_grid_T" description="physics tracers" >
           <field field_ref="ssh"            name="sossheig"/>
           <field field_ref="toce"           name="votemper"/>
           <field field_ref="soce"           name="vosaline"/>
@@ -29,7 +41,7 @@
           <field field_ref="voce"           name="vomecrty"/>
         </file>
 
-        <file id="file4" name_suffix="_grid_W" description="W velocity and turbulence" >
+        <file id="file4" name_suffix="_grid_W" description="W velocity" >
           <field field_ref="woce"           name="vovecrtz"/>
         </file>
 
@@ -39,18 +51,7 @@
 	  <field field_ref="MEDIUM"   name="medium_decay"/>
 	  <field field_ref="FAST"     name="fast_decay"/>
 	</file>
-      </file_group>
 
-      <file_group id="2h" output_freq="2h"  output_level="10" compression_level="4" enabled=".FALSE.">  <!-- 2h files -->
-      </file_group>
-      <file_group id="3h" output_freq="3h"  output_level="10" compression_level="4" enabled=".FALSE.">  <!-- 3h files -->
-      </file_group>
-      <file_group id="4h" output_freq="4h"  output_level="10" compression_level="4" enabled=".FALSE.">  <!-- 4h files -->
-      </file_group>
-      <file_group id="6h" output_freq="6h"  output_level="10" compression_level="4" enabled=".FALSE.">  <!-- 6h files -->
-      </file_group>
-
-      <file_group id="1d" output_freq="1d"  output_level="10" compression_level="4" enabled=".FALSE.">  <!-- 1d files -->
       </file_group>
 
       <file_group id="3d" output_freq="3d"  output_level="10" compression_level="4" enabled=".FALSE.">  <!-- 3d files -->
