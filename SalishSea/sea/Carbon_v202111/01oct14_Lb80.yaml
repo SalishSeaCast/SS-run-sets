@@ -1,8 +1,9 @@
 email: sallen@eoas.ubc.ca
-MPI decomposition: 20x41
+MPI decomposition: 11x32
 config_name: SalishSeaCarbon
+account: def-allen
 run_id: 01oct14_Lb80
-walltime: 15:00:00
+walltime: 20:00:00
 
 forcing:
   LiveOcean:
@@ -11,7 +12,7 @@ forcing:
     link to: $FORCING/atmospheric/GEM2.5/operational/
 
   bfr_coef.nc:
-    link to: $PROJECT/grid/jetty_mask_bathy201702.nc
+    link to: $PROJECT/grid/jetty_mask_bathy202108.nc
   grid:
     link to: $PROJECT/grid
   rivers:
@@ -28,8 +29,8 @@ forcing:
     link to: $PROJECT/tracers
 
 restart:
-  restart.nc: $SCRATCH/Carbon/01jul14/SalishSea_10069920_restart.nc
-  restart_trc.nc: $SCRATCH/Carbon/01jul14/SalishSea_10069920_restart_trc.nc
+  restart.nc: $SCRATCH/Carbon/MoreSens/Now/01jul14/SalishSea_10069920_restart.nc
+  restart_trc.nc: $SCRATCH/Carbon/MoreSens/Now/01jul14/SalishSea_10069920_restart_trc.nc
 
 grid:
   bathymetry: $PROJECT/grid/bathymetry_202108.nc
@@ -54,7 +55,7 @@ namelists:
   - $PROJECT/SS-run-sets/v202111/namelist_top_TracerDefAndBdy
   - $PROJECT/SS-run-sets/v202111/namelist_top_physics
   namelist_smelt_cfg:
-  - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_biology_Leibig_80
+  - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_biology_Leibig_MoreSens
   - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_rivers
   - $PROJECT/SS-run-sets/v202111/namelist_smelt_skog
 
@@ -74,14 +75,12 @@ paths:
 vcs revisions:
   git:
   - $PROJECT/grid
-#  - $PROJECT/NEMO-3.6-code
   - $PROJECT/NEMO-Cmd
   - $PROJECT/rivers-climatology
   - $PROJECT/SalishSeaCmd
   - $PROJECT/SS-run-sets
   - $PROJECT/tides
   - $PROJECT/tracers
-#  - $PROJECT/XIOS-2
   - $PROJECT/XIOS-ARCH
 
 

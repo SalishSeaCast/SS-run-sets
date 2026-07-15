@@ -3,7 +3,7 @@ MPI decomposition: 11x32
 config_name: SalishSeaCarbon
 account: rrg-allen
 run_id: 01jul18_PI_Lb80
-walltime: 39:00:00
+walltime: 35:00:00
 
 forcing:
   LiveOcean:
@@ -29,8 +29,8 @@ forcing:
     link to: $PROJECT/tracers
 
 restart:
-  restart.nc: $SCRATCH/Carbon/01jan18/SalishSea_13026960_restart.nc
-  restart_trc.nc: $SCRATCH/Carbon/01jan18/SalishSea_13026960_restart_trc.nc
+  restart.nc: $SCRATCH/Carbon/MoreSens/PI/01may18/SalishSea_13026960_restart.nc
+  restart_trc.nc: $SCRATCH/Carbon/MoreSens/PI/01may18/SalishSea_13026960_restart_trc.nc
 
 grid:
   bathymetry: $PROJECT/grid/bathymetry_202108.nc
@@ -55,7 +55,7 @@ namelists:
   - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_top_TracerDefAndBdy_PI
   - $PROJECT/SS-run-sets/v202111/namelist_top_physics
   namelist_smelt_cfg:
-  - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_biology_Leibig_80
+  - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_biology_Leibig_MoreSens
   - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_rivers
   - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_skog_PI_1843
 

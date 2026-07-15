@@ -1,17 +1,18 @@
 email: sallen@eoas.ubc.ca
-MPI decomposition: 18x40
+MPI decomposition: 11x32
 config_name: SalishSeaCarbon
+account: rrg-allen
 run_id: 01jan11_Lb80
-walltime: 99:00:00
+walltime: 36:00:00
 
 forcing:
   NEP:
-    link to: $FORCING/NEP
+    link to: $FORCING/NEP36
   NEMO-atmos:
     link to: $FORCING/atmospheric/GEM2.5/gemlam
 
   bfr_coef.nc:
-    link to: $PROJECT/grid/jetty_mask_bathy201702.nc
+    link to: $PROJECT/grid/jetty_mask_bathy202108.nc
   grid:
     link to: $PROJECT/grid
   rivers:
@@ -54,7 +55,7 @@ namelists:
   - $PROJECT/SS-run-sets/v202111/namelist_top_TracerDefAndBdy_NEP
   - $PROJECT/SS-run-sets/v202111/namelist_top_physics
   namelist_smelt_cfg:
-  - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_biology_Leibig_80
+  - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_biology_Leibig_MoreSens
   - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_rivers
   - $PROJECT/SS-run-sets/v202111/namelist_smelt_skog
 
@@ -74,14 +75,12 @@ paths:
 vcs revisions:
   git:
   - $PROJECT/grid
-#  - $PROJECT/NEMO-3.6-code
   - $PROJECT/NEMO-Cmd
   - $PROJECT/rivers-climatology
   - $PROJECT/SalishSeaCmd
   - $PROJECT/SS-run-sets
   - $PROJECT/tides
   - $PROJECT/tracers
-#  - $PROJECT/XIOS-2
   - $PROJECT/XIOS-ARCH
 
 

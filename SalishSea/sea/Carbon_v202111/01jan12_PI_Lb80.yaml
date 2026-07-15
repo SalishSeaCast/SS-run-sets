@@ -29,8 +29,8 @@ forcing:
     link to: $PROJECT/tracers
 
 restart:
-  restart.nc: $SCRATCH/Carbon/22sep11/SalishSea_07901280_restart.nc
-  restart_trc.nc: $SCRATCH/Carbon/22sep11/SalishSea_07901280_restart_trc.nc
+  restart.nc: $SCRATCH/Carbon/MoreSens/PI/22sep11/SalishSea_07901280_restart.nc
+  restart_trc.nc: $SCRATCH/Carbon/MoreSens/PI/22sep11/SalishSea_07901280_restart_trc.nc
 
 grid:
   bathymetry: $PROJECT/grid/bathymetry_202108.nc
@@ -55,7 +55,7 @@ namelists:
   - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_top_TracerDefAndBdy_PI_NEP
   - $PROJECT/SS-run-sets/v202111/namelist_top_physics
   namelist_smelt_cfg:
-  - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_biology_Leibig_80
+  - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_biology_Leibig_MoreSens
   - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_rivers
   - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_skog_PI_1837
 

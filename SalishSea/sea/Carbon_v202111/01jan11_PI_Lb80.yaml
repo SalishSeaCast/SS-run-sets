@@ -55,7 +55,7 @@ namelists:
   - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_top_TracerDefAndBdy_PI_NEP
   - $PROJECT/SS-run-sets/v202111/namelist_top_physics
   namelist_smelt_cfg:
-  - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_biology_Leibig_80
+  - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_biology_Leibig_MoreSens
   - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_rivers
   - $PROJECT/SS-run-sets/SalishSea/sea/Carbon_v202111/namelist_smelt_skog_PI_1836
 
