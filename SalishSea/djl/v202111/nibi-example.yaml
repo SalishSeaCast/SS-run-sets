@@ -4,7 +4,7 @@
 email: dlatornell@eoas.ubc.ca
 MPI decomposition: 11x32
 config_name: SalishSeaCast
-run_id: 01mar23-11x32
+run_id: 01mar23-11x32-rrg-restart
 account: rrg-allen
 walltime: 0:30:00
 
@@ -19,8 +19,8 @@ grid:
   land processor elimination: $HOME/MEOPAR/grid/bathymetry_202108.csv
 
 restart:
-  restart.nc: $PROJECT/SalishSea/nowcast-green.202111/28feb23/SalishSea_16701120_restart.nc
-  restart_trc.nc: $PROJECT/SalishSea/nowcast-green.202111/28feb23/SalishSea_16701120_restart_trc.nc
+  restart.nc: /project/rrg-allen/SalishSea/nowcast-green.202111/28feb23/SalishSea_16701120_restart.nc
+  restart_trc.nc: /project/rrg-allen/SalishSea/nowcast-green.202111/28feb23/SalishSea_16701120_restart_trc.nc
 
 forcing:
   NEMO-atmos:
