@@ -45,7 +45,7 @@ namelists:
   namelist_cfg:
   - ./namelist.time.01jan08_oneday
   - $PROJECT/SS-run-sets/v202111/namelist.domain
-  - $PROJECT/SS-run-sets/SalishSea/sea/DownScaleAtmos/namelist.atmos_rivers_early_gemlam_down
+  - $PROJECT/SS-run-sets/SalishSea/sea/DownScaleAtmos/namelist.atmos_rivers_early_gemlam_test
   - $PROJECT/SS-run-sets/v202111/namelist.light
   - $PROJECT/SS-run-sets/v202111/namelist.lateral.NEP
   - $PROJECT/SS-run-sets/v202111/namelist.bottom
